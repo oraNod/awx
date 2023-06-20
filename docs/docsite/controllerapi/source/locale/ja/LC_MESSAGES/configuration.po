@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/configuration.rst:3
+msgid "Configuration API Endpoint"
+msgstr "設定の API エンドポイント"
+
+#: ../../source/configuration.rst:8
+msgid "Site configuration settings and general information."
+msgstr "サイト設定および一般情報。"
+
+#: ../../source/configuration.rst:41
+msgid "Make a GET request to this resource to retrieve the configuration containing the following fields (some fields may not be visible to all users):"
+msgstr "このリソースに GET 要求を実行して、以下のフィールドを含む設定を取得します (ユーザーによってはすべてのフィールドが表示されない場合もあります)。"
+
+#: ../../source/configuration.rst:43
+msgid "``project_base_dir``: Path on the server where projects and playbooks are \\ stored."
+msgstr "``project_base_dir``: プロジェクトと Playbook が保存されているサーバー上のパス"
+
+#: ../../source/configuration.rst:44
+msgid "``project_local_paths``: List of directories beneath ``project_base_dir`` to use when creating/editing a project."
+msgstr "``project_local_paths``: プロジェクトの作成および編集時に使用する、``project_base_dir`` 下にあるディレクトリー一覧"
+
+#: ../../source/configuration.rst:45
+msgid "``time_zone``: The configured time zone for the server."
+msgstr "``time_zone``: サーバーに設定されたタイムゾーン"
+
+#: ../../source/configuration.rst:46
+msgid "``license_info``: Information about the current license."
+msgstr "``license_info``: ライセンス情報"
+
+#: ../../source/configuration.rst:47
+msgid "``version``: Version of Ansible Tower package installed."
+msgstr "``version``: インストールされている Ansible Tower パッケージのバージョン"
+
+#: ../../source/configuration.rst:48
+msgid "``eula``: The current End-User License Agreement"
+msgstr "``eula``: 使用許諾契約書"
+
+#: ../../source/configuration.rst:50
+msgid "(New in Ansible Tower 2.0.0) Make a POST request to this resource as a super user to install or update the existing license. The license data itself can be POSTed as a normal json data structure."
+msgstr "(Ansible Tower 2.0.0 から) スーパーユーザーとしてリソースに POST 要求を実行すると、既存のライセンスをインストールもしくは更新することができます。ライセンスデータ自体は、通常の json データ構造で POST されます。"
+
+#: ../../source/configuration.rst:52
+msgid "(New in Ansible Tower 2.1.1) The POST must include a eula_accepted boolean element indicating acceptance of the End-User License Agreement."
+msgstr "(Ansible Tower 2.1.1 から) POST には eula_accepted のブール値要素を含めて使用許諾契約書への合意を示す必要があります。"
+
+#: ../../source/configuration.rst:55
+msgid "Reviewing the Options Endpoint"
+msgstr "オプションエンドポイントの確認"
+
+#: ../../source/configuration.rst:60
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*オプションエンドポイント* テーブルでは、このエンドポイントのオプションを確認できます。ブラウザー表示が可能な API でエンドポイントを表示している場合は、「オプション」ボタンをクリックすると以下の raw JSON が表示されます。"
+

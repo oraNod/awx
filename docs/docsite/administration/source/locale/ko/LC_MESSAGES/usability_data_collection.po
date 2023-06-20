@@ -1,0 +1,1085 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../common/source/user-data-tracking.rst:2
+msgid "Usability Analytics and Data Collection"
+msgstr "유용성 분석 및 데이터 수집"
+
+#: ../../../common/source/user-data-tracking.rst:12
+msgid "Usability data collection is included with Tower to collect data to better understand how Tower users specifically interact with Tower, to help enhance future releases, and to continue streamlining your user experience."
+msgstr "유용성 데이터 수집은 데이터를 수집하여 Tower 사용자가 Tower를 구체적으로 조작하는 방식을 더 잘 파악하고, 향후 릴리스를 개선하고, 사용자 환경을 지속적으로 간소화하기 위해 Tower에 포함되었습니다."
+
+#: ../../../common/source/user-data-tracking.rst:14
+msgid "Only users installing a trial of Tower or a fresh installation of Tower are opted-in for this data collection."
+msgstr "Tower 평가판 또는 Tower 새로 설치를 설치한 사용자만 이 데이터 수집에 옵트인됩니다."
+
+#: ../../../common/source/user-data-tracking.rst:16
+msgid "If you want to change how you participate in this analytics collection, you can opt out or change your settings in the **User Interface settings**, by clicking **Settings** from the left navigation bar."
+msgstr "이 분석 수집에 참여하는 방법을 변경하려는 경우 왼쪽 탐색 모음에서 **설정**을 클릭하여 **사용자 인터페이스 설정**에서 설정을 옵트아웃하거나 변경할 수 있습니다."
+
+#: ../../../common/source/user-data-tracking.rst:19
+msgid "Ansible Tower collects user data automatically to help improve the Tower product. You can control the way Tower collects data by setting your participation level in the **User Interface settings** in the Settings menu."
+msgstr "Ansible Tower는 Tower 제품 개선을 위해 사용자 데이터를 자동으로 수집합니다. 설정 메뉴의 **사용자 인터페이스 설정**에서 참여 수준을 설정하여 Tower의 데이터 수집 방식을 제어할 수 있습니다."
+
+#: ../../../common/source/user-data-tracking.rst:23
+msgid "Select the desired level of data collection from the User Analytics Tracking State drop-down list:"
+msgstr "사용자 분석 추적 상태 드롭다운 목록에서 원하는 데이터 수집 수준을 선택합니다."
+
+#: ../../../common/source/user-data-tracking.rst:25
+msgid "**Off**: Prevents any data collection."
+msgstr "**해제**: 모든 데이터 수집을 차단합니다."
+
+#: ../../../common/source/user-data-tracking.rst:27
+msgid "**Anonymous**: Enables data collection without your specific user data."
+msgstr "**익명**: 특정 사용자 데이터 없이 데이터 수집을 활성화합니다."
+
+#: ../../../common/source/user-data-tracking.rst:29
+msgid "**Detailed**: Enables data collection including your specific user data."
+msgstr "**세부 정보**: 특정 사용자 데이터를 포함하여 데이터 수집을 활성화합니다."
+
+#: ../../../common/source/user-data-tracking.rst:31
+msgid "Click **Save** to apply the settings or **Cancel** to abandon the changes."
+msgstr "**저장**을 클릭하여 설정을 적용하거나 **취소**를 클릭하여 변경 사항을 취소합니다."
+
+#: ../../../common/source/user-data-tracking.rst:34
+msgid "For more information, see the Red Hat privacy policy at https://www.redhat.com/en/about/privacy-policy."
+msgstr "자세한 내용은 https://www.redhat.com/en/about/privacy-policy에서 Red Hat 개인 정보 취급 방침을 참조하십시오."
+
+#: ../../source/usability_data_collection.rst:9
+msgid "Automation Analytics"
+msgstr "자동화 분석"
+
+#: ../../source/usability_data_collection.rst:16
+msgid "When you imported your license for the first time, you were given options related to the collection of data that powers |AA|, a cloud service that is part of the |aap| subscription. For opt-in of |AA| to have any effect, your instance of |at| **must** be running on |rhel|."
+msgstr "라이센스를 처음 가져올 때 |aap| 서브스크립션에 포함된 클라우드 서비스인 |AA|를 지원하는 데이터 수집과 관련된 옵션이 제공되었습니다. |AA| 옵트인이 적용되려면 |at| 인스턴스가 |rhel|에서 실행되고 **있어야** 합니다."
+
+#: ../../source/usability_data_collection.rst:18
+msgid "Much like Red Hat Insights, |AA| is built to only collect the minimum amount of data needed. No credential secrets, personal data, automation variables, or task output is gathered. For more information, see :ref:`Details of data collection<usability_data_collection_details>` below."
+msgstr "Red Hat Insights와 마찬가지로 |AA|는 필요한 최소한의 데이터만 수집하도록 빌드되었습니다. 인증 정보 시크릿, 개인 데이터, 자동화 변수 또는 작업 출력은 수집되지 않습니다. 자세한 내용은 아래의 :ref:`Details of data collection<usability_data_collection_details>`를 참조하십시오."
+
+#: ../../source/usability_data_collection.rst:20
+msgid "In order to enable this feature, turn on data collection for |AA| and enter your Red Hat customer credentials in the **Miscellaneous System settings** of the System configuration list of options located in the **Settings** menu."
+msgstr "이 기능을 활성화하려면 |AA|에 대해 데이터 수집을 켜고 **설정** 메뉴에 있는 시스템 구성 옵션 목록의 **기타 시스템 설정**에서 Red Hat 고객 인증 정보를 입력합니다."
+
+#: ../../source/usability_data_collection.rst:24
+msgid "Note that the **Automation Analytics Upload URL** field is pre-populated with the location to which the collection of insights data will be uploaded."
+msgstr "**자동화 분석 업로드 URL** 필드는 인사이트 데이터 수집이 업로드되는 위치로 미리 채워져 있습니다."
+
+#: ../../source/usability_data_collection.rst:26
+msgid "By default, the |AA| data is collected every 4 hours and upon enabling the feature, data will be collected up to a month back (or until the previous collection). You may turn off this data collection at any time in the **Miscellaneous System settings** of the System configuration window."
+msgstr "기본적으로 |AA| 데이터는 4시간마다 수집되며, 기능을 활성화할 경우 최대 1개월 이전까지(또는 이전 수집까지) 데이터가 수집됩니다. 언제든지 시스템 구성 창의 **기타 시스템 설정**에서 이 데이터 수집을 끌 수 있습니다."
+
+#: ../../source/usability_data_collection.rst:28
+msgid "This setting can also be enabled via the API by specifying ``INSIGHTS_TRACKING_STATE = True`` in either of these endpoints:"
+msgstr "다음 끝점 중 하나에서 ``INSIGHTS_TRACKING_STATE = True``를 지정하여 API를 통해 이 설정을 활성화할 수도 있습니다."
+
+#: ../../source/usability_data_collection.rst:30
+msgid "``api/v2/settings/all``"
+msgstr "``api/v2/settings/all``"
+
+#: ../../source/usability_data_collection.rst:31
+msgid "``api/v2/settings/system``"
+msgstr "``api/v2/settings/system``"
+
+#: ../../source/usability_data_collection.rst:33
+msgid "The |AA| generated from this data collection will be found on the `Red Hat Cloud Services`_ portal."
+msgstr "이 데이터 수집에서 생성된 |AA|는 `Red Hat Cloud Services`_ 포털에 있습니다."
+
+#: ../../source/usability_data_collection.rst:40
+msgid "The **Clusters** data is the default view. This graph represents the number of job runs across all controller clusters over a period of time. The example above shows a span of a week in a stacked bar-style chart that is organized by the number of jobs that ran successfully (in green) and jobs that failed (in red)."
+msgstr "**클러스터** 데이터가 기본 뷰입니다. 이 그래프는 일정 기간 동안 모든 컨트롤러 클러스터가 작업 실행 수를 나타냅니다. 위 예제에서는 성공적으로 실행된 작업 수(녹색)와 실패한 작업 수(빨간색)로 구성된 누적 막대형 차트로 1주 기간을 표시합니다."
+
+#: ../../source/usability_data_collection.rst:42
+msgid "Alternatively, you can select a single cluster to view its job status information."
+msgstr "또는 단일 클러스터를 선택하여 해당 작업 상태 정보를 볼 수 있습니다."
+
+#: ../../source/usability_data_collection.rst:46
+msgid "This multi-line chart represents the number of job runs for a single controller cluster for a specified period of time. The example here shows a span of a week, organized by the number of successfully running jobs (in green) and jobs that failed (in red). You can specify the number of successful and failed job runs for a selected cluster over a span of one week, two weeks, and monthly increments."
+msgstr "이 멀티 꺾은선형 차트는 지정된 기간 동안 단일 컨트롤러 클러스터가 작업 실행 수를 나타냅니다. 이 예제에서는 성공적으로 실행 중인 작업 수(녹색)와 실패한 작업 수(빨간색)로 구성된 1주 기간을 표시합니다. 1주, 2주, 월간 증분 기간에 선택한 클러스터에 대한 성공한 작업 실행 수와 실패한 작업 실행 수를 지정할 수 있습니다."
+
+#: ../../source/usability_data_collection.rst:48
+msgid "Click **Organization Statistics** from the left navigation pane to view information for the following:"
+msgstr "왼쪽 탐색 창에서 **조직 통계**를 클릭하여 다음 정보를 확인합니다."
+
+#: ../../source/usability_data_collection.rst:54
+msgid "Usage by organization"
+msgstr "조직별 사용량"
+
+#: ../../source/usability_data_collection.rst:56
+msgid "This pie chart represents the number of tasks ran inside all jobs by a particular organization."
+msgstr "이 원형 차트는 특정 조직의 모든 작업(job) 내에서 실행된 작업(task) 수를 나타냅니다."
+
+#: ../../source/usability_data_collection.rst:62
+msgid "Job runs by organization"
+msgstr "조직별 작업 실행"
+
+#: ../../source/usability_data_collection.rst:64
+msgid "This pie chart represents the controller usage across *all* controller clusters by organization, which is calculated by the number of jobs run by that organization."
+msgstr "이 원형 차트는 조직에서 실행한 작업 수로 계산되는, *모든* 컨트롤러 클러스터의 조직별 컨트롤러 사용량을 나타냅니다."
+
+#: ../../source/usability_data_collection.rst:70
+msgid "Organization status"
+msgstr "조직 상태"
+
+#: ../../source/usability_data_collection.rst:72
+msgid "This bar chart represents the controller usage by organization and date, which is calculated by the number of jobs run by that organization on a particular date. Alternatively, you can specify to show the number of job runs per organization in one week, two weeks, and monthly increments."
+msgstr "이 가로 막대형 차트는 조직에서 특정 날짜에 실행한 작업 수로 계산되는, 조직 및 날짜별 컨트롤러 사용량을 나타냅니다. 또는 1주, 2주, 월간 증분 기간의 조직별 작업 실행 수를 표시하도록 지정할 수 있습니다."
+
+#: ../../source/usability_data_collection.rst:77
+msgid "Details of data collection"
+msgstr "데이터 수집 세부 정보"
+
+#: ../../source/usability_data_collection.rst:79
+msgid "|AA| collects certain classes of data from |at|:"
+msgstr "|AA|는 |at|에서 특정 데이터 클래스를 수집합니다."
+
+#: ../../source/usability_data_collection.rst:81
+msgid "Basic configuration, like which features are enabled, and what operating system is being used"
+msgstr "활성화되는 기능 및 사용 중인 운영 체제와 같은 기본 구성"
+
+#: ../../source/usability_data_collection.rst:82
+msgid "Topology and status of the controller environment and hosts, including capacity and health"
+msgstr "용량과 상태를 포함한 컨트롤러 환경과 호스트의 토폴로지 및 상태"
+
+#: ../../source/usability_data_collection.rst:83
+msgid "Counts of automation resources:"
+msgstr "자동화 리소스 수:"
+
+#: ../../source/usability_data_collection.rst:85
+msgid "organizations, teams, and users"
+msgstr "조직, 팀, 사용자"
+
+#: ../../source/usability_data_collection.rst:86
+msgid "inventories and hosts"
+msgstr "인벤토리 및 호스트"
+
+#: ../../source/usability_data_collection.rst:87
+msgid "credentials (indexed by type)"
+msgstr "인증 정보(유형별로 인덱싱됨)"
+
+#: ../../source/usability_data_collection.rst:88
+msgid "projects (indexed by type)"
+msgstr "프로젝트(유형별로 인덱싱됨)"
+
+#: ../../source/usability_data_collection.rst:89
+msgid "templates"
+msgstr "템플릿"
+
+#: ../../source/usability_data_collection.rst:90
+msgid "schedules"
+msgstr "스케줄"
+
+#: ../../source/usability_data_collection.rst:91
+msgid "active sessions"
+msgstr "활성 세션"
+
+#: ../../source/usability_data_collection.rst:92
+msgid "running and pending jobs"
+msgstr "실행 중인 작업 및 보류 중인 작업"
+
+#: ../../source/usability_data_collection.rst:94
+msgid "Job execution details (start time, finish time, launch type, and success)"
+msgstr "작업 실행 세부 정보(시작 시간, 완료 시간, 시작 유형, 성공)"
+
+#: ../../source/usability_data_collection.rst:95
+msgid "Automation task details (success, host id, playbook/role, task name, and module used)"
+msgstr "자동화 작업 세부 정보(성공, 호스트 ID, 플레이북/역할, 작업 이름, 사용된 모듈)"
+
+#: ../../source/usability_data_collection.rst:97
+msgid "You can use ``awx-manage gather_analytics`` (without ``--ship``) to inspect the data that the controller sends so you can satisfy your data collection concerns. This will create a tarball that contains the analytics data that would be sent to Red Hat."
+msgstr "데이터 수집 요구 사항을 충족할 수 있도록 ``awx-manage gather_analytics``(``--ship`` 제외)를 사용하여 컨트롤러에서 전송하는 데이터를 검사할 수 있습니다. 이렇게 하면 Red Hat으로 전송되는 분석 데이터가 포함된 tarball이 생성됩니다."
+
+#: ../../source/usability_data_collection.rst:99
+msgid "This file contains a number of JSON and CSV files. Each file contains a different set of analytics data."
+msgstr "이 파일에는 여러 JSON 및 CSV 파일이 포함되어 있습니다. 파일마다 다른 분석 데이터 세트가 포함됩니다."
+
+#: ../../source/usability_data_collection.rst:105
+msgid "manifest.json"
+msgstr "manifest.json"
+
+#: ../../source/usability_data_collection.rst:107
+msgid "manifest.json is the manifest of the analytics data. It describes each file included in the collection, and what version of the schema for that file is included. An example manifest is:"
+msgstr "manifest.json은 분석 데이터 매니페스트입니다. 컬렉션에 포함된 각 파일과 포함된 해당 파일의 스키마 버전을 설명합니다. 예제 매니페스트는 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:132
+msgid "config.json"
+msgstr "config.json"
+
+#: ../../source/usability_data_collection.rst:134
+msgid "The config.json file contains a subset of the configuration endpoint ``/api/v2/config`` from the cluster. An example config.json is:"
+msgstr "config.json 파일에는 클러스터의 구성 끝점 ``/api/v2/config`` 서브 세트가 포함되어 있습니다. 예제 config.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:174
+#: ../../source/usability_data_collection.rst:241
+msgid "A reference of fields collected:"
+msgstr "수집되는 필드의 참조:"
+
+#: ../../source/usability_data_collection.rst:176
+msgid "ansible_version"
+msgstr "ansible_version"
+
+#: ../../source/usability_data_collection.rst:177
+msgid "The system Ansible version on the host"
+msgstr "호스트의 시스템 Ansible 버전"
+
+#: ../../source/usability_data_collection.rst:180
+msgid "authentication_backends"
+msgstr "authentication_backends"
+
+#: ../../source/usability_data_collection.rst:179
+msgid "What user authentication backends are available. For more information, refer to :ref:`ag_social_auth` or see :ref:`ag_auth_ldap`."
+msgstr "사용 가능한 사용자 인증 백엔드. 자세한 내용은 :ref:`ag_social_auth` 를 참조하거나 :ref:`ag_auth_ldap` 참조하십시오."
+
+#: ../../source/usability_data_collection.rst:182
+msgid "external_logger_enabled"
+msgstr "external_logger_enabled"
+
+#: ../../source/usability_data_collection.rst:183
+msgid "Whether external logging is enaled"
+msgstr "외부 로깅 활성화 여부"
+
+#: ../../source/usability_data_collection.rst:184
+msgid "external_logger_type"
+msgstr "external_logger_type"
+
+#: ../../source/usability_data_collection.rst:185
+msgid "What logging backend is in use if enabled. See :ref:`ag_logging` for details"
+msgstr "활성화된 경우 사용 중인 로깅 백엔드. 자세한 내용은 :ref:`ag_logging`을 참조하십시오."
+
+#: ../../source/usability_data_collection.rst:186
+msgid "logging_aggregators"
+msgstr "logging_aggregators"
+
+#: ../../source/usability_data_collection.rst:187
+msgid "What logging categories are sent to external logging. See :ref:`ag_logging` for details"
+msgstr "외부 로깅으로 전송되는 로깅 카테고리. 자세한 내용은 :ref:`ag_logging`을 참조하십시오."
+
+#: ../../source/usability_data_collection.rst:188
+msgid "free_instances"
+msgstr "free_instances"
+
+#: ../../source/usability_data_collection.rst:189
+msgid "How many hosts are available in the license. A value of zero means the cluster is fully consuming its license."
+msgstr "라이센스에서 사용할 수 있는 호스트 수. 값이 0이면 클러스터가 라이센스를 완전히 사용하고 있습니다."
+
+#: ../../source/usability_data_collection.rst:190
+msgid "install_uuid"
+msgstr "install_uuid"
+
+#: ../../source/usability_data_collection.rst:191
+msgid "A UUID for the installation (identical for all cluster nodes)"
+msgstr "설치 UUID(모든 클러스터 노드에 동일)"
+
+#: ../../source/usability_data_collection.rst:192
+msgid "instance_uuid"
+msgstr "instance_uuid"
+
+#: ../../source/usability_data_collection.rst:193
+msgid "A UUID for the instance (different for each cluster node)"
+msgstr "인스턴스 UUID(클러스터 노드마다 다름)"
+
+#: ../../source/usability_data_collection.rst:194
+msgid "license_expiry"
+msgstr "license_expiry"
+
+#: ../../source/usability_data_collection.rst:195
+msgid "Time to expiry of the license, in seconds"
+msgstr "라이센스 만료 시간(초)"
+
+#: ../../source/usability_data_collection.rst:196
+msgid "license_type"
+msgstr "license_type"
+
+#: ../../source/usability_data_collection.rst:197
+msgid "Type of the license (should be 'enterprise' for most cases)"
+msgstr "라이센스 유형(대부분의 경우 'enterprise'여야 함)"
+
+#: ../../source/usability_data_collection.rst:198
+msgid "pendo_tracking"
+msgstr "pendo_tracking"
+
+#: ../../source/usability_data_collection.rst:199
+msgid "State of :ref:`usability_data_collection`"
+msgstr ":ref:`usability_data_collection`의 상태"
+
+#: ../../source/usability_data_collection.rst:200
+msgid "platform"
+msgstr "platform"
+
+#: ../../source/usability_data_collection.rst:201
+msgid "The operating system the cluster is running on"
+msgstr "클러스터를 실행 중인 운영 체제"
+
+#: ../../source/usability_data_collection.rst:202
+msgid "total_licensed_instances"
+msgstr "total_licensed_instances"
+
+#: ../../source/usability_data_collection.rst:203
+msgid "The total number of hosts in the license"
+msgstr "라이센스의 총 호스트 수"
+
+#: ../../source/usability_data_collection.rst:204
+msgid "controller_url_base"
+msgstr "controller_url_base"
+
+#: ../../source/usability_data_collection.rst:205
+msgid "The base URL for the cluster used by clients (shown in |AA|)"
+msgstr "클라이언트에서 사용하는 클러스터의 기본 URL(|AA|에 표시)"
+
+#: ../../source/usability_data_collection.rst:207
+msgid "controller_version"
+msgstr "controller_version"
+
+#: ../../source/usability_data_collection.rst:207
+msgid "Version of the software on the cluster"
+msgstr "클러스터의 소프트웨어 버전"
+
+#: ../../source/usability_data_collection.rst:210
+msgid "instance_info.json"
+msgstr "instance_info.json"
+
+#: ../../source/usability_data_collection.rst:212
+msgid "The instance_info.json file contains detailed information on the instances that make up the cluster, organized by instance UUID. An example instance_info.json is:"
+msgstr "instance_info.json 파일에는 클러스터를 구성하는 인스턴스에 대한 자세한 정보가 인스턴스 UUID별로 포함되어 있습니다. 예제 instance_info.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:243
+msgid "capacity"
+msgstr "capacity"
+
+#: ../../source/usability_data_collection.rst:244
+msgid "The capacity of the instance for executing tasks. See <link> for details on how this is calculated."
+msgstr "인스턴스의 작업 실행 용량. 계산 방법에 대한 자세한 내용은 <link>을(를) 참조하십시오."
+
+#: ../../source/usability_data_collection.rst:245
+msgid "cpu"
+msgstr "cpu"
+
+#: ../../source/usability_data_collection.rst:246
+msgid "CPU cores for the instance"
+msgstr "인스턴스의 CPU 코어"
+
+#: ../../source/usability_data_collection.rst:247
+msgid "memory"
+msgstr "memory"
+
+#: ../../source/usability_data_collection.rst:248
+msgid "Memory for the instance"
+msgstr "인스턴스의 메모리"
+
+#: ../../source/usability_data_collection.rst:249
+msgid "enabled"
+msgstr "enabled"
+
+#: ../../source/usability_data_collection.rst:250
+msgid "Whether the instance is enabled and accepting tasks"
+msgstr "인스턴스가 활성화되어 작업을 수락하는지 여부"
+
+#: ../../source/usability_data_collection.rst:251
+msgid "managed_by_policy"
+msgstr "managed_by_policy"
+
+#: ../../source/usability_data_collection.rst:252
+msgid "Whether the instance's membership in instance groups is managed by policy, or manually managed"
+msgstr "인스턴스 그룹의 인스턴스 멤버십이 정책으로 관리되는지 또는 수동으로 관리되는지 여부"
+
+#: ../../source/usability_data_collection.rst:254
+msgid "version"
+msgstr "version"
+
+#: ../../source/usability_data_collection.rst:254
+msgid "Version of the software on the instance"
+msgstr "인스턴스의 소프트웨어 버전"
+
+#: ../../source/usability_data_collection.rst:257
+msgid "counts.json"
+msgstr "counts.json"
+
+#: ../../source/usability_data_collection.rst:259
+msgid "The counts.json file contains the total number of objects for each relevant category in a cluster. An example counts.json is: ::"
+msgstr "counts.json 파일에는 클러스터의 각 관련 카테고리에 대한 총 오브젝트 수가 포함되어 있습니다. 예제 count.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:291
+msgid "Each entry in this file is for the corresponding API objects in ``/api/v2``, with the exception of the active session counts."
+msgstr "활성 세션 수를 제외한 이 파일의 각 항목은 ``/api/v2``의 해당 API 오브젝트를 나타냅니다."
+
+#: ../../source/usability_data_collection.rst:294
+msgid "org_counts.json"
+msgstr "org_counts.json"
+
+#: ../../source/usability_data_collection.rst:296
+msgid "The org_counts.json file contains information on each organization in the cluster, and the number of users and teams associated with that organization. An example org_counts.json is: ::"
+msgstr "org_counts.json 파일에는 클러스터의 각 조직 및 해당 조직과 연결된 사용자 및 팀 수가 포함되어 있습니다. 예제 org_counts.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:320
+msgid "cred_type_counts.json"
+msgstr "cred_type_counts.json"
+
+#: ../../source/usability_data_collection.rst:322
+msgid "The cred_type_counts.json file contains information on the different credential types in the cluster, and how many credentials exist for each type. An example cred_type_counts.json is: ::"
+msgstr "cred_type_counts.json 파일에는 클러스터의 다양한 인증 정보 유형 및 각 유형의 인증 정보 수에 대한 정보가 포함되어 있습니다. 예제 cred_type_counts.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:361
+msgid "inventory_counts.json"
+msgstr "inventory_counts.json"
+
+#: ../../source/usability_data_collection.rst:363
+msgid "The inventory_counts.json file contains information on the different inventories in the cluster. An example inventory_counts.json is: ::"
+msgstr "inventory_counts.json 파일에는 클러스터의 다양한 인벤토리에 대한 정보가 포함되어 있습니다. 예제 inventory_counts.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:412
+msgid "projects_by_scm_type.json"
+msgstr "projects_by_scm_type.json"
+
+#: ../../source/usability_data_collection.rst:414
+msgid "The projects_by_scm_type.json file provides a breakdown of all projects in the cluster, by source control type. An example projects_by_scm_type.json is: ::"
+msgstr "projects_by_scm_type.json 파일은 클러스터의 모든 프로젝트를 소스 제어 유형별로 분석합니다. 예제 projects_by_scm_type.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:428
+msgid "query_info.json"
+msgstr "query_info.json"
+
+#: ../../source/usability_data_collection.rst:430
+msgid "The query_info.json file provides details on when and how the data collection happened. An example query_info.json is:"
+msgstr "query_info.json 파일은 데이터 수집 시기와 방법에 대한 세부 정보를 제공합니다. 예제 query_info.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:442
+msgid "collection_type is one of \"manual\" or \"automatic\"."
+msgstr "collection_type은 \"manual\" 또는 \"automatic\" 중 하나입니다."
+
+#: ../../source/usability_data_collection.rst:445
+msgid "job_counts.json"
+msgstr "job_counts.json"
+
+#: ../../source/usability_data_collection.rst:447
+msgid "The job_counts.json file provides details on the job history of the cluster, describing both how jobs were launched, and what their finishing status is. An example job_counts.json is: ::"
+msgstr "job_counts.json 파일은 클러스터의 작업 기록에 대한 세부 정보를 제공하며 작업 시작 방법과 완료 상태를 설명합니다. 예제 job_counts.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:470
+msgid "job_instance_counts.json"
+msgstr "job_instance_counts.json"
+
+#: ../../source/usability_data_collection.rst:472
+msgid "The job_instance_counts.json file provides the same detail as job_counts.json, broken down by instance. An example job_instance_counts.json is: ::"
+msgstr "job_instance_counts.json 파일은 job_counts.json과 동일한 세부 정보를 인스턴스별로 분석하여 제공합니다. 예제 job_instance_counts.json은 다음과 같습니다."
+
+#: ../../source/usability_data_collection.rst:495
+msgid "Note that instances in this file are by hostname, not by UUID as they are in instance_info."
+msgstr "이 파일의 인스턴스는 instance_info에 있으므로 UUID가 아닌 호스트 이름별로 구성되어 있습니다."
+
+#: ../../source/usability_data_collection.rst:498
+msgid "unified_job_template_table.csv"
+msgstr "unified_job_template_table.csv"
+
+#: ../../source/usability_data_collection.rst:500
+msgid "The unified_job_template_table.csv file provides information on job templates in the system. Each line contains the following fields for the job template:"
+msgstr "unified_job_template_table.csv 파일은 시스템의 작업 템플릿에 대한 정보를 제공합니다. 각 행에는 작업 템플릿에 대한 다음 필드가 포함되어 있습니다."
+
+#: ../../source/usability_data_collection.rst:503
+#: ../../source/usability_data_collection.rst:540
+#: ../../source/usability_data_collection.rst:592
+#: ../../source/usability_data_collection.rst:621
+#: ../../source/usability_data_collection.rst:652
+msgid "id"
+msgstr "id"
+
+#: ../../source/usability_data_collection.rst:504
+msgid "Job template id"
+msgstr "작업 템플릿 ID"
+
+#: ../../source/usability_data_collection.rst:505
+#: ../../source/usability_data_collection.rst:542
+msgid "name"
+msgstr "name"
+
+#: ../../source/usability_data_collection.rst:506
+msgid "Job template name"
+msgstr "작업 템플릿 이름"
+
+#: ../../source/usability_data_collection.rst:507
+#: ../../source/usability_data_collection.rst:544
+msgid "polymorphic_ctype_id"
+msgstr "polymorphic_ctype_id"
+
+#: ../../source/usability_data_collection.rst:508
+msgid "The id of the type of template it is"
+msgstr "템플릿 유형 ID"
+
+#: ../../source/usability_data_collection.rst:509
+#: ../../source/usability_data_collection.rst:546
+msgid "model"
+msgstr "model"
+
+#: ../../source/usability_data_collection.rst:510
+msgid "The name of the polymorphic_ctype_id for the template. Examples include 'project', 'systemjobtemplate', 'jobtemplate', 'inventorysource', and 'workflowjobtemplate'"
+msgstr "템플릿의 polymorphic_ctype_id 이름. 예를 들어 'project', 'systemjobtemplate', 'jobtemplate', 'inventorysource', 'workflowjobtemplate' 등이 있습니다."
+
+#: ../../source/usability_data_collection.rst:511
+#: ../../source/usability_data_collection.rst:552
+#: ../../source/usability_data_collection.rst:594
+#: ../../source/usability_data_collection.rst:623
+#: ../../source/usability_data_collection.rst:656
+msgid "created"
+msgstr "created"
+
+#: ../../source/usability_data_collection.rst:512
+msgid "When the template was created"
+msgstr "템플릿이 생성된 시간"
+
+#: ../../source/usability_data_collection.rst:513
+#: ../../source/usability_data_collection.rst:596
+#: ../../source/usability_data_collection.rst:625
+msgid "modified"
+msgstr "modified"
+
+#: ../../source/usability_data_collection.rst:514
+msgid "When the template was last updated"
+msgstr "템플릿이 마지막으로 업데이트된 시간"
+
+#: ../../source/usability_data_collection.rst:515
+msgid "created_by_id"
+msgstr "created_by_id"
+
+#: ../../source/usability_data_collection.rst:516
+msgid "The userid that created the template. Blank if done by the system."
+msgstr "템플릿을 생성한 userid. 시스템에서 수행한 경우 비어 있습니다."
+
+#: ../../source/usability_data_collection.rst:517
+msgid "modified_by_id"
+msgstr "modified_by_id"
+
+#: ../../source/usability_data_collection.rst:518
+msgid "The userid that last modified the template. Blank if done by the system."
+msgstr "템플릿을 마지막으로 수정한 userid. 시스템에서 수행한 경우 비어 있습니다."
+
+#: ../../source/usability_data_collection.rst:519
+msgid "current_job_id"
+msgstr "current_job_id"
+
+#: ../../source/usability_data_collection.rst:520
+msgid "Currently executing job id for the template, if any"
+msgstr "템플릿에 대해 현재 실행 중인 작업 ID(있는 경우)"
+
+#: ../../source/usability_data_collection.rst:521
+msgid "last_job_id"
+msgstr "last_job_id"
+
+#: ../../source/usability_data_collection.rst:522
+msgid "Last execution of the job"
+msgstr "마지막 작업 실행"
+
+#: ../../source/usability_data_collection.rst:523
+msgid "last_job_run"
+msgstr "last_job_run"
+
+#: ../../source/usability_data_collection.rst:524
+msgid "Time of last execution of the job"
+msgstr "마지막 작업 실행 시간"
+
+#: ../../source/usability_data_collection.rst:525
+msgid "last_job_failed"
+msgstr "last_job_failed"
+
+#: ../../source/usability_data_collection.rst:526
+msgid "Whether the last_job_id failed"
+msgstr "last_job_id가 실패했는지 여부"
+
+#: ../../source/usability_data_collection.rst:527
+#: ../../source/usability_data_collection.rst:574
+msgid "status"
+msgstr "status"
+
+#: ../../source/usability_data_collection.rst:528
+msgid "Status of last_job_id"
+msgstr "last_job_id 상태"
+
+#: ../../source/usability_data_collection.rst:529
+msgid "next_job_run"
+msgstr "next_job_run"
+
+#: ../../source/usability_data_collection.rst:530
+msgid "Next scheduled execution of the template, if any"
+msgstr "다음 스케줄링된 템플릿 실행(있는 경우)"
+
+#: ../../source/usability_data_collection.rst:532
+msgid "next_schedule_id"
+msgstr "next_schedule_id"
+
+#: ../../source/usability_data_collection.rst:532
+msgid "Schedule id for next_job_run, if any"
+msgstr "next_job_run의 스케줄 ID(있는 경우)"
+
+#: ../../source/usability_data_collection.rst:535
+msgid "unified_jobs_table.csv"
+msgstr "unified_jobs_table.csv"
+
+#: ../../source/usability_data_collection.rst:537
+msgid "The unified_jobs_table.csv file provides information on jobs run by the system. Each line contains the following fields for a job:"
+msgstr "unified_jobs_table.csv 파일은 시스템에서 실행하는 작업에 대한 정보를 제공합니다. 각 행에는 작업에 대한 다음 필드가 포함되어 있습니다."
+
+#: ../../source/usability_data_collection.rst:541
+msgid "Job id"
+msgstr "작업 ID"
+
+#: ../../source/usability_data_collection.rst:543
+msgid "Job name (from the template)"
+msgstr "작업 이름(템플릿)"
+
+#: ../../source/usability_data_collection.rst:545
+msgid "The id of the type of job it is"
+msgstr "작업 유형 ID"
+
+#: ../../source/usability_data_collection.rst:547
+msgid "The name of the polymorphic_ctype_id for the job. Examples include 'job', 'worfklow', and more."
+msgstr "작업의 polymorphic_ctype_id 이름. 예를 들어 'job', 'worfklow' 등이 있습니다."
+
+#: ../../source/usability_data_collection.rst:548
+msgid "organization_id"
+msgstr "organization_id"
+
+#: ../../source/usability_data_collection.rst:549
+msgid "The organization ID for the job"
+msgstr "작업의 조직 ID"
+
+#: ../../source/usability_data_collection.rst:550
+msgid "organization_name"
+msgstr "organization_name"
+
+#: ../../source/usability_data_collection.rst:551
+msgid "Name for the organization_id"
+msgstr "organization_id 이름"
+
+#: ../../source/usability_data_collection.rst:553
+msgid "When the job record was created"
+msgstr "작업 레코드가 생성된 시간"
+
+#: ../../source/usability_data_collection.rst:554
+msgid "started"
+msgstr "started"
+
+#: ../../source/usability_data_collection.rst:555
+msgid "When the job started executing"
+msgstr "작업 실행이 시작된 시간"
+
+#: ../../source/usability_data_collection.rst:556
+msgid "finished"
+msgstr "finished"
+
+#: ../../source/usability_data_collection.rst:557
+msgid "When the job finished"
+msgstr "작업이 완료된 시간"
+
+#: ../../source/usability_data_collection.rst:558
+msgid "elapsed"
+msgstr "elapsed"
+
+#: ../../source/usability_data_collection.rst:559
+msgid "Elapsed time for the job in seconds"
+msgstr "작업 경과 시간(초)"
+
+#: ../../source/usability_data_collection.rst:560
+#: ../../source/usability_data_collection.rst:598
+msgid "unified_job_template_id"
+msgstr "unified_job_template_id"
+
+#: ../../source/usability_data_collection.rst:561
+msgid "The template for this job"
+msgstr "이 작업의 템플릿"
+
+#: ../../source/usability_data_collection.rst:562
+msgid "launch_type"
+msgstr "launch_type"
+
+#: ../../source/usability_data_collection.rst:563
+msgid "One of \"manual\", \"scheduled\", \"relaunched\", \"scm\", \"workflow\", or \"dependnecy\""
+msgstr "\"manual\", \"scheduled\", \"relaunched\", \"scm\", \"workflow\" 또는 \"dependnecy\" 중 하나"
+
+#: ../../source/usability_data_collection.rst:564
+msgid "schedule_id"
+msgstr "schedule_id"
+
+#: ../../source/usability_data_collection.rst:565
+msgid "The id of the schedule that launched the job, if any"
+msgstr "작업을 시작한 스케줄 ID(있는 경우)"
+
+#: ../../source/usability_data_collection.rst:566
+msgid "instance_group_id"
+msgstr "instance_group_id"
+
+#: ../../source/usability_data_collection.rst:567
+msgid "The instance group that executed the job"
+msgstr "작업을 실행한 인스턴스 그룹"
+
+#: ../../source/usability_data_collection.rst:568
+msgid "execution_node"
+msgstr "execution_node"
+
+#: ../../source/usability_data_collection.rst:569
+msgid "The node that executed the job (hostname, not UUID)"
+msgstr "작업을 실행한 노드(호스트 이름, UUID 아님)"
+
+#: ../../source/usability_data_collection.rst:570
+msgid "controller_node"
+msgstr "controller_node"
+
+#: ../../source/usability_data_collection.rst:571
+msgid "The controller node for the job, if run as an isolated job, or in a container group"
+msgstr "격리된 작업으로 또는 컨테이너 그룹에서 실행된 경우 작업의 컨트롤러 노드"
+
+#: ../../source/usability_data_collection.rst:572
+msgid "cancel_flag"
+msgstr "cancel_flag"
+
+#: ../../source/usability_data_collection.rst:573
+msgid "Whether the job was cancelled"
+msgstr "작업이 취소되었는지 여부"
+
+#: ../../source/usability_data_collection.rst:575
+msgid "Status of the job"
+msgstr "작업 상태"
+
+#: ../../source/usability_data_collection.rst:576
+#: ../../source/usability_data_collection.rst:664
+msgid "failed"
+msgstr "failed"
+
+#: ../../source/usability_data_collection.rst:577
+msgid "Whether the job failed"
+msgstr "작업이 실패했는지 여부"
+
+#: ../../source/usability_data_collection.rst:578
+msgid "job_explanation"
+msgstr "job_explanation"
+
+#: ../../source/usability_data_collection.rst:579
+msgid "Any additional detail for jobs that failed to execute properly"
+msgstr "제대로 실행되지 않은 작업에 대한 추가 세부 정보"
+
+#: ../../source/usability_data_collection.rst:582
+msgid "forks"
+msgstr "포크"
+
+#: ../../source/usability_data_collection.rst:581
+msgid "Number of forks executed for this job"
+msgstr "이 작업에 대해 실행된 포크 수"
+
+#: ../../source/usability_data_collection.rst:585
+msgid "workflow_job_template_node_table.csv"
+msgstr "workflow_job_template_node_table.csv"
+
+#: ../../source/usability_data_collection.rst:587
+msgid "The workflow_job_template_node_table.csv provides information on the nodes defined in workflow job templates on the system."
+msgstr "workflow_job_template_node_table.csv는 시스템의 워크플로우 작업 템플릿에 정의된 노드에 대한 정보를 제공합니다."
+
+#: ../../source/usability_data_collection.rst:590
+msgid "Each line contains the following fields for a worfklow job template node:"
+msgstr "각 행에는 워크플로우 작업 템플릿 노드에 대한 다음 필드가 포함되어 있습니다."
+
+#: ../../source/usability_data_collection.rst:593
+#: ../../source/usability_data_collection.rst:622
+msgid "Node id"
+msgstr "노드 ID"
+
+#: ../../source/usability_data_collection.rst:595
+msgid "When the node was created"
+msgstr "노드가 생성된 시간"
+
+#: ../../source/usability_data_collection.rst:597
+msgid "When the node was last updated"
+msgstr "노드가 마지막으로 업데이트된 시간"
+
+#: ../../source/usability_data_collection.rst:599
+msgid "The id of the job template, project, inventory, or other parent resource for this node"
+msgstr "이 노드에 대한 작업 템플릿, 프로젝트, 인벤토리 또는 기타 상위 리소스의 ID"
+
+#: ../../source/usability_data_collection.rst:600
+msgid "workflow_job_template_id"
+msgstr "workflow_job_template_id"
+
+#: ../../source/usability_data_collection.rst:601
+msgid "The workflow job template that contains this node"
+msgstr "이 노드가 포함된 워크플로우 작업 템플릿"
+
+#: ../../source/usability_data_collection.rst:602
+#: ../../source/usability_data_collection.rst:633
+msgid "inventory_id"
+msgstr "inventory_id"
+
+#: ../../source/usability_data_collection.rst:603
+msgid "The inventory used by this node"
+msgstr "이 노드에서 사용하는 인벤토리"
+
+#: ../../source/usability_data_collection.rst:604
+#: ../../source/usability_data_collection.rst:635
+msgid "success_nodes"
+msgstr "success_nodes"
+
+#: ../../source/usability_data_collection.rst:605
+msgid "Nodes that are triggered after this node succeeds"
+msgstr "이 노드가 성공한 후 트리거되는 노드"
+
+#: ../../source/usability_data_collection.rst:606
+#: ../../source/usability_data_collection.rst:637
+msgid "failure_nodes"
+msgstr "failure_nodes"
+
+#: ../../source/usability_data_collection.rst:607
+msgid "Nodes that are triggered after this node fails"
+msgstr "이 노드가 실패한 후 트리거되는 노드"
+
+#: ../../source/usability_data_collection.rst:608
+#: ../../source/usability_data_collection.rst:639
+msgid "always_nodes"
+msgstr "always_nodes"
+
+#: ../../source/usability_data_collection.rst:609
+msgid "Nodes that always are triggered after this node finishes"
+msgstr "이 노드가 완료된 후 항상 트리거되는 노드"
+
+#: ../../source/usability_data_collection.rst:611
+#: ../../source/usability_data_collection.rst:644
+msgid "all_parents_must_converge"
+msgstr "all_parents_must_converge"
+
+#: ../../source/usability_data_collection.rst:611
+msgid "Whether this node requires all its parent conditions satisfied to start"
+msgstr "이 노드를 시작하기 위해 모든 상위 조건이 충족되어야 하는지 여부"
+
+#: ../../source/usability_data_collection.rst:614
+msgid "workflow_job_node_table.csv"
+msgstr "workflow_job_node_table.csv"
+
+#: ../../source/usability_data_collection.rst:616
+msgid "The workflow_job_node_table.csv provides information on the jobs that have been executed as part of a workflow on the system."
+msgstr "workflow_job_node_table.csv는 시스템에서 워크플로우의 일부로 실행된 작업에 대한 정보를 제공합니다."
+
+#: ../../source/usability_data_collection.rst:619
+msgid "Each line contains the following fields for a job run as part of a workflow:"
+msgstr "각 행에는 워크플로우의 일부로 실행된 작업에 대한 다음 필드가 포함되어 있습니다."
+
+#: ../../source/usability_data_collection.rst:624
+msgid "When the node record was created"
+msgstr "노드 레코드가 생성된 시간"
+
+#: ../../source/usability_data_collection.rst:626
+msgid "When the node record was last updated"
+msgstr "노드 레코드가 마지막으로 업데이트된 시간"
+
+#: ../../source/usability_data_collection.rst:627
+#: ../../source/usability_data_collection.rst:676
+msgid "job_id"
+msgstr "job_id"
+
+#: ../../source/usability_data_collection.rst:628
+msgid "The job id for the job run for this node"
+msgstr "이 노드에 대한 작업 실행의 작업 ID"
+
+#: ../../source/usability_data_collection.rst:629
+msgid "unified_job_tempalte_id"
+msgstr "unified_job_tempalte_id"
+
+#: ../../source/usability_data_collection.rst:630
+msgid "The id of the job template, project, inventory, or other parent resource for this job run"
+msgstr "이 작업 실행에 대한 작업 템플릿, 프로젝트, 인벤토리 또는 기타 상위 리소스의 ID"
+
+#: ../../source/usability_data_collection.rst:631
+msgid "workflow_job_id"
+msgstr "workflow_job_id"
+
+#: ../../source/usability_data_collection.rst:632
+msgid "The parent workflow job for this job run"
+msgstr "이 작업 실행에 대한 상위 워크플로우 작업"
+
+#: ../../source/usability_data_collection.rst:634
+msgid "The inventory used by this job"
+msgstr "이 작업에서 사용하는 인벤토리"
+
+#: ../../source/usability_data_collection.rst:636
+msgid "Nodes that were/would be triggered after this node succeded"
+msgstr "이 노드가 성공한 후 트리거된 노드"
+
+#: ../../source/usability_data_collection.rst:638
+msgid "Nodes that were/would be triggered after this node failed"
+msgstr "이 노드가 실패한 후 트리거된 노드"
+
+#: ../../source/usability_data_collection.rst:640
+msgid "Nodes that were/would be triggered after this node finished"
+msgstr "이 노드가 완료된 후 트리거된 노드"
+
+#: ../../source/usability_data_collection.rst:641
+msgid "do_not_run"
+msgstr "do_not_run"
+
+#: ../../source/usability_data_collection.rst:642
+msgid "Nodes that were not run in the workflow due to their start conditions not being triggered"
+msgstr "시작 조건이 트리거되지 않아 워크플로우에서 실행되지 않은 노드"
+
+#: ../../source/usability_data_collection.rst:644
+msgid "Whether this node required all its parent conditions satisfied to start"
+msgstr "이 노드를 시작하기 위해 모든 상위 조건이 충족되어야 했는지 여부"
+
+#: ../../source/usability_data_collection.rst:647
+msgid "events_table.csv"
+msgstr "events_table.csv"
+
+#: ../../source/usability_data_collection.rst:649
+msgid "The events_table.csv file provides information on all job events from all job runs in the system. Each line contains the following fields for a job event:"
+msgstr "events_table.csv 파일은 시스템의 모든 작업 실행에서 발생한 모든 작업 이벤트에 대한 정보를 제공합니다. 각 행에는 작업 이벤트에 대한 다음 필드가 포함되어 있습니다."
+
+#: ../../source/usability_data_collection.rst:653
+msgid "Event id"
+msgstr "이벤트 ID"
+
+#: ../../source/usability_data_collection.rst:654
+msgid "uuid"
+msgstr "uuid"
+
+#: ../../source/usability_data_collection.rst:655
+msgid "Event UUID"
+msgstr "이벤트 UUID"
+
+#: ../../source/usability_data_collection.rst:657
+msgid "When the event was created"
+msgstr "이벤트가 생성된 시간"
+
+#: ../../source/usability_data_collection.rst:658
+msgid "parent_uuid"
+msgstr "parent_uuid"
+
+#: ../../source/usability_data_collection.rst:659
+msgid "The parent UUID for this event, if any"
+msgstr "이 이벤트의 상위 UUID(있는 경우)"
+
+#: ../../source/usability_data_collection.rst:660
+msgid "event"
+msgstr "event"
+
+#: ../../source/usability_data_collection.rst:661
+msgid "The Ansible event type (such as runner_on_failed"
+msgstr "Ansible 이벤트 유형(예: runner_on_failed)"
+
+#: ../../source/usability_data_collection.rst:662
+msgid "task_action"
+msgstr "task_action"
+
+#: ../../source/usability_data_collection.rst:663
+msgid "The module associated with this event, if any (such as 'command' or 'yum')"
+msgstr "이 이벤트와 연결된 모듈(있는 경우)(예: 'command' 또는 'yum')"
+
+#: ../../source/usability_data_collection.rst:665
+msgid "Whether the event returned \"failed\""
+msgstr "이벤트에서 \"failed\"가 반환되었는지 여부"
+
+#: ../../source/usability_data_collection.rst:666
+msgid "changed"
+msgstr "changed"
+
+#: ../../source/usability_data_collection.rst:667
+msgid "Whether the event returned \"changed\""
+msgstr "이벤트에서 \"changed\"가 반환되었는지 여부"
+
+#: ../../source/usability_data_collection.rst:668
+msgid "playbook"
+msgstr "playbook"
+
+#: ../../source/usability_data_collection.rst:669
+msgid "Playbook associated with the event"
+msgstr "이벤트와 연결된 플레이북"
+
+#: ../../source/usability_data_collection.rst:670
+msgid "play"
+msgstr "play"
+
+#: ../../source/usability_data_collection.rst:671
+msgid "Play name from playbook"
+msgstr "플레이북의 플레이 이름"
+
+#: ../../source/usability_data_collection.rst:672
+msgid "task"
+msgstr "task"
+
+#: ../../source/usability_data_collection.rst:673
+msgid "Task name from playbook"
+msgstr "플레이북의 작업 이름"
+
+#: ../../source/usability_data_collection.rst:674
+msgid "role"
+msgstr "role"
+
+#: ../../source/usability_data_collection.rst:675
+msgid "Role name from playbook"
+msgstr "플레이북의 역할 이름"
+
+#: ../../source/usability_data_collection.rst:677
+msgid "Id of the job this event is from"
+msgstr "이 이벤트가 발생한 작업 ID"
+
+#: ../../source/usability_data_collection.rst:678
+msgid "host_id"
+msgstr "host_id"
+
+#: ../../source/usability_data_collection.rst:679
+msgid "Id of the host this event is associated with, if any"
+msgstr "이 이벤트가 연결된 호스트 ID(있는 경우)"
+
+#: ../../source/usability_data_collection.rst:680
+msgid "host_name"
+msgstr "host_name"
+
+#: ../../source/usability_data_collection.rst:681
+msgid "Name of the host this event is associated with, if any"
+msgstr "이 이벤트가 연결된 호스트 이름(있는 경우)"
+
+#: ../../source/usability_data_collection.rst:682
+msgid "start"
+msgstr "start"
+
+#: ../../source/usability_data_collection.rst:683
+msgid "Start time of the task"
+msgstr "작업 시작 시간"
+
+#: ../../source/usability_data_collection.rst:684
+msgid "end"
+msgstr "end"
+
+#: ../../source/usability_data_collection.rst:685
+msgid "End time of the task"
+msgstr "작업 종료 시간"
+
+#: ../../source/usability_data_collection.rst:686
+msgid "duration"
+msgstr "duration"
+
+#: ../../source/usability_data_collection.rst:687
+msgid "Duration of the task"
+msgstr "작업 기간"
+
+#: ../../source/usability_data_collection.rst:688
+msgid "warnings"
+msgstr "warnings"
+
+#: ../../source/usability_data_collection.rst:689
+msgid "Any warnings from the task/module"
+msgstr "작업/모듈의 경고"
+
+#: ../../<generated>:1
+msgid "deprecations"
+msgstr "deprecations"
+
+#: ../../source/usability_data_collection.rst:691
+msgid "Any deprecation warnings from the task/module"
+msgstr "작업/모듈의 중단 경고"
+

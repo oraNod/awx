@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tipsandtricks.rst:7
+msgid "Controller Tips and Tricks"
+msgstr "控制器使用技巧"
+
+#: ../../source/tipsandtricks.rst:18
+msgid "Using the Controller CLI Tool"
+msgstr "使用 Controller CLI 工具"
+
+#: ../../source/tipsandtricks.rst:25
+msgid "|At| has a full-featured command line interface. Refer to `AWX Command Line Interface`_  documentation for configuration and usage instructions."
+msgstr "|At| 有一个功能齐全的命令行界面。如需配置和用法说明，请参阅 `AWX Command Line Interface`_ 文档。"
+
+#: ../../source/tipsandtricks.rst:33
+msgid "Changing the Controller Admin Password"
+msgstr "更改控制器管理员密码"
+
+#: ../../source/tipsandtricks.rst:41
+msgid "During the installation process, you are prompted to enter an administrator password which is used for the ``admin`` superuser/first user created in the controller. If you log into the instance via SSH, it will tell you the default admin password in the prompt. If you need to change this password at any point, run the following command as root on the controller server:"
+msgstr "在安装过程中，会提示您输入一个管理员密码，该密码是在控制器中创建的 ``admin`` 超级用户/第一用户的密码。如果您通过 SSH 登录实例，它会在提示符后为您提供默认的管理员密码。如果您需要更改这个密码，请在控制器服务器中以 root 用户身份运行以下命令："
+
+#: ../../source/tipsandtricks.rst:47
+msgid "Next, enter a new password. After that, the password you have entered will work as the admin password in the web UI."
+msgstr "下一步，输入新密码。之后，您输入的新密码将作为 Web UI 中的管理员密码。"
+
+#: ../../source/tipsandtricks.rst:50
+msgid "To set policies at creation time for password validation using Django, see :ref:`ag_security_django_password` for detail."
+msgstr "要在创建策略时使用 Django 验证密码，请参阅 :ref:`ag_security_django_password`。"
+
+#: ../../source/tipsandtricks.rst:54
+msgid "Creating a controller Admin from the commandline"
+msgstr "通过命令行创建控制器管理员"
+
+#: ../../source/tipsandtricks.rst:61
+msgid "Once in a while you may find it helpful to create an admin (superuser) account from the commandline. To create an admin, run the following command as root on the controller server and enter in the admin information as prompted:"
+msgstr "在一些情况下，您可能需要从命令行创建管理员（超级用户）帐户。要创建一个管理员，请以 root 用户身份在控制器服务器上运行以下命令，并在提示时输入管理员信息："
+
+#: ../../source/tipsandtricks.rst:69
+msgid "Setting up a jump host to use with the controller"
+msgstr "设置要与控制器搭配使用的跳过主机"
+
+#: ../../source/tipsandtricks.rst:77
+msgid "Credentials supplied by the controller will not flow to the jump host via ProxyCommand. They are only used for the end-node once the tunneled connection is set up."
+msgstr "控制器提供的凭证不会通过 ProxyCommand 流向跳过主机。设置通道连接后，这些凭证仅用于终端节点。"
+
+#: ../../source/tipsandtricks.rst:79
+msgid "To make this work, configure a fixed user/keyfile in the AWX user's SSH config in the ProxyCommand definition that sets up the connection through the jump host. For example:"
+msgstr "这需要在 ProxyCommand 定义中的 AWX 用户的 SSH 配置中配置固定的用户/密钥文件，该配置通过跳过主机设置连接。例如："
+
+#: ../../source/tipsandtricks.rst:90
+msgid "You can also add a jump host to your controller instance through Inventory variables. These variables can be set at either the inventory, group, or host level. To add this, navigate to your inventory and in the ``variables`` field of whichever level you choose, add the following variables:"
+msgstr "您还可以通过清单变量在控制器实例中添加一个跳过主机。这些变量可以在清单、组或主机级别上设置。要添加它，请导航到清单并在您选择的级别 ``variables`` 字段中添加以下变量："
+
+#: ../../source/tipsandtricks.rst:100
+msgid "View Ansible outputs for JSON commands when using the controller"
+msgstr "在使用控制器时查看 JSON 命令的 Ansible 输出"
+
+#: ../../source/tipsandtricks.rst:105
+msgid "When working with |at|, you can use the API to obtain the Ansible outputs for commands in JSON format."
+msgstr "使用 |at| 时，可以通过 API 获取命令的 Ansible 输出（JSON 格式）。"
+
+#: ../../source/tipsandtricks.rst:107
+msgid "To view the Ansible outputs, browse to:"
+msgstr "要查看 Ansible 输出，请浏览："
+
+#: ../../source/tipsandtricks.rst:115
+msgid "Locate and configure the Ansible configuration file"
+msgstr "查找并配置 Ansible 配置文件"
+
+#: ../../source/tipsandtricks.rst:123
+msgid "While Ansible does not require a configuration file, OS packages often include a default one in ``/etc/ansible/ansible.cfg`` for possible customization. In order to use a custom ``ansible.cfg`` file, place it at the root of your project. |At| runs ``ansible-playbook`` from the root of the project directory, where it will then find the custom ``ansible.cfg`` file. An ``ansible.cfg`` anywhere else in the project will be ignored."
+msgstr "虽然 Ansible 不需要配置文件，但操作系统软件包通常会在 ``/etc/ansible/ansible.cfg`` 中包括默认文件来进行定制。为了使用自定义 ``ansible.cfg`` 文件，请将其放在项目根目录。|At| 从项目根目录运行 ``ansible-playbook``，然后在其中找到自定义 ``ansible.cfg`` 文件。在项目的其他位置中的 ``ansible.cfg`` 都会被忽略。"
+
+#: ../../source/tipsandtricks.rst:125
+msgid "To learn which values you can use in this file, refer to the `configuration file on github`_."
+msgstr "要了解在这个文件中可以使用的值，请参阅 `configuration file on github`_。"
+
+#: ../../source/tipsandtricks.rst:129
+msgid "Using the defaults are acceptable for starting out, but know that you can configure the default module path or connection type here, as well as other things."
+msgstr "您可以使用默认选项做为一个开始，并根据需要配置默认模块路径或者连接类型，以及其它功能。"
+
+#: ../../source/tipsandtricks.rst:131
+msgid "The controller overrides some ansible.cfg options. For example, the controller stores the SSH ControlMaster sockets, the SSH agent socket, and any other per-job run items in a per-job temporary directory that is passed to the container used for job execution."
+msgstr "控制器会覆盖一些 ansible.cfg 选项。例如，控制器存储 SSH ControlMaster 套接字、SSH 代理套接字，以及每个作业临时目录中的其他每个作业运行项目，后者将传递给用于作业执行的容器。"
+
+#: ../../source/tipsandtricks.rst:135
+msgid "View a listing of all ansible\\_ variables"
+msgstr "查看所有 ansible\\_ 变量的列表"
+
+#: ../../source/tipsandtricks.rst:139
+msgid "Ansible by default gathers “facts” about the machines under its management, accessible in Playbooks and in templates. To view all facts available about a machine, run the ``setup`` module as an ad hoc action:"
+msgstr "Ansible 默认收集其管理下的机器的“事实 (fact)”，可在 Playbook 和模板中访问。要查看有关机器的所有可用事实 (fact) ，可以临时运行 ``setup`` 模块："
+
+#: ../../source/tipsandtricks.rst:145
+msgid "This prints out a dictionary of all facts available for that particular host. For more information, refer to: https://docs.ansible.com/ansible/playbooks_variables.html#information-discovered-from-systems-facts"
+msgstr "这会输出特定主机所有可用事实的字典. 详情请参考： https://docs.ansible.com/ansible/playbooks_variables.html#information-discovered-from-systems-facts"
+
+#: ../../source/tipsandtricks.rst:151
+msgid "The ALLOW_JINJA_IN_EXTRA_VARS variable"
+msgstr "ALLOW_JINJA_IN_EXTRA_VARS 变量"
+
+#: ../../source/tipsandtricks.rst:153
+msgid "Setting ``ALLOW_JINJA_IN_EXTRA_VARS = template`` only works for saved job template extra variables. Prompted variables and survey variables are excluded from the 'template'. This parameter has three values: ``template`` to allow usage of Jinja saved directly on a job template definition (the default), ``never`` to disable all Jinja usage (recommended), and ``always`` to always allow Jinja (strongly discouraged, but an option for prior compatibility)."
+msgstr "设置 ``ALLOW_JINJA_IN_EXTRA_VARS = template`` 仅适用于保存的作业模板额外变量。提示的变量和问卷调查变量可从\"template\"中排除。此参数有三个值：``template`` 允许使用直接保存在作业模板定义中的 Jinja（默认）；``never`` 禁用所有 Jinja 的使用（推荐使用）；``always`` 始终允许 Jinja（不建议使用它，但在需要满足之前的兼容性时可能是一个选项）。"
+
+#: ../../source/tipsandtricks.rst:155
+msgid "This parameter is configurable in the Jobs Settings screen of the controller UI:"
+msgstr "此参数可在控制器 UI 的 Jobs Settings 屏幕中配置："
+
+#: ../../source/tipsandtricks.rst:161
+msgid "Using execution environments"
+msgstr "使用执行环境"
+
+#: ../../source/tipsandtricks.rst:169
+msgid "See :ref:`ug_execution_environments` in the |atu|."
+msgstr "请参阅 |atu| 中的 :ref:`ug_execution_environments`。"
+
+#: ../../source/tipsandtricks.rst:173
+msgid "Configuring the ``controllerhost`` hostname for notifications"
+msgstr "为通知配置 ``controllerhost`` 主机名"
+
+#: ../../source/tipsandtricks.rst:178
+msgid "In the :ref:`System Settings <configure_tower_system>`, you can replace ``https://controller.example.com`` in the **Base URL of The Controller Host** field with your preferred hostname to change the notification hostname."
+msgstr "在 :ref:`System Settings <configure_tower_system>` 中，您可以使用自己的主机名替换 **Base URL of The Controller Host** 项中的 ``https://controller.example.com`` 以更改通知主机名。"
+
+#: ../../source/tipsandtricks.rst:182
+msgid "Refreshing your controller license also changes the notification hostname. New installations of |at| should not have to set the hostname for notifications."
+msgstr "刷新您的控制器许可证也会更改通知主机名。|at| 的新安装不必设置通知主机名。"
+
+#: ../../source/tipsandtricks.rst:188
+msgid "Launching Jobs with curl"
+msgstr "使用 curl 启动作业"
+
+#: ../../source/tipsandtricks.rst:192
+msgid "Launching jobs with the controller API is simple. Here are some easy to follow examples using the ``curl`` tool."
+msgstr "使用控制器 API 启动作业很简单。以下是使用 ``curl`` 工具的简单示例。"
+
+#: ../../source/tipsandtricks.rst:194
+msgid "Assuming that your Job Template ID is '1', your controller IP is 192.168.42.100, and that ``admin`` and ``awxsecret`` are valid login credentials, you can create a new job this way:"
+msgstr "假设作业模板 ID 为\"1\"，控制器 IP 为 192.168.42.100，且 ``admin`` 和 ``awxsecret`` 是有效的登录凭证，您可以以这种方式创建新作业："
+
+#: ../../source/tipsandtricks.rst:202
+msgid "This returns a JSON object that you can parse and use to extract the 'id' field, which is the ID of the newly created job."
+msgstr "这会返回一个 JSON 对象，您可以解析并用来提取“id”字段，这是新创建的作业的 ID。"
+
+#: ../../source/tipsandtricks.rst:204
+msgid "You can also pass extra variables to the Job Template call, such as is shown in the following example:"
+msgstr "您还可以将额外变量传递给作业模板调用，如以下示例所示："
+
+#: ../../source/tipsandtricks.rst:213
+msgid "You can view the live API documentation by logging into http://192.168.42.100/api/ and browsing around to the various objects available."
+msgstr "您可以登录到 http://192.168.42.100/api/ 并浏览各种可用对象来查看在线 API 文档。"
+
+#: ../../source/tipsandtricks.rst:217
+msgid "The ``extra_vars`` parameter needs to be a string which contains JSON, not just a JSON dictionary, as you might expect. Use caution when escaping the quotes, etc."
+msgstr "``extra_vars`` 参数需要是一个字符串，它包含 JSON，而不单纯是 JSON 字典，因此在对引号进行转义时，请小心谨慎。"
+
+#: ../../source/tipsandtricks.rst:221
+msgid "Dynamic Inventory and private IP addresses"
+msgstr "动态清单和私有 IP 地址"
+
+#: ../../source/tipsandtricks.rst:227
+msgid "By default, the controller only shows instances in a VPC that have an Elastic IP (EIP) address associated with them. To view all of your VPC instances, perform the following steps:"
+msgstr "默认情况下，控制器只显示 VPC 中具有与它们关联的弹性 IP (EIP) 地址的实例。要查看您的 VPC 实例，请执行以下步骤："
+
+#: ../../source/tipsandtricks.rst:229
+msgid "In the controller interface, select your inventory."
+msgstr "在控制器界面中，选择您的清单。"
+
+#: ../../source/tipsandtricks.rst:230
+msgid "Click on the group that has the Source set to AWS, and click on the Source tab."
+msgstr "点击来源设置为 AWS 的组，并点击 Source 选项卡。"
+
+#: ../../source/tipsandtricks.rst:231
+msgid "In the \"Source Variables\" box, enter: ``vpc_destination_variable: private_ip_address``"
+msgstr "在“来源变量”框中输入：``vpc_destination_variable: private_ip_address``"
+
+#: ../../source/tipsandtricks.rst:233
+msgid "Save and trigger an update of the group. You should now be able to see all of your VPC instances."
+msgstr "保存并触发组更新。现在，您应该可以看到所有 VPC 实例。"
+
+#: ../../source/tipsandtricks.rst:237
+msgid "The controller must be running inside the VPC with access to those instances in order to usefully configure them."
+msgstr "为了有效地配置这些实例，必须在 VPC 中运行控制器，并可访问这些实例。"
+
+#: ../../source/tipsandtricks.rst:241
+msgid "Filtering instances returned by the dynamic inventory sources in the controller"
+msgstr "过滤控制器中动态清单源返回的实例"
+
+#: ../../source/tipsandtricks.rst:248
+msgid "By default, the dynamic inventory sources in the controller (AWS, Google, etc) return all instances available to the cloud credentials being used. They are automatically joined into groups based on various attributes. For example, AWS instances are grouped by region, by tag name and value, by security groups, etc. To target specific instances in your environment, write your playbooks so that they target the generated group names. For example:"
+msgstr "默认情况下，控制器中的动态清单源（AWS 、Google 等）返回所有使用的云凭证可用的实例。它们根据不同的属性自动加入到组中。例如，AWS 实例根据区域、标签名称和值、安全组等进行分组。要针对环境中的特定实例，请编写 playbook，它以生成组名称为目标。例如："
+
+#: ../../source/tipsandtricks.rst:257
+msgid "You can also use the ``Limit`` field in the Job Template settings to limit a playbook run to a certain group, groups, hosts, or a combination thereof. The syntax is the same as the ``--limit parameter`` on the ansible-playbook command line."
+msgstr "您也可以使用作业模板设置中的 ``Limit`` 字段将 playbook 运行限制为一个特定的组、多个组、主机或它们的组合。语法与 ansible-playbook 命令行上的 ``--limit parameter`` 相同。"
+
+#: ../../source/tipsandtricks.rst:260
+msgid "You may also create your own groups by copying the auto-generated groups into your custom groups. Make sure that the ``Overwrite`` option is disabled on your dynamic inventory source, otherwise subsequent synchronization operations will delete and replace your custom groups."
+msgstr "您也可以通过将自动生成的组复制到自定义组中，创建自己的组。请确保在动态清单源上禁用 ``Overwrite`` 选项，否则后续同步操作将删除并替换您的自定义组。"
+
+#: ../../source/tipsandtricks.rst:264
+msgid "Using an unreleased module from Ansible source with the controller"
+msgstr "在控制器中使用来自 Ansible 源的未发布的模块"
+
+#: ../../source/tipsandtricks.rst:270
+msgid "If there is a feature that is available in the latest Ansible core branch that you would like to leverage with your controller system, making use of it in the controller is fairly simple."
+msgstr "如果在最新的 Ansible 核心分支中有一个您想要在控制器系统中使用的功能，可以按照以下方法在控制器中使用它。"
+
+#: ../../source/tipsandtricks.rst:272
+msgid "First, determine which is the updated module you want to use from the available Ansible Core Modules or Ansible Extra Modules GitHub repositories."
+msgstr "首先，确定您要从可用的 Ansible 核心模块或 Ansible 额外模块 GitHub 库中使用的更新模块。"
+
+#: ../../source/tipsandtricks.rst:274
+msgid "Next, create a new directory, at the same directory level of your Ansible source playbooks, named ``/library``."
+msgstr "接下来，在名为 ``/library`` 的 Ansible 源 playbook 的同一目录级别创建新目录。"
+
+#: ../../source/tipsandtricks.rst:276
+msgid "Once this is created, copy the module you want to use and drop it into the ``/library`` directory--it will be consumed first over your system modules and can be removed once you have updated the the stable version via your normal package manager."
+msgstr "创建了这个模块后，复制您想要使用的模块，并将其拖放到 ``/library`` 目录——它就会首先通过系统模块机制被使用。当您可以通过普通的软件包管理器把这个功能更新到稳定版本后，就可以删除它。"
+
+#: ../../source/tipsandtricks.rst:280
+msgid "Using callback plugins with the controller"
+msgstr "在控制器中使用回调插件"
+
+#: ../../source/tipsandtricks.rst:286
+msgid "Ansible has a flexible method of handling actions during playbook runs, called callback plugins. You can use these plugins with the controller to do things like notify services upon playbook runs or failures, send emails after every playbook run, etc. For official documentation on the callback plugin architecture, refer to: http://docs.ansible.com/developing_plugins.html#callbacks"
+msgstr "Ansible 在 playbook 运行时具有处理操作的灵活方法，称为回调插件。您可以使用控制器的这些插件进行处理，例如在 playbook 运行或失败时通知服务、在每次 playbook 运行后发送电子邮件等。如需回调插件架构的官方文档，请参阅：http://docs.ansible.com/developing_plugins.html#callbacks"
+
+#: ../../source/tipsandtricks.rst:290
+msgid "|at| does not support the ``stdout`` callback plugin because Ansible only allows one, and it is already being used by |at| for streaming event data."
+msgstr "|at| 不支持 ``stdout`` 回调插件，因为 Ansible 仅允许一个插件，且 |at| 已将该插件用于流传输事件数据。"
+
+#: ../../source/tipsandtricks.rst:292
+msgid "You may also want to review some example plugins, which should be modified for site-specific purposes, such as those available at: https://github.com/ansible/ansible/tree/devel/lib/ansible/plugins/callback"
+msgstr "您还可以查看一些示例插件，这些插件应该根据具体站点目的进行修改，比如以下网址的示例：https://github.com/ansible/ansible/tree/devel/lib/ansible/plugins/callback"
+
+#: ../../source/tipsandtricks.rst:295
+msgid "To use these plugins, put the callback plugin ``.py`` file into a directory called ``/callback_plugins`` alongside your playbook in your controller Project. Then, specify their paths (one path per line) in the **Ansible Callback Plugins** field of the Job settings, located towards the bottom of the screen:"
+msgstr "要使用这些插件，请将回调插件 ``.py`` 文件和 playbook 放到控制器项目中的名为 ``/callback_plugins`` 的目录中。然后，在作业设置屏幕结尾部分的 **Ansible Callback Plugins** 字段中指定它们的路径（每行一个路径）:"
+
+#: ../../source/tipsandtricks.rst:301
+msgid "To have most callbacks shipped with Ansible applied globally, you must add them to the ``callback_whitelist`` section of your ``ansible.cfg``. If you have a custom callbacks, refer to the Ansible documentation for `Enabling callback plugins <https://docs.ansible.com/ansible/latest/plugins/callback.html#enabling-callback-plugins>`_."
+msgstr "要使由 Ansible 提供的大部分回调可以在全局范围内应用，您必须将其添加到您的 ``ansible.cfg`` 的 ``callback_whitelist`` 部分。如果您有自定义回调，请参阅 Ansible 文档`Enabling callback plugins <https://docs.ansible.com/ansible/latest/plugins/callback.html#enabling-callback-plugins>`_。"
+
+#: ../../source/tipsandtricks.rst:305
+msgid "Connecting to Windows with winrm"
+msgstr "使用 winrm 连接到 Windows"
+
+#: ../../source/tipsandtricks.rst:311
+msgid "By default controller attempts to ``ssh`` to hosts. You must add the ``winrm`` connection info to the group variables to which the Windows hosts belong.  To get started, edit the Windows group in which the hosts reside and place the variables in the source/edit screen for the group."
+msgstr "默认情况下，控制器会尝试 ``ssh`` 到主机。您需要将 ``winrm`` 连接信息添加 Windows 主机所属的组变量。您可以编辑主机所在的 Windows 组，并将变量放在组的源/编辑界面中。"
+
+#: ../../source/tipsandtricks.rst:313
+msgid "To add ``winrm`` connection info:"
+msgstr "添加 ``winrm`` 连接信息："
+
+#: ../../source/tipsandtricks.rst:315
+msgid "Edit the properties for the selected group by clicking on the |edit| button to the right of the group name that contains the Windows servers.  In the \"variables\" section, add your connection information as such: ``ansible_connection: winrm``"
+msgstr "点击包含 Windows 服务器的组名称右边的 |edit| 按钮来编辑所选组的属性。在“variables”部分，添加以下连接信息：``ansible_connection: winrm``"
+
+#: ../../source/tipsandtricks.rst:317
+msgid "Once done, save your edits. If Ansible was previously attempting an SSH connection and failed, you should re-run the job template."
+msgstr "完成后，保存您的编辑。如果 Ansible 之前尝试 SSH 连接并失败，您应该重新运行作业模板。"
+
+#: ../../source/tipsandtricks.rst:323
+msgid "Importing existing inventory files and host/group vars into the controller"
+msgstr "将现有清单文件和 host/group 变量导入到控制器中"
+
+#: ../../source/tipsandtricks.rst:332
+msgid "To import an existing static inventory and the accompanying host and group vars into the controller, your inventory should be in a structure that looks similar to the following:"
+msgstr "要将现有的静态清单以及附带的主机和组的变量导入控制器，您的清单应采用类似如下的结构："
+
+#: ../../source/tipsandtricks.rst:343
+msgid "To import these hosts and vars, run the ``awx-manage`` command:"
+msgstr "要导入这些主机和变量，请运行 ``awx-manage`` 命令 ："
+
+#: ../../source/tipsandtricks.rst:350
+msgid "If you only have a single flat file of inventory, a file called ansible-hosts, for example, import it like the following:"
+msgstr "例如，如果您只有一个清单平面文件（名为 ansible-hosts 的文件），按如下所示将其导入："
+
+#: ../../source/tipsandtricks.rst:357
+msgid "In case of conflicts or to overwrite an inventory named \"My Controller Inventory\", run:"
+msgstr "如果有冲突，或者覆盖名为 \"My Controller Inventory\" 的清单，请运行："
+
+#: ../../source/tipsandtricks.rst:365
+msgid "If you receive an error, such as:"
+msgstr "如果出现错误，如："
+
+#: ../../source/tipsandtricks.rst:371
+msgid "Create a directory to hold the hosts file, as well as the group_vars:"
+msgstr "创建存放主机文件以及 group_vars 的目录："
+
+#: ../../source/tipsandtricks.rst:378
+msgid "Then, for each of the groups that have :vars listed, create a file called ``inventory-directory/group_vars/<groupname>`` and format the variables in YAML format."
+msgstr "然后，对于列出 :vars 的每个组，请创建名为 ``inventory-directory/group_vars/<groupname>`` 的文件，并以 YAML 格式设置变量格式。"
+
+#: ../../source/tipsandtricks.rst:380
+msgid "Once broken out, the importer will handle the conversion correctly."
+msgstr "退出后，导入程序将正确处理转换。"
+

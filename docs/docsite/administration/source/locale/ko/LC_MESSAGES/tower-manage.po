@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tower-manage.rst:4
+msgid "The *awx-manage* Utility"
+msgstr "*awx-manage* 유틸리티"
+
+#: ../../source/tower-manage.rst:9
+msgid "The ``awx-manage`` utility is used to access detailed internal information of the controller. Commands for ``awx-manage`` should run as the ``awx`` or ``root`` user."
+msgstr "``awx-manage`` 유틸리티는 컨트롤러의 자세한 내부 정보에 액세스하는 데 사용됩니다. ``awx-manage``에 대한 명령은 ``awx`` 또는 ``root`` 사용자로 실행해야 합니다."
+
+#: ../../source/tower-manage.rst:12
+msgid "Running awx-manage commands via playbook is not recommended or supported."
+msgstr "플레이북을 통해 awx-manage 명령을 실행하는 것은 권장되거나 지원되지 않습니다."
+
+#: ../../source/tower-manage.rst:15
+msgid "Inventory Import"
+msgstr "인벤토리 가져오기"
+
+#: ../../source/tower-manage.rst:20
+msgid "``awx-manage`` is a mechanism by which a controller administrator can import inventory directly into the controller, for those who cannot use Custom Inventory Scripts."
+msgstr "``awx-manage``는 사용자 지정 인벤토리 스크립트를 사용할 수 없는 사용자를 위해 컨트롤러 관리자가 인벤토리를 컨트롤러로 직접 가져올 수 있는 메커니즘입니다."
+
+#: ../../source/tower-manage.rst:22
+msgid "To use ``awx-manage`` properly, you must first create an inventory in the controller to use as the destination for the import."
+msgstr "``awx-manage``를 올바르게 사용하려면 먼저 가져오기 대상으로 사용할 인벤토리를 컨트롤러에서 생성해야 합니다."
+
+#: ../../source/tower-manage.rst:24
+msgid "For help with ``awx-manage``, run the following command: ``awx-manage inventory_import [--help]``"
+msgstr "``awx-manage`` 도움말을 보려면 ``awx-manage inventory_import [--help]`` 명령을 실행합니다."
+
+#: ../../source/tower-manage.rst:26
+msgid "The ``inventory_import`` command synchronizes a controller inventory object with a text-based inventory file, dynamic inventory script, or a directory of one or more of the above as supported by core Ansible."
+msgstr "``inventory_import`` 명령은 텍스트 기반 인벤토리 파일, 동적 인벤토리 스크립트 또는 코어 Ansible에서 지원하는 위 항목 중 하나 이상의 디렉터리와 컨트롤러 인벤토리 오브젝트를 동기화합니다."
+
+#: ../../source/tower-manage.rst:28
+msgid "When running this command, specify either an ``--inventory-id`` or ``--inventory-name``, and the path to the Ansible inventory source (``--source``)."
+msgstr "이 명령을 실행할 때 ``--inventory-id`` 또는 ``--inventory-name``과 Ansible 인벤토리 소스의 경로(``--source``)를 지정합니다."
+
+#: ../../source/tower-manage.rst:34
+msgid "By default, inventory data already stored in the controller blends with data from the external source. To use only the external data, specify ``--overwrite``. To specify that any existing hosts get variable data exclusively from the ``--source``, specify ``--overwrite_vars``. The default behavior adds any new variables from the external source, overwriting keys that already exist, but preserves any variables that were not sourced from the external data source."
+msgstr "기본적으로 컨트롤러에 이미 저장된 인벤토리 데이터가 외부 소스의 데이터와 혼합됩니다. 외부 데이터만 사용하려면 ``--overwrite``를 지정합니다. 기존 호스트가 ``--source``에서만 변수 데이터를 가져오도록 지정하려면 ``--overwrite_vars``를 지정합니다. 기본 동작은 외부 소스의 새 변수를 모두 추가하고 기존 키를 덮어쓰지만 외부 데이터 소스에서 소싱되지 않은 변수는 보존하는 것입니다."
+
+#: ../../../common/source/overwrite_var_note_2-4-0.rst:3
+msgid "Edits and additions to Inventory host variables persist beyond an inventory sync as long as ``--overwrite_vars`` is **not** set."
+msgstr "``--overwrite_vars``를 설정하지 **않는**한, 편집 및 추가한 인벤토리 호스트 변수는 인벤토리를 동기화한 후에도 유지됩니다."
+
+#: ../../source/tower-manage.rst:45
+msgid "Cleanup of old data"
+msgstr "이전 데이터 정리"
+
+#: ../../source/tower-manage.rst:50
+msgid "``awx-manage`` has a variety of commands used to clean old data from the controller. The controller administrators can use the controller Management Jobs interface for access or use the command line."
+msgstr "``awx-manage``에는 컨트롤러의 이전 데이터를 정리하는 데 사용되는 다양한 명령이 있습니다. 컨트롤러 관리자는 컨트롤러 관리 작업 인터페이스를 사용하여 명령행에 액세스하거나 명령행을 사용할 수 있습니다."
+
+#: ../../source/tower-manage.rst:52
+msgid "``awx-manage cleanup_jobs [--help]``"
+msgstr "``awx-manage cleanup_jobs [--help]``"
+
+#: ../../source/tower-manage.rst:54
+msgid "This permanently deletes the job details and job output for jobs older than a specified number of days."
+msgstr "이 명령은 지정된 일수보다 오래된 작업의 작업 세부 정보와 작업 출력을 영구적으로 삭제합니다."
+
+#: ../../source/tower-manage.rst:56
+msgid "``awx-manage cleanup_activitystream [--help]``"
+msgstr "``awx-manage cleanup_activitystream [--help]``"
+
+#: ../../source/tower-manage.rst:58
+msgid "This permanently deletes any :ref:`ug_activitystreams` data older than a specific number of days."
+msgstr "이 명령은 특정 일수보다 오래된 :ref:`ug_activitystreams` 데이터를 영구적으로 삭제합니다."
+
+#: ../../source/tower-manage.rst:61
+msgid "Cluster management"
+msgstr "클러스터 관리"
+
+#: ../../source/tower-manage.rst:66
+msgid "Refer to the :ref:`ag_clustering` section for details on the ``awx-manage provision_instance`` and ``awx-manage deprovision_instance`` commands."
+msgstr "``awx-manage provision_instance`` 및 ``awx-manage deprovision_instance`` 명령에 대한 자세한 내용은 :ref:`ag_clustering` 섹션을 참조하십시오."
+
+#: ../../source/tower-manage.rst:72
+msgid "Do not run other ``awx-manage`` commands unless instructed by Ansible Support."
+msgstr "Ansible 지원의 지시가 없는 한, 다른 ``awx-manage`` 명령은 실행하지 마십시오."
+
+#: ../../source/tower-manage.rst:78
+msgid "Token and session management"
+msgstr "토큰 및 세션 관리"
+
+#: ../../source/tower-manage.rst:84
+msgid "|at| supports the following commands for OAuth2 token management:"
+msgstr "|at|에서는 OAuth2 토큰 관리를 위한 다음 명령을 지원합니다."
+
+#: ../../source/tower-manage.rst:91
+msgid "``create_oauth2_token``"
+msgstr "``create_oauth2_token``"
+
+#: ../../source/tower-manage.rst:93
+msgid "Use this command to create OAuth2 tokens (specify actual username for ``example_user`` below):"
+msgstr "OAuth2 토큰을 생성하려면 이 명령을 사용합니다(아래에서 ``example_user``에 실제 사용자 이름 지정)."
+
+#: ../../source/tower-manage.rst:101
+msgid "Make sure you provide a valid user when creating tokens. Otherwise, you will get an error message that you tried to issue the command without specifying a user, or supplying a username that does not exist."
+msgstr "토큰을 생성할 때 유효한 사용자를 제공해야 합니다. 그러지 않으면 사용자를 지정하지 않거나 존재하지 않는 사용자 이름을 제공하여 명령을 실행하려고 했다는 오류 메시지가 표시됩니다."
+
+#: ../../source/tower-manage.rst:108
+msgid "``revoke_oauth2_tokens``"
+msgstr "``revoke_oauth2_tokens``"
+
+#: ../../source/tower-manage.rst:110
+msgid "Use this command to revoke OAuth2 tokens (both application tokens and personal access tokens (PAT)). By default, it revokes all application tokens (but not their associated refresh tokens), and revokes all personal access tokens. However, you can also specify a user for whom to revoke all tokens."
+msgstr "OAuth2 토큰(애플리케이션 토큰 및 PAT(개인 액세스 토큰) 포함)을 취소하려면 이 명령을 사용합니다. 기본적으로 애플리케이션 토큰(관련 새로 고침 토큰 제외)과 개인 액세스 토큰을 모두 취소합니다. 그러나 모든 토큰을 취소할 사용자를 지정할 수도 있습니다."
+
+#: ../../source/tower-manage.rst:112
+msgid "To revoke all existing OAuth2 tokens:"
+msgstr "기존 OAuth2 토큰을 모두 취소하려면 다음을 수행합니다."
+
+#: ../../source/tower-manage.rst:118
+msgid "To revoke all OAuth2 tokens & their refresh tokens:"
+msgstr "모든 OAuth2 토큰과 새로 고침 토큰을 취소하려면 다음을 수행합니다."
+
+#: ../../source/tower-manage.rst:124
+msgid "To revoke all OAuth2 tokens for the user with ``id=example_user`` (specify actual username for ``example_user`` below):"
+msgstr "``id=example_user``인 사용자의 모든 OAuth2 토큰을 취소하려면 다음을 수행합니다(아래의 ``example_user``에 실제 사용자 이름 지정)."
+
+#: ../../source/tower-manage.rst:130
+msgid "To revoke all OAuth2 tokens and refresh token for the user with ``id=example_user``:"
+msgstr "``id=example_user``인 사용자의 모든 OAuth2 토큰과 새로 고침 토큰을 취소하려면 다음을 수행합니다."
+
+#: ../../source/tower-manage.rst:139
+msgid "``cleartokens``"
+msgstr "``cleartokens``"
+
+#: ../../source/tower-manage.rst:141
+msgid "Use this command to clear tokens which have already been revoked. Refer to `Django's Oauth Toolkit documentation on cleartokens`_ for more detail."
+msgstr "이미 취소된 토큰을 지우려면 이 명령을 사용합니다. 자세한 내용은 `Django's Oauth Toolkit documentation on cleartokens`_를 참조하십시오."
+
+#: ../../source/tower-manage.rst:147
+msgid "``expire_sessions``"
+msgstr "``expire_sessions``"
+
+#: ../../source/tower-manage.rst:149
+msgid "Use this command to terminate all sessions or all sessions for a specific user. Consider using this command when a user changes role in an organization, is removed from assorted groups in LDAP/AD, or the administrator wants to ensure the user can no longer execute jobs due to membership in these groups."
+msgstr "모든 세션 또는 특정 사용자의 모든 세션을 종료하려면 이 명령을 사용합니다. 사용자가 조직의 역할을 변경하거나 LDAP/AD의 다양한 그룹에서 제거되거나, 관리자가 이러한 그룹의 멤버십으로 인한 사용자의 추가 작업 실행을 방지하려는 경우 이 명령을 사용하는 것이 좋습니다."
+
+#: ../../source/tower-manage.rst:156
+msgid "This command terminates all sessions by default. The users associated with those sessions will be consequently logged out. To only expire the sessions of a specific user, you can pass their username using the ``--user`` flag (specify actual username for ``example_user`` below):"
+msgstr "이 명령은 기본적으로 모든 세션을 종료합니다. 결과적으로 해당 세션과 연결된 사용자가 로그아웃됩니다. 특정 사용자의 세션만 만료하려면 ``--user`` 플래그를 사용하여 사용자 이름을 전달할 수 있습니다(아래의 ``example_user``에 실제 사용자 이름 지정)."
+
+#: ../../source/tower-manage.rst:165
+msgid "``clearsessions``"
+msgstr "``clearsessions``"
+
+#: ../../source/tower-manage.rst:167
+msgid "Use this command to delete all sessions that have expired. Refer to `Django's documentation on clearsessions`_ for more detail."
+msgstr "만료된 모든 세션을 삭제하려면 이 명령을 사용합니다. 자세한 내용은 `Django's documentation on clearsessions`_를 참조하십시오."
+
+#: ../../source/tower-manage.rst:173
+msgid "For more information on OAuth2 token management in the controller user interface, see the :ref:`ug_applications_auth` section of the |atu|."
+msgstr "컨트롤러 사용자 인터페이스의 OAuth2 토큰 관리에 대한 자세한 내용은 |atu|의 :ref:`ug_applications_auth` 섹션을 참조하십시오."
+
+#: ../../source/tower-manage.rst:177
+msgid "Analytics gathering"
+msgstr "분석 수집"
+
+#: ../../source/tower-manage.rst:184
+msgid "Use this command to gather analytics on-demand outside of the predefined window (default is 4 hours):"
+msgstr "미리 정의된 기간(기본값은 4시간) 이외에 온디맨드 방식으로 분석을 수집하려면 이 명령을 사용합니다."
+
+#: ../../source/tower-manage.rst:191
+msgid "For customers with disconnected environments who want to collect usage information about unique hosts automated across a time period, use this command:"
+msgstr "일정 기간 동안 자동화된 고유 호스트에 대한 사용 정보를 수집하려는, 연결이 끊긴 환경의 고객은 다음 명령을 사용합니다."
+
+#: ../../source/tower-manage.rst:198
+msgid "The parameters ``--since`` and ``--until`` specify date ranges and are optional, but one of them has to be present. The ``--json`` flag specifies the output format and is optional."
+msgstr "``--since`` 및 ``--until`` 매개변수는 날짜 범위를 지정하고 선택 사항이지만, 둘 중 하나는 있어야 합니다. ``--json`` 플래그는 출력 형식을 지정하고 선택 사항입니다."
+

@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/security_best_practices.rst:5
+msgid "Security Best Practices"
+msgstr "安全性最佳实践"
+
+#: ../../source/security_best_practices.rst:7
+msgid "|at| out-of-the-box is deployed in a secure fashion for use to automate typical environments. However, managing certain operating system environments, automation, and automation platforms, may require some additional best practices to ensure security. This document describes best practices for automation in a secure manner."
+msgstr "标准 |at| 设置的安全性适用于自动部署典型的环境。但是，在管理特定操作系统环境、自动化和自动化平台时，可能需要一些额外的最佳实践才能确保其安全性。本文档介绍了在自动化环境中确保安全性的最佳实践。"
+
+#: ../../source/security_best_practices.rst:11
+msgid "General best practices"
+msgstr "通用最佳实践"
+
+#: ../../source/security_best_practices.rst:13
+msgid "An application is only as secure as the underlying system. To secure |rhel|, start with the release-appropriate security guide:"
+msgstr "应用程序的安全性会受底层系统安全性的影响。为了确保 |rhel| 的安全性，请参阅："
+
+#: ../../source/security_best_practices.rst:15
+msgid "For |rhel| 7: https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/"
+msgstr "|rhel| 7： https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/"
+
+#: ../../source/security_best_practices.rst:16
+msgid "For |rhel| 8: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/index"
+msgstr "|rhel| 8： https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/index"
+
+#: ../../source/security_best_practices.rst:20
+msgid "Understand the architecture of Ansible and the controller"
+msgstr "了解 Ansible 和控制器的架构"
+
+#: ../../source/security_best_practices.rst:22
+msgid "Ansible and |at| comprise a general purpose, declarative, automation platform. That means that once an Ansible playbook is launched (via the controller, or directly on the command line), the playbook, inventory, and credentials provided to Ansible are considered to be the source of truth.  If policies are desired around external verification of specific playbook content, job definition, or inventory contents, these processes must be undertaken before the automation is launched (whether via the controller web UI, or the controller API)."
+msgstr "Ansible 和 |at| 的一个通用目的是提供一个自动化平台。这意味着，一旦启动了一个 Ansible playbook（通过控制器，或直接通过命令行），playbook、清单和 Ansible 的凭证将被视为可靠的来源。如果特定的安全政策需要针对特定 playbook 内容、作业定义或清单内容进行外部验证，这些过程必须在自动化操作启动（无论是通过控制器 Web UI 或控制器 API) 之前进行。"
+
+#: ../../source/security_best_practices.rst:24
+msgid "These can take many forms. The use of source control, branching, and mandatory code review is best practice for Ansible automation. There are many tools that can help create process flow around using source control in this manner."
+msgstr "使用源控制、分支和强制代码审核是 Ansible 自动化的最佳方法。有很多工具可帮助以这种方式创建使用源控制的进程流。"
+
+#: ../../source/security_best_practices.rst:26
+msgid "At a higher level, many tools exist that allow for creation of approvals and policy-based actions around arbitrary workflows, including automation; these tools can then use Ansible via the controller’s API to perform automation."
+msgstr "在更高的级别上，有很多工具允许针对任意工作流创建批准和基于策略的操作，包括自动化。这些工具可通过控制器的 API 来使用 Ansible 执行自动化。"
+
+#: ../../source/security_best_practices.rst:28
+msgid "We recommend all customers of |at| select a secure default administrator password at time of installation.  See :ref:`tips_change_password` for more information."
+msgstr "我们建议 |at| 的所有客户在安装时都选择一个安全的默认管理员密码。如需更多信息，请参阅 :ref:`tips_change_password`。"
+
+#: ../../source/security_best_practices.rst:30
+msgid "|at| exposes services on certain well-known ports, such as port 80 for HTTP traffic and port 443 for HTTPS traffic.  We recommend that you do not expose |at| on the open internet, significantly reducing the threat surface of your installation."
+msgstr "|at| 在某些已知端口上公开服务，比如 HTTP 流量使用端口 80，HTTPS 流量使用端口 443。我们建议您不要在开放互联网上公开 |at|，这会显著降低安装的风险。"
+
+#: ../../source/security_best_practices.rst:34
+msgid "Granting access"
+msgstr "授予访问权限"
+
+#: ../../source/security_best_practices.rst:36
+msgid "Granting access to certain parts of the system exposes security risks. Apply the following practices to help secure access:"
+msgstr "授予系统某些部分的访问权限可能会带来安全隐患。请应用以下方法帮助保证访问安全："
+
+#: ../../source/security_best_practices.rst:42
+msgid "Minimize administrative accounts"
+msgstr "保持管理帐户的最小化"
+
+#: ../../source/security_best_practices.rst:44
+msgid "Minimizing the access to system administrative accounts is crucial for maintaining a secure system. A system administrator/root user can access, edit, and disrupt any system application. Keep the number of people/accounts with root access to as small of a group as possible. Do not give out `sudo` to `root` or `awx` (the controller user) to untrusted users. Know that when restricting administrative access via mechanisms like `sudo`, that restricting to a certain set of commands may still give a wide range of access. Any command that allows for execution of a shell or arbitrary shell commands, or any command that can change files on the system, is fundamentally equivalent to full root access."
+msgstr "限制对系统管理帐户的访问最小化对维护一个安全系统至关重要。系统管理员/root 用户可以访问、编辑和破坏任何系统应用程序。因此，尽量使具有 root 访问权限的用户和人员保持最少。不要为不信任的用户分配对 `root` 或 `awx`（控制器用户）的 `sudo` 权限。当通过某些机制（如 `sudo`）为用户提供了受限的管理访问权限时，这些访问权限仍有可能进行大量操作。允许执行 shell 的命令，或可以修改文件的任何命令，都应该视为等同于具有完整的 root 访问权限。"
+
+#: ../../source/security_best_practices.rst:46
+msgid "In a controller context, any controller ‘system administrator’ or ‘superuser’ account can edit, change, and update any inventory or automation definition in the controller. Restrict this to the minimum set of users possible for low-level controller configuration and disaster recovery only."
+msgstr "在控制器中，任何控制器 ‘系统管理员’ 或 'superuser' 帐户都可以编辑、修改和更新控制器中的任何清单或自动化定义。这只应该分配给尽量少的、需要进行底层控制器配置和灾难恢复的用户。"
+
+#: ../../source/security_best_practices.rst:50
+msgid "Minimize local system access"
+msgstr "最小化本地系统访问"
+
+#: ../../source/security_best_practices.rst:52
+msgid "|at|, when used with best practices, should not require local user access except for administrative purposes. Non-administrator users should not have access to the controller system."
+msgstr "根据最佳实践方案原则，除了用于管理目的之外，|at| 不需要进行本地用户访问。非管理员用户不应该具有可以访问控制器所在系统的权限。"
+
+#: ../../source/security_best_practices.rst:56
+msgid "Remove access to credentials from users"
+msgstr "删除用户对凭证的访问"
+
+#: ../../source/security_best_practices.rst:58
+msgid "If an automation credential is only stored in the controller, it can be further secured. Services such as OpenSSH can be configured to only allow credentials on connections from specific addresses. Credentials used by automation can be different than credentials used by system administrators for disaster-recovery or other ad-hoc management, allowing for easier auditing."
+msgstr "如果自动化凭证仅存储在控制器中，则可进一步加以保护。OpenSSH 等服务可以配置为只允许来自特定地址的连接使用凭证.。自动化使用的凭证可能与系统管理员用于灾难恢复或其他 ad-hoc 管理的凭证不同，以允许更轻松地进行审核。"
+
+#: ../../source/security_best_practices.rst:61
+msgid "Enforce separation of duties"
+msgstr "强制隔离任务"
+
+#: ../../source/security_best_practices.rst:63
+msgid "Different pieces of automation may need to access a system at different levels. For example, you may have low-level system automation that applies patches and performs security baseline checking, while a higher-level piece of automation deploys applications. By using different keys or credentials for each piece of automation, the effect of any one key vulnerability is minimized, while also allowing for easy baseline auditing."
+msgstr "不同的自动化任务可能需要对一个系统有不同的访问级别。例如，您可能需要进行底层的系统自动化来应用补丁或执行安全检查；也可能需要进行高层的自动化来部署应用程序。通过对不同的自动化操作使用不同的密钥或凭证，可以最小化一个关键安全漏洞对系统的不良影响，同时可简化基准审核。"
+
+#: ../../source/security_best_practices.rst:67
+msgid "Available resources"
+msgstr "可用资源"
+
+#: ../../source/security_best_practices.rst:69
+msgid "Several resources exist in the controller and elsewhere to ensure a secure platform. Consider utilizing the following functionality:"
+msgstr "控制器和其它地方提供了一些资源来确保安全平台。请考虑使用以下功能："
+
+#: ../../source/security_best_practices.rst:76
+msgid "Audit and logging functionality"
+msgstr "审计和日志记录功能"
+
+#: ../../source/security_best_practices.rst:78
+msgid "For any administrative access, it is key to audit and watch for actions. For the system overall, this can be done via the built in audit support (https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/chap-system_auditing.html) and via the built-in logging support."
+msgstr "对于任何管理访问，审核和监视都非常关键。对于整个系统来说，可以使用内置的审计功能支持 (https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/chap-system_auditing.html） 以及内置的日志功能支持。"
+
+#: ../../source/security_best_practices.rst:80
+msgid "For |at|, this is done via the built-in Activity Stream support that logs all changes within the controller, as well as via the automation logs."
+msgstr "|at| 使用内置的 Activity Stream 支持，它可以记录控制器内的所有更改，以及自动化日志。"
+
+#: ../../source/security_best_practices.rst:82
+msgid "Best practices dictate collecting logging and auditing centrally, rather than reviewing it on the local system. It is recommended that |at| be configured to use whatever IDS and/or logging/auditing (Splunk) is standard in your environment. |at| includes built-in logging integrations for Elastic Stack, Splunk, Sumologic, Loggly, and more. See :ref:`ag_logging` for more information."
+msgstr "最佳实践推荐集中进行日志收集和审核，而不是在本地系统中进行。建议将 |at| 配置为在您的环境中使用任何 IDS 和/或日志/审核 (Splunk) 标准。|at| 包括了内置的、针对 Elastic Stack, Splunk, Sumologic, Loggly 和其他系统的日志集成功能。详情请参阅 :ref:`ag_logging`。"
+
+#: ../../source/security_best_practices.rst:86
+msgid "Existing security functionality"
+msgstr "现有安全功能"
+
+#: ../../source/security_best_practices.rst:88
+msgid "Do not disable SELinux, and do not disable the controller’s existing multi-tenant containment. Use the controller’s role-based access control (RBAC) to delegate the minimum level of privileges required to run automation. Use Teams in the controller to assign permissions to groups of users rather than to users individually. See :ref:`rbac-ug` in the |atu|."
+msgstr "不要禁用 SELinux，也不要禁用控制器中现存的多用户限制机制。使用控制器的角色访问控制 (RBAC) 来代表运行自动化所需的最低级别权限。使用控制器的团队（Team）来为用户组分配权限，而不是单独为用户分配权限。详情请参阅 |atu| 中的 :ref:`rbac-ug` 。"
+
+#: ../../source/security_best_practices.rst:92
+msgid "External account stores"
+msgstr "外部帐户存储"
+
+#: ../../source/security_best_practices.rst:94
+msgid "Maintaining a full set of users just in the controller can be a time-consuming task in a large organization, prone to error. |At| supports connecting to external account sources via :ref:`LDAP <ag_auth_ldap>`, :ref:`SAML 2.0 <ag_auth_saml>`, and certain :ref:`OAuth providers <ag_social_auth>`. Using this eliminates a source of error when working with permissions."
+msgstr "对于一个大型机构，在控制器中维护完整的用户会非常耗时，且容易出错。|At| 支持通过 :ref:`LDAP <ag_auth_ldap>` 、:ref:`SAML 2.0 <ag_auth_saml>` 和特定的:ref:`OAuth providers <ag_social_auth>` 连接到外部账户源。"
+
+#: ../../source/security_best_practices.rst:100
+msgid "Django password policies"
+msgstr "Django 密码策略"
+
+#: ../../source/security_best_practices.rst:102
+msgid "Controller admins can leverage Django to set password policies at creation time via ``AUTH_PASSWORD_VALIDATORS`` to validate controller user passwords. In the ``custom.py`` file located at ``/etc/tower/conf.d`` of your controller instance, add the following code block example:"
+msgstr "控制器管理员可以利用 Django 在创建时通过 ``AUTH_PASSWORD_VALIDATORS`` 设置密码策略以验证 Tower 用户密码。在 ``custom.py`` 文件中（位于控制器实例的 ``/etc/tower/conf.d``），添加以下代码块示例："
+
+#: ../../source/security_best_practices.rst:125
+msgid "For more information, see `Password management in Django <https://docs.djangoproject.com/en/3.2/topics/auth/passwords/#module-django.contrib.auth.password_validation>`_ in addition to the example posted above."
+msgstr "如需更多信息，除了上面发布的示例外，请参阅 `Password management in Django <https://docs.djangoproject.com/en/3.2/topics/auth/passwords/#module-django.contrib.auth.password_validation>`_。"
+
+#: ../../source/security_best_practices.rst:127
+msgid "Be sure to restart your controller instance for the change to take effect. See :ref:`ag_restart_tower` for detail."
+msgstr "重启控制器实例以使更改生效。详情请参阅 :ref:`ag_restart_tower`。"
+

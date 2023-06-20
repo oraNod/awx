@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../../common/source/towercli.rst:3
+msgid "Introduction to **tower-cli**"
+msgstr "**tower-cli** 介绍"
+
+#: ../../../common/source/towercli.rst:9
+msgid "**tower-cli** is a command line tool for |at|. It allows Tower commands to be easily run from the UNIX command line. It can also be used as a client library for other python apps, or as a reference for others developing API interactions with Tower's REST API."
+msgstr "**tower-cli** 是用于 |at| 的命令行工具。它允许通过 UNIX 命令行轻松运行 Tower 命令。它也可以作为其他 python 应用程序的客户端程序库使用，或作为其他开发的与 Tower 的 REST API 进行交互的参考。"
+
+#: ../../../common/source/towercli.rst:14
+msgid "The ``tower-cli`` software is an open source project currently under development and, until a complete implementation occurs, only implements a subset of Tower's features."
+msgstr "``tower-cli`` 软件是一个当前仍在开发的开源项目。在功能开发完全实现前，它只能实现 Tower 功能的一部分。"
+
+#: ../../../common/source/towercli.rst:17
+msgid "License"
+msgstr "许可证"
+
+#: ../../../common/source/towercli.rst:19
+msgid "While Tower is commercially licensed software, tower-cli is an open source project. Specifically, this project is licensed under the Apache 2.0 license. Pull requests, contributions, and tickets filed in GitHub are warmly welcomed."
+msgstr "虽然 Tower 是一个受商业许可证限制的软件，但 tower-cli 却是一个开源项目，它根据 Apache 2.0 许可证条例获得许可证。我们欢迎在 GitHub 上提交相关的请求，贡献代码并进行支持。"
+
+#: ../../../common/source/towercli.rst:23
+msgid "Capabilities"
+msgstr "功能"
+
+#: ../../../common/source/towercli.rst:28
+msgid "``tower-cli`` sends commands to the Tower API. It is capable of retrieving, creating, modifying, and deleting most objects within Tower."
+msgstr "``tower-cli`` 将命令发送到 Tower API。它可以检索、创建、修改和删除 Tower 中的大多数对象。"
+
+#: ../../../common/source/towercli.rst:31
+msgid "A few potential uses include:"
+msgstr "一些潜在的用途包括："
+
+#: ../../../common/source/towercli.rst:33
+msgid "Launching playbook runs (for instance, from Jenkins, TeamCity, Bamboo, etc)"
+msgstr "启动 playbook 运行（例如，来自 Jenkins 、TeamCity 、Bamboo 等）"
+
+#: ../../../common/source/towercli.rst:35
+msgid "Checking on job statuses"
+msgstr "检查作业状态"
+
+#: ../../../common/source/towercli.rst:36
+msgid "Rapidly creating objects like organizations, users, teams, and more"
+msgstr "快速创建对象，如机构、用户、团队等等"
+
+#: ../../../common/source/towercli.rst:39
+msgid "Installation"
+msgstr "安装"
+
+#: ../../../common/source/towercli.rst:44
+msgid "``tower-cli`` is available as a package on `PyPI <https://pypi.python.org/pypi/ansible-tower-cli>`__."
+msgstr "``tower-cli`` 做为一个软件包包括在 `PyPI <https://pypi.python.org/pypi/ansible-tower-cli>`__ 中。"
+
+#: ../../../common/source/towercli.rst:46
+msgid "The preferred way to install is through ``pip``:"
+msgstr "安装它的首选方法是使用 ``pip``："
+
+#: ../../../common/source/towercli.rst:52
+msgid "The main branch of this project may also be consumed directly from source."
+msgstr "该项目的主要分支（branch）也可以直接通过源代码获得。"
+
+#: ../../../common/source/towercli.rst:54
+msgid "For more information on ``tower-cli``, refer to the project page at:"
+msgstr "如需 ``tower-cli`` 的更多信息，请参阅项目页面："
+
+#: ../../../common/source/towercli.rst:56
+msgid "https://github.com/ansible/tower-cli/"
+msgstr "https://github.com/ansible/tower-cli/"
+
+#: ../../../common/source/towercli.rst:60
+msgid "Configuration"
+msgstr "配置"
+
+#: ../../../common/source/towercli.rst:62
+msgid "``tower-cli`` can edit its own configuration or users can directly edit the configuration file, allowing configuration to be set in multiple ways."
+msgstr "``tower-cli`` 允许以多种方式进行配置。它可编辑其自身配置，或用户也可直接编辑配置文件。"
+
+#: ../../../common/source/towercli.rst:66
+msgid "Set configuration with tower-cli config"
+msgstr "使用 tower-cli config 设定配置"
+
+#: ../../../common/source/towercli.rst:68
+msgid "The preferred way to set configuration is with the ``tower-cli config`` command."
+msgstr "设定配置的首选方法是使用 ``tower-cli config`` 命令。"
+
+#: ../../../common/source/towercli.rst:74
+msgid "By issuing the ``tower-cli config`` command without arguments, you can view a full list of configuration options and where they are set. The default behavior allows environment variables to override your tower-cli.cfg settings, but they will not override configuration values that are passed in on the command line at runtime. The available environment variables and their corresponding Tower configuration keys are as follows:"
+msgstr "在不使用任何参数的情况下运行 ``tower-cli config`` 命令可以查看完整的配置选项列表和设定的位置。默认行为是环境变量会覆盖 tower-cli.cfg 的设置，但它们不会覆盖在运行时命令行中传递的配置值。可用环境变量及其对应的 Tower 配置关键字如下："
+
+#: ../../../common/source/towercli.rst:76
+msgid "TOWER_COLOR: color"
+msgstr "TOWER_COLOR: color"
+
+#: ../../../common/source/towercli.rst:77
+msgid "TOWER_FORMAT: format"
+msgstr "TOWER_FORMAT: format"
+
+#: ../../../common/source/towercli.rst:78
+msgid "TOWER_HOST: host"
+msgstr "TOWER_HOST: host"
+
+#: ../../../common/source/towercli.rst:79
+msgid "TOWER_PASSWORD: password"
+msgstr "TOWER_PASSWORD: password"
+
+#: ../../../common/source/towercli.rst:80
+msgid "TOWER_USERNAME: username"
+msgstr "TOWER_USERNAME: username"
+
+#: ../../../common/source/towercli.rst:81
+msgid "TOWER_VERIFY_SSL: verify_ssl"
+msgstr "TOWER_VERIFY_SSL: verify_ssl"
+
+#: ../../../common/source/towercli.rst:82
+msgid "TOWER_VERBOSE: verbose"
+msgstr "TOWER_VERBOSE: verbose"
+
+#: ../../../common/source/towercli.rst:83
+msgid "TOWER_DESCRIPTION_ON: description_on"
+msgstr "TOWER_DESCRIPTION_ON: description_on"
+
+#: ../../../common/source/towercli.rst:84
+msgid "TOWER_CERTIFICATE: certificate"
+msgstr "TOWER_CERTIFICATE: certificate"
+
+#: ../../../common/source/towercli.rst:87
+msgid "You will generally need to set at least three configuration options--host, username, and password--which correspond to the location of your Ansible Tower instance and your credentials to authenticate to Tower."
+msgstr "通常，您需要设置以下三个配置选项：host 、username 和 password 以指定 Ansible Tower 实例的位置，以及在 Tower 中进行验证的用户凭证。"
+
+#: ../../../common/source/towercli.rst:96
+msgid "Write to the config files directly."
+msgstr "直接写入配置文件。"
+
+#: ../../../common/source/towercli.rst:98
+msgid "The configuration file can also be edited directly. A configuration file is a simple file with keys and values, separated by ``:`` or ``=``:"
+msgstr "配置文件也可以被直接编辑。配置文件是一个带有由 ``:`` 或 ``=`` 分隔的键和值的简单文件："
+
+#: ../../../common/source/towercli.rst:108
+msgid "File Locations"
+msgstr "文件位置"
+
+#: ../../../common/source/towercli.rst:110
+msgid "The order of precedence for configuration file locations is as follows, from least to greatest:"
+msgstr "配置文件位置的优先权顺序如下（从低到高）："
+
+#: ../../../common/source/towercli.rst:112
+msgid "internal defaults"
+msgstr "内部默认设置"
+
+#: ../../../common/source/towercli.rst:113
+msgid "``/etc/awx/tower_cli.cfg`` (written using ``tower-cli config --global``)"
+msgstr "``/etc/awx/tower_cli.cfg`` （使用 ``tower-cli config --global`` 写入）"
+
+#: ../../../common/source/towercli.rst:114
+msgid "``~/.tower_cli.cfg`` (written using ``tower-cli config``)"
+msgstr "``~/.tower_cli.cfg`` （使用 ``tower-cli config`` 写入）"
+
+#: ../../../common/source/towercli.rst:115
+msgid "run-time parameters"
+msgstr "run-time 参数"
+
+#: ../../../common/source/towercli.rst:118
+msgid "Usage"
+msgstr "用法"
+
+#: ../../../common/source/towercli.rst:120
+msgid "``tower-cli`` invocation generally follows this format:"
+msgstr "``tower-cli`` 通常采用以下格式调用："
+
+#: ../../../common/source/towercli.rst:126
+msgid "The **resource** is a type of object within Tower (a noun), such as ``user``, ``organization``, ``job_template``, etc.; resource names are always singular in Tower CLI (use ``tower-cli user``, never ``tower-cli users``)."
+msgstr "**resource** 是 Tower 中的一种对象（一个名词），如 ``user``、``organization``、 ``job_template`` 等; 在 Tower CLI 资源名称总是使用单数形式（``tower-cli user``，而不是 ``tower-cli users``）。"
+
+#: ../../../common/source/towercli.rst:128
+msgid "The **action** is the thing you want to do (a verb). Most ``tower-cli`` resources have the following actions--``get``, ``list``, ``create``, ``modify``, and ``delete``--and have options corresponding to fields on the object in Tower."
+msgstr "**action** 是要进行的操作（一个动词）。大多数 ``tower-cli`` 资源都带有以下操作：``get``、``list``、``create``、``modify`` 和 ``delete``，以及与 Tower 中对象上的字段对应的选项。"
+
+#: ../../../common/source/towercli.rst:130
+msgid "Examples of actions and resources include (but are not limited to):"
+msgstr "操作和资源示例包括（但不仅限于）："
+
+#: ../../../common/source/towercli.rst:133
+msgid "User Actions"
+msgstr "用户操作"
+
+#: ../../../common/source/towercli.rst:167
+msgid "Job Actions"
+msgstr "作业操作"
+
+#: ../../../common/source/towercli.rst:179
+msgid "Group Actions"
+msgstr "组操作"
+
+#: ../../../common/source/towercli.rst:190
+msgid "When in doubt, check the help for more options:"
+msgstr "如有疑问，请查看帮助信息："
+
+#: ../../../common/source/towercli.rst:200
+msgid "Specify extra variables"
+msgstr "指定额外变量"
+
+#: ../../../common/source/towercli.rst:202
+msgid "There are a number of ways to pass extra variables to the Tower server when launching a job:"
+msgstr "在启动作业时，可以使用多种方法将额外变量传递给 Tower 服务器："
+
+#: ../../../common/source/towercli.rst:204
+msgid "Pass data in a file using the flag ``--extra-vars=\"@filename.yml\"``"
+msgstr "在文件中使用 ``--extra-vars=\"@filename.yml\"`` 标记传递数据"
+
+#: ../../../common/source/towercli.rst:205
+msgid "Include yaml data at runtime with the flag ``--extra-vars=\"var: value\"``"
+msgstr "在运行时使用 ``--extra-vars=\"var: value\"`` 标记来包括 yaml 数据"
+
+#: ../../../common/source/towercli.rst:206
+msgid "A command line editor automatically pops up when the job template is marked to prompt on launch"
+msgstr "当作业模板标记为在启动时提示时，命令行编辑器会自动弹出。"
+
+#: ../../../common/source/towercli.rst:207
+msgid "If the job template has extra variables, these are not over-ridden"
+msgstr "如果作业模板有额外的变量，则这些变量不会被覆盖"
+
+#: ../../../common/source/towercli.rst:209
+msgid "These methods can also be combined. For instance, if you give the flag multiple times on the command line, specifying a file in addition to manually giving extra variables, these two sources are combined and sent to the Tower server."
+msgstr "这些方法也可以被合并使用。例如，如果您在命令行中指定多个标记，并且除了手动指定额外变量外还通过一个文件指定，则这两个方法指定的变量会被合并发送到 Tower 服务器。"
+
+#: ../../../common/source/towercli.rst:223
+msgid "You may not combine multiple sources when modifying a job template. Whitespace can be used in strings like ``--extra-vars=\"a='white space'\"``, and list-valued parameters can be sent as JSON or YAML, but not ``key=value`` pairs. For instance, ``--extra-vars=\"a: [1, 2, 3, 4, 5]\"`` sends the parameter ``\"a\"`` with that list as its value."
+msgstr "在修改作业模板时，您可能不能组合多个源。字符串中可以包括空白字符，如 ``--extra-vars=\"a='white space'\"``，列出值的参数可以作为 JSON 或 YAML 发送，但不能使用 ``key=value`` 键值对。例如，``--extra-vars=\"a: [1, 2, 3, 4, 5]\"`` 代表发送参数 ``\"a\"``，其值为其后列出的数据。"
+
+#: ../../../common/source/towercli.rst:227
+msgid "Additional strict ``extra_vars`` validation was added in |at| 3.0.0. ``extra_vars`` passed to the job launch API are only honored if one of the following is true:"
+msgstr "|at| 3.0.0 增加了严格的 ``extra_vars`` 验证。传递给任务启动 API 的 ``extra_vars`` 只有在以下条件之一被满足时才有效。"
+
+#: ../../../common/source/towercli.rst:229
+msgid "They correspond to variables in an enabled survey"
+msgstr "它们与启用的问卷调查（survey）中的变量对应"
+
+#: ../../../common/source/towercli.rst:230
+msgid "``ask_variables_on_launch`` is set to True"
+msgstr "``ask_variables_on_launch`` 被设为 True"
+
+#: ../../../common/source/towercli.rst:234
+msgid "SSL warnings"
+msgstr "SSL 警告"
+
+#: ../../../common/source/towercli.rst:236
+msgid "By default, ``tower-cli`` raises an error if the SSL certificate of the Tower server cannot be verified. To allow unverified SSL connections, set the config variable,``verify_ssl``, to true. To allow it for a single command, add the ``--insecure`` flag."
+msgstr "在默认情况下，如果无法验证 Tower 服务器的 SSL 证书，``tower-cli`` 会抛出一个错误。要允许使用未验证的 SSL 连接，将配置变量 ``verify_ssl`` 设置为 true。如需允许其用于单次命令，请添加 ``--insecure`` 标志："
+

@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/logging.rst:5
+msgid "Logging and Aggregation"
+msgstr "日志记录和聚合"
+
+#: ../../source/logging.rst:18
+msgid "Logging is a feature that provides the capability to send detailed logs to several kinds of 3rd party external log aggregation services. Services connected to this data feed serve as a useful means in gaining insight into the controller usage or technical trends. The data can be used to analyze events in the infrastructure, monitor for anomalies, and correlate events from one service with events in another. The types of data that are most useful to the controller are job fact data, job events/job runs, activity stream data, and log messages. The data is sent in JSON format over a HTTP connection using minimal service-specific tweaks engineered in a custom handler or via an imported library."
+msgstr "日志（Logging）能够将详细的日志发送到多种第 3 方外部日志聚合服务。可以连接到此数据的服务将可以了解控制器的使用情况或技术倾向。这些数据可用于分析基础架构中的事件、监控异常以及将一个服务中的事件与另一个服务中的事件相关联。对于控制器非常有用的数据类型是作业事实 (fact) 数据、作业事件/作业运行、活动流数据和日志消息。此数据以 JSON 格式通过 HTTP 连接发送，使用自定义处理程序中设计的最小服务特定微调或者通过导入的库实现。"
+
+#: ../../source/logging.rst:20
+msgid "Installing |at| will install a newer version of rsyslog, which will replace the version that comes with the RHEL base. The version of rsyslog that is installed by |at| does not include the following rsyslog modules:"
+msgstr "安装 |at| 将会安装一个更新版本的 rsyslog，该版本将替换 RHEL 提供的版本。|at| 安装的 rsyslog 版本不包括以下 rsyslog 模块："
+
+#: ../../source/logging.rst:22
+msgid "rsyslog-udpspoof.x86_64"
+msgstr "rsyslog-udpspoof.x86_64"
+
+#: ../../source/logging.rst:23
+msgid "rsyslog-libdbi.x86_64"
+msgstr "rsyslog-libdbi.x86_64"
+
+#: ../../source/logging.rst:25
+msgid "After installing |at|, use only the controller provided rsyslog package for any logging outside of the controller that may have previously been done with the RHEL provided rsyslog package. If you already use rsyslog for logging system logs on the controller instances, you can continue to use rsyslog to handle logs from outside of the controller by running a separate rsyslog process (using the same version of rsyslog that the controller is), and pointing it to a separate /etc/rsyslog.conf."
+msgstr "在 |at| 安装后，请使用控制器提供的 rsyslog 软件包来处理控制器外部的日志记录（之前，这部分功能可能是由 RHEL 提供的 rsyslog 软件包提供的）。 如果您已经使用 rsyslog 在控制器实例上记录系统日志，您可以继续使用 rsyslog 处理控制器外部的日志，方法是运行一个单独的 rsyslog 进程（使用和控制器相同版本的 rsyslog）,并将其指向单独的 /etc/rsyslog.conf。"
+
+#: ../../source/logging.rst:29
+msgid "For systems that use rsyslog outside of the controller (on the controller VM/machine), consider any conflict that may arise with also using new version of rsyslog that comes with the controller."
+msgstr "对于在控制器之外使用 rsyslog 的系统（在控制器 VM/machine 中），请考虑可以会出现与控制器附带的新版本 rsyslog 有冲突的问题。"
+
+#: ../../source/logging.rst:31
+msgid "You can configure from the ``/api/v2/settings/logging/`` endpoint how the controller rsyslog process handles messages that have not yet been sent in the event that your external logger goes offline:"
+msgstr "您可以在 ``/api/v2/settings/logging/`` 端点配置，当外部的日志系统离线时，控制器 rsyslog 进程如何处理尚未发送的消息："
+
+#: ../../source/logging.rst:33
+msgid "``LOG_AGGREGATOR_MAX_DISK_USAGE_GB``: specifies the amount of data to store (in gigabytes) during an outage of the external log aggregator (defaults to 1). Equivalent to the ``rsyslogd queue.maxdiskspace`` setting."
+msgstr "``LOG_AGGREGATOR_MAX_DISK_USAGE_GB``：外部日志聚合器停机时要保存的数据量（以 GB 为单位）（默认为 1)，与 ``rsyslogd queue.maxdiskspace`` 设置相同。"
+
+#: ../../source/logging.rst:35
+msgid "``LOG_AGGREGATOR_MAX_DISK_USAGE_PATH``: specifies the location to persist logs that should be retried after an outage of the external log aggregator (defaults to ``/var/lib/awx``). Equivalent to the ``rsyslogd queue.spoolDirectory`` setting."
+msgstr "``LOG_AGGREGATOR_MAX_DISK_USAGE_PATH``：在外部日志聚合器停止工作后，重试的持久性日志的位置（默认为 ``/var/lib/awx``)。与 ``rsyslogd queue.spoolDirectory`` 设置相同。"
+
+#: ../../source/logging.rst:37
+msgid "For example, if Splunk goes offline, rsyslogd stores a queue on the disk until Splunk comes back online. By default, it will store up to 1GB of events (while Splunk is offline) but you can make that more than 1GB if necessary, or change the path where you save the queue."
+msgstr "譬如，如果 Splunk 离线，rsyslogd 在磁盘上存储一个队列，直到 Splunk 重新上线。默认情况下，它将最多保存 1GB 的事件（在 Splunk 离线时），但您可以在必要时把它设置为大于 1GB，或改变保存队列的路径。"
+
+#: ../../source/logging.rst:41
+msgid "Loggers"
+msgstr "日志记录器"
+
+#: ../../source/logging.rst:43
+msgid "Below are special loggers (except for ``awx``, which constitutes generic server logs) that provide large amount of information in a predictable structured or semi-structured format, following the same structure as one would expect if obtaining the data from the API:"
+msgstr "以下是特殊的日志记录器（除了 ``awx``，它提供通用的服务器日志），它以可预测的结构或半结构格式提供大量信息，其结构与从 API 获取数据时所需的结构相同："
+
+#: ../../source/logging.rst:45
+msgid "``job_events``: Provides data returned from the Ansible callback module"
+msgstr "``job_events``：提供从 Ansible 回调模块返回的数据"
+
+#: ../../source/logging.rst:46
+msgid "``activity_stream``: Displays the record of changes to the objects within the |at| application"
+msgstr "``activity_stream``：显示 |at| 应用中对象的更改记录"
+
+#: ../../source/logging.rst:47
+msgid "``system_tracking``: Provides fact data gathered by Ansible ``setup`` module (i.e. ``gather_facts: True``) when job templates are ran with **Enable Fact Cache** selected"
+msgstr "``system_tracking``: 在使用 **Enable Fact Cache** 运行作业模板时，提供由 Ansible ``setup`` 模块收集的事实数据（例如 ``gather_facts: True``）"
+
+#: ../../source/logging.rst:48
+msgid "``awx``: Provides generic server logs, which include logs that would normally be written to a file. It contains the standard metadata that all logs have, except it only has the message from the log statement."
+msgstr "``awx``：提供通用服务器日志，其中包括通常要写入文件的日志。它包含了所有日志都具有的标准元数据，除了它只有来自日志语句的消息。"
+
+#: ../../source/logging.rst:50
+msgid "These loggers only use log-level of INFO, except for the ``awx`` logger, which may be any given level."
+msgstr "这些日志记录器只使用 INFO 的日志级别，但 ``awx`` logger 除外，它可能是任意给定级别。"
+
+#: ../../source/logging.rst:52
+msgid "Additionally, the standard controller logs are be deliverable through this same mechanism. It is apparent how to enable or disable each of these five sources of data without manipulating a complex dictionary in your local settings file, as well as adjust the log-level consumed from the standard controller logs."
+msgstr "另外，标准的控制器日志可以通过同样的机制来提供。它包括如何启用或禁用这五个数据源中的每个源，而无需在本地设置文件中操作复杂的字典，以及调整标准控制器日志消耗的日志级别。"
+
+#: ../../source/logging.rst:54
+msgid "To configure various logging components in |at|, click **Settings** from the left navigation bar then select **Logging settings** from the list of System options."
+msgstr "要在 |at| 中配置各种日志记录组件，点左侧导航栏中的 **Settings**，然后从系统选项列表中选择 **Logging settings**。"
+
+#: ../../source/logging.rst:57
+msgid "Log message schema"
+msgstr "日志消息 schema"
+
+#: ../../source/logging.rst:59
+msgid "Common schema for all loggers:"
+msgstr "所有日志记录器的通用 schema："
+
+#: ../../source/logging.rst:61
+msgid "``cluster_host_id``: Unique identifier of the host within the controller cluster"
+msgstr "``cluster_host_id``: 控制器集群中主机的唯一标识符"
+
+#: ../../source/logging.rst:62
+msgid "``level``: Standard python log level, roughly reflecting the significance of the event All of the data loggers as a part of this feature use INFO level, but the other controller logs will use different levels as appropriate"
+msgstr "``level``：标准的 python 日志级别，它大致反映了事件的重要性。作为该功能的一部分，所有的数据日志记录器都使用 INFO 级别，但其他控制器日志会根据情况使用不同的级别"
+
+#: ../../source/logging.rst:63
+msgid "``logger_name``: Name of the logger we use in the settings, for example, \"activity_stream\""
+msgstr "``logger_name``：在设置中使用的日志记录器的名称，例如：“activity_stream”"
+
+#: ../../source/logging.rst:64
+msgid "``@timestamp``: Time of log"
+msgstr "``@timestamp``：日志时间"
+
+#: ../../source/logging.rst:65
+msgid "``path``: File path in code where the log was generated"
+msgstr "``path``：日志生成的代码中的文件路径"
+
+#: ../../source/logging.rst:69
+msgid "Activity stream schema"
+msgstr "活动流 schema"
+
+#: ../../source/logging.rst:71
+#: ../../source/logging.rst:91
+msgid "(common): This uses all the fields common to all loggers listed above"
+msgstr "（通用）：这使用以上列出的所有日志记录器通用的所有字段"
+
+#: ../../source/logging.rst:72
+msgid "``actor``: Username of the user who took the action documented in the log"
+msgstr "``actor``：日志中记录的执行操作的用户的用户名"
+
+#: ../../source/logging.rst:73
+msgid "``changes``: JSON summary of what fields changed, and their old/new values."
+msgstr "``changes``：字段更改的 JSON 概述，及其旧/新值。"
+
+#: ../../source/logging.rst:74
+msgid "``operation``: The basic category of the changed logged in the activity stream, for instance, \"associate\"."
+msgstr "``operation``：活动流中已更改的日志的基本类别，例如：“关联”。"
+
+#: ../../source/logging.rst:75
+msgid "``object1``: Information about the primary object being operated on, consistent with what we show in the activity stream"
+msgstr "``object1``：有关操作的主要对象的信息，与活动流中显示的内容一致"
+
+#: ../../source/logging.rst:76
+msgid "``object2``: If applicable, the second object involved in the action"
+msgstr "``object2``：如果适用，涉及该操作的第二个对象"
+
+#: ../../source/logging.rst:80
+msgid "Job event schema"
+msgstr "作业事件 schema"
+
+#: ../../source/logging.rst:82
+msgid "This logger reflects the data being saved into job events, except when they would otherwise conflict with expected standard fields from the logger, in which case the fields are nested. Notably, the field host on the ``job_event`` model is given as ``event_host``. There is also a sub-dictionary field, ``event_data`` within the payload, which contains different fields depending on the specifics of the Ansible event."
+msgstr "该日志记录器反映了保存到作业事件中的数据，除非它们可能与来自日志记录器的预期标准字段冲突，在这种情况下，字段被嵌套。特别是，``job_event`` 模型上的字段主机给定为 ``event_host``。在有效负载中还有一个子字典字段 ``event_data``，它包含不同的字段，具体取决于 Ansible 事件的具体情况。"
+
+#: ../../source/logging.rst:84
+msgid "This logger also includes the common fields."
+msgstr "这个日志记录器还包括通用字段。"
+
+#: ../../source/logging.rst:87
+msgid "Scan / fact / system tracking data schema"
+msgstr "扫描/事实 (fact) /系统跟踪数据 schema"
+
+#: ../../source/logging.rst:89
+msgid "These contain a detailed dictionary-type fields that are either services, packages, or files."
+msgstr "这些字段包括了服务、软件包或文件的详细字典类型字段。"
+
+#: ../../source/logging.rst:92
+msgid "``services``: For services scans, this field is included and has keys based on the name of the service. **NOTE**: Periods are disallowed by elastic search in names, and are replaced with \"_\" by our log formatter"
+msgstr "``services``：对于服务扫描，此字段会根据服务的名称包含并具有密钥。**备注**：周期通过弹性搜索名称来禁止，并通过我们的日志格式器替换为“_”"
+
+#: ../../source/logging.rst:93
+msgid "``package``: Included for log messages from package scans"
+msgstr "``package``：对软件包扫描中的日志消息包含在内"
+
+#: ../../source/logging.rst:94
+msgid "``files``: Included for log messages from file scans"
+msgstr "``files``：对文件扫描的日志消息包含在内"
+
+#: ../../source/logging.rst:95
+msgid "``host``: Name of host scan applies to"
+msgstr "``host``：主机扫描的名称适用于"
+
+#: ../../source/logging.rst:96
+msgid "``inventory_id``: Inventory id host is inside of"
+msgstr "``inventory_id``：清单 id 主机位于其中"
+
+#: ../../source/logging.rst:100
+msgid "Job status changes"
+msgstr "作业状态更改"
+
+#: ../../source/logging.rst:102
+msgid "This is a intended to be a lower-volume source of information about changes in job states compared to job events, and also intended to capture changes to types of unified jobs other than job template based jobs."
+msgstr "与作业事件相比，这具有较少的数据，用来提供有关作业状态变化的信息。它还旨在捕获对基于作业模板的作业以外的统一作业类型的更改。"
+
+#: ../../source/logging.rst:104
+msgid "In addition to common fields, these logs include fields present on the job model."
+msgstr "除了常见字段外，这些日志还包含作业模型中存在的字段。"
+
+#: ../../source/logging.rst:108
+msgid "Controller logs"
+msgstr "Controller 日志"
+
+#: ../../source/logging.rst:110
+msgid "In addition to the common fields, this contains a ``msg`` field with the log message. Errors contain a separate ``traceback`` field. These logs can be enabled or disabled with the ``ENABLE EXTERNAL LOGGING`` option from the Logging settings page."
+msgstr "除了通用字段外，这还包含带日志消息的 ``msg`` 字段。错误包含一个单独的字段 ``traceback``。这些日志可使用 Logging 设置页面中的 ``ENABLE EXTERNAL LOGGING`` 选项启用或禁用。"
+
+#: ../../source/logging.rst:113
+msgid "Logging Aggregator Services"
+msgstr "日志记录聚合器服务"
+
+#: ../../source/logging.rst:115
+msgid "The logging aggregator service works with the following monitoring and data analysis systems:"
+msgstr "日志记录聚合器服务用于以下监控和数据分析系统："
+
+#: ../../source/logging.rst:121
+msgid "Splunk"
+msgstr "Splunk"
+
+#: ../../source/logging.rst:123
+msgid "|At|'s Splunk logging integration uses the Splunk HTTP Collector. When configuring a SPLUNK logging aggregator, add the full URL to the HTTP Event Collector host, like in the following example:"
+msgstr "|At| 的 Splunk 日志记录集成使用 Splunk HTTP 收集器。在配置 SPLUNK 日志记录聚合器时，将完整 URL 添加到 HTTP 事件收集器主机，如下例所示："
+
+#: ../../source/logging.rst:146
+msgid "Splunk HTTP Event Collector listens on 8088 by default so it is necessary to provide the full HEC event URL (with port) in order for incoming requests to be processed successfully. These values are entered in the example below:"
+msgstr "Splunk HTTP 事件收集器默认在 8088 上侦听，因此需要提供完整的 HEC 事件 URL（附带端口），以便成功处理传入请求。这些值在以下示例中输入："
+
+#: ../../source/logging.rst:151
+msgid "For further instructions on configuring the HTTP Event Collector, refer to the `Splunk documentation`_."
+msgstr "有关配置 HTTP 事件收集器的进一步说明，请参阅 `Splunk documentation`_。"
+
+#: ../../source/logging.rst:157
+msgid "Loggly"
+msgstr "Loggly"
+
+#: ../../source/logging.rst:159
+msgid "To set up the sending of logs through Loggly's HTTP endpoint, refer to https://www.loggly.com/docs/http-endpoint/. Loggly uses the URL convention described at http://logs-01.loggly.com/inputs/TOKEN/tag/http/, which is shown inputted in the **Logging Aggregator** field in the example below:"
+msgstr "要通过 Loggly 的 HTTP 端点来设置日志的发送，请参阅 https://www.loggly.com/docs/http-endpoint/. Loggly 使用 http://logs-01.loggly.com/inputs/TOKEN/tag/http/ 描述的 URL 惯例。在下例中，它已被输入到 **Logging Aggregator** 字段中："
+
+#: ../../source/logging.rst:165
+msgid "Sumologic"
+msgstr "Sumologic"
+
+#: ../../source/logging.rst:167
+msgid "In Sumologic, create a search criteria containing the json files that provide the parameters used to collect the data you need."
+msgstr "在 Sumologic 中，创建一个包含 json 文件的搜索条件，该文件提供用于收集所需数据的参。"
+
+#: ../../source/logging.rst:173
+msgid "Elastic stack (formerly ELK stack)"
+msgstr "弹性堆栈（以前称为 ELK 堆栈）"
+
+#: ../../source/logging.rst:175
+msgid "If starting from scratch, standing up your own version the elastic stack, the only change you required is to add the following lines to the logstash ``logstash.conf`` file:"
+msgstr "如果从头开始，基于您自己版本的弹性堆栈，您唯一需要的修改是将以下几行添加到 logstash ``logstash.conf`` 文件中："
+
+#: ../../source/logging.rst:187
+msgid "Backward-incompatible changes were introduced with Elastic 5.0.0, and different configurations may be required depending on what versions you are using."
+msgstr "在 Elastic 5.0.0 中引入了向后兼容的更改，且可能需要根据所使用的版本进行不同的配置。"
+
+#: ../../source/logging.rst:192
+msgid "Set Up Logging"
+msgstr "设置日志记录"
+
+#: ../../source/logging.rst:195
+msgid "Log Aggregation"
+msgstr "日志聚合"
+
+#: ../../source/logging.rst:197
+msgid "To set up logging to any of the aggregator types:"
+msgstr "将日志记录设置为任何聚合器类型："
+
+#: ../../source/logging.rst:199
+#: ../../source/logging.rst:257
+msgid "Click **Settings** from the left navigation bar."
+msgstr "点左侧导航栏中的 **Settings**。"
+
+#: ../../source/logging.rst:201
+#: ../../source/logging.rst:259
+msgid "Under the list of System options, click to select **Logging settings**."
+msgstr "在系统选项列表中，点 **Logging settings**。"
+
+#: ../../source/logging.rst:203
+#: ../../source/logging.rst:261
+msgid "At the bottom of the Logging settings screen, click **Edit**."
+msgstr "在 Logging 设置屏幕底部点 **Edit**。"
+
+#: ../../source/logging.rst:205
+msgid "Set the configurable options from the fields provided:"
+msgstr "从提供的字段中设置可配置选项："
+
+#: ../../source/logging.rst:207
+msgid "**Enable External Logging**: Click the toggle button to **ON** if you want to send logs to an external log aggregator."
+msgstr "**Enable External Logging**：如果要将日志发送到外部日志聚合器，请点击切换按钮切换到 **ON**。"
+
+#: ../../source/logging.rst:208
+msgid "**Logging Aggregator**: Enter the hostname or IP address you want to send logs."
+msgstr "**Logging Aggregator**：输入您要发送日志的主机名或 IP 地址。"
+
+#: ../../source/logging.rst:209
+msgid "**Logging Aggregator Port**: Specify the port for the aggregator if it requires one."
+msgstr "**Logging Aggregator Port**：如果聚合器需要端口，请为其指定端口。"
+
+#: ../../source/logging.rst:213
+msgid "When the connection type is HTTPS, you can enter the hostname as a URL with a port number and therefore, you are not required to enter the port again. But TCP and UDP connections are determined by the hostname and port number combination, rather than URL. So in the case of TCP/UDP connection, supply the port in the specified field. If instead a URL is entered in host field (**Logging Aggregator** field), its hostname portion will be extracted as the actual hostname."
+msgstr "当连接类型为 HTTPS 时，您可以输入主机名作为带有端口号的 URL，因此不需要再次输入端口。但 TCP 和 UDP 连接由主机名和端口号组合决定，而不是 URL 决定。如果是 TCP/UDP 连接，则在指定字段中提供端口。如果在 host 字段（**Logging aggregator** 字段）中输入 URL，则其主机名部分将被提取为实际主机名。"
+
+#: ../../source/logging.rst:215
+msgid "**Logging Aggregator Type**: Click to select the aggregator service from the drop-down menu:"
+msgstr "**Logging Aggregator Type**：点击可从下拉菜单中选择聚合器服务："
+
+#: ../../source/logging.rst:219
+msgid "**Logging Aggregator Username**: Enter the username of the logging aggregator if it requires it."
+msgstr "**Logging Aggregator Username**：如果需要，请输入日志聚合器的用户名。"
+
+#: ../../source/logging.rst:220
+msgid "**Logging Aggregator Password/Token**: Enter the password of the logging aggregator if it requires it."
+msgstr "**Logging Aggregator Password/Token**：如果需要，请输入日志聚合器的密码。"
+
+#: ../../source/logging.rst:221
+msgid "**Log System Tracking Facts Individually**: Click the tooltip |help| icon for additional information whether or not you want to turn it on, or leave it off by default."
+msgstr "**Log System Tracking Facts Individually**：点击工具提示 |help| 图标可查看是否要打开的附加信息，或者默认保持关闭。"
+
+#: ../../source/logging.rst:222
+msgid "**Logging Aggregator Protocol**: Click to select a connection type (protocol) to communicate with the log aggregator. Subsequent options vary depending on the selected protocol."
+msgstr "**Logging Aggregator Protocol**：点击选择一个连接类型（协议）与日志聚合器通信。后续选项根据所选协议的不同而有所变化。"
+
+#: ../../source/logging.rst:223
+msgid "**Logging Aggregator Level Threshold**: Select the level of severity you want the log handler to report."
+msgstr "**Logging Aggregator Level Threshold**：选择希望日志处理器报告的严重性级别。"
+
+#: ../../source/logging.rst:224
+msgid "**TCP Connection Timeout**: Specify the connection timeout in seconds. This option is only applicable to HTTPS and TCP log aggregator protocols."
+msgstr "**TCP Connection Timeout**：以秒为单位指定连接超时时间。此选项仅适用于 HTTPS 和 TCP 日志聚合协议。"
+
+#: ../../source/logging.rst:225
+msgid "**Enable/disable HTTPS certificate verification**: Certificate verification is enabled by default for HTTPS log protocol. Click the toggle button to **OFF** if you do not want the log handler to verify the HTTPS certificate sent by the external log aggregator before establishing a connection."
+msgstr "**Enable/disable HTTPS certificate verification**：HTTPS 日志协议默认启用证书验证。如果您不希望日志处理器在建立连接前验证由外部日志聚合器发送的 HTTPS 证书，请点击切换按钮切换到 **OFF**。"
+
+#: ../../source/logging.rst:226
+msgid "**Loggers to Send Data to the Log Aggregator Form**: All four types of data are pre-populated by default. Click the tooltip |help| icon next to the field for additional information on each data type. Delete the data types you do not want."
+msgstr "**Loggers to Send Data to the Log Aggregator Form**：所有四类数据都是默认预先填充。点击字段旁的工具提示 |help| 图标可查看每种数据类型的附加信息。删除您不想要的数据类型。"
+
+#: ../../source/logging.rst:227
+msgid "**Log Format For API 4XX Errors**: Configure a specific error message. See :ref:`logging-api-400-error-config` for further detail."
+msgstr "**Log Format for API 4XX Errors**：配置特定错误消息。如需更多详情，请参阅 :ref:`logging-api-400-error-config`。"
+
+#: ../../source/logging.rst:231
+msgid "Review your entries for your chosen logging aggregation. Below is an example of one set up for Splunk:"
+msgstr "检查您选择的日志记录聚合的条目。以下是为 Splunk 设置的示例："
+
+#: ../../source/logging.rst:235
+msgid "When done, click **Save** to apply the settings or **Cancel** to abandon the changes."
+msgstr "完成后，点击 **Save** 应用设置，或者点 **Cancel** 取消更改。"
+
+#: ../../source/logging.rst:237
+msgid "To verify if your configuration is set up correctly, click **Save** first then click **Test**. This sends a test log message to the log aggregator using the current logging configuration in |at|. You should check to make sure this test message was received by your external log aggregator."
+msgstr "要验证您的配置是否正确设置，请首先点击 **Save** 再点 **Test**。这会使用 |at| 中的当前日志配置向日志聚合器发送测试日志消息。您需要进行检查，以确保外部日志聚合器收到这个测试消息。"
+
+#: ../../source/logging.rst:241
+msgid "If the **Test** button is disabled, it is an indication that the fields are different than their initial values so save your changes first, and make sure the **Enable External Logging** toggle is set to ON."
+msgstr "如果 **Test** 按钮被禁用，这表示字段与其初始值不同。首先保存您的更改，并确定 **Enable External Logging** 切换设置为 ON。"
+
+#: ../../source/logging.rst:247
+msgid "API 4XX Error Configuration"
+msgstr "API 4XX 错误配置"
+
+#: ../../source/logging.rst:249
+msgid "When the API encounters an issue with a request, it will typically return an HTTP error code in the 400 range along with an error. When this happens, an error message will be generated in the log which follows the pattern:"
+msgstr "当对 API 的请求存在问题时，API 在出错时通常返回一个在 400 范围内的 HTTP 错误代码。当发生这种情况时，将在日志中生成一个出错信息，其遵循以下模式："
+
+#: ../../source/logging.rst:251
+msgid "``` status {status_code} received by user {user_name} attempting to access {url_path} from {remote_addr} ```"
+msgstr "``` status {status_code} received by user {user_name} attempting to access {url_path} from {remote_addr} ```"
+
+#: ../../source/logging.rst:255
+msgid "These messages can be configured as required. To modify the default API 4XX errors log message format, do the following:"
+msgstr "这些消息可根据需要进行配置。要修改默认的 API 4XX 错误消息格式，请执行以下操作："
+
+#: ../../source/logging.rst:263
+msgid "Modify the field **Log Format For API 4XX Errors**."
+msgstr "修改字段 **Log Format For API 4XX Errors**。"
+
+#: ../../source/logging.rst:265
+msgid "Items surrounded by ``{}`` will be substituted when the log error is generated. The following variables can be used:"
+msgstr "在生成日志错误时，由 ``{}`` 围绕的项将被替换。可以使用以下变量："
+
+#: ../../source/logging.rst:267
+msgid "**status_code**: The HTTP status code the API is returning"
+msgstr "**status_code**：API 返回的 HTTP 状态代码"
+
+#: ../../source/logging.rst:268
+msgid "**user_name**: The name of the user that was authenticated when making the API request"
+msgstr "**user_name**：在发出 API 请求时要验证的用户名称"
+
+#: ../../source/logging.rst:269
+msgid "**url_path**: The path portion of the URL being called (aka the API endpoint)"
+msgstr "**url_path**：被调用的 URL 的路径部分（也称为 API 端点）"
+
+#: ../../source/logging.rst:270
+msgid "**remote_addr**: The remote address received by Controller"
+msgstr "**remote_addr**: 控制器接收的远程地址"
+
+#: ../../source/logging.rst:271
+msgid "**error**: The error message returned by the API or, if no error is specified, the HTTP status as text"
+msgstr "**error**: API 返回的错误消息，如果没有指定错误，则为文本形式的 HTTP 状态"
+
+#: ../../source/logging.rst:275
+msgid "Troubleshoot Logging"
+msgstr "故障排除日志记录"
+
+#: ../../source/logging.rst:278
+msgid "Logging Aggregation"
+msgstr "日志记录聚合"
+
+#: ../../source/logging.rst:279
+msgid "If you have sent a message with the test button to your configured logging service via http/https, but did not receive the message, check the ``/var/log/tower/rsyslog.err`` log file. This is where errors are stored if they occurred when authenticating rsyslog with an http/https external logging service. Note that if there are no errors, this file will not exist."
+msgstr "如果您使用测试按钮通过 http/https 向配置的日志记录服务发送了一条消息，但却没有接收到这个消息，请检查 ``/var/log/tower/rsyslog.err`` 日志文件。当使用 http/https 外部日志记录服务验证 rsyslog 出错时，错误信息会被记录在这个文件中。请注意，如果没有错误，则该文件将不存在。"
+
+#: ../../source/logging.rst:282
+msgid "API 4XX Errors"
+msgstr "API 4XX 错误"
+
+#: ../../source/logging.rst:283
+msgid "You can include the API error message for 4XX errors by modifying the log format for those messages. Refer to the :ref:`logging-api-400-error-config` section for more detail."
+msgstr "您可以通过修改这些消息的日志格式来包括 4XX 错误的 API 错误消息。如需更多详情，请参阅 :ref:`logging-api-400-error-config` 部分。"
+
+#: ../../source/logging.rst:286
+msgid "LDAP"
+msgstr "LDAP"
+
+#: ../../source/logging.rst:287
+msgid "You can enable logging messages for the LDAP adapter. Refer to the :ref:`ldap_logging` section for more detail."
+msgstr "您可以为 LDAP 适配器启用日志记录信息。如需更多详情，请参阅 :ref:`ldap_logging` 部分。"
+
+#: ../../source/logging.rst:290
+msgid "SAML"
+msgstr "SAML"
+
+#: ../../source/logging.rst:291
+msgid "You can enable logging messages for the SAML adapter the same way you can enable logging for LDAP. Refer to the :ref:`ldap_logging` section for more detail."
+msgstr "您可以象为 LDAP 启用日志记录一样，为 SAML 适配器启用日志信息。如需更多详情，请参阅 :ref:`ldap_logging` 部分。"
+

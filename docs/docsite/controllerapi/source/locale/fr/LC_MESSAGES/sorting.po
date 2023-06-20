@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/sorting.rst:4
+msgid "Sorting"
+msgstr ""
+
+#: ../../source/sorting.rst:9
+msgid ""
+"To provide examples that are easy to follow, the following URL is used "
+"throughout this guide:"
+msgstr ""
+
+#: ../../source/sorting.rst:16
+msgid ""
+"To specify that {{ model_verbose_name_plural }} are returned in a "
+"particular order, use the ``order_by`` query string parameter on the GET "
+"request."
+msgstr ""
+
+#: ../../source/sorting.rst:22
+msgid "Prefix the field name with a dash (``-``) to sort in reverse:"
+msgstr ""
+
+#: ../../source/sorting.rst:28
+msgid ""
+"Multiple sorting fields may be specified by separating the field names "
+"with a comma (``,``):"
+msgstr ""
+

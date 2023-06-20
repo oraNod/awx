@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/schedules.rst:3
+msgid "Schedules API Endpoint"
+msgstr "调度 API 端点"
+
+#: ../../source/schedules.rst:8
+msgid "Make a GET request to this resource to retrieve the list of schedules."
+msgstr "向此资源发出 GET 请求，以检索调度列表。"
+
+#: ../../source/schedules.rst:19
+msgid "The resulting data structure contains:"
+msgstr "得到的数据结构包括："
+
+#: ../../source/schedules.rst:32
+msgid "The ``count`` field indicates the total number of schedules found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more schedule records."
+msgstr "``count`` 字段显示为给定查询找到的调度总数。如果单个页面每个包括所有项，使用 ``next`` 和 ``previous`` 字段可以查看其他结果。``results`` 列表包含零或更多个调度记录。"
+
+#: ../../source/schedules.rst:35
+msgid "Results"
+msgstr "结果"
+
+#: ../../source/schedules.rst:40
+msgid "Each schedule data structure includes the following fields:"
+msgstr "每个调度数据结构包括以下字段："
+
+#: ../../source/schedules.rst:42
+msgid "``id``: Database ID for this schedule. (integer)"
+msgstr "``id``：此调度的数据库 ID。（整数）"
+
+#: ../../source/schedules.rst:43
+msgid "``type``: Data type for this schedule. (multiple choice)"
+msgstr "``type``：此调度的数据类型。（多选项）"
+
+#: ../../source/schedules.rst:44
+msgid "``schedule``: Schedule"
+msgstr "``schedule``：调度名称"
+
+#: ../../source/schedules.rst:45
+msgid "``url``: URL for this schedule. (string)"
+msgstr "``url``：此调度的 URL。（字符串）"
+
+#: ../../source/schedules.rst:46
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``：包含相关资源的 URL 的数据结构。（对象）"
+
+#: ../../source/schedules.rst:47
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``：包含相关资源的名称/描述的数据结构。（对象）"
+
+#: ../../source/schedules.rst:48
+msgid "``created``: Timestamp when this schedule was created. (datetime)"
+msgstr "``created``：创建此调度时的时间戳。（日期时间）"
+
+#: ../../source/schedules.rst:49
+msgid "``modified``: Timestamp when this schedule was last modified. (datetime)"
+msgstr "``modified``：最后一次修改此调度时的时间戳。（日期时间）"
+
+#: ../../source/schedules.rst:50
+msgid "``name``: (string)"
+msgstr "``name``：（字符串）"
+
+#: ../../source/schedules.rst:51
+msgid "``description``: (string)"
+msgstr "``description``：（字符串）"
+
+#: ../../source/schedules.rst:52
+msgid "``unified_job_template``: (field)"
+msgstr "``unified_job_template``：（字段）"
+
+#: ../../source/schedules.rst:53
+msgid "``enabled``: (boolean)"
+msgstr "``enabled``：（布尔值）"
+
+#: ../../source/schedules.rst:54
+msgid "``dtstart``: (datetime)"
+msgstr "``dtstart``：（日期时间）"
+
+#: ../../source/schedules.rst:55
+msgid "``dtend``: (datetime)"
+msgstr "``dtend``：（日期时间）"
+
+#: ../../source/schedules.rst:56
+msgid "``rrule``: (string)"
+msgstr "``rrule``：（字符串）"
+
+#: ../../source/schedules.rst:57
+msgid "``next_run``: (datetime)"
+msgstr "``next_run``：（日期时间）"
+
+#: ../../source/schedules.rst:58
+msgid "``extra_data``: (field)"
+msgstr "``extra_data``：（字段）"
+
+#: ../../source/schedules.rst:62
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/schedules.rst:67
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

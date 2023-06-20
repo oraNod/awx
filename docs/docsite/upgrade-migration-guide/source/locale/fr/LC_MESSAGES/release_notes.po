@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Upgrade and Migration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/release_notes.rst:2
+msgid "Release Notes for |atversion|"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:3
+msgid "Ansible Tower Version 3.1.0"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:5
+msgid ""
+"Added support for configuring most aspects of Ansible Tower directly from"
+" the Tower user interface (and Tower API), rather than editing Tower "
+"configuration files"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:6
+msgid ""
+"Added support for \"Scale-Out\" Clusters, which replaces the "
+"HA/Redundancy method from prior Tower releases"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:7
+msgid "Added support for Workflows, a chain of job templates executed in order"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:8
+msgid ""
+"Added support for sending event and log messages to various logging "
+"services (Elastic, Splunk, Sumologic, Loggly, generic REST endpoint)"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:9
+msgid ""
+"Added support for a new Tower Search feature which supports GitHub-style "
+"\"key:value\" searching"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:10
+msgid "Added support for Ubuntu 16.04"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:11
+msgid ""
+"Added support for a New Project Sync Architecture, where projects are now"
+" checked out at job runtime"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:12
+msgid "Added support for setting timeouts on job runs"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:13
+msgid ""
+"Added support for internationalization and localization (French and "
+"Japanese)"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:14
+msgid "Added support for multi-playbook Workflows"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:15
+msgid ""
+"Added ``/api/v1/settings`` for Tower managed settings. This corresponds "
+"to the in-Tower configuration UI"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:16
+msgid "Added support for windows scan jobs"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:17
+msgid "Added support so that the SCM Revision used is now stored on Job"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:18
+msgid ""
+"Added support for API endpoints to now show ``__search`` filter fields "
+"for broader searching of objects"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:19
+msgid ""
+"Added support so that system jobs are now shown in "
+"``/api/v1/unified_jobs``"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:20
+msgid "Added support for the new Ansible vmware_inventory script"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:21
+msgid ""
+"Added support for Job stdout downloads, which may generate and cache on "
+"the fly"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:22
+msgid ""
+"Added support for ``/api/v1/inventory_updates`` and "
+"``/api/v1/project_updates`` to view those specific job types"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:23
+msgid ""
+"Added support for `user_capabilities` API elements in various places to "
+"allow API consumers to know if their user can perform the referenced "
+"actions on the object"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:24
+msgid ""
+"Added support for ``set_stats``  for Workflow jobs to persist data "
+"between Workflow job runs, support added in ansible core also"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:25
+msgid ""
+"Added support for Tower callbacks so that they can now resolve "
+"``ansible_host`` as well as ``ansible_ssh_host``"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:26
+msgid ""
+"Added support for Tower callbacks so that they now filter out "
+"``ansible_`` variables on POST"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:27
+msgid ""
+"Added support for notifications so that they are emitted on jobs marked "
+"as failed by the dead job detector"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:28
+msgid "Added eu-west-2 and ca-central-1 to the list of supported EC2 regions"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:29
+msgid "Added support for ``format=ansi_download`` when downloading stdout"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:30
+msgid "Deprecated support for Rackspace inventories"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:31
+msgid "Fixed an issue where manual projects could be launched/updated"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:32
+msgid "Fixed various unicode issues"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:33
+msgid "Fixed various issues dealing with self signed certificatesvalue."
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:34
+msgid ""
+"Fixed Jobs so that they now show ``$encrypted`` for these variables, "
+"where they previously did not"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:35
+msgid "Improved performance for viewing job and job template lists"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:36
+msgid "Improved Tower virtualenv so that it is purged on upgrade"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:37
+msgid ""
+"Improved setup playbook so that it is more tolerant of various "
+"iptables/firewalld configurations"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:38
+msgid ""
+"Improved the optimization of PostgreSQL installation to improve overall "
+"performance"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:39
+msgid ""
+"Improved database migrations through consolidation to make "
+"upgrades/installs faster"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:40
+msgid "Improved hardening for web server configuration (SSL, HSTS)"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:41
+msgid ""
+"Removed zeromq as a communications channel between dependent services in "
+"favor of rabbitmq"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:42
+msgid "Removed ``/api/v1/jobs/n/job_plays`` and ``/api/v1/jobs/n/job_tasks``"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:43
+msgid "Removed proot in favor of bubblewrap for process isolation"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:44
+msgid ""
+"Removed the ability to make POST requests on the ``/api/v1/jobs/`` "
+"endpoint"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:45
+msgid "Removed has_schedules from various endpoints, as it was never populated"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:46
+msgid "Removed support for Red Hat Enterprise Linux 6/CentOS 6 and Ubuntu 12.04"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:47
+msgid ""
+"Updated surveys so that a blank value for a survey question default value"
+" now passes an empty string as a value"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:48
+msgid ""
+"Updated surveys so that previously existing surveys with blank default "
+"question values  now pass empty strings as an extra variable"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:49
+msgid "Updated Websockets, moving them from socket.io to django channels"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:50
+msgid ""
+"Updated Job results so that they are now driven by job events and thus "
+"provides clickable context"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:51
+msgid "Updated Tower so that it now uses the system time zone by default"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:52
+msgid ""
+"Updated Tower requirements for Ansible--Tower now requires Ansible 2.1 or"
+" later"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:53
+msgid "Updated Ansible inventory plugins to the latest versions"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:54
+msgid "Updated Web server to NGINX from Apache"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:55
+msgid ""
+"Updated survey passwords so that they are now encrypted when stored in "
+"the database"
+msgstr ""
+
+#: ../../../common/source/relnotes_current.rst:56
+msgid "Updated ``request_tower_configuration.sh``"
+msgstr ""
+

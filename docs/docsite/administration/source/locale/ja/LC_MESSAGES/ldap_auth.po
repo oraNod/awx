@@ -1,0 +1,366 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ldap_auth.rst:4
+msgid "Setting up LDAP Authentication"
+msgstr "LDAP 認証の設定"
+
+#: ../../source/ldap_auth.rst:13
+msgid "If the LDAP server you want to connect to has a certificate that is self-signed or signed by a corporate internal certificate authority (CA), the CA certificate must be added to the system's trusted CAs. Otherwise, connection to the LDAP server will result in an error that the certificate issuer is not recognized."
+msgstr "接続する LDAP サーバーに、自己署名または企業内の証明局 (CA) で署名された証明書がある場合には、CA 証明書をシステムの信頼される CA に追加する必要があります。追加しない場合には、LDAP サーバーに接続すると、証明書の発行者が認識されていないというエラーが発生します。"
+
+#: ../../source/ldap_auth.rst:15
+msgid "Administrators use LDAP as a source for account authentication information for the controller users. User authentication is provided, but not the synchronization of user permissions and credentials. Organization membership (as well as the organization admin) and team memberships can be synchronized."
+msgstr "管理者は、コントローラーユーザーのアカウント認証情報のソースとして LDAP を使用します。ユーザー認証は提供されますが、ユーザーのパーミッションや認証情報は同期されません。組織のメンバーシップ (および組織の管理者) やチームのメンバーシップは同期できます。"
+
+#: ../../source/ldap_auth.rst:17
+msgid "When so configured, a user who logs in with an LDAP username and password automatically gets a controller account created for them and they can be automatically placed into organizations as either regular users or organization administrators."
+msgstr "上記のように設定された場合は、LDAP のユーザー名およびパスワードでログインすると自動的にコントローラーのアカウントが作成され、各ユーザーは通常のユーザーまたは組織の管理者として組織に所属します。"
+
+#: ../../source/ldap_auth.rst:19
+msgid "Users created via an LDAP login cannot change their username, first name, last name, or set a local password for themselves. This is also tunable to restrict editing of other field names."
+msgstr "LDAP ログインで作成されたユーザーは、ユーザー名、姓名を変更できず、ローカルのパスワードも設定できません。これは、さらにカスタマイズして他のフィールド名の編集を制限することができます。"
+
+#: ../../source/ldap_auth.rst:21
+msgid "To configure LDAP integration for the controller:"
+msgstr "コントローラーの LDAP 統合を設定するには、以下を行います。"
+
+#: ../../source/ldap_auth.rst:23
+msgid "First, create a user in LDAP that has access to read the entire LDAP structure."
+msgstr "まず、LDAP 構造全体の読み取り権限があるユーザーを LDAP に作成します。"
+
+#: ../../source/ldap_auth.rst:25
+msgid "Test if you can make successful queries to the LDAP server, use the ``ldapsearch`` command, which is a command line tool that can be installed on the controller system's command line as well as on other Linux and OSX systems. Use the following command to query the ldap server, where *josie* and *Josie4Cloud* are replaced by attributes that work for your setup:"
+msgstr "LDAP サーバーにクエリーを正常に実行できるかどうかをテストするには、``ldapsearch`` コマンドを実行します。このコマンドツールは、コントローラーシステムのコマンドライン、他の Linux、OSX システムにインストールすることができます。以下のコマンドを使用して、ldap サーバーにクエリーを実行してください。*josie* および *Josie4Cloud* は、お使いの設定で機能する属性に置き換えてください。"
+
+#: ../../source/ldap_auth.rst:31
+msgid "Here ``CN=josie,CN=users,DC=website,DC=com`` is the Distinguished Name of the connecting user."
+msgstr "ここでは、``CN=josie,CN=users,DC=website,DC=com`` は接続ユーザーの識別名です。"
+
+#: ../../source/ldap_auth.rst:35
+msgid "The ``ldapsearch`` utility is not automatically pre-installed with |at|, however, you can install it from the ``openldap-clients`` package."
+msgstr "``ldapsearch`` ユーティリティーは、|at| に自動的にインストールされませんが、``openldap-clients`` パッケージからインストールできます。"
+
+#: ../../source/ldap_auth.rst:37
+msgid "In the |at| User Interface, click **Settings** from the left navigation and click to select **LDAP settings** from the list of Authentication options."
+msgstr "|at| ユーザーインターフェースの左側のナビゲーションから **設定** をクリックし、認証オプションの一覧から **LDAP 設定** を選択します。"
+
+#: ../../source/ldap_auth.rst:41
+msgid "You can configure multiple LDAP servers by specifying the server to configure (otherwise, leave the server at **Default**):"
+msgstr "設定するサーバーを指定して複数の LDAP サーバーを設定できます (指定しない場合は、サーバーは **デフォルト** のままとなります)。"
+
+#: ../../source/ldap_auth.rst:47
+msgid "The equivalent API endpoints will show ``AUTH_LDAP_*`` repeated: ``AUTH_LDAP_1_*``, ``AUTH_LDAP_2_*``, ..., ``AUTH_LDAP_5_*`` to denote server designations."
+msgstr "同等の API エンドポイントにより、``AUTH_LDAP_*`` が表示され、``AUTH_LDAP_1_*``、``AUTH_LDAP_2_*``、... ``AUTH_LDAP_5_*`` と繰り返し表示し、サーバーの割り当てを示します。"
+
+#: ../../source/ldap_auth.rst:50
+msgid "Click **Edit** and enter the LDAP server address to connect to in the **LDAP Server URI** field using the same format as the one shown in the text field. Below is an example:"
+msgstr "**編集** をクリックし、テキストフィールドに表示されている内容と同じフォーマットを使用して、**LDAP サーバー URI** フィールドに、接続先の LDAP サーバーアドレスを入力します。以下に例を示します。"
+
+#: ../../source/ldap_auth.rst:54
+msgid "Enter the Distinguished Name in the **LDAP Bind DN** text field to specify the user that the controller uses to connect (Bind) to the LDAP server. Below uses the example, ``CN=josie,CN=users,DC=website,DC=com``:"
+msgstr "**LDAP バインド DN** テキストフィールドに識別名を入力して、コントローラーが LDAP サーバーへの接続 (バインド) に使用するユーザーを指定します。以下では例として ``CN=josie,CN=users,DC=website,DC=com`` を使用します。"
+
+#: ../../source/ldap_auth.rst:58
+msgid "Enter the password to use for the Binding user in the **LDAP Bind Password** text field. In this example, the password is 'passme':"
+msgstr "**LDAP バインドパスワード** テキストフィールドにバインドに使用するユーザーのパスワードを入力します。以下の例では、パスワードは 'passme' です。"
+
+#: ../../source/ldap_auth.rst:62
+msgid "If that name is stored in key ``sAMAccountName``, the **LDAP User DN Template** populates with ``(sAMAccountName=%(user)s)``. Active Directory stores the username to ``sAMAccountName``. Similarly, for OpenLDAP, the key is ``uid``--hence the line becomes ``(uid=%(user)s)``."
+msgstr "名前が ``sAMAccountName`` キーに格納されている場合に、**LDAP ユーザー DN テンプレート** には ``(sAMAccountName=%(user)s)`` のデータが投入されます。Active Directory はユーザー名を ``sAMAccountName`` に保存します。同様に、OpenLDAP の場合は、キーは ``uid`` なのでこの行は ``(uid=%(user)s)`` となります。"
+
+#: ../../source/ldap_auth.rst:64
+msgid "Click to select a group type from the **LDAP Group Type** drop-down menu list."
+msgstr "**LDAP グループタイプ** のドロップダウンメニュー一覧からグループタイプをクリックして選択します。"
+
+#: ../../source/ldap_auth.rst:66
+msgid "LDAP Group Types include:"
+msgstr "LDAP グループタイプには以下が含まれます。"
+
+#: ../../source/ldap_auth.rst:68
+msgid "``PosixGroupType``"
+msgstr "``PosixGroupType``"
+
+#: ../../source/ldap_auth.rst:69
+msgid "``GroupOfNamesType``"
+msgstr "``GroupOfNamesType``"
+
+#: ../../source/ldap_auth.rst:70
+msgid "``GroupOfUniqueNamesType``"
+msgstr "``GroupOfUniqueNamesType``"
+
+#: ../../source/ldap_auth.rst:71
+msgid "``ActiveDirectoryGroupType``"
+msgstr "``ActiveDirectoryGroupType``"
+
+#: ../../source/ldap_auth.rst:72
+msgid "``OrganizationalRoleGroupType``"
+msgstr "``OrganizationalRoleGroupType``"
+
+#: ../../source/ldap_auth.rst:73
+msgid "``MemberDNGroupType``"
+msgstr "``MemberDNGroupType``"
+
+#: ../../source/ldap_auth.rst:74
+msgid "``NISGroupType``"
+msgstr "``NISGroupType``"
+
+#: ../../source/ldap_auth.rst:75
+msgid "``NestedGroupOfNamesType``"
+msgstr "``NestedGroupOfNamesType``"
+
+#: ../../source/ldap_auth.rst:76
+msgid "``NestedGroupOfUniqueNamesType``"
+msgstr "``NestedGroupOfUniqueNamesType``"
+
+#: ../../source/ldap_auth.rst:77
+msgid "``NestedActiveDirectoryGroupType``"
+msgstr "``NestedActiveDirectoryGroupType``"
+
+#: ../../source/ldap_auth.rst:78
+msgid "``NestedOrganizationalRoleGroupType``"
+msgstr "``NestedOrganizationalRoleGroupType``"
+
+#: ../../source/ldap_auth.rst:79
+msgid "``NestedMemberDNGroupType``"
+msgstr "``NestedMemberDNGroupType``"
+
+#: ../../source/ldap_auth.rst:80
+msgid "``PosixUIDGroupType``"
+msgstr "``PosixUIDGroupType``"
+
+#: ../../source/ldap_auth.rst:82
+msgid "The LDAP Group Types that are supported by the controller leverage the underlying `django-auth-ldap library`_."
+msgstr "コントローラーがサポートする LDAP グループタイプは、下層の `django-auth-ldap library`_ を使用します。"
+
+#: ../../source/ldap_auth.rst:87
+msgid "Each **LDAP Group Type** can potentially take different parameters. The controller exposes ``LDAP_GROUP_TYPE_PARAMS`` to account for this. ``LDAP_GROUP_TYPE_PARAMS`` is a dictionary, which will be converted by the controller to kwargs and passed to the LDAP Group Type class selected. There are two common parameters used by any of the LDAP Group Type; ``name_attr`` and ``member_attr``. Where ``name_attr`` defaults to ``cn`` and ``member_attr`` defaults to ``member``:"
+msgstr "**LDAP Group Type** はそれぞれ、異なるパラメーターを取る可能性があります。コントローラーは ``LDAP_GROUP_TYPE_PARAMS`` を公開して、これに対応します。``LDAP_GROUP_TYPE_PARAMS`` は、ディクショナリーで、コントローラーが kwargs に変換し、選択した LDAP グループタイプクラスに渡します。LDAP グループタイプで一般的に使用するパラメーターは ``name_attr`` と ``member_attr`` の 2 つです。``name_attr`` のデフォルト値は ``cn`` で、``member_attr`` のデフォルト値は ``member`` です。"
+
+#: ../../source/ldap_auth.rst:93
+msgid "To determine what parameters a specific LDAP Group Type expects. refer to the `django_auth_ldap`_ documentation around the classes ``init`` parameters."
+msgstr "特定の LDAP グループタイプが必要とするパラメーターを判断するには、「`django_auth_ldap`_ 」ドキュメントのクラス ``init`` パラメーターの部分を参照してください。"
+
+#: ../../source/ldap_auth.rst:98
+msgid "Enter the group distinguish name to allow users within that group to access the controller in the **LDAP Require Group** field, using the same format as the one shown in the text field. In this example, use: ``CN=controller Users,OU=Users,DC=website,DC=com``"
+msgstr "**LDAP 要求グループ** フィールドで識別名を入力して、対象のグループ内のユーザーがコントローラーにアクセスできるようにします。この際、テキストフィールドに表示されている形式と同じものを使用します。この例では、``CN=controller Users,OU=Users,DC=website,DC=com`` を使用します。"
+
+#: ../../source/ldap_auth.rst:102
+msgid "Enter the group distinguish name to prevent users within that group to access the controller in the **LDAP Deny Group** field, using the same format as the one shown in the text field. In this example, leave the field blank."
+msgstr "**LDAP 拒否グループ** フィールドでグループの識別名を入力して、対象のグループ内のユーザーがコントローラーにアクセスできないようにします。この際、テキストフィールドに表示されている形式と同じものを使用します。この例では、このフィールドには何も入力しません。"
+
+#: ../../source/ldap_auth.rst:104
+msgid "The **LDAP Start TLS** is disabled by default. To enable TLS when the LDAP connection is not using SSL, click the toggle to **ON**."
+msgstr "**LDAP Start TLS** はデフォルトでは無効になっています。LDAP 接続で SSL を使用せずに TLS を有効化するには、クリックして **ON** に切り替えます。"
+
+#: ../../source/ldap_auth.rst:108
+msgid "Enter where to search for users while authenticating in the **LDAP USER SEARCH** field using the same format as the one shown in the text field. In this example, use:"
+msgstr "**LDAP ユーザー検索** フィールドに、テキストフィールドに記載されている内容と同じフォーマットを使用して、認証時にユーザーを検索する場所を入力します。この例では、以下を使用します。"
+
+#: ../../source/ldap_auth.rst:118
+msgid "The first line specifies where to search for users in the LDAP tree. In the above example, the users are searched recursively starting from ``DC=website,DC=com``."
+msgstr "最初の行では LDAP ツリーの中でユーザーを検索する場所を指定します。上記の例では、``DC=website,DC=com`` から開始して再帰的にユーザーの検索が実行されます。"
+
+#: ../../source/ldap_auth.rst:120
+msgid "The second line specifies the scope where the users should be searched:"
+msgstr "2 行目は、ユーザーを検索する範囲を指定します。"
+
+#: ../../source/ldap_auth.rst:122
+msgid "SCOPE_BASE:  This value is used to indicate searching only the entry at the base DN, resulting in only that entry being returned"
+msgstr "SCOPE_BASE: この値は、基本 DN でエントリーのみを検索して、このエントリーだけが返されるように指定する時に使用します。"
+
+#: ../../source/ldap_auth.rst:123
+msgid "SCOPE_ONELEVEL:  This value is used to indicate searching all entries one level under the base DN - but not including the base DN and not including any entries under that one level under the base DN."
+msgstr "SCOPE_ONELEVEL: この値は、基本 DN の 1 つ下のレベルにあるエントリーをすべて検索するように指定する時に使用します。ここでは、基本 DN や、基本 DN 配下のこのレベルよりも下のレベルにあるエントリーは検索には含めません。"
+
+#: ../../source/ldap_auth.rst:124
+msgid "SCOPE_SUBTREE: This value is used to indicate searching of all entries at all levels under and including the specified base DN."
+msgstr "SCOPE_SUBTREE: この値は、指定した基本 DN も含めて、全レベルの全エントリーを検索するように指定する際に使用します。"
+
+#: ../../source/ldap_auth.rst:126
+msgid "The third line specifies the key name where the user name is stored."
+msgstr "3 行目は、ユーザー名を保存するキー名を指定します。"
+
+#: ../../source/ldap_auth.rst:132
+msgid "For multiple search queries, the proper syntax is: ::"
+msgstr "複数の検索クエリーの場合の正しい構文は以下のとおりです。"
+
+#: ../../source/ldap_auth.rst:154
+msgid "In the **LDAP Group Search** text field, specify which groups should be searched and how to search them. In this example, use:"
+msgstr "**LDAP グループ検索** のテキストフィールドで、検索するグループ、検索方法を指定します。この例では、以下を使用します。"
+
+#: ../../source/ldap_auth.rst:164
+msgid "The first line specifies the BASE DN where the groups should be searched."
+msgstr "最初の行は、グループを検索すべき基本 DN を指定します。"
+
+#: ../../source/ldap_auth.rst:165
+msgid "The second lines specifies the scope and is the same as that for the user directive."
+msgstr "2 行目は、ユーザーディレクティブと同じで、範囲を指定します。"
+
+#: ../../source/ldap_auth.rst:166
+msgid "The third line specifies what the ``objectclass`` of a group object is in the LDAP you are using."
+msgstr "3 行目は、使用する LDAP において、グループオブジェクトの ``objectclass`` は何であるかを指定します。"
+
+#: ../../source/ldap_auth.rst:171
+msgid "Enter the user attributes in the **LDAP User Attribute Map** the text field. In this example, use:"
+msgstr "**LDAP ユーザー属性マップ** テキストフィールドに、ユーザー属性を入力します。この例では以下を使用します。"
+
+#: ../../source/ldap_auth.rst:182
+msgid "The above example retrieves users by last name from the key ``sn``. You can use the same LDAP query for the user to figure out what keys they are stored under."
+msgstr "上記の例は、``sn`` のキーから名 (last name) でユーザーを取得しています。同じ LDAP クエリーをそのユーザーに使用して、どのキーに保存されているのかを確認することができます。"
+
+#: ../../source/ldap_auth.rst:186
+msgid "Enter the user profile flags in the **LDAP User Flags by Group** the text field. In this example, use the following syntax to set LDAP users as \"Superusers\" and \"Auditors\":"
+msgstr "**LDAP ユーザーフラグ (グループ別)** テキストフィールドでユーザープロファイルフラグを入力します。この例では、以下の構文を使用して LDAP ユーザーを \"Superusers\" および \"Auditors\" に設定します。"
+
+#: ../../source/ldap_auth.rst:195
+msgid "The above example retrieves users who are flagged as superusers or as auditor in their profile."
+msgstr "上記の例では、プロファイルの superuser または auditor としてフラグがつけられたユーザーを取得します。"
+
+#: ../../source/ldap_auth.rst:199
+#: ../../source/ldap_auth.rst:233
+msgid "For details on completing the mapping fields, see :ref:`ag_ldap_org_team_maps`."
+msgstr "マッピングフィールドの入力に関する情報は、「:ref:`ag_ldap_org_team_maps`」を参照してください。"
+
+#: ../../source/ldap_auth.rst:201
+msgid "Click **Save** when done."
+msgstr "完了したら **保存** をクリックします。"
+
+#: ../../source/ldap_auth.rst:203
+msgid "With these values entered on this form, you can now make a successful authentication with LDAP."
+msgstr "このフォームで入力したこれらの値を使用して、LDAP で正常に認証を行うことができます。"
+
+#: ../../source/ldap_auth.rst:207
+msgid "The controller does not actively sync users, but they are created during their initial login. To improve performance associated with LDAP authentication, see :ref:`ug_ldap_auth_perf_tips` in the |atu|."
+msgstr "コントローラーはユーザーをアクティブに同期しませんが、ユーザーは最初のログイン時に作成されます。LDAP 認証に関連するパフォーマンスを向上させるには、『|atu|』の「:ref:`ug_ldap_auth_perf_tips`」を参照してください。"
+
+#: ../../source/ldap_auth.rst:213
+msgid "Referrals"
+msgstr "参照"
+
+#: ../../source/ldap_auth.rst:219
+msgid "Active Directory uses \"referrals\" in case the queried object is not available in its database. It has been noted that this does not work properly with the django LDAP client and, most of the time, it helps to disable referrals. Disable LDAP referrals by adding the following lines to your ``/etc/tower/conf.d/custom.py`` file:"
+msgstr "Active Directory は、クエリーしたオブジェクトがデータベースで利用できない場合のために、「参照」を使用します。これは、django LDAP クライアントで多くの場合に正しく機能しないので、参照を無効にすると回避できます。``/etc/tower/conf.d/custom.py`` ファイルに以下の行を追加して、LDAP の参照を無効にしてください。"
+
+#: ../../source/ldap_auth.rst:231
+msgid "\"Referrals\" are disabled by default in |at| version 2.4.3 and above.  If you are running an earlier version of the controller, you should consider adding this parameter to your configuration file."
+msgstr "|at| バージョン 2.4.3 以降では、「参照」はデフォルトで無効になっています。以前のバージョンのコントローラーを実行している場合は、設定ファイルにこのパラメーターを追加することを検討してください。"
+
+#: ../../source/ldap_auth.rst:239
+msgid "Enabling Logging for LDAP"
+msgstr "LDAP のロギングの有効化"
+
+#: ../../source/ldap_auth.rst:245
+msgid "To enable logging for LDAP, you must set the level to ``DEBUG`` in the Settings configuration window:"
+msgstr "LDAP のロギングを有効化するには、オプション設定ウィンドウでレベルを ``DEBUG`` に設定する必要があります。"
+
+#: ../../source/ldap_auth.rst:247
+msgid "Click **Settings** from the left navigation pane and click to select **Logging settings** from the System list of options."
+msgstr "左側のナビゲーションペインから **設定** をクリックし、オプションのシステム一覧から **ロギング設定** を選択します。"
+
+#: ../../source/ldap_auth.rst:248
+msgid "Click **Edit**."
+msgstr "**編集** をクリックします。"
+
+#: ../../source/ldap_auth.rst:249
+msgid "Set the **Logging Aggregator Level Threshold** field to **Debug**."
+msgstr "**ログアグリゲーターレベルのしきい値** フィールドを **Debug** に設定します。"
+
+#: ../../source/ldap_auth.rst:253
+msgid "Click **Save** to save your changes."
+msgstr "**保存** をクリックして変更を保存します。"
+
+#: ../../source/ldap_auth.rst:259
+msgid "LDAP Organization and Team Mapping"
+msgstr "LDAP 組織およびチームマッピング"
+
+#: ../../source/ldap_auth.rst:270
+msgid "Next, you will need to control which users are placed into which controller organizations based on LDAP attributes (mapping out between your organization admins/users and LDAP groups)."
+msgstr "次に、LDAP 属性をもとに、どのユーザーがどのコントローラー組織に配置されるかを制御する必要があります (組織の管理者/ユーザーと LDAP グループ間のマッピング)。"
+
+#: ../../source/ldap_auth.rst:272
+msgid "Keys are organization names. Organizations will be created if not present. Values are dictionaries defining the options for each organization's membership. For each organization, it is possible to specify what groups are automatically users of the organization and also what groups can administer the organization."
+msgstr "キーは組織名です。組織が存在しない場合には、作成されます。値は、各組織のメンバーシップのオプションを定義するディクショナリーです。各組織に対して、組織のユーザーとなるグループ、そして組織を管理するグループを自動的に指定することができます。"
+
+#: ../../source/ldap_auth.rst:278
+msgid "**admins**: None, True/False, string or list/tuple of strings."
+msgstr "**admins**: None、True/False、文字列または文字列のリスト/タプル"
+
+#: ../../source/ldap_auth.rst:275
+msgid "If **None**, organization admins will not be updated based on LDAP values."
+msgstr "**None** の場合は、組織の管理者は LDAP の値をもとに更新されません。"
+
+#: ../../source/ldap_auth.rst:276
+msgid "If **True**, all users in LDAP will automatically be added as admins of the organization."
+msgstr "**True** の場合は、LDAP の全ユーザーが自動的に組織の管理者として追加されます。"
+
+#: ../../source/ldap_auth.rst:277
+msgid "If **False**, no LDAP users will be automatically added as admins of the organiation."
+msgstr "**False** の場合は、組織の管理者として追加される LDAP ユーザーはありません。"
+
+#: ../../source/ldap_auth.rst:278
+msgid "If a string or list of strings, specifies the group DN(s) that will be added of the organization if they match any of the specified groups."
+msgstr "文字列または文字列のリストの場合は、指定したグループに一致する場合に、組織に追加されるグループ DN を指定します。"
+
+#: ../../source/ldap_auth.rst:281
+msgid "**remove_admins**: True/False. Defaults to **False**."
+msgstr "**remove_admins**: True/False。デフォルト値は **False** です。"
+
+#: ../../source/ldap_auth.rst:281
+msgid "When **True**, a user who is not an member of the given groups will be removed from the organization's administrative list."
+msgstr "**True** の場合は、指定のグループのメンバーでないユーザーは、組織の管理者リストから削除されます。"
+
+#: ../../source/ldap_auth.rst:283
+msgid "**users**: None, True/False, string or list/tuple of strings. Same rules apply as for **admins**."
+msgstr "**users**: None、True/False、文字列または文字列のリスト/タプル。**admins** と同じルールが適用されます。"
+
+#: ../../source/ldap_auth.rst:285
+msgid "**remove_users**: True/False. Defaults to **False**. Same rules apply as **remove_admins**."
+msgstr "**remove_users**: True/False。デフォルト値は **False** で、**remove_admins** と同じルールが適用されます。"
+
+#: ../../source/ldap_auth.rst:310
+msgid "Mapping between team members (users) and LDAP groups. Keys are team names (will be created if not present). Values are dictionaries of options for each team's membership, where each can contain the following parameters:"
+msgstr "チームメンバー (ユーザー) と LDAP グループ間のマッピングです。キーはチーム名です (存在しない場合に作成されます)。値は、各チームのメンバーシップに関するオプションのディクショナリーとなります。各値には以下のパラメーターを含めることができます。"
+
+#: ../../source/ldap_auth.rst:315
+msgid "**organization**: string. The name of the organization to which the team"
+msgstr "**organization**: 文字列。チームが所属する組織名。"
+
+#: ../../source/ldap_auth.rst:313
+msgid "belongs.  The team will be created if the combination of organization and team name does not exist.  The organization will first be created if it does not exist."
+msgstr "チームは、組織とチームの組み合わせが存在しない場合には作成されます。組織が存在しない場合には、先に作成されます。"
+
+#: ../../source/ldap_auth.rst:317
+msgid "**users**: None, True/False, string or list/tuple of strings."
+msgstr "**users**: None、True/False、文字列または文字列のリスト/タプル"
+
+#: ../../source/ldap_auth.rst:319
+msgid "If **None**, team members will not be updated."
+msgstr "**None** の場合には、チームメンバーは更新されません。"
+
+#: ../../source/ldap_auth.rst:320
+msgid "If **True/False**, all LDAP users will be added/removed as team members."
+msgstr "**True/False** の場合には、全 LDAP ユーザーがチームメンバーとして追加/削除されます。"
+
+#: ../../source/ldap_auth.rst:321
+msgid "If a string or list of strings, specifies the group DN(s). User will be added as a team member if the user is a member of ANY of these groups."
+msgstr "文字列または文字列リストの場合は、グループ DN を指定します。ユーザーがこれらのグループのメンバーの場合には、チームメンバーとして追加されます。"
+
+#: ../../source/ldap_auth.rst:323
+msgid "**remove**: True/False. Defaults to **False**. When **True**, a user who is not a member of the given groups will be removed from the team."
+msgstr "**remove**: True/False。デフォルト値は **False** です。**True** の場合は、対象のグループのメンバーでないユーザーは、そのチームから削除されます。"
+

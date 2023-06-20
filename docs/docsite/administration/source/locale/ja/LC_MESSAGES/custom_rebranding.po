@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/custom_rebranding.rst:5
+msgid "Using Custom Logos in automation controller"
+msgstr "オートメーションコントローラーでのカスタムロゴの使用"
+
+#: ../../../common/source/logos_branding.rst:2
+msgid "|at| supports the use of a custom logo. You can add a custom logo by uploading an image; and supply a custom login message from the **User Interface settings** of the Settings menu."
+msgstr "|at| は、カスタムロゴの使用をサポートします。設定メニューの **ユーザーインターフェースの設定** から、イメージをアップロードしてカスタムロゴを追加し、カスタムログインメッセージを指定できます。"
+
+#: ../../../common/source/logos_branding.rst:9
+msgid "For the custom logo to look its best, use a ``.png`` file with a transparent background. GIF, PNG, and JPEG formats are supported."
+msgstr "カスタムロゴを最適化するには、背景が透明の ``.png`` ファイルを使用します。GIF、PNG および JPEG 形式がサポートされます。"
+
+#: ../../../common/source/logos_branding.rst:12
+msgid "If needed, you can add specific information (such as a legal notice or a disclaimer) to a text box in the login modal by adding it to the **Custom Login Info** text field."
+msgstr "必要な場合は、**カスタムログイン情報** テキストフィールドに追加して、ログインモーダルのテキストボックスに特定の情報 (法律上の通知または免責事項など) を追加できます。"
+
+#: ../../../common/source/logos_branding.rst:15
+msgid "For example, if you uploaded a specific logo, and added the following text:"
+msgstr "たとえば、特定のロゴをアップロードして、以下のテキストを追加した場合には、"
+
+#: ../../../common/source/logos_branding.rst:20
+msgid "The Tower login dialog would look like this:"
+msgstr "Tower ログインダイアログは以下のように表示されます。"
+
+#: ../../../common/source/logos_branding.rst:26
+msgid "Selecting ``Revert`` will result in the appearance of the standard |at| logo."
+msgstr "``Revert`` を選択すると、標準の |at| ロゴの外観に戻ります。"
+

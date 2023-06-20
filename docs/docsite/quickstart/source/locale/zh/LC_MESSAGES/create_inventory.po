@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_inventory.rst:2
+msgid "Create a new Inventory"
+msgstr "创建一个新清单"
+
+#: ../../source/create_inventory.rst:8
+msgid "An inventory is a collection of hosts managed by the controller. Organizations are assigned to inventories, while permissions to launch playbooks against inventories are controlled at the user and/or team level. For more information, refer to :ref:`Inventories <userguide:ug_inventories>`, :ref:`Users - Permissions <userguide:ug_users_permissions>`, and :ref:`Teams - Permissions <userguide:ug_teams_permissions>` in the |atu|."
+msgstr "清单是控制器管理的主机的集合。机构会被分配到清单，而根据清单启动 playbook 的权限则在用户和/或团队级别控制。如需更多信息，请参阅 |atu| 中的 :ref:`Inventories <userguide:ug_inventories>`、:ref:`Users - Permissions <userguide:ug_users_permissions>` 和 :ref:`Teams - Permissions <userguide:ug_teams_permissions>`"
+
+#: ../../source/create_inventory.rst:10
+msgid "To view existing inventories, click **Inventories** from the left navigation bar."
+msgstr "要查看现有清单，点左侧导航栏中的 **Inventories**。"
+
+#: ../../source/create_inventory.rst:14
+msgid "|at| provides a demo inventory for you to use as you learn how the controller works. It can be used as is or edited later as needed. You may create another inventory if necessary. Refer to :ref:`ug_inventories_add` in the |atu| for detail."
+msgstr "|at| 提供一个演示清单，供您用于学习控制器的工作原理。它可以原样使用或根据需要进行编辑。如需详情，请参阅 |atu| 中的 :ref:`ug_inventories_add`。"
+
+#: ../../source/create_inventory.rst:16
+msgid "For the purpose of this Quick Start Guide, leave the default inventory as is."
+msgstr "在本快速入门指南中，请不要修改这个默认清单。"
+
+#: ../../source/create_inventory.rst:18
+msgid "Click **Demo Inventory** to view its details."
+msgstr "点 **Demo Inventory** 查看它的详细信息。"
+
+#: ../../source/create_inventory.rst:20
+msgid "|Inventories - Demo inventory details|"
+msgstr "|Inventories - Demo inventory details|"
+
+#: ../../source/create_inventory.rst:24
+msgid "As with organizations, inventories also have associated users and teams that you can view through the **Access** tab."
+msgstr "与机构一样，清单还与用户和团队相关联。您可通过 **Access** 标签页查看它们。"
+
+#: ../../source/create_inventory.rst:28
+msgid "A default admin user with the role of System Administrator has been automatically populated for this demo inventory."
+msgstr "对于这个演示清单，会自动填充具有系统管理员（System Administrator）角色的默认 admin 用户。"
+
+#: ../../source/create_inventory.rst:32
+msgid "Groups and Hosts"
+msgstr "组和主机"
+
+#: ../../source/create_inventory.rst:34
+msgid "Note that inventories are divided into groups and hosts. A group might represent a particular environment (e.g. \"Datacenter 1\" or \"Stage Testing\"), a server type (e.g. \"Application Servers\" or \"DB Servers\"), or any other representation of your environment. The groups and hosts that belong to the Demo inventory are shown in the **Groups** and **Hosts** tabs, respectively."
+msgstr "请注意，清单划分为组和主机。组可能代表特定的环境（如“Datacenter 1”或“Stage Testing”），服务器类型（如“Application Servers”或“DB Servers”），或者您的环境的任何其他表示。属于演示清单的组和主机分别显示在 **Groups** 和 **Hosts** 选项卡中。"
+
+#: ../../source/create_inventory.rst:36
+msgid "To add new groups, click the **Add** button in the Groups screen."
+msgstr "要添加新组，在 Groups 屏幕中点 **Add** 按钮。"
+
+#: ../../source/create_inventory.rst:38
+msgid "Similarly, in the **Hosts** tab, click the **Add** button to add hosts to groups."
+msgstr "同样，在 **Hosts** 选项卡中，点 **Add** 按钮将主机添加到组中。"
+
+#: ../../source/create_inventory.rst:40
+msgid "For the purposes of this Quick Start and to test that the controller is setup properly, a local host has been added for your use."
+msgstr "为了快速入门并测试控制器的设置是否正确，我们添加了本地主机供您使用。"
+
+#: ../../source/create_inventory.rst:44
+msgid "Suppose that the organization you created earlier has a group of web server hosts supporting a particular application. To add these hosts to the inventory, create a group and add the web server hosts."
+msgstr "假设您之前创建的机构具有支持特定应用程序的 web 服务器主机组。要将这些主机添加到清单中，请创建一个组并添加 web 服务器主机。"
+
+#: ../../source/create_inventory.rst:46
+msgid "Click **Cancel** (if no changes were made) or use the breadcrumb navigational links at the top of the |at| browser to return to the Inventories list view. Clicking **Save** does not exit the Details dialog."
+msgstr "点 **Cancel**（如果没有进行任何修改），或者使用 |at| 浏览器顶部的 breadcrumb 导航链接返回清单列表视图。点击 **Save** 不会退出 Details 对话框。"
+

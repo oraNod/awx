@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/logfiles.rst:3
+msgid "Controller Logfiles"
+msgstr "Controller 日志文件"
+
+#: ../../source/logfiles.rst:8
+msgid "The controller logfiles have been consolidated and can be easily accessed from two centralized locations:"
+msgstr "控制器的不同日志文件已进行了合并，可从两个中央位置轻松访问："
+
+#: ../../source/logfiles.rst:10
+msgid "``/var/log/tower/``"
+msgstr "``/var/log/tower/``"
+
+#: ../../source/logfiles.rst:11
+msgid "``/var/log/supervisor/``"
+msgstr "``/var/log/supervisor/``"
+
+#: ../../source/logfiles.rst:14
+msgid "In the ``/var/log/tower/`` directory, you can view logfiles related to:"
+msgstr "在 ``/var/log/tower/`` 目录中，您可以查看与以下内容相关的日志文件："
+
+#: ../../source/logfiles.rst:16
+msgid "**callback_receiver.log:** captures callback receiver logs that handles callback events when running ansible jobs."
+msgstr "**callback_receiver.log:** 捕获回调接收器日志，该日志在运行 ansible 作业时处理回调事件。"
+
+#: ../../source/logfiles.rst:17
+msgid "**dispatcher.log:** captures log messages for the controller dispatcher worker service."
+msgstr "**dispatcher.log:** 捕获控制器分配程序 worker 服务的日志消息。"
+
+#: ../../source/logfiles.rst:18
+msgid "**job_lifecycle.log:** captures details of the job run, whether it is blocked, and what condition is blocking it."
+msgstr "**job_lifecycle.log:** 捕获作业运行的详情、它是否被阻断，以及阻止它的条件。"
+
+#: ../../source/logfiles.rst:19
+msgid "**management_playbooks.log:** captures the logs of management playbook runs, the isolated job runs like copying the metadata, etc."
+msgstr "**management_playbooks.log:** 捕获管理 playbook 运行的日志，隔离作业运行如复制元数据等。"
+
+#: ../../source/logfiles.rst:20
+msgid "**rsyslog.err:** captures rsyslog errors authenticating with external logging services when sending logs to them."
+msgstr "**rsyslog.err:** 在向它们发送日志时捕获 rsyslog 错误信息验证。"
+
+#: ../../source/logfiles.rst:21
+msgid "**task_system.log:** - captures the logs of tasks that the controller is running in the background, such as adding cluster instances and logs related to information gathering/processing for analytics, etc."
+msgstr "**task_system.log:** - 捕获控制器在后台运行的任务日志，如添加集群实例和与收集/处理分析信息相关的日志等。"
+
+#: ../../source/logfiles.rst:22
+msgid "**tower.log:** captures the log messages such as runtime errors that occur when the job is executed."
+msgstr "**tower.log:** 捕获日志消息，如执行作业时发生运行时错误。"
+
+#: ../../source/logfiles.rst:23
+msgid "**tower_rbac_migrations.log:** captures the logs for rbac database migration or upgrade."
+msgstr "**Tower_rbac_migrations.log:** 捕获 rbac 数据库迁移或升级的日志。"
+
+#: ../../source/logfiles.rst:24
+msgid "**tower_system_tracking_migrations.log:** captures the logs the controller system tracking migration or upgrade."
+msgstr "**tower_system_tracking_migrations.log:** 捕获日志控制器系统跟踪迁移或升级的日志。"
+
+#: ../../source/logfiles.rst:25
+msgid "**wsbroadcast.log:** captures the logs of websocket connections in the controller nodes."
+msgstr "**wsbroadcast.log:** 捕获控制器节点上的 websocket 连接的日志。"
+
+#: ../../source/logfiles.rst:26
+msgid "**isolated_manager.log:** captures logs associated with isolated nodes."
+msgstr "**Isolated_manager.log:** 捕获与隔离节点关联的日志。"
+
+#: ../../source/logfiles.rst:29
+msgid "In the ``/var/log/supervisor/`` directory, you can view logfiles related to:"
+msgstr "在 ``/var/log/supervisor/`` 目录中，您可以查看与以下内容相关的日志文件："
+
+#: ../../source/logfiles.rst:31
+msgid "**awx-callback-receiver.log:** captures the log of callback receiver that handles callback events when running ansible jobs, managed by supervisord."
+msgstr "**awx-callback-receiver.log:** 捕获在运行 ansible 作业时，由 supervisord 管理的回调接收器日志。"
+
+#: ../../source/logfiles.rst:32
+msgid "**awx-daphne.log:** captures the logs of Websocket communication of WebUI."
+msgstr "**awx-daphne.log:** 捕获 WebUI 的 Websocket 通讯的日志。"
+
+#: ../../source/logfiles.rst:33
+msgid "**awx-dispatcher.log:** captures the logs that occur when dispatching a task to a controller instance, such as when running a job."
+msgstr "**awx-dispatcher.log:** 捕获在将任务分配给控制器实例时发生的日志，比如在运行作业时。"
+
+#: ../../source/logfiles.rst:34
+msgid "**awx-rsyslog.log:** captures the logs for rsyslog service."
+msgstr "**awx-rsyslog.log:** 捕获 rsyslog 服务的日志。"
+
+#: ../../source/logfiles.rst:35
+msgid "**awx-uwsgi.log:** captures the logs related to uWSGI, which is an application server."
+msgstr "**awx-uwsgi.log:** 捕获与 uWSGI 相关的日志，它是一个应用服务器。"
+
+#: ../../source/logfiles.rst:36
+msgid "**awx-wsbroadcast.log:** captures the logs of websocket service that is used by the controller."
+msgstr "**awx-wsbroadcast.log:** 捕获控制器使用的 websocket 服务的日志。"
+
+#: ../../source/logfiles.rst:37
+msgid "**failure-event-handler.stderr.log:** captures the standard errors for /usr/bin/failure-event-handler supervisord's subprocess."
+msgstr "**failure-event-handler.stderr.log:** 捕获 /usr/bin/failure-event-handler supervisord 的子进程的标准错误。"
+
+#: ../../source/logfiles.rst:38
+msgid "**supervisord.log:** captures the logs related to supervisord itself."
+msgstr "**SupervisorD.log:** 捕获与 Supervisord 本身相关的日志。"
+
+#: ../../source/logfiles.rst:40
+msgid "The ``/var/log/supervisor/`` directory includes ``stdout`` files for all services as well."
+msgstr "``/var/log/supervisor/`` 目录还包括所有服务的 ``stdout`` 文件。"
+
+#: ../../source/logfiles.rst:43
+msgid "You can expect the following log paths to be generated by services used by Tower (and the |aap|):"
+msgstr "您可以期望 Tower（和 |aap|）使用的服务生成以下日志路径："
+
+#: ../../source/logfiles.rst:45
+msgid "**/var/log/nginx/**"
+msgstr "**/var/log/nginx/**"
+
+#: ../../source/logfiles.rst:46
+msgid "**/var/opt/rh/rh-postgresql10/**"
+msgstr "**/var/opt/rh/rh-postgresql10/**"
+
+#: ../../source/logfiles.rst:47
+msgid "**/var/opt/rh/rh-redis5/log/redis/**"
+msgstr "**/var/opt/rh/rh-redis5/log/redis/**"
+

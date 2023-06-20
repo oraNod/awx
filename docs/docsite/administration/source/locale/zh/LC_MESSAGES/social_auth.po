@@ -1,0 +1,467 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/social_auth.rst:4
+msgid "Setting up Social Authentication"
+msgstr "设置社交身份认证"
+
+#: ../../source/social_auth.rst:10
+msgid "Authentication methods help simplify logins for end users--offering single sign-ons using existing login information to sign into a third party website rather than creating a new login account specifically for that website."
+msgstr "身份验证方法可简化最终用户的登录过程，使用现有登录信息提供单点登录以登录到第三方网站，而不是为该网站专门创建新登录帐户。"
+
+#: ../../source/social_auth.rst:12
+msgid "Account authentication can be configured in the |at| User Interface and saved to the PostgreSQL database. For instructions, refer to the :ref:`ag_configure_tower` section."
+msgstr "帐户身份验证可以在 |at| 用户界面中配置并保存到 PostgreSQL 数据库。如需了解具体步骤，请参阅 :ref:`ag_configure_tower` 部分。"
+
+#: ../../source/social_auth.rst:14
+msgid "Account authentication in |at| can be configured to centrally use OAuth2, while enterprise-level account authentication can be configured for SAML, RADIUS, or even LDAP as a source for authentication information. See :ref:`ag_ent_auth`."
+msgstr "|at| 中的帐户身份验证可以被配置为集中使用 OAuth2，企业级帐户身份验证可以配置 SAML、RADIUS 或 LDAP 作为身份验证信息来源。请参阅 :ref:`ag_ent_auth`。"
+
+#: ../../source/social_auth.rst:16
+msgid "For websites, such as Microsoft Azure, Google or GitHub, that provide account information, account information is often implemented using the OAuth standard. OAuth is a secure authorization protocol which is commonly used in conjunction with account authentication to grant 3rd party applications a \"session token\" allowing them to make API calls to providers on the user’s behalf."
+msgstr "对于提供帐户信息的网站，如 Microsoft Azure、Google 或 GitHub，则通常使用 OAuth 标准来实施帐户信息。OAuth 是一个安全授权协议，通常与帐户身份验证一同使用，以授予第 3 个方应用“会话令牌”，允许它们代表用户向提供程序发出 API 调用。"
+
+#: ../../source/social_auth.rst:18
+msgid "SAML (Security Assertion Markup Language) is an XML-based, open-standard data format for exchanging account authentication and authorization data between  an identity provider and a service provider."
+msgstr "SAML（Security Assertion Markup Language）是一个基于 XML 的、开放式的数据格式，用于在身份提供程序和服务提供程序之间交换帐户身份验证和授权数据。"
+
+#: ../../source/social_auth.rst:20
+msgid "The RADIUS distributed client/server system allows you to secure networks against unauthorized access and can be implemented in network environments requiring high levels of security while maintaining network access for remote users."
+msgstr "使用 RADIUS 分布式客户端/服务器系统，您可以保护网络不受未授权访问的影响，并可在为远程用户维护网络访问时需要高安全性的网络环境中实施。"
+
+#: ../../source/social_auth.rst:25
+msgid "GitHub settings"
+msgstr "GitHub 设置"
+
+#: ../../source/social_auth.rst:30
+msgid "To set up social authentication for GitHub, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register the new application with GitHub at https://github.com/settings/developers. In order to register the application, you must supply it with your homepage URL, which is the **Callback URL** shown in the Details tab for the GitHub default settings page. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "要设置 GitHub 的社交身份验证，您需要获取 web 应用的 OAuth2 密钥和 secret。 要做到这一点，必须首先将新应用程序注册到 GitHub: https://github.com/settings/developers.。要注册应用程序，您必须为其提供一个主页 URL，这是 GitHub 默认设置页的 Details 选项卡中的 **Callback URL**。 OAuth2 key（Client ID）和 secret（Client Secret）将用于提供 |at| 用户界面中所需的字段。"
+
+#: ../../source/social_auth.rst:32
+#: ../../source/social_auth.rst:69
+#: ../../source/social_auth.rst:107
+#: ../../source/social_auth.rst:140
+#: ../../source/social_auth.rst:177
+#: ../../source/social_auth.rst:218
+#: ../../source/social_auth.rst:257
+msgid "Click **Settings** from the left navigation bar."
+msgstr "点左侧导航栏中的 **Settings**。"
+
+#: ../../source/social_auth.rst:34
+#: ../../source/social_auth.rst:71
+#: ../../source/social_auth.rst:109
+#: ../../source/social_auth.rst:142
+#: ../../source/social_auth.rst:179
+#: ../../source/social_auth.rst:220
+msgid "On the left side of the Settings window, click **GitHub settings** from the list of Authentication options."
+msgstr "在 Settings 窗口左侧，点 Authentication 选项列表中的 **GitHub settings**。"
+
+#: ../../source/social_auth.rst:36
+msgid "Click the **GitHub Default** tab if not already selected."
+msgstr "如果还没有选择，点 **GitHub Default** 标签页。"
+
+#: ../../source/social_auth.rst:38
+msgid "The **GitHub OAuth2 Callback URL** field is already pre-populated and non-editable. Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub OAuth2 Callback URL** 字段已预先填充且不可编辑。在应用程序被注册后，GitHub 会显示客户端 ID 和客户端 Secret。"
+
+#: ../../source/social_auth.rst:40
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub OAuth2 Key** field."
+msgstr "点 **Edit**，将 GitHub 的客户端 ID 复制到 **GitHub OAuth2 Key** 字段中。"
+
+#: ../../source/social_auth.rst:42
+msgid "Copy and paste GitHub's Client Secret into the **GitHub OAuth2 Secret** field."
+msgstr "将 GitHub 的客户端 Secret 复制到 **GitHub OAuth2 Secret** 字段中。"
+
+#: ../../source/social_auth.rst:44
+#: ../../source/social_auth.rst:85
+#: ../../source/social_auth.rst:121
+#: ../../source/social_auth.rst:158
+#: ../../source/social_auth.rst:197
+#: ../../source/social_auth.rst:238
+#: ../../source/social_auth.rst:273
+msgid "For details on completing the mapping fields, see :ref:`ag_org_team_maps`."
+msgstr "如需完成映射字段的详情，请参阅 :ref:`ag_org_team_maps`。"
+
+#: ../../source/social_auth.rst:46
+#: ../../source/social_auth.rst:87
+#: ../../source/social_auth.rst:123
+#: ../../source/social_auth.rst:160
+#: ../../source/social_auth.rst:199
+#: ../../source/social_auth.rst:240
+#: ../../source/social_auth.rst:275
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/social_auth.rst:48
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub logo to allow logging in with those credentials."
+msgstr "要验证是否已正确配置了身份验证，请注销 |at|，登录屏幕现在将会显示 GitHub 徽标，以允许使用这些凭证登录。"
+
+#: ../../source/social_auth.rst:56
+msgid "GitHub Organization settings"
+msgstr "GitHub 机构设置"
+
+#: ../../source/social_auth.rst:61
+msgid "When defining account authentication with either an organization or a team within an organization, you should use the specific organization and team settings. Account authentication can be limited by an organization as well as by a team within an organization."
+msgstr "当使用机构或者机构中团队定义帐户身份验证时，您应该使用特定的机构和团队设置。帐户身份验证可以受机构以及机构中团队的限制。"
+
+#: ../../source/social_auth.rst:63
+msgid "You can also choose to allow all by specifying non-organization or non-team based settings (as shown above)."
+msgstr "您还可以通过指定基于非机构或非团队的设置（如上所示）来选择允许所有设置。"
+
+#: ../../source/social_auth.rst:65
+msgid "You can limit users who can login to the controller by limiting only those in an organization or on a team within an organization."
+msgstr "您可以限制只有某个机构或者机构中的某个团队的用户才可以登陆到控制器。"
+
+#: ../../source/social_auth.rst:67
+msgid "To set up social authentication for a GitHub Organization, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register your organization-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "要为 GitHub 机构设置社交身份验证，您需要获取 web 应用的 OAuth2 密钥和 secret。为此，您必须首先在 ``https://github.com/organizations/<yourorg>/settings/applications`` 中注册您的机构拥有的应用。为了注册应用，您必须为其提供授权回调 URL，这是 Details 页中显示的 **Callback URL**。每个密钥和 secret 都必须属于一个唯一的应用，且不能在不同的后端间共享或重用。OAuth2（客户端 ID）和 secret（客户端 Secret）将用于提供 |at| 用户界面中所需的字段。"
+
+#: ../../source/social_auth.rst:73
+msgid "Click the **GitHub Organization** tab."
+msgstr "点 **GitHub Organization** 标签页。"
+
+#: ../../source/social_auth.rst:75
+msgid "The **GitHub Organization OAuth2 Callback URL** field is already pre-populated and non-editable."
+msgstr "**GitHub Organization OAuth2 Callback URL** 字段已预先填充且不可编辑。"
+
+#: ../../source/social_auth.rst:77
+msgid "Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "注册应用程序后，GitHub 会显示客户端 ID 和客户端 Secret。"
+
+#: ../../source/social_auth.rst:79
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub Organization OAuth2 Key** field."
+msgstr "点 **Edit**，将 GitHub 的客户端 ID 复制到 **GitHub Organization OAuth2 Key** 字段中。"
+
+#: ../../source/social_auth.rst:81
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Organization OAuth2 Secret** field."
+msgstr "将 GitHub 的客户端 Secret 复制并粘贴到 **GitHub Organization OAuth2 Secret** 字段中。"
+
+#: ../../source/social_auth.rst:83
+msgid "Enter the name of your GitHub organization, as used in your organization's URL (e.g., https://github.com/<yourorg>/) in the **GitHub Organization Name** field."
+msgstr "输入您的 GitHub 机构名称，如 **GitHub Organization Name** 项中使用的您的组织 URL (如 https://github.com/<yourorg>/）。"
+
+#: ../../source/social_auth.rst:89
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Organization logo to allow logging in with those credentials."
+msgstr "要验证是否已正确配置了身份验证，请先退出 |at|。登录屏幕现在将会显示 GitHub 机构徽标来允许使用这些凭证登陆。"
+
+#: ../../source/social_auth.rst:97
+msgid "GitHub Team settings"
+msgstr "GitHub 团队设置"
+
+#: ../../source/social_auth.rst:103
+msgid "To set up social authentication for a GitHub Team, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register your team-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "要为 GitHub 团队设置社交身份验证，您需要获取 web 应用的 OAuth2 密钥和 secret。为此，您必须首先在 ``https://github.com/organizations/<yourorg>/settings/applications`` 中注册您的团队拥有的应用。为了注册应用，您必须为其提供授权回调 URL，这是 Details 页中显示的 **Callback URL**。每个密钥和 secret 都必须属于一个唯一的应用，且不能在不同的后端间共享或重用。OAuth2（客户端 ID）和 secret（客户端 Secret）将用于提供 |at| 用户界面中所需的字段。"
+
+#: ../../source/social_auth.rst:105
+#: ../../source/social_auth.rst:216
+msgid "Find the numeric team ID using the GitHub API: http://fabian-kostadinov.github.io/2015/01/16/how-to-find-a-github-team-id/. The Team ID will be used to supply a required field in the |at| User Interface."
+msgstr "使用 GitHub API 查找团队 ID：http://fabian-kostadinov.github.io/2015/01/16/how-to-find-a-github-team-id/.。团队 ID 将用于提供 |at| 用户界面中所需的字段。"
+
+#: ../../source/social_auth.rst:111
+msgid "Click the **GitHub Team** tab."
+msgstr "点 **GitHub Team** 标签页。"
+
+#: ../../source/social_auth.rst:113
+msgid "The **GitHub Team OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Team OAuth2 Callback URL** 字段已预先填充且不可编辑。在应用程序被注册后，GitHub 会显示客户端 ID 和客户端 Secret。"
+
+#: ../../source/social_auth.rst:115
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub Team OAuth2 Key** field."
+msgstr "点 **Edit**，将 GitHub 的客户端 ID 复制到 **GitHub Team OAuth2 Key** 字段中。"
+
+#: ../../source/social_auth.rst:117
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Team OAuth2 Secret** field."
+msgstr "将 GitHub 的客户端 Secret 复制并粘贴到 **GitHub Team OAuth2 Secret** 字段中。"
+
+#: ../../source/social_auth.rst:119
+msgid "Copy and paste GitHub's team ID in the **GitHub Team ID** field."
+msgstr "在 **GitHub Team ID** 字段中复制并粘贴 GitHub 团队 ID。"
+
+#: ../../source/social_auth.rst:125
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Team logo to allow logging in with those credentials."
+msgstr "要验证是否已正确配置了身份验证，请注销 |at|，登录屏幕现在将会显示 GitHub 团队徽标，以允许使用这些凭证登录。"
+
+#: ../../source/social_auth.rst:131
+msgid "GitHub Enterprise settings"
+msgstr "GitHub Enterprise 设置"
+
+#: ../../source/social_auth.rst:136
+msgid "To set up social authentication for a GitHub Enterprise, you will need to obtain a GitHub Enterprise URL, an API URL, OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "要为 GitHub Enterprise 设置社交身份验证，您需要获取 web 应用的 GitHub Enterprise URL、API URL、OAuth2 密钥和 secret。 要获得 URL，请参阅 `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ 中的 GitHub 文档。 要获取密钥和 secret，您必须首先在 ``https://github.com/organizations/<yourorg>/settings/applications`` 上注册您的企业拥有的应用程序。 要注册应用程序，需要为其提供授权回调 URL，即 Details 页面中显示的 **Callback URL**。 因为它托管在站点而不是 github.com 上，所以您必须指定它要与之通信的 auth 适配器。"
+
+#: ../../source/social_auth.rst:138
+#: ../../source/social_auth.rst:175
+#: ../../source/social_auth.rst:214
+msgid "Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "每个密钥和 secret 必须属于一个唯一的应用，且不能在不同的身份验证后端之间共享或重复使用。OAuth2 密钥（客户端 ID）和 secret（客户端 Secret）将用于提供 |at| 用户界面中所需的字段。"
+
+#: ../../source/social_auth.rst:144
+msgid "Click the **GitHub Enterprise** tab."
+msgstr "点 **GitHub Enterprise** 标签页。"
+
+#: ../../source/social_auth.rst:146
+msgid "The **GitHub Enterprise OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise OAuth2 Callback URL** 字段已预先填充且不可编辑。在应用程序被注册后，GitHub 会显示客户端 ID 和客户端 Secret。"
+
+#: ../../source/social_auth.rst:148
+msgid "Click **Edit** to configure GitHub Enterprise settings."
+msgstr "点 **Edit** 配置 GitHub Enterprise 设置。"
+
+#: ../../source/social_auth.rst:150
+msgid "In the **GitHub Enterprise URL** field, enter the hostname of the GitHub Enterprise instance (e.g., https://github.example.com)."
+msgstr "在 **GitHub Enterprise URL** 字段中，输入 GitHub Enterprise 实例的主机名（例如 https://github.example.com）。"
+
+#: ../../source/social_auth.rst:152
+msgid "In the **GitHub Enterprise API URL** field, enter the API URL of the GitHub Enterprise instance (e.g., https://github.example.com/api/v3)"
+msgstr "在 **GitHub Enterprise API URL** 字段中，输入 GitHub Enterprise 实例的 API URL（例如 https://github.example.com/api/v3）"
+
+#: ../../source/social_auth.rst:154
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise OAuth2 Key** field."
+msgstr "将 GitHub 的客户端 ID 复制并粘贴到 **GitHub Enterprise OAuth2 Key** 字段中。"
+
+#: ../../source/social_auth.rst:156
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise OAuth2 Secret** field."
+msgstr "将 GitHub 的客户端 Secret 复制并粘贴到 **GitHub Enterprise OAuth2 Secret** 字段中。"
+
+#: ../../source/social_auth.rst:162
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise logo to allow logging in with those credentials."
+msgstr "要验证是否已正确配置了身份验证，请注销 |at|，登录屏幕现在将会显示 GitHub Enterprise 徽标，以允许使用这些凭证登录。"
+
+#: ../../source/social_auth.rst:168
+msgid "GitHub Enterprise Organization settings"
+msgstr "GitHub Enterprise 组织设置"
+
+#: ../../source/social_auth.rst:173
+msgid "To set up social authentication for a GitHub Enterprise Org, you will need to obtain a GitHub Enterprise Org URL, an Org API URL, an Org OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise organization-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "要为 GitHub Enterprise Org 设置社交身份验证，您需要获取 web 应用的 GitHub Enterprise Org URL、Org API URL、Org OAuth2 密钥和 secret。 要获得 URL，请参阅 `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ 中的 GitHub 文档。 要获取密钥和 secret，您必须首先在 ``https://github.com/organizations/<yourorg>/settings/applications`` 上注册您的企业拥有的应用程序。 要注册应用程序，需要为其提供授权回调 URL，即 Details 页面中显示的 **Callback URL**。 因为它托管在站点而不是 github.com 上，所以您必须指定它要与之通信的 auth 适配器。"
+
+#: ../../source/social_auth.rst:181
+msgid "Click the **GitHub Enterprise Organization** tab."
+msgstr "点 **GitHub Enterprise Organization** 标签页。"
+
+#: ../../source/social_auth.rst:183
+msgid "The **GitHub Enterprise Organization OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise Organization OAuth2 Callback URL** 字段已预先填充且不可编辑。在应用程序被注册后，GitHub 会显示客户端 ID 和客户端 Secret。"
+
+#: ../../source/social_auth.rst:185
+msgid "Click **Edit** to configure GitHub Enterprise Organization settings."
+msgstr "点 **Edit** 配置 GitHub Enterprise Organization 设置。"
+
+#: ../../source/social_auth.rst:187
+msgid "In the **GitHub Enterprise Organization URL** field, enter the hostname of the GitHub Enterprise Org instance (e.g., https://github.orgexample.com)."
+msgstr "在 **GitHub Enterprise Organization URL** 字段中，输入 GitHub Enterprise Org 实例的主机名（例如 https://github.orgexample.com）。"
+
+#: ../../source/social_auth.rst:189
+msgid "In the **GitHub Enterprise Organization API URL** field, enter the API URL of the GitHub Enterprise Org instance (e.g., https://github.orgexample.com/api/v3)"
+msgstr "在 **GitHub Enterprise Organization API URL** 字段中，输入 GitHub Enterprise Org 实例的 API URL（例如 https://github.orgexample.com/api/v3）"
+
+#: ../../source/social_auth.rst:191
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise Organization OAuth2 Key** field."
+msgstr "将 GitHub 的客户端 ID 复制并粘贴到 **GitHub Enterprise Organization OAuth2 Key** 字段中。"
+
+#: ../../source/social_auth.rst:193
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise Organization OAuth2 Secret** field."
+msgstr "将 GitHub 的客户端 Secret 复制并粘贴到 **GitHub Enterprise Organization OAuth2 Secret** 字段中。"
+
+#: ../../source/social_auth.rst:195
+msgid "Enter the name of your GitHub Enterprise organization, as used in your organization's URL (e.g., https://github.com/<yourorg>/) in the **GitHub Enterprise Organization Name** field."
+msgstr "输入您的 GitHub 机构名称，如 **GitHub Enterprise Organization Name** 项中使用的您的组织 URL (如 https://github.com/<yourorg>/)。"
+
+#: ../../source/social_auth.rst:201
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise Organization logo to allow logging in with those credentials."
+msgstr "要验证是否已正确配置了身份验证，请先退出 |at|。登录屏幕现在将会显示 GitHub Enterprise Organization 徽标来允许使用这些凭证登陆。"
+
+#: ../../source/social_auth.rst:207
+msgid "GitHub Enterprise Team settings"
+msgstr "GitHub Enterprise Team 设置"
+
+#: ../../source/social_auth.rst:212
+msgid "To set up social authentication for a GitHub Enterprise teams, you will need to obtain a GitHub Enterprise Org URL, an Org API URL, an Org OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise team-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "要为 GitHub Enterprise Org 团队设置社交身份验证，您需要获取 web 应用的 GitHub Enterprise Org URL、Org API URL、Org OAuth2 密钥和 secret。 要获得 URL，请参阅 `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ 中的 GitHub 文档。 要获取密钥和 secret，您必须首先在 ``https://github.com/organizations/<yourorg>/settings/applications`` 上注册您的团队拥有的应用程序。 要注册应用程序，需要为其提供授权回调 URL，即 Details 页面中显示的 **Callback URL**。 因为它托管在站点而不是 github.com 上，所以您必须指定它要与之通信的 auth 适配器。"
+
+#: ../../source/social_auth.rst:222
+msgid "Click the **GitHub Enterprise Team** tab."
+msgstr "点 **GitHub Enterprise Team** 标签页。"
+
+#: ../../source/social_auth.rst:224
+msgid "The **GitHub Enterprise Team OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise Team OAuth2 Callback URL** 字段已预先填充且不可编辑。在应用程序被注册后，GitHub 会显示客户端 ID 和客户端 Secret。"
+
+#: ../../source/social_auth.rst:226
+msgid "Click **Edit** to configure GitHub Enterprise Team settings."
+msgstr "点 **Edit** 配置 GitHub Enterprise Team 设置。"
+
+#: ../../source/social_auth.rst:228
+msgid "In the **GitHub Enterprise Team URL** field, enter the hostname of the GitHub Enterprise team instance (e.g., https://github.teamexample.com)."
+msgstr "在 **GitHub Enterprise Team URL** 字段中，输入 GitHub Enterprise 团队实例的主机名（例如 https://github.teamexample.com）。"
+
+#: ../../source/social_auth.rst:230
+msgid "In the **GitHub Enterprise Team API URL** field, enter the API URL of the GitHub Enterprise team instance (e.g., https://github.teamexample.com/api/v3)"
+msgstr "在 **GitHub Enterprise Team API URL** 字段中，输入 GitHub Enterprise 团队实例的 API URL（例如 https://github.teamexample.com/api/v3）"
+
+#: ../../source/social_auth.rst:232
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise Team OAuth2 Key** field."
+msgstr "将 GitHub 的客户端 ID 复制并粘贴到 **GitHub Enterprise Team OAuth2 Key** 字段中。"
+
+#: ../../source/social_auth.rst:234
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise Team OAuth2 Secret** field."
+msgstr "将 GitHub 的客户端 Secret 复制并粘贴到 **GitHub Enterprise Team OAuth2 Secret** 字段中。"
+
+#: ../../source/social_auth.rst:236
+msgid "Copy and paste GitHub's team ID in the **GitHub Enterprise Team ID** field."
+msgstr "在 **GitHub Enterprise Team ID** 字段中复制并粘贴 GitHub 的团队 ID。"
+
+#: ../../source/social_auth.rst:242
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise Teams logo to allow logging in with those credentials."
+msgstr "要验证是否已正确配置了身份验证，请注销 |at|，登录屏幕现在将会显示 GitHub Enterprise Team 徽标，以允许使用这些凭证登录。"
+
+#: ../../source/social_auth.rst:250
+msgid "Google OAuth2 settings"
+msgstr "Google OAuth2 设置"
+
+#: ../../source/social_auth.rst:255
+msgid "To set up social authentication for Google, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first create a project and set it up with Google. Refer to https://support.google.com/googleapi/answer/6158849 for instructions. If you already completed the setup process, you can access those credentials by going to the Credentials section of the `Google API Manager Console <https://console.developers.google.com/>`_. The OAuth2 key (Client ID) and secret (Client secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "要设置 Google 的身份验证，您需要获取 web 应用程序的 OAuth2 密钥和 secret。为此，您必须首先创建一个项目并使用 Google 进行设置。如需相关说明，请参阅 https://support.google.com/googleapi/answer/6158849。如果您已经完成了设置过程，您可以进入 `Google API Manager Console <https://console.developers.google.com/>`_ 的 Credentials 部分来访问这些凭证。OAuth2 密钥（客户端 ID）和 secret（客户端 secret）将用于提供 |at| 用户界面中所需的字段。"
+
+#: ../../source/social_auth.rst:259
+msgid "On the left side of the Settings window, click **Google OAuth 2 settings** from the list of Authentication options."
+msgstr "在 Settings 窗口左侧，点 Authentication 选项列表中的 **Google OAuth 2 settings**。"
+
+#: ../../source/social_auth.rst:261
+msgid "The **Google OAuth2 Callback URL** field is already pre-populated and non-editable."
+msgstr "**Google OAuth2 Callback URL** 字段已预先填充且不可编辑。"
+
+#: ../../source/social_auth.rst:263
+msgid "The following fields are also pre-populated. If not, use the credentials Google supplied during the web application setup process, and look for the values with the same format as the ones shown in the example below:"
+msgstr "以下字段也会预先填充。如果没有，请使用 web 应用设置过程中提供的 Google 凭证，并寻找与以下示例中所示相同格式的值："
+
+#: ../../source/social_auth.rst:265
+msgid "Click **Edit** and copy and paste Google's Client ID into the **Google OAuth2 Key** field."
+msgstr "点 **Edit**，将 Google 的客户端 ID 复制到 **Google OAuth2 Key** 字段中。"
+
+#: ../../source/social_auth.rst:267
+msgid "Copy and paste Google's Client secret into the **Google OAuth2 Secret** field."
+msgstr "将 Google 的客户端 secret 复制并粘贴到 **Google OAuth2 Secret** 字段中。"
+
+#: ../../source/social_auth.rst:271
+msgid "To complete the remaining optional fields, refer to the tooltips in each of the fields for instructions and required format."
+msgstr "要完成剩余的可选字段，请参考每个字段中的工具提示，以获得说明和所需格式。"
+
+#: ../../source/social_auth.rst:277
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the Google logo to indicate it as a alternate method of logging into |at|."
+msgstr "要验证是否已正确配置了身份验证，请注销 |at|，登录屏幕现在将会显示 Google 徽标，以指定它作为登录 |at| 的替代方法。"
+
+#: ../../source/social_auth.rst:288
+msgid "Organization and Team Mapping"
+msgstr "机构和团队映射"
+
+#: ../../source/social_auth.rst:297
+msgid "Organization mapping"
+msgstr "机构映射"
+
+#: ../../source/social_auth.rst:299
+msgid "You will need to control which users are placed into which controller organizations based on their username and email address (mapping out your organization admins/users from social or enterprise-level authentication accounts)."
+msgstr "您将需要根据用户名和电子邮件地址控制哪些用户放置到哪个控制器机构（从社交或企业身份验证帐户映射您的机构管理员/用户）。"
+
+#: ../../source/social_auth.rst:301
+msgid "Dictionary keys are organization names. Organizations will be created, if not already present and if the license allows for multiple organizations. Otherwise, the single default organization is used regardless of the key."
+msgstr "字典键是机构名称。如果不存在机构以及许可证允许多个机构，则将创建机构。否则，无论键是什么均使用单一默认机构。"
+
+#: ../../source/social_auth.rst:303
+msgid "Values are dictionaries defining the options for each organization's membership.  For each organization, it is possible to specify which users are automatically users of the organization and also which users can administer the organization."
+msgstr "值是字典，用于定义每个机构成员资格的选项。对于每个机构来说，可以指定哪个用户自动成为机构的用户，以及哪个用户可以管理机构。"
+
+#: ../../source/social_auth.rst:305
+msgid "**admins**: None, True/False, string or list/tuple of strings."
+msgstr "**admins**：None、True/False、字符串或字符串的列表/元组。"
+
+#: ../../source/social_auth.rst:307
+msgid "If **None**, organization admins will not be updated."
+msgstr "如果为 **None**，机构管理员将不会更新。"
+
+#: ../../source/social_auth.rst:308
+msgid "If **True**, all users using account authentication will automatically be added as admins of the organization."
+msgstr "如果为 **True**，使用帐户身份验证的所有用户将自动添加为机构管理员。"
+
+#: ../../source/social_auth.rst:309
+msgid "If **False**, no account authentication users will be automatically added as admins of the organization."
+msgstr "如果为 **False**，则没有帐户身份验证用户自动添加为机构的管理员。"
+
+#: ../../source/social_auth.rst:310
+msgid "If a string or list of strings, specifies the usernames and emails for users who will be added to the organization. Strings beginning and ending with ``/`` will be compiled into regular expressions; modifiers ``i`` (case-insensitive) and ``m`` (multi-line) may be specified after the ending ``/``."
+msgstr "如果为字符串或字符串列表，指定要添加到机构中的用户的用户名和电子邮件。以 ``/`` 开头和结尾的字符串将编译成正则表达式；修饰符 ``i`` （区分大小写）和 ``m``（多行）可在结束 ``/`` 后指定。"
+
+#: ../../source/social_auth.rst:312
+msgid "**remove_admins**: True/False. Defaults to **True**."
+msgstr "**remove_admins**：True/False。默认为 **True**。"
+
+#: ../../source/social_auth.rst:314
+msgid "When **True**, a user who does not match is removed from the organization's administrative list."
+msgstr "当为 **True** 时，不匹配的用户将从机构的管理列表中删除。"
+
+#: ../../source/social_auth.rst:316
+msgid "**users**: None, True/False, string or list/tuple of strings. Same rules apply as for **admins**."
+msgstr "**users**：None、True/False、字符串或字符串列表/元组。应用的规则与 **admins** 相同。"
+
+#: ../../source/social_auth.rst:318
+msgid "**remove_users**: True/False. Defaults to **True**. Same rules apply as for **remove_admins**."
+msgstr "**remove_users**：True/False。默认为 **True**。应用的规则与 **remove_admins** 相同。"
+
+#: ../../source/social_auth.rst:337
+msgid "Organization mappings may be specified separately for each account authentication backend.  If defined, these configurations will take precedence over the global configuration above."
+msgstr "可以为每个帐户身份验证后端单独指定机构映射。如果已定义，这些配置将优先于上述全局配置。"
+
+#: ../../source/social_auth.rst:349
+msgid "Team mapping"
+msgstr "团队映射"
+
+#: ../../source/social_auth.rst:351
+msgid "Team mapping is the mapping of team members (users) from social auth accounts. Keys are team names (will be created if not present). Values are dictionaries of options for each team's membership, where each can contain the following parameters:"
+msgstr "团队映射是从社交身份验证帐户的团队成员（用户）的映射。键是团队名称（如果不存在就会创建）。值是每个团队成员资格选项的字典，其中每项可以包含以下参数："
+
+#: ../../source/social_auth.rst:353
+msgid "**organization**: string. The name of the organization to which the team belongs.  The team will be created if the combination of organization and team name does not exist.  The organization will first be created if it does not exist.  If the license does not allow for multiple organizations, the team will always be assigned to the single default organization."
+msgstr "**organization**：字符串。团队所属机构的名称。如果机构和团队名称的组合不存在，则会创建团队。如果该机构不存在，则会首先创建机构。如果许可证不允许多个机构，团队将始终被分配给单一的默认机构。"
+
+#: ../../source/social_auth.rst:359
+msgid "**users**: None, True/False, string or list/tuple of strings."
+msgstr "**users**：None、True/False、字符串或字符串列表/元组。"
+
+#: ../../source/social_auth.rst:361
+msgid "If **None**, team members will not be updated."
+msgstr "如果为 **None**，则不会更新团队成员。"
+
+#: ../../source/social_auth.rst:362
+msgid "If **True**/**False**, all social auth users will be added/removed as team members."
+msgstr "如果为 **True**/**False**，则所有社交身份验证用户将作为团队成员添加/删除。"
+
+#: ../../source/social_auth.rst:363
+msgid "If a string or list of strings, specifies expressions used to match users. User will be added as a team member if the username or email matches. Strings beginning and ending with ``/`` will be compiled into regular expressions; modifiers ``i`` (case-insensitive) and ``m`` (multi-line) may be specified after the ending ``/``."
+msgstr "如果为字符串或字符串列表，指定用于匹配用户的表达式。如果用户名或电子邮件匹配，用户将被添加为团队成员。以 ``/`` 开头和结尾的字符串将编译成正则表达式；修饰符 ``i``（区分大小）和 ``m``（多行）可以在 ``/`` 结束后指定。"
+
+#: ../../source/social_auth.rst:365
+msgid "**remove**: True/False. Defaults to **True**. When **True**, a user who does not match the rules above is removed from the team."
+msgstr "**remove**：True/False。默认为 **True**。当 **True** 时，与规则不匹配的用户将从团队中删除。"
+
+#: ../../source/social_auth.rst:383
+msgid "Team mappings may be specified separately for each account authentication backend, based on which of these you setup.  When defined, these configurations take precedence over the the global configuration above."
+msgstr "可以根据您的设置，为每个帐户身份验证后端单独指定团队映射。定义后，这些配置优先于上面的全局配置。"
+
+#: ../../source/social_auth.rst:393
+msgid "Uncomment the line below (i.e. set ``SOCIAL_AUTH_USER_FIELDS`` to an empty list) to prevent new user accounts from being created.  Only users who have previously logged in to the controller using social or enterprise-level authentication or have a user account with a matching email address will be able to login."
+msgstr "取消注释以下行（即将 ``SOCIAL_AUTH_USER_FIELDS`` 设置为空列表），以防止创建新用户帐户。只有之前已经使用社交或企业级身份验证登录或用户帐户有匹配电子邮件地址的用户才能登录控制器。"
+

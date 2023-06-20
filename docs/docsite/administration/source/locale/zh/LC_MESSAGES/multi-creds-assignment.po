@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/multi-creds-assignment.rst:4
+msgid "Multi-Credential Assignment"
+msgstr "多凭证分配"
+
+#: ../../source/multi-creds-assignment.rst:11
+msgid "|at| provides support for assigning zero or more credentials to a job template."
+msgstr "|at| 支持为一个作业模板分配零个或多个凭证。"
+
+#: ../../source/multi-creds-assignment.rst:14
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/multi-creds-assignment.rst:16
+msgid "Prior to |at| 3.3, job templates had a certain set of requirements with respect to credentials:"
+msgstr "|at| 3.3 之前，作业模板对凭证有一定的要求："
+
+#: ../../source/multi-creds-assignment.rst:18
+msgid "All job templates (and jobs) were required to have exactly *one* Machine/SSH or Vault credential (or one of both)."
+msgstr "所有作业模板（和作业）都必须只有*一个*机器/SSH 或 Vault 凭证（或两者）。"
+
+#: ../../source/multi-creds-assignment.rst:19
+msgid "All job templates (and jobs) could have zero or more \"extra\" credentials."
+msgstr "所有作业模板（和作业）都可有零个或多个“额外”凭证。"
+
+#: ../../source/multi-creds-assignment.rst:20
+msgid "Extra credentials represented \"Cloud\" and \"Network\" credentials that could be used to provide authentication to external services via environment variables (e.g., ``AWS_ACCESS_KEY_ID``)."
+msgstr "额外凭证代表“云”和“网络”凭证，可用于通过环境变量（如 ``AWS_ACCESS_KEY_ID``）提供外部服务身份验证。"
+
+#: ../../source/multi-creds-assignment.rst:22
+msgid "This model required a variety of disjoint interfaces for specifying credentials on a job template and it lacked the ability associate multiple Vault credentials with a playbook run, a use case supported by Ansible core from Ansible 2.4 onwards."
+msgstr "这个模型需要各种不连接接口来指定作业模板上的凭证，而且它无法将多个 Vault 凭证与 playbook 运行相关联，这是 Ansible 2.4 之后的 Ansible 内核支持的一个用例。"
+
+#: ../../source/multi-creds-assignment.rst:24
+msgid "This model also poses a stumbling block for certain playbook execution workflows, such as having to attach a \"dummy\" Machine/SSH credential to the job template simply to satisfy the requirement."
+msgstr "这个模型还为特定的 playbook 执行工作流造成障碍，如必须将“虚拟”机器/SSH 凭证附加到作业模板中以满足要求。"
+
+#: ../../source/multi-creds-assignment.rst:27
+msgid "Important Changes"
+msgstr "重要更改"
+
+#: ../../source/multi-creds-assignment.rst:29
+msgid "Job templates now have a single interface for credential assignment. From the API endpoint:"
+msgstr "作业模板现在有一个用于凭证分配的接口，API 端点："
+
+#: ../../source/multi-creds-assignment.rst:31
+msgid "``GET /api/v2/job_templates/N/credentials/``"
+msgstr "``GET /api/v2/job_templates/N/credentials/``"
+
+#: ../../source/multi-creds-assignment.rst:33
+msgid "You can associate and disassociate credentials using ``POST`` requests, similar to the behavior in the deprecated ``extra_credentials`` endpoint:"
+msgstr "您可以使用 ``POST`` 请求关联和解除凭证关联，类似于已弃用的 ``extra_credentials`` 端点中的行为："
+
+#: ../../source/multi-creds-assignment.rst:41
+msgid "Under this model, a job template is considered valid even when there are *no* credentials assigned to it. This model also provides users the ability to assign multiple Vault credentials to a job template."
+msgstr "在此模型下，即使 *没有*分配了凭证，作业模板也被视为有效。此模型也让用户可以为作业模板分配多个 Vault 凭证。"
+
+#: ../../source/multi-creds-assignment.rst:45
+msgid "Launch Time Considerations"
+msgstr "启动时间注意事项"
+
+#: ../../source/multi-creds-assignment.rst:47
+msgid "Prior to |at| 3.3, job templates had a configurable attribute, ``ask_credential_on_launch``. This value was used at launch time to determine which missing credential values were necessary for launch - this was primarily used as a way to specify a Machine/SSH credential to satisfy the minimum credential requirement."
+msgstr "在 |at| 3.3 之前，作业模板有一个可配置的属性 ``ask_credential_on_launch``。这个值在启动时用来决定哪个缺少的凭证值是启动所必需的——这主要用于指定 机器/SSH 凭证，以满足最低凭证要求。"
+
+#: ../../source/multi-creds-assignment.rst:50
+msgid "Under the new unified credential list model, this attribute still exists, but it is no longer \"requiring\" a credential.  Now when ``ask_credential_on_launch`` is ``True``, it signifies that if desired, you may specify a list of credentials at launch time to override those defined on the job template. For example:"
+msgstr "在新的统一凭证列表模型下，此属性仍然存在，但它不再“需要”凭证。现在，``ask_credential_on_launch`` 是 ``True``。它表示如果需要，您可以在启动时指定一个凭证列表来覆盖作业模板中定义的凭证。例如："
+
+#: ../../source/multi-creds-assignment.rst:56
+msgid "If ``ask_credential_on_launch`` is ``False``, it signifies that custom credentials provided in the ``POST /api/v2/job_templates/N/launch/`` will be ignored."
+msgstr "如果 ``ask_credential_on_launch`` 是 ``False``，它表示忽略 ``POST /api/v2/job_templates/N/launch/`` 中提供的自定义凭证。"
+
+#: ../../source/multi-creds-assignment.rst:58
+msgid "Under this model, the only purpose for ``ask_credential_on_launch`` is to signal API clients to prompt the user for (optional) changes at launch time."
+msgstr "在此模型下，``ask_credential_on_launch`` 的唯一的目的是示意 API 客户端在启动时提示用户进行（可选）更改。"
+
+#: ../../source/multi-creds-assignment.rst:64
+msgid "Multi-Vault Credentials"
+msgstr "多 Vault 凭证"
+
+#: ../../source/multi-creds-assignment.rst:66
+msgid "As it possible to assign multiple credentials to a job, you can specify multiple Vault credentials to decrypt when your job template runs. This functionality mirrors the support for `multiple vault passwords for a playbook run <http://docs.ansible.com/ansible/latest/vault.html#vault-ids-and-multiple-vault-passwords>`_ in Ansible 2.4 and later."
+msgstr "因为可以为一个作业分配多个凭证，您可以在作业模板运行时指定多个 Vault 凭证来进行解密。此功能反映了对 Ansible 2.4 及之后的版本中的 `multiple vault passwords for a playbook run <http://docs.ansible.com/ansible/latest/vault.html#vault-ids-and-multiple-vault-passwords>`_ 的支持。"
+
+#: ../../source/multi-creds-assignment.rst:68
+msgid "Vault credentials now have an optional field, ``vault_id``, which is analogous to the ``--vault-id`` argument to ``ansible-playbook``. To run a playbook which makes use of multiple vault passwords:"
+msgstr "现在，Vault 凭证有一个可选字段 ``vault_id``，类似于 ``ansible-playbook`` 的 ``--vault-id`` 参数。要运行使用多个 vault 密码的 playbook，请执行以下步骤："
+
+#: ../../source/multi-creds-assignment.rst:70
+msgid "Create a Vault credential in the controller for each vault password; specify the Vault ID as a field on the credential and input the password (which will be encrypted and stored)."
+msgstr "在控制器中为每个 vault 密码创建一个 Vault 凭证；指定 Vault ID 作为凭证上的字段并输入密码（将会加密并存储）。"
+
+#: ../../source/multi-creds-assignment.rst:72
+msgid "Assign multiple vault credentials to the job template via the new credentials endpoint:"
+msgstr "通过新凭据端点将多个 vault 凭证分配给作业模板："
+
+#: ../../source/multi-creds-assignment.rst:83
+msgid "Alternatively, you can perform the same assignment in the controller User Interface in the *Create Credential* page:"
+msgstr "或者，您可以在 *Create Credential* 页面的控制器用户界面中执行相同的分配："
+
+#: ../../source/multi-creds-assignment.rst:87
+msgid "In the above example, the credential created specifies the secret to be used by its Vault Identifier (\"first\") and password pair. When this credential is used in a Job Template, as in the example below, it will only decrypt the secret associated with the \"first\" Vault ID:"
+msgstr "在上例中，创建的凭证指定了其 Vault 标识符（“第一个”）和密码对要使用的 secret。当此凭证在作业模板中使用时，如下例所示，它只会解密与“第一个”Vault ID 关联的 secret："
+
+#: ../../source/multi-creds-assignment.rst:91
+msgid "If you have a playbook that is setup the traditional way with all the secrets in one big file without distinction, then leave the **Vault Identifier** field blank when setting up the Vault credential:"
+msgstr "如果您的 playbook 是采用传统方法设置的，所有 secret 不加区分放在一个大文件中，那么在设置 Vault 凭证时将 **Vault Identifier** 留空："
+
+#: ../../source/multi-creds-assignment.rst:97
+msgid "Prompted Vault Credentials"
+msgstr "提示 Vault 凭证"
+
+#: ../../source/multi-creds-assignment.rst:99
+msgid "Passwords for Vault credentials that are marked with \"Prompt on launch\", the launch endpoint of any related Job Templates will communicate necessary Vault passwords via the ``passwords_needed_to_start`` key:"
+msgstr "标记为“启动时提示”的 Vault 凭证的密码，任何相关作业模板的启动端点都会通过 ``passwords_needed_to_start`` 密码进行必要的 Vault 密码通信："
+
+#: ../../source/multi-creds-assignment.rst:111
+msgid "``X`` and ``Y`` in the above example are primary keys of the associated Vault credentials."
+msgstr "上例中的 ``X`` 和 ``Y`` 是关联的 Vault 凭证的主密钥。"
+
+#: ../../source/multi-creds-assignment.rst:125
+msgid "Linked credentials"
+msgstr "链接的凭证"
+
+#: ../../source/multi-creds-assignment.rst:127
+msgid "Instead of uploading sensitive credential information into the controller, you can link credential fields to external systems and using them to run your playbooks. Refer to the :ref:`Secret Management System <userguide:ug_credential_plugins>` section of the |atu|."
+msgstr "您不需要将敏感凭证信息上传到控制器中，而是将凭证字段链接到外部系统，并使用它们运行您的 playbook。请参阅 |atu| 的 :ref:`Secret Management System <userguide:ug_credential_plugins>` 部分。"
+

@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower Quick
+# Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Quick Setup 3.7.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 09:55-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/quick_start.rst:2
+msgid "Quick Start"
+msgstr ""
+
+#: ../../source/quick_start.rst:7
+msgid ""
+"Welcome to the Ansible Tower Quick Start Guide. At the end of the Quick "
+"Start, you will have a functioning Tower application that you can use to "
+"launch more sophisticated playbooks. You can expect the Quick Start "
+"process to take less than thirty minutes."
+msgstr ""
+
+#: ../../source/quick_start.rst:9
+msgid ""
+"To begin, you must install Tower and you must choose a target system "
+"where an initial playbook can be deployed (provided by |at|). This first "
+"playbook executes simple Ansible tasks, while teaching you how to use "
+"Tower, as well as ensuring its proper setup. This can be any sort of "
+"system manageable by Ansible, as described at: "
+"http://docs.ansible.com/intro\\_installation.html."
+msgstr ""
+
+#: ../../source/quick_start.rst:12
+msgid ""
+"Ansible Tower is available in Standard and Premium license types. These "
+"licenses vary in price and support-levels. For more information about "
+"licenses and features, refer to :ref:`Licensing, Updates, and Support "
+"<installandreference:ir_license-support>` in the Tower Installation and "
+"Reference Guide."
+msgstr ""
+

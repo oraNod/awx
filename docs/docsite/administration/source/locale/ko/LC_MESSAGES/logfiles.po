@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/logfiles.rst:3
+msgid "Controller Logfiles"
+msgstr "컨트롤러 로그 파일"
+
+#: ../../source/logfiles.rst:8
+msgid "The controller logfiles have been consolidated and can be easily accessed from two centralized locations:"
+msgstr "컨트롤러 로그 파일이 통합되었으며, 두 개의 중앙 집중식 위치에서 쉽게 액세스할 수 있습니다."
+
+#: ../../source/logfiles.rst:10
+msgid "``/var/log/tower/``"
+msgstr "``/var/log/tower/``"
+
+#: ../../source/logfiles.rst:11
+msgid "``/var/log/supervisor/``"
+msgstr "``/var/log/supervisor/``"
+
+#: ../../source/logfiles.rst:14
+msgid "In the ``/var/log/tower/`` directory, you can view logfiles related to:"
+msgstr "``/var/log/tower/`` 디렉터리에서 다음과 관련된 로그 파일을 볼 수 있습니다."
+
+#: ../../source/logfiles.rst:16
+msgid "**callback_receiver.log:** captures callback receiver logs that handles callback events when running ansible jobs."
+msgstr "**callback_receiver.log:** Ansible 작업을 실행할 때 콜백 이벤트를 처리하는 콜백 수신자 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:17
+msgid "**dispatcher.log:** captures log messages for the controller dispatcher worker service."
+msgstr "**dispatcher.log:** 컨트롤러 디스패치 작업자 서비스에 대한 로그 메시지를 캡처합니다."
+
+#: ../../source/logfiles.rst:18
+msgid "**job_lifecycle.log:** captures details of the job run, whether it is blocked, and what condition is blocking it."
+msgstr "**job_cycle.log:** 작업 실행 세부 정보, 차단 여부, 차단 조건을 캡처합니다."
+
+#: ../../source/logfiles.rst:19
+msgid "**management_playbooks.log:** captures the logs of management playbook runs, the isolated job runs like copying the metadata, etc."
+msgstr "**management_playbooks.log:** 관리 플레이북 실행, 메타데이터 복사와 같은 격리된 작업 실행 등의 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:20
+msgid "**rsyslog.err:** captures rsyslog errors authenticating with external logging services when sending logs to them."
+msgstr "**rsyslog.err:** 외부 로깅 서비스로 로그 전송 시 해당 서비스에 인증할 때 발생하는 rsyslog 오류를 캡처합니다."
+
+#: ../../source/logfiles.rst:21
+msgid "**task_system.log:** - captures the logs of tasks that the controller is running in the background, such as adding cluster instances and logs related to information gathering/processing for analytics, etc."
+msgstr "**task_system.log:** 클러스터 인스턴스 추가와 같이 컨트롤러가 백그라운드에서 실행 중인 작업의 로그 및 분석을 위한 정보 수집/처리와 관련된 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:22
+msgid "**tower.log:** captures the log messages such as runtime errors that occur when the job is executed."
+msgstr "**tower.log:** 작업이 실행될 때 발생하는 런타임 오류와 같은 로그 메시지를 캡처합니다."
+
+#: ../../source/logfiles.rst:23
+msgid "**tower_rbac_migrations.log:** captures the logs for rbac database migration or upgrade."
+msgstr "**tower_rbac_migrations.log:** RBAC 데이터베이스 마이그레이션 또는 업그레이드 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:24
+msgid "**tower_system_tracking_migrations.log:** captures the logs the controller system tracking migration or upgrade."
+msgstr "**tower_system_tracking_migrations.log:** 컨트롤러 시스템 마이그레이션 또는 업그레이드 추적 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:25
+msgid "**wsbroadcast.log:** captures the logs of websocket connections in the controller nodes."
+msgstr "**wsbroadcast.log:** 컨트롤러 노드의 websocket 연결 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:26
+msgid "**isolated_manager.log:** captures logs associated with isolated nodes."
+msgstr "**isolated_manager.log:** 격리된 노드와 연결된 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:29
+msgid "In the ``/var/log/supervisor/`` directory, you can view logfiles related to:"
+msgstr "``/var/log/supervisor/`` 디렉터리에서 다음과 관련된 로그 파일을 볼 수 있습니다."
+
+#: ../../source/logfiles.rst:31
+msgid "**awx-callback-receiver.log:** captures the log of callback receiver that handles callback events when running ansible jobs, managed by supervisord."
+msgstr "**awx-callback-receiver.log:** Ansible 작업을 실행할 때 콜백 이벤트를 처리하는 콜백 수신자 로그(supervisord를 통해 관리)를 캡처합니다."
+
+#: ../../source/logfiles.rst:32
+msgid "**awx-daphne.log:** captures the logs of Websocket communication of WebUI."
+msgstr "**awx-daphne.log:** WebUI의 Websocket 통신 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:33
+msgid "**awx-dispatcher.log:** captures the logs that occur when dispatching a task to a controller instance, such as when running a job."
+msgstr "**awx-dispatcher.log:** 작업을 실행할 때와 같이 컨트롤러 인스턴스에 작업을 디스패치할 때 발생하는 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:34
+msgid "**awx-rsyslog.log:** captures the logs for rsyslog service."
+msgstr "**awx-rsyslog.log:** rsyslog 서비스 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:35
+msgid "**awx-uwsgi.log:** captures the logs related to uWSGI, which is an application server."
+msgstr "**awx-uwsgi.log:** 애플리케이션 서버인 uWSGI와 관련된 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:36
+msgid "**awx-wsbroadcast.log:** captures the logs of websocket service that is used by the controller."
+msgstr "**awx-wsbroadcast.log:** 컨트롤러에서 사용하는 websocket 서비스 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:37
+msgid "**failure-event-handler.stderr.log:** captures the standard errors for /usr/bin/failure-event-handler supervisord's subprocess."
+msgstr "**failure-event-handler.stderr.log:** /usr/bin/failure-event-handler supervisord 하위 프로세스의 표준 오류를 캡처합니다."
+
+#: ../../source/logfiles.rst:38
+msgid "**supervisord.log:** captures the logs related to supervisord itself."
+msgstr "**supervisord.log:** supervisord 자체와 관련된 로그를 캡처합니다."
+
+#: ../../source/logfiles.rst:40
+msgid "The ``/var/log/supervisor/`` directory includes ``stdout`` files for all services as well."
+msgstr "``/var/log/supervisor/`` 디렉터리에는 모든 서비스에 대한 ``stdout`` 파일도 포함됩니다."
+
+#: ../../source/logfiles.rst:43
+msgid "You can expect the following log paths to be generated by services used by Tower (and the |aap|):"
+msgstr "Tower(및 |aap|)에서 사용하는 서비스에서 다음 로그 경로를 생성할 수 있습니다."
+
+#: ../../source/logfiles.rst:45
+msgid "**/var/log/nginx/**"
+msgstr "**/var/log/nginx/**"
+
+#: ../../source/logfiles.rst:46
+msgid "**/var/opt/rh/rh-postgresql10/**"
+msgstr "**/var/opt/rh/rh-postgresql10/**"
+
+#: ../../source/logfiles.rst:47
+msgid "**/var/opt/rh/rh-redis5/log/redis/**"
+msgstr "**/var/opt/rh/rh-redis5/log/redis/**"
+

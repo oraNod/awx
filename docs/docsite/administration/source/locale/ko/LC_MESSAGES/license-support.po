@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../common/source/lic-feat-support.rst:2
+msgid "Red Hat Ansible Automation Platform Controller Licensing, Updates, and Support"
+msgstr "Red Hat Ansible Automation Platform Controller 라이센스, 업데이트 및 지원"
+
+#: ../../../common/source/lic-feat-support.rst:7
+msgid "|RHAT| (\"**Automation Controller**\") is a software product provided as part of an annual |rhaap| subscription entered into between you and Red Hat, Inc. (\"**Red Hat**\")."
+msgstr "|RHAT|(\"**Automation Controller**\")는 사용자와 Red Hat, Inc.(\"**Red Hat**\") 간에 체결된 연간 |rhaap| 서브스크립션의 일부로 제공되는 소프트웨어 제품입니다."
+
+#: ../../../common/source/lic-feat-support.rst:9
+msgid "Ansible is an open source software project and is licensed under the GNU General Public License version 3, as detailed in the Ansible source code: https://github.com/ansible/ansible/blob/devel/COPYING"
+msgstr "Ansible은 오픈 소스 소프트웨어 프로젝트로, Ansible 소스 코드(https://github.com/ansible/ansible/blob/devel/COPYING)에 자세히 설명된 대로 GNU General Public License 버전 3에 따라 라이센스가 부여됩니다."
+
+#: ../../../common/source/lic-feat-support.rst:11
+msgid "You **must** have valid subscriptions attached before installing the |aap|. See :ref:`attach_subscriptions` for detail."
+msgstr "|aap|을 설치하기 전에 유효한 서브스크립션이 연결되어 **있어야** 합니다. 자세한 내용은 :ref:`attach_subscriptions`를 참조하십시오."
+
+#: ../../../common/source/lic-feat-support.rst:14
+msgid "Support"
+msgstr "지원"
+
+#: ../../../common/source/lic-feat-support.rst:19
+msgid "Red Hat offers support to paid |rhaap| customers."
+msgstr "Red Hat은 |rhaap| 유료 고객을 지원합니다."
+
+#: ../../../common/source/lic-feat-support.rst:21
+msgid "If you or your company has purchased a subscription for |aap|, you can contact the support team at https://access.redhat.com. To better understand the levels of support which match your |aap| subscription, refer to :ref:`subscription-types`. For details of what is covered under an |aap| subscription, please see the Scopes of Support at: https://access.redhat.com/support/policy/updates/ansible-tower#scope-of-coverage-4 and https://access.redhat.com/support/policy/updates/ansible-engine."
+msgstr "|aap|에 대한 서브스크립션을 구입한 경우 https://access.redhat.com에서 지원팀에 문의할 수 있습니다. |aap| 서브스크립션과 일치하는 지원 수준을 더 잘 이해하려면 :ref:`subscription-types`를 참조하십시오. |aap| 서브스크립션에서 다루는 사항에 대한 자세한 내용은 https://access.redhat.com/support/policy/updates/ansible-tower#scope-of-coverage-4 및 https://access.redhat.com/support/policy/updates/ansible-engine에 있는 지원 범위를 참조하십시오."
+
+#: ../../../common/source/lic-feat-support.rst:27
+msgid "Trial / Evaluation"
+msgstr "평가판/평가"
+
+#: ../../../common/source/lic-feat-support.rst:35
+msgid "While a license is required for |at| to run, there is no fee for a trial license."
+msgstr "|at|를 실행하려면 라이센스가 필요하지만 평가판 라이센스에는 요금이 부과되지 않습니다."
+
+#: ../../../common/source/lic-feat-support.rst:37
+msgid "Trial licenses for |rhaa| are available at: http://ansible.com/license"
+msgstr "|rhaa| 평가판 라이센스는 http://ansible.com/license에서 사용할 수 있습니다."
+
+#: ../../../common/source/lic-feat-support.rst:38
+msgid "Support is not included in a trial license or during an evaluation of the |at| software."
+msgstr "평가판 라이센스 또는 평가 중인 |at| 소프트웨어는 지원되지 않습니다."
+
+#: ../../../common/source/lic-feat-support.rst:44
+msgid "Subscription Types"
+msgstr "서브스크립션 유형"
+
+#: ../../../common/source/lic-feat-support.rst:52
+msgid "|rhaap| is provided at various levels of support and number of machines as an annual Subscription."
+msgstr "|rhaap|은 다양한 수준의 지원과 머신 수를 포함하는 연간 서브스크립션으로 제공됩니다."
+
+#: ../../../common/source/lic-feat-support.rst:59
+msgid "Standard"
+msgstr "Standard"
+
+#: ../../../common/source/lic-feat-support.rst:55
+msgid "Manage any size environment"
+msgstr "모든 규모의 환경 관리"
+
+#: ../../../common/source/lic-feat-support.rst:56
+msgid "Enterprise 8x5 support and SLA"
+msgstr "Enterprise 8x5 지원 및 SLA"
+
+#: ../../../common/source/lic-feat-support.rst:57
+#: ../../../common/source/lic-feat-support.rst:64
+msgid "Maintenance and upgrades included"
+msgstr "유지보수 및 업그레이드 포함"
+
+#: ../../../common/source/lic-feat-support.rst:58
+#: ../../../common/source/lic-feat-support.rst:65
+msgid "Review the SLA at: https://access.redhat.com/support/offerings/production/sla"
+msgstr "https://access.redhat.com/support/offerings/production/sla에서 SLA 검토"
+
+#: ../../../common/source/lic-feat-support.rst:59
+#: ../../../common/source/lic-feat-support.rst:66
+msgid "Review the Red Hat Support Severity Level Definitions at: https://access.redhat.com/support/policy/severity"
+msgstr "https://access.redhat.com/support/policy/severity에서 Red Hat 지원 심각도 수준 정의 검토."
+
+#: ../../../common/source/lic-feat-support.rst:66
+msgid "Premium"
+msgstr "Premium"
+
+#: ../../../common/source/lic-feat-support.rst:62
+msgid "Manage any size environment, including mission-critical environments"
+msgstr "미션 크리티컬 환경을 포함한 모든 규모의 환경 관리"
+
+#: ../../../common/source/lic-feat-support.rst:63
+msgid "Premium 24x7 support and SLA"
+msgstr "Premium 24x7 지원 및 SLA"
+
+#: ../../../common/source/lic-feat-support.rst:68
+msgid "All Subscription levels include regular updates and releases of |at|, Ansible, and any other components of the Platform."
+msgstr "모든 서브스크립션 수준에는 |at|와 Ansible을 비롯한 기타 Ansible Automation Platform 구성 요소의 정기 업데이트와 릴리스가 포함됩니다."
+
+#: ../../../common/source/lic-feat-support.rst:70
+msgid "For more information, contact Ansible via the Red Hat Customer portal at https://access.redhat.com/ or at http://www.ansible.com/contact-us/."
+msgstr "자세한 내용은 Red Hat Customer Portal(https://access.redhat.com/ 또는 http://www.ansible.com/contact-us/)을 통해 Ansible에 문의하십시오."
+
+#: ../../../common/source/lic-feat-support.rst:74
+msgid "Node Counting in Licenses"
+msgstr "라이센스의 노드 수 계산"
+
+#: ../../../common/source/lic-feat-support.rst:78
+msgid "The |RHAT| license defines the number of Managed Nodes that can be managed as part of a |rhaap| subscription. A typical license will say ‘License Count: 500’, which sets the maximum number of Managed Nodes at 500."
+msgstr "|RHAT| 라이센스는 |rhaap| 서브스크립션의 일부로 관리할 수 있는 관리형 노드 수를 정의합니다. 일반적인 라이센스는 'License Count: 500'으로, 최대 관리형 노드 수를 500으로 설정합니다."
+
+#: ../../../common/source/lic-feat-support.rst:80
+msgid "For more information on managed node requirements for licensing, please see https://access.redhat.com/articles/3331481."
+msgstr "관리형 노드의 라이센싱 요구 사항에 대한 자세한 내용은 https://access.redhat.com/articles/3331481을 참조하십시오."
+
+#: ../../../common/source/lic-feat-support.rst:86
+msgid "Attaching Subscriptions"
+msgstr "서브스크립션 연결"
+
+#: ../../../common/source/lic-feat-support.rst:91
+msgid "You **must** have valid subscriptions attached before installing the |aap|. Attaching an |aap| subscription enables |ah| repositories. A valid subscription needs to be attached to the |ah| node only. Other nodes do not need to have a valid subscription/pool attached, even if the **[automationhub]** group is blank, given this is done at the ``repos_el`` role level and that this role is run on both **[default]** and **[automationhub]** hosts."
+msgstr "|aap|을 설치하기 전에 유효한 서브스크립션이 연결되어 **있어야** 합니다. |aap| 서브스크립션을 연결하면 |ah| 리포지터리가 활성화됩니다. 유효한 서브스크립션을 |ah| 노드에만 연결해야 합니다. ``repos_el`` 역할 수준에서 작업이 수행되며 이 역할이 **[default]** 및 **[automationhub]** 호스트 둘 다에서 실행되는 경우, **[automationhub]** 그룹이 비어 있더라도 다른 노드에 유효한 서브스크립션/풀이 연결되어 있지 않아도 됩니다."
+
+#: ../../../common/source/lic-feat-support.rst:95
+msgid "Attaching subscriptions is unnecessary if your Red Hat account enabled `Simple Content Access Mode <https://access.redhat.com/articles/simple-content-access>`_. But you still need to register to RHSM or Satellite before installing the |aap|."
+msgstr "Red Hat 계정에서 `Simple Content Access Mode <https://access.redhat.com/articles/simple-content-access>`_를 활성화한 경우에는 서브스크립션을 연결할 필요가 없습니다. 그러나 |aap|을 설치하기 전에 RHSM 또는 Satellite에 등록해야 합니다."
+
+#: ../../../common/source/lic-feat-support.rst:97
+msgid "To find out the ``pool_id`` of your |aap| subscription:"
+msgstr "|aap| 서브스크립션의 ``pool_id``를 확인하려면 다음을 수행합니다."
+
+#: ../../../common/source/lic-feat-support.rst:103
+msgid "The command returns the following:"
+msgstr "이 명령은 다음을 반환합니다."
+
+#: ../../../common/source/lic-feat-support.rst:118
+msgid "To attach this subscription:"
+msgstr "이 서브스크립션을 연결하려면 다음을 수행합니다."
+
+#: ../../../common/source/lic-feat-support.rst:124
+msgid "If this is properly done, and all nodes have |rhaap| attached, then it will find the |ah| repositories correctly."
+msgstr "이 작업이 제대로 수행되고 모든 노드에 |rhaap|이 연결되어 있으면 |ah| 리포지토리를 올바르게 찾습니다."
+
+#: ../../../common/source/lic-feat-support.rst:126
+msgid "To check whether the subscription was successfully attached:"
+msgstr "서브스크립션이 성공적으로 연결되었는지 확인하려면 다음을 수행합니다."
+
+#: ../../../common/source/lic-feat-support.rst:133
+msgid "To remove this subscription:"
+msgstr "이 서브스크립션을 제거하려면 다음을 수행합니다."
+
+#: ../../../common/source/lic-feat-support.rst:141
+msgid "|AAP| Component Licenses"
+msgstr "|AAP| 구성 요소 라이센스"
+
+#: ../../../common/source/lic-feat-support.rst:149
+msgid "To view the license information for the components included within |at|, refer to ``/usr/share/doc/automation-controller-<version>/README`` where ``<version>`` refers to the version of |at| you have installed."
+msgstr "|at|에 포함된 구성 요소의 라이센스 정보를 보려면 ``/usr/share/doc/automation-controller-<version>/README``를 참조하십시오. 여기서 ``<version>``은 설치한 |at| 버전을 나타냅니다."
+
+#: ../../../common/source/lic-feat-support.rst:151
+msgid "To view a specific license, refer to ``/usr/share/doc/automation-controller-<version>/*.txt``, where ``*`` is replaced by the license file name to which you are referring."
+msgstr "특정 라이센스를 보려면 ``/usr/share/doc/automation-controller-<version>/*.txt``를 참조하십시오. 여기서 ``*``는 참조하는 라이센스 파일 이름으로 교체됩니다."
+

@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Upgrade and Migration Guide 4.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-10 17:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/rbac_considerations.rst:7
+msgid "Role-Based Access Controls"
+msgstr "역할 기반 액세스 제어"
+
+#: ../../source/rbac_considerations.rst:15
+msgid "|at| 3.7 contains minor updates to the Role-Based Access Control (RBAC) system. For the latest RBAC documentation, refer to the :ref:`Role-Based Access Controls<userguide:rbac-ug>` section in the Tower User Guide."
+msgstr "|at| 3.7에는 역할 기반 액세스 제어(RBAC) 시스템에 대한 마이너 업데이트가 포함되어 있습니다. 최신 RBAC 문서를 보려면 Tower 사용자 가이드의 :ref:`Role-Based Access Controls<userguide:rbac-ug>` 섹션을 참조하십시오."
+
+#: ../../source/rbac_considerations.rst:18
+msgid "Organization field on Job Templates"
+msgstr "작업 템플릿의 조직 필드"
+
+#: ../../source/rbac_considerations.rst:20
+msgid "Job templates in |at| now include an organization field in the API. This is set on creation based on the organization of the project used by the Job Template, and cannot be changed. Because of this, a project's organization cannot be changed once it is in use by Job Templates."
+msgstr "이제 |at|의 작업 템플릿에 API의 조직 필드가 포함됩니다. 이 필드는 작업 템플릿에서 사용하는 프로젝트의 조직에 따라 생성 시 설정되며 변경할 수 없습니다. 이로 인해 작업 템플릿에서 사용 중인 프로젝트의 조직은 변경할 수 없습니다."
+
+#: ../../source/rbac_considerations.rst:23
+msgid "This changes visibility and access to job templates. Previously, an admin of the organization that a job template's inventory belonged to would also be granted admin access to the job template. While existing permissions are preserved on an upgrade to |at| 3.7, newly created jobs will only grant view access to the job template to the inventory admin in this scenario."
+msgstr "이 필드는 작업 템플릿에 대한 액세스 권한과 가시성을 변경합니다. 이전에는 작업 템플릿의 인벤토리가 속하는 조직의 관리자에게 작업 템플릿에 대한 관리자 액세스 권한도 부여되었습니다. 기존의 권한은 |at| 3.7로 업그레이드해도 유지되지만 새로 생성된 작업은 이 시나리오의 인벤토리 관리자에게 작업 템플릿에 대한 보기 액세스 권한만 부여합니다."

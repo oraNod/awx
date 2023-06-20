@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/teams.rst:4
+msgid "Teams"
+msgstr "チーム"
+
+#: ../../source/teams.rst:9
+msgid "A :term:`Team` is a subdivision of an organization with associated users, projects, credentials, and permissions. Teams provide a means to implement role-based access control schemes and delegate responsibilities across organizations. For instance, permissions may be granted to a whole Team rather than each user on the Team."
+msgstr ":term:`Team` (チーム) は、関連付けられたユーザー、プロジェクト、認証情報、およびパーミッションを持つ組織の下位区分のことです。チームは、ロールベースのアクセス制御スキームを実装し、組織全体で責任を委任する手段となります。たとえば、パーミッションは、チームの各ユーザーではなく、チーム全体に付与することができます。"
+
+#: ../../source/teams.rst:11
+msgid "You can create as many Teams of users as make sense for your Organization. Each Team can be assigned permissions, just as with Users. Teams can also scalably assign ownership for Credentials, preventing multiple interface click-throughs to assign the same Credentials to the same user."
+msgstr "組織に適した数のユーザーチームを作成できます。ユーザーの場合と同様にパーミッションを割り当てることができます。また、チームは認証情報の所有権をスケーラブルに割り当てでき、インターフェースから複数回クリックして、同じ認証情報を同じユーザーに割り当てられないようにすることができます。"
+
+#: ../../source/teams.rst:13
+msgid "Access the Teams page by clicking **Teams** from the left navigation bar. The team list may be sorted and searched by **Name** or **Organization**."
+msgstr "左のナビゲーションバーから **チーム** をクリックして、チームページにアクセスします。チーム一覧は、**名前** 別または **組織** 別に分類および検索できます。"
+
+#: ../../source/teams.rst:18
+msgid "Clicking the Edit (|edit-button|) button next to the list of **Teams** allows you to edit details about the team. You can also review **Users** and  **Permissions** associated with this Team."
+msgstr "**チーム** のリストの横にある「編集」(|edit-button|) ボタンをクリックすると、そのチームの詳細を編集することができます。また、このチームに関連する **ユーザー** および **パーミッション** を確認することができます。"
+
+#: ../../source/teams.rst:26
+msgid "Create a Team"
+msgstr "チームの作成"
+
+#: ../../source/teams.rst:28
+msgid "To create a new Team:"
+msgstr "新規チームを作成するには、以下を実行します。"
+
+#: ../../source/teams.rst:30
+msgid "Click the **Add** button."
+msgstr "**追加** ボタンをクリックします。"
+
+#: ../../source/teams.rst:33
+msgid "|Teams - create new team|"
+msgstr "|Teams - create new team|"
+
+#: ../../source/teams.rst:37
+msgid "Enter the appropriate details into the following fields:"
+msgstr "以下のフィールドに該当する詳細を入力します。"
+
+#: ../../source/teams.rst:39
+msgid "Name"
+msgstr "名前"
+
+#: ../../source/teams.rst:40
+msgid "Description (optional)"
+msgstr "説明 (オプション)"
+
+#: ../../source/teams.rst:41
+msgid "Organization (Choose from an existing organization)"
+msgstr "組織 (既存の組織から選択します。)"
+
+#: ../../source/teams.rst:43
+msgid "Click **Save**."
+msgstr "**保存** をクリックします。"
+
+#: ../../source/teams.rst:45
+msgid "Once the Team is successfully created, |at| opens the **Details** dialog, which also allows you to review and edit your Team information."
+msgstr "チームが正常に作成されると、|at| は、**Details** ダイアログが開き、チーム情報の確認と編集も可能になります。"
+
+#: ../../source/teams.rst:47
+msgid "|Teams - example team successfully created|"
+msgstr "|Teams - example team successfully created|"
+
+#: ../../source/teams.rst:53
+msgid "Team Access"
+msgstr "チームのアクセス"
+
+#: ../../source/teams.rst:58
+msgid "This tab displays the list of Users that are members of this Team. This list may be searched by **Username**, **First Name**, or **Last Name**. For more information, refer to :ref:`ug_users`."
+msgstr "このタブには、このチームのメンバーであるユーザーの一覧が表示されます。この一覧は、**ユーザー名**、**名**、または **姓** で検索できます。詳細は、:ref:`ug_users` を参照してください。"
+
+#: ../../source/teams.rst:60
+msgid "|Teams - users list|"
+msgstr "|Teams - users list|"
+
+#: ../../source/teams.rst:68
+msgid "Add a User"
+msgstr "ユーザーの追加"
+
+#: ../../source/teams.rst:70
+msgid "In order to add a user to a team, the user must already be created. Refer to :ref:`ug_users_create` to create a user. Adding a user to a team adds them as a member only, specifying a role for the user on different resources can be done in the **Access** tab . To add existing users to the Team:"
+msgstr "チームにユーザーを追加するには、先にユーザーを作成しておく必要があります。ユーザーの作成については「:ref:`ug_users_create`」を参照してください。チームにユーザーを追加すると、メンバーとしてのみ追加されます。別のリソースでユーザーにロールを指定するには、**アクセス** タブで行います。既存のユーザーをチームに追加するには、以下を実行します。"
+
+#: ../../source/teams.rst:72
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "**アクセス** タブで **追加** ボタンをクリックします。"
+
+#: ../../source/teams.rst:74
+msgid "Follow the prompts to add user(s) and assign them to roles."
+msgstr "画面の指示に従って、ユーザーを追加し、ロールを割り当てます。"
+
+#: ../../source/teams.rst:76
+msgid "Click **Save** when done."
+msgstr "完了したら **保存** をクリックします。"
+
+#: ../../source/teams.rst:78
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "特定ユーザーのロールを削除するには、そのリソースの横にある「関連付けの解除」(x) ボタンをクリックします。"
+
+#: ../../source/teams.rst:82
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "これにより確認ダイアログが起動し、関連付けの解除を確定するように求められます。"
+
+#: ../../source/teams.rst:88
+msgid "Team Roles"
+msgstr "チームロール"
+
+#: ../../source/teams.rst:95
+msgid "Selecting the **Roles** view displays a list of the permissions that are currently available for this Team. The permissions list may be sorted and searched by **Resource Name**, **Type**, or **Role**."
+msgstr "**ロール** ビューを選択すると、現時点でこのチームに選択できるパーミッションの一覧が表示されます。このパーミッションの一覧は **リース名**、**タイプ**、または **ロール** タイプで並び替え、検索することができます。"
+
+#: ../../source/teams.rst:97
+msgid "|Teams - permissions list|"
+msgstr "|Teams - permissions list|"
+
+#: ../../source/teams.rst:101
+msgid "The set of privileges assigned to Teams that provide the ability to read, modify, and administer projects, inventories, and other |at| elements are permissions. By default, the Team is given the \"read\" permission (also called a role)."
+msgstr "プロジェクト、インベントリー、およびその他の |at| 要素の読み取り、変更、および管理を実行するためにチームに割り当てられる権限のセットはパーミッションとも呼ばれています。デフォルトでは、チームには「read」パーミッション (ロールとも呼ばれる) が割り当てられます。"
+
+#: ../../source/teams.rst:103
+msgid "Permissions must be set explicitly via an Inventory, Project, Job Template, or within the Organization view."
+msgstr "パーミッションは、インベントリー、プロジェクト、ジョブテンプレートで設定するか、組織ビュー内で明示的に設定する必要があります。"
+
+#: ../../source/teams.rst:107
+msgid "Add Team Permissions"
+msgstr "チームパーミッションの追加"
+
+#: ../../source/teams.rst:109
+msgid "To add permissions to a Team:"
+msgstr "パーミッションをチームに追加するには、以下を実行します。"
+
+#: ../../source/teams.rst:111
+msgid "Click the **Add** button, which opens the Add Permissions Wizard."
+msgstr "**追加** ボタンをクリックすると、「パーミッションの追加」ウィザードが開きます。"
+
+#: ../../source/teams.rst:116
+msgid "Click to select the object for which the team will have access and click **Next**."
+msgstr "クリックして、チームがアクセスできるオブジェクトを選択し、**次へ** をクリックします。"
+
+#: ../../source/teams.rst:118
+msgid "Click to select the resource to assign team roles and click **Next**."
+msgstr "クリックして、チームロールを割り当てるリソースを選択し、**次へ** をクリックします。"
+
+#: ../../source/teams.rst:122
+msgid "Click the checkbox beside the role to assign that role to your chosen type of resource. Different resources have different options available."
+msgstr "ロールの横にあるチェックボックスをクリックすると、選択したタイプのリソースにそのロールが割り当てられます。リソースによって利用できるオプションが異なります。"
+
+#: ../../source/teams.rst:127
+msgid "Click **Save** when done, and the Add Permissions Wizard closes to display the updated profile for the user with the roles assigned for each selected resource."
+msgstr "その後に **保存** をクリックすると「パーミッションの追加」ウィザードが閉じ、選択したリソースごとにロールが割り当てられたユーザーの更新後のプロファイルが表示されます。"
+
+#: ../../source/teams.rst:131
+msgid "To remove Permissions for a particular resource, click the disassociate (x) button next to its resource. This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "特定リソースのパーミッションを削除するには、そのリソースの隣にある関連付けの解除 (x) ボタンをクリックします。これにより、確認ダイアログが起動し、関連付けの解除を確定するように求められます。"
+
+#: ../../source/teams.rst:136
+msgid "You can also add teams, individual, or multiple users and assign them permissions at the object level (projects, inventories, job templates, and workflow templates) as well. This feature reduces the time for an organization to onboard many users at one time."
+msgstr "また、チーム、個々のユーザー、または複数のユーザーを追加して、オブジェクトレベル (プロジェクト、インベントリー、ジョブテンプレート、およびワークフローテンプレート) にパーミッションを割り当てることもできます。この機能により、組織が一度に多数のユーザーが参加する時間を短縮できます。"
+

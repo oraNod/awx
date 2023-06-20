@@ -1,0 +1,467 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/social_auth.rst:4
+msgid "Setting up Social Authentication"
+msgstr "소셜 인증 설정"
+
+#: ../../source/social_auth.rst:10
+msgid "Authentication methods help simplify logins for end users--offering single sign-ons using existing login information to sign into a third party website rather than creating a new login account specifically for that website."
+msgstr "인증 방법은 타사 웹 사이트에 대한 새 로그인 계정을 구체적으로 생성하는 대신 기존 로그인 정보를 사용하여 해당 웹 사이트에 로그인하는 Single Sign-On을 제공하므로 최종 사용자의 로그인을 간소화하는 데 도움이 됩니다."
+
+#: ../../source/social_auth.rst:12
+msgid "Account authentication can be configured in the |at| User Interface and saved to the PostgreSQL database. For instructions, refer to the :ref:`ag_configure_tower` section."
+msgstr "|at| 사용자 인터페이스에서 계정 인증을 구성하고 PostgreSQL 데이터베이스에 저장할 수 있습니다. 관련 지침은 :ref:`ag_configure_tower` 섹션을 참조하십시오."
+
+#: ../../source/social_auth.rst:14
+msgid "Account authentication in |at| can be configured to centrally use OAuth2, while enterprise-level account authentication can be configured for SAML, RADIUS, or even LDAP as a source for authentication information. See :ref:`ag_ent_auth`."
+msgstr "SAML, RADIUS 또는 LDAP를 인증 정보 소스로 사용하여 엔터프라이즈 수준 계정 인증을 구성할 수 있는 한편, 중앙에서 OAuth2를 사용하도록 |at|의 계정 인증을 구성할 수 있습니다. :ref:`ag_ent_auth`을 참조하십시오."
+
+#: ../../source/social_auth.rst:16
+msgid "For websites, such as Microsoft Azure, Google or GitHub, that provide account information, account information is often implemented using the OAuth standard. OAuth is a secure authorization protocol which is commonly used in conjunction with account authentication to grant 3rd party applications a \"session token\" allowing them to make API calls to providers on the user’s behalf."
+msgstr "계정 정보를 제공하는 Microsoft Azure, Google 또는 GitHub와 같은 웹 사이트의 경우 OAuth 표준을 사용하여 계정 정보가 구현되는 경우가 많습니다. OAuth는 일반적으로 계정 인증과 함께 사용되어 타사 애플리케이션에 \"세션 토큰\"을 부여함으로써 사용자 대신 공급자에 대한 API 호출을 수행할 수 있도록 하는 보안 권한 부여 프로토콜입니다."
+
+#: ../../source/social_auth.rst:18
+msgid "SAML (Security Assertion Markup Language) is an XML-based, open-standard data format for exchanging account authentication and authorization data between  an identity provider and a service provider."
+msgstr "SAML(Security Assertion Markup Language)은 ID 공급자와 서비스 공급자 간에 계정 인증 및 권한 부여 데이터를 교환하기 위한 XML 기반의 개방형 표준 데이터 형식입니다."
+
+#: ../../source/social_auth.rst:20
+msgid "The RADIUS distributed client/server system allows you to secure networks against unauthorized access and can be implemented in network environments requiring high levels of security while maintaining network access for remote users."
+msgstr "RADIUS 분산 클라이언트/서버 시스템은 무단 액세스로부터 네트워크를 보호할 수 있도록 하며, 원격 사용자를 위한 네트워크 액세스를 유지하면서 높은 수준의 보안이 필요한 네트워크 환경에서 구현할 수 있습니다."
+
+#: ../../source/social_auth.rst:25
+msgid "GitHub settings"
+msgstr "GitHub 설정"
+
+#: ../../source/social_auth.rst:30
+msgid "To set up social authentication for GitHub, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register the new application with GitHub at https://github.com/settings/developers. In order to register the application, you must supply it with your homepage URL, which is the **Callback URL** shown in the Details tab for the GitHub default settings page. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "GitHub에 대한 소셜 인증을 설정하려면 웹 애플리케이션의 OAuth2 키와 시크릿을 가져와야 합니다. 이 작업을 위해 먼저 https://github.com/settings/developers에서 애플리케이션을 GitHub에 등록해야 합니다. 애플리케이션을 등록하려면 GitHub 기본 설정 창의 세부 정보 탭에 표시된 **콜백 URL**인 홈페이지 URL을 제공해야 합니다. OAuth2 키(클라이언트 ID)와 시크릿(클라이언트 시크릿)은 |at| 사용자 인터페이스의 필수 필드를 제공하는 데 사용됩니다."
+
+#: ../../source/social_auth.rst:32
+#: ../../source/social_auth.rst:69
+#: ../../source/social_auth.rst:107
+#: ../../source/social_auth.rst:140
+#: ../../source/social_auth.rst:177
+#: ../../source/social_auth.rst:218
+#: ../../source/social_auth.rst:257
+msgid "Click **Settings** from the left navigation bar."
+msgstr "왼쪽 탐색 모음에서 **설정**을 클릭합니다."
+
+#: ../../source/social_auth.rst:34
+#: ../../source/social_auth.rst:71
+#: ../../source/social_auth.rst:109
+#: ../../source/social_auth.rst:142
+#: ../../source/social_auth.rst:179
+#: ../../source/social_auth.rst:220
+msgid "On the left side of the Settings window, click **GitHub settings** from the list of Authentication options."
+msgstr "설정 창 왼쪽의 인증 옵션 목록에서 **GitHub 설정**을 클릭합니다."
+
+#: ../../source/social_auth.rst:36
+msgid "Click the **GitHub Default** tab if not already selected."
+msgstr "아직 선택되지 않은 경우 **GitHub 기본값** 탭을 클릭합니다."
+
+#: ../../source/social_auth.rst:38
+msgid "The **GitHub OAuth2 Callback URL** field is already pre-populated and non-editable. Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub OAuth2 콜백 URL** 필드는 미리 채워져 있으며 편집할 수 없습니다. 애플리케이션이 등록되면 GitHub에 클라이언트 ID와 클라이언트 시크릿이 표시됩니다."
+
+#: ../../source/social_auth.rst:40
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub OAuth2 Key** field."
+msgstr "**편집**을 클릭하고 GitHub 클라이언트 ID를 복사하여 **GitHub OAuth2 키** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:42
+msgid "Copy and paste GitHub's Client Secret into the **GitHub OAuth2 Secret** field."
+msgstr "GitHub 클라이언트 시크릿을 복사하여 **GitHub OAuth2 시크릿** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:44
+#: ../../source/social_auth.rst:85
+#: ../../source/social_auth.rst:121
+#: ../../source/social_auth.rst:158
+#: ../../source/social_auth.rst:197
+#: ../../source/social_auth.rst:238
+#: ../../source/social_auth.rst:273
+msgid "For details on completing the mapping fields, see :ref:`ag_org_team_maps`."
+msgstr "매핑 필드를 작성하는 방법에 대한 자세한 내용은 :ref:`ag_org_team_maps`를 참조하십시오."
+
+#: ../../source/social_auth.rst:46
+#: ../../source/social_auth.rst:87
+#: ../../source/social_auth.rst:123
+#: ../../source/social_auth.rst:160
+#: ../../source/social_auth.rst:199
+#: ../../source/social_auth.rst:240
+#: ../../source/social_auth.rst:275
+msgid "Click **Save** when done."
+msgstr "완료되면 **저장**을 클릭합니다."
+
+#: ../../source/social_auth.rst:48
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub logo to allow logging in with those credentials."
+msgstr "인증이 올바르게 구성되었는지 확인하려면 |at|에서 로그아웃합니다. 이제 로그인 화면에 GitHub 로고가 표시되어 해당 인증 정보를 사용한 로그인을 허용합니다."
+
+#: ../../source/social_auth.rst:56
+msgid "GitHub Organization settings"
+msgstr "GitHub 조직 설정"
+
+#: ../../source/social_auth.rst:61
+msgid "When defining account authentication with either an organization or a team within an organization, you should use the specific organization and team settings. Account authentication can be limited by an organization as well as by a team within an organization."
+msgstr "조직 또는 조직 내의 팀으로 계정 인증을 정의하는 경우 특정 조직 및 팀 설정을 사용해야 합니다. 조직과 조직 내 팀으로 계정 인증을 제한할 수 있습니다."
+
+#: ../../source/social_auth.rst:63
+msgid "You can also choose to allow all by specifying non-organization or non-team based settings (as shown above)."
+msgstr "위에 표시된 것처럼 조직 또는 팀 기반이 아닌 설정을 지정하여 모두 허용하도록 선택할 수도 있습니다."
+
+#: ../../source/social_auth.rst:65
+msgid "You can limit users who can login to the controller by limiting only those in an organization or on a team within an organization."
+msgstr "조직 또는 조직 내 팀의 사용자로만 제한하여 컨트롤러에 로그인할 수 있는 사용자를 제한할 수 있습니다."
+
+#: ../../source/social_auth.rst:67
+msgid "To set up social authentication for a GitHub Organization, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register your organization-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "GitHub 조직에 대한 소셜 인증을 설정하려면 웹 애플리케이션의 OAuth2 키와 시크릿을 가져와야 합니다. 이 작업을 위해 먼저 ``https://github.com/organizations/<yourorg>/settings/applications``에서 조직 소유 애플리케이션을 등록해야 합니다. 애플리케이션을 등록하려면 세부 정보 탭에 표시된 **콜백 URL**인 권한 부여 콜백 URL을 제공해야 합니다. 각 키와 시크릿은 고유한 애플리케이션에 속해야 하며 여러 인증 백엔드 간에 공유하거나 재사용할 수 없습니다. OAuth2 키(클라이언트 ID)와 시크릿(클라이언트 시크릿)은 |at| 사용자 인터페이스의 필수 필드를 제공하는 데 사용됩니다."
+
+#: ../../source/social_auth.rst:73
+msgid "Click the **GitHub Organization** tab."
+msgstr "**GitHub 조직** 탭을 클릭합니다."
+
+#: ../../source/social_auth.rst:75
+msgid "The **GitHub Organization OAuth2 Callback URL** field is already pre-populated and non-editable."
+msgstr "**GitHub 조직 OAuth2 콜백 URL** 필드는 미리 채워져 있으며 편집할 수 없습니다."
+
+#: ../../source/social_auth.rst:77
+msgid "Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "애플리케이션이 등록되면 GitHub에 클라이언트 ID와 클라이언트 시크릿이 표시됩니다."
+
+#: ../../source/social_auth.rst:79
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub Organization OAuth2 Key** field."
+msgstr "**편집**을 클릭하고 GitHub 클라이언트 ID를 복사하여 **GitHub 조직 OAuth2 키** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:81
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Organization OAuth2 Secret** field."
+msgstr "GitHub 클라이언트 시크릿을 복사하여 **GitHub 조직 OAuth2 시크릿** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:83
+msgid "Enter the name of your GitHub organization, as used in your organization's URL (e.g., https://github.com/<yourorg>/) in the **GitHub Organization Name** field."
+msgstr "조직의 URL (예: https://github.com/<yourorg>/)에 사용된 대로 GitHub 조직의 이름을 **GitHub 조직 이름** 필드에 입력합니다."
+
+#: ../../source/social_auth.rst:89
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Organization logo to allow logging in with those credentials."
+msgstr "인증이 올바르게 구성되었는지 확인하려면 |at|에서 로그아웃합니다. 이제 로그인 화면에 GitHub 조직 로고가 표시되어 해당 인증 정보를 사용한 로그인을 허용합니다."
+
+#: ../../source/social_auth.rst:97
+msgid "GitHub Team settings"
+msgstr "GitHub 팀 설정"
+
+#: ../../source/social_auth.rst:103
+msgid "To set up social authentication for a GitHub Team, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register your team-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "GitHub 팀에 대한 소셜 인증을 설정하려면 웹 애플리케이션의 OAuth2 키와 시크릿을 가져와야 합니다. 이 작업을 위해 먼저 ``https://github.com/organizations/<yourorg>/settings/applications``에서 팀 소유 애플리케이션을 등록해야 합니다. 애플리케이션을 등록하려면 세부 정보 탭에 표시된 **콜백 URL**인 권한 부여 콜백 URL을 제공해야 합니다. 각 키와 시크릿은 고유한 애플리케이션에 속해야 하며 여러 인증 백엔드 간에 공유하거나 재사용할 수 없습니다. OAuth2 키(클라이언트 ID)와 시크릿(클라이언트 시크릿)은 |at| 사용자 인터페이스의 필수 필드를 제공하는 데 사용됩니다."
+
+#: ../../source/social_auth.rst:105
+#: ../../source/social_auth.rst:216
+msgid "Find the numeric team ID using the GitHub API: http://fabian-kostadinov.github.io/2015/01/16/how-to-find-a-github-team-id/. The Team ID will be used to supply a required field in the |at| User Interface."
+msgstr "GitHub API(http://fabian-kostadinov.github.io/2015/01/16/how-to-find-a-github-team-id/)를 사용하여 숫자 팀 ID를 찾습니다. 팀 ID는 |at| 사용자 인터페이스의 필수 필드를 제공하는 데 사용됩니다."
+
+#: ../../source/social_auth.rst:111
+msgid "Click the **GitHub Team** tab."
+msgstr "**GitHub 팀** 탭을 클릭합니다."
+
+#: ../../source/social_auth.rst:113
+msgid "The **GitHub Team OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub 팀 OAuth2 콜백 URL** 필드는 미리 채워져 있으며 편집할 수 없습니다.  애플리케이션이 등록되면 GitHub에 클라이언트 ID와 클라이언트 시크릿이 표시됩니다."
+
+#: ../../source/social_auth.rst:115
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub Team OAuth2 Key** field."
+msgstr "**편집**을 클릭하고 GitHub 클라이언트 ID를 복사하여 **GitHub 팀 OAuth2 키** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:117
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Team OAuth2 Secret** field."
+msgstr "GitHub 클라이언트 시크릿을 복사하여 **GitHub 팀 OAuth2 시크릿** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:119
+msgid "Copy and paste GitHub's team ID in the **GitHub Team ID** field."
+msgstr "**GitHub 팀 ID** 필드에 GitHub의 팀 ID를 복사하여 붙여넣습니다."
+
+#: ../../source/social_auth.rst:125
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Team logo to allow logging in with those credentials."
+msgstr "인증이 올바르게 구성되었는지 확인하려면 |at|에서 로그아웃합니다. 이제 로그인 화면에 GitHub 팀 로고가 표시되어 해당 인증 정보를 사용한 로그인을 허용합니다."
+
+#: ../../source/social_auth.rst:131
+msgid "GitHub Enterprise settings"
+msgstr "GitHub Enterprise 설정"
+
+#: ../../source/social_auth.rst:136
+msgid "To set up social authentication for a GitHub Enterprise, you will need to obtain a GitHub Enterprise URL, an API URL, OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "GitHub Enterprise에 대한 소셜 인증을 설정하려면 웹 애플리케이션의 GitHub Enterprise URL, API URL, OAuth2 키 및 시크릿을 가져와야 합니다. URL을 가져오려면 `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_의 GitHub 설명서를 참조하십시오. 키와 시크릿을 얻으려면 먼저 ``https://github.com/organizations/<yourorg>/settings/applications``에서 엔터프라이즈 소유 애플리케이션을 등록해야 합니다. 애플리케이션을 등록하려면 세부 정보 탭에 표시된 **콜백 URL**인 권한 부여 콜백 URL을 제공해야 합니다. github.com이 아닌 사이트에서 호스팅되므로 통신할 인증 어댑터를 지정해야 합니다."
+
+#: ../../source/social_auth.rst:138
+#: ../../source/social_auth.rst:175
+#: ../../source/social_auth.rst:214
+msgid "Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "각 키와 시크릿은 고유한 애플리케이션에 속해야 하며 여러 인증 백엔드 간에 공유하거나 재사용할 수 없습니다. OAuth2 키(클라이언트 ID)와 시크릿(클라이언트 시크릿)은 |at| 사용자 인터페이스의 필수 필드를 제공하는 데 사용됩니다."
+
+#: ../../source/social_auth.rst:144
+msgid "Click the **GitHub Enterprise** tab."
+msgstr "**GitHub Enterprise** 탭을 클릭합니다."
+
+#: ../../source/social_auth.rst:146
+msgid "The **GitHub Enterprise OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise OAuth2 콜백 URL** 필드는 미리 채워져 있으며 편집할 수 없습니다.  애플리케이션이 등록되면 GitHub에 클라이언트 ID와 클라이언트 시크릿이 표시됩니다."
+
+#: ../../source/social_auth.rst:148
+msgid "Click **Edit** to configure GitHub Enterprise settings."
+msgstr "**편집**을 클릭하여 GitHub Enterprise 설정을 구성합니다."
+
+#: ../../source/social_auth.rst:150
+msgid "In the **GitHub Enterprise URL** field, enter the hostname of the GitHub Enterprise instance (e.g., https://github.example.com)."
+msgstr "**GitHub Enterprise URL** 필드에 GitHub Enterprise 인스턴스의 호스트 이름(예: https://github.example.com)을 입력합니다."
+
+#: ../../source/social_auth.rst:152
+msgid "In the **GitHub Enterprise API URL** field, enter the API URL of the GitHub Enterprise instance (e.g., https://github.example.com/api/v3)"
+msgstr "**GitHub Enterprise API URL** 필드에 GitHub Enterprise 인스턴스의 API URL(예: https://github.example.com/api/v3)을 입력합니다."
+
+#: ../../source/social_auth.rst:154
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise OAuth2 Key** field."
+msgstr "GitHub 클라이언트 ID를 복사하여 **GitHub Enterprise OAuth2 키** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:156
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise OAuth2 Secret** field."
+msgstr "GitHub 클라이언트 시크릿을 복사하여  **GitHub Enterprise OAuth2 시크릿** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:162
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise logo to allow logging in with those credentials."
+msgstr "인증이 올바르게 구성되었는지 확인하려면 |at|에서 로그아웃합니다. 이제 로그인 화면에 GitHub Enterprise 로고가 표시되어 해당 인증 정보를 사용한 로그인을 허용합니다."
+
+#: ../../source/social_auth.rst:168
+msgid "GitHub Enterprise Organization settings"
+msgstr "GitHub Enterprise 조직 설정"
+
+#: ../../source/social_auth.rst:173
+msgid "To set up social authentication for a GitHub Enterprise Org, you will need to obtain a GitHub Enterprise Org URL, an Org API URL, an Org OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise organization-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "GitHub Enterprise Org에 대한 소셜 인증을 설정하려면 GitHub Enterprise 조직 URL, 조직 API URL, 조직 OAuth2 키 및 웹 애플리케이션의 시크릿을 가져와야 합니다. URL을 가져오려면 `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_의 GitHub 설명서를 참조하십시오. 키와 시크릿을 얻으려면 먼저 ``https://github.com/organizations/<yourorg>/settings/applications`` 에서 엔터프라이즈 조직 소유 애플리케이션을 등록해야 합니다. 애플리케이션을 등록하려면 세부 정보 탭에 표시된 **콜백 URL**인 권한 부여 콜백 URL을 제공해야 합니다. github.com이 아닌 사이트에서 호스팅되므로 통신할 인증 어댑터를 지정해야 합니다."
+
+#: ../../source/social_auth.rst:181
+msgid "Click the **GitHub Enterprise Organization** tab."
+msgstr "**GitHub Enterprise 조직** 탭을 클릭합니다."
+
+#: ../../source/social_auth.rst:183
+msgid "The **GitHub Enterprise Organization OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise 조직 OAuth2 콜백 URL** 필드는 미리 채워져 있으며 편집할 수 없습니다.  애플리케이션이 등록되면 GitHub에 클라이언트 ID와 클라이언트 시크릿이 표시됩니다."
+
+#: ../../source/social_auth.rst:185
+msgid "Click **Edit** to configure GitHub Enterprise Organization settings."
+msgstr "**편집**을 클릭하여 GitHub Enterprise 조직 설정을 구성합니다."
+
+#: ../../source/social_auth.rst:187
+msgid "In the **GitHub Enterprise Organization URL** field, enter the hostname of the GitHub Enterprise Org instance (e.g., https://github.orgexample.com)."
+msgstr "**GitHub Enterprise 조직 URL** 필드에 GitHub Enterprise 조직 인스턴스의 호스트 이름(예: https://github.orgexample.com)을 입력합니다."
+
+#: ../../source/social_auth.rst:189
+msgid "In the **GitHub Enterprise Organization API URL** field, enter the API URL of the GitHub Enterprise Org instance (e.g., https://github.orgexample.com/api/v3)"
+msgstr "**GitHub Enterprise 조직 API URL** 필드에 GitHub Enterprise 조직 인스턴스의 API URL(예: https://github.orgexample.com/api/v3)을 입력합니다."
+
+#: ../../source/social_auth.rst:191
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise Organization OAuth2 Key** field."
+msgstr "GitHub 클라이언트 ID를 복사하여 **GitHub Enterprise 조직 OAuth2 키** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:193
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise Organization OAuth2 Secret** field."
+msgstr "GitHub 클라이언트 시크릿을 복사하여 **GitHub Enterprise 조직 OAuth2 시크릿** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:195
+msgid "Enter the name of your GitHub Enterprise organization, as used in your organization's URL (e.g., https://github.com/<yourorg>/) in the **GitHub Enterprise Organization Name** field."
+msgstr "조직의 URL (예: https://github.com/<yourorg>/) 에서 사용되는 GitHub Enterprise 조직의 이름을 **GitHub Enterprise 조직 이름** 필드에 입력합니다."
+
+#: ../../source/social_auth.rst:201
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise Organization logo to allow logging in with those credentials."
+msgstr "인증이 올바르게 구성되었는지 확인하려면 |at|에서 로그아웃합니다. 이제 로그인 화면에 GitHub Enterprise 조직 로고가 표시되어 해당 인증 정보를 사용하여 로그인할 수 있습니다."
+
+#: ../../source/social_auth.rst:207
+msgid "GitHub Enterprise Team settings"
+msgstr "GitHub Enterprise 팀 설정"
+
+#: ../../source/social_auth.rst:212
+msgid "To set up social authentication for a GitHub Enterprise teams, you will need to obtain a GitHub Enterprise Org URL, an Org API URL, an Org OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise team-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "GitHub Enterprise 팀에 대한 소셜 인증을 설정하려면 GitHub Enterprise 조직 URL, 조직 API URL, 조직 OAuth2 키 및 웹 애플리케이션의 시크릿을 가져와야 합니다. URL을 가져오려면 `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_의 GitHub 설명서를 참조하십시오. 키와 시크릿을 얻으려면 먼저 ``https://github.com/organizations/<yourorg>/settings/applications``에서 엔터프라이즈 팀 소유 애플리케이션을 등록해야 합니다. 애플리케이션을 등록하려면 세부 정보 탭에 표시된 **콜백 URL**인 권한 부여 콜백 URL을 제공해야 합니다. github.com이 아닌 사이트에서 호스팅되므로 통신할 인증 어댑터를 지정해야 합니다."
+
+#: ../../source/social_auth.rst:222
+msgid "Click the **GitHub Enterprise Team** tab."
+msgstr "**GitHub Enterprise 팀** 탭을 클릭합니다."
+
+#: ../../source/social_auth.rst:224
+msgid "The **GitHub Enterprise Team OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise 팀 OAuth2 콜백 URL** 필드는 미리 채워져 있으며 편집할 수 없습니다.  애플리케이션이 등록되면 GitHub에 클라이언트 ID와 클라이언트 시크릿이 표시됩니다."
+
+#: ../../source/social_auth.rst:226
+msgid "Click **Edit** to configure GitHub Enterprise Team settings."
+msgstr "**편집**을 클릭하여 GitHub Enterprise 팀 설정을 구성합니다."
+
+#: ../../source/social_auth.rst:228
+msgid "In the **GitHub Enterprise Team URL** field, enter the hostname of the GitHub Enterprise team instance (e.g., https://github.teamexample.com)."
+msgstr "**GitHub Enterprise 팀 URL** 필드에 GitHub Enterprise 팀 인스턴스의 호스트 이름을 입력합니다(예: https://github.teamexample.com)."
+
+#: ../../source/social_auth.rst:230
+msgid "In the **GitHub Enterprise Team API URL** field, enter the API URL of the GitHub Enterprise team instance (e.g., https://github.teamexample.com/api/v3)"
+msgstr "**GitHub Enterprise 팀 API URL** 필드에 GitHub Enterprise 팀 인스턴스의 API URL(예: https://github.teamexample.com/api/v3)을 입력합니다."
+
+#: ../../source/social_auth.rst:232
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise Team OAuth2 Key** field."
+msgstr "**편집**을 클릭하고 GitHub 클라이언트 ID를 복사하여 **GitHub Enterprise 팀 OAuth2 키** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:234
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise Team OAuth2 Secret** field."
+msgstr "GitHub 클라이언트 시크릿을 복사하여 **GitHub  Enterprise 팀 OAuth2 시크릿** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:236
+msgid "Copy and paste GitHub's team ID in the **GitHub Enterprise Team ID** field."
+msgstr "**GitHub Enterprise 팀 ID** 필드에 GitHub의 팀 ID를 복사하여 붙여넣습니다."
+
+#: ../../source/social_auth.rst:242
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise Teams logo to allow logging in with those credentials."
+msgstr "인증이 올바르게 구성되었는지 확인하려면 |at|에서 로그아웃합니다. 이제 로그인 화면에 GitHub Enterprise 팀 로고가 표시되어 해당 인증 정보를 사용한 로그인을 허용합니다."
+
+#: ../../source/social_auth.rst:250
+msgid "Google OAuth2 settings"
+msgstr "Google OAuth2 설정"
+
+#: ../../source/social_auth.rst:255
+msgid "To set up social authentication for Google, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first create a project and set it up with Google. Refer to https://support.google.com/googleapi/answer/6158849 for instructions. If you already completed the setup process, you can access those credentials by going to the Credentials section of the `Google API Manager Console <https://console.developers.google.com/>`_. The OAuth2 key (Client ID) and secret (Client secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "Google에 대한 소셜 인증을 설정하려면 웹 애플리케이션의 OAuth2 키와 시크릿을 가져와야 합니다. 이 작업을 위해 먼저 프로젝트를 생성하고 Google로 설정해야 합니다. 관련 지침은 https://support.google.com/googleapi/answer/6158849를 참조하십시오. 설정 프로세스를 이미 완료한 경우 `Google API Manager Console <https://console.developers.google.com/>`_의 인증 정보 섹션으로 이동하여 해당 인증 정보에 액세스할 수 있습니다. OAuth2 키(클라이언트 ID)와 시크릿(클라이언트 시크릿)은 |at| 사용자 인터페이스의 필수 필드를 제공하는 데 사용됩니다."
+
+#: ../../source/social_auth.rst:259
+msgid "On the left side of the Settings window, click **Google OAuth 2 settings** from the list of Authentication options."
+msgstr "설정 창 왼쪽의 인증 옵션 목록에서 **Google OAuth2 설정**을 클릭합니다."
+
+#: ../../source/social_auth.rst:261
+msgid "The **Google OAuth2 Callback URL** field is already pre-populated and non-editable."
+msgstr "**Google OAuth2 콜백 URL** 필드는 미리 채워져 있으며 편집할 수 없습니다."
+
+#: ../../source/social_auth.rst:263
+msgid "The following fields are also pre-populated. If not, use the credentials Google supplied during the web application setup process, and look for the values with the same format as the ones shown in the example below:"
+msgstr "다음 필드도 미리 채워져 있습니다. 그렇지 않으면 웹 애플리케이션 설정 프로세스 중에 Google에서 제공한 인증 정보를 사용하고 아래 예제에 표시된 것과 동일한 형식의 값을 찾습니다."
+
+#: ../../source/social_auth.rst:265
+msgid "Click **Edit** and copy and paste Google's Client ID into the **Google OAuth2 Key** field."
+msgstr "**편집**을 클릭하고 Google 클라이언트 ID를 복사하여 **Google OAuth2 키** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:267
+msgid "Copy and paste Google's Client secret into the **Google OAuth2 Secret** field."
+msgstr "Google 클라이언트 시크릿을 복사하여 **Google OAuth2 시크릿** 필드에 붙여넣습니다."
+
+#: ../../source/social_auth.rst:271
+msgid "To complete the remaining optional fields, refer to the tooltips in each of the fields for instructions and required format."
+msgstr "나머지 선택적 필드를 작성하기 위한 지침과 필수 형식은 각 필드의 툴팁을 참조하십시오."
+
+#: ../../source/social_auth.rst:277
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the Google logo to indicate it as a alternate method of logging into |at|."
+msgstr "인증이 올바르게 구성되었는지 확인하려면 |at|에서 로그아웃합니다. 이제 로그인 화면에 Google 로고가 표시되어 Google이 |at|에 로그인하는 대체 방법임을 나타냅니다."
+
+#: ../../source/social_auth.rst:288
+msgid "Organization and Team Mapping"
+msgstr "조직 및 팀 매핑"
+
+#: ../../source/social_auth.rst:297
+msgid "Organization mapping"
+msgstr "조직 매핑"
+
+#: ../../source/social_auth.rst:299
+msgid "You will need to control which users are placed into which controller organizations based on their username and email address (mapping out your organization admins/users from social or enterprise-level authentication accounts)."
+msgstr "사용자 이름과 이메일 주소를 기준으로 컨트롤러 조직에 배치되는 사용자를 제어해야 합니다(소셜 또는 엔터프라이즈 수준 인증 계정에서 조직 관리자/사용자 매핑)."
+
+#: ../../source/social_auth.rst:301
+msgid "Dictionary keys are organization names. Organizations will be created, if not already present and if the license allows for multiple organizations. Otherwise, the single default organization is used regardless of the key."
+msgstr "사전 키는 조직 이름입니다. 아직 존재하지 않는 경우, 라이센스가 여러 조직을 허용하면 조직이 생성됩니다. 그렇지 않으면 키에 관계없이 단일 기본 조직이 사용됩니다."
+
+#: ../../source/social_auth.rst:303
+msgid "Values are dictionaries defining the options for each organization's membership.  For each organization, it is possible to specify which users are automatically users of the organization and also which users can administer the organization."
+msgstr "값은 각 조직의 멤버십 옵션을 정의하는 사전입니다.  각 조직에서 자동으로 조직의 사용자가 되는 사용자와 조직을 관리할 수 있는 사용자를 지정할 수 있습니다."
+
+#: ../../source/social_auth.rst:305
+msgid "**admins**: None, True/False, string or list/tuple of strings."
+msgstr "**admins**: 없음, True/False, 문자열 또는 문자열 목록/튜플."
+
+#: ../../source/social_auth.rst:307
+msgid "If **None**, organization admins will not be updated."
+msgstr "**없음**인 경우 조직 관리자가 업데이트되지 않습니다."
+
+#: ../../source/social_auth.rst:308
+msgid "If **True**, all users using account authentication will automatically be added as admins of the organization."
+msgstr "**True**인 경우 계정 인증을 사용하는 모든 사용자가 조직 관리자로 자동 추가됩니다."
+
+#: ../../source/social_auth.rst:309
+msgid "If **False**, no account authentication users will be automatically added as admins of the organization."
+msgstr "**False**인 경우 계정 인증을 사용하는 사용자가 조직 관리자로 자동 추가되지 않습니다."
+
+#: ../../source/social_auth.rst:310
+msgid "If a string or list of strings, specifies the usernames and emails for users who will be added to the organization. Strings beginning and ending with ``/`` will be compiled into regular expressions; modifiers ``i`` (case-insensitive) and ``m`` (multi-line) may be specified after the ending ``/``."
+msgstr "문자열 또는 문자열 목록인 경우 조직에 추가할 사용자의 사용자 이름과 이메일을 지정합니다. ``/``로 시작하고 끝나는 문자열은 정규식으로 컴파일됩니다. 끝 ``/`` 뒤에 ``i`` 한정자(대소문자 구분 안 함)와 ``m`` 한정자(여러 행)를 지정할 수 있습니다."
+
+#: ../../source/social_auth.rst:312
+msgid "**remove_admins**: True/False. Defaults to **True**."
+msgstr "**remove_admins**: True/False. 기본값은 **True**입니다."
+
+#: ../../source/social_auth.rst:314
+msgid "When **True**, a user who does not match is removed from the organization's administrative list."
+msgstr "**True**인 경우 일치하지 않는 사용자가 조직의 관리 목록에서 제거됩니다."
+
+#: ../../source/social_auth.rst:316
+msgid "**users**: None, True/False, string or list/tuple of strings. Same rules apply as for **admins**."
+msgstr "**users**: 없음, True/False, 문자열 또는 문자열 목록/튜플. **admins**와 동일한 규칙이 적용됩니다."
+
+#: ../../source/social_auth.rst:318
+msgid "**remove_users**: True/False. Defaults to **True**. Same rules apply as for **remove_admins**."
+msgstr "**remove_users**: True/False. 기본값은 **True**입니다. **remove_admins**와 동일한 규칙이 적용됩니다."
+
+#: ../../source/social_auth.rst:337
+msgid "Organization mappings may be specified separately for each account authentication backend.  If defined, these configurations will take precedence over the global configuration above."
+msgstr "각 계정 인증 백엔드에 대해 조직 매핑을 별도로 지정할 수 있습니다.  정의된 경우 이러한 구성이 위의 글로벌 구성보다 우선합니다."
+
+#: ../../source/social_auth.rst:349
+msgid "Team mapping"
+msgstr "팀 매핑"
+
+#: ../../source/social_auth.rst:351
+msgid "Team mapping is the mapping of team members (users) from social auth accounts. Keys are team names (will be created if not present). Values are dictionaries of options for each team's membership, where each can contain the following parameters:"
+msgstr "팀 매핑은 소셜 인증 계정의 팀 멤버(사용자) 매핑입니다. 키는 팀 이름입니다(존재하지 않을 경우 생성됨). 값은 각 팀의 멤버십 옵션을 정의하는 사전이며, 옵션별로 다음 매개변수를 포함할 수 있습니다."
+
+#: ../../source/social_auth.rst:353
+msgid "**organization**: string. The name of the organization to which the team belongs.  The team will be created if the combination of organization and team name does not exist.  The organization will first be created if it does not exist.  If the license does not allow for multiple organizations, the team will always be assigned to the single default organization."
+msgstr "**organization**: 문자열. 팀이 속한 조직의 이름입니다.  조직과 팀 이름의 조합이 없는 경우 팀이 생성됩니다.  조직이 없는 경우 먼저 생성됩니다.  라이센스가 여러 조직을 허용하지 않는 경우 팀은 항상 단일 기본 조직에 할당됩니다."
+
+#: ../../source/social_auth.rst:359
+msgid "**users**: None, True/False, string or list/tuple of strings."
+msgstr "**users**: 없음, True/False, 문자열 또는 문자열 목록/튜플."
+
+#: ../../source/social_auth.rst:361
+msgid "If **None**, team members will not be updated."
+msgstr "**없음**인 경우 팀 멤버가 업데이트되지 않습니다."
+
+#: ../../source/social_auth.rst:362
+msgid "If **True**/**False**, all social auth users will be added/removed as team members."
+msgstr "**True**/**False**인 경우 모든 소셜 인증 사용자가 팀 멤버로 추가/제거됩니다."
+
+#: ../../source/social_auth.rst:363
+msgid "If a string or list of strings, specifies expressions used to match users. User will be added as a team member if the username or email matches. Strings beginning and ending with ``/`` will be compiled into regular expressions; modifiers ``i`` (case-insensitive) and ``m`` (multi-line) may be specified after the ending ``/``."
+msgstr "문자열 또는 문자열 목록인 경우 사용자 일치에 사용되는 식을 지정합니다. 사용자 이름 또는 이메일이 일치하는 경우 사용자가 팀 멤버로 추가됩니다. ``/``로 시작하고 끝나는 문자열은 정규식으로 컴파일됩니다. 끝 ``/`` 뒤에 ``i`` 한정자(대소문자 구분 안 함)와 ``m`` 한정자(여러 행)를 지정할 수 있습니다."
+
+#: ../../source/social_auth.rst:365
+msgid "**remove**: True/False. Defaults to **True**. When **True**, a user who does not match the rules above is removed from the team."
+msgstr "**remove**: True/False. 기본값은 **True**입니다. **True**인 경우 위의 규칙과 일치하지 않는 사용자가 팀에서 제거됩니다."
+
+#: ../../source/social_auth.rst:383
+msgid "Team mappings may be specified separately for each account authentication backend, based on which of these you setup.  When defined, these configurations take precedence over the the global configuration above."
+msgstr "설정한 규칙에 따라 각 계정 인증 백엔드에 대해 팀 매핑을 별도로 지정할 수 있습니다.  정의된 경우 이러한 구성이 위의 글로벌 구성보다 우선합니다."
+
+#: ../../source/social_auth.rst:393
+msgid "Uncomment the line below (i.e. set ``SOCIAL_AUTH_USER_FIELDS`` to an empty list) to prevent new user accounts from being created.  Only users who have previously logged in to the controller using social or enterprise-level authentication or have a user account with a matching email address will be able to login."
+msgstr "새 사용자 계정이 생성되지 않도록 하려면 아래 행(즉, ``SOCIAL_AUTH_USER_FIELDS``를 빈 목록으로 설정)의 주석을 제거합니다.  이전에 소셜 또는 엔터프라이즈 수준 인증을 사용하여 컨트롤러에 로그인했거나 일치하는 이메일 주소의 사용자 계정을 보유한 사용자만 로그인할 수 있습니다."
+

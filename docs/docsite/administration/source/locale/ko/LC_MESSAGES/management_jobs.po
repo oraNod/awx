@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/management_jobs.rst:4
+msgid "Management Jobs"
+msgstr "관리 작업"
+
+#: ../../source/management_jobs.rst:12
+msgid "**Management Jobs** assist in the cleaning of old data from the controller, including system tracking information, tokens, job histories, and activity streams. You can use this if you have specific retention policies or need to decrease the storage used by your controller database. Click **Management Jobs** from the left navigation bar."
+msgstr "**관리 작업**은 시스템 추적 정보, 토큰, 작업 기록, 활동 스트림을 포함하여 컨트롤러의 이전 데이터를 정리하는 데 도움이 됩니다. 특정 보존 정책이 있거나 컨트롤러 데이터베이스에서 사용하는 스토리지를 줄여야 하는 경우 이 기능을 사용할 수 있습니다. 왼쪽 탐색 모음에서 **관리 작업**을 클릭합니다."
+
+#: ../../source/management_jobs.rst:14
+msgid "|management jobs|"
+msgstr "|management jobs|"
+
+#: ../../source/management_jobs.rst:18
+msgid "Several job types are available for you to schedule and launch:"
+msgstr "다음과 같은 몇 가지 작업 유형을 스케줄링하고 시작할 수 있습니다."
+
+#: ../../source/management_jobs.rst:20
+msgid "**Cleanup Activity Stream**: Remove activity stream history older than a specified number of days"
+msgstr "**활동 스트림 정리**: 지정된 일수보다 오래된 활동 스트림 기록을 제거합니다."
+
+#: ../../source/management_jobs.rst:21
+msgid "**Cleanup Expired OAuth 2 Tokens**:  Remove expired OAuth 2 access tokens and refresh tokens"
+msgstr "**만료된 OAuth2 토큰 정리**: 만료된 OAuth2 액세스 토큰과 새로 고침 토큰을 제거합니다."
+
+#: ../../source/management_jobs.rst:22
+msgid "**Cleanup Expired Sessions**:   Remove expired browser sessions from the database"
+msgstr "**만료된 세션 정리**: 데이터베이스에서 만료된 브라우저 세션을 제거합니다."
+
+#: ../../source/management_jobs.rst:23
+msgid "**Cleanup Job Details**: Remove job history older than a specified number of days"
+msgstr "**작업 세부 정보 정리**: 지정된 일수보다 오래된 작업 기록을 제거합니다."
+
+#: ../../source/management_jobs.rst:26
+msgid "Removing Old Activity Stream Data"
+msgstr "이전 활동 스트림 데이터 제거"
+
+#: ../../source/management_jobs.rst:32
+msgid "To remove older activity stream data, click on the launch (|launch|) button beside **Cleanup Activity Stream**."
+msgstr "이전 활동 스트림 데이터를 제거하려면 **활동 스트림 정리** 옆에 있는 시작(|launch|) 버튼을 클릭합니다."
+
+#: ../../source/management_jobs.rst:34
+msgid "|activity stream launch - remove activity stream launch|"
+msgstr "|activity stream launch - remove activity stream launch|"
+
+#: ../../source/management_jobs.rst:38
+#: ../../source/management_jobs.rst:147
+msgid "Enter the number of days of data you would like to save and click **Launch**."
+msgstr "저장하려는 데이터의 일수를 입력하고 **시작**을 클릭합니다."
+
+#: ../../source/management_jobs.rst:43
+msgid "Scheduling"
+msgstr "스케줄링"
+
+#: ../../source/management_jobs.rst:45
+msgid "To review or set a schedule for purging data marked for deletion, click on the |schedule| button."
+msgstr "삭제로 표시된 데이터의 삭제 스케줄을 검토하거나 설정하려면 |schedule| 버튼을 클릭합니다."
+
+#: ../../source/management_jobs.rst:50
+msgid "|activity stream launch - remove activity stream schedule|"
+msgstr "|activity stream launch - remove activity stream schedule|"
+
+#: ../../source/management_jobs.rst:54
+msgid "Note that you can turn this scheduled management job on and off easily using the **ON/OFF** toggle button to the left of the Job Name."
+msgstr "작업 이름 왼쪽에 있는 **켜짐/꺼짐** 토글 버튼을 사용하여 이 스케줄링된 관리 작업을 쉽게 켜거나 끌 수 있습니다."
+
+#: ../../source/management_jobs.rst:56
+msgid "Click on the Job Name, in this example \"Cleanup Activity Schedule\", to review or edit the schedule settings. You can also use the **Add** button to create a new schedule for this management job."
+msgstr "작업 이름(이 예제에서는 \"활동 스케줄 정리\")을 클릭하여 스케줄 설정을 검토하거나 편집합니다. **추가** 버튼을 사용하여 이 관리 작업의 새 스케줄을 생성할 수도 있습니다."
+
+#: ../../source/management_jobs.rst:60
+msgid "Enter the appropriate details into the following fields and click **Save**:"
+msgstr "다음 필드에 적절한 세부 정보를 입력하고 **저장**을 클릭합니다."
+
+#: ../../source/management_jobs.rst:62
+msgid "Name (required)"
+msgstr "이름(필수)"
+
+#: ../../source/management_jobs.rst:63
+msgid "Start Date (required)"
+msgstr "시작일(필수)"
+
+#: ../../source/management_jobs.rst:64
+msgid "Start Time (required)"
+msgstr "시작 시간(필수)"
+
+#: ../../source/management_jobs.rst:65
+msgid "Local Time Zone (the entered Start Time should be in this timezone)"
+msgstr "현지 시간대(입력된 시작 시간은 이 시간대여야 함)"
+
+#: ../../source/management_jobs.rst:66
+msgid "Repeat Frequency (the appropriate options display as the update frequency is modified.)"
+msgstr "반복 빈도(업데이트 빈도를 수정하면 해당 옵션이 표시됨)"
+
+#: ../../source/management_jobs.rst:68
+msgid "The **Details** tab displays a description of the schedule and a list of the scheduled occurrences in the selected Local Time Zone."
+msgstr "**세부 정보** 탭에는 스케줄 설명과 스케줄링된 발생 목록이 선택한 현지 시간대로 표시됩니다."
+
+#: ../../source/management_jobs.rst:72
+msgid "Jobs are scheduled in UTC. Repeating jobs that runs at a specific time of day may move relative to a local timezone when Daylight Saving Time shifts occur."
+msgstr "작업은 UTC로 스케줄링됩니다. 특정 시간에 실행되는 반복 작업은 일광 절약 시간제로 변경 시 현지 시간대를 기준으로 이동할 수 있습니다."
+
+#: ../../source/management_jobs.rst:78
+msgid "Notifications"
+msgstr "알림"
+
+#: ../../source/management_jobs.rst:80
+msgid "To set or review notifications associated with this management job, click the Notifications ( |notify| ) icon."
+msgstr "이 관리 작업과 연결된 알림을 설정하거나 검토하려면 알림(|notify|) 아이콘을 클릭합니다."
+
+#: ../../source/management_jobs.rst:87
+msgid "If none exist, click the **Notifications** link to create a new notification. Notification types include:"
+msgstr "알림이 없는 경우 **알림** 링크를 클릭하여 새 알림을 생성합니다. 알림 유형은 다음과 같습니다."
+
+#: ../../source/management_jobs.rst:89
+msgid "Email"
+msgstr "이메일"
+
+#: ../../source/management_jobs.rst:90
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../source/management_jobs.rst:91
+msgid "IRC"
+msgstr "IRC"
+
+#: ../../source/management_jobs.rst:92
+msgid "Mattermost"
+msgstr "Mattermost"
+
+#: ../../source/management_jobs.rst:93
+msgid "PagerDuty"
+msgstr "PagerDuty"
+
+#: ../../source/management_jobs.rst:94
+msgid "Rocket.Chat"
+msgstr "Rocket.Chat"
+
+#: ../../source/management_jobs.rst:95
+msgid "Slack"
+msgstr "Slack"
+
+#: ../../source/management_jobs.rst:96
+msgid "Twilio"
+msgstr "Twilio"
+
+#: ../../source/management_jobs.rst:97
+msgid "Webhook"
+msgstr "Webhook"
+
+#: ../../source/management_jobs.rst:101
+msgid "Refer to :ref:`ug_notifications` in the |atu| for more information."
+msgstr "자세한 내용은 |atu|에서 :ref:`ug_notifications`를 참조하십시오."
+
+#: ../../source/management_jobs.rst:105
+msgid "Cleanup Expired OAuth2 Tokens"
+msgstr "만료된 OAuth2 토큰 정리"
+
+#: ../../source/management_jobs.rst:111
+msgid "To remove expired OAuth2 tokens, click on the launch (|launch|) button beside **Cleanup Expired OAuth2 Tokens**."
+msgstr "만료된 OAuth2 토큰을 제거하려면 **만료된 OAuth2 토큰 정리** 옆에 있는 시작(|launch|) 버튼을 클릭합니다."
+
+#: ../../source/management_jobs.rst:113
+msgid "You can review or set a schedule for cleaning up expired OAuth2 tokens by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "활동 스트림 관리 작업에 대해 설명한 것과 동일한 절차를 수행하여 만료된 OAuth2 토큰 정리 스케줄을 검토하거나 설정할 수 있습니다. 자세한 내용은 :ref:`ag_mgmt_job_schedule`을 참조하십시오."
+
+#: ../../source/management_jobs.rst:115
+#: ../../source/management_jobs.rst:129
+#: ../../source/management_jobs.rst:155
+msgid "You can also set or review notifications associated with this management job the same way as described in :ref:`ag_mgmt_job_notify` for activity stream management jobs, and refer to :ref:`ug_notifications` in the |atu| for more detail."
+msgstr "활동 스트림 관리 작업에 대해 :ref:`ag_mgmt_job_notify`에서 설명한 것과 동일한 방식으로 이 관리 작업과 연결된 알림을 설정하거나 검토할 수 있습니다. 자세한 내용은 |atu|에서 :ref:`ug_notifications`를 참조하십시오."
+
+#: ../../source/management_jobs.rst:119
+msgid "Cleanup Expired Sessions"
+msgstr "만료된 세션 정리"
+
+#: ../../source/management_jobs.rst:125
+msgid "To remove expired sessions, click on the launch (|launch|) button beside **Cleanup Expired Sessions**."
+msgstr "만료된 세션을 제거하려면 **만료된 세션 정리** 옆에 있는 시작(|launch|) 버튼을 클릭합니다."
+
+#: ../../source/management_jobs.rst:127
+msgid "You can review or set a schedule for cleaning up expired sessions by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "활동 스트림 관리 작업에 대해 설명한 것과 동일한 절차를 수행하여 만료된 세션 정리 스케줄을 검토하거나 설정할 수 있습니다. 자세한 내용은 :ref:`ag_mgmt_job_schedule`을 참조하십시오."
+
+#: ../../source/management_jobs.rst:133
+msgid "Removing Old Job History"
+msgstr "이전 작업 기록 제거"
+
+#: ../../source/management_jobs.rst:139
+msgid "To remove job history older than a specified number of days, click on the launch (|launch|) button beside **Cleanup Job Details**."
+msgstr "지정된 일수보다 오래된 작업 기록을 제거하려면 **작업 세부 정보 정리** 옆에 있는 시작(|launch|) 버튼을 클릭합니다."
+
+#: ../../source/management_jobs.rst:143
+msgid "|management jobs - cleanup job launch|"
+msgstr "|management jobs - cleanup job launch|"
+
+#: ../../source/management_jobs.rst:151
+msgid "The initial job run for a controller resource (e.g. Projects, Job Templates) is excluded from **Cleanup Job Details**, regardless of retention value."
+msgstr "컨트롤러 리소스(예: 프로젝트, 작업 템플릿)에 대한 초기 작업 실행은 보존 값에 관계없이 **작업 세부 정보 정리**에서 제외됩니다."
+
+#: ../../source/management_jobs.rst:153
+msgid "You can review or set a schedule for cleaning up old job history by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "활동 스트림 관리 작업에 대해 설명한 것과 동일한 절차를 수행하여 이전 작업 기록 정리 스케줄을 검토하거나 설정할 수 있습니다. 자세한 내용은 :ref:`ag_mgmt_job_schedule`을 참조하십시오."
+

@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/scheduling.rst:4
+msgid "Schedules"
+msgstr "调度"
+
+#: ../../source/scheduling.rst:13
+msgid "You can access all your configured schedules by clicking **Schedules** from the left navigation bar. The schedules list may be sorted by any of the attributes from each column using the directional arrows. You can also search by name, date, or the name of the month in which a schedule runs."
+msgstr "您可以点左面导航栏中的 **Schedules** 来访问您配置的所有调度。可以使用方向箭头根据每列中的任意属性对调度列表进行排序。您还可以按名称、日期或调度运行的月份名称进行搜索。"
+
+#: ../../source/scheduling.rst:15
+msgid "Each schedule has a corresponding **Actions** column that has options to enable/disable that schedule using the **ON/OFF** toggle next to the schedule name and to allow editing (|edit|) of that schedule."
+msgstr "每个调度都有对应的 **Actions** 列，具有使用调度名称旁边的 **ON/OFF** 切换来启用/禁用该调度的选项，并允许编辑该调度 (|edit|)。"
+
+#: ../../source/scheduling.rst:21
+msgid "If you are setting up a template, a project, or an inventory source, clicking on the **Schedules** tab allows you to configure schedules for these resources. Once schedules are created, they are listed by:"
+msgstr "如果您要设置模板、项目或清单源，请点击 **Schedules** 标签页，以便您为这些资源配置调度。创建调度后，会如下列出："
+
+#: ../../source/scheduling.rst:23
+msgid "**Name**: Clicking the schedule name opens its details"
+msgstr "**Name**：点调度名称会打开其详情"
+
+#: ../../source/scheduling.rst:24
+msgid "**Type**: Identifies whether the schedule is associated with a source control update or a system-managed job schedule"
+msgstr "**Type**：标识调度是否与源控制更新关联或系统管理的作业调度"
+
+#: ../../source/scheduling.rst:25
+msgid "**Next Run**: The next scheduled run of this task"
+msgstr "**Next Run**：此任务的下一次调度运行"
+
+#: ../../source/scheduling.rst:31
+msgid "Add a new schedule"
+msgstr "添加新调度"
+
+#: ../../source/scheduling.rst:33
+msgid "Schedules can only be created from a template, project, or inventory source, and not directly on the main **Schedules** screen itself. To create a new schedule:"
+msgstr "只能从模板、项目或清单源中创建调度，而不能直接在主 **Schedules** 屏幕本身上创建。要创建新调度，请执行以下操作："
+
+#: ../../source/scheduling.rst:35
+msgid "Click the **Schedules** tab of the resource you are configuring (template, project, or inventory source)."
+msgstr "点击您要配置的资源（模板、项目或清单源）的 **Schedules** 标签页。"
+
+#: ../../source/scheduling.rst:37
+msgid "Click the **Add** button, which opens the **Create Schedule** window."
+msgstr "点 **Add** 按钮，打开 **Create Schedule** 窗口。"
+
+#: ../../source/scheduling.rst:41
+msgid "Enter the appropriate details into the following fields:"
+msgstr "在以下字段中输入相关信息："
+
+#: ../../source/scheduling.rst:43
+msgid "**Name** (required)"
+msgstr "**名称**（必需）"
+
+#: ../../source/scheduling.rst:44
+msgid "**Start Date** (required)"
+msgstr "**开始日期**（必需）"
+
+#: ../../source/scheduling.rst:45
+msgid "**Start Time** (required)"
+msgstr "**开始时间**（必需）"
+
+#: ../../source/scheduling.rst:46
+msgid "**Local Time Zone** - The entered Start Time should be in this timezone"
+msgstr "**Local Time Zone** - 输入的开始时间应该在这个时区"
+
+#: ../../source/scheduling.rst:47
+msgid "**Repeat Frequency** - Appropriate scheduling options display depending on the frequency you select"
+msgstr "**Repeat Frequency** - 根据您选择的频率显示适当的调度选项"
+
+#: ../../source/scheduling.rst:49
+msgid "The **Schedule Details** displays when you established a schedule, allowing you to review the schedule settings and a list of the scheduled occurrences in the selected Local Time Zone."
+msgstr "**Schedule Details** 在您创建调度时显示，供您查看调度设置以及所选本地时区中调度的发生次数列表。"
+
+#: ../../source/scheduling.rst:55
+msgid "Jobs are scheduled in UTC. Repeating jobs that run at a specific time of day may move relative to a local timezone when Daylight Savings Time shifts occur. The system resolves the local time zone based time to UTC when the schedule is saved.  To ensure your schedules are correctly set, you should set your schedules in UTC time."
+msgstr "作业使用 UTC 时间调度。当发生夏令时切换时，在一天的特定时间运行的重复作业可能会相对本地时区移动。基本上，系统会在保存调度时将基于本地时区的时间解析为 UTC。为确保正确设置您的调度，您应该使用 UTC 时间设置您的调度。"
+
+#: ../../source/scheduling.rst:58
+msgid "Once done, click **Save**."
+msgstr "完成后，点击 **Save**。"
+
+#: ../../source/scheduling.rst:61
+msgid "You can use the **ON/OFF** toggle button to stop an active schedule or activate a stopped schedule."
+msgstr "您可以使用 **ON/OFF** 切换按钮停止活跃的调度或激活已停止的调度。"
+

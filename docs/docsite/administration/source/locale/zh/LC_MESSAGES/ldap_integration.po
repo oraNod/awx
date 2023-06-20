@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/ldap_integration.rst:2
+msgid "LDAP Integration"
+msgstr "LDAP 集成"
+
+#: ../../source/ldap_integration.rst:11
+msgid "LDAP is an enterprise-level feature. You must have an active enterprise license before beginning the configuration process."
+msgstr "LDAP 是一个企业级功能。您必须有有效的企业级许可证才能开始进行配置。"
+
+#: ../../source/ldap_integration.rst:14
+msgid "First, create a user in LDAP that has access to read the entire LDAP structure."
+msgstr "首先，在 LDAP 中创建有权读取整个 LDAP 结构的用户。"
+
+#: ../../source/ldap_integration.rst:16
+msgid "To test if you can make successful queries to the LDAP server, use the following command, where *josie* and *Josie4Cloud* are replaced by attributes that work for your setup:"
+msgstr "要测试是否可以成功查询 LDAP 服务器，请使用以下命令，其中 *josie* 和 *Josie4Cloud* 由适用于您的设置的属性替代："
+
+#: ../../source/ldap_integration.rst:25
+msgid "Here ``CN=josie,CN=users,DC=website,DC=com`` is the Distinguished Name of the connecting user."
+msgstr "此处 ``CN=josie,CN=users,DC=website,DC=com`` 是连接的用户的可辨识名称。"
+
+#: ../../source/ldap_integration.rst:28
+msgid "This can be added to the Parameter ``AUTH_LDAP_BIND_DN =`` to specify the user that Tower uses to connect (Bind) to the LDAP server."
+msgstr "这可添加到参数 ``AUTH_LDAP_BIND_DN =`` 中，以指定 Tower 用来连接（绑定）LDAP 服务器的用户。"
+
+#: ../../source/ldap_integration.rst:32
+msgid "LDAP and Active Directory integration is controlled by the settings defined in the ``/etc/tower/conf.d/ldap.py`` file. In versions of Tower older than 2.2, these settings lived in ``/etc/tower/settings.py``."
+msgstr "LDAP 和 Active Directory 集成由 ``/etc/tower/conf.d/ldap.py`` 文件中定义的设置控制。在早于 Tower 2.2 的版本中，这些设置在 ``/etc/tower/settings.py`` 中。"
+
+#: ../../source/ldap_integration.rst:35
+msgid "The next parameter specifies which password to use for the Binding user:"
+msgstr "下一个参数指定用于绑定 (Binding) 用户的密码："
+
+#: ../../source/ldap_integration.rst:43
+msgid "To define where to search for users while authenticating, use:"
+msgstr "要定义在身份验证时搜索用户的位置，请使用："
+
+#: ../../source/ldap_integration.rst:55
+msgid "The first line specifies where to search for users in the LDAP tree. In the above example, the users are searched recursively starting from ``DC=WEBSITE,DC=COM``."
+msgstr "第一行指定在 LDAP 树中搜索用户的位置。在上例中，从 ``DC=WEBSITE,DC=COM`` 开始以递归方式搜索用户。"
+
+#: ../../source/ldap_integration.rst:57
+msgid "The second line specifies the scope where the users should be searched:"
+msgstr "第二行指定搜索用户的范围："
+
+#: ../../source/ldap_integration.rst:59
+msgid "SCOPE_BASE:  This value is used to indicate searching only the entry at the base DN, resulting in only that entry being returned"
+msgstr "SCOPE_BASE：此值只用于指定仅搜索基本 DN 处的条目，从而只返回该条目"
+
+#: ../../source/ldap_integration.rst:60
+msgid "SCOPE_ONELEVEL:  This value is used to indicate searching all entries one level under the base DN - but not including the base DN and not including any entries under that one level under the base DN."
+msgstr "SCOPE_ONELEVEL：此值用于指定搜索基本 DN 下某一个级别的所有条目，但不包括基本 DN，且不包括基本 DN 下某一级别下的条目。"
+
+#: ../../source/ldap_integration.rst:61
+msgid "SCOPE_SUBTREE: This value is used to indicate searching of all entries at all levels under and including the specified base DN."
+msgstr "SCOPE_SUBTREE：此值用于指定搜索所有级别的全部条目，且包括指定的基本 DN。"
+
+#: ../../source/ldap_integration.rst:64
+msgid "The third line specifies the key name where the user name is stored. For example, to query the AD LDAP using ``ldapsearch`` with a filter for the user, use something like:"
+msgstr "第三行指定存储用户名的键名。例如，要使用 ``ldapsearch`` 通过用户过滤器查询 AD LDAP，请使用类似如下的内容："
+
+#: ../../source/ldap_integration.rst:70
+msgid "Which returns something like:"
+msgstr "返回的结果如下："
+
+#: ../../source/ldap_integration.rst:89
+#, python-format
+msgid "Here we see that name is stored in key ``sAMAccountName``--hence the line becomes ``'(sAMAccountName=%(user)s)'``."
+msgstr "在这里，我们看到该名称存储在键 - ``sAMAccountName``，行变为 ``'(sAMAccountName=%(user)s)'``。"
+
+#: ../../source/ldap_integration.rst:92
+#, python-format
+msgid "Similarly, for OpenLDAP, the key is ``uid``--hence the line becomes ``'(uid=%(user)s)',``."
+msgstr "同样，对于 OpenLDAP，键是 ``uid``，行变为 ``'(uid=%(user)s)',``。"
+
+#: ../../source/ldap_integration.rst:95
+msgid "The next directives specifies the user attributes."
+msgstr "下面的指令指定用户属性。"
+
+#: ../../source/ldap_integration.rst:106
+msgid "The above example says that the users last name can be retrieved from the key ``sn`` in the ``ldapsearch``. You can use the same LDAP query for the user to figure out what keys they are stored under."
+msgstr "上例显示，用户的姓可以从 ``ldapsearch`` 中的键 ``sn`` 检索。您可以对用户使用相同的 LDAP 查询，以找出他们存储在哪些键下。"
+
+#: ../../source/ldap_integration.rst:108
+msgid "The next directive specifies the where the groups should be searched and how to search them."
+msgstr "下面的指令指定搜索组群的位置以及如何搜索它们。"
+
+#: ../../source/ldap_integration.rst:118
+msgid "The first line specifies the BASE DN where the groups should be searched."
+msgstr "第一行指定应当搜索组的基本 DN。"
+
+#: ../../source/ldap_integration.rst:119
+msgid "The second lines specifies the scope and is the same as that for the user directive."
+msgstr "第二行指定范围，与用户指令的范围相同。"
+
+#: ../../source/ldap_integration.rst:120
+msgid "The third line specifies what the ``objectclass`` of a group object is in the LDAP you are using."
+msgstr "第三行指定在您使用的 LDAP 中组对象的 ``objectclass`` 是什么。"
+
+#: ../../source/ldap_integration.rst:122
+msgid "You could make another ``ldapsearch`` and check in one group, which is the ``objectclass`` to which it belongs. For example:"
+msgstr "您可以创建另一个 ``ldapsearch`` 并签入一个组，该组是其所属的 ``objectclass``。例如："
+
+#: ../../source/ldap_integration.rst:135
+msgid "The next directive specifies the type of group. Supported group types are listed here: http://pythonhosted.org/django-auth-ldap/groups.html#types-of-groups"
+msgstr "下一个指令指定了组的类型。支持的组类型在这里列出： http://pythonhosted.org/django-auth-ldap/groups.html#types-of-groups"
+
+#: ../../source/ldap_integration.rst:141
+msgid "With these directives filled in and others commented, you now should be able to make a successful authentication with LDAP."
+msgstr "通过这些已填入的指令和其他注释的指令，您现在应当能够使用 LDAP 成功进行身份验证。"
+
+#: ../../source/ldap_integration.rst:145
+msgid "Tower does not actively sync users, but they are created during their initial login."
+msgstr "Tower 不会主动同步用户，但会在用户初始登录时创建用户。"
+
+#: ../../source/ldap_integration.rst:149
+msgid "LDAPS"
+msgstr "LDAPS"
+
+#: ../../source/ldap_integration.rst:155
+msgid "To enable secure LDAP communication with the LDAP server change the LDAP URL to LDAPS in the ``AUTH_LDAP_SERVER_URI`` directive. Make sure the server name in the URI matches the name in the certificate. Finally, add the server certificate to your Tower instance by adding the path which in CentOS is ``/etc/openldap/ldap.conf`` and the directive is  ``TLS_CACERT /etc/openldap/certs/cert.pem``."
+msgstr "要启用与 LDAP 服务器的安全 LDAP 通信，请在 ``AUTH_LDAP_SERVER_URI`` 指令中将 LDAP URL 更改为 LDAPS。请确保 URI 中的服务器名称与证书中的名称匹配。最后，通过添加路径将服务器证书添加到 Tower 实例中，该路径在 CentOS 中是 ``/etc/openldap/ldap.conf`` ，指令是 ``TLS_CACERT /etc/openldap/certs/cert.pem``。"
+
+#: ../../source/ldap_integration.rst:157
+msgid "To disable the certificate check, add the following lines to the ``/etc/tower/conf.d/ldap.py`` file:"
+msgstr "要禁用证书检查，请在 ``/etc/tower/conf.d/ldap.py`` 文件中添加以下几行："
+
+#: ../../source/ldap_integration.rst:167
+msgid "Debugging"
+msgstr "调试"
+
+#: ../../source/ldap_integration.rst:173
+msgid "Debugging LDAP connections can be enabled by adding the below lines in the ``/etc/tower/conf.d/ldap.py`` file."
+msgstr "通过在 ``/etc/tower/conf.d/ldap.py`` 文件中添加以下几行可以启用调试 LDAP 连接。"
+
+#: ../../source/ldap_integration.rst:192
+msgid "Referrals"
+msgstr "引用"
+
+#: ../../source/ldap_integration.rst:198
+msgid "Active Directory uses \"referrals\" in case the queried object is not available in its database. It has been noted that this does not work properly with the django LDAP client and, most of the time, it helps to disable referrals. Disable LDAP referrals by adding the following lines to your ``/etc/tower/conf.d/ldap.py`` file:"
+msgstr "当查询对象不存在于数据库中时，Active Directory 将使用“引用（referral）”。此项不适用于 django LDAP 客户端，大部分时间最好禁用引用。将以下行添加到您的 ``/etc/tower/conf.d/ldap.py`` 文件来禁用 LDAP 引用。"
+
+#: ../../source/ldap_integration.rst:210
+msgid "\"Referrals\" are disabled by default in |at| version 2.4.3 and above.  If you are running an earlier version of Tower, you should consider adding this parameter to your configuration file."
+msgstr "在 |at| 版本 2.4.3 版及更高版本中，“引用” 被默认禁用。如果您运行的是较早版本的 Tower，您应当考虑将此参数添加到您的配置文件中。"
+

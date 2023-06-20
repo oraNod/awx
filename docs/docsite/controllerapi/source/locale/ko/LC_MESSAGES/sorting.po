@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/sorting.rst:4
+msgid "Sorting"
+msgstr "정렬"
+
+#: ../../source/sorting.rst:9
+msgid "To provide examples that are easy to follow, the following URL is used throughout this guide:"
+msgstr "따라하기 쉬운 예제를 제공하기 위해 이 가이드 전체에서 다음 URL이 사용됩니다."
+
+#: ../../source/sorting.rst:16
+msgid "To specify that {{ model_verbose_name_plural }} are returned in a particular order, use the ``order_by`` query string parameter on the **GET** request."
+msgstr "{{ model_verbose_name_plural }}이 특정 순서대로 반환되도록 지정하려면 **GET** 요청에서 ``order_by`` 쿼리 문자열 매개변수를 사용합니다."
+
+#: ../../source/sorting.rst:22
+msgid "Prefix the field name with a dash (``-``) to sort in reverse:"
+msgstr "필드 이름 앞에 대시(``-``)를 붙여 역방향으로 정렬합니다."
+
+#: ../../source/sorting.rst:28
+msgid "Multiple sorting fields may be specified by separating the field names with a comma (``,``):"
+msgstr "필드 이름을 쉼표(``,``)로 구분하여 정렬 필드를 여러 개 지정할 수도 있습니다."
+

@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/index.rst:10
+msgid "Automation Controller API Guide |versionshortest|"
+msgstr "自動化コントローラー API ガイド |versionshortest|"
+
+#: ../../source/index.rst:12
+msgid "Thank you for your interest in |rhaap|. |aap| helps teams manage complex multi-tier deployments by adding control, knowledge, and delegation to Ansible-powered environments."
+msgstr "|rhaap| に興味をお持ちいただきありがとうございます。|aap| は、Ansible を装備した環境に、制御、ナレッジ、委譲の機能を追加して、チームが複雑かつ複数層のデプロイメントを管理できるように支援します。"
+
+#: ../../source/index.rst:14
+msgid "The |atapi| focuses on helping you understand the |at| API. This document has been updated to include information for the latest release of |atversionshort|."
+msgstr "|atapi| は、|at| API のご理解を深めていただくためのものです。本ドキュメントは、|atversionshort| の最新リリースに関する情報を含めるために更新されています。"
+
+#: ../../source/index.rst:16
+msgid "**We Need Feedback!**"
+msgstr "**フィードバック**"
+
+#: ../../source/index.rst:18
+msgid "If you spot a typo in this documentation, or if you have thought of a way to make this manual better, we would love to hear from you! Please send an email to: docs@ansible.com"
+msgstr "脱字や誤字を発見されたり、このマニュアルを改善するご提案をお持ちの場合は、docs@ansible.com 宛にメールでご連絡ください。"
+
+#: ../../source/index.rst:20
+msgid "If you have a suggestion, try to be as specific as possible when describing it. If you have found an error, please include the manual's title, chapter number/section number, and some of the surrounding text so we can find it easily. We may not be able to respond to every message sent to us, but you can be sure that we will be reading them all!"
+msgstr "ご提案をお寄せいただく場合は、できるだけ具体的にご説明ください。エラーを発見された場合は、場所を特定できるようにするため、マニュアルの書名、章番号/セクション番号、および該当部分の前後の文章を含めてご報告ください。受領したメールの内容はすべて確認しますが、すべてに返答できないことがありますのでご了承ください。"
+
+#: ../../source/index.rst:26
+msgid "|atversion|; |pubdate|; https://access.redhat.com/"
+msgstr "|atversion|; |pubdate|; https://access.redhat.com/"
+
+#: ../../source/index.rst:77
+msgid "Index"
+msgstr "Index"
+
+#: ../../source/index.rst:79
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../../common/source/copyright.rst:2
+msgid "Copyright © Red Hat, Inc."
+msgstr "Copyright © Red Hat, Inc."
+
+#: ../../../common/source/copyright.rst:4
+msgid "Ansible, |aap|, Red Hat, and |rhel| are trademarks of Red Hat, Inc., registered in the United States and other countries."
+msgstr "Ansible, |aap|, Red Hat, and |rhel| are trademarks of Red Hat, Inc., registered in the United States and other countries."
+
+#: ../../../common/source/copyright.rst:6
+msgid "If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original version."
+msgstr "If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original version."
+
+#: ../../../common/source/copyright.rst:8
+msgid "**Third Party Rights**"
+msgstr "**Third Party Rights**"
+
+#: ../../../common/source/copyright.rst:10
+msgid "Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+msgstr "Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+
+#: ../../../common/source/copyright.rst:12
+msgid "The CentOS Project is copyright protected. The CentOS Marks are trademarks of Red Hat, Inc. (“Red Hat”)."
+msgstr "The CentOS Project is copyright protected. The CentOS Marks are trademarks of Red Hat, Inc. (“Red Hat”)."
+
+#: ../../../common/source/copyright.rst:14
+msgid "Microsoft, Windows, Windows Azure, and Internet Explore are trademarks of Microsoft, Inc."
+msgstr "Microsoft, Windows, Windows Azure, and Internet Explore are trademarks of Microsoft, Inc."
+
+#: ../../../common/source/copyright.rst:16
+msgid "VMware is a registered trademark or trademark of VMware, Inc."
+msgstr "VMware is a registered trademark or trademark of VMware, Inc."
+
+#: ../../../common/source/copyright.rst:18
+msgid "Amazon Web Services\", \"AWS\", \"Amazon EC2\", and \"EC2”, are trademarks of Amazon Web Services, Inc. or its affiliates."
+msgstr "Amazon Web Services\", \"AWS\", \"Amazon EC2\", and \"EC2”, are trademarks of Amazon Web Services, Inc. or its affiliates."
+
+#: ../../../common/source/copyright.rst:20
+msgid "OpenStack™ and OpenStack logo are trademarks of OpenStack, LLC."
+msgstr "OpenStack™ and OpenStack logo are trademarks of OpenStack, LLC."
+
+#: ../../../common/source/copyright.rst:22
+msgid "Chrome™ and Google Compute Engine™ service registered trademarks of Google Inc."
+msgstr "Chrome™ and Google Compute Engine™ service registered trademarks of Google Inc."
+
+#: ../../../common/source/copyright.rst:24
+msgid "Safari® is a registered trademark of Apple, Inc."
+msgstr "Safari® is a registered trademark of Apple, Inc."
+
+#: ../../../common/source/copyright.rst:26
+msgid "Firefox® is a registered trademark of the Mozilla Foundation."
+msgstr "Firefox® is a registered trademark of the Mozilla Foundation."
+
+#: ../../../common/source/copyright.rst:28
+msgid "All other trademarks are the property of their respective owners."
+msgstr "All other trademarks are the property of their respective owners."
+

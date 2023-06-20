@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/backup_restore.rst:5
+msgid "Backing Up and Restoring"
+msgstr "バックアップおよび復元"
+
+#: ../../source/backup_restore.rst:13
+msgid "The ability to backup and restore your system(s) is integrated into the platform setup playbook. Refer to :ref:`ag_clustering_backup_restore` for additional considerations."
+msgstr "システムのバックアップや復元機能がプラットフォームの設定 Playbook に統合されました。さらなる情報は、「:ref:`ag_clustering_backup_restore`」を参照してください。"
+
+#: ../../source/backup_restore.rst:17
+msgid "When restoring, be sure to restore to the same version from which it was backed up. However, you should always use the most recent minor version of a release to backup and/or restore your platform installation version. For example, if the current platform version you are on is 2.0.x, use only the latest 2.0 installer."
+msgstr "復元するには、バックアップしたバージョンと同じバージョンに復元するようにしてください。ただし、プラットフォームインストールのバージョンをバックアップおよび復元する場合は、最新のマイナーバージョンを必ず使用するようにしてください。たとえば、現在使用しているプラットフォームバージョンが 2.0.x の場合は、最新の 2.0 のインストーラーのみを使用してください。"
+
+#: ../../source/backup_restore.rst:19
+msgid "Also, backup and restore will *only* work on PostgreSQL versions supported by your current platform version. For more information, see `System Requirements <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.0-ea/html-single/red_hat_ansible_automation_platform_installation_guide/index?lb_target=production#red_hat_ansible_automation_platform_system_requirements>`_."
+msgstr "また、バックアップと復元は、現在のプラットフォームバージョンでサポートされている PostgreSQL バージョンで *のみ* 機能します。詳細は、「`System Requirements <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.0-ea/html-single/red_hat_ansible_automation_platform_installation_guide/index?lb_target=production#red_hat_ansible_automation_platform_system_requirements>`_」を参照してください。"
+
+#: ../../source/backup_restore.rst:22
+msgid "The platform setup playbook is invoked as ``setup.sh`` from the path where you unpacked the platform installer tarball. It uses the same inventory file used by the install playbook. The setup script takes the following arguments for backing up and restoring:"
+msgstr "プラットフォームの設定 Playbook は、プラットフォームインストーラーの tar ファイルを展開したパスから ``setup.sh`` として呼び出されます。このシェルは、インストール Playbook で使用したものと同じインベントリーファイルを使用します。設定スクリプトでは、以下の引数を指定してバックアップと復元を行うことができます。"
+
+#: ../../source/backup_restore.rst:28
+msgid "``-b`` Perform a database backup rather than an installation."
+msgstr "``-b``: データベースのインストールではなくバックアップを実行します。"
+
+#: ../../source/backup_restore.rst:29
+msgid "``-r`` Perform a database restore rather than an installation."
+msgstr "``-r``: データベースのインストールではなく復元を実行します。"
+
+#: ../../source/backup_restore.rst:31
+msgid "As the root user, call ``setup.sh`` with the appropriate parameters and the platform backup or restored as configured."
+msgstr "root ユーザーとして、適切なパラメーターを指定して ``setup.sh`` と設定通りにプラットフォームのバックアップと復元を呼び出します。"
+
+#: ../../source/backup_restore.rst:43
+msgid "Backup files will be created on the same path that setup.sh script exists. It can be changed by specifying the following ``EXTRA_VARS`` :"
+msgstr "バックアップファイルは、setup.sh スクリプトが存在するパスと同じところに作成されます。以下の ``EXTRA_VARS`` を指定すると変更できます。"
+
+#: ../../source/backup_restore.rst:50
+msgid "A default restore path is used unless ``EXTRA_VARS`` are provided with a non-default path, as shown in the example below:"
+msgstr "以下の例に記載されているように、``EXTRA_VARS`` でデフォルト以外のパスを指定しない限り、デフォルトの復元パスが使用されます。"
+
+#: ../../source/backup_restore.rst:57
+msgid "Optionally, you can override the inventory file used by passing it as an argument to the setup script:"
+msgstr "オプションで、設定スクリプトに引数として渡すことで使用したインベントリーファイルを上書きすることができます。"
+
+#: ../../source/backup_restore.rst:65
+msgid "Backup/Restore Playbooks"
+msgstr "バックアップ/復元 Playbook"
+
+#: ../../source/backup_restore.rst:72
+msgid "In addition to the ``install.yml`` file included with your ``setup.sh`` setup playbook, there are also ``backup.yml`` and ``restore.yml`` files for your backup and restoration needs."
+msgstr "``setup.sh`` の設定 Playbook が含まれる ``install.yml`` ファイルの他に、 バックアップや復元用の ``backup.yml`` と ``restore.yml`` ファイルもあります。"
+
+#: ../../source/backup_restore.rst:74
+msgid "These playbooks serve two functions--backup and restore."
+msgstr "これらの Playbook にはバックアップと復元の 2 つの機能があります。"
+
+#: ../../source/backup_restore.rst:76
+msgid "The overall backup will backup:"
+msgstr "システム全体のバックアップは以下をバックアップします。"
+
+#: ../../source/backup_restore.rst:78
+msgid "the database"
+msgstr "データベース"
+
+#: ../../source/backup_restore.rst:79
+msgid "the ``SECRET_KEY`` file"
+msgstr "``SECRET_KEY`` ファイル"
+
+#: ../../source/backup_restore.rst:81
+msgid "The per-system backups include:"
+msgstr "システム毎のバックアップには以下が含まれます。"
+
+#: ../../source/backup_restore.rst:83
+msgid "custom user config files"
+msgstr "カスタムのユーザー設定ファイル"
+
+#: ../../source/backup_restore.rst:84
+msgid "manual projects"
+msgstr "手動のプロジェクト"
+
+#: ../../source/backup_restore.rst:86
+msgid "The restore will restore the backed up files and data to a freshly installed and working second instance of the controller."
+msgstr "復元では、バックアップを作成したファイルおよびデータを、コントローラーの新規インストールしたまたは作業中の 2 つ目のインスタンスに復元します。"
+
+#: ../../source/backup_restore.rst:88
+msgid "When restoring your system, the installer checks to see that the backup file exists before beginning the restoration. If the backup file is not available, your restoration will fail."
+msgstr "システムを復元する際、インストーラーはバックアップファイルが存在するかどうか確認してから復元を開始します。バックアップファイルがない場合には、復元に失敗します。"
+
+#: ../../source/backup_restore.rst:92
+msgid "Ensure your controller host(s) are properly set up with SSH keys or user/pass variables in the hosts file, and that the user has sudo access."
+msgstr "ホストファイル内で SSH キーまたはユーザー/パスワード変数を指定して、コントローラーホストが正しく設定されており、そのユーザーに sudo アクセスが設定されていることを確認します。"
+
+#: ../../source/backup_restore.rst:96
+msgid "Backup and Restoration Considerations"
+msgstr "バックアップおよび復元に関する留意事項"
+
+#: ../../source/backup_restore.rst:102
+msgid "Disk Space: Review your disk space requirements to ensure you have enough room to backup configuration files, keys, and other relevant files, plus the database of the platform installation."
+msgstr "ディスクの容量: 設定ファイル、キー、その他の関連ファイル、およびプラットフォームシステム設定のデータベースをバックアップするために必要な容量があるように、ディスク領域の要件を確認します。"
+
+#: ../../source/backup_restore.rst:103
+msgid "System Credentials: Confirm you have the system credentials you need when working with a local database or a remote database. On local systems, you may need root or ``sudo`` access, depending on how credentials were setup. On remote systems, you may need different credentials to grant you access to the remote system you are trying to backup or restore."
+msgstr "システムの認証情報: ローカルデータベースまたはリモートデータベースを使用している場合には必要なシステムの認証情報があることを確認します。ローカルシステムでは、認証情報の設定方法によっては root または ``sudo`` アクセスが必要です。リモートシステムでは、バックアップまたは復元しようとしているリモートシステムへのアクセス権を付与するために異なる認証情報が必要になる場合があります。"
+
+#: ../../source/backup_restore.rst:104
+msgid "You should always use the most recent minor version of a release to backup and/or restore your platform installation version. For example, if the current platform version you are on is 2.0.x, use only the latest 2.0 installer."
+msgstr "プラットフォームインストールのバージョンをバックアップおよび復元する場合は、最新のマイナーバージョンを必ず使用するようにしてください。たとえば、現在使用しているプラットフォームのバージョンが 2.0.x の場合は、2.0 のインストーラーのみを使用してください。"
+
+#: ../../source/backup_restore.rst:105
+msgid "When using ``setup.sh`` to do a restore from the default restore file path, ``/var/lib/awx``, ``-r`` is still required in order to do the restore, but it no longer accepts an argument. If a non-default restore file path is needed, the user must provide this as an extra var (``root@localhost:~# ./setup.sh -e 'restore_backup_file=/path/to/nondefault/backup.tar.gz' -r``)."
+msgstr "``setup.sh`` を使用して、デフォルトの復元ファイルパス ``/var/lib/awx`` から、復元を行う場合には、依然として ``-r`` を指定して復元する必要がありますが、それ以上引数を受け入れなくなります。デフォルト以外の復元パスを指定する必要がある場合には、ユーザーは追加変数としてこれを指定する必要があります (``root@localhost:~# ./setup.sh -e 'restore_backup_file=/path/to/nondefault/backup.tar.gz' -r``)。"
+
+#: ../../source/backup_restore.rst:106
+msgid "If the backup file is placed in the same directory as the ``setup.sh`` installer, the restore playbook will automatically locate the restore files. In this case, you do not need to use the ``restore_backup_file`` extra var to specify the location of the backup file."
+msgstr "バックアップファイルを ``setup.sh`` インストーラーと同じディレクトリーに配置している場合は、復元 Playbook は自動的に復元ファイルの場所を特定します。この場合には、バックアップファイルの場所を指定するときに、``restore_backup_file`` の追加変数を使用する必要はありません。"
+
+#: ../../source/backup_restore.rst:111
+msgid "Backup and Restore for Clustered Environments"
+msgstr "クラスター環境のバックアップおよび復元"
+
+#: ../../source/backup_restore.rst:117
+msgid "The procedure for backup and restore for a clustered environment is similar to a single install, except with some considerations described in this section."
+msgstr "クラスター環境のバックアップおよび復元の手順は、このセクションで説明されている留意事項を以外は、単一インストールとほぼ同じです。"
+
+#: ../../source/backup_restore.rst:119
+msgid "If restoring to a new cluster, make sure the old cluster is shut down before proceeding because they could conflict with each other when accessing the database."
+msgstr "新規クラスターに復元する場合は、データベースにアクセスする際にはそれぞれのクラスター間で競合状態になる可能性があるので、以前のクラスターをシャットダウンしてから続行するようにしてください。"
+
+#: ../../source/backup_restore.rst:120
+msgid "Per-node backups will only be restored to nodes bearing the same hostname as the backup."
+msgstr "ノードごとのバックアップは、バックアップと同じホスト名のノードのみに復元されます。"
+
+#: ../../source/backup_restore.rst:122
+msgid "When restoring to an existing cluster, the restore contains:"
+msgstr "既存のクラスターに復元する場合には、復元には以下が含まれます。"
+
+#: ../../source/backup_restore.rst:124
+msgid "Dump of the PostgreSQL database"
+msgstr "PostgreSQL データベースのダンプ"
+
+#: ../../source/backup_restore.rst:125
+msgid "UI artifacts (included in database dump)"
+msgstr "(データベースダンプに含まれる) UI アーティファクト"
+
+#: ../../source/backup_restore.rst:126
+msgid "Controller configuration (retrieved from ``/etc/tower``)"
+msgstr "(``/etc/tower``から取り込む) コントローラーの設定"
+
+#: ../../source/backup_restore.rst:127
+msgid "Controller secret key"
+msgstr "コントローラーのシークレットキー"
+
+#: ../../source/backup_restore.rst:128
+msgid "Manual projects"
+msgstr "手動のプロジェクト"
+
+#: ../../source/backup_restore.rst:133
+msgid "Restoring to a different cluster"
+msgstr "異なるクラスターへの復元"
+
+#: ../../source/backup_restore.rst:135
+msgid "When restoring a backup to a separate instance or cluster, manual projects and custom settings under /etc/tower are retained. Job output and job events are stored in the database, and therefore, not affected."
+msgstr "バックアップを別のインスタンスまたはクラスターに復元する場合は、/etc/tower の下の手動プロジェクトとカスタム設定が保持されます。ジョブ出力とジョブイベントはデータベースに保存されるため、影響を受けません。"
+
+#: ../../source/backup_restore.rst:137
+msgid "The restore process will not alter instance groups present before the restore (neither will it introduce any new instance groups). Restored controller resources that were associated to instance groups will likely need to be reassigned to instance groups present on the new controller cluster."
+msgstr "復元プロセスは、復元の前に存在するインスタンスグループを変更しません (また、新規インスタンスグループの導入もありません)。複数のインスタンスグループに関連づけられていたコントローラーリソースを復元した後、新しいコントローラークラスターに存在するインスタンスグループに再度割り当てる必要があります。"
+

@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/webhooks.rst:4
+msgid "Working with Webhooks"
+msgstr "Webhook 작업"
+
+#: ../../source/webhooks.rst:12
+msgid "A :term:`Webhook` provides the ability to execute specified commands between apps over the web. |at| currently provides webhook integration with GitHub and GitLab. This section describes the procedure for setting up a webhook through their respective services."
+msgstr ":term:`Webhook`는 웹을 통해 앱 간에 지정된 명령을 실행할 수 있는 기능을 제공합니다. |at|는 현재 Webhook와 GitHub 및 GitLab의 통합을 제공합니다. 이 섹션에서는 해당 서비스를 통해 Webhook를 설정하는 절차를 설명합니다."
+
+#: ../../source/webhooks.rst:17
+msgid "The webhook post-status-back functionality for GitHub and GitLab is designed for work only under certain CI events. Receiving another kind of event will result in messages like the one below in the service log:"
+msgstr "GitHub 및 GitLab의 Webhook 사후 상태 복귀 기능은 특정 CI 이벤트에서만 작동하도록 설계되었습니다. 다른 종류의 이벤트를 수신하면 서비스 로그에 다음과 같은 메시지가 표시됩니다."
+
+#: ../../source/webhooks.rst:25
+msgid "GitHub webhook setup"
+msgstr "GitHub Webhook 설정"
+
+#: ../../source/webhooks.rst:27
+msgid "|At| has the ability to run jobs based on a triggered webhook event coming in. Job status information (pending, error, success) can be sent back only for pull request events. If you determine you do not want |at| to post job statuses back to the webhook service, skip steps 1-2, and go directly to :ref:`step 3 <ug_webhooks_setup_github>`."
+msgstr "|At|에는 들어오는 트리거된 Webhook 이벤트를 기반으로 작업을 실행할 수 있는 기능이 있습니다. 작업 상태 정보(보류 중, 오류, 성공)는 가져오기 요청 이벤트에 대해서만 다시 보낼 수 있습니다. |at|에서 작업 상태를 Webhook 서비스로 다시 게시하지 않도록 하려면 1~2단계를 건너뛰고 :ref:`step 3 <ug_webhooks_setup_github>`로 바로 이동하십시오."
+
+#: ../../source/webhooks.rst:29
+msgid "Optionally generate a personal access token (PAT) for use with |at|."
+msgstr "필요한 경우 |at|에서 사용할 개인 액세스 토큰 (PAT)을 생성합니다."
+
+#: ../../source/webhooks.rst:31
+msgid "In the profile settings of your GitHub account, click **Settings**."
+msgstr "GitHub 계정의 프로필 설정에서 **설정**을 클릭합니다."
+
+#: ../../source/webhooks.rst:33
+msgid "At the very bottom of the settings, click **<> Developer Settings**."
+msgstr "설정 하단에서 **<> 개발자 설정**을 클릭합니다."
+
+#: ../../source/webhooks.rst:35
+msgid "In the Developer settings, click **Personal access tokens**."
+msgstr "개발자 설정에서 **개인 액세스 토큰**을 클릭합니다."
+
+#: ../../source/webhooks.rst:36
+msgid "From the Personal access tokens screen, click **Generate new token**."
+msgstr "개인 액세스 토큰 화면에서 **새 토큰 생성**을 클릭합니다."
+
+#: ../../source/webhooks.rst:37
+msgid "When prompted, enter your GitHub account password to continue."
+msgstr "메시지가 표시되면 GitHub 계정 암호를 입력하여 계속합니다."
+
+#: ../../source/webhooks.rst:38
+msgid "In the **Note** field, enter a brief description about what this PAT will be used for."
+msgstr "**참고** 필드에 이 PAT의 용도에 대한 간략한 설명을 입력합니다."
+
+#: ../../source/webhooks.rst:39
+msgid "In the Scope fields, the automation webhook only needs repo scope access, with the exception of invites. For information about other scopes, click the link right above the table to access the docs."
+msgstr "범위 필드에서 자동화 Webhook는 초대를 제외하고 리포지터리 범위 액세스 권한만 있으면 됩니다. 다른 범위에 대한 정보를 보려면 테이블 바로 위에 있는 링크를 클릭하여 문서에 액세스합니다."
+
+#: ../../source/webhooks.rst:43
+msgid "Click the **Generate Token** button."
+msgstr "**토큰 생성** 버튼을 클릭합니다."
+
+#: ../../source/webhooks.rst:45
+msgid "Once the token is generated, make sure you copy the PAT, as it will be used in a later step. You will not be able to access this token again in GitHub."
+msgstr "토큰이 생성되면 이후 단계에서 사용되므로 PAT를 복사해야 합니다. GitHub에서는 이 토큰에 다시 액세스할 수 없습니다."
+
+#: ../../source/webhooks.rst:47
+msgid "Use the PAT to optionally create a GitHub credential:"
+msgstr "필요한 경우 PAT를 사용하여 GitHub 인증 정보를 생성합니다."
+
+#: ../../source/webhooks.rst:49
+msgid "Go to your instance, and :ref:`create a new credential for the GitHub PAT <ug_credentials_github>` using the above generated token."
+msgstr "인스턴스로 이동하고 위에서 생성한 토큰을 사용하여 :ref:`create a new credential for the GitHub PAT <ug_credentials_github>`을 수행합니다."
+
+#: ../../source/webhooks.rst:50
+#: ../../source/webhooks.rst:130
+msgid "Make note of the name of this credential, as it will be used in the job template that posts back to GitHub."
+msgstr "이 인증 정보의 이름은 GitHub에 다시 게시되는 작업 템플릿에서 사용되므로 기록해 두십시오."
+
+#: ../../source/webhooks.rst:54
+#: ../../source/webhooks.rst:134
+msgid "Go to the job template with which you want to enable webhooks, and select the webhook service and credential you created in the previous step."
+msgstr "Webhook를 활성화할 작업 템플릿으로 이동하고 이전 단계에서 생성한 Webhook 서비스 및 인증 정보를 선택합니다."
+
+#: ../../source/webhooks.rst:60
+msgid "Click **Save**. Now your job template is set up to be able to post back to GitHub. An example of one may look like this:"
+msgstr "**저장**을 클릭합니다. 그러면 GitHub에 다시 게시할 수 있도록 작업 템플릿이 설정됩니다. 예를 들면 다음과 같습니다."
+
+#: ../../source/webhooks.rst:66
+msgid "Go to a specific GitHub repo you want to configure webhooks and click **Settings**."
+msgstr "Webhook를 구성할 특정 GitHub 리포지터리로 이동하고 **설정**을 클릭합니다."
+
+#: ../../source/webhooks.rst:70
+msgid "Under Options, click **Webhooks**."
+msgstr "옵션에서 **Webhook**를 클릭합니다."
+
+#: ../../source/webhooks.rst:74
+msgid "On the Webhooks page, click **Add webhook**."
+msgstr "Webhook 페이지에서 **Webhook 추가**를 클릭합니다."
+
+#: ../../source/webhooks.rst:76
+msgid "To complete the Add Webhook page, you need to :ref:`enable webhooks in a job template <ug_jt_enable_webhooks>` (or in a :ref:`workflow job template <ug_wfjt_enable_webhooks>`), which will provide you with the following information:"
+msgstr "Webhook 추가 페이지를 완료하려면 다음 정보를 제공하는 :ref:`enable webhooks in a job template <ug_jt_enable_webhooks>`(또는 :ref:`workflow job template <ug_wfjt_enable_webhooks>`에서)를 수행해야 합니다."
+
+#: ../../source/webhooks.rst:78
+msgid "Copy the contents of the **Webhook URL** from the job template, and paste it in the **Payload URL** field. GitHub uses this address to send results to."
+msgstr "작업 템플릿에서 **Webhook URL**의 콘텐츠를 복사하여 **페이로드 URL** 필드에 붙여넣습니다. GitHub에서 이 주소를 사용하여 결과를 보냅니다."
+
+#: ../../source/webhooks.rst:79
+msgid "Set the **Content type** to **application/json**."
+msgstr "**콘텐츠 유형**을 **애플리케이션/json**으로 설정합니다."
+
+#: ../../source/webhooks.rst:80
+msgid "Copy the contents of the **Webhook Key** from the job template above and paste it in the **Secret** field."
+msgstr "위 작업 템플릿에서 **Webhook 키**의 콘텐츠를 복사하여 **시크릿** 필드에 붙여넣습니다."
+
+#: ../../source/webhooks.rst:81
+#: ../../source/webhooks.rst:156
+msgid "Leave **Enable SSL verification** selected."
+msgstr "**SSL 확인 활성화**를 선택된 상태로 둡니다."
+
+#: ../../source/webhooks.rst:87
+msgid "Next, you must select the types of events you want to trigger a webhook. Any such event will trigger the Job or Workflow. In order to have job status (pending, error, success) sent back to GitHub, you must select **Pull requests** in the individual events section."
+msgstr "다음으로 Webhook를 트리거할 이벤트 유형을 선택해야 합니다. 이러한 이벤트는 작업 또는 워크플로우를 트리거합니다. 작업 상태(보류 중, 오류, 성공)를 GitHub로 다시 보내려면 개별 이벤트 섹션에서 **가져오기 요청**을 선택해야 합니다."
+
+#: ../../source/webhooks.rst:91
+msgid "Leave **Active** checked and click **Add Webhook**."
+msgstr "**활성**을 선택된 상태로 두고 **Webhook 추가**를 클릭합니다."
+
+#: ../../source/webhooks.rst:96
+msgid "After your webhook is configured, it displays in the list of webhooks active for your repo, along with the ability to edit or delete it. Click on a webhook, and it brings you to the Manage webhook screen. Scroll to the very bottom of the screen to view all the delivery attempts made to your webhook and whether they succeeded or failed."
+msgstr "Webhook가 구성되면 편집 또는 삭제 기능과 함께 리포지터리에 대해 활성 상태인 Webhook 목록에 표시됩니다. Webhook를 클릭하면 Webhook 관리 화면으로 이동합니다. Webhook에 수행된 모든 전송 시도와 성공 여부를 보려면 화면 맨 아래로 스크롤하십시오."
+
+#: ../../source/webhooks.rst:100
+msgid "For more information, refer to the `GitHub Webhooks developer documentation <https://developer.github.com/webhooks/>`_."
+msgstr "자세한 내용은 `GitHub Webhooks developer documentation <https://developer.github.com/webhooks/>`_를 참조하십시오."
+
+#: ../../source/webhooks.rst:105
+msgid "GitLab webhook setup"
+msgstr "GitLab Webhook 설정"
+
+#: ../../source/webhooks.rst:107
+msgid "|At| has the ability to run jobs based on a triggered webhook event coming in. Job status information (pending, error, success) can be sent back only for merge request events. If you determine you do not want |at| to post job statuses back to the webhook service, skip steps 1-2, and go directly to :ref:`step 3 <ug_webhooks_setup_gitlab>`."
+msgstr "|At|에는 들어오는 트리거된 Webhook 이벤트를 기반으로 작업을 실행할 수 있는 기능이 있습니다. 작업 상태 정보(보류 중, 오류, 성공)는 병합 요청 이벤트에 대해서만 다시 보낼 수 있습니다. |at|에서 작업 상태를 Webhook 서비스로 다시 게시하지 않도록 하려면 1~2단계를 건너뛰고 :ref:`step 3 <ug_webhooks_setup_gitlab>`로 바로 이동하십시오."
+
+#: ../../source/webhooks.rst:109
+msgid "Optionally, generate a personal access token (PAT). This token gives |at| the ability to post statuses back when we run jobs based on a webhook coming in."
+msgstr "필요한 경우 개인 액세스 토큰 (PAT)을 생성합니다. 이 토큰은 들어오는 Webhook를 기반으로 작업을 실행할 때 |at|에서 상태를 다시 게시할 수 있는 기능을 제공합니다."
+
+#: ../../source/webhooks.rst:111
+msgid "In the profile settings of your GitLab account, click **Settings**."
+msgstr "GitLab 계정의 프로필 설정에서 **설정**을 클릭합니다."
+
+#: ../../source/webhooks.rst:113
+msgid "On the sidebar, under User Settings, click **Access Tokens**."
+msgstr "사이드바의 사용자 설정에서 **액세스 토큰**을 클릭합니다."
+
+#: ../../source/webhooks.rst:117
+msgid "In the **Name** field, enter a brief description about what this PAT will be used for."
+msgstr "**이름** 필드에 이 PAT의 용도에 대한 간략한 설명을 입력합니다."
+
+#: ../../source/webhooks.rst:118
+msgid "Skip the **Expires at** field unless you want to set an expiration date for your webhook."
+msgstr "Webhook의 만료 날짜를 설정하지 않으려면 **만료일** 필드를 건너 뛰십시오."
+
+#: ../../source/webhooks.rst:119
+msgid "In the Scopes fields, select the ones applicable to your integration. For |at|, API is the only selection necessary."
+msgstr "범위 필드에서 통합에 적용 가능한 항목을 선택합니다. |at|의 경우 API만 선택하면 됩니다."
+
+#: ../../source/webhooks.rst:123
+msgid "Click the **Create personal access token** button."
+msgstr "**개인 액세스 토큰 생성** 버튼을 클릭합니다."
+
+#: ../../source/webhooks.rst:125
+msgid "Once the token is generated, make sure you copy the PAT, as it will be used in a later step. You will not be able to access this token again in GitLab."
+msgstr "토큰이 생성되면 이후 단계에서 사용되므로 PAT를 복사해야 합니다. GitLab에서는 이 토큰에 다시 액세스할 수 없습니다."
+
+#: ../../source/webhooks.rst:127
+msgid "Use the PAT to optionally create a GitLab credential:"
+msgstr "필요한 경우 PAT를 사용하여 GitLab 인증 정보를 생성합니다."
+
+#: ../../source/webhooks.rst:129
+msgid "Go to your instance, and :ref:`create a new credential for the GitLab PAT <ug_credentials_gitlab>` using the above generated token."
+msgstr "인스턴스로 이동하고 위에서 생성한 토큰을 사용하여 :ref:`create a new credential for the GitLab PAT <ug_credentials_gitlab>`을 수행합니다."
+
+#: ../../source/webhooks.rst:140
+msgid "Click **Save**. Now your job template is set up to be able to post back to GitLab. An example of one may look like this:"
+msgstr "**저장**을 클릭합니다. 그러면 GitLab에 다시 게시할 수 있도록 작업 템플릿이 설정됩니다. 예를 들면 다음과 같습니다."
+
+#: ../../source/webhooks.rst:147
+msgid "Go to a specific GitLab repo you want to configure webhooks and click **Settings > Integrations**."
+msgstr "Webhook를 구성할 특정 GitLab 리포지터리로 이동하고 **설정 > 통합**을 클릭합니다."
+
+#: ../../source/webhooks.rst:151
+msgid "To complete the Integrations page, you need to :ref:`enable webhooks in a job template <ug_jt_enable_webhooks>` (or in a :ref:`workflow job template <ug_wfjt_enable_webhooks>`), which will provide you with the following information:"
+msgstr "통합 페이지를 완료하려면 다음 정보를 제공하는 :ref:`enable webhooks in a job template <ug_jt_enable_webhooks>`(또는 :ref:`workflow job template <ug_wfjt_enable_webhooks>`에서)를 수행해야 합니다."
+
+#: ../../source/webhooks.rst:153
+msgid "Copy the contents of the **Webhook URL** from the job template above, and paste it in the **URL** field. GitLab uses this address to send results to."
+msgstr "위 작업 템플릿에서 **Webhook URL**의 콘텐츠를 복사하여 **URL** 필드에 붙여넣습니다. GitLab에서 이 주소를 사용하여 결과를 보냅니다."
+
+#: ../../source/webhooks.rst:154
+msgid "Copy the contents of the **Webhook Key** from the job template above and paste it in the **Secret Token** field."
+msgstr "위 작업 템플릿에서 **Webhook 키**의 콘텐츠를 복사하여 **시크릿 토큰** 필드에 붙여넣습니다."
+
+#: ../../source/webhooks.rst:155
+msgid "Next, you must select the types of events you want to trigger a webhook. Any such event will trigger the Job or Workflow. In order to have job status (pending, error, success) sent back to GitLab, you must select **Merge request events** in the Trigger section."
+msgstr "다음으로 Webhook를 트리거할 이벤트 유형을 선택해야 합니다. 이러한 이벤트는 작업 또는 워크플로우를 트리거합니다. 작업 상태(보류 중, 오류, 성공)를 GitLab으로 다시 보내려면 트리거 섹션에서 **병합 요청 이벤트**를 선택해야 합니다."
+
+#: ../../source/webhooks.rst:157
+msgid "Click **Add webhook**."
+msgstr "**Webhook 추가**를 클릭합니다."
+
+#: ../../source/webhooks.rst:162
+msgid "After your webhook is configured, it displays in the list of Project Webhooks for your repo, along with the ability to test events, edit or delete the webhook. Testing a webhook event displays the results at the top of the page whether it succeeded or failed."
+msgstr "Webhook가 구성되면 이벤트 테스트, Webhook 편집 또는 삭제 기능과 함께 리포지터리의 프로젝트 Webhook 목록에 표시됩니다. Webhook 이벤트를 테스트하면 성공 여부에 관계없이 페이지 상단에 결과가 표시됩니다."
+
+#: ../../source/webhooks.rst:164
+msgid "For more information, refer to the `GitLab webhooks integrations documentation <https://docs.gitlab.com/ee/user/project/integrations/webhooks.html>`_."
+msgstr "자세한 내용은 `GitLab webhooks integrations documentation <https://docs.gitlab.com/ee/user/project/integrations/webhooks.html>`_를 참조하십시오."
+
+#: ../../source/webhooks.rst:168
+msgid "Payload output"
+msgstr "페이로드 출력"
+
+#: ../../source/webhooks.rst:170
+msgid "The entire payload is exposed as an extra variable. To view the payload information, go to the Jobs Detail view of the job template that ran with the webhook enabled. In the **Extra Variables** field of the Details pane, view the payload output from the ``awx_webhook_payload`` variable, as shown in the example below."
+msgstr "전체 페이로드는 추가 변수로 노출됩니다. 페이로드 정보를 보려면 Webhook가 활성화된 상태에서 실행된 작업 템플릿의 작업 세부 정보 보기로 이동합니다. 세부 정보 창의 **추가 변수** 필드에서 아래 예제와 같이 ``awx_webhook_payload`` 변수의 페이로드 출력을 확인합니다."
+

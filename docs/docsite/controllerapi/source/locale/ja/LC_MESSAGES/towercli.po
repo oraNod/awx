@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../../common/source/towercli.rst:3
+msgid "Introduction to **tower-cli**"
+msgstr "**tower-cli** の概要"
+
+#: ../../../common/source/towercli.rst:9
+msgid "**tower-cli** is a command line tool for |at|. It allows Tower commands to be easily run from the UNIX command line. It can also be used as a client library for other python apps, or as a reference for others developing API interactions with Tower's REST API."
+msgstr "**tower-cli** は |at| のコマンドツールです。このツールでは、Tower コマンドが簡単に UNIX コマンドラインから実行できます。また、他の python アプリのクライアントライブラリーまたは、Tower REST API で API の対話を開発する他のユーザーの参照としても使用できます。"
+
+#: ../../../common/source/towercli.rst:14
+msgid "The ``tower-cli`` software is an open source project currently under development and, until a complete implementation occurs, only implements a subset of Tower's features."
+msgstr "``tower-cli`` ソフトウェアは現在開発中のオープンソースプロジェクトで、完全な実装が行われるまで Tower の機能のサブセットとしてのみ実装されます。"
+
+#: ../../../common/source/towercli.rst:17
+msgid "License"
+msgstr "ライセンス"
+
+#: ../../../common/source/towercli.rst:19
+msgid "While Tower is commercially licensed software, tower-cli is an open source project. Specifically, this project is licensed under the Apache 2.0 license. Pull requests, contributions, and tickets filed in GitHub are warmly welcomed."
+msgstr "Tower は商用ライセンスのあるソフトウェアですが、tower-cli はオープンソースプロジェクトです。具体的には、このプロジェクトは Apache 2.0 ライセンスで提供されています。GitHub へのプル要求、寄稿、チケット起票にご協力お願いします。"
+
+#: ../../../common/source/towercli.rst:23
+msgid "Capabilities"
+msgstr "機能"
+
+#: ../../../common/source/towercli.rst:28
+msgid "``tower-cli`` sends commands to the Tower API. It is capable of retrieving, creating, modifying, and deleting most objects within Tower."
+msgstr "``tower-cli`` は Tower API にコマンドを送信します。Tower 内にある大半のオブジェクトを取得、作成、変更、削除することができます。"
+
+#: ../../../common/source/towercli.rst:31
+msgid "A few potential uses include:"
+msgstr "このツールは以下のような使い方が可能です。"
+
+#: ../../../common/source/towercli.rst:33
+msgid "Launching playbook runs (for instance, from Jenkins, TeamCity, Bamboo, etc)"
+msgstr "Playbook 実行の起動 (例: Jenkins、TeamCity、Bamboo など)"
+
+#: ../../../common/source/towercli.rst:35
+msgid "Checking on job statuses"
+msgstr "ジョブステータスの確認"
+
+#: ../../../common/source/towercli.rst:36
+msgid "Rapidly creating objects like organizations, users, teams, and more"
+msgstr "組織、ユーザー、チームなどのオブジェクトの迅速な作成"
+
+#: ../../../common/source/towercli.rst:39
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../../common/source/towercli.rst:44
+msgid "``tower-cli`` is available as a package on `PyPI <https://pypi.python.org/pypi/ansible-tower-cli>`__."
+msgstr "``tower-cli`` は、`PyPI <https://pypi.python.org/pypi/ansible-tower-cli>`__ ではパッケージとして提供されます。"
+
+#: ../../../common/source/towercli.rst:46
+msgid "The preferred way to install is through ``pip``:"
+msgstr "推奨のインストール方法は ``pip`` を使用する方法です。"
+
+#: ../../../common/source/towercli.rst:52
+msgid "The main branch of this project may also be consumed directly from source."
+msgstr "このプロジェクトは主要なブランチは、直接ソースから使用することもできます。"
+
+#: ../../../common/source/towercli.rst:54
+msgid "For more information on ``tower-cli``, refer to the project page at:"
+msgstr "``tower-cli`` の詳細は、以下のプロジェクトページを参照してください。"
+
+#: ../../../common/source/towercli.rst:56
+msgid "https://github.com/ansible/tower-cli/"
+msgstr "https://github.com/ansible/tower-cli/"
+
+#: ../../../common/source/towercli.rst:60
+msgid "Configuration"
+msgstr "Configuration (構成)"
+
+#: ../../../common/source/towercli.rst:62
+msgid "``tower-cli`` can edit its own configuration or users can directly edit the configuration file, allowing configuration to be set in multiple ways."
+msgstr "``tower-cli`` は、独自の設定を編集でき、ユーザーは直接設定ファイルを編集できるので、複数の方法で設定を行うことができます。"
+
+#: ../../../common/source/towercli.rst:66
+msgid "Set configuration with tower-cli config"
+msgstr "tower-cli config での設定"
+
+#: ../../../common/source/towercli.rst:68
+msgid "The preferred way to set configuration is with the ``tower-cli config`` command."
+msgstr "推奨の設定方法は ``tower-cli config`` コマンドを使用する方法です。"
+
+#: ../../../common/source/towercli.rst:74
+msgid "By issuing the ``tower-cli config`` command without arguments, you can view a full list of configuration options and where they are set. The default behavior allows environment variables to override your tower-cli.cfg settings, but they will not override configuration values that are passed in on the command line at runtime. The available environment variables and their corresponding Tower configuration keys are as follows:"
+msgstr "引数なしで ``tower-cli config`` コマンドを実行すると、設定オプションの完全一覧と、設定箇所が表示されます。デフォルトの動作では、環境変数が tower-cli.cfg 設定を上書きしますが、ランタイム時にコマンドラインで渡す設定値は上書きされません。利用可能な環境変数および対応する Tower 設定キーは以下の通りです。"
+
+#: ../../../common/source/towercli.rst:76
+msgid "TOWER_COLOR: color"
+msgstr "TOWER_COLOR: color"
+
+#: ../../../common/source/towercli.rst:77
+msgid "TOWER_FORMAT: format"
+msgstr "TOWER_FORMAT: format"
+
+#: ../../../common/source/towercli.rst:78
+msgid "TOWER_HOST: host"
+msgstr "TOWER_HOST: host"
+
+#: ../../../common/source/towercli.rst:79
+msgid "TOWER_PASSWORD: password"
+msgstr "TOWER_PASSWORD: password"
+
+#: ../../../common/source/towercli.rst:80
+msgid "TOWER_USERNAME: username"
+msgstr "TOWER_USERNAME: username"
+
+#: ../../../common/source/towercli.rst:81
+msgid "TOWER_VERIFY_SSL: verify_ssl"
+msgstr "TOWER_VERIFY_SSL: verify_ssl"
+
+#: ../../../common/source/towercli.rst:82
+msgid "TOWER_VERBOSE: verbose"
+msgstr "TOWER_VERBOSE: verbose"
+
+#: ../../../common/source/towercli.rst:83
+msgid "TOWER_DESCRIPTION_ON: description_on"
+msgstr "TOWER_DESCRIPTION_ON: description_on"
+
+#: ../../../common/source/towercli.rst:84
+msgid "TOWER_CERTIFICATE: certificate"
+msgstr "TOWER_CERTIFICATE: certificate"
+
+#: ../../../common/source/towercli.rst:87
+msgid "You will generally need to set at least three configuration options--host, username, and password--which correspond to the location of your Ansible Tower instance and your credentials to authenticate to Tower."
+msgstr "通常、最低でも ホスト、ユーザー名、パスワードの (Ansible Tower インスタンスの場所、Tower への認証に使用する認証情報) 3 つの設定オプションを指定する必要があります。"
+
+#: ../../../common/source/towercli.rst:96
+msgid "Write to the config files directly."
+msgstr "config ファイルへの直接書き込み"
+
+#: ../../../common/source/towercli.rst:98
+msgid "The configuration file can also be edited directly. A configuration file is a simple file with keys and values, separated by ``:`` or ``=``:"
+msgstr "設定ファイルは直接編集することもできます。設定ファイルは ``:`` または ``=`` で区切ったキーと値を含むシンプルなファイルです。"
+
+#: ../../../common/source/towercli.rst:108
+msgid "File Locations"
+msgstr "ファイルの場所"
+
+#: ../../../common/source/towercli.rst:110
+msgid "The order of precedence for configuration file locations is as follows, from least to greatest:"
+msgstr "設定ファイルの場所の優先順位は以下の通りです (優先度が低いものから高いものの順)。"
+
+#: ../../../common/source/towercli.rst:112
+msgid "internal defaults"
+msgstr "内部のデフォルト"
+
+#: ../../../common/source/towercli.rst:113
+msgid "``/etc/awx/tower_cli.cfg`` (written using ``tower-cli config --global``)"
+msgstr "``/etc/awx/tower_cli.cfg`` (``tower-cli config --global`` で記述)"
+
+#: ../../../common/source/towercli.rst:114
+msgid "``~/.tower_cli.cfg`` (written using ``tower-cli config``)"
+msgstr "``~/.tower_cli.cfg`` (``tower-cli config`` で記述)"
+
+#: ../../../common/source/towercli.rst:115
+msgid "run-time parameters"
+msgstr "ランタイムのパラメーター"
+
+#: ../../../common/source/towercli.rst:118
+msgid "Usage"
+msgstr "使用法"
+
+#: ../../../common/source/towercli.rst:120
+msgid "``tower-cli`` invocation generally follows this format:"
+msgstr "``tower-cli`` の呼び出しは通常、以下の形式を取ります。"
+
+#: ../../../common/source/towercli.rst:126
+msgid "The **resource** is a type of object within Tower (a noun), such as ``user``, ``organization``, ``job_template``, etc.; resource names are always singular in Tower CLI (use ``tower-cli user``, never ``tower-cli users``)."
+msgstr "**resource** は、``user``、``organization``、``job_template`` など、Tower 内のオブジェクトタイプです。リソース名は常に Tower CLI (``tower-cli users`` ではなく ``tower-cli user`` を使用してください) では、単数形を使用するようにしてください。"
+
+#: ../../../common/source/towercli.rst:128
+msgid "The **action** is the thing you want to do (a verb). Most ``tower-cli`` resources have the following actions--``get``, ``list``, ``create``, ``modify``, and ``delete``--and have options corresponding to fields on the object in Tower."
+msgstr "**action** とは、実行するアイテムのことです (動詞)。多くの ``tower-cli`` リソースには ``get``、``list``、``create``、``modify``、``delete`` などのアクションと、Tower のオブジェクトにあるフィールドに適したオプションが含まれます。"
+
+#: ../../../common/source/towercli.rst:130
+msgid "Examples of actions and resources include (but are not limited to):"
+msgstr "アクションおよびリソースの例は以下を含むがそれに限定されるものではありません。"
+
+#: ../../../common/source/towercli.rst:133
+msgid "User Actions"
+msgstr "ユーザーアクション"
+
+#: ../../../common/source/towercli.rst:167
+msgid "Job Actions"
+msgstr "ジョブアクション"
+
+#: ../../../common/source/towercli.rst:179
+msgid "Group Actions"
+msgstr "グループアクション"
+
+#: ../../../common/source/towercli.rst:190
+msgid "When in doubt, check the help for more options:"
+msgstr "疑問な点がある場合には、他のオプションがないかヘルプを参照してください。"
+
+#: ../../../common/source/towercli.rst:200
+msgid "Specify extra variables"
+msgstr "追加の変数の指定"
+
+#: ../../../common/source/towercli.rst:202
+msgid "There are a number of ways to pass extra variables to the Tower server when launching a job:"
+msgstr "ジョブの起動時に Tower サーバーに追加の変数を渡す方法が複数あります。"
+
+#: ../../../common/source/towercli.rst:204
+msgid "Pass data in a file using the flag ``--extra-vars=\"@filename.yml\"``"
+msgstr "``--extra-vars=\"@filename.yml\"`` のフラグを使用してファイル内のデータを渡す方法"
+
+#: ../../../common/source/towercli.rst:205
+msgid "Include yaml data at runtime with the flag ``--extra-vars=\"var: value\"``"
+msgstr "``--extra-vars=\"var: value\"`` のフラグでランタイム時に yaml データを追加する方法"
+
+#: ../../../common/source/towercli.rst:206
+msgid "A command line editor automatically pops up when the job template is marked to prompt on launch"
+msgstr "ジョブテンプレートが起動時にプロンプトで表示されるようにマークされている場合には、コマンドラインエディターが自動的に表示されます。"
+
+#: ../../../common/source/towercli.rst:207
+msgid "If the job template has extra variables, these are not over-ridden"
+msgstr "ジョブテンプレートに追加の変数がある場合には、これらは上書きされません。"
+
+#: ../../../common/source/towercli.rst:209
+msgid "These methods can also be combined. For instance, if you give the flag multiple times on the command line, specifying a file in addition to manually giving extra variables, these two sources are combined and sent to the Tower server."
+msgstr "これらの方法は組み合わせて使用することができます。たとえば、手動で追加の変数を指定した上に、ファイルを指定するなど、コマンドラインで複数回フラグを指定した場合には、これらの 2 つのソースが統合されて、Tower サーバーに送信されます。"
+
+#: ../../../common/source/towercli.rst:223
+msgid "You may not combine multiple sources when modifying a job template. Whitespace can be used in strings like ``--extra-vars=\"a='white space'\"``, and list-valued parameters can be sent as JSON or YAML, but not ``key=value`` pairs. For instance, ``--extra-vars=\"a: [1, 2, 3, 4, 5]\"`` sends the parameter ``\"a\"`` with that list as its value."
+msgstr "ジョブテンプレートを変更する場合には複数のソースを組み合せることはできません。空白は ``--extra-vars=\"a='white space'\"`` などの文字列で使用することができ、list-valued パラメーターは ``key=value`` ではなく JSON または YAML で送信できます。たとえば ``--extra-vars=\"a: [1, 2, 3, 4, 5]\"`` は、その一覧を使用して値としてパラメーター ``\"a\"`` を送信します。"
+
+#: ../../../common/source/towercli.rst:227
+msgid "Additional strict ``extra_vars`` validation was added in |at| 3.0.0. ``extra_vars`` passed to the job launch API are only honored if one of the following is true:"
+msgstr "追加の厳密な ``extra_vars`` 検証が |at| 3.0.0 で追加されました。ジョブ起動 API に渡される ``extra_vars`` は、以下が True の場合のみ受け入れられます。"
+
+#: ../../../common/source/towercli.rst:229
+msgid "They correspond to variables in an enabled survey"
+msgstr "それらは有効な survey の変数に対応する。"
+
+#: ../../../common/source/towercli.rst:230
+msgid "``ask_variables_on_launch`` is set to True"
+msgstr "``ask_variables_on_launch`` が True に設定されている。"
+
+#: ../../../common/source/towercli.rst:234
+msgid "SSL warnings"
+msgstr "SSL の警告"
+
+#: ../../../common/source/towercli.rst:236
+msgid "By default, ``tower-cli`` raises an error if the SSL certificate of the Tower server cannot be verified. To allow unverified SSL connections, set the config variable,``verify_ssl``, to true. To allow it for a single command, add the ``--insecure`` flag."
+msgstr "デフォルトでは、Tower サーバーの SSL 証明書が検証できない場合には ``tower-cli`` がエラーを発行します。未検証の SSL 接続を許可するには、config 変数 ``verify_ssl`` を true に設定してください。 単一のコマンドを許可するには、``--insecure`` フラグを追加します。"
+

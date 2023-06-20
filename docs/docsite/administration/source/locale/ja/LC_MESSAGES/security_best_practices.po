@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/security_best_practices.rst:5
+msgid "Security Best Practices"
+msgstr "セキュリティーのベストプラクティス"
+
+#: ../../source/security_best_practices.rst:7
+msgid "|at| out-of-the-box is deployed in a secure fashion for use to automate typical environments. However, managing certain operating system environments, automation, and automation platforms, may require some additional best practices to ensure security. This document describes best practices for automation in a secure manner."
+msgstr "新規の |at| は、一般的な環境を自動化する安全な方法でデプロイされます。ただし、特定のオペレーティングシステム環境、自動化、および自動化プラットフォームを管理するには、セキュリティーを確保するいくつかの追加ベストプラクティスが必要になる場合があります。本書では、安全な方法で自動化するためのベストプラクティスを説明します。"
+
+#: ../../source/security_best_practices.rst:11
+msgid "General best practices"
+msgstr "一般的なベストプラクティス"
+
+#: ../../source/security_best_practices.rst:13
+msgid "An application is only as secure as the underlying system. To secure |rhel|, start with the release-appropriate security guide:"
+msgstr "アプリケーションは、基礎となるシステムと同じくらい安全です。|rhel| を保護するには、まずリリースに適したセキュリティーガイドを参照してください。"
+
+#: ../../source/security_best_practices.rst:15
+msgid "For |rhel| 7: https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/"
+msgstr "|rhel| 7 の場合: https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/"
+
+#: ../../source/security_best_practices.rst:16
+msgid "For |rhel| 8: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/index"
+msgstr "|rhel| 8 の場合: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/index"
+
+#: ../../source/security_best_practices.rst:20
+msgid "Understand the architecture of Ansible and the controller"
+msgstr "Ansible およびコントローラーのアーキテクチャーについて"
+
+#: ../../source/security_best_practices.rst:22
+msgid "Ansible and |at| comprise a general purpose, declarative, automation platform. That means that once an Ansible playbook is launched (via the controller, or directly on the command line), the playbook, inventory, and credentials provided to Ansible are considered to be the source of truth.  If policies are desired around external verification of specific playbook content, job definition, or inventory contents, these processes must be undertaken before the automation is launched (whether via the controller web UI, or the controller API)."
+msgstr "Ansible および |at| は、汎用的で宣言型の自動化プラットフォームから構成されます。つまり、Ansible Playbook が (コントローラー 経由、または直接コマンドラインで) 起動すると、Ansible に提供される Playbook、インベントリー、および認証情報が信頼できるソースと見なされます。特定の Playbook コンテンツ、ジョブ定義、またはインベントリーコンテンツの外部検証に関するポリシーが必要な場合、このプロセスは、自動化を開始する前に (コントローラー Web UI またはコントローラー API を介して) 実行する必要があります。"
+
+#: ../../source/security_best_practices.rst:24
+msgid "These can take many forms. The use of source control, branching, and mandatory code review is best practice for Ansible automation. There are many tools that can help create process flow around using source control in this manner."
+msgstr "これには多くの形式を使用できます。ソース管理、分岐、および必須のコードレビューの使用が、Ansible オートメーションのベストプラクティスになります。この方法でソース管理を使用してプロセスフローを作成するのに役に立つツールは多数あります。"
+
+#: ../../source/security_best_practices.rst:26
+msgid "At a higher level, many tools exist that allow for creation of approvals and policy-based actions around arbitrary workflows, including automation; these tools can then use Ansible via the controller’s API to perform automation."
+msgstr "より高度なレベルでは、自動化を含む任意のワークフローに関する承認とポリシーベースのアクションの作成を可能にする多くのツールが存在します。このようなツールは、コントローラーの API を介して Ansible を使用して自動化を実行できます。"
+
+#: ../../source/security_best_practices.rst:28
+msgid "We recommend all customers of |at| select a secure default administrator password at time of installation.  See :ref:`tips_change_password` for more information."
+msgstr "|at| をご利用のお客様は、インストール時に安全なデフォルトの管理者パスワードを選択することが推奨されます。詳細は、「:ref:`tips_change_password`」参照してください。"
+
+#: ../../source/security_best_practices.rst:30
+msgid "|at| exposes services on certain well-known ports, such as port 80 for HTTP traffic and port 443 for HTTPS traffic.  We recommend that you do not expose |at| on the open internet, significantly reducing the threat surface of your installation."
+msgstr "|at| は、HTTP トラフィック用のポート 80 や HTTPS トラフィック用のポート 443 など、特定の既知のポートでサービスを公開します。オープンインターネットに |at| を公開しないことが推奨されます。これにより、インストールの脅威が大幅に減少します。"
+
+#: ../../source/security_best_practices.rst:34
+msgid "Granting access"
+msgstr "アクセス権の付与"
+
+#: ../../source/security_best_practices.rst:36
+msgid "Granting access to certain parts of the system exposes security risks. Apply the following practices to help secure access:"
+msgstr "システムの特定の部分へのアクセスを許可すると、セキュリティーリスクが露呈します。安全なアクセスを支援するには、次のプラクティスを適用します。"
+
+#: ../../source/security_best_practices.rst:42
+msgid "Minimize administrative accounts"
+msgstr "管理アカウントを最小限に抑える"
+
+#: ../../source/security_best_practices.rst:44
+msgid "Minimizing the access to system administrative accounts is crucial for maintaining a secure system. A system administrator/root user can access, edit, and disrupt any system application. Keep the number of people/accounts with root access to as small of a group as possible. Do not give out `sudo` to `root` or `awx` (the controller user) to untrusted users. Know that when restricting administrative access via mechanisms like `sudo`, that restricting to a certain set of commands may still give a wide range of access. Any command that allows for execution of a shell or arbitrary shell commands, or any command that can change files on the system, is fundamentally equivalent to full root access."
+msgstr "安全なシステムを維持するには、システム管理アカウントへのアクセスを最小限に抑えることが重要です。システム管理者 (root) ユーザーは、システムアプリケーションへのアクセス、編集、および中断が可能になります。root アクセス権を持つユーザー (アカウント) の数を、可能な限り少数のグループにします。信頼できないユーザーに、`root` または `awx` (コントローラーユーザー) への `sudo` を付与しないでください。`sudo` などのメカニズムを使用して管理アクセスを制限する場合は、特定のコマンドセットに制限すると、依然として広範囲のアクセスが提供される可能性があることに注意してください。シェルまたは任意のシェルコマンドの実行を許可するコマンド、またはシステムのファイルを変更できるコマンドは、基本的に完全な root アクセスと同等です。"
+
+#: ../../source/security_best_practices.rst:46
+msgid "In a controller context, any controller ‘system administrator’ or ‘superuser’ account can edit, change, and update any inventory or automation definition in the controller. Restrict this to the minimum set of users possible for low-level controller configuration and disaster recovery only."
+msgstr "コントローラーのコンテキストでは、コントローラーの「システム管理者」または「スーパーユーザー」のすべてのアカウントが、コントローラーのインベントリーまたは自動化定義を編集、変更、および更新できます。これを、低レベルのコントローラー設定と災害復旧でのみ可能な最小ユーザーセットに制限します。"
+
+#: ../../source/security_best_practices.rst:50
+msgid "Minimize local system access"
+msgstr "ローカルシステムアクセスを最小限に抑える"
+
+#: ../../source/security_best_practices.rst:52
+msgid "|at|, when used with best practices, should not require local user access except for administrative purposes. Non-administrator users should not have access to the controller system."
+msgstr "ベストプラクティスと併用する場合は、|at| は管理目的を除き、ローカルユーザーアクセスを必要としません。管理者以外のユーザーはコントローラーシステムにアクセスできません。"
+
+#: ../../source/security_best_practices.rst:56
+msgid "Remove access to credentials from users"
+msgstr "ユーザーから認証情報へのアクセスを削除する"
+
+#: ../../source/security_best_practices.rst:58
+msgid "If an automation credential is only stored in the controller, it can be further secured. Services such as OpenSSH can be configured to only allow credentials on connections from specific addresses. Credentials used by automation can be different than credentials used by system administrators for disaster-recovery or other ad-hoc management, allowing for easier auditing."
+msgstr "自動化認証情報がコントローラーにのみ保存されている場合は、安全性が増します。OpenSSH などのサービスは、特定のアドレスからの接続でのみ認証情報が可能になるように設定できます。自動化で使用される認証情報は、災害復旧やその他のアドホック管理にシステム管理者が使用する認証情報とは変えることができ、これにより監査を容易にします。"
+
+#: ../../source/security_best_practices.rst:61
+msgid "Enforce separation of duties"
+msgstr "職務の分離を強制する"
+
+#: ../../source/security_best_practices.rst:63
+msgid "Different pieces of automation may need to access a system at different levels. For example, you may have low-level system automation that applies patches and performs security baseline checking, while a higher-level piece of automation deploys applications. By using different keys or credentials for each piece of automation, the effect of any one key vulnerability is minimized, while also allowing for easy baseline auditing."
+msgstr "異なるレベルのシステムにアクセスするために、さまざまな自動化が必要になる場合があります。たとえば、パッチを適用してセキュリティーベースラインチェックを実行する低レベルのシステム自動化や、アプリケーションをデプロイする高レベルの自動化などです。自動化の各部分に異なるキーまたは認証情報を使用することにより、1 つのキー脆弱性の影響が最小限に抑えられ、ベースライン監査も容易になります。"
+
+#: ../../source/security_best_practices.rst:67
+msgid "Available resources"
+msgstr "利用可能なリソース"
+
+#: ../../source/security_best_practices.rst:69
+msgid "Several resources exist in the controller and elsewhere to ensure a secure platform. Consider utilizing the following functionality:"
+msgstr "コントローラーなどに、安全なプラットフォームを確保するリソースがいくつかあります。次の機能の利用を検討してください。"
+
+#: ../../source/security_best_practices.rst:76
+msgid "Audit and logging functionality"
+msgstr "監査およびログの機能"
+
+#: ../../source/security_best_practices.rst:78
+msgid "For any administrative access, it is key to audit and watch for actions. For the system overall, this can be done via the built in audit support (https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/chap-system_auditing.html) and via the built-in logging support."
+msgstr "管理アクセスの場合は、アクションの監査および監視を行うことが重要です。システム全体では、これは組み込みの監査サポート (https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/chap-system_auditing.html) 内、および組み込みのロギングサポートを介して実行できます。"
+
+#: ../../source/security_best_practices.rst:80
+msgid "For |at|, this is done via the built-in Activity Stream support that logs all changes within the controller, as well as via the automation logs."
+msgstr "|at| の場合、これは、コントローラー内のすべての変更を記録する組み込みのアクティビティーストリームサポートと、自動化ログを介して行われます。"
+
+#: ../../source/security_best_practices.rst:82
+msgid "Best practices dictate collecting logging and auditing centrally, rather than reviewing it on the local system. It is recommended that |at| be configured to use whatever IDS and/or logging/auditing (Splunk) is standard in your environment. |at| includes built-in logging integrations for Elastic Stack, Splunk, Sumologic, Loggly, and more. See :ref:`ag_logging` for more information."
+msgstr "ベストプラクティスでは、ローカルシステムでログを確認する代わりに、ロギングと監査を一元的に収集する必要があります。ご利用の環境で標準的な IDS または ロギング/監査 (Splunk)、もしくはその両方を使用するように |at| を設定することが推奨されます。|at| には、Elastic Stack、Splunk、Sumologic、Loggly などの組み込みロギング統合が含まれます。詳細は、:ref:`ag_logging` を参照してください。"
+
+#: ../../source/security_best_practices.rst:86
+msgid "Existing security functionality"
+msgstr "既存のセキュリティー機能"
+
+#: ../../source/security_best_practices.rst:88
+msgid "Do not disable SELinux, and do not disable the controller’s existing multi-tenant containment. Use the controller’s role-based access control (RBAC) to delegate the minimum level of privileges required to run automation. Use Teams in the controller to assign permissions to groups of users rather than to users individually. See :ref:`rbac-ug` in the |atu|."
+msgstr "SELinux を無効にしないでください。また、コントローラーの既存のマルチテナントコンテインメントを無効にしないでください。コントローラーのロールベースのアクセス制御 (RBAC) を使用して、自動化の実行に必要な最小限の特権を委譲します。コントローラーのチームを使用して、個々のユーザーではなくユーザーグループにパーミッションを割り当てます。『|atu|』の「:ref:`rbac-ug`」を参照してください。"
+
+#: ../../source/security_best_practices.rst:92
+msgid "External account stores"
+msgstr "外部アカウントストア"
+
+#: ../../source/security_best_practices.rst:94
+msgid "Maintaining a full set of users just in the controller can be a time-consuming task in a large organization, prone to error. |At| supports connecting to external account sources via :ref:`LDAP <ag_auth_ldap>`, :ref:`SAML 2.0 <ag_auth_saml>`, and certain :ref:`OAuth providers <ag_social_auth>`. Using this eliminates a source of error when working with permissions."
+msgstr "コントローラーだけですべてのユーザーを維持すると、大規模な組織では時間のかかるタスクになり、エラーが発生しやすくなる可能性があります。|At| は、:ref:`LDAP <ag_auth_ldap>`、:ref:`SAML 2.0 <ag_auth_saml>`、および特定の :ref:`OAuth providers <ag_social_auth>` を介した外部アカウントソースへの接続をサポートします。これにより、パーミッションを操作する際のエラーの原因がなくなります。"
+
+#: ../../source/security_best_practices.rst:100
+msgid "Django password policies"
+msgstr "Django パスワードポリシー"
+
+#: ../../source/security_best_practices.rst:102
+msgid "Controller admins can leverage Django to set password policies at creation time via ``AUTH_PASSWORD_VALIDATORS`` to validate controller user passwords. In the ``custom.py`` file located at ``/etc/tower/conf.d`` of your controller instance, add the following code block example:"
+msgstr "コントローラー管理者は、Django を利用して作成時に ``AUTH_PASSWORD_VALIDATORS`` 経由でパスワードポリシーを設定し、コントローラーユーザーのパスワードを検証できます。コントローラーインスタンスの ``/etc/tower/conf.d`` にある ``custom.py`` ファイルに、次のコードブロックの例を追加します。"
+
+#: ../../source/security_best_practices.rst:125
+msgid "For more information, see `Password management in Django <https://docs.djangoproject.com/en/3.2/topics/auth/passwords/#module-django.contrib.auth.password_validation>`_ in addition to the example posted above."
+msgstr "詳細は、上記の例に加えて `Password management in Django <https://docs.djangoproject.com/en/3.2/topics/auth/passwords/#module-django.contrib.auth.password_validation>`_ を参照してください。"
+
+#: ../../source/security_best_practices.rst:127
+msgid "Be sure to restart your controller instance for the change to take effect. See :ref:`ag_restart_tower` for detail."
+msgstr "変更を有効にするには、必ずコントローラーインスタンスを再起動してください。詳細は、:ref:`ag_restart_tower` を参照してください。"
+

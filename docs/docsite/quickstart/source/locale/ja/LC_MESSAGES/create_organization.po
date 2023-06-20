@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_organization.rst:2
+msgid "Review the Organization"
+msgstr "組織のレビュー"
+
+#: ../../source/create_organization.rst:7
+msgid "An organization is a logical collection of users, teams, projects, and inventories. It is the highest level object in the controller object hierarchy."
+msgstr "組織は、ユーザー、チーム、プロジェクト、インベントリーの論理コレクションです。組織は、コントローラーのオブジェクト階層で最上位のオブジェクトです。"
+
+#: ../../source/create_organization.rst:9
+msgid "From the left navigation bar, click **Organizations**."
+msgstr "左側のナビゲーションバーから **組織** をクリックします。"
+
+#: ../../source/create_organization.rst:12
+msgid "The automation controller creates a default organization automatically. Users of Tower with a Self-support level license only have the default organization available and should **not** delete it."
+msgstr "自動コントローラーは、デフォルトの組織が自動的に作成されます。セルフサポートレベルのライセンスを持つ Tower のユーザーには、デフォルトの組織しか利用できないため、削除 **するべきではありません**。"
+
+#: ../../source/create_organization.rst:14
+msgid "|Organizations - default view|"
+msgstr "|Organizations - default view|"
+
+#: ../../source/create_organization.rst:22
+msgid "A default organization has been automatically created and is available to all users of the automation controller. It can be used as is or edited later as needed."
+msgstr "デフォルトの組織は自動的に作成され、自動コントローラーの全ユーザーが利用できます。そのまま使用することも、後ほど必要に応じて編集することもできます。"
+
+#: ../../source/create_organization.rst:24
+msgid "For the purpose of this Quick Start Guide, leave the default organization as is."
+msgstr "このクイックスタートガイドの目的上、デフォルトの組織はそのままにします。"
+
+#: ../../source/create_organization.rst:27
+msgid "If you are using the controller with a Basic subscription, you must use the default organization. Only Enterprise or Premium licenses have the ability to add new organizations beyond the default."
+msgstr "基本的なサブスクリプションでコントローラーをご利用の場合には、デフォルトの組織を使用する必要があります。Enterprise または Premium のライセンスをお持ちの場合のみ、デフォルト以外の組織を新たに追加することができます。"
+
+#: ../../source/create_organization.rst:29
+msgid "To edit the default organization later, expand its properties by clicking the Edit (|edit|) button and entering the appropriate details, then save your changes."
+msgstr "デフォルトの組織を後で編集するには、編集 (|edit|) ボタンをクリックして「プロパティー」を展開し、適切な情報を入力して変更を保存します。"
+
+#: ../../source/create_organization.rst:35
+msgid "|Organizations - default expanded|"
+msgstr "|Organizations - default expanded|"
+
+#: ../../source/create_organization.rst:39
+msgid "Enterprise and Premium license users who want to add a new organization should refer to the :ref:`Organizations <userguide:ug_organizations>` section in the |atu|."
+msgstr "Enterprise および Premium のライセンスをご利用で、新規組織を追加するには、|atu| の :ref:`Organizations <userguide:ug_organizations>` を参照してください。"
+

@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/best_practices.rst:2
+msgid "Best Practices"
+msgstr "모범 사례"
+
+#: ../../source/best_practices.rst:8
+msgid "Use Source Control"
+msgstr "소스 제어 사용"
+
+#: ../../source/best_practices.rst:13
+msgid "While |at| supports playbooks stored directly on the server, best practice is to store your playbooks, roles, and any associated details in source control. This way you have an audit trail describing when and why you changed the rules that are automating your infrastructure. Plus, it allows for easy sharing of playbooks with other parts of your infrastructure or team."
+msgstr "|at|에서는 서버에 직접 저장되는 플레이북을 지원하지만, 플레이북, 역할 및 관련 세부 정보를 소스 제어에 저장하는 것이 좋습니다. 이렇게 하면 인프라 자동화 규칙을 변경한 시기와 이유를 설명하는 감사 추적이 가능합니다. 또한 인프라나 팀의 다른 부분과 플레이북을 쉽게 공유할 수 있습니다."
+
+#: ../../source/best_practices.rst:16
+msgid "Ansible file and directory structure"
+msgstr "Ansible 파일 및 디렉터리 구조"
+
+#: ../../source/best_practices.rst:21
+msgid "Please review the `Ansible Tips and Tricks <https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html>`_ from the Ansible documentation. If creating a common set of roles to use across projects, these should be accessed via source control submodules, or a common location such as ``/opt``. Projects should not expect to import roles or content from other projects."
+msgstr "Ansible 문서에서 `Ansible Tips and Tricks <https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html>`_을 검토하십시오. 프로젝트에서 사용할 공통 역할 세트를 생성하는 경우 소스 제어 하위 모듈 또는 공통 위치(예: ``/opt``)를 통해 액세스해야 합니다. 프로젝트에서 다른 프로젝트의 역할 또는 콘텐츠를 가져올 것으로 예상해서는 안 됩니다."
+
+#: ../../source/best_practices.rst:24
+msgid "Playbooks should not use the ``vars_prompt`` feature, as |at| does not interactively allow for ``vars_prompt`` questions. If you must use ``vars_prompt``, refer to and make use of the :ref:`ug_surveys` functionality."
+msgstr "|at|에서는 ``vars_prompt`` 질문을 대화식으로 허용하지 않으므로 플레이북에서 ``vars_prompt`` 기능을 사용해서는 안 됩니다. ``vars_prompt``를 사용해야 하는 경우 :ref:`ug_surveys` 기능을 참조하고 사용하십시오."
+
+#: ../../source/best_practices.rst:27
+msgid "Playbooks should not use the ``pause`` feature of Ansible without a timeout, as |at| does not allow for interactively cancelling a pause. If you must use ``pause``, ensure that you set a timeout."
+msgstr "``pause``에서는 대화식으로 일시 중지를 취소할 수 없으므로 플레이북에서 시간 제한 없이 Ansible의 |at| 기능을 사용해서는 안 됩니다. ``pause``를 사용해야 하는 경우 시간 초과를 설정해야 합니다."
+
+#: ../../source/best_practices.rst:29
+msgid "Jobs run use the playbook directory as the current working directory, although jobs should be coded to use the ``playbook_dir`` variable rather than relying on this."
+msgstr "작업 실행에서는 플레이북 디렉터리를 현재 작업 디렉터리로 사용하지만 작업은 이 디렉터리를 사용하는 대신 ``playbook_dir`` 변수를 사용하도록 코딩해야 합니다."
+
+#: ../../source/best_practices.rst:34
+msgid "Use Dynamic Inventory Sources"
+msgstr "동적 인벤토리 소스 사용"
+
+#: ../../source/best_practices.rst:39
+msgid "If you have an external source of truth for your infrastructure, whether it is a cloud provider or a local CMDB, it is best to define an inventory sync process and use the support for dynamic inventory (including cloud inventory sources). This ensures your inventory is always up to date."
+msgstr "인프라에 클라우드 공급자이든 로컬 CMDB이든 진실의 외부 소스가 있는 경우, 인벤토리 동기화 프로세스를 정의하고 동적 인벤토리(클라우드 인벤토리 소스 포함)에 대한 지원을 사용하는 것이 가장 좋습니다. 이렇게 하면 인벤토리가 항상 최신 상태로 유지됩니다."
+
+#: ../../../common/source/overwrite_var_note_2-4-0.rst:3
+msgid "Edits and additions to Inventory host variables persist beyond an inventory sync as long as ``--overwrite_vars`` is **not** set."
+msgstr "``--overwrite_vars``를 설정하지 **않는**한, 편집 및 추가한 인벤토리 호스트 변수는 인벤토리를 동기화한 후에도 유지됩니다."
+
+#: ../../source/best_practices.rst:44
+msgid "Variable Management for Inventory"
+msgstr "인벤토리 변수 관리"
+
+#: ../../source/best_practices.rst:49
+msgid "Keeping variable data along with the hosts and groups definitions (see the inventory editor) is encouraged, rather than using ``group_vars/`` and ``host_vars/``. If you use dynamic inventory sources, the controller can sync such variables with the database as long as the **Overwrite Variables** option is not set."
+msgstr "``group_vars/`` 및 ``host_vars/``를 사용하는 대신 변수 데이터를 호스트 및 그룹 정의(인벤토리 편집기 참조)와 함께 유지하는 것이 좋습니다. 동적 인벤토리 소스를 사용하는 경우 **변수 덮어쓰기** 옵션이 설정되어 있지 않으면 컨트롤러에서 이러한 변수를 데이터베이스와 동기화할 수 있습니다."
+
+#: ../../source/best_practices.rst:56
+msgid "Autoscaling"
+msgstr "자동 확장"
+
+#: ../../source/best_practices.rst:61
+msgid "Using the \"callback\" feature to allow newly booting instances to request configuration is very useful for auto-scaling scenarios or provisioning integration."
+msgstr "\"콜백\" 기능을 사용하여 새 부팅 인스턴스에서 구성을 요청할 수 있도록 허용하면 자동 확장 시나리오 또는 프로비저닝 통합에 매우 유용합니다."
+
+#: ../../source/best_practices.rst:66
+msgid "Larger Host Counts"
+msgstr "더 큰 호스트 수"
+
+#: ../../source/best_practices.rst:71
+msgid "Consider setting \"forks\" on a job template to larger values to increase parallelism of execution runs. For more information on tuning Ansible, see `the Ansible blog <http://www.ansible.com/blog/ansible-performance-tuning>`__."
+msgstr "더 많은 실행이 병렬 처리되도록 하려면 작업 템플릿의 \"포크\"를 더 큰 값으로 설정하는 것이 좋습니다. Ansible 조정에 대한 자세한 내용은 `the Ansible blog <http://www.ansible.com/blog/ansible-performance-tuning>`__를 참조하십시오."
+
+#: ../../source/best_practices.rst:77
+msgid "Continuous integration / Continuous Deployment"
+msgstr "지속적인 통합/지속적인 배포"
+
+#: ../../source/best_practices.rst:83
+msgid "For a Continuous Integration system, such as Jenkins, to spawn a job, it should make a curl request to a job template. The credentials to the job template should not require prompting for any particular passwords. Refer to the `CLI documentation`_ for configuration and usage instructions."
+msgstr "Jenkins와 같은 지속적 통합 시스템의 경우 작업을 생성하려면 작업 템플릿에 대해 curl 요청을 수행해야 합니다. 작업 템플릿에 대한 인증 정보에는 특정 암호를 입력하라는 메시지가 표시되지 않아야 합니다. 구성 및 사용 지침은 `CLI documentation`_를 참조하십시오."
+
+#: ../../source/best_practices.rst:90
+msgid "LDAP authentication performance tips"
+msgstr "LDAP 인증 성능 팁"
+
+#: ../../source/best_practices.rst:95
+msgid "When an LDAP user authenticates, by default, all user-related attributes will be updated in the database on each log in. In some environments, this operation can be skipped due to performance issues. To avoid it, you can disable the option `AUTH_LDAP_ALWAYS_UPDATE_USER`. Refer to the `Knowledge Base Article 5823061`_ for its configuration and usage instructions. Please note that new users will still be created and get their attributes pushed to the database on their first login."
+msgstr "LDAP 사용자가 인증하면 기본적으로 모든 사용자 관련 특성이 로그인할 때마다 데이터베이스에서 업데이트됩니다. 일부 환경에서는 성능 문제로 인해 이 작업을 건너뛸 수 있습니다. 이를 방지하기 위해 `AUTH_LDAP_ALWAYS_UPDATE_USER` 옵션을 비활성화할 수 있습니다. 구성 및 사용 지침은 `Knowledge Base Article 5823061`_을 참조하십시오. 새 사용자가 계속 생성되고 처음 로그인할 때 데이터베이스에 해당 특성이 푸시됩니다."
+
+#: ../../source/best_practices.rst:100
+msgid "With this option set to False, no changes to LDAP user's attributes will be updated. Attributes will only be updated the first time the user is created."
+msgstr "이 옵션을 False로 설정하면 LDAP 사용자의 특성에 대한 변경 사항이 업데이트되지 않습니다. 사용자가 처음 생성될 때만 특성이 업데이트됩니다."
+

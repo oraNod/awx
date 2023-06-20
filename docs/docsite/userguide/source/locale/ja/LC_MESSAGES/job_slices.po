@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/job_slices.rst:4
+msgid "Job Slicing"
+msgstr "ジョブスライス"
+
+#: ../../source/job_slices.rst:13
+msgid "A :term:`sliced job` refers to the concept of a distributed job. Distributed jobs are used for running a job across a very large number of hosts, allowing you to run multiple ansible-playbooks, each on a subset of an inventory, that can be scheduled in parallel across a cluster."
+msgstr ":term:`sliced job` という用語は、分散されたジョブのコンセプトのことです。分散されたジョブは、大多数のホストでジョブを実行する場合に使用し、インベントリーのサブセット上で、複数の Ansible Playbook それぞれを実行することで、クラスターで並行してスケジューリングができます。"
+
+#: ../../source/job_slices.rst:16
+msgid "By default, Ansible runs jobs from a single control instance. For jobs that do not require cross-host orchestration, job slicing takes advantage of |at|'s ability to distribute work to multiple nodes in a cluster. Job slicing works by adding a Job Template field ``job_slice_count``, which specifies the number of jobs into which to slice the Ansible run. When this number is greater than 1, |at| will generate a workflow from a job template instead of a job. The inventory will be distributed evenly amongst the slice jobs. The workflow job is then started, and proceeds as though it were a normal workflow. When launching a job, the API will return either a job resource (if ``job_slice_count = 1``) or a workflow job resource. The corresponding User Interface will redirect to the appropriate screen to display the status of the run."
+msgstr "デフォルトでは、Ansible は単一のコントロールインスタンスからジョブを実行します。ホスト間のオーケストレーションが必要ないジョブの場合、ジョブスライスは、クラスター内の複数のノードに作業を分散する |at| の機能を利用します。ジョブスライスは、ジョブテンプレートのフィールド ``job_slice_count`` を追加して、Ansible 実行をスライスするジョブの数を指定することで機能します。この数が 1 より大きい場合、|at| はジョブではなくジョブテンプレートからワークフローを生成します。インベントリーが、複数のスライスジョブに均等に分散され、ワークフロージョブが起動し、通常のワークフローのように続行されます。ジョブを起動すると、API はジョブリソース (``job_slice_count = 1`` の場合) か、ワークフロージョブのリソースを返します。対応のユーザーインターフェースで、適切な画面にリダイレクトされ、実行のステータスが表示されます。"
+
+#: ../../source/job_slices.rst:20
+msgid "Job slice considerations"
+msgstr "ジョブスライスの留意事項"
+
+#: ../../source/job_slices.rst:22
+msgid "Consider the following when setting up job slices:"
+msgstr "ジョブスライスの設定時には以下を考慮してください。"
+
+#: ../../source/job_slices.rst:24
+msgid "A sliced job creates a workflow job, and then that creates jobs."
+msgstr "スライスされたジョブは、ワークフロージョブを作成してからジョブを作成すること。"
+
+#: ../../source/job_slices.rst:26
+msgid "A job slice consists of a job template, an inventory, and a slice count."
+msgstr "ジョブスライスはジョブテンプレート、インベントリー、スライス数で構成されること。"
+
+#: ../../source/job_slices.rst:28
+msgid "When executed, a sliced job splits each inventory into a number of \"slice size\" chunks. It then queues jobs of ansible-playbook runs on each chunk of the appropriate inventory. The inventory fed into ansible-playbook is a pared-down version of the original inventory that only contains the hosts in that particular slice. The completed sliced job that displays on the Jobs list are labeled accordingly, with the number of sliced jobs that have run:"
+msgstr "実行時に、スライスされたジョブは、各インベントリーを「スライスサイズ」のチャンクに分割します。次に、適切なインベントリーのチャンクごとに、Ansible Playbook 実行のジョブをキューに追加します。Ansible Playbook にフィードしたインベントリーは、元のインベントリーを縮小したバージョンで、特定のスライスのホストだけを含みます。ジョブリストに表示される、完了したスライスジョブは随時、実行済みのスライスジョブ数で、ラベルがつけられます。"
+
+#: ../../source/job_slices.rst:33
+msgid "These sliced jobs follow normal scheduling behavior (number of forks, queuing due to capacity, assignation to instance groups based on inventory mapping)."
+msgstr "スライスされたジョブでのスケジュールの動作は、通常通りです (フォーク数、容量に合わせたキューへの追加、インベントリーマッピングをもとにしたインスタンスグループへの割り当て)。"
+
+#: ../../../common/source/job-slicing-rule.rst:3
+msgid "Job slicing is intended to scale job executions horizontally. Enabling job slicing on a job template divides an inventory to be acted upon in the number of slices configured at launch time and then starts a job for each slice."
+msgstr "ジョブスライスは、ジョブの実行を水平方向にスケーリングすることを目的としています。ジョブテンプレートでジョブスライスを有効にすると、処理対象のインベントリーが起動時に設定されたスライスの数に分割され、スライスごとにジョブが開始されます。"
+
+#: ../../../common/source/job-slicing-rule.rst:5
+msgid "It is expected that the number of slices will be equal to or less than the number of controller nodes. Setting an extremely high number of job slices (e.g., thousands), while allowed, can cause performance degradation as the job scheduler is not designed to schedule simultaneously thousands of workflow nodes, which are what the sliced jobs become."
+msgstr "スライスの数は、コントローラーノードの数と同じかそれ以下になることが予想されます。ジョブスライスの数を極端に多く (たとえば、数千) 設定することはできますが、パフォーマンスが低下する可能性があります。これは、ジョブスケジューラーが、スライスされたジョブとなる数千のワークフローノードを同時にスケジュールするように設計されていないためです。"
+
+#: ../../source/job_slices.rst:39
+msgid "Sliced job templates with prompts and/or extra variables behave the same as standard job templates, applying all variables and limits to the entire set of slice jobs in the resulting workflow job. However, when passing a limit to a Sliced Job, if the limit causes slices to have no hosts assigned, those slices will fail, causing the overall job to fail."
+msgstr "スライスされたジョブテンプレートにプロンプトや追加の変数が指定されている場合に、標準のジョブテンプレートと同じ動作をし、スライス後のワークフロージョブに含まれるスライスジョブセット全体に、全変数と制限が適用されます。ただし、スライスされたジョブに制限が課された場合には、この制限が原因で、スライスにホストが割り当てられず、これらのスライスが失敗するので、ジョブ全体が失敗してしまいます。"
+
+#: ../../source/job_slices.rst:42
+msgid "A job slice job status of a distributed job is calculated in the same manner as workflow jobs; failure if there are any unhandled failures in its sub-jobs."
+msgstr "分散されたジョブのジョブスライスのステータスは、ワークフロージョブと同じ方法で計算されます。サブジョブでの失敗した内容が未処理の場合は、失敗となります。"
+
+#: ../../source/job_slices.rst:46
+msgid "Any job that intends to orchestrate across hosts (rather than just applying changes to individual hosts) should not be configured as a slice job. Any job that does, may fail, and |at| will not attempt to discover or account for playbooks that fail when run as slice jobs."
+msgstr "(個別のホストだけに変更を適用するのではなく) ホスト全体でオーケストレーションを行う予定のジョブは、スライスジョブとして設定しないようにしてください。スライスジョブとして設定してしまうと、ジョブが失敗する可能性があり、|at| では、スライスジョブとして設定されている場合に、失敗した Playbook の検出や対応は試行されません。"
+
+#: ../../source/job_slices.rst:52
+msgid "Job slice execution behavior"
+msgstr "ジョブスライスの実行動作"
+
+#: ../../source/job_slices.rst:54
+msgid "When jobs are sliced, they can run on any node and some may not run at the same time (insufficient capacity in the system, for example). When slice jobs are running, job details display the workflow and job slice(s) currently running, as well as a link to view their details individually."
+msgstr "ジョブをスライスすると、どのノードでも実行でき、(たとえば、システム内に容量が十分にない場合など) 同時に実行されないことがあります。スライスジョブの実行中は、ジョブの詳細で現在実行中のワークフローとジョブスライス以外に、個別の詳細を確認するためのリンクが表示されます。"
+
+#: ../../source/job_slices.rst:58
+msgid "By default, job templates are not normally configured to execute simultaneously (``allow_simultaneous`` must be checked in the API or **Enable Concurrent Jobs** in the UI). Slicing overrides this behavior and implies ``allow_simultaneous`` even if that setting is unchecked. See :ref:`ug_JobTemplates` for information on how to specify this, as well as the number of job slices on your job template configuration."
+msgstr "デフォルトでは、ジョブテンプレートは通常同時に実行されるようには設定されていません (API で ``allow_simultaneous`` を有効にするか、UI で **同時実行ジョブの有効化** にチェックを入れる必要があります)。スライスすることで、この動作が上書きされ、対象の設定にチェックが入れられていない場合でも ``allow_simultaneous`` が有効とみなされます。これの指定方法や、ジョブテンプレート設定でのジョブスライス数の指定方法に関する情報は、:ref:`ug_JobTemplates` を参照してください。"
+
+#: ../../source/job_slices.rst:60
+msgid "The :ref:`ug_JobTemplates` section provides additional detail on performing the following operations in the User Interface:"
+msgstr "「:ref:`ug_JobTemplates`」のセクションでは、ユーザーインターフェースの以下の操作を実行する方法が追加で提供されています。"
+
+#: ../../source/job_slices.rst:62
+msgid "Launch workflow jobs with a job template that has a slice number greater than one"
+msgstr "スライスジョブが複数あるジョブテンプレートでワークフロージョブを起動する"
+
+#: ../../source/job_slices.rst:63
+msgid "Cancel the whole workflow or individual jobs after launching a slice job template"
+msgstr "スライスジョブのテンプレート軌道跡にワークフロー全体または個別ジョブをキャンセルする"
+
+#: ../../source/job_slices.rst:64
+msgid "Relaunch the whole workflow or individual jobs after slice jobs finish running"
+msgstr "スライスジョブの実行が完了した後にワークフロー全体または個別ジョブを再起動する"
+
+#: ../../source/job_slices.rst:65
+msgid "View the details about the workflow and slice jobs after a launching a job template"
+msgstr "ジョブテンプレートの起動後にワークフローとスライスジョブに関する情報を表示する"
+
+#: ../../source/job_slices.rst:66
+msgid "Search slice jobs specifically after you create them (see subsequent section, :ref:`ug_job_slice_search`)"
+msgstr "スライスジョブ作成後に特定のスライスジョブを検索する (次のセクション「:ref:`ug_job_slice_search`」を参照)"
+
+#: ../../source/job_slices.rst:74
+msgid "Search job slices"
+msgstr "ジョブスライスの検索"
+
+#: ../../source/job_slices.rst:76
+msgid "To make it easier to find slice jobs, use the Search functionality to apply a search filter to:"
+msgstr "スライスジョブの検索を簡素化するには、検索機能を使用して検索フィルターを適用します。"
+
+#: ../../source/job_slices.rst:78
+msgid "job lists to show only slice jobs"
+msgstr "ジョブリストに適用してスライスジョブだけを表示"
+
+#: ../../source/job_slices.rst:79
+msgid "job lists to show only parent workflow jobs of job slices"
+msgstr "ジョブリストに適用してジョブスライスの親ワークフロージョブのみを表示"
+
+#: ../../source/job_slices.rst:80
+msgid "job templates lists to only show job templates that produce slice jobs"
+msgstr "ジョブテンプレートリストに適用してスライスジョブを生成するジョブテンプレートのみを表示"
+
+#: ../../source/job_slices.rst:83
+msgid "To show only slice jobs in job lists, as with most cases, you can filter either on the type (jobs here) or ``unified_jobs``:"
+msgstr "ジョブリストのスライスジョブのみを表示するには、他の多くの場合と同様に、タイプ (ここではジョブ) または ``unified_jobs`` でフィルタリングできます。"
+
+#: ../../source/job_slices.rst:90
+msgid "To show only parent workflow jobs of job slices:"
+msgstr "ジョブスライスの親ワークフロージョブのみを表示する方法:"
+
+#: ../../source/job_slices.rst:97
+msgid "To show only job templates that produce slice jobs:"
+msgstr "スライスジョブを生成するジョブテンプレートのみを表示する方法:"
+

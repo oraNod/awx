@@ -1,0 +1,489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/notifications.rst:4
+msgid "Notifications"
+msgstr ""
+
+#: ../../source/notifications.rst:13
+msgid ""
+"A :term:`Notifier` is an instance of a :term:`Notification` type (Email, "
+"Slack, Webhook, etc.) with a name, description, and a defined "
+"configuration."
+msgstr ""
+
+#: ../../source/notifications.rst:15
+msgid "For example:"
+msgstr ""
+
+#: ../../source/notifications.rst:17
+msgid ""
+"A username, password, server, and recipients are needed for an Email "
+"notifier"
+msgstr ""
+
+#: ../../source/notifications.rst:18
+msgid "The token and a list of channels are needed for a Slack notifier"
+msgstr ""
+
+#: ../../source/notifications.rst:19
+msgid "The URL and Headers are needed for a Webhook notifier"
+msgstr ""
+
+#: ../../source/notifications.rst:21
+msgid ""
+"A Notification is a manifestation of the notifier; for example, when a "
+"job fails, a notification is sent using the configuration defined by the "
+"Notifier."
+msgstr ""
+
+#: ../../source/notifications.rst:23
+msgid ""
+"At a high level, the typical flow for the notification system works as "
+"follows:"
+msgstr ""
+
+#: ../../source/notifications.rst:25
+msgid ""
+"A user creates a notifier to the Tower REST API at the "
+"``/api/v1/notifiers`` endpoint (either through the API or through the "
+"Tower UI)."
+msgstr ""
+
+#: ../../source/notifications.rst:26
+msgid ""
+"A user assigns the notifier to any of the various objects that support it"
+" (all variants of job templates as well as organizations and projects) "
+"and at the appropriate trigger level for which they want the notification"
+" (error, success, or any). For example a user may wish to assign a "
+"particular Notifier to trigger when Job Template 1 fails. In which case, "
+"they will associate the notifier with the job template at "
+"``/api/v1/job_templates/n/notifiers_error`` API endpoint."
+msgstr ""
+
+#: ../../source/notifications.rst:29
+msgid "Notifier Hierarchy"
+msgstr ""
+
+#: ../../source/notifications.rst:34
+msgid ""
+"Notifiers assigned at certain levels will inherit notifiers defined on "
+"parent objects as such:"
+msgstr ""
+
+#: ../../source/notifications.rst:36
+msgid ""
+"Job Templates will use notifiers defined on it as well as inheriting "
+"notifiers from the Project used by the Job Template and from the "
+"Organization that it is listed under (via the Project)."
+msgstr ""
+
+#: ../../source/notifications.rst:37
+msgid ""
+"Project Updates will use notifiers defined on the project and will "
+"inherit notifiers from the Organization associated with it"
+msgstr ""
+
+#: ../../source/notifications.rst:38
+msgid ""
+"Inventory Updates will use notifiers defined on the Organization that it "
+"is listed under"
+msgstr ""
+
+#: ../../source/notifications.rst:39
+msgid ""
+"Ad-hoc commands will use notifiers defined on the Organization that the "
+"inventory is associated with"
+msgstr ""
+
+#: ../../source/notifications.rst:42
+msgid "Workflow"
+msgstr ""
+
+#: ../../source/notifications.rst:47
+msgid ""
+"When a job succeeds or fails, the error or success handler will pull a "
+"list of relevant notifiers using the procedure defined above. It will "
+"then create a Notification object for each one containing relevant "
+"details about the job and then sends it to the destination (email "
+"addresses, slack channel(s), sms numbers, etc). These Notification "
+"objects are available as related resources on job types (jobs, inventory "
+"updates, project updates), and also at ``/api/v1/notifications``. You may"
+" also see what notifications have been sent from a notifier by examining "
+"its related resources."
+msgstr ""
+
+#: ../../source/notifications.rst:49
+msgid ""
+"If a notification fails, it will not impact the job associated to it or "
+"cause it to fail. The status of the notification can be viewed at its "
+"detail endpoint (``/api/v1/notifications/<n>``)."
+msgstr ""
+
+#: ../../source/notifications.rst:52
+msgid "Create a Notification Template"
+msgstr ""
+
+#: ../../source/notifications.rst:59
+msgid ""
+"To create a Notification Template, click the |settings| button and select"
+" **Notifications**."
+msgstr ""
+
+#: ../../source/notifications.rst:68
+msgid "Notification Types"
+msgstr ""
+
+#: ../../source/notifications.rst:0
+msgid "Topics:"
+msgstr ""
+
+#: ../../source/notifications.rst:84
+msgid ""
+"Each of these have their own configuration and behavioral semantics and "
+"testing them may need to be approached in different ways. The following "
+"sections will give as much detail as possible."
+msgstr ""
+
+#: ../../source/notifications.rst:87
+msgid "Email"
+msgstr ""
+
+#: ../../source/notifications.rst:89
+msgid ""
+"The email notification type supports a wide variety of SMTP servers and "
+"has support for TLS/SSL connections."
+msgstr ""
+
+#: ../../source/notifications.rst:91
+msgid ""
+"You must provide the following details to setup an email notification: - "
+"Username - Host - Sender email - Recepient list - Password - Port"
+msgstr ""
+
+#: ../../source/notifications.rst:103
+msgid ""
+"TLS and SSL connections are mutually exclusive and should not be selected"
+" at the same time. Be sure to only select one--checking both causes the "
+"notification to silently fail."
+msgstr ""
+
+#: ../../source/notifications.rst:106
+msgid "Slack"
+msgstr ""
+
+#: ../../source/notifications.rst:108
+msgid ""
+"Slack, a collaborative team communication and messaging tool, is pretty "
+"easy to configure."
+msgstr ""
+
+#: ../../source/notifications.rst:110
+msgid "You must supply the following to setup Slack notifications:"
+msgstr ""
+
+#: ../../source/notifications.rst:112
+msgid ""
+"A token (which you can obtain from creating a bot in the integrations "
+"settings for the Slack team at https://api.slack.com/bot-users)"
+msgstr ""
+
+#: ../../source/notifications.rst:113
+msgid "Destination channel(s)"
+msgstr ""
+
+#: ../../source/notifications.rst:115
+msgid ""
+"You must also invite the notification bot to join the channel(s) in "
+"question. Note that private messages are not supported."
+msgstr ""
+
+#: ../../source/notifications.rst:121
+msgid "Twilio"
+msgstr ""
+
+#: ../../source/notifications.rst:123
+msgid ""
+"Twilio service is an Voice and SMS automation service. Once you are "
+"signed in, you must create a phone number from which the message will be "
+"sent. You can then define a \"Messaging Service\" under Programmable SMS "
+"and associate the number you created before with it."
+msgstr ""
+
+#: ../../source/notifications.rst:125
+msgid ""
+"Note that you may need to verify this number or some other information "
+"before you are allowed to use it to send to any numbers. The Messaging "
+"Service does not need a status callback URL nor does it need the ability "
+"to Process inbound messages."
+msgstr ""
+
+#: ../../source/notifications.rst:127
+msgid ""
+"Under your individual (or sub) account settings, you will have API "
+"credentials. Twilio uses two credentials to determine which account an "
+"API request is coming from. The “Account SID”, which acts as a username, "
+"and the “Auth Token” which acts as a password."
+msgstr ""
+
+#: ../../source/notifications.rst:129
+msgid "To setup Twilio, provide the following details:"
+msgstr ""
+
+#: ../../source/notifications.rst:131
+msgid "Account Token"
+msgstr ""
+
+#: ../../source/notifications.rst:132
+msgid ""
+"Source phone number (this is the number associated with the messaging "
+"service above and must be given in the form of \"+15556667777\")"
+msgstr ""
+
+#: ../../source/notifications.rst:133
+msgid ""
+"Destination phone number (this will be the list of numbers to receive the"
+" SMS and should be the 10-digit phone number)"
+msgstr ""
+
+#: ../../source/notifications.rst:134
+msgid "Account SID"
+msgstr ""
+
+#: ../../source/notifications.rst:139
+msgid "PagerDuty"
+msgstr ""
+
+#: ../../source/notifications.rst:141
+msgid ""
+"PagerDuty is a fairly straightforward integration. The user must first "
+"create an API Key in the pagerduty system (this is the token that is "
+"given to Tower) and then create a \"Service\" which provides an "
+"\"Integration Key\" that will also be given to Tower. The other options "
+"of note are:"
+msgstr ""
+
+#: ../../source/notifications.rst:143
+msgid ""
+"API Token: The user must first create an API Key in the PagerDuty system "
+"(this is the token that is given to Tower."
+msgstr ""
+
+#: ../../source/notifications.rst:144
+msgid ""
+"PagerDuty Subdoman: When you sign up for the PagerDuty account, you "
+"receive a unique subdomain to communicate with. For instance, if you "
+"signed up as \"towertest\", the web dashboard will be at "
+"``towertest.pagerduty.com`` and you will give the Tower API ``towertest``"
+" as the subdomain (not the full domain)."
+msgstr ""
+
+#: ../../source/notifications.rst:145
+msgid "API Service/Integration Key"
+msgstr ""
+
+#: ../../source/notifications.rst:146
+msgid ""
+"Client Identifier: This will be sent along with the alert content to the "
+"pagerduty service to help identify the service that is using the api "
+"key/service. This is helpful if multiple integrations are using the same "
+"API key and service."
+msgstr ""
+
+#: ../../source/notifications.rst:152
+msgid "HipChat"
+msgstr ""
+
+#: ../../source/notifications.rst:154
+msgid ""
+"There are several ways to integrate with HipChat. The Tower "
+"implementation uses HipChat \"Integrations\". Currently you can find this"
+" at the bottom right of the main HipChat webview. From there, you will "
+"select \"Build your own Integration\". After creating that, it will list "
+"the auth_token that needs to be supplied to Tower. Some other relevant "
+"details on the fields accepted by Tower for the HipChat notification "
+"type:"
+msgstr ""
+
+#: ../../source/notifications.rst:156
+msgid ""
+"Destination Channels: Channels which should receive the notification "
+"(\"engineering\" or \"#support\", for example)."
+msgstr ""
+
+#: ../../source/notifications.rst:157
+msgid "Token: The token listed after building your own HipChat integration."
+msgstr ""
+
+#: ../../source/notifications.rst:158
+msgid ""
+"Label to be shown with notification: Along with the integration name "
+"itself this will put another label on the notification (which could be "
+"helpful if multiple services are using the same integration to "
+"distinguish them from each other)."
+msgstr ""
+
+#: ../../source/notifications.rst:159
+msgid ""
+"API URL: The URL of the Hipchat API service. If you create a team hosted "
+"by them it will be something like: ``https://team.hipchat.com``. For a "
+"self-hosted integration, use a base URL similar to "
+"``https://hipchat.yourcompany.com/`` and add in appropriate Destination "
+"Channels without the ``#`` leading them (\"engineering\" rahter than "
+"\"#engineering\")."
+msgstr ""
+
+#: ../../source/notifications.rst:160
+msgid ""
+"Notification Color: This will highlight the message as the given color. "
+"If set to something HipChat does not expect, then the notification will "
+"generate an error in the given color."
+msgstr ""
+
+#: ../../source/notifications.rst:161
+msgid ""
+"Notify Channel: Selecting this will cause the bot to \"notify\" channel "
+"members. Normally it will just be stuck as a message in the chat channel "
+"without triggering anyone's notifications. This option will notify users "
+"of the channel respecting their existing notification settings (browser "
+"notification, email fallback, etc.)."
+msgstr ""
+
+#: ../../source/notifications.rst:167
+msgid "Webhook"
+msgstr ""
+
+#: ../../source/notifications.rst:169
+msgid ""
+"The webhook notification type in Ansible Tower provides a simple "
+"interface to sending POSTs to a predefined web service. Tower will POST "
+"to this address using application/json content type with the data payload"
+" containing all relevant details in json format."
+msgstr ""
+
+#: ../../source/notifications.rst:171
+msgid "The parameters are pretty straightforward:"
+msgstr ""
+
+#: ../../source/notifications.rst:173
+msgid "Target URL: The full URL that will be POSTed to"
+msgstr ""
+
+#: ../../source/notifications.rst:174
+msgid ""
+"HTTP Headers: Headers in JSON form where the keys and values are strings."
+" For example::"
+msgstr ""
+
+#: ../../source/notifications.rst:182
+msgid "IRC"
+msgstr ""
+
+#: ../../source/notifications.rst:184
+msgid ""
+"The Tower IRC notification takes the form of an IRC bot that will "
+"connect, deliver its messages to channel(s) or individual user(s), and "
+"then disconnect. The Tower notification bot also supports SSL "
+"authentication. The Tower bot does not currently support Nickserv "
+"identification. If a channel or user does not exist or is not on-line "
+"then the Notification will not fail; the failure scenario is reserved "
+"specifically for connectivity."
+msgstr ""
+
+#: ../../source/notifications.rst:186
+msgid "Connectivity information is straightforward:"
+msgstr ""
+
+#: ../../source/notifications.rst:188
+msgid ""
+"IRC Server Password: IRC servers can require a password to connect. If "
+"the server does not require one, leave blank"
+msgstr ""
+
+#: ../../source/notifications.rst:189
+msgid "IRC Server Port: The IRC server Port"
+msgstr ""
+
+#: ../../source/notifications.rst:190
+msgid "IRC Server Address: The host name or address of the IRC server"
+msgstr ""
+
+#: ../../source/notifications.rst:191
+msgid "IRC Nick: The bot's nickname once it connects to the server"
+msgstr ""
+
+#: ../../source/notifications.rst:192
+msgid ""
+"Destination Channels or Users: A list of users and/or channels to which "
+"to send the notification."
+msgstr ""
+
+#: ../../source/notifications.rst:193
+msgid "SSL Connection: Should the bot use SSL when connecting"
+msgstr ""
+
+#: ../../source/notifications.rst:199
+msgid "Configuring the ``towerhost`` hostname"
+msgstr ""
+
+#: ../../source/notifications.rst:204
+msgid ""
+"In ``/etc/tower/settings.py``, you can modify "
+"``TOWER_URL_BASE='https://tower.example.com'`` to change the notification"
+" hostname, replacing ``https://tower.example.com``  with your preferred "
+"hostname.  You must restart Tower services after saving your changes with"
+" ``ansible-tower-service restart``."
+msgstr ""
+
+#: ../../source/notifications.rst:206
+msgid ""
+"Refreshing your Tower license also changes the notification hostname. New"
+" installations of |at| 3.0 should not have to set the hostname for "
+"notifications."
+msgstr ""
+
+#: ../../source/notifications.rst:209
+msgid "Resetting the ``TOWER_URL_BASE``"
+msgstr ""
+
+#: ../../source/notifications.rst:216
+msgid ""
+"The primary way that Tower determines how the base URL "
+"(``TOWER_URL_BASE``) is defined is by looking at an incoming request and "
+"setting the server address based on that incoming request."
+msgstr ""
+
+#: ../../source/notifications.rst:218
+msgid ""
+"Tower takes settings values from the database first. If no settings "
+"values are found, Tower falls back to using the values from the settings "
+"files.  If a user posts a license by navigating to the Tower host's IP "
+"adddress, the posted license is written to the settings entry in the "
+"database."
+msgstr ""
+
+#: ../../source/notifications.rst:220
+msgid ""
+"To change the ``TOWER_URL_BASE`` if the wrong address has been picked up,"
+" navigate to the license from the Tower Settings (|settings|) Menu's "
+"'VIEW YOUR LICENSE' link using the DNS entry you wish to appear in "
+"notifications, and re-add your license."
+msgstr ""
+

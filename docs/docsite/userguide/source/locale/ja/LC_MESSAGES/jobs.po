@@ -1,0 +1,672 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/jobs.rst:4
+msgid "Jobs"
+msgstr "ジョブ"
+
+#: ../../source/jobs.rst:9
+msgid "A :term:`job` is an instance of |at| launching an Ansible playbook against an inventory of hosts."
+msgstr ":term:`job` は、Ansible Playbook をホストのインベントリーに対して起動する |at| のインスタンスです。"
+
+#: ../../source/jobs.rst:11
+msgid "The **Jobs** link displays a list of jobs and their statuses--shown as completed successfully or failed, or as an active (running) job. The default view is collapsed (**Compact**) with the job name, status, job type, and start/finish times, but you can expand to see more information. You can sort this list by various criteria, and perform a search to filter the jobs of interest."
+msgstr "**ジョブ** リンクでは、ジョブとそのステータス (正常に完了、失敗、またはアクティブ (実行中) のジョブ) の一覧が表示されます。デフォルトのビューは折りたたまれており (**コンパクト**)、ジョブ名、ステータス、ジョブタイプ、開始/終了時間が表示されますが、展開して更に情報を表示できます。さまざまな基準でこのリストをソートし、必要とするジョブに絞り込むことができます。"
+
+#: ../../source/jobs.rst:14
+msgid "|Jobs - home with example job|"
+msgstr "|Jobs - home with example job|"
+
+#: ../../source/jobs.rst:20
+msgid "Actions you can take from this screen include viewing the details and standard output of a particular job, relaunching (|launch|) jobs, or removing selected jobs. The relaunch operation only applies to relaunches of playbook runs and does not apply to project/inventory updates, system jobs, workflow jobs, etc."
+msgstr "この画面から実行できるアクションには、特定のジョブの詳細および標準出力の表示、ジョブの再起動 (|launch|)、または選択したジョブの削除が含まれます。再起動操作は、Playbook の実行の再起動にのみ適用され、システムジョブ、プロジェクト/インベントリーの更新、ワークフロージョブなどには適用されません。"
+
+#: ../../source/jobs.rst:28
+msgid "When a job relaunches, you are directed the Jobs Output screen as the job runs. Clicking on any type of job also takes you to the Job Output View for that job, where you can filter jobs by various criteria:"
+msgstr "ジョブが再起動すると、ジョブの実行時にジョブ出力画面が表示されます。任意のタイプのジョブをクリックしても、そのジョブのジョブ出力ビューに移動します。このビューでは、さまざまな条件でジョブをフィルタリングできます。"
+
+#: ../../source/jobs.rst:34
+msgid "The **Stdout** option is the default display that shows the job processes and output"
+msgstr "**Stdout** オプションは、ジョブプロセスおよび出力を表示するデフォルトの表示です。"
+
+#: ../../source/jobs.rst:35
+msgid "The **Event** option allows you to filter by the event(s) of interest, such as errors, host failures, host retries, items skipped, etc. You can include as many events in the filter as necessary."
+msgstr "**イベント** オプションを使用すると、エラー、ホスト障害、ホストの再試行、スキップされた項目など、対象のイベントでフィルタリングできます。フィルターには、必要な数のイベントを含めることができます。"
+
+#: ../../source/jobs.rst:39
+msgid "The **Advanced** option is a refined search that allows you a combination of including or excluding criteria, searching by key, or by lookup type. For details about using Search, refer to the :ref:`ug_search` chapter."
+msgstr "**詳細**オプションは、条件の包含または除外、キーによる検索、またはルックアップタイプによる検索の組み合わせを可能にする高度な検索です。検索の使用方法について、詳しくは :ref:`ug_search` の章を参照してください。"
+
+#: ../../source/jobs.rst:43
+msgid "Inventory Sync Jobs"
+msgstr "インベントリー同期ジョブ"
+
+#: ../../source/jobs.rst:50
+msgid "When an inventory sync is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging. The ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` is set to ``False`` by default for all playbook runs. This matches Ansible's default behavior. This does not display task arguments in task headers in the Job Detail interface to avoid leaking certain sensitive module parameters to stdout.  If you wish to restore the prior behavior (despite the security implications), you can set ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` to ``True`` via the ``AWX_TASK_ENV`` configuration setting. For more details, refer to the `ANSIBLE_DISPLAY_ARGS_TO_STDOUT`_."
+msgstr "インベントリの同期が実行されると、完全な結果が自動的に Output タブに表示されます。これは、Ansible コマンドラインで実行した場合に表示されるのと同じ情報を示しており、デバッグに役立ちます。``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` は、デフォルトで、すべての Playbook の実行に対して ``False`` に設定されます。これは、Ansible のデフォルトの動作と同じです。これにより、ジョブ詳細インターフェースのタスクヘッダーにタスクの引数を表示しなくなり、標準出力に特定の機密情報のモジュールパラメーターを漏洩しなくなります。(セキュリティーの問題がありますが) 以前の動作を復元するには、``AWX_TASK_ENV`` 構成設定の ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` を ``True`` に設定できます。詳細情報は、`ANSIBLE_DISPLAY_ARGS_TO_STDOUT`_ を参照してください。"
+
+#: ../../source/jobs.rst:55
+msgid "The icons at the top right corner of the Output tab allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "出力タブの右上隅にあるアイコンを使用すると、再起動 (|launch|)、ジョブ出力のダウンロード (|download|)、またはジョブの削除 (|delete|) を実行できます。"
+
+#: ../../source/jobs.rst:63
+msgid "|job details example of inventory sync|"
+msgstr "|job details example of inventory sync|"
+
+#: ../../source/jobs.rst:68
+msgid "An inventory update can be performed while a related job is running. In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "関連ジョブの実行中にインベントリーの更新を実行できます。大規模なプロジェクト (約10 GB) がある場合は、``/tmp`` のディスク容量が問題になる可能性があります。"
+
+#: ../../source/jobs.rst:72
+msgid "Inventory sync details"
+msgstr "インベントリー同期の詳細"
+
+#: ../../source/jobs.rst:74
+#: ../../source/jobs.rst:262
+msgid "Access the **Details** tab to provide details about the job execution."
+msgstr "**詳細** タブにアクセスし、ジョブ実行の詳細を提供します。"
+
+#: ../../source/jobs.rst:78
+#: ../../source/jobs.rst:120
+#: ../../source/jobs.rst:267
+msgid "Notable details of the job executed are:"
+msgstr "実行したジョブの主な詳細は以下のとおりです。"
+
+#: ../../source/jobs.rst:80
+#: ../../source/jobs.rst:122
+#: ../../source/jobs.rst:269
+msgid "**Status**: Can be any of the following:"
+msgstr "**ステータス**: 以下のいずれかになります。"
+
+#: ../../source/jobs.rst:82
+msgid "**Pending** - The inventory sync has been created, but not queued or started yet. Any job, not just inventory source syncs, will stay in pending until it’s actually ready to be run by the system.  Reasons for inventory source syncs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**保留中**: インベントリーの同期は作成されていますが、まだキューに入れられていないか、または開始されていません。すべてのジョブ (インベントリーソースの同期に限らない) はシステムで実際に実行可能になるまで保留中の状態になります。インベントリーソースの同期が準備できる状態でない理由として、依存関係が現在実行中であるか (次の手順に進む前にすべての依存関係の実行が完了していなければならない)、または設定先で実行する容量が足りないなどが挙げられます。"
+
+#: ../../source/jobs.rst:83
+msgid "**Waiting** - The inventory sync is in the queue waiting to be executed."
+msgstr "**待機中**: インベントリーの同期はキューに入れられており、実行を待機中です。"
+
+#: ../../source/jobs.rst:84
+msgid "**Running** - The inventory sync is currently in progress."
+msgstr "**実行中**: インベントリーの同期が進行中です。"
+
+#: ../../source/jobs.rst:85
+msgid "**Successful** - The inventory sync job succeeded."
+msgstr "**成功**: インベントリー同期ジョブが成功しました。"
+
+#: ../../source/jobs.rst:86
+msgid "**Failed** - The inventory sync job failed."
+msgstr "**失敗**: インベントリーの同期ジョブが失敗しました。"
+
+#: ../../source/jobs.rst:88
+msgid "**Inventory**: The name of the associated inventory group."
+msgstr "**インベントリー**: 関連付けられたインベントリーグループの名前。"
+
+#: ../../source/jobs.rst:90
+msgid "**Source**: The type of cloud inventory."
+msgstr "**ソース**: クラウドインベントリーのタイプ。"
+
+#: ../../source/jobs.rst:92
+msgid "**Inventory Source Project**: The project used as the source of this inventory sync job."
+msgstr "**インベントリーソースのプロジェクト**: このインベントリー同期ジョブのソースとして使用されるプロジェクト。"
+
+#: ../../source/jobs.rst:94
+msgid "**Execution Environment**: The |ee| used."
+msgstr "**実行環境**: |ee| が使用されています。"
+
+#: ../../source/jobs.rst:96
+msgid "**Execution node**: The node used to execute the job."
+msgstr "**実行ノード**: ジョブの実行に使用されるノード。"
+
+#: ../../source/jobs.rst:98
+msgid "**Instance Group**: The name of the instance group used with this job (controller is the default instance group)."
+msgstr "**インスタンスグループ**: このジョブで使用されるインスタンスグループの名前 (コントローラーはデフォルトのインスタンスグループ)。"
+
+#: ../../source/jobs.rst:100
+#: ../../source/jobs.rst:148
+#: ../../source/jobs.rst:296
+msgid "By clicking on these items, where appropriate, you can view the corresponding job templates, projects, and other objects."
+msgstr "これらの項目をクリックすると、適切な場合には該当するジョブテンプレート、プロジェクト、およびその他のオブジェクトが表示されます。"
+
+#: ../../source/jobs.rst:104
+msgid "SCM Inventory Jobs"
+msgstr "SCM インベントリージョブ"
+
+#: ../../source/jobs.rst:109
+msgid "When an inventory sourced from an SCM is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging. The icons at the top right corner of the Output tab allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "SCM から供給されたインベントリーが実行されると、完全な結果が自動的に出力タブに表示されます。これは、Ansible コマンドラインで実行した場合に表示されるのと同じ情報を示しており、デバッグに役立ちます。出力タブの右上隅にあるアイコンを使用すると、再起動 (|launch|)、ジョブ出力のダウンロード (|download|)、またはジョブの削除 (|delete|) を実行できます。"
+
+#: ../../source/jobs.rst:114
+msgid "SCM inventory details"
+msgstr "SCM インベントリーの詳細"
+
+#: ../../source/jobs.rst:116
+msgid "Access the **Details** tab to provide details about the job execution and its associated project."
+msgstr "**詳細**タブにアクセスして、ジョブの実行とそれに関連するプロジェクトの詳細を提供します。"
+
+#: ../../source/jobs.rst:124
+msgid "**Pending** - The SCM job has been created, but not queued or started yet. Any job, not just SCM jobs, will stay in pending until it’s actually ready to be run by the system. Reasons for SCM jobs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**保留中**: SCM ジョブは作成されていますが、まだキューに入れられていないか、または開始されていません。すべてのジョブ (SCM ジョブに限らない) はシステムで実際に実行可能になるまで保留中の状態になります。SCM ジョブが準備できる状態でない理由として、依存関係が現在実行中であるか (次の手順に進む前にすべての依存関係の実行が完了していなければならない)、または設定先で実行する容量が足りないなどが挙げられます。"
+
+#: ../../source/jobs.rst:125
+msgid "**Waiting** - The SCM job is in the queue waiting to be executed."
+msgstr "**待機中**: SCM ジョブはキューに入れられており、実行を待機中です。"
+
+#: ../../source/jobs.rst:126
+msgid "**Running** - The SCM job is currently in progress."
+msgstr "**実行中**: SCM ジョブが進行中です。"
+
+#: ../../source/jobs.rst:127
+msgid "**Successful** - The last SCM job succeeded."
+msgstr "**成功**: 直前の SCM ジョブが成功しました。"
+
+#: ../../source/jobs.rst:128
+msgid "**Failed** - The last SCM job failed."
+msgstr "**失敗**: 直前の SCM ジョブが失敗しました。"
+
+#: ../../source/jobs.rst:131
+msgid "**Job Type**: SCM jobs display Source Control Update."
+msgstr "**ジョブタイプ**: SCM ジョブはソースコントロールの更新を表示します。"
+
+#: ../../source/jobs.rst:133
+msgid "**Project**: The name of the project."
+msgstr "**プロジェクト**: プロジェクトの名前。"
+
+#: ../../source/jobs.rst:135
+msgid "**Project Status**: Indicates whether the associated project was successfully updated."
+msgstr "**プロジェクトステータス**: 関連付けられたプロジェクトが正常に更新されたかどうかを示します。"
+
+#: ../../source/jobs.rst:137
+msgid "**Revision**: Indicates the revision number of the sourced project that was used in this job."
+msgstr "**リビジョン**: このジョブでソースとして使用されたプロジェクトのリビジョン番号を示します。"
+
+#: ../../source/jobs.rst:139
+msgid "**Execution Environment**: Specifies the |ee| used to run this job."
+msgstr "**実行環境**: このジョブの実行に使用された |ee| を指定します。"
+
+#: ../../source/jobs.rst:141
+msgid "**Execution Node**: Indicates the node on which the job ran."
+msgstr "**実行ノード**: ジョブが実行されたノードを示します。"
+
+#: ../../source/jobs.rst:143
+msgid "**Instance Group**: Indicates the instance group on which the job ran, if specified."
+msgstr "**インスタンスグループ**: 指定されている場合、ジョブが実行されたインスタンスグループを示します。"
+
+#: ../../source/jobs.rst:145
+msgid "**Job Tags**: Tags show the various job operations executed."
+msgstr "**ジョブタグ**: タグは実行されたさまざまなジョブ操作を示します。"
+
+#: ../../source/jobs.rst:152
+msgid "Playbook Run Jobs"
+msgstr "Playbook 実行ジョブ"
+
+#: ../../source/jobs.rst:157
+msgid "When a playbook is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging."
+msgstr "Playbook が実行されると、完全な結果が自動的に出力タブに表示されます。これは、Ansible コマンドラインで実行した場合に表示されるのと同じ情報を示しており、デバッグに役立ちます。"
+
+#: ../../source/jobs.rst:161
+msgid "The events summary captures a tally of events that were run as part of this playbook:"
+msgstr "イベントの概要では、この Playbook の一部として実行されたイベントの集計が表示されます。"
+
+#: ../../source/jobs.rst:163
+msgid "the number of times this playbook has ran in the **Plays** field"
+msgstr "この Playbook が **Plays** フィールドで実行された回数"
+
+#: ../../source/jobs.rst:165
+msgid "the number of tasks associated with this playbook in the **Tasks** field"
+msgstr "**タスク** フィールドでこの Playbook に関連付けられているタスクの数"
+
+#: ../../source/jobs.rst:167
+msgid "the number of hosts associated with this playbook in the **Hosts** field"
+msgstr "**ホスト** フィールドでこの Playbook に関連付けられているホストの数"
+
+#: ../../source/jobs.rst:169
+msgid "the amount of time it took to complete the playbook run in the **Elapsed** field"
+msgstr "**経過** フィールドで Playbook の実行を完了するのにかかった時間"
+
+#: ../../source/jobs.rst:174
+msgid "The icons next to the events summary allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "イベント概要の横ににあるアイコンを使用すると、再起動 (|launch|)、ジョブ出力のダウンロード (|download|)、またはジョブの削除 (|delete|) を実行できます。"
+
+#: ../../source/jobs.rst:176
+msgid "The host status bar runs across the top of the Output view. Hover over a section of the host status bar and the number of hosts associated with that particular status displays."
+msgstr "ホストのステータスバーは、出力表示の上部で実行されます。ホストステータスバーのセクションにカーソルを置くと、その特定のステータスに関連付けられたホスト数が表示されます。"
+
+#: ../../source/jobs.rst:178
+msgid "|Job - All Host Events|"
+msgstr "|Job - All Host Events|"
+
+#: ../../source/jobs.rst:183
+msgid "The output for a Playbook job is also accessible after launching a job from the **Jobs** tab of its Job Templates page."
+msgstr "Playbook ジョブの出力には、ジョブテンプレートページの **ジョブ** タブからジョブを起動した後もアクセスできます。"
+
+#: ../../source/jobs.rst:185
+msgid "Clicking on the various line item tasks in the output, you can view its host details."
+msgstr "出力内のさまざまなラインアイテムタスクをクリックすると、そのホストの詳細を表示できます。"
+
+#: ../../source/jobs.rst:188
+msgid "Search"
+msgstr "検索"
+
+#: ../../source/jobs.rst:190
+msgid "Use Search to look up specific events, hostnames, and their statuses. To filter only certain hosts with a particular status, specify one of the following valid statuses:"
+msgstr "検索を使用して、特定のイベント、ホスト名、およびそれらのステータスを検索します。特定のステータスのホストにのみフィルターを設定するには、以下の有効なステータスのいずれかを指定します。"
+
+#: ../../source/jobs.rst:192
+msgid "**OK**: the playbook task returned \"Ok\"."
+msgstr "**OK**: Playbook タスクは「Ok」を返しました。"
+
+#: ../../source/jobs.rst:193
+msgid "**Changed**: the playbook task actually executed. Since Ansible tasks should be written to be idempotent, tasks may exit successfully without executing anything on the host. In these cases, the task would return Ok, but not Changed."
+msgstr "**変更済み**: 実際に実行された Playbook タスク。Ansible タスクはべき等になるように作成される必要があるため、タスクはホストに何も実行せずに正常に終了させることができます。これらの場合に、タスクは Ok を返しますが、Changed (変更済み) は返しません。"
+
+#: ../../source/jobs.rst:194
+msgid "**Failed**: the task failed. Further playbook execution was stopped for this host."
+msgstr "**失敗**: 失敗したタスク。このホストについての追加の Playbook の実行は停止しました。"
+
+#: ../../source/jobs.rst:195
+msgid "**Unreachable**: the host was unreachable from the network or had another fatal error associated with it."
+msgstr "**Unreachable (到達不可)**: ホストはネットワークからアクセスできないか、またはこれに関連した別の致命的なエラーが発生しました。"
+
+#: ../../source/jobs.rst:196
+msgid "**Skipped**: the playbook task was skipped because no change was necessary for the host to reach the target state."
+msgstr "**Skipped (スキップ)**: ホストがターゲットの状態に到達するために変更が不要だったので、Playbook のタスクが省略されました。"
+
+#: ../../source/jobs.rst:197
+msgid "**Rescued**: introduced in Ansible 2.8, this shows the tasks that failed and then executes a rescue section."
+msgstr "**Rescued**: Ansible 2.8 で導入されたこのオプションは、失敗したタスクを表示してから、レスキューセクションを実行します。"
+
+#: ../../source/jobs.rst:198
+msgid "**Ignored**: introduced in Ansible 2.8, this shows the tasks that failed and have ``ignore_errors: yes`` configured."
+msgstr "**Ignored**: Ansible 2.8 で導入されたこのオプションは失敗したタスクを表示してから、``ignore_errors: yes`` を設定します。"
+
+#: ../../source/jobs.rst:200
+msgid "These statuses also display at bottom of each Stdout pane, in a group of \"stats\" called the Host Summary fields."
+msgstr "このステータスは、各 Stdout ペインの下部にある、ホストの概要フィールドと呼ばれる統計グループにも表示されます。"
+
+#: ../../source/jobs.rst:205
+msgid "The example below shows a search with only unreachable hosts."
+msgstr "以下の例には、到達不能なホストのみを含めた検索が表示されています。"
+
+#: ../../source/jobs.rst:209
+msgid "For more details about using the Search, refer to the :ref:`ug_search` chapter."
+msgstr "検索の使用についての詳細は、:ref:`ug_search` の章を参照してください。"
+
+#: ../../source/jobs.rst:211
+msgid "The standard output view displays all the events that occur on a particular job. By default, all rows are expanded so that all the details are displayed. Use the collapse-all button (|collapse-all|) to switch to a view that only contains the headers for plays and tasks. Click the (|expand-all|) button to view all lines of the standard output."
+msgstr "標準出力ビューには、特定のジョブで発生するイベントすべてが表示されます。デフォルトでは、すべての行で全詳細が表示されるように展開されています。すべて折り畳む (|collapse-all|) を使用して、プレイおよびタスクのヘッダーのみを含むビューに切り替えます。標準出力のすべての行を表示するには、(|expand-all|) ボタンをクリックします。"
+
+#: ../../source/jobs.rst:216
+msgid "Alternatively, you can display all the details of a specific play or task by clicking on the arrow icons next to them. Click an arrow from sideways to downward to expand the lines associated with that play or task. Click the arrow back to the sideways position to collapse and hide the lines."
+msgstr "または、それぞれのプレイやタスクの横にある矢印アイコンをクリックすると、その詳細をすべて表示することができます。矢印をクリックして横向きから下向きに切り替えると、プレイまたはタスクに関連付けられている行が拡大されます。矢印をもう一度クリックして横向きの位置に戻すと、折りたたみ表示になり、行が非表示になります。"
+
+#: ../../source/jobs.rst:222
+msgid "Things to note when viewing details in the expand/collapse mode:"
+msgstr "拡張/縮小モードで詳細を表示する際の留意点:"
+
+#: ../../source/jobs.rst:225
+msgid "Each displayed line that is not collapsed has a corresponding line number and start time."
+msgstr "縮小表示されない行で、対応する行番号と開始時間を含む、表示されたそれぞれの行。"
+
+#: ../../source/jobs.rst:227
+msgid "An expand/collapse icon is at the start of any play or task after the play or task has completed."
+msgstr "プレイまたはタスクの完了後のプレイまたはタスクの開始時の拡張/縮小アイコン。"
+
+#: ../../source/jobs.rst:229
+msgid "If querying for a particular play or task, it will appear collapsed at the end of its completed process."
+msgstr "特定のプレイまたはタスクのクエリーを実行する場合、それは完了したプロセスの最後に縮小表示されます。"
+
+#: ../../source/jobs.rst:231
+msgid "In some cases, an error message will appear, stating that the output may be too large to display. This occurs when there are more than 4000 events. Use the search and filter for specific events to bypass the error."
+msgstr "エラーメッセージは、出力が大きすぎて表示できないことを示すエラーメッセージが表示される場合があります。これは、4000 を超えるイベントがある場合に生じます。エラーをバイパスするために、特定イベントについての検索およびフィルターを使用します。"
+
+#: ../../source/jobs.rst:233
+msgid "Click on a line of an event from the **Standard Out** pane and a **Host Events** dialog displays in a separate window. This window shows the host that was affected by that particular event."
+msgstr "**標準出力** ペインからイベントの行をクリックすると、**ホストイベント** ダイアログが別のウィンドウに表示されます。このウィンドウでは、特定のイベントの影響を受けるホストが表示されます。"
+
+#: ../../source/jobs.rst:235
+msgid "Upgrading to the latest versions of |aap| involves progressively migrating all historical playbook output and events. This migration process is gradual, and happens automatically in the background after installation is complete. Installations with very large amounts of historical job output (tens, or hundreds of GB of output) may notice missing job output until migration is complete. Most recent data will show up at the top of the output, followed by older events. Migrating jobs with a large amount of events may take longer than jobs with a smaller amount."
+msgstr "|aap| の最新バージョンにアップグレードするには、すべての過去の Playbook の出力とイベントを段階的に移行する必要があります。この移行プロセスは段階的に行われ、インストールが完了するとバックグラウンドで自動的に実行されます。過去のジョブ出力が非常に大量にある (数十 GB、または数百 GB の出力) と、移行が完了するまでジョブの出力が欠落する可能性があります。最新のデータは出力上部に表示され、その後に古いイベントが表示されます。大規模ジョブを移行する場合は、ジョブが小規模の場合に比べて時間がかかる場合があります。"
+
+#: ../../source/jobs.rst:239
+msgid "Host Details"
+msgstr "ホストの詳細"
+
+#: ../../source/jobs.rst:244
+msgid "The **Host Details** dialog shows information about the host affected by the selected event and its associated play and task:"
+msgstr "**ホストの詳細** ダイアログでは、選択したイベントの影響を受けるホストに関する情報と、それに関連するプレイおよびタスクが表示されます。"
+
+#: ../../source/jobs.rst:246
+msgid "the **Host**"
+msgstr "**ホスト**"
+
+#: ../../source/jobs.rst:247
+msgid "the **Status**"
+msgstr "**ステータス**"
+
+#: ../../source/jobs.rst:248
+msgid "the type of run in the **Play** field"
+msgstr "**プレイ** フィールドでの実行タイプ"
+
+#: ../../source/jobs.rst:249
+msgid "the type of **Task**"
+msgstr "**タスク** のタイプ"
+
+#: ../../source/jobs.rst:250
+msgid "if applicable, the Ansible **Module** for the task, and any *arguments* for that module"
+msgstr "適用可能な場合、タスクの Ansible **モジュール**、およびモジュールのすべての *引数*"
+
+#: ../../source/jobs.rst:255
+msgid "To view the results in JSON format, click on the **JSON** tab. To view the output of the task, click the **Standard Out**. To view errors from the output, click **Standard Error**."
+msgstr "結果を JSON 形式で表示するには、**JSON** タブをクリックします。タスクの出力を表示するには、**標準出力** をクリックします。出力からエラーを表示するには、**標準エラー** をクリックします。"
+
+#: ../../source/jobs.rst:260
+msgid "Playbook run details"
+msgstr "Playbook 実行の出力:"
+
+#: ../../source/jobs.rst:271
+msgid "**Pending** - The playbook run has been created, but not queued or started yet. Any job, not just playbook runs, will stay in pending until it is actually ready to be run by the system. Reasons for playbook runs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**保留中**: Playbook の実行は作成されていますが、まだキューに入れられていないか、または開始されていません。すべてのジョブ (Playbook の実行に限らない) はシステムで実際に実行可能になるまで保留中の状態になります。Playbook の実行が準備できる状態でない理由として、依存関係が現在実行中であるか (次の手順に進む前にすべての依存関係の実行が完了していなければならない)、または設定先で実行する容量が足りないなどが挙げられます。"
+
+#: ../../source/jobs.rst:272
+msgid "**Waiting** - The playbook run is in the queue waiting to be executed."
+msgstr "**待機中**: Playbook 実行はキューに入れられており、実行を待機中です。"
+
+#: ../../source/jobs.rst:273
+msgid "**Running** - The playbook run is currently in progress."
+msgstr "**実行中**: Playbook 実行が進行中です。"
+
+#: ../../source/jobs.rst:274
+msgid "**Successful** - The last playbook run succeeded."
+msgstr "**成功**: 直前の Playbook 実行が成功しました。"
+
+#: ../../source/jobs.rst:275
+msgid "**Failed** - The last playbook run failed."
+msgstr "**失敗**: 直前の Playbook 実行が失敗しました。"
+
+#: ../../source/jobs.rst:277
+msgid "**Job Template**: The name of the job template from which this job was launched."
+msgstr "**ジョブテンプレート**: ジョブが起動されるジョブテンプレートの名前。"
+
+#: ../../source/jobs.rst:279
+msgid "**Inventory**: The inventory selected to run this job against."
+msgstr "**インベントリー**: このジョブを実行するために選択されたインベントリー。"
+
+#: ../../source/jobs.rst:281
+msgid "**Project**: The name of the project associated with the launched job."
+msgstr "**プロジェクト**: 起動したジョブに関連付けられたプロジェクトの名前。"
+
+#: ../../source/jobs.rst:283
+msgid "**Project Status**: The status of the project associated with the launched job."
+msgstr "**プロジェクトステータス**: 起動したジョブに関連付けられたプロジェクトのステータス。"
+
+#: ../../source/jobs.rst:285
+msgid "**Playbook**: The playbook used to launch this job."
+msgstr "**Playbook**: このジョブを起動するために使用される Playbook。"
+
+#: ../../source/jobs.rst:287
+msgid "**Execution Environment**: The name of the |ee| used in this job."
+msgstr "**実行環境**: このジョブで使用される |ee| の名前。"
+
+#: ../../source/jobs.rst:289
+msgid "**Container Group**: The name of the container group used in this job."
+msgstr "**コンテナーグループ**: このジョブで使用されるコンテナーグループの名前。"
+
+#: ../../source/jobs.rst:291
+msgid "**Credentials**: The credential(s) used in this job."
+msgstr "**認証情報**: このジョブで使用される認証情報。"
+
+#: ../../source/jobs.rst:293
+msgid "**Extra Variables**: Any extra variables passed when creating the job template are displayed here."
+msgstr "**追加変数**: ジョブテンプレートの作成時に渡される追加変数がここに表示されます。"
+
+#: ../../source/jobs.rst:303
+msgid "Automation Controller Capacity Determination and Job Impact"
+msgstr "|at| の容量判断およびジョブの影響"
+
+#: ../../source/job_capacity.rst:2
+msgid "This section describes how to determine capacity for instance groups and its impact to your jobs. For container groups, see :ref:`ag_container_capacity` in the |ata|."
+msgstr "このセクションでは、インスタンスグループの容量とそのジョブへの影響を判断する方法を説明します。コンテナーグループについては、|ata| の :ref:`ag_container_capacity` を参照してください。"
+
+#: ../../source/job_capacity.rst:4
+msgid "The |at| capacity system determines how many jobs can run on an instance given the amount of resources available to the instance and the size of the jobs that are running (referred to as *Impact*). The algorithm used to determine this is based entirely on two things:"
+msgstr "|at| 容量システムは、インスタンスで利用可能なリソース量や、実行中のジョブのサイズ (*影響* と呼ぶ) をもとに、インスタンスでいくつのジョブを実行可能か判断します。これを判断するのに使用するアルゴリズムは、2 つのアイテムだけをベースとします。"
+
+#: ../../source/job_capacity.rst:6
+msgid "How much memory is available to the system (``mem_capacity``)"
+msgstr "システムで利用可能なメモリー容量 (``mem_capacity``)"
+
+#: ../../source/job_capacity.rst:7
+msgid "How much CPU is available to the system (``cpu_capacity``)"
+msgstr "システムで利用可能な CPU 数 (``cpu_capacity``)"
+
+#: ../../source/job_capacity.rst:9
+msgid "Capacity also impacts Instance Groups. Since Groups are made up of instances, likewise, instances can be assigned to multiple groups. This means that impact to one instance can potentially affect the overall capacity of other Groups."
+msgstr "容量は、インスタンスグループにも影響があります。グループはインスタンスで構成されるので、インスタンスを複数のグループに割り当てることができます。つまり、インスタンス 1 台への影響が、他のグループ全体の容量に影響を与える可能性があります。"
+
+#: ../../source/job_capacity.rst:11
+msgid "Instance Groups (not instances themselves) can be assigned to be used by jobs at various levels (see :ref:`ag_clustering`). When the Task Manager is preparing its graph to determine which group a job will run on, it will commit the capacity of an Instance Group to a job that hasn’t or isn’t ready to start yet."
+msgstr "インスタンスグループ (インスタンス自体ではなく) は、さまざまなレベルのジョブで使用するために割り当てることができます (:ref:`ag_clustering` 参照)。タスクマネージャーはグラフを作成し、ジョブの実行先のグループや、起動の準備ができていないジョブに対してインスタンスグループの容量をコミットするかどうかを判断します。"
+
+#: ../../source/job_capacity.rst:13
+msgid "Finally, in smaller configurations, if only one instance is available for a job to run, the Task Manager will allow that job to run on the instance even if it pushes the instance over capacity. This guarantees that jobs themselves won't get stuck as a result of an under-provisioned system."
+msgstr "最終的に、小規模な構成で、ジョブ実行に利用可能なインスタンスが 1 台しかない場合には、タスクマネージャーは、インスタンスが容量を超えていても、インスタンスでジョブが実行できるようにします。こうすることで、プロビジョニングが十分でないシステムでも、ジョブが停止しないようになります。"
+
+#: ../../source/job_capacity.rst:15
+msgid "Therefore, Capacity and Impact is not a zero-sum system relative to jobs and instances/Instance Groups."
+msgstr "このように、容量および影響は、ジョブやインスタンス/インスタンスグループに対してゼロサムシステムではありません。"
+
+#: ../../source/job_capacity.rst:17
+msgid "For information on sliced jobs and their impact to capacity, see :ref:`ug_job_slice_execution`."
+msgstr "スライスされたジョブおよび容量への影響に関する情報は、「:ref:`ug_job_slice_execution`」を参照してください。"
+
+#: ../../source/job_capacity.rst:22
+msgid "Resource determination for capacity algorithm"
+msgstr "容量アルゴリズムに向けたリソースの判断"
+
+#: ../../source/job_capacity.rst:24
+msgid "The capacity algorithms are defined in order to determine how many forks a system is capable of running simultaneously. This controls how many systems Ansible itself will communicate with simultaneously. Increasing the number of forks a |at| system is running will, in general, allow jobs to run faster by performing more work in parallel. The trade-off is that this will increase the load on the system, which could cause work to slow down overall."
+msgstr "容量アルゴリズムは、システムで同時に実行可能なフォーク数を判断するために定義します。これにより、Ansible 自体が同時に通信するシステム数を制御します。通常、|at| システムが実行するフォーク数が増えると、並行して作業が実行され、ジョブの実行速度がをより早くなります。代わりに、システムの負荷が増加し、全体的な作業速度が遅くなってしまう可能性があります。"
+
+#: ../../source/job_capacity.rst:26
+msgid "|At| can operate in two modes when determining capacity. ``mem_capacity`` (the default) will allow you to over-commit CPU resources while protecting the system from running out of memory. If most of your work is not CPU-bound, then selecting this mode will maximize the number of forks."
+msgstr "|At| は、容量の判断時に、2 つのモードで稼働します。``mem_capacity`` (デフォルト) では、システムでメモリーがなくならないようにする一方で、CPU をオーバーコミットできます。作業の多くが CPU に依存していない場合には、このモードを選択して、フォーク数を最大化します。"
+
+#: ../../source/job_capacity.rst:30
+msgid "Memory relative capacity"
+msgstr "メモリー対容量"
+
+#: ../../source/job_capacity.rst:32
+msgid "``mem_capacity`` is calculated relative to the amount of memory needed per fork. Taking into account the overhead for internal components, this comes out to be about 100MB per fork. When considering the amount of memory available to Ansible jobs, the capacity algorithm will reserve 2GB of memory to account for the presence of other services. The algorithm formula for this is:"
+msgstr "``mem_capacity`` は、フォークごとに必要なメモリー容量に対して、計算されます。内部コンポーネントのオーバーヘッドを考慮すると、これは、フォークごとに約 100 MB になります。Ansible ジョブで利用可能なメモリー容量を検討する場合、容量アルゴリズムでは、他のサービスが存在することを考慮し、メモリー 2 GB を確保します。これに関するアルゴリズムの公式は以下のようになります。"
+
+#: ../../source/job_capacity.rst:38
+msgid "As an example:"
+msgstr "以下に例を示します。"
+
+#: ../../source/job_capacity.rst:44
+msgid "Therefore, a system with 4GB of memory would be capable of running 20 forks. The value ``mem_per_fork`` can be controlled by setting the settings value (or environment variable) ``SYSTEM_TASK_FORKS_MEM``, which defaults to 100."
+msgstr "このように、メモリー 4GB のシステムは、フォーク 20 個分実行することができます。``mem_per_fork`` の値は、設定値 (または環境変数) ``SYSTEM_TASK_FORKS_MEM`` (デフォルト値は 100) を設定して制御できます。"
+
+#: ../../source/job_capacity.rst:49
+msgid "CPU relative capacity"
+msgstr "CPU 対容量"
+
+#: ../../source/job_capacity.rst:51
+msgid "Often, Ansible workloads can be fairly CPU-bound. In these cases, sometimes reducing the simultaneous workload allows more tasks to run faster and reduces the average time-to-completion of those jobs."
+msgstr "頻繁に、Ansible のワークロードが CPU に大きく依存する場合があります。このような場合には、同時の実行するワークロードを減らして、タスクの実行速度を高め、これらのジョブの平均完了時間を短縮することができる場合があります。"
+
+#: ../../source/job_capacity.rst:53
+msgid "Just as the ``mem_capacity`` algorithm uses the amount of memory need per fork, the ``cpu_capacity`` algorithm looks at the amount of CPU resources is needed per fork. The baseline value for this is 4 forks per core. The algorithm formula for this is:"
+msgstr "``mem_capacity`` アルゴリズムでフォークごとに必要なメモリー容量を使用するように ``cpu_capacity`` アルゴリズムも、フォークごとに必要な CPU リソース数に着目します。このベースラインの値として、コアごとのフォーク数が 4 つとなります。CPU のアルゴリズムの公式は以下のとおりです。"
+
+#: ../../source/job_capacity.rst:59
+msgid "For example, a 4-core system:"
+msgstr "たとえば、4 つのコアが搭載されているシステムの場合:"
+
+#: ../../source/job_capacity.rst:65
+msgid "The value ``fork_per_cpu`` can be controlled by setting the settings value (or environment variable) ``SYSTEM_TASK_FORKS_CPU`` which defaults to 4."
+msgstr "``fork_per_cpu`` の値は、設定値 (または環境変数) ``SYSTEM_TASK_FORKS_CPU`` (デフォルト値は 4) を設定して制御できます。"
+
+#: ../../source/job_capacity.rst:69
+msgid "Capacity job impacts"
+msgstr "ジョブが影響を与える容量"
+
+#: ../../source/job_capacity.rst:71
+msgid "When selecting the capacity, it's important to understand how each job type affects capacity."
+msgstr "容量を選択する場合に、各ジョブタイプがどのように容量に影響を与えるかを理解することが重要です。"
+
+#: ../../source/job_capacity.rst:73
+msgid "It's helpful to understand what forks mean to Ansible: https://www.ansible.com/blog/ansible-performance-tuning (see the section on \"Know Your Forks\")."
+msgstr "Ansible におけるフォークの意味を理解しておくと役に立ちます (https://www.ansible.com/blog/ansible-performance-tuning の Know Your Forks セクションを参照)。"
+
+#: ../../source/job_capacity.rst:75
+msgid "The default forks value for Ansible is 5. However, if |at| knows that you're running against fewer systems than that, then the actual concurrency value will be lower."
+msgstr "Ansible のデフォルトのフォーク値は 5 ですが、|at| では実際には 5 台未満のシステムに対して実行していることを認識しているため、実際の同時並行処理の値は 5 よりも少なくなります。"
+
+#: ../../source/job_capacity.rst:77
+msgid "When a job is run, |at| will add 1 to the number of forks selected to compensate for the Ansible parent process. So if you are running a playbook against 5 systems with a forks value of 5, then the actual forks value from the perspective of Job Impact will be 6."
+msgstr "ジョブ実行時に、Ansible の親プロセスに対応するために、|at| はフォークの選択数に 1 つ追加します。そのため、フォークの値が 5 のシステム 5 台に対して、Playbook を実行する場合は、ジョブの影響に関する実際のフォーク値が 6 になります。"
+
+#: ../../source/job_capacity.rst:81
+msgid "Impact of job types in automation controller"
+msgstr "自動コントローラーのジョブタイプの影響"
+
+#: ../../source/job_capacity.rst:83
+msgid "Jobs and Ad-hoc jobs follow the above model, forks + 1. If you set a fork value on your job template, your job capacity value will be the minimum of the forks value supplied, and the number of hosts that you have, plus one. The plus one is to account for the parent Ansible process."
+msgstr "ジョブとアドホックのジョブは、上記のモデル (フォーク + 1) を採用します。ジョブテンプレートでフォークの値を設定する場合は、ジョブの容量値は指定のフォーク最小値、使用するホスト数に 1を加えた数値になります。1 を加えることで、親 Ansible プロセスに対応します。"
+
+#: ../../source/job_capacity.rst:85
+msgid "Instance capacity determines which jobs get assigned to any specific instance. Jobs and ad hoc commands use more capacity if they have a higher forks value."
+msgstr "インスタンスの容量で、どのジョブを特定のインスタンスに割り当てるかを決定します。フォークの値が高く指定されている場合には、ジョブとアドホックコマンドは、より多くの容量を使用します。"
+
+#: ../../source/job_capacity.rst:87
+msgid "Other job types have a fixed impact:"
+msgstr "他のジョブタイプへの影響は固定されています。"
+
+#: ../../source/job_capacity.rst:89
+msgid "Inventory Updates: 1"
+msgstr "インベントリーの更新: 1"
+
+#: ../../source/job_capacity.rst:90
+msgid "Project Updates: 1"
+msgstr "プロジェクトの更新: 1"
+
+#: ../../source/job_capacity.rst:91
+msgid "System Jobs: 5"
+msgstr "システムジョブ: 5"
+
+#: ../../source/job_capacity.rst:93
+msgid "If you don’t set a forks value on your job template, your job will use Ansible’s default forks value of five. Even though Ansible defaults to five forks, it will use fewer if your job has fewer than five hosts. In general, setting a forks value higher than what the system is capable of could cause trouble by running out of memory or over-committing CPU. So, the job template fork values that you use should fit on the system. If you have playbooks using 1000 forks but none of your systems individually has that much capacity, then your systems are undersized and at risk of performance or resource issues."
+msgstr "ジョブテンプレートにフォークの値を設定しない場合には、ジョブは Ansible のデフォルトのフォーク値 4 を使用します。Ansible のデフォルト値はフォーク 5 ですが、ジョブのホストが 5 台未満の場合には、フォークの使用数は少なくなります。一般的に、フォークの値に、システムの機能より高い数値を設定すると、メモリーが足りなくなったり、CPU をオーバーコミットしたりする問題が発生する可能性があります。個別のシステムではそれほど容量がないにも拘わらず、Playbook でフォーク 1000 個を使用する場合には、システムのサイズが小さすぎたり、パフォーマンスやリソースの問題のリスクが発生したりします。"
+
+#: ../../source/job_capacity.rst:97
+msgid "Selecting the right capacity"
+msgstr "適切な容量の選択"
+
+#: ../../source/job_capacity.rst:99
+msgid "Selecting a capacity out of the CPU-bound or the memory-bound capacity limits is, in essence, selecting between the minimum or maximum number of forks. In the above examples, the CPU capacity would allow a maximum of 16 forks while the memory capacity would allow 20. For some systems, the disparity between these can be large and often times you may want to have a balance between these two."
+msgstr "CPU バインドまたはメモリーバインドの容量制限から容量を選択するのは、実質的には、フォーク数の最小数または最大数を選択していることになります。上記の例では、CPU の容量でフォーク数を最大 16 個許容し、メモリー容量では 20 個許容できます。システムによっては、これらの差異は大きくなる可能性があり、多くの場合にこれらの 2 つの間でバランスを取っていくと良いでしょう。"
+
+#: ../../source/job_capacity.rst:101
+msgid "The instance field ``capacity_adjustment`` allows you to select how much of one or the other you want to consider. It is represented as a value between 0.0 and 1.0. If set to a value of 1.0, then the largest value will be used. The above example involves memory capacity, so a value of 20 forks would be selected. If set to a value of 0.0 then the smallest value will be used. A value of 0.5 would be a 50/50 balance between the two algorithms which would be 18:"
+msgstr "インスタンスフィールド ``capacity_adjustment`` では、どちらをどの程度考慮するかを選択できます。これは、0.0 から 1.0 の値で表します。値を 1.0 に設定すると、最大値が使用されます。上記の例では、メモリー容量となるので、フォークの値を 20 が選択されます。値を 0.0 に設定すると、最小値が使用されます。また、0.5 は 2 つのアルゴリズムを 50/50 の割合で使用することになり、フォーク数は 18 になります。"
+
+#: ../../source/job_capacity.rst:107
+msgid "To view or edit the capacity in the user interface, select the **Instances** tab of the Instance Group."
+msgstr "ユーザーインターフェースで容量を表示または編集するには、インスタンスグループの **インスタンス** タブを選択します。"
+
+#: ../../source/jobs.rst:313
+msgid "Job branch overriding"
+msgstr "ジョブブランチの上書き"
+
+#: ../../source/job_branching.rst:3
+msgid "Projects specify the branch, tag, or reference to use from source control in the ``scm_branch`` field. These are represented by the values specified in the Project Details fields as shown."
+msgstr "プロジェクトでは、ブランチ、タグ、または参照が ``scm_branch`` フィールドで指定されます。以下で示されているように、これらは、プロジェクトの詳細のフィールドで指定された値で表示されます。"
+
+#: ../../source/job_branching.rst:7
+msgid "Projects have the option to \"Allow Branch Override\". When checked, project admins can delegate branch selection to the job templates that use that project (requiring only project ``use_role``)."
+msgstr "プロジェクトには、「ブランチの上書きを許可する」オプションがあります。このオプションを選択すると、プロジェクト管理者は、そのプロジェクトを使用するジョブテンプレートに対して、ブランチの選択を委任できます (プロジェクトの ``use_role`` のみが必要)。"
+
+#: ../../source/job_branching.rst:14
+msgid "Source tree copy behavior"
+msgstr "ソースツリーのコピー動作"
+
+#: ../../source/job_branching.rst:16
+msgid "Every job run has its own private data directory. This directory contains a copy of the project source tree for the given ``scm_branch`` the job is running. Jobs are free to make changes to the project folder and make use of those changes while it is still running. This folder is temporary and is cleaned up at the end of the job run."
+msgstr "すべてのジョブ実行には、独自のプライベートデータディレクトリーがあります。このディレクトリーには、このジョブが実行されている指定された ``scm_branch`` のプロジェクトソースツリーのコピーが含まれています。ジョブは、プロジェクトフォルダーを自由に変更し、実行中にそれらの変更を自由に使用できます。このフォルダーは一時的なものであり、ジョブ実行の終了時にクリーンアップされます。"
+
+#: ../../source/job_branching.rst:19
+msgid "If **Clean** is checked, |at| discards modified files in its local copy of the repository through use of the ``force`` parameter in its respective Ansible modules pertaining to `git`_ or `Subversion`_."
+msgstr "**クリーニング** を選択している場合、|at| は、`git`_ および `Subversion`_ に関連した各 Ansible モジュールの ``force`` パラメーターを使用して、リポジトリーのローカルコピーにある変更ファイルを破棄します。"
+
+#: ../../source/job_branching.rst:28
+msgid "Project revision behavior"
+msgstr "プロジェクトのリビジョンの動作"
+
+#: ../../source/job_branching.rst:30
+msgid "Typically, during a project update, the revision of the default branch (specified in the **SCM Branch** field of the project) is stored when updated, and jobs using that project will employ this revision. Providing a non-default **SCM Branch** (not a commit hash or tag) in a job, the newest revision is pulled from the source control remote immediately before the job starts. This revision is shown in the **Source Control Revision** field of the job and its respective project update."
+msgstr "一般に、プロジェクトの更新中、デフォルトブランチのリビジョン (プロジェクトの **SCM ブランチ** フィールドで指定) が更新時に保存され、そのプロジェクトを使用するジョブではそのリビジョンが使用されます。ジョブでデフォルト以外の **SCM ブランチ** (コミットハッシュ値またはタグではない) を使用した場合は、ジョブの開始前に最新のリビジョンがソースコントロールリモートから即時に取得されます。このリビジョンは、ジョブおよびそれぞれのプロジェクト更新の **ソースコントロールの改訂** フィールドに表示されます。"
+
+#: ../../source/job_branching.rst:36
+msgid "Consequently, offline job runs are impossible for non-default branches. To be sure that a job is running a static version from source control, use tags or commit hashes. Project updates do not save the revision of all branches, only the project default branch."
+msgstr "そのため、デフォルト以外のブランチではオフラインジョブを実行できません。タグを使用するか、ハッシュをコミットを使用して、ジョブが確実にソースコントロールからの静的バージョンを実行するようにします。プロジェクトの更新では、すべてのブランチのリビジョンは保存されず、プロジェクトのデフォルトブランチのみが保存されます。"
+
+#: ../../source/job_branching.rst:38
+msgid "The **SCM Branch** field is not validated, so the project must update to assure it is valid. If this field is provided or prompted for, the **Playbook** field of job templates will not be validated, and you will have to launch the job template in order to verify presence of the expected playbook."
+msgstr "** SCM ブランチ** フィールドは検証されないため、プロジェクトを更新して有効であることを確認する必要があります。このフィールドが指定されたり、要求されたりした場合には、ジョブテンプレートの **Playbook** フィールドは検証されず、 ジョブテンプレートを起動して、必要とされる Playbook が存在するかを確認する必要があります。"
+
+#: ../../source/job_branching.rst:41
+msgid "Git Refspec"
+msgstr "Git Refspec"
+
+#: ../../source/job_branching.rst:46
+msgid "The **SCM Refspec** field specifies which extra references the update should download from the remote. Examples are:"
+msgstr "**SCM Refspec** フィールドは、更新がリモートからダウンロードする必要がある追加の参照を指定します。以下に例を示します。"
+
+#: ../../source/job_branching.rst:48
+msgid "``refs/*:refs/remotes/origin/*``: fetches all references, including remotes of the remote"
+msgstr "``refs/*:refs/remotes/origin/*``: リモートのリモートを含む、すべての参照を取得"
+
+#: ../../source/job_branching.rst:49
+msgid "``refs/pull/*:refs/remotes/origin/pull/*`` (GitHub-specific): fetches all refs for all pull requests"
+msgstr "``refs/pull/*:refs/remotes/origin/pull/*`` (GitHub 専用): すべてのプル要求に対して、すべての参照を取得"
+
+#: ../../source/job_branching.rst:50
+msgid "``refs/pull/62/head:refs/remotes/origin/pull/62/head``: fetches the ref for that one GitHub pull request"
+msgstr "``refs/pull/62/head:refs/remotes/origin/pull/62/head``: 対象の GitHub プル要求に対して、参照を取得"
+
+#: ../../source/job_branching.rst:52
+msgid "For large projects, you should consider performance impact when using the 1st or 2nd examples here."
+msgstr "プロジェクトの規模が大きく、本書で紹介する 1 例目と 2 例目を使用する場合には、パフォーマンスへの影響を考慮する必要があります。"
+
+#: ../../source/job_branching.rst:54
+msgid "The **SCM Refspec** parameter affects the availability of the project branch, and can allow access to references not otherwise available. The examples above allow the user to supply a pull request from the **SCM Branch**, which would not be possible without the **SCM Refspec** field."
+msgstr "**SCM Refspec** パラメーターは、プロジェクトブランチの可用性に影響するものであり、他の場合には利用できない参照へのアクセスを許可できます。上記の例では、ユーザーは **SCM ブランチ** からのプル要求を指定できますが、これは **SCM Refspec** フィールドがなければ不可能です。"
+
+#: ../../source/job_branching.rst:57
+msgid "The Ansible git module fetches ``refs/heads/*`` by default. This means that a project's branches and tags (and commit hashes therein) can be used as the SCM Branch if **SCM Refspec** is blank. The value specified in the **SCM Refspec** field affects which **SCM Branch** fields can be used as overrides. Project updates (of any type) will perform an extra ``git fetch`` command to pull that refspec from the remote."
+msgstr "Ansible git モジュールはデフォルトで ``refs/heads/*`` を取得します。つまり、**SCM Refspec** が空の場合には、プロジェクトのブランチとタグ (およびその中のコミットハッシュ) を SCM ブランチとして使用できます。**SCM Refspec** フィールドで指定された値は、オーバーライドとして使用できる **SCM ブランチ** フィールドに影響します。プロジェクトの更新 (任意のタイプ) は、追加の ``git fetch`` コマンドを実行して、リモートからその refspec をプルします。"
+
+#: ../../source/job_branching.rst:59
+msgid "For example: You could set up a project that allows branch override with the 1st or 2nd refspec example --> Use this in a job template that prompts for the **SCM Branch** --> A client could launch the job template when a new pull request is created, providing the branch ``pull/N/head`` --> The job template would run against the provided GitGub pull request reference."
+msgstr "たとえば、1 番目または 2 番目の refspec の例でブランチの上書きを許可するプロジェクトを設定したとします -> ** SCMブランチ** を要求するジョブテンプレートでこれを使用します -> ジョブテンプレートを起動すると、新しいプル要求が作成された場合に、ブランチ ``pull/N/head`` が指定されます -> ジョブテンプレートは、指定された GitHub プル要求の参照に対して実行されます。"
+
+#: ../../source/job_branching.rst:61
+msgid "For more information on the Ansible git module, see https://docs.ansible.com/ansible/latest/modules/git_module.html."
+msgstr "Ansible git モジュールの詳細は、https://docs.ansible.com/ansible/latest/modules/git_module.html を参照してください。"
+

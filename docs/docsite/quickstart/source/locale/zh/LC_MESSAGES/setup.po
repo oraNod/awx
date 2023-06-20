@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/setup.rst:3
+msgid "The Settings Page"
+msgstr "设置页面"
+
+#: ../../../common/source/settings-menu.rst:8
+msgid "To enter the Settings window for |at|, click **Settings** from the left navigation bar. This page allows you to modify your controller's configuration, such as settings associated with authentication, jobs, system, user interface, and view or retrieve your subscription information."
+msgstr "要进入 |at| 的 Settings 窗口，点左侧导航栏中的 **Settings**。在这个界面中可以修改控制器的配置，如与认证相关的设置、作业、系统、用户界面，以及查看或检索您的订阅信息。"
+
+#: ../../../common/source/settings-menu.rst:12
+msgid "For more information on configuring these settings, refer to :ref:`ag_configure_tower` section of the |ata|."
+msgstr "有关配置这些设置的详情请参考 |ata| 的 :ref:`ag_configure_tower` 部分。"
+

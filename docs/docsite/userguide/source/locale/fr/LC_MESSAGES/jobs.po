@@ -1,0 +1,598 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/jobs.rst:4
+msgid "Jobs"
+msgstr ""
+
+#: ../../source/jobs.rst:9
+msgid ""
+"A :term:`job` is an instance of Tower launching an Ansible playbook "
+"against an inventory of hosts."
+msgstr ""
+
+#: ../../source/jobs.rst:11
+msgid ""
+"The Jobs link displays a list of jobs and their status--shown as "
+"completed successfully or failed, or as an active (running) job. Actions "
+"you can take from this screen include viewing the details and standard "
+"output of a particular job, relaunch jobs, or remove jobs."
+msgstr ""
+
+#: ../../source/jobs.rst:13
+msgid "|Jobs - home with example job|"
+msgstr ""
+
+#: ../../source/jobs.rst:17
+msgid ""
+"Use the Tower Search feature to look up jobs by various criteria. For "
+"details about using the Tower Search, refer to the :ref:`ug_search` "
+"chapter."
+msgstr ""
+
+#: ../../source/jobs.rst:26
+msgid ""
+"Clicking on any type of job takes you to the Job Details View for that "
+"job, which consists of two sections:"
+msgstr ""
+
+#: ../../source/jobs.rst:28
+msgid "**Details** pane that provides information and status about the job"
+msgstr ""
+
+#: ../../source/jobs.rst:29
+msgid "**Standard Out** pane that displays the job processes and output"
+msgstr ""
+
+#: ../../source/jobs.rst:36
+msgid "Job Details - Inventory Sync"
+msgstr ""
+
+#: ../../source/jobs.rst:41
+msgid "|job details example of inventory sync|"
+msgstr ""
+
+#: ../../source/jobs.rst:47 ../../source/jobs.rst:107 ../../source/jobs.rst:151
+msgid "Details"
+msgstr ""
+
+#: ../../source/jobs.rst:49 ../../source/jobs.rst:109 ../../source/jobs.rst:153
+msgid ""
+"The **Details** pane shows the basic status of the job--*Running*, "
+"*Pending*, *Successful*, or *Failed*--and its start time. The icons at "
+"the top right corner of the **Details** pane allow you to relaunch "
+"(|launch|) or delete (|delete|) the job."
+msgstr ""
+
+#: ../../source/jobs.rst:54 ../../source/jobs.rst:111 ../../source/jobs.rst:155
+msgid "The **Details** pane provides details on the job execution:"
+msgstr ""
+
+#: ../../source/jobs.rst:56 ../../source/jobs.rst:113
+msgid "**Name**: The name of the associated inventory group."
+msgstr ""
+
+#: ../../source/jobs.rst:58 ../../source/jobs.rst:115 ../../source/jobs.rst:157
+msgid "**Status**: Can be any of *Pending*, *Running*, *Successful*, or *Failed*."
+msgstr ""
+
+#: ../../source/jobs.rst:61
+msgid ""
+"**License Error**: Only shown for **Inventory Sync** jobs. If this is "
+"*True*, the hosts added by the inventory sync caused Tower to exceed the "
+"licensed number of managed hosts."
+msgstr ""
+
+#: ../../source/jobs.rst:65 ../../source/jobs.rst:118 ../../source/jobs.rst:163
+msgid "**Started**: The timestamp of when the job was initiated by Tower."
+msgstr ""
+
+#: ../../source/jobs.rst:67 ../../source/jobs.rst:120 ../../source/jobs.rst:165
+msgid "**Finished**: The timestamp of when the job was completed."
+msgstr ""
+
+#: ../../source/jobs.rst:69 ../../source/jobs.rst:122 ../../source/jobs.rst:167
+msgid "**Elapsed**: The total time the job took."
+msgstr ""
+
+#: ../../source/jobs.rst:71 ../../source/jobs.rst:124
+msgid "**Launch Type**: *Manual* or *Scheduled*."
+msgstr ""
+
+#: ../../source/jobs.rst:73
+msgid "**Group**: The group being synced."
+msgstr ""
+
+#: ../../source/jobs.rst:75
+msgid "**Source**: The type of cloud inventory."
+msgstr ""
+
+#: ../../source/jobs.rst:77
+msgid ""
+"**Overwrite**: The value of *Overwrite* for this Inventory Sync. Refer to"
+" :ref:`ug_inventories` for details."
+msgstr ""
+
+#: ../../source/jobs.rst:79
+msgid ""
+"**Overwrite Vars**: The value of *Overwrite Vars* for this Inventory "
+"Sync. Refer to :ref:`ug_inventories` for details."
+msgstr ""
+
+#: ../../source/jobs.rst:81 ../../source/jobs.rst:128 ../../source/jobs.rst:180
+msgid ""
+"By clicking on these items, where appropriate, you can view the "
+"corresponding job templates, projects, and other Tower objects."
+msgstr ""
+
+#: ../../source/jobs.rst:86 ../../source/jobs.rst:132
+msgid "Standard Out"
+msgstr ""
+
+#: ../../source/jobs.rst:88
+msgid ""
+"The **Standard Out** pane shows the full results of running the Inventory"
+" Sync playbook. This shows the same information you would see if you ran "
+"it through the Ansible command line, and can be useful for debugging. The"
+" icons at the top right corner of the Standard Out pane allow you to "
+"toggle the output as a main view (|toggle|) or to download the output "
+"(|download|)."
+msgstr ""
+
+#: ../../source/jobs.rst:96
+msgid "Job Details - SCM"
+msgstr ""
+
+#: ../../source/jobs.rst:101
+msgid "|Jobs - show job results for example job, scm|"
+msgstr ""
+
+#: ../../source/jobs.rst:126
+msgid "**Project**: The name of the project."
+msgstr ""
+
+#: ../../source/jobs.rst:134
+msgid ""
+"The **Standard Out** pane shows the full results of running the SCM "
+"Update. This shows the same information you would see if you ran it "
+"through the Ansible command line, and can be useful for debugging. The "
+"icons at the top right corner of the Standard Out pane allow you to "
+"toggle the output as a main view (|toggle|) or to download the output "
+"(|download|)."
+msgstr ""
+
+#: ../../source/jobs.rst:139
+msgid "Job Details - Playbook Run"
+msgstr ""
+
+#: ../../source/jobs.rst:144
+msgid "|Jobs - show job details pane for example job, playbook|"
+msgstr ""
+
+#: ../../source/jobs.rst:148
+msgid ""
+"The Job Details View for a **Playbook Run** job is also accessible after "
+"launching a job from the **Job Templates** page."
+msgstr ""
+
+#: ../../source/jobs.rst:160
+msgid ""
+"**Template**: The name of the job template from which this job was "
+"launched."
+msgstr ""
+
+#: ../../source/jobs.rst:169
+msgid ""
+"**Launch By**: The name of the user, job, or scheduled scan job which "
+"launched this job."
+msgstr ""
+
+#: ../../source/jobs.rst:171
+msgid "**Inventory**: The inventory selected to run this job against."
+msgstr ""
+
+#: ../../source/jobs.rst:173
+msgid "**Machine Credential**: The name of the credential used in this job."
+msgstr ""
+
+#: ../../source/jobs.rst:175
+msgid "**Verbosity**: The level of verbosity set when creating the job template."
+msgstr ""
+
+#: ../../source/jobs.rst:177
+msgid ""
+"**Extra Variables**: Any extra variables passed when creating the job "
+"template are displayed here."
+msgstr ""
+
+#: ../../source/jobs.rst:184
+msgid "Standard Out Pane"
+msgstr ""
+
+#: ../../source/jobs.rst:186
+msgid ""
+"The **Standard Out** pane shows the full results of running the Ansible "
+"playbook. This shows the same information you would see if you ran it "
+"through the Ansible command line, and can be useful for debugging. You "
+"can view the event summary, host status, and the host events. The icons "
+"at the top right corner of the Standard Out pane allow you to toggle the "
+"output as a main view (|toggle|) or to download the output (|download|)."
+msgstr ""
+
+#: ../../source/jobs.rst:190
+msgid "Events Summary"
+msgstr ""
+
+#: ../../source/jobs.rst:196
+msgid ""
+"The events summary captures a tally of events that were run as part of "
+"this playbook:"
+msgstr ""
+
+#: ../../source/jobs.rst:198
+msgid "the number of plays"
+msgstr ""
+
+#: ../../source/jobs.rst:199
+msgid "the number of tasks"
+msgstr ""
+
+#: ../../source/jobs.rst:200
+msgid "the number of hosts"
+msgstr ""
+
+#: ../../source/jobs.rst:201
+msgid "the elapsed time to run the job template"
+msgstr ""
+
+#: ../../source/jobs.rst:208
+msgid "Host Status Bar"
+msgstr ""
+
+#: ../../source/jobs.rst:216
+msgid ""
+"The host status bar runs across the top of the **Standard Out** pane. "
+"Hover over a section of the host status bar and the number of hosts "
+"associated with that particular status displays."
+msgstr ""
+
+#: ../../source/jobs.rst:218
+msgid "|Job - All Host Events|"
+msgstr ""
+
+#: ../../source/jobs.rst:224
+msgid "Search"
+msgstr ""
+
+#: ../../source/jobs.rst:226
+msgid ""
+"Use the Tower Search to look up specific events, hostnames, and their "
+"statuses. To filter only certain hosts with a particular status, specify "
+"one of the following valid statuses:"
+msgstr ""
+
+#: ../../source/jobs.rst:228
+msgid ""
+"**Changed**: the playbook task actually executed. Since Ansible tasks "
+"should be written to be idempotent, tasks may exit successfully without "
+"executing anything on the host. In these cases, the task would return Ok,"
+" but not Changed."
+msgstr ""
+
+#: ../../source/jobs.rst:229
+msgid ""
+"**Failed**: the task failed. Further playbook execution was stopped for "
+"this host."
+msgstr ""
+
+#: ../../source/jobs.rst:230
+msgid "**OK**: the playbook task returned \"Ok\"."
+msgstr ""
+
+#: ../../source/jobs.rst:231
+msgid ""
+"**Unreachable**: the host was unreachable from the network or had another"
+" fatal error associated with it."
+msgstr ""
+
+#: ../../source/jobs.rst:232
+msgid ""
+"**Skipped**: the playbook task was skipped because no change was "
+"necessary for the host to reach the target state."
+msgstr ""
+
+#: ../../source/jobs.rst:234
+msgid "The example below shows a search with only failed hosts."
+msgstr ""
+
+#: ../../source/jobs.rst:238
+msgid ""
+"For more details about using the Tower Search, refer to the "
+":ref:`ug_search` chapter."
+msgstr ""
+
+#: ../../source/jobs.rst:242
+msgid "Standard output view"
+msgstr ""
+
+#: ../../source/jobs.rst:244
+msgid ""
+"The standard output view displays all the events that occur on a "
+"particular job. By default, all rows are expanded so that all the details"
+" are displayed. Use the collapse-all button (|collapse-all|) to switch to"
+" a view that only contains the headers for plays and tasks. Click the "
+"(|expand-all|) button to view all lines of the standard output."
+msgstr ""
+
+#: ../../source/jobs.rst:249
+msgid ""
+"Alternatively, you can display all the details of a specific play or task"
+" by clicking on the arrow icons next to them. Click an arrow from "
+"sideways to downward to expand the the lines associated with that play or"
+" task. Click the arrow back to the sideways position to collapse and hide"
+" the lines."
+msgstr ""
+
+#: ../../source/jobs.rst:255
+msgid "Things to note when viewing details in the expand/collapse mode:"
+msgstr ""
+
+#: ../../source/jobs.rst:258
+msgid ""
+"Each displayed line that is not collapsed has a corresponding line number"
+" and start time."
+msgstr ""
+
+#: ../../source/jobs.rst:260
+msgid ""
+"An expand/collapse icon is at the start of any play or task after the "
+"play or task has completed."
+msgstr ""
+
+#: ../../source/jobs.rst:262
+msgid ""
+"If querying for a particular play or task, it will appear collapsed at "
+"the end of its completed process."
+msgstr ""
+
+#: ../../source/jobs.rst:264
+msgid ""
+"In some cases, an error message will appear, stating that the output may "
+"be too large to display. This occurs when there are more than 4000 "
+"events. Use the search and filter for specific events to bypass the "
+"error."
+msgstr ""
+
+#: ../../source/jobs.rst:266
+msgid ""
+"Hover over an event line in the **Standard Out** view, a tooltip displays"
+" above that line, giving the total hosts affected by this task and an "
+"option to view further details about the breakdown of their statuses."
+msgstr ""
+
+#: ../../source/jobs.rst:270
+msgid ""
+"Click on a line of an event from the **Standard Out** pane and a **Host "
+"Events** dialog displays in a separate window. This window shows the host"
+" that was affected by that particular event."
+msgstr ""
+
+#: ../../source/jobs.rst:274
+msgid "Host Events"
+msgstr ""
+
+#: ../../source/jobs.rst:279
+msgid ""
+"The **Host Events** dialog shows information about the host affected by "
+"the selected event and its associated play and task:"
+msgstr ""
+
+#: ../../source/jobs.rst:281
+msgid "the **Host**"
+msgstr ""
+
+#: ../../source/jobs.rst:282
+msgid "the **Status**"
+msgstr ""
+
+#: ../../source/jobs.rst:283
+msgid "a unique **ID**"
+msgstr ""
+
+#: ../../source/jobs.rst:284
+msgid "a **Created** time stamp"
+msgstr ""
+
+#: ../../source/jobs.rst:285
+msgid "the name of the **Play**"
+msgstr ""
+
+#: ../../source/jobs.rst:286
+msgid "the name of the **Task**"
+msgstr ""
+
+#: ../../source/jobs.rst:287
+msgid ""
+"if applicable, the Ansible **Module** for the task, and any *arguments* "
+"for that module"
+msgstr ""
+
+#: ../../source/jobs.rst:288
+msgid "the **Standard Out** of the task"
+msgstr ""
+
+#: ../../source/jobs.rst:293
+msgid "To view the results in JSON format, click on the **JSON** tab."
+msgstr ""
+
+#: ../../source/jobs.rst:300
+msgid "Job Concurrency"
+msgstr ""
+
+#: ../../source/jobs.rst:306
+msgid ""
+"Tower limits the number of simultaneous jobs that can run based on the "
+"amount of physical memory and the complexity of the playbook. |at| 3.1.0 "
+"adds additional job capacity by having N additional Tower hosts in a "
+"cluster. You will be able to view Tower's capacity for running jobs in "
+"the Ping API Endpoint. The job itself also displays the node the task is "
+"running on."
+msgstr ""
+
+#: ../../source/jobs.rst:308
+msgid ""
+"If the \"Update on Launch\" setting is checked, job templates that rely "
+"on the inventory or project *also* trigger an update on them if it is "
+"within the cache timeout. If multiple jobs are launched within the cache "
+"timeout that depend on the same project or inventory, only one of those "
+"project or inventory updates is created (instead of one for each job that"
+" relies on it)."
+msgstr ""
+
+#: ../../source/jobs.rst:310
+msgid ""
+"If you are having trouble, try setting the cache timeout on the project "
+"or inventory source to 60 seconds."
+msgstr ""
+
+#: ../../source/jobs.rst:312
+msgid ""
+"The restriction related to the amount of RAM on your Tower server and the"
+" size of your inventory equates to the total number of machines from "
+"which facts can be gathered and stored in memory. The algorithm used is:"
+msgstr ""
+
+#: ../../source/jobs.rst:318
+msgid "With 50 as the baseline."
+msgstr ""
+
+#: ../../source/jobs.rst:320
+msgid "Each job that runs is:"
+msgstr ""
+
+#: ../../source/jobs.rst:326
+msgid "Which defaults to 50 if the limit is set Tower's default value of 0."
+msgstr ""
+
+#: ../../source/jobs.rst:328
+msgid ""
+"Forks determine the default number of parallel processes to spawn when "
+"communicating with remote hosts. The fork number is automatically limited"
+" to the number of possible hosts, so this is really a limit of how much "
+"network and CPU load you can handle. Many users set this to 50, while "
+"others set it to 500 or more. If you have a large number of hosts, higher"
+" values will make actions across all of those hosts complete faster. You "
+"can edit the ``ansible.cfg`` file to change this value."
+msgstr ""
+
+#: ../../source/jobs.rst:330
+msgid ""
+"The Ansible fork number default is extremely conservative and is set to "
+"five (5). When you do not pass a forks value in Tower (leaving it as 0), "
+"Ansible uses 5 forks (the default).  If you set your forks value to one "
+"(1) in Tower, Ansible uses the value entered and one (1) fork is created."
+" Non-zero inputs are used as instructed."
+msgstr ""
+
+#: ../../source/jobs.rst:332
+msgid ""
+"As an example, if you have a job with 0 forks (the Tower default) on a "
+"system with 2 GB of memory, your algorithm would look like the following:"
+msgstr ""
+
+#: ../../source/jobs.rst:338
+msgid ""
+"If you have a job with 0 forks (the Tower default) on a system with 4 GB "
+"of memory then you can run four (4) tasks simultaneously which includes "
+"callbacks."
+msgstr ""
+
+#: ../../source/jobs.rst:344
+msgid ""
+"This can be changed by setting a value in the Tower settings file "
+"(``/etc/tower/settings.py``) such as:"
+msgstr ""
+
+#: ../../source/jobs.rst:350
+msgid ""
+"If you want to override the setting, use caution, as you may run out of "
+"RAM if you set this value too high. You can determine what the calculated"
+" setting is by reviewing ``/var/log/tower/task_system.log`` and looking "
+"for a line similar to:"
+msgstr ""
+
+#: ../../source/jobs.rst:352
+msgid "Running Nodes: []; Capacity: 50; Running Impact: 0; Remaining Capacity: 50"
+msgstr ""
+
+#: ../../source/jobs.rst:355
+msgid "The ``Capacity: 50`` is the current calculated setting."
+msgstr ""
+
+#: ../../source/jobs.rst:358
+msgid ""
+"As long as you have the capacity to do so, Tower attempts to queue and "
+"run the most number of jobs possible. There are some blockers and "
+"exceptions worth noting, however."
+msgstr ""
+
+#: ../../source/jobs.rst:360
+msgid ""
+"A Job Template will block the same instance of another Job Template "
+"launched with the same inventory (this is a change in behavior -- prior "
+"to |at| 3.0, a Job Template would block the same instance of another Job "
+"Template)."
+msgstr ""
+
+#: ../../source/jobs.rst:361
+msgid ""
+"A project update, an SCM update, or an inventory update will block "
+"another project requiring the same update(s)."
+msgstr ""
+
+#: ../../source/jobs.rst:362
+msgid ""
+"Job Templates which launch via provisioning callbacks can run, just not "
+"as an instance on the same host. This allows running two (2) templates on"
+" the same inventory. However, if the inventory requires an update, they "
+"will not run. Callbacks are special types of job templates which receive "
+"\"push requests\" from the host to the inventory. They run on one host "
+"only and can run parallel with other jobs as long as they are different "
+"callbacks and different hosts."
+msgstr ""
+
+#: ../../source/jobs.rst:363
+msgid ""
+"System Jobs can only run one at a time. They block all other jobs and "
+"must be run on their own to avoid conflict. System jobs will finish "
+"behind jobs schedule ahead of them, but will finish ahead of those jobs "
+"scheduled behind it."
+msgstr ""
+
+#: ../../source/jobs.rst:364
+msgid "Jobs may be queued if they are waiting on spare job running capacity."
+msgstr ""
+
+#: ../../source/jobs.rst:365
+msgid ""
+"Ad hoc jobs are blocked by any inventory updates running against the "
+"inventory for that ad hoc job as specified."
+msgstr ""
+

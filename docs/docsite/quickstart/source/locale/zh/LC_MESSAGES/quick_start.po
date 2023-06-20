@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/quick_start.rst:2
+msgid "Quick Start"
+msgstr "快速入门"
+
+#: ../../source/quick_start.rst:7
+msgid "Welcome to the Automation Controller Quick Start Guide. At the end of the Quick Start, you will have a functioning controller application that you can use to launch more sophisticated playbooks. You can expect the Quick Start process to take less than thirty minutes."
+msgstr "欢迎使用自动化控制器快速启动（Quick Start）指南。在快速启动结束后，您将可以使用一个可运行的控制器应用来启动更复杂的 playbook。预计快速启动过程需要不到三十分钟。"
+
+#: ../../source/quick_start.rst:9
+msgid "To begin, you must install |aap| and you must choose a target system where an initial playbook can be deployed (provided by |at|). Refer to `Red Hat Ansible Automation Platform Installation Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_installation_guide/planning-installation>`_ for further instructions."
+msgstr "首先，您必须安装 |aap|，选择一个可以部署初始 playbook 的目标系统（由 |at|提供）。如需更多详情，请参阅 `Red Hat Ansible Automation Platform Installation Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_installation_guide/planning-installation>`_。"
+
+#: ../../source/quick_start.rst:11
+msgid "This first playbook executes simple Ansible tasks, while teaching you how to use the controller, as well as ensuring its proper setup. This can be any sort of system manageable by Ansible, as described in the `Managed nodes <https://docs.ansible.com/ansible/latest/user_guide/basic_concepts.html#managed-nodes>`_ section of the Ansible documentation."
+msgstr "第一个 playbook 执行简单的 Ansible 任务，同时指导您如何使用控制器并确保其正确设置。这可以是 Ansible 可管理的任何类型的系统，如 Ansible 文档的 `Managed nodes <https://docs.ansible.com/ansible/latest/user_guide/basic_concepts.html#managed-nodes>`_ 部分所述。"
+
+#: ../../source/quick_start.rst:14
+msgid "|aap| is offered on a subscription basis. These subscriptions vary in price and support-levels. For more information about subscriptions and features, see :ref:`subscription-types`."
+msgstr "|aap| 基于订阅提供。这些订阅在价格和支持级别上有所不同。有关订阅和功能的更多信息，请参阅 :ref:`subscription-types`。"
+

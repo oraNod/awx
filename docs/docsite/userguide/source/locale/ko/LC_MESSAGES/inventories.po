@@ -1,0 +1,1298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/inventories.rst:5
+msgid "Inventories"
+msgstr "인벤토리"
+
+#: ../../source/inventories.rst:10
+msgid "An :term:`Inventory` is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. Inventories are divided into groups and these groups contain the actual hosts. Groups may be sourced manually, by entering host names into the |at|, or from one of its supported cloud providers."
+msgstr ":term:`Inventory`는 Ansible 인벤토리 파일과 마찬가지로 작업을 시작할 수 있는 호스트 컬렉션입니다. 인벤토리는 그룹으로 나뉘며, 이러한 그룹에는 실제 호스트가 포함됩니다. 그룹은 호스트 이름을 |at|에 입력하거나 지원되는 클라우드 공급자 중 하나에서 수동으로 소싱할 수 있습니다."
+
+#: ../../source/inventories.rst:14
+msgid "If you have a custom dynamic inventory script, or a cloud provider that is not yet supported natively in the controller, you can also import that into the controller. Refer to :ref:`ag_inv_import` in the |ata|."
+msgstr "사용자 정의 동적 인벤토리 스크립트 또는 컨트롤러에서 아직 기본적으로 지원되지 않는 클라우드 공급자가 있는 경우 이를 컨트롤러로 가져올 수도 있습니다. |ata|의 :ref:`ag_inv_import`을 참조하십시오."
+
+#: ../../source/inventories.rst:17
+msgid "The Inventories window displays a list of the inventories that are currently available. The inventory list may be sorted by name and searched type, organization, description, owners and modifiers of the inventory, or additional criteria as needed."
+msgstr "인벤토리 창에는 현재 사용 가능한 인벤토리 목록이 표시됩니다. 인벤토리 목록은 필요에 따라 이름 및 검색된 유형, 조직, 설명, 인벤토리 소유자 및 수정자 또는 추가 기준에 따라 정렬할 수 있습니다."
+
+#: ../../source/inventories.rst:19
+msgid "|Inventories - home with examples|"
+msgstr "|Inventories - home with examples|"
+
+#: ../../source/inventories.rst:23
+msgid "The list of Inventory details includes:"
+msgstr "인벤토리 세부 정보 목록에는 다음이 포함됩니다."
+
+#: ../../source/inventories.rst:25
+msgid "**Name**: The inventory name. Clicking the Inventory name navigates to the properties screen for the selected inventory, which shows the inventory's groups and hosts. (This view is also accessible from the |edit button| icon.)"
+msgstr "**이름**: 인벤토리 이름입니다. 인벤토리 이름을 클릭하면 선택한 인벤토리의 속성 화면으로 이동하여 인벤토리의 그룹 및 호스트가 표시됩니다. (이 보기는 |edit button| 아이콘에서도 액세스할 수 있습니다.)"
+
+#: ../../source/inventories.rst:29
+msgid "**Status**"
+msgstr "**상태**"
+
+#: ../../source/inventories.rst:31
+msgid "The statuses are:"
+msgstr "상태는 다음과 같습니다."
+
+#: ../../source/inventories.rst:33
+msgid "**Success**: when the inventory source sync completed successfully"
+msgstr "**성공**: 인벤토리 소스 동기화가 성공적으로 완료된 경우"
+
+#: ../../source/inventories.rst:34
+msgid "**Disabled**: no inventory source added to the inventory"
+msgstr "**비활성화됨**: 인벤토리에 인벤토리 소스가 추가되지 않음"
+
+#: ../../source/inventories.rst:35
+msgid "**Error**: when the inventory source sync completed with error"
+msgstr "**오류**: 인벤토리 소스 동기화가 오류와 함께 완료된 경우"
+
+#: ../../source/inventories.rst:37
+msgid "An example of inventories of various states, including one with detail for a disabled state:"
+msgstr "다음 예에서는 비활성화됨 상태에 대한 세부 정보가 있는 인벤토리를 포함하여 다양한 상태의 인벤토리를 보여줍니다."
+
+#: ../../source/inventories.rst:41
+msgid "**Type**: Identifies whether it is a standard inventory or a Smart Inventory."
+msgstr "**유형**: 표준 인벤토리인지 아니면 스마트 인벤토리인지를 나타냅니다."
+
+#: ../../source/inventories.rst:42
+msgid "**Organization**: The organization to which the inventory belongs."
+msgstr "**조직**: 인벤토리가 속한 조직입니다."
+
+#: ../../source/inventories.rst:43
+msgid "**Actions**: The following actions are available for the selected inventory:"
+msgstr "**작업**: 선택한 인벤토리에 다음 작업을 수행할 수 있습니다."
+
+#: ../../source/inventories.rst:45
+msgid "**Edit** (|edit button|): Edit the properties for the selected inventory"
+msgstr "**편집**(|edit button|): 선택한 인벤토리의 속성 편집"
+
+#: ../../source/inventories.rst:46
+msgid "**Copy** (|copy|): Makes a copy of an existing inventory as a template for creating a new one"
+msgstr "**복사**(|copy|): 새 인벤토리 생성을 위한 템플릿으로 기존 인벤토리 복사본 만들기"
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "다른 작업 항목에서 사용하는 항목을 삭제하면 삭제의 영향을 받는 항목이 나열된 메시지가 열리고, 삭제를 확인하라는 메시지가 표시됩니다. 일부 화면에는 유효하지 않거나 이전에 삭제된 항목이 포함되며 이러한 항목은 실행되지 않습니다. 다음은 이러한 메시지의 예입니다."
+
+#: ../../source/inventories.rst:58
+msgid "Smart Inventories"
+msgstr "스마트 인벤토리"
+
+#: ../../source/inventories.rst:63
+msgid "A Smart Inventory is a collection of hosts defined by a stored search that can be viewed like a standard inventory and made to be easily used with job runs. Organization administrators have admin permission to inventories in their organization and can create a Smart Inventories. A Smart Inventory is identified by ``KIND=smart``. You can define a Smart Inventory using the same method being used with Search. ``InventorySource`` is directly associated with an Inventory."
+msgstr "스마트 인벤토리는 저장된 검색으로 정의된 호스트 컬렉션으로, 표준 인벤토리처럼 보고 작업 실행과 함께 쉽게 사용할 수 있습니다. 조직 관리자는 조직의 인벤토리에 대한 관리자 권한이 있으며 스마트 인벤토리를 생성할 수 있습니다. 스마트 인벤토리는 ``KIND=smart``로 식별됩니다. 검색에 사용되는 것과 동일한 방법을 사용하여 스마트 인벤토리를 정의할 수 있습니다. ``InventorySource``는 인벤토리와 직접 연결되어 있습니다."
+
+#: ../../source/inventories.rst:65
+msgid "The ``Inventory`` model has the following new fields that are blank by default but are set accordingly for Smart Inventories:"
+msgstr "``Inventory`` 모델에는 기본적으로 비어 있지만 스마트 인벤토리에 맞게 설정되는 다음과 같은 새 필드가 있습니다."
+
+#: ../../source/inventories.rst:67
+msgid "``kind`` is set to ``smart`` for Smart Inventories"
+msgstr "스마트 인벤토리의 경우 ``kind``가 ``smart``로 설정됩니다."
+
+#: ../../source/inventories.rst:68
+msgid "``host_filter`` is set AND ``kind`` is set to ``smart`` for Smart Inventories."
+msgstr "스마트 인벤토리의 경우 ``host_filter``는 AND로, ``kind``는 ``smart``로 설정됩니다."
+
+#: ../../source/inventories.rst:70
+msgid "The ``host`` model has a related endpoint, ``smart_inventories`` that identifies a set of all the Smart Inventory a host is associated with. The membership table is updated every time a job runs against a smart inventory."
+msgstr "``host`` 모델에는 호스트가 연결된 모든 스마트 인벤토리 세트를 나타내는 관련 끝점인 ``smart_inventories``가 있습니다. 멤버십 테이블은 작업이 스마트 인벤토리에 대해 실행될 때마다 업데이트됩니다."
+
+#: ../../source/inventories.rst:74
+msgid "To update the memberships more frequently, you can change the file-based setting ``AWX_REBUILD_SMART_MEMBERSHIP`` to **True** (default is False). This will update memberships in the following events:"
+msgstr "멤버십을 더 자주 업데이트하려면 파일 기반 설정 ``AWX_REBUILD_SMART_MEMBERSHIP``을 **True**(기본값은 False)로 변경하면 됩니다. 이렇게 하면 다음 이벤트에 멤버십이 업데이트됩니다."
+
+#: ../../source/inventories.rst:76
+msgid "a new host is added"
+msgstr "새 호스트가 추가됨"
+
+#: ../../source/inventories.rst:77
+msgid "an existing host is modified (updated or deleted)"
+msgstr "기존 호스트가 수정됨(업데이트 또는 삭제됨)"
+
+#: ../../source/inventories.rst:78
+msgid "a new Smart Inventory is added"
+msgstr "새 스마트 인벤토리가 추가됨"
+
+#: ../../source/inventories.rst:79
+msgid "an existing Smart Inventory is modified (updated or deleted)"
+msgstr "기존 스마트 인벤토리가 수정됨(업데이트 또는 삭제됨)"
+
+#: ../../source/inventories.rst:81
+msgid "You can view actual inventories without being editable:"
+msgstr "편집하지 않고도 실제 인벤토리를 볼 수 있습니다."
+
+#: ../../source/inventories.rst:83
+msgid "Names of Host and Group created as a result of an inventory source sync"
+msgstr "인벤토리 소스 동기화로 생성된 호스트 및 그룹 이름"
+
+#: ../../source/inventories.rst:84
+msgid "Group records cannot be edited or moved"
+msgstr "편집하거나 이동할 수 없는 그룹 레코드"
+
+#: ../../source/inventories.rst:86
+msgid "You cannot create hosts from a Smart Inventory host endpoint (``/inventories/N/hosts/``) as with a normal inventory. The administrator of a Smart Inventory has permission to edit fields such as the name, description, variables, and the ability to delete, but does not have the permission to modify the ``host_filter``, because that will affect which hosts (that have a primary membership inside another inventory) are included in the smart inventory. Note, ``host_filter`` only apply to hosts inside of inventories inside of the Smart Inventory's organization."
+msgstr "일반 인벤토리와 마찬가지로 스마트 인벤토리 호스트 끝점(``/inventories/N/hosts/``)에서는 호스트를 생성할 수 없습니다. 스마트 인벤토리 관리자는 이름, 설명, 변수, 삭제 기능과 같은 필드를 편집할 수 있는 권한이 있지만 ``host_filter``를 수정할 수 있는 권한은 없습니다. 수정하는 경우 스마트 인벤토리에 포함된 호스트(다른 인벤토리 내에 기본 멤버십이 있음)에 영향을 미치기 때문입니다. ``host_filter``는 스마트 인벤토리 조직 내부의 인벤토리 내 호스트에만 적용됩니다."
+
+#: ../../source/inventories.rst:88
+msgid "In order to modify the ``host_filter``, you need to be the organization administrator of the inventory's organization. Organization admins already have implicit \"admin\" access to all inventories inside the organization, therefore, this does not convey any permissions they did not already possess."
+msgstr "``host_filter``를 수정하려면 인벤토리 조직의 조직 관리자여야 합니다. 조직 관리자에게는 이미 조직 내부의 모든 인벤토리에 대한 암시적 \"관리자\" 액세스 권한이 있으므로 아직 소유하지 않은 권한은 전달되지 않습니다."
+
+#: ../../source/inventories.rst:90
+msgid "Administrators of the Smart Inventory can grant other users (who are not also admins of your organization) permissions like \"use\" \"adhoc\" to the smart inventory, and these will allow the actions indicate by the role, just like other standard inventories. However, this will not give them any special permissions to hosts (which live in a different inventory). It will not allow them direct read permission to hosts, or permit them to see additional hosts under ``/#/hosts/``, although they can still view the hosts under the smart inventory host list."
+msgstr "스마트 인벤토리의 관리자는 다른 사용자(해당 조직의 관리자도 아님)에게 스마트 인벤토리에 대한 \"사용\", \"임시\"와 같은 권한을 부여할 수 있습니다. 이 경우 기타 표준 인벤토리와 마찬가지로 해당 역할이 나타내는 작업을 수행할 수 있습니다. 그러나 (다른 인벤토리에 있는) 호스트에 대한 특별한 권한을 부여하는 것은 아닙니다. 스마트 인벤토리 호스트 목록에 있는 호스트는 볼 수는 있지만 호스트에 대한 직접 읽기 권한을 허용하거나 ``/#/hosts/``에 있는 추가 호스트를 보도록 허용하지 않습니다."
+
+#: ../../source/inventories.rst:92
+msgid "In some situations, you can modify the following:"
+msgstr "경우에 따라 다음을 수정할 수 있습니다."
+
+#: ../../source/inventories.rst:94
+msgid "A new Host manually created on Inventory w/ inventory sources"
+msgstr "인벤토리 소스를 사용하여 인벤토리에 수동으로 생성된 새 호스트"
+
+#: ../../source/inventories.rst:95
+msgid "In Groups that were created as a result of inventory source syncs"
+msgstr "인벤토리 소스 동기화로 생성된 그룹에서"
+
+#: ../../source/inventories.rst:96
+msgid "Variables on Host and Group are changeable"
+msgstr "호스트 및 그룹의 변수는 변경 가능"
+
+#: ../../source/inventories.rst:98
+msgid "Hosts associated with the Smart Inventory are manifested at view time. If the results of a Smart Inventory contains more than one host with identical hostnames, only one of the matching hosts will be included as part of the Smart Inventory, ordered by Host ID."
+msgstr "스마트 인벤토리와 연결된 호스트는 조회 시 표시됩니다. 스마트 인벤토리 결과에 호스트 이름이 동일한 호스트가 두 개 이상 포함된 경우, 일치하는 호스트 중 하나만 호스트 ID에 따라 정렬되어 스마트 인벤토리의 일부로 포함됩니다."
+
+#: ../../source/inventories.rst:104
+msgid "Smart Host Filter"
+msgstr "스마트 호스트 필터"
+
+#: ../../source/inventories.rst:106
+msgid "You can use a search filter to populate hosts for an inventory. This feature utilized the capability of the fact searching feature."
+msgstr "검색 필터를 사용하여 인벤토리의 호스트를 채울 수 있습니다. 이 기능은 사실 검색 기능을 활용한 것입니다."
+
+#: ../../source/inventories.rst:108
+msgid "Facts generated by an Ansible playbook during a Job Template run are stored by the |at| into the database whenever ``use_fact_cache=True`` is set per-Job Template. New facts are merged with existing facts and are per-host. These stored facts can be used to filter hosts via the ``/api/v2/hosts`` endpoint, using the ``GET`` query parameter ``host_filter`` For example: ``/api/v2/hosts?host_filter=ansible_facts__ansible_processor_vcpus=8``"
+msgstr "작업 템플릿을 실행하는 동안 Ansible 플레이북에서 생성한 사실은 작업별 템플릿에 ``use_fact_cache=True``를 설정할 때마다 |at|에서 데이터베이스에 저장합니다. 새 사실은 기존 사실과 병합되고 호스트별로 제공됩니다. 이렇게 저장된 사실은 ``GET`` 쿼리 매개변수 ``host_filter``를 사용하여 ``/api/v2/hosts`` 끝점을 통해 호스트를 필터링하는 데 사용할 수 있습니다. 예를 들면 ``/api/v2/hosts?host_filter=ansible_facts__ansible_processor_vcpus=8``입니다."
+
+#: ../../source/inventories.rst:110
+msgid "The ``host_filter`` parameter allows for:"
+msgstr "``host_filter`` 매개변수를 사용하면 다음 작업이 가능합니다."
+
+#: ../../source/inventories.rst:112
+msgid "grouping via ()"
+msgstr "()을 통한 그룹화"
+
+#: ../../source/inventories.rst:113
+msgid "use of the boolean and operator:"
+msgstr "부울 및 연산자 사용"
+
+#: ../../source/inventories.rst:115
+msgid "``__`` to reference related fields in relational fields"
+msgstr "``__`` 관계형 필드에서 관련 필드 참조"
+
+#: ../../source/inventories.rst:116
+msgid "``__`` is used on ansible_facts to separate keys in a JSON key path"
+msgstr "``__`` JSON 키 경로에서 키를 분리하기 위해 ansible_facts에 사용"
+
+#: ../../source/inventories.rst:117
+msgid "``[]`` is used to denote a json array in the path specification"
+msgstr "``[]`` 경로 사양에서 json 배열을 표시하는 데 사용"
+
+#: ../../source/inventories.rst:118
+msgid "``\"\"`` can be used in the value when spaces are wanted in the value"
+msgstr "``\"\"`` 값에 공백이 필요한 경우 값에 사용 가능"
+
+#: ../../source/inventories.rst:120
+msgid "\"classic\" Django queries may be embedded in the ``host_filter``"
+msgstr "``host_filter``에 \"classic\" Django 쿼리가 포함될 수 있음"
+
+#: ../../source/inventories.rst:122
+msgid "Examples:"
+msgstr "예:"
+
+#: ../../source/inventories.rst:134
+msgid "You can search ``host_filter`` by host name, group name, and Ansible facts."
+msgstr "호스트 이름, 그룹 이름, Ansible 사실로 ``host_filter``를 검색할 수 있습니다."
+
+#: ../../source/inventories.rst:136
+msgid "The format for a group search is:"
+msgstr "그룹 검색 형식은 다음과 같습니다."
+
+#: ../../source/inventories.rst:142
+msgid "The format for a fact search is:"
+msgstr "사실 검색 형식은 다음과 같습니다."
+
+#: ../../source/inventories.rst:148
+msgid "You can also perform Smart Search searches, which consist a host name and host description."
+msgstr "호스트 이름과 호스트 설명으로 구성된 스마트 검색을 수행할 수도 있습니다."
+
+#: ../../source/inventories.rst:155
+msgid "If a search term in ``host_filter`` is of string type, to make the value a number (e.g. ``2.66``), or a JSON keyword (e.g. ``null``, ``true`` or ``false``) valid, add double quotations around the value to prevent the controller from mistakenly parsing it as a non-string:"
+msgstr "``host_filter``의 검색어가 문자열 유형인 경우 숫자(예: ``2.66``) 또는 JSON 키워드(예: ``null``, ``true`` 또는 ``false``) 값을 유효하게 만들려면 컨트롤러에서 실수로 문자열이 아닌 값으로 구문 분석하지 않도록 값을 큰따옴표로 묶습니다."
+
+#: ../../source/inventories.rst:165
+msgid "Define host filter with ansible_facts"
+msgstr "ansible_facts를 사용하여 호스트 필터 정의"
+
+#: ../../source/inventories.rst:167
+msgid "To use ``ansible_facts`` to define the host filter when creating Smart Inventories, perform the following steps:"
+msgstr "스마트 인벤토리를 생성할 때 호스트 필터를 정의하는 데 ``ansible_facts``를 사용하려면 다음 단계를 수행합니다."
+
+#: ../../source/inventories.rst:169
+msgid "In the *Create new smart inventory screen*, click the |search| button next to the **Smart host filter** field to open a pop-up window to filter hosts for this inventory."
+msgstr "*새 스마트 인벤토리 만들기 화면*에서 **Smart 호스트 필터** 필드 옆에 있는 |search| 버튼을 클릭하여 이 인벤토리의 호스트를 필터링하는 팝업 창을 엽니다."
+
+#: ../../source/inventories.rst:173
+msgid "In the search pop-up window, change the search criteria from **Name** to **Advanced** and select **ansible_facts** from the **Key** field."
+msgstr "검색 팝업 창에서 검색 기준을 **이름** 에서 **고급**으로 변경하고 **키** 필드에서 **ansible_facts**를 선택합니다."
+
+#: ../../source/inventories.rst:178
+msgid "If you wanted to add an ansible fact of"
+msgstr "ansible 팩트를 추가하려면 다음을 수행합니다."
+
+#: ../../source/inventories.rst:185
+msgid "In the search field, enter ``ansible_processor[]=\"GenuineIntel\"`` (no extra spaces or ``__`` before the value) and press **[Enter]**."
+msgstr "검색 필드에 ``ansible_processor[]=\"GenuineIntel\"`` (값 앞에 추가 공백 또는 ``__`` 없음)을 입력하고 **[Enter]** 를 누릅니다."
+
+#: ../../source/inventories.rst:189
+msgid "The resulting search criteria for the specified ansible fact populates in the lower part of the window."
+msgstr "지정된 ansible 팩트에 대한 결과 검색 기준이 창의 아래 부분에 채워집니다."
+
+#: ../../source/inventories.rst:193
+msgid "Click **Select** to add it to the **Smart host filter** field."
+msgstr "**선택**을 클릭하여 **Smart 호스트 필터** 필드에 추가합니다."
+
+#: ../../source/inventories.rst:197
+msgid "Click **Save** to save the new Smart Inventory."
+msgstr "**저장** 을 클릭하여 새 스마트 인벤토리를 저장합니다."
+
+#: ../../source/inventories.rst:199
+msgid "The Details tab of the new Smart Inventory opens and displays the specified ansible facts in the **Smart host filter** field."
+msgstr "새 스마트 인벤토리의 세부 정보 탭이 열리고 **Smart 호스트 필터** 필드에 지정된 ansible 팩트가 표시됩니다."
+
+#: ../../source/inventories.rst:203
+msgid "From the Details view, you can edit the **Smart host filter** field by clicking **Edit** and delete existing filter(s), clear all existing filters, or add new ones."
+msgstr "세부 정보 보기에서 **편집**을 클릭하고 기존 필터를 지우거나 기존 필터를 지우거나 새 필터를 추가하여 **Smart 호스트 필터** 필드를 편집할 수 있습니다."
+
+#: ../../source/inventories.rst:211
+msgid "Inventory Plugins"
+msgstr "인벤토리 플러그인"
+
+#: ../../source/inventories.rst:216
+msgid "Inventory updates use dynamically-generated YAML files which are parsed by their respective inventory plugin. In |atversion|, users can provide the new style inventory plugin config directly to the controller via the inventory source ``source_vars`` for all the following inventory sources:"
+msgstr "인벤토리 업데이트에서는 동적으로 생성되어 각 인벤토리 플러그인에서 구문 분석하는 YAML 파일을 사용합니다. |atversion|에서 사용자는 다음 인벤토리 소스 모두에 대해 인벤토리 소스 ``source_vars``를 통해 컨트롤러에 새 스타일 인벤토리 플러그인 구성을 직접 제공할 수 있습니다."
+
+#: ../../source/inventories.rst:218
+msgid ":ref:`ug_source_ec2`"
+msgstr ":ref:`ug_source_ec2`"
+
+#: ../../source/inventories.rst:219
+msgid ":ref:`ug_source_gce`"
+msgstr ":ref:`ug_source_gce`"
+
+#: ../../source/inventories.rst:220
+msgid ":ref:`ug_source_azure`"
+msgstr ":ref:`ug_source_azure`"
+
+#: ../../source/inventories.rst:221
+msgid ":ref:`ug_source_vmvcenter`"
+msgstr ":ref:`ug_source_vmvcenter`"
+
+#: ../../source/inventories.rst:222
+msgid ":ref:`ug_source_satellite`"
+msgstr ":ref:`ug_source_satellite`"
+
+#: ../../source/inventories.rst:223
+msgid ":ref:`ug_source_insights`"
+msgstr ":ref:`ug_source_insights`"
+
+#: ../../source/inventories.rst:224
+msgid ":ref:`ug_source_openstack`"
+msgstr ":ref:`ug_source_openstack`"
+
+#: ../../source/inventories.rst:225
+msgid ":ref:`ug_source_rhv`"
+msgstr ":ref:`ug_source_rhv`"
+
+#: ../../source/inventories.rst:226
+msgid ":ref:`ug_source_tower`"
+msgstr ":ref:`ug_source_tower`"
+
+#: ../../source/inventories.rst:229
+msgid "Newly created configurations for inventory sources will contain the default plugin configuration values. If you want your newly created inventory sources in 3.8 to match the output of a 3.7 source, you must apply a specific set of configuration values for that source. To ensure backward compatibility, the controller uses \"templates\" for each of these sources to force the output of inventory plugins into the legacy format. Refer to :ref:`ir_inv_plugin_templates_reference` section of this guide for each source and their respective templates to help you migrate to the new style inventory plugin output."
+msgstr "인벤토리 소스에 대해 새로 생성된 구성에는 기본 플러그인 구성 값이 포함됩니다. 3.8에서 새로 생성한 인벤토리 소스가 3.7 소스의 출력과 일치하도록 하려면 해당 소스에 특정 구성 값 세트를 적용해야 합니다. 이전 버전과의 호환성을 보장하기 위해 컨트롤러는 이러한 소스 각각에 \"템플릿\"을 사용하여 인벤토리 플러그인의 출력을 기존 형식으로 강제 실행합니다. 새 스타일 인벤토리 플러그인 출력으로 마이그레이션하는 데 도움이 되는 각 소스 및 해당 템플릿은 이 가이드의 :ref:`ir_inv_plugin_templates_reference` 섹션을 참조하십시오."
+
+#: ../../source/inventories.rst:231
+msgid "``source_vars`` that contain ``plugin: foo.bar.baz`` as a top-level key will be replaced with the appropriate fully-qualified inventory plugin name at runtime based on the ``InventorySource`` source. For example, if ec2 is selected for the ``InventorySource`` then, at run-time, plugin will be set to ``amazon.aws.aws_ec2``."
+msgstr "최상위 키로 ``plugin: foo.bar.baz``가 포함된 ``source_vars``는 ``InventorySource`` 소스를 기반으로 런타임 시 적절한 정규화된 인벤토리 플러그인 이름으로 교체됩니다. 예를 들어, ``InventorySource``에 대해 ec2를 선택하면 런타임 시 플러그인이 ``amazon.aws.aws_ec2``로 설정됩니다."
+
+#: ../../source/inventories.rst:237
+msgid "Add a new inventory"
+msgstr "새 인벤토리 추가"
+
+#: ../../source/inventories.rst:243
+msgid "Adding a new inventory involves several components:"
+msgstr "새 인벤토리를 추가하려면 여러 구성 요소가 필요합니다."
+
+#: ../../source/inventories.rst:245
+msgid ":ref:`ug_inventories_add_permissions`"
+msgstr ":ref:`ug_inventories_add_permissions`"
+
+#: ../../source/inventories.rst:246
+msgid ":ref:`ug_inventories_add_groups`"
+msgstr ":ref:`ug_inventories_add_groups`"
+
+#: ../../source/inventories.rst:247
+msgid ":ref:`ug_inventories_add_host`"
+msgstr ":ref:`ug_inventories_add_host`"
+
+#: ../../source/inventories.rst:248
+msgid ":ref:`ug_inventories_add_source`"
+msgstr ":ref:`ug_inventories_add_source`"
+
+#: ../../source/inventories.rst:249
+msgid ":ref:`ug_inventories_view_completed_jobs`"
+msgstr ":ref:`ug_inventories_view_completed_jobs`"
+
+#: ../../source/inventories.rst:251
+msgid "To create a new inventory or Smart Inventory:"
+msgstr "새 인벤토리 또는 스마트 인벤토리를 생성하려면 다음을 수행합니다."
+
+#: ../../source/inventories.rst:253
+msgid "Click the **Add** button, and select the type of inventory to create."
+msgstr "**추가** 버튼을 클릭하고 생성할 인벤토리 유형을 선택합니다."
+
+#: ../../source/inventories.rst:255
+msgid "The type of inventory is identified at the top of the create form."
+msgstr "인벤토리 유형은 생성 양식 상단에서 확인할 수 있습니다."
+
+#: ../../source/inventories.rst:257
+msgid "|Inventories_create_new - create new inventory|"
+msgstr "|Inventories_create_new - create new inventory|"
+
+#: ../../source/inventories.rst:261
+msgid "Enter the appropriate details into the following fields:"
+msgstr "다음 필드에 적절한 세부 정보를 입력합니다."
+
+#: ../../source/inventories.rst:263
+msgid "**Name**: Enter a name appropriate for this inventory."
+msgstr "**이름**: 이 인벤토리에 적절한 이름을 입력합니다."
+
+#: ../../source/inventories.rst:264
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)."
+msgstr "**설명**: 임의의 설명을 적절하게 입력합니다(선택 사항)."
+
+#: ../../source/inventories.rst:265
+msgid "**Organization**: Required. Choose among the available organizations."
+msgstr "**조직**: 필수 항목입니다. 사용 가능한 조직 중에서 선택합니다."
+
+#: ../../source/inventories.rst:266
+msgid "**Smart Host Filter**: (Only applicable to Smart Inventories) Click the |search| button to open a separate window to filter hosts for this inventory. These options are based on the organization you chose."
+msgstr "**스마트 호스트 필터**(스마트 인벤토리에만 적용됨): |search| 버튼을 클릭하면 이 인벤토리에 대한 호스트를 필터링하는 별도의 동적 호스트 창이 열립니다. 해당 옵션은 선택한 조직에 따라 다릅니다."
+
+#: ../../source/inventories.rst:268
+msgid "Filters are similar to tags in that tags are used to filter certain hosts that contain those names. Therefore, to populate the **Smart Host Filter** field, you are specifying a tag that contains the hosts you want, not actually selecting the hosts themselves. Enter the tag in the **Search** field and press [Enter]. Filters are case-sensitive. Refer to the :ref:`ug_host_filters` section for more information."
+msgstr "필터는 태그가 해당 이름을 포함하는 특정 호스트를 필터링하는 데 사용된다는 점에서 태그와 유사합니다. 따라서 **스마트 호스트 필터** 필드를 채우려면 실제로 호스트 자체를 선택하는 대신 원하는 호스트가 포함된 태그를 지정합니다. **검색** 필드에 태그를 입력하고 [Enter] 키를 누릅니다. 필터는 대소문자를 구분합니다. 자세한 내용은 :ref:`ug_host_filters` 섹션을 참조하십시오."
+
+#: ../../source/inventories.rst:270
+msgid "**Instance Groups**: Click the |search| button to open a separate window. Choose the instance groups for this inventory to run on. If the list is extensive, use the search to narrow the options."
+msgstr "**인스턴스 그룹**: |search| 버튼을 클릭하면 별도의 창이 열립니다. 이 인벤토리에서 실행할 인스턴스 그룹을 선택합니다. 목록이 긴 경우 검색을 사용하여 옵션 범위를 좁힙니다."
+
+#: ../../source/inventories.rst:271
+msgid "**Variables**: Variable definitions and values to be applied to all hosts in this inventory. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**변수**: 이 인벤토리의 모든 호스트에 적용할 변수 정의 및 값입니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다."
+
+#: ../../source/inventories.rst:275
+msgid "|Inventories_create_new_saved - create new inventory|"
+msgstr "|Inventories_create_new_saved - create new inventory|"
+
+#: ../../source/inventories.rst:279
+msgid "Click **Save** when done."
+msgstr "완료되면 **저장**을 클릭합니다."
+
+#: ../../source/inventories.rst:281
+msgid "After saving the new inventory, you can proceed with configuring permissions, groups, hosts, sources, and view completed jobs, if applicable to the type of inventory. For more instructions, refer to the subsequent sections."
+msgstr "새 인벤토리를 저장하고 나면 인벤토리 유형에 해당하는 경우 권한, 그룹, 호스트, 소스 구성을 진행하고 완료된 작업을 볼 수 있습니다. 자세한 지침은 다음 섹션을 참조하십시오."
+
+#: ../../source/inventories.rst:286
+msgid "Add permissions"
+msgstr "권한 추가"
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "**액세스** 탭에서 **추가** 버튼을 클릭합니다."
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "추가할 사용자 또는 팀을 선택하고 **다음**을 클릭합니다."
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "이름 옆에 있는 체크박스를 클릭하여 목록에서 하나 이상의 사용자 또는 팀을 선택하여 멤버로 추가하고 **다음**을 클릭합니다."
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "이 예에서는 두 명의 사용자를 추가하도록 선택했습니다."
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "선택한 사용자 또는 팀에 부여할 역할을 선택합니다. 전체 역할 목록을 보려면 아래로 스크롤하십시오. 리소스에 따라 다양한 옵션을 사용할 수 있습니다."
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "**저장** 버튼을 클릭하여 선택한 사용자 또는 팀에 역할을 적용하고 멤버로 추가합니다."
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "사용자/팀 추가 창이 닫히고 각 사용자 및 팀에 할당된 역할이 업데이트되어 표시됩니다."
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "특정 사용자의 역할을 제거하려면 리소스 옆에 있는 연결 해제(x) 버튼을 클릭합니다."
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "그러면 연결을 해제할지 묻는 확인 대화 상자가 열립니다."
+
+#: ../../source/inventories.rst:294
+msgid "Add groups"
+msgstr "그룹 추가"
+
+#: ../../source/inventories.rst:300
+msgid "Inventories are divided into groups, which may contain hosts and other groups, and hosts. Groups are only applicable to standard inventories and is not a configurable directly through a Smart Inventory. You can associate an existing group through host(s) that are used with standard inventories. There are several actions available for standard inventories:"
+msgstr "인벤토리는 호스트 및 기타 그룹이 포함될 수 있는 그룹과 호스트로 나뉩니다. 그룹은 표준 인벤토리에만 적용할 수 있으며 스마트 인벤토리를 통해 직접 구성할 수 없습니다. 표준 인벤토리와 함께 사용되는 호스트를 통해 기존 그룹을 연결할 수 있습니다. 표준 인벤토리에는 다음과 같은 몇 가지 작업을 수행할 수 있습니다."
+
+#: ../../source/inventories.rst:302
+msgid "Create a new Group"
+msgstr "새 그룹 생성"
+
+#: ../../source/inventories.rst:303
+msgid "Create a new Host"
+msgstr "새 호스트 생성"
+
+#: ../../source/inventories.rst:304
+msgid "Run a command on the selected Inventory"
+msgstr "선택한 인벤토리에서 명령 실행"
+
+#: ../../source/inventories.rst:305
+msgid "Edit Inventory properties"
+msgstr "인벤토리 속성 편집"
+
+#: ../../source/inventories.rst:306
+msgid "View activity streams for Groups and Hosts"
+msgstr "그룹 및 호스트에 대한 활동 스트림 보기"
+
+#: ../../source/inventories.rst:307
+msgid "Obtain help building your Inventory"
+msgstr "인벤토리 빌드에 대한 도움 받기"
+
+#: ../../source/inventories.rst:312
+msgid "Inventory sources are not associated with groups. Spawned groups are top-level and may still have child groups, and all of these spawned groups may have hosts."
+msgstr "인벤토리 소스는 그룹과 연결되어 있지 않습니다. 생성된 그룹은 최상위 수준이고 여전히 하위 그룹이 있을 수 있으며, 생성된 이 모든 그룹에 호스트가 있을 수 있습니다."
+
+#: ../../source/inventories.rst:314
+msgid "To create a new group for an inventory:"
+msgstr "인벤토리에 대한 새 그룹을 생성하려면 다음을 수행합니다."
+
+#: ../../source/inventories.rst:316
+msgid "Click the **Add** button to open the **Create Group** window."
+msgstr "**추가** 버튼을 클릭하여 **그룹 생성** 창을 엽니다."
+
+#: ../../source/inventories.rst:318
+msgid "|Inventories_manage_group_add|"
+msgstr "|Inventories_manage_group_add|"
+
+#: ../../source/inventories.rst:322
+#: ../../source/inventories.rst:390
+#: ../../source/inventories.rst:465
+msgid "Enter the appropriate details into the required and optional fields:"
+msgstr "필수 및 선택 필드에 적절한 세부 정보를 입력합니다."
+
+#: ../../source/inventories.rst:324
+#: ../../source/inventories.rst:342
+#: ../../source/inventories.rst:467
+msgid "**Name**: Required"
+msgstr "**이름**: (필수)"
+
+#: ../../source/inventories.rst:325
+#: ../../source/inventories.rst:343
+#: ../../source/inventories.rst:393
+#: ../../source/inventories.rst:468
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)"
+msgstr "**설명**: 임의의 설명을 적절하게 입력합니다(선택 사항)."
+
+#: ../../source/inventories.rst:326
+#: ../../source/inventories.rst:344
+#: ../../source/inventories.rst:394
+msgid "**Variables**: Enter definitions and values to be applied to all hosts in this group. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**변수**: 이 그룹의 모든 호스트에 적용할 정의 및 값을 입력합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다."
+
+#: ../../source/inventories.rst:328
+#: ../../source/inventories.rst:346
+#: ../../source/inventories.rst:396
+msgid "When done, click **Save**."
+msgstr "완료되면 **저장**을 클릭합니다."
+
+#: ../../source/inventories.rst:332
+msgid "Add groups within groups"
+msgstr "그룹 내에 그룹 추가"
+
+#: ../../source/inventories.rst:334
+msgid "To add groups within groups:"
+msgstr "그룹 내에 그룹을 추가하려면 다음을 수행합니다."
+
+#: ../../source/inventories.rst:336
+msgid "Click the **Related Groups** tab."
+msgstr "**관련 그룹** 탭을 클릭합니다."
+
+#: ../../source/inventories.rst:338
+msgid "Click the **Add** button, and select whether to add a group that already exists in your configuration or create a new group."
+msgstr "**추가** 버튼을 클릭하고 구성에 이미 존재하는 그룹을 추가할지 아니면 새 그룹을 생성할지 선택합니다."
+
+#: ../../source/inventories.rst:340
+msgid "If creating a new group, enter the appropriate details into the required and optional fields:"
+msgstr "새 그룹을 생성하는 경우 필수 및 선택 필드에 적절한 세부 정보를 입력합니다."
+
+#: ../../source/inventories.rst:348
+msgid "The **Create Group** window closes and the newly created group displays as an entry in the list of groups associated with the group that it was created for."
+msgstr "**그룹 생성** 창이 닫히고 새로 생성된 그룹이 생성된 해당 그룹과 연결된 그룹 목록에 항목으로 표시됩니다."
+
+#: ../../source/inventories.rst:350
+msgid "|Inventories add group subgroup|"
+msgstr "|Inventories add group subgroup|"
+
+#: ../../source/inventories.rst:354
+msgid "If you chose to add an existing group, available groups will appear in a separate selection window."
+msgstr "기존 그룹을 추가하도록 선택하면 사용 가능한 그룹이 별도의 선택 창에 표시됩니다."
+
+#: ../../source/inventories.rst:356
+msgid "|Inventories add group existing subgroup|"
+msgstr "|Inventories add group existing subgroup|"
+
+#: ../../source/inventories.rst:360
+msgid "Once a group is selected, it displays as an entry in the list of groups associated with the group."
+msgstr "그룹을 선택하면 해당 그룹과 연결된 그룹 목록에 항목으로 표시됩니다."
+
+#: ../../source/inventories.rst:362
+msgid "5. To configure additional groups and hosts under the subgroup, click on the name of the subgroup from the list of groups and repeat the same steps described in this section."
+msgstr "5. 하위 그룹 아래에 추가 그룹 및 호스트를 구성하려면 그룹 목록에서 하위 그룹의 이름을 클릭하고 이 섹션에 설명된 것과 동일한 단계를 반복합니다."
+
+#: ../../source/inventories.rst:367
+msgid "View or edit inventory groups"
+msgstr "인벤토리 그룹 보기 또는 편집"
+
+#: ../../source/inventories.rst:369
+msgid "The list view displays all your inventory groups at once, or you can filter it to only display the root group(s). An inventory group is considered a root group if it is not a subset of another group."
+msgstr "목록 보기는 모든 인벤토리 그룹을 한 번에 표시하거나 루트 그룹만 표시하도록 필터링할 수 있습니다. 다른 그룹의 하위 집합이 아닌 인벤토리 그룹은 루트 그룹으로 간주됩니다."
+
+#: ../../source/inventories.rst:371
+msgid "You may be able to delete a subgroup without concern for dependencies, since the controller will look for dependencies such as any child groups or hosts. If any exists, a confirmation dialog displays for you to choose whether to delete the root group and all of its subgroups and hosts; or promote the subgroup(s) so they become the top-level inventory group(s), along with their host(s)."
+msgstr "컨트롤러에서 하위 그룹 또는 호스트와 같은 종속 항목을 찾기 때문에 종속 항목에 대한 걱정 없이 하위 그룹을 삭제할 수도 있습니다. 이러한 항목이 존재하는 경우 루트 그룹과 해당 하위 그룹 그리고 호스트를 모두 삭제할지 또는 하위 그룹이 해당 호스트와 함께 최상위 인벤토리 그룹이 되도록 하위 그룹을 승격할지 선택할 수 있는 확인 대화 상자가 표시됩니다."
+
+#: ../../source/inventories.rst:378
+msgid "Add hosts"
+msgstr "호스트 추가"
+
+#: ../../source/inventories.rst:380
+msgid "You can configure hosts for the inventory as well as for groups and groups within groups. To configure hosts:"
+msgstr "인벤토리뿐만 아니라 그룹 및 그룹 내의 그룹에 대한 호스트를 구성할 수 있습니다. 호스트를 구성하려면 다음을 수행합니다."
+
+#: ../../source/inventories.rst:382
+msgid "Click the **Hosts** tab."
+msgstr "**호스트** 탭을 클릭합니다."
+
+#: ../../source/inventories.rst:384
+msgid "Click the **Add** button, and select whether to add a host that already exists in your configuration or create a new host."
+msgstr "**추가** 버튼을 클릭하고 구성에 이미 존재하는 호스트를 추가할지 아니면 새 호스트를 생성할지 선택합니다."
+
+#: ../../source/inventories.rst:386
+msgid "If creating a new host, select the |toggle button| button to specify whether or not to include this host while running jobs."
+msgstr "새 호스트를 생성하는 경우 |toggle button| 버튼을 선택하여 작업을 실행하는 동안 이 호스트를 포함할지의 여부를 지정합니다."
+
+#: ../../source/inventories.rst:392
+msgid "**Host Name**: Required"
+msgstr "**호스트 이름**: 필수"
+
+#: ../../source/inventories.rst:398
+msgid "The **Create Host** window closes and the newly created host displays as an entry in the list of hosts associated with the group that it was created for."
+msgstr "**호스트 생성** 창이 닫히고 새로 생성된 호스트가 생성된 해당 그룹과 연결된 호스트 목록에 항목으로 표시됩니다."
+
+#: ../../source/inventories.rst:400
+msgid "|Inventories add group host|"
+msgstr "|Inventories add group host|"
+
+#: ../../source/inventories.rst:404
+msgid "If you chose to add an existing host, available hosts will appear in a separate selection window."
+msgstr "기존 호스트를 추가하도록 선택하면 사용 가능한 호스트가 별도의 선택 창에 표시됩니다."
+
+#: ../../source/inventories.rst:406
+msgid "|Inventories add existing host|"
+msgstr "|Inventories add existing host|"
+
+#: ../../source/inventories.rst:410
+msgid "Once a host is selected, it displays as an entry in the list of hosts associated with the group. You can disassociate a host from this screen by selecting the host and click the **Disassociate** button."
+msgstr "호스트를 선택하면 해당 그룹과 연결된 호스트 목록에 항목으로 표시됩니다. 호스트를 선택하고 **연결 해제** 버튼을 클릭하여 이 화면에서 호스트를 연결 해제할 수 있습니다."
+
+#: ../../source/inventories.rst:414
+msgid "You may also run ad hoc commands from this screen. Refer to :ref:`ug_inventories_run_ad_hoc` for more detail."
+msgstr "이 화면에서 임시 명령을 실행할 수도 있습니다. 자세한 내용은 :ref:`ug_inventories_run_ad_hoc`을 참조하십시오."
+
+#: ../../source/inventories.rst:417
+msgid "6. To configure additional groups for the host, click on the name of the host from the list of hosts."
+msgstr "6. 호스트에 추가 그룹을 구성하려면 호스트 목록에서 호스트 이름을 클릭합니다."
+
+#: ../../source/inventories.rst:420
+msgid "|Inventories add group host emphasized|"
+msgstr "|Inventories add group host emphasized|"
+
+#: ../../source/inventories.rst:424
+msgid "This opens the Details tab of the selected host."
+msgstr "그러면 선택한 호스트의 세부 정보 탭이 열립니다."
+
+#: ../../source/inventories.rst:426
+msgid "|Inventories add group host details|"
+msgstr "|Inventories add group host details|"
+
+#: ../../source/inventories.rst:430
+msgid "Click the **Groups** tab to configure groups for the host."
+msgstr "**그룹** 탭을 클릭하여 호스트에 대한 그룹을 구성합니다."
+
+#: ../../source/inventories.rst:432
+msgid "Click the **Add** button to associate the host with an existing group."
+msgstr "**추가** 버튼을 클릭하여 호스트를 기존 그룹과 연결합니다."
+
+#: ../../source/inventories.rst:434
+msgid "Available groups appear in a separate selection window."
+msgstr "사용 가능한 그룹이 별도의 선택 창에 나타납니다."
+
+#: ../../source/inventories.rst:438
+msgid "Click to select the group(s) to associate with the host and click **Save**."
+msgstr "호스트와 연결할 그룹을 선택하려면 클릭하고 **저장**을 클릭합니다."
+
+#: ../../source/inventories.rst:440
+msgid "Once a group is associated, it displays as an entry in the list of groups associated with the host."
+msgstr "그룹을 연결하면 해당 호스트와 연결된 그룹 목록에 항목으로 표시됩니다."
+
+#: ../../source/inventories.rst:442
+msgid "If a host was used to run a job, you can view details about those jobs in the **Completed Jobs** tab of the host and click **Expanded** to view details about each job."
+msgstr "호스트가 작업을 실행하는 데 사용된 경우 호스트의 **완료된 작업** 탭에서 해당 작업에 대한 세부 정보를 보고 **펼치기**를 클릭하여 각 작업에 대한 세부 정보를 볼 수 있습니다."
+
+#: ../../source/inventories.rst:450
+msgid "Add source"
+msgstr "소스 추가"
+
+#: ../../source/inventories.rst:452
+msgid "Inventory sources are not associated with groups. Spawned groups are top-level and may still have child groups, and all of these spawned groups may have hosts. Adding a source to an inventory only applies to standard inventories. Smart inventories inherit their source from the standard inventories they are associated with. To configure the source for the inventory:"
+msgstr "인벤토리 소스는 그룹과 연결되어 있지 않습니다. 생성된 그룹은 최상위 수준이고 여전히 하위 그룹이 있을 수 있으며, 생성된 이 모든 그룹에 호스트가 있을 수 있습니다. 인벤토리에 소스를 추가하는 작업은 표준 인벤토리에만 적용됩니다. 스마트 인벤토리는 연결된 표준 인벤토리에서 소스를 상속합니다. 인벤토리 소스를 구성하려면 다음을 수행합니다."
+
+#: ../../source/inventories.rst:454
+msgid "In the inventory you want to add a source, click the **Sources** tab."
+msgstr "소스를 추가하려는 인벤토리에서 **소스** 탭을 클릭합니다."
+
+#: ../../source/inventories.rst:456
+msgid "Click the **Add** button."
+msgstr "**추가** 버튼을 클릭합니다."
+
+#: ../../source/inventories.rst:458
+msgid "This opens the Create Source window."
+msgstr "그러면 소스 생성 창이 열립니다."
+
+#: ../../source/inventories.rst:460
+msgid "|Inventories create source|"
+msgstr "|Inventories create source|"
+
+#: ../../source/inventories.rst:469
+msgid "**Execution Environment**: Optionally search (|search|) or enter the name of the execution environment with which you want to run your inventory imports. Refer to the :ref:`ug_execution_environments` section for details on building an execution environment."
+msgstr "**실행 환경**: 필요한 경우 인벤토리 가져오기를 실행할 실행 환경의 이름을 검색(|search|)하거나 입력합니다. 실행 환경 빌드에 대한 자세한 내용은 :ref:`ug_execution_environments` 섹션을 참조하십시오."
+
+#: ../../source/inventories.rst:470
+msgid "**Source**: Choose a source for your inventory. Refer to the :ref:`ug_inventory_sources` section for more information about each source and details for entering the appropriate information."
+msgstr "**소스**: 인벤토리의 소스를 선택합니다. 각 소스에 대한 자세한 내용과 적절한 정보를 입력하는 방법에 대한 세부 사항은 :ref:`ug_inventory_sources` 섹션을 참조하십시오."
+
+#: ../../source/inventories.rst:474
+msgid "After completing the required information for your chosen :ref:`inventory source <ug_inventory_sources>`, you can continue to optionally specify other common parameters, such as verbosity, host filters, and variables."
+msgstr "선택한 :ref:`inventory source <ug_inventory_sources>`에 대한 필수 정보를 작성한 후에는 필요에 따라 상세 정보 표시, 호스트 필터, 변수와 같은 기타 일반 매개변수를 지정할 수 있습니다."
+
+#: ../../source/inventories.rst:478
+msgid "The **Regions**, **Instance Filters**, and **Only Group By** fields have been removed in |at| 3.8."
+msgstr "**지역**, **인스턴스 필터**, **그룹별로만** 필드는 |at| 3.8에서 제거되었습니다."
+
+#: ../../source/inventories.rst:480
+msgid "Select the appropriate level of output on any inventory source's update jobs from the **Verbosity** drop-down menu."
+msgstr "**상세 정보 표시** 드롭다운 메뉴에서 모든 인벤토리 소스 업데이트 작업에 대한 적절한 출력 수준을 선택합니다."
+
+#: ../../source/inventories.rst:482
+msgid "Use the **Host Filter** field to specify only matching host names to be imported into the controller."
+msgstr "**호스트 필터** 필드를 사용하여 컨트롤러로 가져올 일치하는 호스트 이름만 지정합니다."
+
+#: ../../source/inventories.rst:484
+msgid "In the **Enabled Variable**, specify the controller to retrieve the enabled state from the given dictionary of host variables. The enabled variable may be specified using dot notation as 'foo.bar', in which case the lookup will traverse into nested dicts, equivalent to: ``from_dict.get('foo', {}).get('bar', default)``."
+msgstr "**활성화된 변수**에서 컨트롤러가 지정된 호스트 변수 사전에서 활성화됨 상태를 검색하도록 지정합니다. 활성화된 변수는 'foo.bar'처럼 점 표기법을 사용하여 지정할 수 있습니다. 이 경우 조회는 ``from_dict.get('foo', {}).get('bar', default)``와 같이 중첩된 dict로 이동합니다."
+
+#: ../../source/inventories.rst:486
+msgid "If you specified a dictionary of host variables in the **Enabled Variable** field, you can provide a value to enable on import. For example, if ``enabled_var='status.power_state'`` and ``enabled_value='powered_on'`` with the following host variables, the host would be marked enabled:"
+msgstr "**활성화된 변수** 필드에서 호스트 변수 사전을 지정한 경우 가져오기에 사용할 값을 제공할 수 있습니다. 예를 들어 ``enabled_var='status.power_state'`` 및 ``enabled_value='powered_on'``의 호스트 변수가 다음과 같은 경우 호스트가 활성화됨으로 표시됩니다."
+
+#: ../../source/inventories.rst:502
+msgid "If ``power_state`` were any value other than ``powered_on``, then the host would be disabled when imported into the controller. If the key is not found, then the host will be enabled."
+msgstr "``power_state``의 값이 ``powered_on``이 아니면 컨트롤러로 가져올 때 호스트가 비활성화됩니다. 키가 없으면 호스트가 활성화됩니다."
+
+#: ../../source/inventories.rst:504
+msgid "All cloud inventory sources have the following update options:"
+msgstr "모든 클라우드 인벤토리 소스에는 다음과 같은 업데이트 옵션이 있습니다."
+
+#: ../../source/inventories.rst:506
+msgid "**Overwrite**: If checked, any hosts and groups that were previously present on the external source but are now removed, will be removed from the controller inventory. Hosts and groups that were not managed by the inventory source will be promoted to the next manually created group, or if there is no manually created group to promote them into, they will be left in the \"all\" default group for the inventory."
+msgstr "**덮어쓰기**: 선택 시 외부 소스에 이전에 존재했지만 현재는 제거된 모든 호스트와 그룹이 컨트롤러 인벤토리에서 제거됩니다. 인벤토리 소스에서 관리하지 않은 호스트 및 그룹은 수동으로 생성한 다음 그룹으로 승격되거나 승격할 수동으로 생성한 그룹이 없는 경우 인벤토리의 \"전체\" 기본 그룹에 남게 됩니다."
+
+#: ../../source/inventories.rst:508
+msgid "When not checked, local child hosts and groups not found on the external source will remain untouched by the inventory update process."
+msgstr "선택 해제하면 외부 소스에서 찾을 수 없는 로컬 하위 호스트 및 그룹은 인벤토리 업데이트 프로세스에 의해 변경되지 않은 상태로 유지됩니다."
+
+#: ../../source/inventories.rst:510
+msgid "**Overwrite Variables**: If checked, all variables for child groups and hosts will be removed and replaced by those found on the external source. When not checked, a merge will be performed, combining local variables with those found on the external source."
+msgstr "**변수 덮어쓰기**: 이 옵션을 선택하면 하위 그룹 및 호스트의 모든 변수가 제거되고 외부 소스에 있는 변수로 교체됩니다. 선택하지 않으면 병합이 수행되어 로컬 변수와 외부 소스에 있는 변수를 병합합니다."
+
+#: ../../source/inventories.rst:512
+msgid "**Update on Launch**: Each time a job runs using this inventory, refresh the inventory from the selected source before executing job tasks. To avoid job overflows if jobs are spawned faster than the inventory can sync, selecting this allows you to configure a **Cache Timeout** to cache prior inventory syncs for a certain number of seconds."
+msgstr "**시작 시 업데이트**: 이 인벤토리를 사용하여 작업을 실행할 때마다 작업을 실행하기 전에 선택한 소스에서 인벤토리를 새로 고칩니다. 인벤토리에서 동기화할 수 있는 것보다 작업이 더 빨리 생성되는 경우 작업 오버플로를 방지하기 위해 이 옵션을 선택하면 **캐시 제한 시간**을 구성하여 특정 시간 동안 이전 인벤토리 동기화를 캐시할 수 있습니다."
+
+#: ../../source/inventories.rst:514
+msgid "The \"Update on Launch\" setting refers to a dependency system for projects and inventory, and it will not specifically exclude two jobs from running at the same time. If a cache timeout is specified, then the dependencies for the second job is created and it uses the project and inventory update that the first job spawned. Both jobs then wait for that project and/or inventory update to finish before proceeding. If they are different job templates, they can then both start and run at the same time, if the system has the capacity to do so. If you intend to use the controller's provisioning callback feature with a dynamic inventory source, **Update on Launch** should be set for the inventory group."
+msgstr "\"시작 시 업데이트\" 설정은 프로젝트와 인벤토리의 종속 시스템을 나타내며, 두 작업이 동시에 실행되는 것을 특별히 차단하지는 않습니다. 캐시 제한 시간을 지정하면 두 번째 작업의 종속 항목이 생성되고 첫 번째 작업에서 생성한 프로젝트와 인벤토리 업데이트를 사용합니다. 그런 다음 두 작업 모두 해당 프로젝트 및/또는 인벤토리 업데이트가 완료될 때까지 기다린 후 계속합니다. 서로 다른 작업 템플릿의 경우 시스템에 수행할 용량이 있으면 동시에 시작하여 실행할 수 있습니다. 동적 인벤토리 소스에 컨트롤러의 프로비저닝 콜백 기능을 사용하려면 인벤토리 그룹에 대해 **시작 시 업데이트**를 설정해야 합니다."
+
+#: ../../source/inventories.rst:516
+msgid "If you sync an inventory source that uses a project that has **Update On Launch** set, then the project may automatically update (according to cache timeout rules) before the inventory update starts."
+msgstr "**시작 시 업데이트**가 설정된 프로젝트를 사용하는 인벤토리 소스를 동기화하면 인벤토리 업데이트가 시작되기 전에 프로젝트가 (캐시 제한 시간 규칙에 따라) 자동으로 업데이트될 수 있습니다."
+
+#: ../../source/inventories.rst:518
+msgid "You can create a job template that uses an inventory that sources from the same project that the template uses. In this case, the project will update and then the inventory will update (if updates are not already in-progress, or if the cache timeout has not already expired)."
+msgstr "템플릿에서 사용하는 동일한 프로젝트의 소스를 사용하는 인벤토리를 사용하는 작업 템플릿을 생성할 수 있습니다. 이 경우 프로젝트가 업데이트되고 인벤토리가 업데이트됩니다(업데이트가 아직 진행되지 않은 경우 또는 캐시 시간 초과가 아직 만료되지 않은 경우)."
+
+#: ../../source/inventories.rst:521
+msgid "Review your entries and selections and click **Save** when done. This allows you to configure additional details, such as schedules and notifications."
+msgstr "항목 및 선택을 검토하고 완료되면 **저장**을 클릭합니다. 그러면 스케줄 및 알림과 같은 추가 세부 정보를 구성할 수 있습니다."
+
+#: ../../source/inventories.rst:523
+msgid "To configure schedules associated with this inventory source, click the **Schedules** tab."
+msgstr "이 인벤토리 소스와 관련된 스케줄을 구성하려면 **스케줄** 탭을 클릭합니다."
+
+#: ../../source/inventories.rst:525
+msgid "If schedules are already set up; review, edit, or enable/disable your schedule preferences."
+msgstr "스케줄이 이미 설정되어 있는 경우 스케줄 기본 설정을 검토, 편집 또는 활성화/비활성화합니다."
+
+#: ../../source/inventories.rst:526
+msgid "if schedules have not been set up, refer to :ref:`ug_scheduling` for more information."
+msgstr "스케줄이 설정되지 않은 경우 :ref:`ug_scheduling`에서 자세한 내용을 참조하십시오."
+
+#: ../../source/inventories.rst:530
+msgid "The **Notifications** tab is only present after you save the newly-created source."
+msgstr "**알림** 탭은 새로 생성된 소스를 저장한 후에만 표시됩니다."
+
+#: ../../source/inventories.rst:534
+msgid "To configure notifications for the source, click the **Notifications** tab."
+msgstr "소스에 대한 알림을 구성하려면 **알림** 탭을 클릭합니다."
+
+#: ../../source/inventories.rst:536
+msgid "If notifications are already set up, use the toggles to enable or disable the notifications to use with your particular source. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "알림이 이미 설정된 경우 토글을 사용하여 특정 소스에 사용할 알림을 활성화하거나 비활성화합니다. 자세한 내용은 :ref:`ug_notifications_on_off`를 참조하십시오."
+
+#: ../../source/inventories.rst:538
+msgid "if notifications have not been set up, refer to :ref:`ug_notifications` for more information."
+msgstr "알림이 설정되지 않은 경우 자세한 내용은 :ref:`ug_notifications`을 참조하십시오."
+
+#: ../../source/inventories.rst:541
+msgid "Review your entries and selections and click **Save** when done."
+msgstr "항목 및 선택을 검토하고 완료되면 **저장**을 클릭합니다."
+
+#: ../../source/inventories.rst:543
+msgid "Once a source is defined, it displays as an entry in the list of sources associated with the inventory. From the **Sources** tab you can perform a sync on a single source, or sync all of them at once. You can also perform additional actions such as scheduling a sync process, and edit or delete the source."
+msgstr "소스를 정의하면 해당 인벤토리와 연결된 소스 목록에 항목으로 표시됩니다. **소스** 탭에서는 단일 소스에서 동기화를 수행하거나 한 번에 모두 동기화할 수 있습니다. 동기화 프로세스 스케줄링이나 소스를 편집하고 삭제하는 등 추가 작업을 수행할 수 있습니다."
+
+#: ../../source/inventories.rst:545
+msgid "|Inventories view sources|"
+msgstr "|Inventories view sources|"
+
+#: ../../source/inventories.rst:553
+msgid "Inventory Sources"
+msgstr "인벤토리 소스"
+
+#: ../../source/inventories.rst:555
+msgid "Choose a source which matches the inventory type against which a host can be entered:"
+msgstr "호스트를 입력할 수 있는 인벤토리 유형과 일치하는 소스를 선택합니다."
+
+#: ../../source/inventories.rst:561
+msgid "Sourced from a Project"
+msgstr "프로젝트에서 소싱"
+
+#: ../../source/inventories.rst:566
+msgid "An inventory that is sourced from a project means that is uses the SCM type from the project it is tied to. For example, if the project's source is from GitHub, then the inventory will use the same source."
+msgstr "프로젝트에서 소싱된 인벤토리는 연결된 프로젝트의 SCM 유형을 사용한다는 것을 의미합니다. 예를 들어, 프로젝트의 소스가 GitHub에 있는 경우 인벤토리에서 동일한 소스를 사용합니다."
+
+#: ../../source/inventories.rst:568
+msgid "To configure a project-sourced inventory, select **Sourced from a Project** from the Source field."
+msgstr "프로젝트 소싱 인벤토리를 구성하려면 소스 필드에서 **프로젝트에서 소싱**을 선택합니다."
+
+#: ../../source/inventories.rst:570
+#: ../../source/inventories.rst:599
+msgid "The Create Source window expands with additional fields. Enter the following details:"
+msgstr "소스 생성 창이 확장되어 추가 필드가 표시됩니다. 다음 세부 정보를 입력합니다."
+
+#: ../../source/inventories.rst:572
+msgid "**Credential**: Optionally specify the credential to use for this source."
+msgstr "**인증 정보**: 필요한 경우 이 소스에 사용할 인증 정보를 지정합니다."
+
+#: ../../source/inventories.rst:573
+msgid "**Project**: Required. Specify the project this inventory is using as its source. Click the |search| button to choose from a list of projects. If the list is extensive, use the search to narrow the options."
+msgstr "**프로젝트**: 필수 항목입니다. 이 인벤토리에서 소스로 사용 중인 프로젝트를 지정합니다. |search| 버튼을 클릭하여 프로젝트 목록에서 선택합니다. 목록이 긴 경우 검색을 사용하여 옵션 범위를 좁힙니다."
+
+#: ../../source/inventories.rst:574
+msgid "**Inventory File**: Required. Select an inventory file associated with the sourced project. If not already populated, you can type it into the text field within the drop down menu to filter the extraneous file types. In addition to a flat file inventory, you can point to a directory or an inventory script."
+msgstr "**인벤토리 파일**: 필수 항목입니다. 소싱된 프로젝트와 관련된 인벤토리 파일을 선택합니다. 아직 채워지지 않은 경우 드롭다운 메뉴 내의 입력란에 입력하여 관련 없는 파일 유형을 필터링할 수 있습니다. 플랫 파일 인벤토리 외에도 디렉터리 또는 인벤토리 스크립트를 가리킬 수 있습니다."
+
+#: ../../source/inventories.rst:578
+#: ../../source/inventories.rst:605
+#: ../../source/inventories.rst:633
+#: ../../source/inventories.rst:650
+#: ../../source/inventories.rst:672
+#: ../../source/inventories.rst:696
+#: ../../source/inventories.rst:722
+#: ../../source/inventories.rst:745
+#: ../../source/inventories.rst:766
+#: ../../source/inventories.rst:791
+msgid "You can optionally specify the verbosity, host filter, enabled variable/value, and update options as described in the main procedure for :ref:`adding a source <ug_add_inv_common_fields>`."
+msgstr "필요한 경우 :ref:`adding a source <ug_add_inv_common_fields>` 기본 절차에 설명된 대로 상세 정보 표시, 호스트 필터, 활성화된 변수/값, 업데이트 옵션을 지정할 수 있습니다."
+
+#: ../../source/inventories.rst:580
+msgid "In order to pass to the custom inventory script, you can optionally set environment variables in the **Environment Variables** field. You may also place inventory scripts in source control and then run it from a project. See :ref:`ag_inv_import` in the |ata| for detail."
+msgstr "사용자 정의 인벤토리 스크립트에 전달하기 위해 필요한 경우 **환경 변수** 필드에서 환경 변수를 설정할 수 있습니다. 인벤토리 스크립트를 소스 제어에 배치한 다음 프로젝트에서 실행할 수도 있습니다. 자세한 내용은 |ata|의 :ref:`ag_inv_import`를 참조하십시오."
+
+#: ../../source/inventories.rst:582
+msgid "|Inventories - create source - sourced from project example|"
+msgstr "|Inventories - create source - sourced from project example|"
+
+#: ../../source/inventories.rst:586
+msgid "If you are executing a custom inventory script from SCM, please make sure you set the execution bit (i.e. ``chmod +x``) on the script in your upstream source control. If you do not, the controller will throw a ``[Errno 13] Permission denied`` error upon execution."
+msgstr "SCM에서 사용자 정의 인벤토리 스크립트를 실행하는 경우 업스트림 소스 제어의 스크립트에 실행 비트(즉, ``chmod +x``)를 설정해야 합니다. 그러지 않으면 실행 시 컨트롤러에서 ``[Errno 13] Permission denied`` 오류가 발생합니다."
+
+#: ../../source/inventories.rst:592
+msgid "Amazon Web Services EC2"
+msgstr "Amazon Web Services EC2"
+
+#: ../../source/inventories.rst:597
+msgid "To configure an AWS EC2-sourced inventory, select **Amazon EC2** from the Source field."
+msgstr "AWS EC2 소싱 인벤토리를 구성하려면 소스 필드에서 **Amazon EC2**를 선택합니다."
+
+#: ../../source/inventories.rst:601
+msgid "**Credential**: Optionally choose from an existing AWS credential (for more information, refer to :ref:`ug_credentials`)."
+msgstr "**인증 정보**: 필요한 경우 기존 AWS 인증 정보에서 선택합니다(자세한 내용은 :ref:`ug_credentials` 참조)."
+
+#: ../../source/inventories.rst:603
+msgid "If the controller is running on an EC2 instance with an assigned IAM Role, the credential may be omitted, and the security credentials from the instance metadata will be used instead. For more information on using IAM Roles, refer to the `IAM_Roles_for_Amazon_EC2_documentation_at_Amazon <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam- roles-for-amazon-ec2.html>`_."
+msgstr "컨트롤러가 IAM 역할이 할당된 EC2 인스턴스에서 실행 중인 경우 인증 정보가 생략될 수 있으며 인스턴스 메타데이터의 보안 인증 정보가 대신 사용됩니다. IAM 역할을 사용하는 방법에 대한 자세한 내용은 `IAM_Roles_for_Amazon_EC2_documentation_at_Amazon <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam- roles-for-amazon-ec2.html>`_을 참조하십시오."
+
+#: ../../source/inventories.rst:607
+msgid "Use the **Source Variables** field to override variables used by the ``aws_ec2`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `aws_ec2 inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/amazon/aws/content/inventory/aws_ec2>`__."
+msgstr "``aws_ec2`` 인벤토리 플러그인에서 사용하는 변수를 덮어쓰려면 **소스 변수** 필드를 사용합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 `aws_ec2 inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/amazon/aws/content/inventory/aws_ec2>`__를 참조하십시오."
+
+#: ../../source/inventories.rst:609
+msgid "|Inventories - create source - AWS EC2 example|"
+msgstr "|Inventories - create source - AWS EC2 example|"
+
+#: ../../source/inventories.rst:615
+msgid "If you only use ``include_filters``, the AWS plugin always returns all the hosts. To use this properly, the first condition on the ``or`` must be on ``filters`` and then build the rest of the ``OR`` conditions on a list of ``include_filters``."
+msgstr "``include_filters``만 사용하는 경우 AWS 플러그인은 항상 모든 호스트를 반환합니다. 이를 적절하게 사용하려면 ``or``의 첫 번째 조건이 ``filters``에 있고 나머지 ``OR`` 조건을 ``include_filters`` 목록에 빌드해야 합니다."
+
+#: ../../source/inventories.rst:620
+msgid "Google Compute Engine"
+msgstr "Google Compute Engine"
+
+#: ../../source/inventories.rst:625
+msgid "To configure a Google-sourced inventory, select **Google Compute Engine** from the Source field."
+msgstr "Google 소싱 인벤토리를 구성하려면 소스 필드에서 **Google Compute Engine**을 선택합니다."
+
+#: ../../source/inventories.rst:627
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing GCE Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "소스 생성 창이 확장되어 필수 **인증 정보** 필드가 표시됩니다. 기존 GCE 인증 정보에서 선택합니다. 자세한 내용은 :ref:`ug_credentials`를 참조하십시오."
+
+#: ../../source/inventories.rst:629
+msgid "|Inventories - create source - GCE example|"
+msgstr "|Inventories - create source - GCE example|"
+
+#: ../../source/inventories.rst:635
+msgid "Use the **Source Variables** field to override variables used by the ``gcp_compute`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `gcp_compute inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/google/cloud/content/inventory/gcp_compute>`__."
+msgstr "``gcp_compute`` 인벤토리 플러그인에서 사용하는 변수를 덮어쓰려면 ** 소스 변수** 필드를 사용합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 `gcp_compute inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/google/cloud/content/inventory/gcp_compute>`__를 참조하십시오."
+
+#: ../../source/inventories.rst:641
+msgid "Microsoft Azure Resource Manager"
+msgstr "Microsoft Azure Resource Manager"
+
+#: ../../source/inventories.rst:646
+msgid "To configure a Azure Resource Manager-sourced inventory, select **Microsoft Azure Resource Manager** from the Source field."
+msgstr "Azure Resource Manager 소싱 인벤토리를 구성하려면 소스 필드에서 **Microsoft Azure Resource Manager**를 선택합니다."
+
+#: ../../source/inventories.rst:648
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Azure Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "소스 생성 창이 확장되어 필수 **인증 정보** 필드가 표시됩니다. 기존 Azure 인증 정보에서 선택합니다. 자세한 내용은 :ref:`ug_credentials`를 참조하십시오."
+
+#: ../../source/inventories.rst:652
+msgid "Use the **Source Variables** field to override variables used by the  ``azure_rm`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `azure_rm inventory plugin documentation <https://cloud.redhat.com/ansible/automation-hub/repo/published/azure/azcollection/content/inventory/azure_rm>`__."
+msgstr "``azure_rm`` 인벤토리 플러그인에서 사용하는 변수를 덮어쓰려면 **소스 변수** 필드를 사용합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 `azure_rm inventory plugin documentation <https://cloud.redhat.com/ansible/automation-hub/repo/published/azure/azcollection/content/inventory/azure_rm>`__을 참조하십시오."
+
+#: ../../source/inventories.rst:654
+msgid "|Inventories - create source - Azure RM example|"
+msgstr "|Inventories - create source - Azure RM example|"
+
+#: ../../source/inventories.rst:662
+msgid "VMware vCenter"
+msgstr "VMware vCenter"
+
+#: ../../source/inventories.rst:668
+msgid "To configure a VMWare-sourced inventory, select **VMware vCenter** from the Source field."
+msgstr "VMWare 소싱 인벤토리를 구성하려면 소스 필드에서 **VMware vCenter**를 선택합니다."
+
+#: ../../source/inventories.rst:670
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing VMware Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "소스 생성 창이 확장되어 필수 **인증 정보** 필드가 표시됩니다. 기존 VMware 인증 정보에서 선택합니다. 자세한 내용은 :ref:`ug_credentials`를 참조하십시오."
+
+#: ../../source/inventories.rst:674
+msgid "Use the **Source Variables** field to override variables used by the ``vmware_inventory`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `vmware_inventory inventory plugin <https://github.com/ansible-collections/community.vmware/blob/main/plugins/inventory/vmware_vm_inventory.py>`__."
+msgstr "``vmware_inventory`` 인벤토리 플러그인에서 사용하는 변수를 덮어쓰려면 **소스 변수** 필드를 사용합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 `vmware_inventory inventory plugin <https://github.com/ansible-collections/community.vmware/blob/main/plugins/inventory/vmware_vm_inventory.py>`__을 참조하십시오."
+
+#: ../../source/inventories.rst:676
+msgid "Starting with Ansible 2.9, VMWare properties have changed from lower case to camelCase. The controller provides aliases for the top-level keys, but lower case keys in nested properties have been discontinued. For a list of valid and supported properties starting with Ansible 2.9, refer to `virtual machine attributes in the VMware dynamic inventory plugin <https://docs.ansible.com/ansible/latest/collections/community/vmware/docsite/vmware_scenarios/vmware_inventory_vm_attributes.html>`_."
+msgstr "Ansible 2.9부터는 VMWare 속성이 소문자에서 낙타 대문자로 변경되었습니다. 컨트롤러에서는 최상위 키에 대한 별칭을 제공하지만 중첩 속성의 소문자 키는 중단되었습니다. Ansible 2.9부터 지원되는 유효한 속성 목록은 `virtual machine attributes in the VMware dynamic inventory plugin <https://docs.ansible.com/ansible/latest/collections/community/vmware/docsite/vmware_scenarios/vmware_inventory_vm_attributes.html>`_를 참조하십시오."
+
+#: ../../source/inventories.rst:679
+msgid "|Inventories - create source - VMware example|"
+msgstr "|Inventories - create source - VMware example|"
+
+#: ../../source/inventories.rst:687
+msgid "Red Hat Satellite 6"
+msgstr "Red Hat Satellite 6"
+
+#: ../../source/inventories.rst:692
+msgid "To configure a Red Hat Satellite-sourced inventory, select **Red Hat Satellite** from the Source field."
+msgstr "Red Hat Satellite 소싱 인벤토리를 구성하려면 소스 필드에서 **Red Hat Satellite**를 선택합니다."
+
+#: ../../source/inventories.rst:694
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Satellite Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "소스 생성 창이 확장되어 필수 **인증 정보** 필드가 표시됩니다. 기존 Satellite 인증 정보에서 선택합니다. 자세한 내용은 :ref:`ug_credentials`를 참조하십시오."
+
+#: ../../source/inventories.rst:698
+msgid "Use the **Source Variables** field to specify parameters used by the foreman inventory source. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, refer to the `theforeman.foreman.foreman – Foreman inventory source <https://docs.ansible.com/ansible/latest/collections/theforeman/foreman/foreman_inventory.html>`_ in the Ansible documentation."
+msgstr "**소스 변수** 필드를 사용하여 Foreman 인벤토리 소스에서 사용하는 매개변수를 지정합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 Ansible 설명서의 `theforeman.foreman.foreman – Foreman inventory source <https://docs.ansible.com/ansible/latest/collections/theforeman/foreman/foreman_inventory.html>`_를 참조하십시오."
+
+#: ../../source/inventories.rst:701
+msgid "|Inventories - create source - RH Satellite example|"
+msgstr "|Inventories - create source - RH Satellite example|"
+
+#: ../../source/inventories.rst:705
+msgid "If you encounter an issue with the controller inventory not having the \"related groups\" from Satellite, you might need to define these variables in the inventory source. See the inventory plugins template example for :ref:`ir_plugin_satellite` in the |atir| for detail."
+msgstr "컨트롤러 인벤토리에 Satellite의 \"관련 그룹\"이 없는 문제가 발생하면 인벤토리 소스에 이러한 변수를 정의해야 할 수 있습니다. 자세한 내용은 |atir|에 있는 :ref:`ir_plugin_satellite`용 인벤토리 플러그인 템플릿 예제를 참조하십시오."
+
+#: ../../source/inventories.rst:707
+msgid "If you see the message, ``\"no foreman.id\" variable(s) when syncing the inventory``, refer to the solution on the Red Hat Customer Portal at: https://access.redhat.com/solutions/5826451. Be sure to login with your customer credentials to access the full article."
+msgstr "``\"no foreman.id\" variable(s) when syncing the inventory`` 메시지가 표시되면 Red Hat 고객 포털 (https://access.redhat.com/solutions/5826451)의 솔루션을 참조하십시오. 전체 문서에 액세스하려면 고객 인증 정보로 로그인해야 합니다."
+
+#: ../../source/inventories.rst:713
+msgid "Red Hat Insights"
+msgstr "Red Hat Insights"
+
+#: ../../source/inventories.rst:718
+msgid "To configure a Red Hat Insights-sourced inventory, select **Red Hat Insights** from the Source field."
+msgstr "Red Hat Insights 소싱 인벤토리를 구성하려면 소스 필드에서 **Red Hat Insights**를 선택합니다."
+
+#: ../../source/inventories.rst:720
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Insights Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "소스 생성 창이 확장되어 필수 **인증 정보** 필드가 표시됩니다. 기존 Insights 인증 정보에서 선택합니다. 자세한 내용은 :ref:`ug_credentials`를 참조하십시오."
+
+#: ../../source/inventories.rst:724
+msgid "Use the **Source Variables** field to override variables used by the ``insights`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `insights inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/insights/content/inventory/insights>`__."
+msgstr "``insights`` 인벤토리 플러그인에서 사용하는 변수를 덮어쓰려면 **소스 변수** 필드를 사용합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 `insights inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/insights/content/inventory/insights>`__을 참조하십시오."
+
+#: ../../source/inventories.rst:727
+msgid "|Inventories - create source - RH Insights example|"
+msgstr "|Inventories - create source - RH Insights example|"
+
+#: ../../source/inventories.rst:735
+msgid "OpenStack"
+msgstr "OpenStack"
+
+#: ../../source/inventories.rst:741
+msgid "To configure an OpenStack-sourced inventory, select **OpenStack** from the Source field."
+msgstr "OpenStack 소싱 인벤토리를 구성하려면 소스 필드에서 **OpenStack**을 선택합니다."
+
+#: ../../source/inventories.rst:743
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing OpenStack Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "소스 생성 창이 확장되어 필수 **인증 정보** 필드가 표시됩니다. 기존 OpenStack 인증 정보에서 선택합니다. 자세한 내용은 :ref:`ug_credentials`를 참조하십시오."
+
+#: ../../source/inventories.rst:747
+msgid "Use the **Source Variables** field to override variables used by the ``openstack`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `openstack inventory plugin <https://docs.ansible.com/ansible/latest/collections/openstack/cloud/openstack_inventory.html>`_ in the Ansible collections documentation."
+msgstr "``openstack`` 인벤토리 플러그인에서 사용하는 변수를 덮어쓰려면 **소스 변수** 필드를 사용합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 Ansible 컬렉션 설명서의 `openstack inventory plugin <https://docs.ansible.com/ansible/latest/collections/openstack/cloud/openstack_inventory.html>`_을 참조하십시오."
+
+#: ../../source/inventories.rst:749
+msgid "|Inventories - create source - OpenStack example|"
+msgstr "|Inventories - create source - OpenStack example|"
+
+#: ../../source/inventories.rst:757
+msgid "Red Hat Virtualization"
+msgstr "Red Hat Virtualization"
+
+#: ../../source/inventories.rst:762
+msgid "To configure a Red Hat Virtualization-sourced inventory, select **Red Hat Virtualization** from the Source field."
+msgstr "Red Hat Virtualization 소싱 인벤토리를 구성하려면 소스 필드에서 **Red Hat Virtualization**을 선택합니다."
+
+#: ../../source/inventories.rst:764
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Red Hat Virtualization Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "소스 생성 창이 확장되어 필수 **인증 정보** 필드가 표시됩니다. 기존 Red Hat Virtualization 인증 정보에서 선택합니다. 자세한 내용은 :ref:`ug_credentials`를 참조하십시오."
+
+#: ../../source/inventories.rst:768
+msgid "Use the **Source Variables** field to override variables used by the ``ovirt`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `ovirt inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/rhv/content/inventory/ovirt>`__."
+msgstr "``ovirt`` 인벤토리 플러그인에서 사용하는 변수를 덮어쓰려면 **소스 변수** 필드를 사용합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 `ovirt inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/rhv/content/inventory/ovirt>`__을 참조하십시오."
+
+#: ../../source/inventories.rst:770
+msgid "|Inventories - create source - RHV example|"
+msgstr "|Inventories - create source - RHV example|"
+
+#: ../../source/inventories.rst:776
+msgid "Red Hat Virtualization (ovirt) inventory source requests are secure by default. To change this default setting, set the key ``ovirt_insecure`` to **true** in ``source_variables``, which is only available from the API details of the inventory source at the ``/api/v2/inventory_sources/N/`` endpoint."
+msgstr "Red Hat Virtualization(ovirt) 인벤토리 소스 요청은 기본적으로 안전합니다. 이 기본 설정을 변경하려면 ``/api/v2/inventory_sources/N/`` 끝점에 있는 인벤토리 소스의 API 세부 정보에서만 사용할 수 있는 ``source_variables``에서 ``ovirt_insecure`` 키를 **True**로 설정합니다."
+
+#: ../../source/inventories.rst:781
+msgid "Red Hat Ansible Automation Platform"
+msgstr "Red Hat Ansible Automation Platform"
+
+#: ../../source/inventories.rst:787
+msgid "To configure a |at|-sourced inventory, select **Red Hat Ansible Automation Platform** from the Source field."
+msgstr "|at| 소싱 인벤토리를 구성하려면 소스 필드에서 **Red Hat Ansible Automation Platform**을 선택합니다."
+
+#: ../../source/inventories.rst:789
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Ansible Automation Platform Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "소스 생성 창이 확장되어 필수 **인증 정보** 필드가 표시됩니다. 기존 Ansible Automation Platform 인증 정보에서 선택합니다. 자세한 내용은 :ref:`ug_credentials`를 참조하십시오."
+
+#: ../../source/inventories.rst:795
+msgid "Use the **Source Variables** field to override variables used by the ``controller`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `controller inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/ansible/controller/content/inventory/controller>`__ (requires your Red Hat Customer login)."
+msgstr "``controller`` 인벤토리 플러그인에서 사용하는 변수를 덮어쓰려면 **소스 변수** 필드를 사용합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다. 이러한 변수에 대한 자세한 설명은 `controller inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/ansible/controller/content/inventory/controller>`__을 참조하십시오(Red Hat 고객 로그인 필요)."
+
+#: ../../source/inventories.rst:800
+msgid "Export old inventory scripts"
+msgstr "이전 인벤토리 스크립트 내보내기"
+
+#: ../../source/inventories.rst:804
+msgid "Despite the removal of the custom inventory scripts API, the scripts are still saved in the database. The commands described in this section allows you to recover the scripts in a format that is suitable for you to subsequently check into source control. Usage looks like this:"
+msgstr "사용자 정의 인벤토리 스크립트 API를 제거해도 스크립트는 여전히 데이터베이스에 저장됩니다. 이 섹션에 설명된 명령을 사용하면 나중에 소스 제어를 확인하는 데 적합한 형식으로 스크립트를 복구할 수 있습니다. 사용법은 다음과 같습니다."
+
+#: ../../source/inventories.rst:812
+msgid "Making use of the output:"
+msgstr "출력 사용:"
+
+#: ../../source/inventories.rst:819
+msgid "The naming of the scripts is ``_<pk>__<name>``. This is the naming scheme used for project folders."
+msgstr "스크립트의 이름은 ``_<pk>__<name>``입니다. 이는 프로젝트 폴더에 사용되는 이름 지정 체계입니다."
+
+#: ../../source/inventories.rst:836
+msgid "Each file contains a script. Scripts can be ``bash/python/ruby/more``, so the extension is not included. They are all directly executable (assuming the scripts worked). If you execute the script, it dumps the inventory data."
+msgstr "각 파일에는 스크립트가 포함되어 있습니다. 스크립트는 ``bash/python/ruby/more``일 수 있으므로 확장이 포함되지 않습니다. 모두 직접 실행 가능합니다(스크립트가 작동한다고 가정). 스크립트를 실행하면 인벤토리 데이터가 덤프됩니다."
+
+#: ../../source/inventories.rst:849
+msgid "You can verify functionality with ``ansible-inventory``. This should give the same data, but reformatted."
+msgstr "``ansible-inventory``로 기능을 확인할 수 있습니다. 이 경우 동일한 데이터를 제공하지만 다시 포맷해야 합니다."
+
+#: ../../source/inventories.rst:856
+msgid "In the above example, you could ``cd`` into ``my_scripts`` and then issue a ``git init`` command, add the scripts you want, push it to source control, and then create an SCM inventory source in the |at| user interface."
+msgstr "위 예에서 ``my_scripts``로 ``cd``한 후 ``git init`` 명령을 실행하고 원하는 스크립트를 추가하여 소스 제어에 푸시한 다음 |at| 사용자 인터페이스에서 SCM 인벤토리 소스를 생성할 수 있습니다."
+
+#: ../../source/inventories.rst:859
+msgid "For more information on syncing or using custom inventory scripts, refer to :ref:`ag_inv_import` in the |ata|."
+msgstr "사용자 정의 인벤토리 스크립트를 동기화하거나 사용하는 방법에 대한 자세한 내용은 |ata|의 :ref:`ag_inv_import`을 참조하십시오."
+
+#: ../../source/inventories.rst:865
+msgid "View completed jobs"
+msgstr "완료된 작업 보기"
+
+#: ../../source/inventories.rst:867
+msgid "If an inventory was used to run a job, you can view details about those jobs in the **Completed Jobs** tab of the inventory and click **Expanded** to view details about each job."
+msgstr "인벤토리가 작업을 실행하는 데 사용된 경우 인벤토리의 **완료된 작업** 탭에서 해당 작업에 대한 세부 정보를 보고 **펼치기**를 클릭하여 각 작업에 대한 세부 정보를 볼 수 있습니다."
+
+#: ../../source/inventories.rst:869
+msgid "|Inventories view completed jobs|"
+msgstr "|Inventories view completed jobs|"
+
+#: ../../source/inventories.rst:880
+msgid "Running Ad Hoc Commands"
+msgstr "임시 명령 실행"
+
+#: ../../source/inventories.rst:887
+msgid "To run an ad hoc command:"
+msgstr "임시 명령을 실행하려면 다음을 수행합니다."
+
+#: ../../source/inventories.rst:889
+msgid "Select an inventory source from the list of hosts or groups. The inventory source can be a single group or host, a selection of multiple hosts, or a selection of multiple groups."
+msgstr "호스트 또는 그룹 목록에서 인벤토리 소스를 선택합니다. 인벤토리 소스는 단일 그룹 또는 호스트, 선택된 여러 호스트 또는 선택된 여러 그룹일 수 있습니다."
+
+#: ../../source/inventories.rst:891
+msgid "|ad hoc-commands-inventory-home|"
+msgstr "|ad hoc-commands-inventory-home|"
+
+#: ../../source/inventories.rst:895
+msgid "Click the **Run Command** button."
+msgstr "**명령 실행** 버튼을 클릭합니다."
+
+#: ../../source/inventories.rst:897
+msgid "The Run command window opens."
+msgstr "실행 명령 창이 열립니다."
+
+#: ../../source/inventories.rst:901
+msgid "Enter the details for the following fields:"
+msgstr "다음 필드에 대한 세부 정보를 입력합니다."
+
+#: ../../source/inventories.rst:903
+msgid "**Module**: Select one of the modules that the |at| supports running commands against."
+msgstr "**모듈**: |at|에서 명령 실행을 지원하는 모듈 중 하나를 선택합니다."
+
+#: ../../source/inventories.rst:906
+msgid "command"
+msgstr "command"
+
+#: ../../source/inventories.rst:906
+msgid "apt_repository"
+msgstr "apt_repository"
+
+#: ../../source/inventories.rst:906
+msgid "mount"
+msgstr "mount"
+
+#: ../../source/inventories.rst:906
+msgid "win_service"
+msgstr "win_service"
+
+#: ../../source/inventories.rst:908
+msgid "shell"
+msgstr "shell"
+
+#: ../../source/inventories.rst:908
+msgid "apt_rpm"
+msgstr "apt_rpm"
+
+#: ../../source/inventories.rst:908
+msgid "ping"
+msgstr "ping"
+
+#: ../../source/inventories.rst:908
+msgid "win_updates"
+msgstr "win_updates"
+
+#: ../../source/inventories.rst:910
+msgid "yum"
+msgstr "yum"
+
+#: ../../source/inventories.rst:910
+msgid "service"
+msgstr "service"
+
+#: ../../source/inventories.rst:910
+msgid "selinux"
+msgstr "selinux"
+
+#: ../../source/inventories.rst:910
+msgid "win_group"
+msgstr "win_group"
+
+#: ../../source/inventories.rst:912
+msgid "apt"
+msgstr "apt"
+
+#: ../../source/inventories.rst:912
+msgid "group"
+msgstr "group"
+
+#: ../../source/inventories.rst:912
+msgid "setup"
+msgstr "setup"
+
+#: ../../source/inventories.rst:912
+msgid "win_user"
+msgstr "win_user"
+
+#: ../../source/inventories.rst:914
+msgid "apt_key"
+msgstr "apt_key"
+
+#: ../../source/inventories.rst:914
+msgid "user"
+msgstr "user"
+
+#: ../../source/inventories.rst:914
+msgid "win_ping"
+msgstr "win_ping"
+
+#: ../../source/inventories.rst:917
+msgid "**Arguments**: Provide arguments to be used with the module you selected."
+msgstr "**인수**: 선택한 모듈과 함께 사용할 인수를 제공합니다."
+
+#: ../../source/inventories.rst:918
+msgid "**Limit**: Enter the limit used to target hosts in the inventory. To target all hosts in the inventory enter ``all`` or ``*``, or leave the field blank. This is automatically populated with whatever was selected in the previous view prior to clicking the launch button."
+msgstr "**제한**: 인벤토리의 호스트를 대상으로 지정하는 데 사용되는 제한을 입력합니다. 인벤토리의 모든 호스트를 대상으로 지정하려면 ``all`` 또는 ``*``를 입력하거나 필드를 비워 두십시오. 그러면 시작 버튼을 클릭하기 전에 이전 보기에서 선택한 모든 항목이 자동으로 채워집니다."
+
+#: ../../source/inventories.rst:919
+msgid "**Machine Credential**: Select the credential to use when accessing the remote hosts to run the command. Choose the credential containing the username and SSH key or password that Ansbile needs to log into the remote hosts."
+msgstr "**머신 인증 정보**: 명령을 실행하기 위해 원격 호스트에 액세스할 때 사용할 인증 정보를 선택합니다. Ansbile에서 원격 호스트에 로그인하는 데 필요한 사용자 이름과 SSH 키 또는 암호가 포함된 인증 정보를 선택합니다."
+
+#: ../../source/inventories.rst:920
+msgid "**Verbosity**: Select a verbosity level for the standard output."
+msgstr "**상세 정보 표시**: 표준 출력에 대한 상세 정보 표시 수준을 선택합니다."
+
+#: ../../source/inventories.rst:921
+msgid "**Forks**: If needed, select the number of parallel or simultaneous processes to use while executing the command."
+msgstr "**포크**: 필요한 경우 명령을 실행하는 동안 사용할 병렬 또는 동시 프로세스 수를 선택합니다."
+
+#: ../../source/inventories.rst:922
+msgid "**Show Changes**: Select to enable the display of Ansible changes in the standard output. The default is OFF."
+msgstr "**변경 사항 표시**: Ansible 변경 사항을 표준 출력에 표시하려면 선택합니다. 기본값은 OFF입니다."
+
+#: ../../source/inventories.rst:923
+msgid "**Enable Privilege Escalation**: If enabled, the playbook is run with administrator privileges. This is the equivalent of passing the ``--become`` option to the ``ansible`` command."
+msgstr "**권한 에스컬레이션 활성화**: 활성화하면 플레이북이 관리자 권한으로 실행됩니다. 이 설정은 ``--become`` 옵션을 ``ansible`` 명령에 전달하는 것과 같습니다."
+
+#: ../../source/inventories.rst:924
+msgid "**Extra Variables**: Provide extra command line variables to be applied when running this inventory. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**추가 변수**: 이 인벤토리를 실행할 때 적용할 추가 명령행 변수를 제공합니다. JSON 또는 YAML 구문을 사용하여 변수를 입력합니다. 둘 사이를 전환하려면 라디오 버튼을 사용합니다."
+
+#: ../../source/inventories.rst:926
+msgid "|ad hoc-commands-inventory-run-command|"
+msgstr "|ad hoc-commands-inventory-run-command|"
+
+#: ../../source/inventories.rst:930
+msgid "Click **Next** to choose the |ee| you want the ad-hoc command to be run against."
+msgstr "**다음**을 클릭하여 임시 명령을 실행할 |ee|를 선택합니다."
+
+#: ../../source/inventories.rst:934
+msgid "Click **Next** to choose the credential you want to use and click the **Launch** button."
+msgstr "**다음**을 클릭하여 사용할 인증 정보를 선택하고 **시작** 버튼을 클릭합니다."
+
+#: ../../source/inventories.rst:937
+msgid "The results display in the **Output** tab of the module's job window."
+msgstr "모듈의 작업 창 **출력** 탭에 결과가 표시됩니다."
+
+#: ../../source/inventories.rst:939
+msgid "|ad hoc-commands-inventory-results-example|"
+msgstr "|ad hoc-commands-inventory-results-example|"
+

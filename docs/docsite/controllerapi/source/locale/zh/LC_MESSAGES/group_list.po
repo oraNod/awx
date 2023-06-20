@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/group_list.rst:3
+msgid "Group List API Endpoint"
+msgstr "组列表 API 端点"
+
+#: ../../source/group_list.rst:8
+msgid "Make a GET request to this resource to retrieve the list of groups."
+msgstr "向此资源发出 GET 请求，以检索组列表。"
+
+#: ../../source/group_list.rst:19
+msgid "The resulting data structure contains:"
+msgstr "得到的数据结构包括："
+
+#: ../../source/group_list.rst:32
+msgid "The ``count`` field indicates the total number of groups found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more group records."
+msgstr "``count`` 字段显示为给定查询找到的组总数。如果单个页面无法包括所有项，使用``next`` 和 ``previous`` 字段查看其他结果。``results`` 列表包含零或更多个组记录。"
+
+#: ../../source/group_list.rst:35
+msgid "Results"
+msgstr "结果"
+
+#: ../../source/group_list.rst:40
+msgid "Each group data structure includes the following fields:"
+msgstr "每个组数据结构包括以下字段："
+
+#: ../../source/group_list.rst:42
+msgid "``id``: Database ID for this group. (integer)"
+msgstr "``id``：此组的数据库 ID。（整数）"
+
+#: ../../source/group_list.rst:43
+msgid "``type``: Data type for this group. (multiple choice)"
+msgstr "``type``：此组的数据类型。（多选项）"
+
+#: ../../source/group_list.rst:44
+msgid "``group``: Group"
+msgstr "``group``：组"
+
+#: ../../source/group_list.rst:45
+msgid "``url``: URL for this group. (string)"
+msgstr "``url``：此组的 URL。（字符串）"
+
+#: ../../source/group_list.rst:46
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``：包含相关资源的 URL 的数据结构。（对象）"
+
+#: ../../source/group_list.rst:47
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``：包含相关资源的名称/描述的数据结构。（对象）"
+
+#: ../../source/group_list.rst:48
+msgid "``created``: Timestamp when this group was created. (datetime)"
+msgstr "``created``：创建此组时的时间戳。（日期时间）"
+
+#: ../../source/group_list.rst:49
+msgid "``modified``: Timestamp when this group was last modified. (datetime)"
+msgstr "``modified``：最后一次修改此组时的时间戳。（日期时间）"
+
+#: ../../source/group_list.rst:50
+msgid "``name``: (string)"
+msgstr "``name``：（字符串）"
+
+#: ../../source/group_list.rst:51
+msgid "``description``: (string)"
+msgstr "``description``：（字符串）"
+
+#: ../../source/group_list.rst:52
+msgid "``inventory``: (field)"
+msgstr "``inventory``：（字段）"
+
+#: ../../source/group_list.rst:53
+msgid "``variables``: Group variables in JSON or YAML format. (string)"
+msgstr "``variables``：JSON 或 YAML 格式的组变量。（字符串）"
+
+#: ../../source/group_list.rst:54
+msgid "``has_active_failures``: Flag indicating whether this group has any hosts with active failures. (boolean)"
+msgstr "``has_active_failures``：指示此组是否有带活跃故障的主机的标志。（布尔值）"
+
+#: ../../source/group_list.rst:55
+msgid "``total_hosts``: Total number of hosts directly or indirectly in this group. (integer)"
+msgstr "``total_hosts``：此组中直接或间接的主机数量。（整数）"
+
+#: ../../source/group_list.rst:56
+msgid "``hosts_with_active_failures``: Number of hosts in this group with active failures. (integer)"
+msgstr "``hosts_with_active_failures``：此组中的有活跃故障的主机数。（整数）"
+
+#: ../../source/group_list.rst:57
+msgid "``total_groups``: Total number of child groups contained within this group. (integer)"
+msgstr "``total_groups``：此组中包含的子组总数。（整数）"
+
+#: ../../source/group_list.rst:58
+msgid "``groups_with_active_failures``: Number of child groups within this group that have active failures. (integer)"
+msgstr "``groups_with_active_failures``：此组中有活跃故障的子组的数量。（整数）"
+
+#: ../../source/group_list.rst:59
+msgid "``has_inventory_sources``: Flag indicating whether this group was created/updated from any external inventory sources. (boolean)"
+msgstr "``has_inventory_sources``：指明是否从任何外部清单源创建/更新了此组的标志。（布尔值）"
+
+#: ../../source/group_list.rst:62
+msgid "Create Groups"
+msgstr "创建组"
+
+#: ../../source/group_list.rst:67
+msgid "Make a POST request to this resource with the following group fields to create a new group:"
+msgstr "使用以下组字段向此资源发布 POST 请求，以创建新组："
+
+#: ../../source/group_list.rst:69
+msgid "``name``: (string, required)"
+msgstr "``name``：（字符串，必需）"
+
+#: ../../source/group_list.rst:70
+msgid "``description``: (string, default=\"\")"
+msgstr "``description``：（字符串，默认=\"\"）"
+
+#: ../../source/group_list.rst:71
+msgid "``inventory``: (field, required)"
+msgstr "``inventory``：（字段，必需）"
+
+#: ../../source/group_list.rst:72
+msgid "``variables``: Group variables in JSON or YAML format. (string, default=\"\")"
+msgstr "``variables``：JSON 或 YAML 格式的组变量。（字符串，默认=\"\"）"
+
+#: ../../source/group_list.rst:76
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/group_list.rst:81
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

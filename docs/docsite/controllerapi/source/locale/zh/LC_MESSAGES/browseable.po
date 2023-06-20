@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/browseable.rst:5
+msgid "Browsable API"
+msgstr "可浏览 API"
+
+#: ../../source/browseable.rst:11
+msgid "REST APIs provide access to resources (data entities) via URI paths.  You can visit the |at| REST API in a web browser at: ``http://<server name>/api/``"
+msgstr "其它 API 通过 URI 路径提供对资源（数据实体）的访问。您可以在以下网页浏览器中访问 |at| REST API：``http://<server name>/api/``"
+
+#: ../../source/browseable.rst:13
+msgid "|REST API|"
+msgstr "|REST API|"
+
+#: ../../source/browseable.rst:17
+msgid "|at| 3.2 introduced version 2 of the API, which can be accessed by clicking the v2 link next to \"available versions\":"
+msgstr "|at| 3.2 引入了 API 的版本 2，可通过点击 “available version”旁的 v2 链接访问该版本："
+
+#: ../../source/browseable.rst:19
+msgid "|REST API V2|"
+msgstr "|REST API V2|"
+
+#: ../../source/browseable.rst:23
+msgid "Alternatively, you can still access version 1 of the API this way, but it **will be removed** in a future release of |at|."
+msgstr "另外，您也可以通过这种方式访问 API 版本 1，但它在以后的 |at| 发行版本中**会被删除**。"
+
+#: ../../source/browseable.rst:25
+msgid "If you perform a **GET** just the ``/api/`` endpoint, it gives the ``current_version``, which would be the recommended version."
+msgstr "如果您只对 ``/api/`` 执行 **GET**，它会给出推荐的版本 ``current_version``"
+
+#: ../../source/browseable.rst:27
+msgid "Clicking on various links in the API allows you to explore related resources."
+msgstr "点击 API 中的各种链接可以浏览相关资源。"
+
+#: ../../source/browseable.rst:32
+msgid "Clicking on the |question| next to the page name (toward the top of the screen) for an API endpoint gives you documentation on the access methods for that particular API endpoint and what data is returned when using those methods."
+msgstr "点击 API 端点页面名称旁边的 |question|（到屏幕顶部），您可以记录特定 API 端点的访问方法以及使用这些方法时返回的数据。"
+
+#: ../../source/browseable.rst:44
+msgid "You can also use PUT and POST verbs on the specific API pages by formatting JSON in the various text fields."
+msgstr "您还可以通过在不同的文本字段中格式化 JSON，在特定 API 页面上使用 PUT 和 POST 动词。"
+
+#: ../../source/browseable.rst:47
+msgid "|REST API - POST to API via form|"
+msgstr "|REST API - POST to API via form|"
+
+#: ../../source/browseable.rst:51
+msgid "You can also view changed settings from factory defaults at ``/api/v2/settings/changed/`` endpoint. It reflects changes you made in the API browser, not changed settings that come from static settings files."
+msgstr "您还可以从 ``/api/v2/settings/changed/`` 端点的出厂默认设置中查看更改的设置。它反映了您在 API 浏览器中所做的更改，而不是静态设置文件中更改的设置。"
+
+#: ../../source/browseable.rst:53
+msgid "|REST API - Changes to Settings|"
+msgstr "|REST API - Changes to Settings|"
+

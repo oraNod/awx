@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/main_menu.rst:2
+msgid "The User Interface"
+msgstr "사용자 인터페이스"
+
+#: ../../source/main_menu.rst:8
+msgid "The User Interface offers a friendly graphical framework for your IT orchestration needs. The left navigation bar provides quick access to resources, such as **Projects**, **Inventories**, **Job Templates**, and **Jobs**."
+msgstr "사용자 인터페이스는 IT 오케스트레이션 요구 사항을 위한 친숙한 그래픽 프레임워크를 제공합니다. 왼쪽 탐색 모음을 사용하면 **프로젝트**, **인벤토리**, **작업 템플릿**, **작업**과 같은 리소스에 빠르게 액세스할 수 있습니다."
+
+#: ../../source/main_menu.rst:10
+msgid "Across the top-right side of the interface, you can access your user profile, the About page, view related documentation, and log out. Right below these options, you can view the activity stream for that user by clicking on the Activity Stream |activitystream| button."
+msgstr "인터페이스 오른쪽 상단에서는 사용자 프로필, 정보 페이지에 액세스하여 관련 문서를 보고 로그아웃할 수 있습니다. 이러한 옵션 바로 아래에서는 활동 스트림|activitystream| 버튼을 클릭하여 해당 사용자의 활동 스트림을 볼 수 있습니다."
+
+#: ../../source/main_menu.rst:20
+msgid "Activity Streams"
+msgstr "활동 스트림"
+
+#: ../../source/main_menu.rst:26
+msgid "Most screens have an Activity Stream (|activitystream|) button. Clicking this brings up the **Activity Stream** for this object."
+msgstr "대부분의 화면에는 활동 스트림(|activitystream|) 버튼이 있습니다. 이 버튼을 클릭하면 이 오브젝트의 **활동 스트림**이 표시됩니다."
+
+#: ../../source/main_menu.rst:30
+msgid "|Users - Activity Stream|"
+msgstr "|Users - Activity Stream|"
+
+#: ../../source/main_menu.rst:34
+msgid "An Activity Stream shows all changes for a particular object. For each change, the Activity Stream shows the time of the event, the user that initiated the event, and the action. The information displayed varies depending on the type of event. Clicking on the Examine (|examine|) button shows the event log for the change."
+msgstr "활동 스트림은 특정 오브젝트에 대한 모든 변경 사항을 보여줍니다. 활동 스트림에는 각 변경 사항의 이벤트 시간, 이벤트를 시작한 사용자, 작업이 표시됩니다. 표시되는 정보는 이벤트 유형에 따라 다릅니다. 검사(|examine|) 버튼을 클릭하면 해당 변경 사항에 대한 이벤트 로그가 표시됩니다."
+
+#: ../../source/main_menu.rst:39
+msgid "|event log|"
+msgstr "|event log|"
+
+#: ../../source/main_menu.rst:43
+msgid "The Activity Stream can be filtered by the initiating user (or the system, if it was system initiated), and by any related object, such as a particular credential, job template, or schedule."
+msgstr "활동 스트림은 시작 사용자(또는 시스템에서 시작한 경우 시스템) 및 관련 오브젝트(예: 특정 인증 정보, 작업 템플릿, 스케줄)로 필터링할 수 있습니다."
+
+#: ../../source/main_menu.rst:47
+msgid "The Activity Stream on the main Dashboard shows the Activity Stream for the entire instance. Most pages allow viewing an activity stream filtered for that specific object."
+msgstr "기본 대시보드의 활동 스트림에는 전체 인스턴스의 활동 스트림이 표시됩니다. 대부분의 페이지에서 해당 특정 오브젝트로 필터링된 활동 스트림을 볼 수 있습니다."
+
+#: ../../source/main_menu.rst:52
+msgid "Views"
+msgstr "뷰"
+
+#: ../../source/main_menu.rst:59
+msgid "The User Interface provides several options for viewing information."
+msgstr "사용자 인터페이스에는 정보를 보는 데 필요한 몇 가지 옵션이 있습니다."
+
+#: ../../source/main_menu.rst:66
+msgid "Dashboard view"
+msgstr "대시보드 뷰"
+
+#: ../../source/main_menu.rst:76
+msgid "The **Dashboard** view begins with a summary of your hosts, inventories, and projects. Each of these is linked to the corresponding objects for easy access."
+msgstr "**대시보드** 뷰는 호스트, 인벤토리, 프로젝트에 대한 요약으로 시작됩니다. 이들 각각은 쉽게 액세스할 수 있도록 해당 오브젝트에 연결되어 있습니다."
+
+#: ../../source/main_menu.rst:81
+msgid "On the main Dashboard screen, a summary appears listing your current **Job Status**. The **Job Status** graph displays the number of successful and failed jobs over a specified time period. You can choose to limit the job types that are viewed, and to change the time horizon of the graph."
+msgstr "기본 대시보드 화면에는 현재 **작업 상태**가 나열된 요약이 표시됩니다. **작업 상태** 그래프에는 지정된 기간 동안 성공 및 실패한 작업 수가 표시됩니다. 표시되는 작업 유형을 제한하고 그래프의 시간 범위를 변경할 수 있습니다."
+
+#: ../../source/main_menu.rst:83
+msgid "Also available for view are summaries of **Recent Jobs** and **Recent Templates** on their respective tabs."
+msgstr "또한 각 탭에서 **최근 작업** 및 **최신 템플릿** 요약을 볼 수 있습니다."
+
+#: ../../source/main_menu.rst:85
+msgid "The **Recent Jobs** section displays which jobs were most recently run, their status, and time when they were run as well."
+msgstr "**최신 작업** 섹션에는 최근 실행된 작업, 해당 상태, 실행된 시간이 표시됩니다."
+
+#: ../../source/main_menu.rst:89
+msgid "The **Recent Templates** section of this display shows a summary of the most recently used templates. You can also access this summary by clicking **Templates** from the left navigation bar."
+msgstr "이 화면의 **최신 작업** 섹션에는 최근 사용된 템플릿에 대한 요약이 표시됩니다. 이 요약은 왼쪽 탐색 모음에서 **템플릿**을 클릭하여 액세스할 수도 있습니다."
+
+#: ../../source/main_menu.rst:96
+msgid "Clicking on **Dashboard** from the left navigation bar or the |aap| logo at any time returns you to the Dashboard."
+msgstr "언제든 왼쪽 탐색 모음의 **대시보드** 또는 |aap| 로고를 클릭하면 대시보드로 돌아갑니다."
+
+#: ../../source/main_menu.rst:100
+msgid "Jobs view"
+msgstr "작업 뷰"
+
+#: ../../source/main_menu.rst:102
+msgid "Access the **Jobs** view by clicking **Jobs** from the left navigation bar. This view shows all the jobs that have ran, including projects, templates, management jobs, SCM updates, playbook runs, etc."
+msgstr "왼쪽 탐색 모음에서 **작업**을 클릭하여 **작업** 뷰에 액세스합니다. 이 뷰에는 프로젝트, 템플릿, 관리 작업, SCM 업데이트, 플레이북 실행 등을 포함하여 실행된 모든 작업이 표시됩니다."
+
+#: ../../source/main_menu.rst:108
+msgid "Schedules view"
+msgstr "스케줄 뷰"
+
+#: ../../source/main_menu.rst:110
+msgid "Access the Schedules view by clicking **Schedules** from the left navigation bar. This view shows all the scheduled jobs that are configured."
+msgstr "왼쪽 탐색 모음에서 **스케줄**을 클릭하여 스케줄 뷰에 액세스합니다. 이 보기에는 구성된 모든 스케줄 작업이 표시됩니다."
+
+#: ../../source/main_menu.rst:118
+msgid "Resources and Access"
+msgstr "리소스 및 액세스"
+
+#: ../../source/main_menu.rst:120
+msgid "The **Resources** and **Access** menus provide you access to the various components of |at| and allow you to configure who has permissions for which of those resources."
+msgstr "**리소스** 및 **액세스** 메뉴에서는 |at|의 다양한 구성 요소에 액세스하고 누가 해당 리소스 중 어떤 리소스에 대한 권한이 있는지 구성할 수 있습니다."
+
+#: ../../source/main_menu.rst:127
+msgid "Administration Menu"
+msgstr "관리 메뉴"
+
+#: ../../source/main_menu.rst:132
+msgid "The **Administration** menu provides access to the various administrative options:"
+msgstr "**관리** 메뉴에서는 다양한 관리 옵션에 액세스할 수 있습니다."
+
+#: ../../source/main_menu.rst:136
+msgid "From here, you can create, view, and edit :ref:`custom credential types <ug_credential_types>`, :ref:`notifications <ug_notifications>`, management jobs, :ref:`tokens and applications <ug_applications_auth>`, and configure :ref:`ug_execution_environments`."
+msgstr "여기에서 :ref:`custom credential types <ug_credential_types>`, :ref:`notifications <ug_notifications>`, 관리 작업, :ref:`tokens and applications <ug_applications_auth>`를 생성, 보기, 편집할 수 있으며 :ref:`ug_execution_environments`를 구성할 수 있습니다."
+
+#: ../../source/main_menu.rst:140
+msgid "The Settings Menu"
+msgstr "설정 메뉴"
+
+#: ../../source/main_menu.rst:142
+msgid "Configuring global and system-level settings is accomplished through the **Settings** menu, which is described in further detail in the proceeding section. The **Settings** menu offers access to administrative configuration options."
+msgstr "글로벌 및 시스템 수준 설정을 구성하는 작업은 **설정** 메뉴를 통해 수행되며 이에 대한 자세한 내용은 다음 섹션에 설명되어 있습니다. **설정** 메뉴에서는 관리 구성 옵션에 액세스할 수 있습니다."
+
+#: ../../../common/source/settings-menu.rst:8
+msgid "To enter the Settings window for |at|, click **Settings** from the left navigation bar. This page allows you to modify your controller's configuration, such as settings associated with authentication, jobs, system, user interface, and view or retrieve your subscription information."
+msgstr "|at|의 설정 창에 들어가려면 왼쪽 탐색 모음에서 **설정**을 클릭합니다. 이 페이지에서는 인증, 작업, 시스템, 사용자 인터페이스 관련 설정 등 컨트롤러의 구성을 수정하고 서브스크립션 정보를 보거나 검색할 수 있습니다."
+
+#: ../../../common/source/settings-menu.rst:12
+msgid "For more information on configuring these settings, refer to :ref:`ag_configure_tower` section of the |ata|."
+msgstr "이러한 설정 구성에 대한 자세한 내용은 |ata|의 :ref:`ag_configure_tower` 섹션을 참조하십시오."
+

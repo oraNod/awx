@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/job_branching.rst:3
+msgid "Projects specify the branch, tag, or reference to use from source control in the ``scm_branch`` field. These are represented by the values specified in the Project Details fields as shown."
+msgstr "프로젝트는 ``scm_branch`` 필드의 소스 제어에서 사용할 분기, 태그 또는 참조를 지정합니다. 해당 항목은 표시된 것처럼 프로젝트 세부 정보 필드에 지정된 값으로 표시됩니다."
+
+#: ../../source/job_branching.rst:7
+msgid "Projects have the option to \"Allow Branch Override\". When checked, project admins can delegate branch selection to the job templates that use that project (requiring only project ``use_role``)."
+msgstr "프로젝트에는 ‘분기 덮어쓰기 허용’ 옵션이 있습니다. 이를 선택하면 프로젝트 관리자가 분기 선택을 해당 프로젝트를 사용하는 작업 템플릿에 위임할 수 있습니다(``use_role`` 프로젝트만 필요)."
+
+#: ../../source/job_branching.rst:14
+msgid "Source tree copy behavior"
+msgstr "소스 트리 복사 동작"
+
+#: ../../source/job_branching.rst:16
+msgid "Every job run has its own private data directory. This directory contains a copy of the project source tree for the given ``scm_branch`` the job is running. Jobs are free to make changes to the project folder and make use of those changes while it is still running. This folder is temporary and is cleaned up at the end of the job run."
+msgstr "모든 작업 실행에는 자체 개인 데이터 디렉터리가 있습니다. 이 디렉터리에는 작업이 실행되고 있는 지정된 ``scm_branch``의 프로젝트 소스 트리 사본이 포함되어 있습니다. 작업에서는 프로젝트 폴더를 변경하고 실행이 계속되는 동안 이러한 변경 사항을 활용할 수 있습니다. 이 폴더는 임시이며 작업 실행이 끝날 때 정리됩니다."
+
+#: ../../source/job_branching.rst:19
+msgid "If **Clean** is checked, |at| discards modified files in its local copy of the repository through use of the ``force`` parameter in its respective Ansible modules pertaining to `git`_ or `Subversion`_."
+msgstr "**정리**를 선택하면 |at|에서 `git`_ 또는 `Subversion`_과 관련된 각 Ansible 모듈에서 ``force`` 매개변수를 사용하여 리포지터리의 로컬 사본에 있는 수정된 파일을 삭제합니다."
+
+#: ../../source/job_branching.rst:28
+msgid "Project revision behavior"
+msgstr "프로젝트 버전 동작"
+
+#: ../../source/job_branching.rst:30
+msgid "Typically, during a project update, the revision of the default branch (specified in the **SCM Branch** field of the project) is stored when updated, and jobs using that project will employ this revision. Providing a non-default **SCM Branch** (not a commit hash or tag) in a job, the newest revision is pulled from the source control remote immediately before the job starts. This revision is shown in the **Source Control Revision** field of the job and its respective project update."
+msgstr "일반적으로 프로젝트를 업데이트하는 동안 기본 분기의 버전(프로젝트의 **SCM 분기** 필드에 지정되어 있음)이 업데이트되면 해당 버전이 저장되고 해당 프로젝트를 사용하는 작업에 이 버전이 사용됩니다. 작업에 기본이 아닌 **SCM 분기** (커밋 해시 또는 태그가 아님)를 제공하면 작업이 시작되기 직전 소스 제어 원격에서 최신 버전을 가져옵니다. 이 버전은 작업의 **소스 컨트롤 버전** 및 각각의 해당 프로젝트 업데이트에 표시됩니다."
+
+#: ../../source/job_branching.rst:36
+msgid "Consequently, offline job runs are impossible for non-default branches. To be sure that a job is running a static version from source control, use tags or commit hashes. Project updates do not save the revision of all branches, only the project default branch."
+msgstr "결과적으로 기본이 아닌 분기에는 오프라인 작업을 실행할 수 없습니다. 작업이 소스 제어에서 정적 버전을 실행 중인지 확인하려면 태그 또는 커밋 해시를 사용합니다. 프로젝트 업데이트에서는모든 분기의 버전을 저장하지 않고 프로젝트 기본 분기만 저장합니다."
+
+#: ../../source/job_branching.rst:38
+msgid "The **SCM Branch** field is not validated, so the project must update to assure it is valid. If this field is provided or prompted for, the **Playbook** field of job templates will not be validated, and you will have to launch the job template in order to verify presence of the expected playbook."
+msgstr "**SCM 분기** 필드가 검증되지 않았으므로 유효성 확인을 위해 프로젝트를 업데이트해야 합니다. 이 필드가 제공되거나 메시지가 표시되면 작업 템플릿의 **플레이북** 필드가 검증되지 않으며 필요한 플레이북이 있는지 확인하려면 작업 템플릿을 시작해야 합니다."
+
+#: ../../source/job_branching.rst:41
+msgid "Git Refspec"
+msgstr "Git 참조 사양"
+
+#: ../../source/job_branching.rst:46
+msgid "The **SCM Refspec** field specifies which extra references the update should download from the remote. Examples are:"
+msgstr "**SCM 참조 사양** 필드는 업데이트 중 원격에서 다운로드해야 하는 추가 참조를 지정합니다. 예를 들면 다음과 같습니다."
+
+#: ../../source/job_branching.rst:48
+msgid "``refs/*:refs/remotes/origin/*``: fetches all references, including remotes of the remote"
+msgstr "``refs/*:refs/remotes/origin/*``: 원격의 원격을 포함하여 모든 참조를 가져옵니다."
+
+#: ../../source/job_branching.rst:49
+msgid "``refs/pull/*:refs/remotes/origin/pull/*`` (GitHub-specific): fetches all refs for all pull requests"
+msgstr "``refs/pull/*:refs/remotes/origin/pull/*``(GitHub 관련): 모든 가져오기 요청에 대해 모든 참조를 가져옵니다."
+
+#: ../../source/job_branching.rst:50
+msgid "``refs/pull/62/head:refs/remotes/origin/pull/62/head``: fetches the ref for that one GitHub pull request"
+msgstr "``refs/pull/62/head:refs/remotes/origin/pull/62/head``: 하나의 GitHub 가져오기 요청에 대한 참조를 가져옵니다."
+
+#: ../../source/job_branching.rst:52
+msgid "For large projects, you should consider performance impact when using the 1st or 2nd examples here."
+msgstr "대규모 프로젝트의 경우 첫 번째 또는 두 번째 예제를 사용할 때 성능에 미치는 영향을 고려해야 합니다."
+
+#: ../../source/job_branching.rst:54
+msgid "The **SCM Refspec** parameter affects the availability of the project branch, and can allow access to references not otherwise available. The examples above allow the user to supply a pull request from the **SCM Branch**, which would not be possible without the **SCM Refspec** field."
+msgstr "**SCM 참조 사양** 매개변수는 프로젝트 분기의 가용성에 영향을 미치며, 이 매개변수가 없으면 사용할 수 없는 참조에 대한 액세스를 허용할 수 있습니다. 위 예제에서는 사용자가 **SCM 분기**에서 가져오기 요청을 제공할 수 있도록 허용하는데, **SCM 참조 사양** 필드 없이는 수행할 수 없습니다."
+
+#: ../../source/job_branching.rst:57
+msgid "The Ansible git module fetches ``refs/heads/*`` by default. This means that a project's branches and tags (and commit hashes therein) can be used as the SCM Branch if **SCM Refspec** is blank. The value specified in the **SCM Refspec** field affects which **SCM Branch** fields can be used as overrides. Project updates (of any type) will perform an extra ``git fetch`` command to pull that refspec from the remote."
+msgstr "Ansible Git 모듈은 기본적으로 ``refs/heads/*``를 가져옵니다. 즉, **SCM 참조 사양**이 비어 있는 경우 프로젝트의 분기 및 태그(그 안의 커밋 해시 포함)를 SCM 분기로 사용할 수 있습니다. **SCM 참조 사양** 필드에 지정된 값은 덮어쓰기로 사용할 수 있는 *SCM 분기** 필드에 영향을 미칩니다. 프로젝트 업데이트(모든 유형)는 추가 ``git fetch`` 명령을 수행하여 원격에서 해당 참조 사양을 가져옵니다."
+
+#: ../../source/job_branching.rst:59
+msgid "For example: You could set up a project that allows branch override with the 1st or 2nd refspec example --> Use this in a job template that prompts for the **SCM Branch** --> A client could launch the job template when a new pull request is created, providing the branch ``pull/N/head`` --> The job template would run against the provided GitGub pull request reference."
+msgstr "예: 첫 번째 또는 두 번째 참조 사양 예에서 분기 덮어쓰기를 허용하는 프로젝트를 설정할 수 있습니다. --> **SCM 분기**를 묻는 작업 템플릿에 이 프로젝트를 사용합니다. --> 새 가져오기 요청이 생성되면 클라이언트가 작업 템플릿을 시작하여 분기 ``pull/N/head``를 제공할 수 있습니다. --> 작업 템플릿이 제공된 GitHub 가져오기 요청 참조에 대해 실행됩니다."
+
+#: ../../source/job_branching.rst:61
+msgid "For more information on the Ansible git module, see https://docs.ansible.com/ansible/latest/modules/git_module.html."
+msgstr "Ansible Git 모듈에 대한 자세한 내용은 https://docs.ansible.com/ansible/latest/modules/git_module.html을 참조하십시오."
+

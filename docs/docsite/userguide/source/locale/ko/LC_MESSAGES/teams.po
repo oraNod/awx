@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/teams.rst:4
+msgid "Teams"
+msgstr "팀"
+
+#: ../../source/teams.rst:9
+msgid "A :term:`Team` is a subdivision of an organization with associated users, projects, credentials, and permissions. Teams provide a means to implement role-based access control schemes and delegate responsibilities across organizations. For instance, permissions may be granted to a whole Team rather than each user on the Team."
+msgstr ":term:`Team`은 연결된 사용자, 프로젝트, 인증 정보, 권한이 있는 조직의 하위 요소입니다. 팀을 활용하면 역할 기반 액세스 제어 체계를 구현하고 조직 전체에 책임을 위임할 수 있습니다. 예를 들어 팀의 각 사용자가 아닌 전체 팀에 권한을 부여할 수 있습니다."
+
+#: ../../source/teams.rst:11
+msgid "You can create as many Teams of users as make sense for your Organization. Each Team can be assigned permissions, just as with Users. Teams can also scalably assign ownership for Credentials, preventing multiple interface click-throughs to assign the same Credentials to the same user."
+msgstr "조직에 필요한 만큼 사용자 팀을 생성할 수 있습니다. 사용자와 마찬가지로 각 팀에도 권한을 할당할 수 있습니다. 또한 팀은 인증 정보 소유권을 확장 가능한 방식으로 할당함으로써 인터페이스를 여러 번 클릭해 동일한 인증 정보를 같은 사용자에게 할당하는 것을 방지할 수 있습니다."
+
+#: ../../source/teams.rst:13
+msgid "Access the Teams page by clicking **Teams** from the left navigation bar. The team list may be sorted and searched by **Name** or **Organization**."
+msgstr "왼쪽 탐색 모음에서 **팀**을 클릭하여 팀 페이지에 액세스합니다. 팀 목록은 **이름** 또는 **조직**으로 정렬하고 검색할 수 있습니다."
+
+#: ../../source/teams.rst:18
+msgid "Clicking the Edit (|edit-button|) button next to the list of **Teams** allows you to edit details about the team. You can also review **Users** and  **Permissions** associated with this Team."
+msgstr "**팀** 목록 옆에 있는 편집(|edit-button|) 버튼을 클릭하면 팀에 대한 세부 정보를 편집할 수 있습니다. 해당 팀과 관련된 **사용자** 및 **권한**을 검토할 수도 있습니다."
+
+#: ../../source/teams.rst:26
+msgid "Create a Team"
+msgstr "팀 생성"
+
+#: ../../source/teams.rst:28
+msgid "To create a new Team:"
+msgstr "새 팀을 생성하려면 다음을 수행합니다."
+
+#: ../../source/teams.rst:30
+msgid "Click the **Add** button."
+msgstr "**추가** 버튼을 클릭합니다."
+
+#: ../../source/teams.rst:33
+msgid "|Teams - create new team|"
+msgstr "|Teams - create new team|"
+
+#: ../../source/teams.rst:37
+msgid "Enter the appropriate details into the following fields:"
+msgstr "다음 필드에 적절한 세부 정보를 입력합니다."
+
+#: ../../source/teams.rst:39
+msgid "Name"
+msgstr "이름"
+
+#: ../../source/teams.rst:40
+msgid "Description (optional)"
+msgstr "설명(선택 사항)"
+
+#: ../../source/teams.rst:41
+msgid "Organization (Choose from an existing organization)"
+msgstr "조직(기존 조직에서 선택)"
+
+#: ../../source/teams.rst:43
+msgid "Click **Save**."
+msgstr "**저장**을 클릭합니다."
+
+#: ../../source/teams.rst:45
+msgid "Once the Team is successfully created, |at| opens the **Details** dialog, which also allows you to review and edit your Team information."
+msgstr "팀이 성공적으로 생성되면 |at|에서 **세부 정보** 대화 상자를 여는데, 여기서도 팀 정보를 검토하고 편집할 수 있습니다."
+
+#: ../../source/teams.rst:47
+msgid "|Teams - example team successfully created|"
+msgstr "|Teams - example team successfully created|"
+
+#: ../../source/teams.rst:53
+msgid "Team Access"
+msgstr "팀 액세스"
+
+#: ../../source/teams.rst:58
+msgid "This tab displays the list of Users that are members of this Team. This list may be searched by **Username**, **First Name**, or **Last Name**. For more information, refer to :ref:`ug_users`."
+msgstr "이 탭에는 해당 팀의 멤버인 사용자 목록이 표시됩니다. 이 목록은 **사용자 이름**, **성** 또는 **이름**으로 검색할 수 있습니다. 자세한 내용은 :ref:`ug_users`를 참조하십시오."
+
+#: ../../source/teams.rst:60
+msgid "|Teams - users list|"
+msgstr "|Teams - users list|"
+
+#: ../../source/teams.rst:68
+msgid "Add a User"
+msgstr "사용자 추가"
+
+#: ../../source/teams.rst:70
+msgid "In order to add a user to a team, the user must already be created. Refer to :ref:`ug_users_create` to create a user. Adding a user to a team adds them as a member only, specifying a role for the user on different resources can be done in the **Access** tab . To add existing users to the Team:"
+msgstr "팀에 사용자를 추가하려면 사용자가 이미 생성되어 있어야 합니다. 사용자를 생성하려면 :ref:`ug_users_create`를 참조하십시오. 팀에 사용자를 추가하면 멤버로만 추가되며, 다양한 리소스에 대한 사용자 역할은 **액세스** 탭에서 지정할 수 있습니다. 기존 사용자를 팀에 추가하려면 다음을 수행합니다."
+
+#: ../../source/teams.rst:72
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "**액세스** 탭에서 **추가** 버튼을 클릭합니다."
+
+#: ../../source/teams.rst:74
+msgid "Follow the prompts to add user(s) and assign them to roles."
+msgstr "프롬프트 지시에 따라 사용자를 추가하고 역할에 할당합니다."
+
+#: ../../source/teams.rst:76
+msgid "Click **Save** when done."
+msgstr "완료되면 **저장**을 클릭합니다."
+
+#: ../../source/teams.rst:78
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "특정 사용자의 역할을 제거하려면 리소스 옆에 있는 연결 해제(x) 버튼을 클릭합니다."
+
+#: ../../source/teams.rst:82
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "그러면 연결을 해제할지 묻는 확인 대화 상자가 열립니다."
+
+#: ../../source/teams.rst:88
+msgid "Team Roles"
+msgstr "팀 역할"
+
+#: ../../source/teams.rst:95
+msgid "Selecting the **Roles** view displays a list of the permissions that are currently available for this Team. The permissions list may be sorted and searched by **Resource Name**, **Type**, or **Role**."
+msgstr "**역할** 뷰를 선택하면 해당 팀에서 현재 사용 가능한 권한 목록이 표시됩니다. 권한 목록은 **리소스 이름**, **유형** 또는 **역할**로 정렬하고 검색할 수 있습니다."
+
+#: ../../source/teams.rst:97
+msgid "|Teams - permissions list|"
+msgstr "|Teams - permissions list|"
+
+#: ../../source/teams.rst:101
+msgid "The set of privileges assigned to Teams that provide the ability to read, modify, and administer projects, inventories, and other |at| elements are permissions. By default, the Team is given the \"read\" permission (also called a role)."
+msgstr "팀에 할당되어 프로젝트, 인벤토리 및 기타 |at| 요소를 읽고, 수정하고, 관리하는 기능을 제공하는 권한 세트가 바로 권한입니다. 기본적으로 팀에는 \"읽기\" 권한(역할이라고도 함)이 제공됩니다."
+
+#: ../../source/teams.rst:103
+msgid "Permissions must be set explicitly via an Inventory, Project, Job Template, or within the Organization view."
+msgstr "권한은 인벤토리, 프로젝트, 작업 템플릿 또는 조직 뷰를 통해 명시적으로 설정해야 합니다."
+
+#: ../../source/teams.rst:107
+msgid "Add Team Permissions"
+msgstr "팀 권한 추가"
+
+#: ../../source/teams.rst:109
+msgid "To add permissions to a Team:"
+msgstr "팀에 권한을 추가하려면 다음을 수행합니다."
+
+#: ../../source/teams.rst:111
+msgid "Click the **Add** button, which opens the Add Permissions Wizard."
+msgstr "**추가** 버튼을 클릭하여 권한 추가 마법사를 엽니다."
+
+#: ../../source/teams.rst:116
+msgid "Click to select the object for which the team will have access and click **Next**."
+msgstr "팀이 액세스할 수 있는 오브젝트를 클릭하여 선택하고 **다음**을 클릭합니다."
+
+#: ../../source/teams.rst:118
+msgid "Click to select the resource to assign team roles and click **Next**."
+msgstr "팀 역할을 할당할 리소스를 클릭하여 선택하고 **다음**을 클릭합니다."
+
+#: ../../source/teams.rst:122
+msgid "Click the checkbox beside the role to assign that role to your chosen type of resource. Different resources have different options available."
+msgstr "선택한 리소스 유형에 할당할 역할 옆에 있는 체크박스를 클릭합니다. 리소스에 따라 다양한 옵션을 사용할 수 있습니다."
+
+#: ../../source/teams.rst:127
+msgid "Click **Save** when done, and the Add Permissions Wizard closes to display the updated profile for the user with the roles assigned for each selected resource."
+msgstr "완료되어 **저장**을 클릭하면 권한 추가 마법사가 닫히면서 각 선택 리소스에 할당된 역할이 있는 업데이트된 사용자 프로필이 표시됩니다."
+
+#: ../../source/teams.rst:131
+msgid "To remove Permissions for a particular resource, click the disassociate (x) button next to its resource. This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "특정 리소스에 대한 권한을 제거하려면 리소스 옆에 있는 연결 해제(x) 버튼을 클릭합니다. 그러면 연결을 해제할지 묻는 확인 대화 상자가 열립니다."
+
+#: ../../source/teams.rst:136
+msgid "You can also add teams, individual, or multiple users and assign them permissions at the object level (projects, inventories, job templates, and workflow templates) as well. This feature reduces the time for an organization to onboard many users at one time."
+msgstr "팀, 개인 또는 여러 사용자를 추가하고 오브젝트 수준(프로젝트, 인벤토리, 작업 템플릿, 워크플로우 템플릿)에서 권한을 할당할 수도 있습니다. 이 기능을 사용하면 조직에서 한 번에 여러 사용자를 온보딩하는 시간을 줄일 수 있습니다."
+

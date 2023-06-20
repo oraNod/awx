@@ -1,0 +1,695 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ent_auth.rst:4
+msgid "Setting up Enterprise Authentication"
+msgstr "エンタープライズ認証の設定"
+
+#: ../../source/ent_auth.rst:11
+msgid "This section describes setting up authentication for the following enterprise systems:"
+msgstr "このセクションでは、以下のエンタープライズシステムの認証の設定について説明します。"
+
+#: ../../source/ent_auth.rst:18
+msgid "For LDAP authentication, see :ref:`ag_auth_ldap`."
+msgstr "LDAP 認証については「:ref:`ag_auth_ldap`」を参照してください。"
+
+#: ../../source/ent_auth.rst:20
+msgid "SAML, RADIUS, and TACACS+ users are categorized as 'Enterprise' users. The following rules apply to Enterprise users:"
+msgstr "SAML、RADIUS および TACACS+ ユーザーは 'Enterprise' ユーザーとして分類されます。以下のルールがエンタープライズユーザーに適用されます。"
+
+#: ../../source/ent_auth.rst:22
+msgid "Enterprise users can only be created via the first successful login attempt from remote authentication backend."
+msgstr "エンタープライズユーザーは、リモートの認証バックエンドからのログインに初めて成功した場合にのみ作成できます。"
+
+#: ../../source/ent_auth.rst:23
+msgid "Enterprise users cannot be created/authenticated if non-enterprise users with the same name has already been created in the controller."
+msgstr "コントローラー内にエンタープライズ以外のユーザーが同じ名前で作成されている場合は、エンタープライズユーザーは作成/認証できません。"
+
+#: ../../source/ent_auth.rst:24
+msgid "The controller passwords of enterprise users should always be empty and cannot be set by any user if there are enterprise backend-enabled."
+msgstr "エンタープライズバックエンドが有効になっている場合は、エンタープライズユーザーのコントローラーパスワードは常に空でなければならず、ユーザーによる設定はできません。"
+
+#: ../../source/ent_auth.rst:25
+msgid "If enterprise backends are disabled, an enterprise user can be converted to a normal controller user by setting the password field. However, this operation is irreversible, as the converted controller user can no longer be treated as enterprise user."
+msgstr "エンタープライズバックエンドが無効の場合は、パスワードフィールドを設定してエンタープライズユーザーを通常のコントローラーユーザーに変更できます。ただし、切り替えられたコントローラーユーザーはエンタープライズユーザーと見なされないため、この操作は元に戻すことはできません。"
+
+#: ../../source/ent_auth.rst:31
+msgid "Azure AD settings"
+msgstr "Azure AD 設定"
+
+#: ../../source/ent_auth.rst:36
+msgid "To set up enterprise authentication for Microsoft Azure Active Directory (AD), you will need to obtain an OAuth2 key and secret by registering your organization-owned application from Azure at https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app. Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. In order to register the application, you must supply it with your webpage URL, which is the Callback URL shown in the Settings Authentication screen."
+msgstr "Microsoft Azure Active Directory (AD) のエンタープライズ認証を設定するには、Azure (https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app.) から組織所有のアプリケーションを登録して、OAuth2 キーとシークレットを取得する必要があります。キーとシークレットはいずれも、一意のアプリケーションに所属して、異なる認証バックエンドで供給したり、再利用したりできません。アプリケーションを登録するには、Web ページの URL と合わせて指定する必要があります。この URL は、設定認証画面に表示されるコールバック URL です。"
+
+#: ../../source/ent_auth.rst:38
+#: ../../source/ent_auth.rst:82
+#: ../../source/ent_auth.rst:112
+#: ../../source/ent_auth.rst:529
+msgid "Click **Settings** from the left navigation bar."
+msgstr "左側のナビゲーションバーで **設定** をクリックします。"
+
+#: ../../source/ent_auth.rst:40
+msgid "On the left side of the Settings window, click **Azure AD settings** from the list of Authentication options."
+msgstr "設定ウィンドウの左側で、認証オプションの一覧から **Azure AD の設定** をクリックします。"
+
+#: ../../source/ent_auth.rst:42
+msgid "The **Azure AD OAuth2 Callback URL** field is already pre-populated and non-editable. Once the application is registered, Azure displays the Application ID and Object ID."
+msgstr "**Azure AD OAuth2 コールバック URL** には、事前に情報が入力されており、編集できません。アプリケーションを登録すると、Azure はアプリケーション ID およびオブジェクト ID を表示します。"
+
+#: ../../source/ent_auth.rst:45
+msgid "Click **Edit** and copy and paste Azure's Application ID to the **Azure AD OAuth2 Key** field."
+msgstr "**編集** をクリックし、**Azure AD OAuth2 キー** フィールドに Azure のアプリケーション ID をコピーアンドペーストします。"
+
+#: ../../source/ent_auth.rst:47
+msgid "Following Azure AD's documentation for connecting your app to Microsoft Azure Active Directory, supply the key (shown at one time only) to the client for authentication."
+msgstr "お使いのアプリとMicrosoft Azure Active Directory のリンクに関する Azure AD ドキュメントに従い、認証用に、キー (1 度だけ表示) をクライアントに提供します。"
+
+#: ../../source/ent_auth.rst:49
+msgid "Copy and paste the actual secret key created for your Azure AD application to the **Azure AD OAuth2 Secret** field of the Settings - Authentication screen."
+msgstr "設定の認証画面にある **Azure AD OAuth2 Secret** フィールドに、Azure AD アプリケーション用に作成した実際のシークレットキーをコピーアンドペーストします。"
+
+#: ../../source/ent_auth.rst:51
+msgid "For details on completing the mapping fields, see :ref:`ag_org_team_maps`."
+msgstr "マッピングフィールドの入力に関する情報は、「:ref:`ag_org_team_maps`」を参照してください。"
+
+#: ../../source/ent_auth.rst:53
+#: ../../source/ent_auth.rst:90
+#: ../../source/ent_auth.rst:477
+#: ../../source/ent_auth.rst:543
+msgid "Click **Save** when done."
+msgstr "完了したら **保存** をクリックします。"
+
+#: ../../source/ent_auth.rst:55
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the Microsoft Azure logo to allow logging in with those credentials."
+msgstr "認証が正しく設定されたかどうかは、|at| からログアウトします。ログイン画面に、Microsoft Azure のロゴが表示され、Azure の認証情報を使用してログインできるようになっていることを確認してください。"
+
+#: ../../source/ent_auth.rst:60
+msgid "For application registering basics in Azure AD, refer to the `Azure AD Identity Platform (v2)`_ overview."
+msgstr "Azure AD で Basics を登録するアプリケーションについては、「`Azure AD Identity Platform (v2)`_ の概要」を参照してください。"
+
+#: ../../source/ent_auth.rst:66
+msgid "LDAP Authentication"
+msgstr "LDAP 認証"
+
+#: ../../source/ent_auth.rst:68
+msgid "Refer to the :ref:`ag_auth_ldap` section."
+msgstr "「:ref:`ag_auth_ldap`」セクションを参照します。"
+
+#: ../../source/ent_auth.rst:74
+msgid "RADIUS settings"
+msgstr "RADIUS 設定"
+
+#: ../../source/ent_auth.rst:80
+msgid "|at| can be configured to centrally use RADIUS as a source for authentication information."
+msgstr "|at| は、認証情報のソースとして、RADIUS を一元的に使用するように設定することができます。"
+
+#: ../../source/ent_auth.rst:84
+msgid "On the left side of the Settings window, click **RADIUS settings** from the list of Authentication options."
+msgstr "設定ウィンドウの左側で、認証オプションの一覧から **RADIUS 設定** をクリックします。"
+
+#: ../../source/ent_auth.rst:86
+msgid "Click **Edit** and enter the Host or IP of the Radius server in the **Radius Server** field. If this field is left blank, Radius authentication is disabled."
+msgstr "**編集** をクリックし、**Radius サーバー** フィールドに Radius サーバーのホストまたは IP を入力してください。このフィールドを空の状態にすると、Radius 認証は無効になります。"
+
+#: ../../source/ent_auth.rst:88
+msgid "Enter the port and secret information in the next two fields."
+msgstr "次の 2 つのフィールドには、ポートとシークレットの情報を入力します。"
+
+#: ../../source/ent_auth.rst:96
+msgid "SAML settings"
+msgstr "SAML 設定"
+
+#: ../../source/ent_auth.rst:102
+msgid "SAML allows the exchange of authentication and authorization data between an Identity Provider (IdP - a system of servers that provide the Single Sign On service) and a Service Provider (in this case, |at|). |at| can be configured to talk with SAML in order to authenticate (create/login/logout) controller users. User Team and Organization membership can be embedded in the SAML response to the controller."
+msgstr "SAML を使用すると、ID プロバイダー(IdP - シングルサインオンサービスを提供するサーバーシステム) とサービスプロバイダー (今回の場合は |at|) の間で認証および承認データを交換できます。|at| は、コントローラーユーザーの認証用に (作成/ログイン/ログアウト) に SAML と通信するように設定できます。ユーザーチームや、組織のメンバーシップは、コントローラーへの SAML の応答に埋め込むことができます。"
+
+#: ../../source/ent_auth.rst:106
+msgid "The following instructions describe |at| as the service provider. To authenticate users through RHSSO (keycloak), refer to the `Red Hat Single Sign On Integration with the Automation Controller`_ blog."
+msgstr "以下では、|at| がサービスプロバイダーとして機能することについて説明します。RHSSO (keycloak) でユーザーを認証する方法は、「`Red Hat Single Sign On Integration with the Automation Controller`_」のブログを参照してください。"
+
+#: ../../source/ent_auth.rst:110
+msgid "To setup SAML authentication:"
+msgstr "SAML 認証の設定方法:"
+
+#: ../../source/ent_auth.rst:114
+msgid "On the left side of the Settings window, click **SAML settings** from the list of Authentication options."
+msgstr "設定ウィンドウの左側で、認証オプションのリストから **SAML 設定** をクリックします。"
+
+#: ../../source/ent_auth.rst:116
+msgid "The **SAML Assertion Consume Service (ACS) URL** and **SAML Service Provider Metadata URL** fields are pre-populated and are non-editable. Contact the Identity Provider administrator and provide the information contained in these fields."
+msgstr "**SAML Assertion Consume Service (ACS) URL** および **SAML Service Provider Metadata URL** フィールドには、事前にデータが入力されており、編集できません。アイデンティティープロバイダーの管理者に問い合わせて、これらのフィールドの情報を指定してください。"
+
+#: ../../source/ent_auth.rst:118
+msgid "Click **Edit** and set the **SAML Service Provider Entity ID** to be the same as the **Base URL of the controller host** field that can be found in the Miscellaneous System settings screen by clicking **Settings** from the left navigation bar. Through the API, it can be viewed in the ``/api/v2/settings/system``, under the ``CONTROLLER_BASE_URL`` variable. The Entity ID can be set to any one of the individual controller cluster nodes, but it is good practice to set it to the URL of the Service Provider. Ensure that the Base URL matches the FQDN of the load balancer (if used)."
+msgstr "**編集** をクリックし、左側のナビゲーションバーから **設定** をクリックして、その他のシステム設定ウィンドウにある **コントローラーホストの Base URL** と同じになるように、**SAML サービスプロバイダーエンティティー ID* を設定します。API では、``/api/v2/settings/system`` の ``CONTROLLER_BASE_URL`` 変数の下で確認できます。エンティティー ID は、個別のコントローラーのクラスターノードの 1 つに設定可能ですが、サービスプロバイダーの URL に設定することが推奨されます。Base URL は、ロードバランサーの FQDN (使用する場合) と一致させるようにしてください。"
+
+#: ../../source/ent_auth.rst:122
+msgid "The Base URL is different for each node in a cluster. Commonly, a load balancer will sit in front of many controller cluster nodes to provide a single entry point, the controller Cluster FQDN. The SAML Service Provider must be able establish an outbound connection and route to the controller Cluster Node or the controller Cluster FQDN set in the SAML Service Provider Entity ID."
+msgstr "Base URL は、クラスター内のノードごとに異なります。通常、ロードバランサーは単一のエントリーポイント (コントローラークラスター FQDN) となるように多数のコントローラークラスターノードに置かれます。SAML サービスプロバイダーは、送信接続を確立して、SAML Service Provider Entity ID に設定されたコントローラークラスターノードまたはコントローラークラスター FQDN にルートします。"
+
+#: ../../source/ent_auth.rst:124
+msgid "In this example, the Service Provider is the controller cluster, and therefore, the ID is set to the controller Cluster FQDN."
+msgstr "以下の例では、サービスプロバイダーはコントローラークラスターであるため、ID はコントローラークラスター FQDN に設定されています。"
+
+#: ../../source/ent_auth.rst:128
+msgid "Create a server certificate for the Ansible cluster. Typically when an Ansible cluster is configured, the controller nodes will be configured to handle HTTP traffic only and the load balancer will be an SSL Termination Point. In this case, an SSL certificate is required for the load balancer, and not for the individual controller Cluster Nodes. SSL can either be enabled or disabled per individual controller node, but should be disabled when using an SSL terminated load balancer. It is recommended to use a non-expiring self signed certificate to avoid periodically updating certificates. This way, authentication will not fail in case someone forgets to update the certificate."
+msgstr "Ansible クラスターのサーバー証明書を作成します。通常、Ansible クラスターの設定時にコントローラーノードは HTTP トラフィックのみを処理するように設定され、ロードバランサーは SSL ターミネーションポイントとなります。今回の場合は、SSL 証明書が個別のコントローラーノード用ではなく、ロードバランサー用に必要となります。SSL は個別のコントローラーノードごとに有効化または無効化できますが、SSL でターミネーションされたロードバランサーを使用する場合には SSL は無効にする必要があります。定期的に証明書を更新しなくても良いように、期限のない自己署名証明書を使用することが推奨されます。こうすることで、証明書を更新し忘れても認証は失敗しません。"
+
+#: ../../source/ent_auth.rst:132
+msgid "The **SAML Service Provider Public Certificate** field should contain the entire certificate, including the \"-----BEGIN CERTIFICATE-----\" and \"-----END CERTIFICATE-----\"."
+msgstr "**SAML サービスプロバイダーの公開証明書** フィールドには、「-----BEGIN CERTIFICATE-----」および「-----END CERTIFICATE-----」など、証明書全体を含める必要があります。"
+
+#: ../../source/ent_auth.rst:134
+msgid "If you are using a CA bundle with your certificate, include the entire bundle in this field."
+msgstr "証明書で CA バンドルを使用する場合には、このフィールドにバンドル全体の情報を追加してください。"
+
+#: ../../source/ent_auth.rst:138
+msgid "As an example for public certs:"
+msgstr "パブリック証明書の例:"
+
+#: ../../source/ent_auth.rst:146
+msgid "Create an optional private key for the controller to use as a service provider (SP) and enter it in the **SAML Service Provider Private Key** field."
+msgstr "コントローラーをサービスプロバイダー (SP) として使用するために任意の秘密鍵を作成して、**SAML サービスプロバイダーの秘密鍵** フィールドに入力します。"
+
+#: ../../source/ent_auth.rst:148
+msgid "As an example for private keys:"
+msgstr "秘密鍵の例:"
+
+#: ../../source/ent_auth.rst:157
+msgid "Provide the IdP with some details about the controller cluster during the SSO process in the **SAML Service Provider Organization Info** field."
+msgstr "**SAML サービスプロバイダーの組織情報** フィールドで、SSO プロセス中にコントローラークラスターに関する詳細を IdP に指定します。"
+
+#: ../../source/ent_auth.rst:169
+#: ../../source/ent_auth.rst:185
+#: ../../source/ent_auth.rst:198
+msgid "For example:"
+msgstr "たとえば、以下のようになります。"
+
+#: ../../source/ent_auth.rst:174
+msgid "These fields are required in order to properly configure SAML within the controller."
+msgstr "コントローラー内で SAML を適切に設定するには、以下のフィールドが必要です。"
+
+#: ../../source/ent_auth.rst:176
+msgid "Provide the IdP with the technical contact information in the **SAML Service Provider Technical Contact** field. Do not remove the contents of this field."
+msgstr "**SAML Service Provider Technical Contact** フィールドで、技術に関する問い合わせ情報を IdP に指定します。フィールドの内容は削除しないでください。"
+
+#: ../../source/ent_auth.rst:189
+msgid "Provide the IdP with the support contact information in the **SAML Service Provider Support Contact** field. Do not remove the contents of this field."
+msgstr "**SAML Service Provider Support Contact** フィールドにサポートの問い合わせ情報を IdP に指定します。このフィールドの内容は削除しないでください。"
+
+#: ../../source/ent_auth.rst:202
+msgid "In the **SAML Enabled Identity Providers** field, provide information on how to connect to each Identity Provider listed. The controller expects the following SAML attributes in the example below:"
+msgstr "**SAML で有効にされたアイデンティティープロバイダー** フィールドでは、一覧の各 ID プロバイダーの接続方法に関する情報を指定します。以下の例では、コントローラーに以下の SAML 属性を指定する必要があります。"
+
+#: ../../source/ent_auth.rst:211
+msgid "If these attributes are not known, map existing SAML attributes to lastname, firstname, email and username."
+msgstr "これらの属性が不明な場合には、既存の SAML 属性に姓名、電子メール、ユーザー名をマッピングしてください。"
+
+#: ../../source/ent_auth.rst:213
+msgid "Configure the required keys for each IDp:"
+msgstr "IdP ごとに必要なキーを設定します。"
+
+#: ../../source/ent_auth.rst:215
+msgid "``attr_user_permanent_id`` - the unique identifier for the user. It can be configured to match any of the attribute sent from the IdP. Usually, it is set to ``name_id`` if ``SAML:nameid`` attribute is sent to the controller node or it can be the username attribute, or a custom unique identifier."
+msgstr "``attr_user_permanent_id``: ユーザーの一意識別名。IdP から送信された属性のいずれかに一致するように設定します。通常、 ``SAML:nameid`` 属性、ユーザー名属性、またはカスタムの一意識別名がコントローラーノードに送信される場合は ``name_id`` に設定します。"
+
+#: ../../source/ent_auth.rst:216
+msgid "``entity_id`` - the Entity ID provided by the Identity Provider administrator. The admin creates a SAML profile for the controller and it generates a unique URL."
+msgstr "``entity_id``: ID プロバイダーの管理者が指定したエンティティー ID。管理者がコントローラーの SAML プロファイルを作成し、一意 URL が作成されます。"
+
+#: ../../source/ent_auth.rst:217
+msgid "``url`` - the Single Sign On (SSO) URL the controller redirects the user to, when SSO is activated."
+msgstr "``url`` - シングルサインオン (SSO) が有効な場合にコントローラーがユーザーをリダイレクトする SSO の URL。"
+
+#: ../../source/ent_auth.rst:218
+msgid "``x509_cert`` - the certificate provided by the IdP admin generated from the SAML profile created on the Identity Provider. Remove the ``--BEGIN CERTIFICATE--`` and ``--END CERTIFICATE--`` headers, then enter the cert as one non-breaking string."
+msgstr "``x509_cert``: ID プロバイダーで作成した SAML プロファイルをもとに生成された IdP 管理者が提供する証明書。``--BEGIN CERTIFICATE--`` および ``--END CERTIFICATE--`` ヘッダーを削除してから、改行なしの文字列 1 つで証明書を入力します。"
+
+#: ../../source/ent_auth.rst:220
+msgid "Multiple SAML IdPs are supported. Some IdPs may provide user data using attribute names that differ from the default OIDs (https://github.com/omab/python-social-auth/blob/master/social/backends/saml.py). The SAML ``NameID`` is a special attribute used by some Identity Providers to tell the Service Provider (the controller cluster) what the unique user identifier is. If it is used, set the ``attr_user_permanent_id`` to ``name_id`` as shown in the example. Other attribute names may be overridden for each IdP as shown below."
+msgstr "SAML IdP は、複数サポートされています。一部の IdP はデフォルト OID とは異なる属性名を使用してユーザーデータを提供することがあります (https://github.com/omab/python-social-auth/blob/master/social/backends/saml.py)。SAML ``NameID`` は、ID プロバイダーが使用する特別な属性で、一意のユーザー識別子が何であるかをサービスプロバイダー (コントローラークラスター) に渡します。これを使用する場合には、例にあるように、``attr_user_permanent_id`` を ``name_id`` に設定してください。他の属性名は、以下に記載の IdP ごとに上書きされる可能性があります。"
+
+#: ../../source/ent_auth.rst:246
+msgid "Do not create a SAML user that shares the same email with another user (including a non-SAML user). Doing so will result in the accounts being merged. Be aware that this same behavior exists for System Admin users, thus a SAML login with the same email address as the System Admin user will login with System Admin privileges. For future reference, you can remove (or add) Admin Privileges based on SAML mappings, as described in subsequent steps."
+msgstr "同じメールアドレスを別のユーザー (SAML ユーザー以外も含む) と共有する SAML ユーザーは作成しないでください。システム管理ユーザーでも同じように動作するので、システム管理者ユーザーと同じメールアドレスで、SAML ログインをすると、システム管理者権限でログインされてしまいます。今後の参考として、後述の手順のように、SAML マッピングをもとにする管理者権限を削除 (または追加) できます。"
+
+#: ../../source/ent_auth.rst:251
+msgid "The IdP provides the email, last name and firstname using the well known SAML urn. The IdP uses a custom SAML attribute to identify a user, which is an attribute that the controller is unable to read. Instead, the controller can understand the unique identifier name, which is the URN. Use the URN listed in the SAML “Name” attribute for the user attributes as shown in the example below."
+msgstr "IdP は、既知の SAML URN を使用してメールおよび姓名を提供します。IdP は、カスタムの SAML 属性を使用して、ユーザーを特定しますが、この属性はコントローラーでは読み込みできない属性です。コントローラーは一意の識別名、つまり URN は理解します。以下の例にあるように、ユーザー属性の SAML の「Name」属性に記載の URL を使用します。"
+
+#: ../../source/ent_auth.rst:255
+msgid "Optionally provide the **SAML Organization Map**. For further detail, see :ref:`ag_org_team_maps`."
+msgstr "オプションで **SAML 組織マップ** を指定します。詳細は、「:ref:`ag_org_team_maps`」を参照してください。"
+
+#: ../../source/ent_auth.rst:257
+msgid "The controller can be configured to look for particular attributes that contain Team and Organization membership to associate with users when they log into the controller. The attribute names are defined in the **SAML Organization Attribute Mapping** and the **SAML Team Attribute Mapping** fields."
+msgstr "コントローラーは、コントローラーへのログイン時に、ユーザーに関連するチームや組織のメンバーシップなどの特定の属性を検索するように設定できます。これらの属性名は、**SAML 組織属性マッピング** フィールドや **SAML チーム属性マッピング** フィールドで定義します。"
+
+#: ../../source/ent_auth.rst:259
+msgid "**Example SAML Organization Attribute Mapping**"
+msgstr "** SAML 組織属性のマッピングの例**"
+
+#: ../../source/ent_auth.rst:261
+msgid "Below is an example SAML attribute that embeds user organization membership in the attribute *member-of*."
+msgstr "以下の例は、属性 *member-of* にユーザー組織メンバーシップを埋め込む SAML 属性です。"
+
+#: ../../source/ent_auth.rst:280
+msgid "Below is the corresponding controller configuration."
+msgstr "以下は、対応するコントローラー設定です。"
+
+#: ../../source/ent_auth.rst:292
+msgid "``saml_attr``: is the SAML attribute name where the organization array can be found and ``remove`` is set to **True** to remove a user from all organizations before adding the user to the list of Organizations. To keep the user in whatever Organization(s) they are in while adding the user to the Organization(s) in the SAML attribute, set ``remove`` to **False**."
+msgstr "``saml_attr``: 組織アレイが含まれる SAML 属性名で、``remove`` を **True** に設定すると、組織の一覧にユーザーを追加する前に全組織からユーザーを削除します。ユーザーを組織にそのまま所属させた状態で、SAML 属性の組織にユーザーを追加する場合には、``remove`` は **False** に指定します。"
+
+#: ../../source/ent_auth.rst:294
+msgid "``saml_admin_attr``: Similar to the ``saml_attr`` attribute, but instead of conveying organization membership, this attribute conveys admin organization permissions."
+msgstr "``saml_admin_attr``: ``saml_attr`` 属性と同様ですが、組織のメンバーシップを指定する代わりに、この属性は管理者の組織パーミッションを指定します。"
+
+#: ../../source/ent_auth.rst:296
+msgid "**Example SAML Team Attribute Mapping**"
+msgstr "**SAML チーム属性のマッピングの例**"
+
+#: ../../source/ent_auth.rst:298
+msgid "Below is another example of a SAML attribute that contains a Team membership in a list."
+msgstr "以下は、リスト内のチームメンバーシップを含む SAML 属性の例です。"
+
+#: ../../source/ent_auth.rst:334
+msgid "``saml_attr``: The SAML attribute name where the team array can be found."
+msgstr "``saml_attr``: チームアレイが含まれる SAML 属性名。"
+
+#: ../../source/ent_auth.rst:335
+msgid "``remove``: Set ``remove`` to **True** to remove user from all Teams before adding the user to the list of Teams. To keep the user in whatever Team(s) they are in while adding the user to the Team(s) in the SAML attribute, set ``remove`` to **False**."
+msgstr "``remove``: ``remove`` は **True** に設定して、チームの一覧にユーザーを追加する前に、全チームからユーザーを削除します。ユーザーを組織にそのまま所属させた状態で、SAML 属性の組織にユーザーを追加する場合には、``remove`` は **False** に指定します。"
+
+#: ../../source/ent_auth.rst:336
+msgid "``team_org_map``: An array of dictionaries of the form ``{ \"team\": \"<AWX Team Name>\", \"organization\": \"<AWX Org Name>\" }`` that defines mapping from controller Team -> controller Organization. This is needed because the same named Team can exist in multiple Organizations in the controller. The organization to which a team listed in a SAML attribute belongs to, would be ambiguous without this mapping."
+msgstr "``team_org_map``: コントローラーチーム -> コントローラー組織からのマッピングを定義する ``{ \"team\": \"<AWX Team Name>\", \"organization\": \"<AWX Org Name>\" }`` フォームのディクショナリーアレイ。これは、複数の組織に同じ名前のチームが存在できるため必要です。SAML 属性にリストされたチームが所属する組織は、このマッピングがないと曖昧になってしまいます。"
+
+#: ../../source/ent_auth.rst:338
+msgid "You could create an alias to override both Teams and Orgs in the **SAML Team Attribute Mapping**. This option becomes very handy in cases when the SAML backend sends out complex group names, like in the example below:"
+msgstr "**SAML チーム属性マッピング** でチームと組織の両方をオーバーライドするエイリアスを作成できます。このオプションは、以下の例のように、SAML バックエンドが複雑なグループ名を送信する場合に非常に便利です。"
+
+#: ../../source/ent_auth.rst:359
+msgid "Once the user authenticates, the controller creates organization and team aliases, as expected."
+msgstr "ユーザーが認証されると、コントローラーは期待どおりに組織とチームのエイリアスを作成します。"
+
+#: ../../source/ent_auth.rst:362
+msgid "Optionally provide team membership mapping in the **SAML Team Map** field. For further detail, see :ref:`ag_org_team_maps`."
+msgstr "オプションで、**SAML チームマップ** フィールドにチームのメンバーシップマッピングを指定します。詳細は、「:ref:`ag_org_team_maps`」を参照してください。"
+
+#: ../../source/ent_auth.rst:364
+msgid "Optionally provide security settings in the **SAML Security Config** field. This field is the equivalent to the ``SOCIAL_AUTH_SAML_SECURITY_CONFIG`` field in the API. Refer to the `OneLogin's SAML Python Toolkit`_ for further detail."
+msgstr "オプションで **SAML セキュリティー設定** フィールドに、セキュリティー設定を指定します。このフィールドは、API の ``SOCIAL_AUTH_SAML_SECURITY_CONFIG`` フィールドと同じです。詳細は、「`OneLogin's SAML Python Toolkit`_ 」を参照してください。"
+
+#: ../../source/ent_auth.rst:368
+msgid "The controller uses the ``python-social-auth`` library when users log in through SAML. This library relies on the ``python-saml`` library to make available the settings for the next two optional fields, **SAML Service Provider Extra Configuration Data** and **SAML IDP to EXTRA_DATA Attribute Mapping**."
+msgstr "コントローラーは、SAML 経由でユーザーがログインした場合に ``python-social-auth`` ライブラリーを使用します。このライブラリーは、``python-saml`` ライブラリーに依存し、次の **SAML サービスプロバイダーの追加設定データ** と **SAML IDP の extra_data 属性へのマッピング** の任意フィールドの設定で利用できるようにします。"
+
+#: ../../source/ent_auth.rst:370
+msgid "The **SAML Service Provider Extra Configuration Data** field is equivalent to the ``SOCIAL_AUTH_SAML_SP_EXTRA`` in the API. Refer to the `python-saml library documentation`_ to learn about the valid service provider extra (``SP_EXTRA``) parameters."
+msgstr "**SAML Service Provider Extra Configuration Data** フィールドは、API の ``SOCIAL_AUTH_SAML_SP_EXTRA`` と同じです。有効なサービスプロバイダーの extra (``SP_EXTRA``) パラメーターに関する詳細は、「`python-saml library documentation`_ 」を参照してください。"
+
+#: ../../source/ent_auth.rst:374
+msgid "The **SAML IDP to EXTRA_DATA Attribute Mapping** field is equivalent to the ``SOCIAL_AUTH_SAML_EXTRA_DATA`` in the API.  See Python's `SAML Advanced Settings`_ documentation for more information."
+msgstr "**SAML IDP の extra_data 属性へのマッピング** フィールドは、API の ``SOCIAL_AUTH_SAML_EXTRA_DATA`` と同じです。詳細は、Python の「`SAML Advanced Settings`_ ドキュメント」を参照してください。"
+
+#: ../../source/ent_auth.rst:380
+msgid "The **SAML User Flags Attribute Mapping** field allows you to map SAML roles and attributes to special user flags. The following attributes are valid in this field:"
+msgstr "**SAML ユーザーフラグ属性マッピング** フィールドを使用すると、SAML ロールと属性を特別なユーザーフラグにマップできます。このフィールドでは、次の属性が有効です。"
+
+#: ../../source/ent_auth.rst:382
+msgid "``is_superuser_role``: Specifies one or more SAML roles which will grant a user the superuser flag"
+msgstr "``is_superuser_role``: ユーザーにスーパーユーザーフラグを付与する 1 つ以上の SAML ロールを指定します。"
+
+#: ../../source/ent_auth.rst:383
+msgid "``is_superuser_attr``: Specifies a SAML attribute which will grant a user the superuser flag"
+msgstr "``is_superuser_attr``: ユーザーにスーパーユーザーフラグを付与する SAML 属性を指定します。"
+
+#: ../../source/ent_auth.rst:384
+msgid "``is_superuser_value``: Specifies one or more values required for ``is_superuser_attr`` that is required for the user to be a superuser"
+msgstr "``is_superuser_value``: ユーザーがスーパーユーザーであるために要求される ``is_superuser_attr`` に必要な特定の値を 1 つ以上、指定します。"
+
+#: ../../source/ent_auth.rst:385
+msgid "``remove_superusers``: Boolean indicating if the superuser flag should be removed for users or not. Defaults to ``true``. (See below for more details)"
+msgstr "``remove_superusers``: ユーザーのスーパーユーザーフラグを削除する必要があるかどうかを示すブール値。デフォルトは``true``. (詳細は下記参照)"
+
+#: ../../source/ent_auth.rst:386
+msgid "``is_system_auditor_role``: Specifies one or more SAML roles which will grant a user the system auditor flag"
+msgstr "``is_system_auditor_role``: ユーザーにシステム監査人フラグを付与する SAML ロールを指定します。"
+
+#: ../../source/ent_auth.rst:387
+msgid "``is_system_auditor_attr``: Specifies a SAML attribute which will grant a user the system auditor flag"
+msgstr "``is_system_auditor_attr``: ユーザーにシステム監査人フラグを付与する SAML 属性を指定します。"
+
+#: ../../source/ent_auth.rst:388
+msgid "``is_system_auditor_value``: Specifies one or more values required for ``is_system_auditor_attr`` that is required for the user to be a system auditor"
+msgstr "``is_system_auditor_value``: ユーザーがシステム監査人になるために要求される ``is_system_auditor_attr`` に必要な特定の値を 1 つ以上、指定します。"
+
+#: ../../source/ent_auth.rst:389
+msgid "``remove_system_auditors``: Boolean indicating if the system_auditor flag should be removed for users or not. Defaults to ``true``. (See below for more details)"
+msgstr "``remove_system_auditors``: ユーザーに対して system_auditor フラグを削除する必要があるかどうかを示すブール値。デフォルトは``true``. (詳細は下記参照)"
+
+#: ../../source/ent_auth.rst:392
+msgid "The ``role`` and ``value`` fields are lists and are `or` logic. So if you specify two roles: `[ \"Role 1\", \"Role 2\" ]` and the SAML user has either role the logic will consider them to have the required role for the flag. This is the same with the ``value`` field, if you specify: `[ \"Value 1\", \"Value 2\"]` and the SAML user has either value for their attribute the logic will consider their attribute value to have matched."
+msgstr "``role``と``value``フィールドはリストであり、`or` ロジックです。したがって、2 つのロールを指定すると、`[ \"Role 1\", \"Role 2\" ]` のようになります。SAML ユーザーには、フラグに必要なロールがあるとロジックが見なすいずれかのロールがあります。`[ \"Value 1\", \"Value 2\"]` を指定する場合は、これは ``value`` フィールドです。この場合、SAML ユーザーの属性にいずれかの値があり、ロジックは属性値が一致したと見なします。"
+
+#: ../../source/ent_auth.rst:394
+msgid "If ``role`` and ``attr`` are both specified for either ``superuser`` or ``system_auditor``, the settings for ``attr`` will take precedence over a ``role``.  System Admin and System Auditor roles are evaluated at login for a SAML user. If you grant a SAML user one of these roles through the UI and not through the SAML settings, the roles will be removed on the user's next login unless the ``remove`` flag is set to false. The remove flag, if ``false``, will never allow the SAML adapter to remove the corresponding flag from a user.  The following table describes how the logic works."
+msgstr "``role`` と ``attr`` の両方が ``superuser`` または ``system_auditor`` のいずれかに対して指定されている場合、``attr`` の設定は ``role`` よりも優先されます。システム管理者およびシステム監査者のロールは、SAML ユーザーのログイン時に評価されます。SAML 設定ではなく、UI でこれらのロールの 1 つを SAML ユーザーに付与すると、``remove`` フラグが false に設定されていない限り、ロールはユーザーの次回ログイン時に削除されます。remove フラグが ``false`` に設定されている場合は、SAML アダプターは対応するフラグをユーザーから削除できません。以下の表は、そのロジックがどのように機能するか説明しています。"
+
+#: ../../source/ent_auth.rst:397
+msgid "Has one or more roles"
+msgstr "1 つ以上のロールを持つ"
+
+#: ../../source/ent_auth.rst:397
+msgid "Has Attr"
+msgstr "Attr があります"
+
+#: ../../source/ent_auth.rst:397
+msgid "Has one or more Attr Values"
+msgstr "1 つ以上の Attr 値を持つ"
+
+#: ../../source/ent_auth.rst:397
+msgid "Remove Flag"
+msgstr "フラグを削除"
+
+#: ../../source/ent_auth.rst:397
+msgid "Previous Flag"
+msgstr "前の手順"
+
+#: ../../source/ent_auth.rst:397
+msgid "Is Flagged"
+msgstr "フラグが立てられています"
+
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:453
+msgid "No"
+msgstr "不可"
+
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:413
+msgid "N/A"
+msgstr "該当なし"
+
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:461
+msgid "True"
+msgstr "True"
+
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:461
+msgid "False"
+msgstr "False"
+
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:461
+#: ../../source/ent_auth.rst:461
+#: ../../source/ent_auth.rst:461
+msgid "Yes"
+msgstr "はい"
+
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:461
+msgid "Unset"
+msgstr "Unset"
+
+#: ../../source/ent_auth.rst:464
+msgid "Each time a SAML user authenticates to |at|, these checks will be performed and the user flags will be altered as needed. If ``System Administrator`` or ``System Auditor`` is set for a SAML user within the UI, the SAML adapter will override the UI setting based on the rules above. If you would prefer that the user flags for SAML users do not get removed when a SAML user logs in, you can set the ``remove_`` flag to ``false``. With the remove flag set to ``false``, a user flag set to ``true`` through either the UI, API or SAML adapter will not be removed. However, if a user does not have the flag, and the above rules determine the flag should be added, it will be added, even if the flag is ``false``."
+msgstr "SAML ユーザーが |at| に認証される度にこれらのチェックが実行され、必要に応じてユーザーフラグが変更されます。もしも、UI 内で ``System Administrator`` また ``System Auditor`` が SAML ユーザー用に設定されている場合、SAML アダプターは上記のルールに基づいて UI 設定をオーバーライドします。SAML ユーザーのログイン時に SAML ユーザーのユーザーフラグが削除されないようにしたい場合は、``remove_`` にフラグを ``false`` に設定します。remove フラグを ``false`` に設定した場合、UI、API、または SAML アダプターのいずれかを介してユーザーフラグ ``true`` に設定すると、削除されることはありません。ただし、ユーザーがフラグを持っておらず、上記のルールによってフラグを追加する必要があると判断された場合は、フラグが ``false`` でも追加されます。"
+
+#: ../../source/ent_auth.rst:466
+msgid "Example::"
+msgstr "例:"
+
+#: ../../source/ent_auth.rst:479
+msgid "To verify that the authentication was configured correctly, load the auto-generated URL found in the **SAML Service Provider Metadata URL** into a browser. It should output XML output, otherwise, it is not configured correctly."
+msgstr "認証が正しく設定されていることを確認するには、**SAML Service Provider Metadata URL** にある、自動生成された URL をブラウザーで読み込みます。すると、XML の出力が表示されるはずです。表示されない場合には正しく設定されていません。"
+
+#: ../../source/ent_auth.rst:481
+msgid "Alternatively,  logout of |at| and the login screen will now display the SAML logo to indicate it as a alternate method of logging into |at|."
+msgstr "または、|at| をログアウトしてください。ログアウトすると、|at| への別のログイン方法として、ログイン画面に SAML のロゴが表示されているはずです。"
+
+#: ../../source/ent_auth.rst:487
+msgid "Transparent SAML Logins"
+msgstr "透過的な SAML ログイン"
+
+#: ../../source/ent_auth.rst:493
+msgid "For transparent logins to work, you must first get IdP-initiated logins to work. To achieve this:"
+msgstr "透過的なログインを機能させるには、まず IdP-initiated ログインを機能させる必要があります。これには、以下を実行します。"
+
+#: ../../source/ent_auth.rst:495
+msgid "Set the ``RelayState`` on the IdP to the key of the IdP definition in the ``SAML Enabled Identity Providers`` field as previously described. In the example given above, ``RelayState`` would need to be either ``myidp`` or ``onelogin``."
+msgstr "上記の例で先ほど説明したように、IdP の ``RelayState`` を ``SAML Enabled Identity Providers`` フィールドの IdP 定義のキーに設定します。``RelayState`` は ``myidp`` または ``onelogin`` のいずれかでなければなりません。"
+
+#: ../../source/ent_auth.rst:497
+msgid "Once this is working, specify the redirect URL for non-logged-in users to somewhere other than the default controller login page by using the **Login redirect override URL** field in the Miscellaneous Authentication settings window of the **Settings** menu, accessible from the left navigation bar. This should be set to ``/sso/login/saml/?idp=<name-of-your-idp>`` for transparent SAML login, as shown in the example."
+msgstr "これが機能したら、左側のナビゲーションバーからアクセスできる **設定** メニューのその他の認証設定にある **ログインリダイレクトオーバーライド URL** フィールドを使用して、デフォルトのコントローラーログインページ以外の場所に、ログインしていないユーザーをリダイレクトする URL を指定します。以下の例のように、透過的な SAML ログインには、これを ``/sso/login/saml/?idp=<name-of-your-idp>`` に設定する必要があります。"
+
+#: ../../source/ent_auth.rst:503
+msgid "The above is a sample of a typical IdP format, but may not be the correct format for your particular case. You may need to reach out to your IdP for the correct transparent redirect URL as that URL is not the same for all IdPs."
+msgstr "上記は通常の IdP 形式の例ですが、特定のケースの正しい形式になるわけではありません。この URL はすべての IdP で同じではないため、正しい透過的なリダイレクト URL に到達することが必要になる場合があります。"
+
+#: ../../source/ent_auth.rst:505
+msgid "After transparent SAML login is configured, to log in using local credentials or a different SSO, go directly to ``https://<your-tower-server>/login``.  This provides the standard controller login page, including SSO authentication buttons, and allows you to log in with any configured method."
+msgstr "透過的な SAML ログインが設定されたら、ローカルの認証情報または異なる SSL を使用して直接 ``https://<your-tower-server>/login`` に移動すると、SSO 認証ボタンを含む標準のコントローラーログインページが表示され、設定した方法でログインできるようになります。"
+
+#: ../../source/ent_auth.rst:509
+msgid "Enabling Logging for SAML"
+msgstr "SAML のロギングを有効にする"
+
+#: ../../source/ent_auth.rst:511
+msgid "You can enable logging messages for the SAML adapter the same way you can enable logging for LDAP. Refer to the :ref:`ldap_logging` section."
+msgstr "LDAP のロギングを有効にするのと同じ方法で、SAML アダプターのロギングメッセージを有効にすることができます。:ref:`ldap_logging` セクションを参照してください。"
+
+#: ../../source/ent_auth.rst:517
+msgid "TACACS+ settings"
+msgstr "TACACS+ 設定"
+
+#: ../../source/ent_auth.rst:523
+msgid "Terminal Access Controller Access-Control System Plus (TACACS+) is a protocol that handles remote authentication and related services for networked access control through a centralized server. In particular, TACACS+ provides authentication, authorization and accounting (AAA) services, in which you can configure |at| to use as a source for authentication."
+msgstr "Terminal Access Controller Access-Control System Plus (TACACS+) は、リモート認証と集中型のサーバーでネットワークアクセス制御を行うための関連のサービスを処理するプロトコルです。特に、TACACS+ は認証、Authentication (認証)、Authorization (許可)、Accounting (課金やユーザーのアクセス情報の収集) サービスを提供し、|at| が認証のソースとして使用されるように設定します。"
+
+#: ../../source/ent_auth.rst:527
+msgid "This feature is deprecated and will be removed in a future release."
+msgstr "この機能は非推奨となり、今後のリリースで削除されます。"
+
+#: ../../source/ent_auth.rst:531
+msgid "On the left side of the Settings window, click **TACACs+ settings** from the list of Authentication options."
+msgstr "設定ウィンドウの左側で、認証オプションの一覧から **TACACS+ 設定** をクリックします。"
+
+#: ../../source/ent_auth.rst:533
+msgid "Click **Edit** and enter information in the following fields:"
+msgstr "**編集** をクリックし、以下のフィールドに情報を入力します。"
+
+#: ../../source/ent_auth.rst:535
+msgid "**TACACS+ Server**: Provide the hostname or IP address of the TACACS+ server with which to authenticate. If this field is left blank, TACACS+ authentication is disabled."
+msgstr "**TACACS+ Server**: 認証する TACACS+ サーバーのホスト名または IP アドレスを指定します。このフィールドを空のままにすると、TACACS+ 認証が無効になります。"
+
+#: ../../source/ent_auth.rst:536
+msgid "**TACACS+ Port**: TACACS+ uses port 49 by default, which is already pre-populated."
+msgstr "**TACACS+ Port**: TACACS+ はデフォルトでポート49 を使用するので、事前に入力されています。"
+
+#: ../../source/ent_auth.rst:537
+msgid "**TACACS+ Secret**: Secret key for TACACS+ authentication server."
+msgstr "**TACACS+ Secret**: TACACS+ 認証サーバーの秘密鍵"
+
+#: ../../source/ent_auth.rst:538
+msgid "**TACACS+ Auth Session Timeout**: Session timeout value in seconds. The default is 5 seconds."
+msgstr "**TACACS+ Auth Session Timeout**: セッションのタイムアウトの値は秒単位です。デフォルトは 5 秒です。"
+
+#: ../../source/ent_auth.rst:539
+msgid "**TACACS+ Authentication Protocol**: The protocol used by TACACS+ client. Options are **ascii** or **pap**."
+msgstr "**TACACS+ Authentication Protocol**: TACACS+ クライアントが使用するプロトコル。オプションは **ascii** または **pap** です。"
+

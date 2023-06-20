@@ -1,0 +1,364 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/ad_hoc_command.rst:3
+msgid "Ad Hoc Command List API Endpoint"
+msgstr "临时命令列表 API 端点"
+
+#: ../../source/ad_hoc_command.rst:8
+msgid "Make a GET request to this resource to retrieve the list of ad hoc commands."
+msgstr "向此资源发出 GET 请求，以检索临时（ad hoc）命令列表。"
+
+#: ../../source/ad_hoc_command.rst:19
+msgid "The resulting data structure contains:"
+msgstr "得到的数据结构包括："
+
+#: ../../source/ad_hoc_command.rst:32
+msgid "The ``count`` field indicates the total number of ad hoc commands found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more ad hoc command records."
+msgstr "``count`` 字段显示为给定查询找到的临时命令总数。如果单个页面无法包括所有项，使用 ``next`` 和 ``previous`` 字段可以查看其他结果。``results`` 列表包含零或更多个临时命令记录。"
+
+#: ../../source/ad_hoc_command.rst:35
+msgid "Results"
+msgstr "结果"
+
+#: ../../source/ad_hoc_command.rst:40
+msgid "Each ad hoc command data structure includes the following fields:"
+msgstr "每个临时命令数据结构包括以下字段："
+
+#: ../../source/ad_hoc_command.rst:42
+msgid "``id``: Database ID for this ad hoc command. (integer)"
+msgstr "``id``：此临时命令的数据库 ID。（整数）"
+
+#: ../../source/ad_hoc_command.rst:43
+msgid "``type``: Data type for this ad hoc command. (multiple choice)"
+msgstr "``type``：此临时命令的数据类型。（多选项）"
+
+#: ../../source/ad_hoc_command.rst:44
+msgid "-``ad_hoc_command``: Command"
+msgstr "-``ad_hoc_command``：命令"
+
+#: ../../source/ad_hoc_command.rst:45
+msgid "``url``: URL for this ad hoc command. (string)"
+msgstr "``url``：此临时命令的 URL。（字符串）"
+
+#: ../../source/ad_hoc_command.rst:46
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``：包含相关资源的 URL 的数据结构。（对象）"
+
+#: ../../source/ad_hoc_command.rst:47
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``：包含相关资源的名称/描述的数据结构。（对象）"
+
+#: ../../source/ad_hoc_command.rst:48
+msgid "``created``: Timestamp when this ad hoc command was created. (datetime)"
+msgstr "``created``：创建此临时命令时的时间戳。（日期时间）"
+
+#: ../../source/ad_hoc_command.rst:49
+msgid "``modified``: Timestamp when this ad hoc command was last modified. (datetime)"
+msgstr "``modified``：最后一次修改此临时命令时的时间戳。（日期时间）"
+
+#: ../../source/ad_hoc_command.rst:50
+msgid "``name``: (string)"
+msgstr "``name``：（字符串）"
+
+#: ../../source/ad_hoc_command.rst:54
+msgid "``launch_type``: (multiple choice)"
+msgstr "``launch_type``：（多选项）"
+
+#: ../../source/ad_hoc_command.rst:52
+msgid "``manual``: Manual"
+msgstr "``manual``：手动"
+
+#: ../../source/ad_hoc_command.rst:53
+msgid "``callback``: Callback"
+msgstr "``callback``：回调"
+
+#: ../../source/ad_hoc_command.rst:54
+msgid "``scheduled``: Scheduled"
+msgstr "``scheduled``：已调度"
+
+#: ../../source/ad_hoc_command.rst:55
+msgid "``dependency``: Dependency"
+msgstr "``dependency``：依赖项"
+
+#: ../../source/ad_hoc_command.rst:63
+msgid "``status``: (multiple choice)"
+msgstr "``status``：（多选项）"
+
+#: ../../source/ad_hoc_command.rst:57
+msgid "``new``: New"
+msgstr "``new``：新"
+
+#: ../../source/ad_hoc_command.rst:58
+msgid "``pending``: Pending"
+msgstr "``pending``：待处理"
+
+#: ../../source/ad_hoc_command.rst:59
+msgid "``waiting``: Waiting"
+msgstr "``waiting``：等待"
+
+#: ../../source/ad_hoc_command.rst:60
+msgid "``running``: Running"
+msgstr "``running``：运行中"
+
+#: ../../source/ad_hoc_command.rst:61
+msgid "``successful``: Successful"
+msgstr "``successful``：成功"
+
+#: ../../source/ad_hoc_command.rst:62
+msgid "``failed``: Failed"
+msgstr "``failed``：失败"
+
+#: ../../source/ad_hoc_command.rst:63
+msgid "``error``: Error"
+msgstr "``error``：错误"
+
+#: ../../source/ad_hoc_command.rst:64
+msgid "``canceled``: Canceled"
+msgstr "``canceled``：已取消"
+
+#: ../../source/ad_hoc_command.rst:65
+msgid "``failed``: (boolean)"
+msgstr "``failed``：（布尔值）"
+
+#: ../../source/ad_hoc_command.rst:66
+msgid "``started``: (datetime)"
+msgstr "``started``：（日期时间）"
+
+#: ../../source/ad_hoc_command.rst:67
+msgid "``finished``: (datetime)"
+msgstr "``finished``：（日期时间）"
+
+#: ../../source/ad_hoc_command.rst:68
+msgid "``elapsed``: (decimal)"
+msgstr "``elapsed``：（十进制）"
+
+#: ../../source/ad_hoc_command.rst:69
+msgid "``job_explanation``: (string)"
+msgstr "``job_explanation``：（字符串）"
+
+#: ../../source/ad_hoc_command.rst:72
+msgid "``job_type``: (multiple choice)"
+msgstr "``job_type``：（多选项）"
+
+#: ../../source/ad_hoc_command.rst:71
+msgid "``run``: Run"
+msgstr "``run``：运行"
+
+#: ../../source/ad_hoc_command.rst:72 ../../source/ad_hoc_command.rst:119
+msgid "``check``: Check"
+msgstr "``check``：检查"
+
+#: ../../source/ad_hoc_command.rst:73 ../../source/ad_hoc_command.rst:120
+msgid "``scan``: Scan"
+msgstr "``scan``：扫描"
+
+#: ../../source/ad_hoc_command.rst:74
+msgid "``inventory``: (field)"
+msgstr "``inventory``：（字段）"
+
+#: ../../source/ad_hoc_command.rst:75
+msgid "``limit``: (string)"
+msgstr "``limit``：（字符串）"
+
+#: ../../source/ad_hoc_command.rst:76
+msgid "``credential``: (field)"
+msgstr "``credential``：（字段）"
+
+#: ../../source/ad_hoc_command.rst:95 ../../source/ad_hoc_command.rst:142
+msgid "``module_name``: (multiple choice)"
+msgstr "``module_name``：（多选项）"
+
+#: ../../source/ad_hoc_command.rst:78
+msgid "``command``"
+msgstr "``command``"
+
+#: ../../source/ad_hoc_command.rst:79 ../../source/ad_hoc_command.rst:126
+msgid "``shell``"
+msgstr "``shell``"
+
+#: ../../source/ad_hoc_command.rst:80 ../../source/ad_hoc_command.rst:127
+msgid "``yum``"
+msgstr "``yum``"
+
+#: ../../source/ad_hoc_command.rst:81 ../../source/ad_hoc_command.rst:128
+msgid "``apt``"
+msgstr "``apt``"
+
+#: ../../source/ad_hoc_command.rst:82 ../../source/ad_hoc_command.rst:129
+msgid "``apt_key``"
+msgstr "``apt_key``"
+
+#: ../../source/ad_hoc_command.rst:83 ../../source/ad_hoc_command.rst:130
+msgid "``apt_repository``"
+msgstr "``apt_repository``"
+
+#: ../../source/ad_hoc_command.rst:84 ../../source/ad_hoc_command.rst:131
+msgid "``apt_rpm``"
+msgstr "``apt_rpm``"
+
+#: ../../source/ad_hoc_command.rst:85 ../../source/ad_hoc_command.rst:132
+msgid "``service``"
+msgstr "``service``"
+
+#: ../../source/ad_hoc_command.rst:86 ../../source/ad_hoc_command.rst:133
+msgid "``group``"
+msgstr "``group``"
+
+#: ../../source/ad_hoc_command.rst:87 ../../source/ad_hoc_command.rst:134
+msgid "``user``"
+msgstr "``user``"
+
+#: ../../source/ad_hoc_command.rst:88 ../../source/ad_hoc_command.rst:135
+msgid "``mount``"
+msgstr "``mount``"
+
+#: ../../source/ad_hoc_command.rst:89 ../../source/ad_hoc_command.rst:136
+msgid "``ping``"
+msgstr "``ping``"
+
+#: ../../source/ad_hoc_command.rst:90 ../../source/ad_hoc_command.rst:137
+msgid "``selinux``"
+msgstr "``selinux``"
+
+#: ../../source/ad_hoc_command.rst:91 ../../source/ad_hoc_command.rst:138
+msgid "``setup``"
+msgstr "``setup``"
+
+#: ../../source/ad_hoc_command.rst:92 ../../source/ad_hoc_command.rst:139
+msgid "``win_ping``"
+msgstr "``win_ping``"
+
+#: ../../source/ad_hoc_command.rst:93 ../../source/ad_hoc_command.rst:140
+msgid "``win_service``"
+msgstr "``win_service``"
+
+#: ../../source/ad_hoc_command.rst:94 ../../source/ad_hoc_command.rst:141
+msgid "``win_updates``"
+msgstr "``win_updates``"
+
+#: ../../source/ad_hoc_command.rst:95 ../../source/ad_hoc_command.rst:142
+msgid "``win_group``"
+msgstr "``win_group``"
+
+#: ../../source/ad_hoc_command.rst:96 ../../source/ad_hoc_command.rst:143
+msgid "``win_user``"
+msgstr "``win_user``"
+
+#: ../../source/ad_hoc_command.rst:97
+msgid "``module_args``: (string)"
+msgstr "``module_args``：（字符串）"
+
+#: ../../source/ad_hoc_command.rst:98
+msgid "``forks``: (integer)"
+msgstr "``forks``：（整数）"
+
+#: ../../source/ad_hoc_command.rst:104 ../../source/ad_hoc_command.rst:151
+msgid "``verbosity``: (multiple choice)"
+msgstr "``verbosity``：（多选项）"
+
+#: ../../source/ad_hoc_command.rst:100
+msgid "``0``: 0 (Normal)"
+msgstr "``0``：0（普通）"
+
+#: ../../source/ad_hoc_command.rst:101 ../../source/ad_hoc_command.rst:148
+msgid "``1``: 1 (Verbose)"
+msgstr "``1``：1（详细）"
+
+#: ../../source/ad_hoc_command.rst:102 ../../source/ad_hoc_command.rst:149
+msgid "``2``: 2 (More Verbose)"
+msgstr "``2``：2（更多详细内容）"
+
+#: ../../source/ad_hoc_command.rst:103 ../../source/ad_hoc_command.rst:150
+msgid "``3``: 3 (Debug)"
+msgstr "``3``：3（调试）"
+
+#: ../../source/ad_hoc_command.rst:104 ../../source/ad_hoc_command.rst:151
+msgid "``4``: 4 (Connection Debug)"
+msgstr "``4``：4（连接调试）"
+
+#: ../../source/ad_hoc_command.rst:105 ../../source/ad_hoc_command.rst:152
+msgid "``5``: 5 (WinRM Debug)"
+msgstr "``5``：5（WinRM 调试）"
+
+#: ../../source/ad_hoc_command.rst:106
+msgid "``become_enabled``: (boolean)"
+msgstr "``become_enabled``：（布尔值）"
+
+#: ../../source/ad_hoc_command.rst:110
+msgid "Create Ad Hoc Commands"
+msgstr "创建临时命令"
+
+#: ../../source/ad_hoc_command.rst:115
+msgid "Make a POST request to this resource with the following ad hoc command fields to create a new ad hoc command:"
+msgstr "使用以下临时命令字段向此资源发布 POST 请求，以创建新的临时命令："
+
+#: ../../source/ad_hoc_command.rst:119
+msgid "``job_type``: (multiple choice, required)"
+msgstr "``job_type``：（多选项，必需）"
+
+#: ../../source/ad_hoc_command.rst:118
+msgid "``run``: Run (default)"
+msgstr "``run``：运行（默认）"
+
+#: ../../source/ad_hoc_command.rst:121
+msgid "``inventory``: (field, default=None)"
+msgstr "``inventory``：（字段，默认=None）"
+
+#: ../../source/ad_hoc_command.rst:122
+msgid "``limit``: (string, default=\"\")"
+msgstr "``limit``：（字符串，默认=\"\"）"
+
+#: ../../source/ad_hoc_command.rst:123
+msgid "``credential``: (field, default=None)"
+msgstr "``credential``：（字段，默认=None）"
+
+#: ../../source/ad_hoc_command.rst:125
+msgid "``command`` (default)"
+msgstr "``command``：（默认）"
+
+#: ../../source/ad_hoc_command.rst:144
+msgid "``module_args``: (string, default=\"\")"
+msgstr "``module_args``：（字符串，默认=\"\"）"
+
+#: ../../source/ad_hoc_command.rst:145
+msgid "``forks``: (integer, default=0)"
+msgstr "``forks``：（整数，默认=0）"
+
+#: ../../source/ad_hoc_command.rst:147
+msgid "``0``: 0 (Normal) (default)"
+msgstr "``0``：0 (正常值)（默认）"
+
+#: ../../source/ad_hoc_command.rst:153
+msgid "``become_enabled``: (boolean, default=False)"
+msgstr "``become_enabled``：（布尔值，默认=False）"
+
+#: ../../source/ad_hoc_command.rst:155
+msgid "(Ad hoc commands were added in |at| version 2.2.0)."
+msgstr "（在 |at| 版本 2.2.0 中添加了临时命令）。"
+
+#: ../../source/ad_hoc_command.rst:158
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/ad_hoc_command.rst:163
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

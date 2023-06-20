@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/organizations.rst:4
+msgid "Organizations"
+msgstr "조직"
+
+#: ../../source/organizations.rst:9
+msgid "An :term:`Organization` is a logical collection of **Users**, **Teams**, **Projects**, and **Inventories**, and is the highest level in the |at| object hierarchy."
+msgstr ":term:`Organization`은 **사용자**, **팀**, **프로젝트**, **인벤토리**로 이루어진 논리 컬렉션이며 |at| 오브젝트 계층 구조의 최상위 수준입니다."
+
+#: ../../source/organizations.rst:11
+msgid "|tower hierarchy|"
+msgstr "|tower hierarchy|"
+
+#: ../../source/organizations.rst:15
+msgid "Access the Organizations page by clicking **Organizations** from the left navigation bar. The Organizations page displays all of the existing organizations for your installation. Organizations can be searched by **Name** or **Description**. Modify and remove organizations using the **Edit** and **Delete** buttons."
+msgstr "왼쪽 탐색 모음에서 **조직**을 클릭하여 조직 페이지에 액세스합니다. 조직 페이지에는 설치에 필요한 기존 조직이 모두 표시됩니다. 조직은 **이름** 또는 **설명**으로 검색할 수 있습니다. 조직을 수정 및 제거하려면 **편집** 및 **삭제** 버튼을 사용합니다."
+
+#: ../../source/organizations.rst:18
+msgid "A default organization is automatically created."
+msgstr "기본 조직은 자동으로 생성됩니다."
+
+#: ../../source/organizations.rst:20
+msgid "|Organizations - home showing example organization|"
+msgstr "|Organizations - home showing example organization|"
+
+#: ../../source/organizations.rst:24
+msgid "From this list view, you can edit the details of an organization (|edit button|) from the **Actions** menu."
+msgstr "이 목록 보기의 **작업** 메뉴에서 조직(|edit button|)의 세부 정보를 편집할 수 있습니다."
+
+#: ../../source/organizations.rst:31
+msgid "Creating a New Organization"
+msgstr "새 조직 생성"
+
+#: ../../source/organizations.rst:33
+msgid "You can create a new organization by clicking the **Add** button."
+msgstr "**추가** 버튼을 클릭하여 새 조직을 생성할 수 있습니다."
+
+#: ../../source/organizations.rst:35
+msgid "|Organizations - new organization form|"
+msgstr "|Organizations - new organization form|"
+
+#: ../../source/organizations.rst:39
+msgid "An organization has several attributes that may be configured:"
+msgstr "조직에는 구성할 수 있는 몇 가지 특성이 있습니다."
+
+#: ../../source/organizations.rst:41
+msgid "Enter the **Name** for your organization (required)."
+msgstr "조직의 **이름**을 입력합니다(필수)."
+
+#: ../../source/organizations.rst:42
+msgid "Enter a **Description** for the organization."
+msgstr "조직에 대한 **설명**을 입력합니다."
+
+#: ../../source/organizations.rst:43
+msgid "The **Max Hosts** is only editable by a superuser to set an upper limit on the number of license hosts that an organization can have. Setting this value to **0** signifies no limit. If you try to add a host to an organization that has reached or exceeded its cap on hosts, an error message displays:"
+msgstr "**최대 호스트 수**는 조직이 보유할 수 있는 라이센스 호스트 수에 대한 상한을 설정하기 위해 슈퍼유저만 편집할 수 있습니다. 이 값을 **0**으로 설정하면 제한이 없음을 나타냅니다. 호스트 한도에 도달했거나 이를 초과한 조직에 호스트를 추가하려고 하면 오류 메시지가 표시됩니다."
+
+#: ../../source/organizations.rst:47
+msgid "The inventory sync output view also shows the host limit error. Click **Details** for additional detail about the error."
+msgstr "인벤토리 동기화 출력 보기에도 호스트 제한 오류가 표시됩니다. 오류에 대한 자세한 내용은 **세부 정보**를 클릭합니다."
+
+#: ../../source/organizations.rst:51
+msgid "Enter **Instance Groups** on which to run this organization."
+msgstr "이 조직을 실행할 **인스턴스 그룹**을 입력합니다."
+
+#: ../../source/organizations.rst:52
+msgid "Enter the name of the execution environment or search for an existing **Default Execution Environment** on which to run this organization. See :ref:`upgrade_venv` in the |atumg| for more information."
+msgstr "실행 환경의 이름을 입력하거나 이 조직을 실행할 기존의 **기본 실행 환경**을 검색합니다. 자세한 내용은 |atumg|의 :ref:`upgrade_venv`를 참조하십시오."
+
+#: ../../source/organizations.rst:53
+msgid "If used, enter the **Galaxy Credentials** or search from a list of existing ones."
+msgstr "사용하는 경우 **Galaxy 인증 정보**를 입력하거나 기존 인증 정보 목록에서 검색합니다."
+
+#: ../../source/organizations.rst:56
+msgid "Click **Save** to finish creating the organization."
+msgstr "**저장**을 클릭하여 조직 생성을 완료합니다."
+
+#: ../../source/organizations.rst:58
+msgid "Once created, |at| displays the Organization details, and allows for the managing access and execution environments for the organization."
+msgstr "생성이 완료되면 |at|에서 조직 세부 정보를 표시하고, 여기에서 해당 조직의 액세스 및 실행 환경을 관리할 수 있습니다."
+
+#: ../../source/organizations.rst:60
+msgid "|Organizations - show record for example organization|"
+msgstr "|Organizations - show record for example organization|"
+
+#: ../../source/organizations.rst:65
+msgid "From the **Details** tab, you can edit or delete the organization."
+msgstr "**세부 정보** 탭에서 조직을 편집하거나 삭제할 수 있습니다."
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "다른 작업 항목에서 사용하는 항목을 삭제하면 삭제의 영향을 받는 항목이 나열된 메시지가 열리고, 삭제를 확인하라는 메시지가 표시됩니다. 일부 화면에는 유효하지 않거나 이전에 삭제된 항목이 포함되며 이러한 항목은 실행되지 않습니다. 다음은 이러한 메시지의 예입니다."
+
+#: ../../source/organizations.rst:72
+msgid "Work with Access"
+msgstr "액세스 작업"
+
+#: ../../source/organizations.rst:80
+msgid "Clicking on **Access** (beside **Details** when viewing your organization), displays all the Users associated with this Organization and their roles."
+msgstr "**액세스** (조직 보기에서 **세부 정보** 옆)를 클릭하면 이 조직 및 해당 역할과 연결된 모든 사용자가 표시됩니다."
+
+#: ../../source/organizations.rst:82
+msgid "|Organizations - show users for example organization|"
+msgstr "|Organizations - show users for example organization|"
+
+#: ../../source/organizations.rst:86
+msgid "As you can manage the user membership for this Organization here, you can manage user membership on a per-user basis from the Users page by clicking **Users** from the left navigation bar. Organizations have a unique set of roles not described here. You can assign specific users certain levels of permissions within your organization, or allow them to act as an admin for a particular resource. Refer to :ref:`rbac-ug` for more information."
+msgstr "여기에서 이 조직의 사용자 멤버십을 관리할 수 있으므로, 왼쪽 탐색 모음에서 **사용자**를 클릭하여 사용자 페이지에서 사용자별로 사용자 멤버십을 관리할 수 있습니다. 조직에는 여기에 설명되지 않은 고유한 역할 세트가 있습니다. 조직 내에서 특정 사용자에게 특정 수준의 권한을 할당하거나 특정 리소스에 대해 관리자 역할을 수행하도록 허용할 수 있습니다. 자세한 내용은 :ref:`rbac-ug`를 참조하십시오."
+
+#: ../../source/organizations.rst:88
+msgid "Clicking on a user brings up that user's details, allowing you to review, grant, edit, and remove associated permissions for that user. For more information, refer to :ref:`ug_users`."
+msgstr "사용자를 클릭하면 해당 사용자의 세부 정보가 표시되어 해당 사용자의 관련 권한을 검토, 부여, 편집, 제거할 수 있습니다. 자세한 내용은 :ref:`ug_users`를 참조하십시오."
+
+#: ../../source/organizations.rst:91
+msgid "Add a User or Team"
+msgstr "사용자 또는 팀 추가"
+
+#: ../../source/organizations.rst:93
+msgid "In order to add a user or team to an organization, the user or team must already be created. See :ref:`ug_users_create` and :ref:`ug_team_create` for additional detail. To add existing users or team to the Organization:"
+msgstr "조직에 사용자 또는 팀을 추가하려면 사용자 또는 팀이 이미 생성되어 있어야 합니다. 자세한 내용은 :ref:`ug_users_create` 및 :ref:`ug_team_create`을 참조하십시오. 기존 사용자 또는 팀을 조직에 추가하려면 다음을 수행합니다."
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "**액세스** 탭에서 **추가** 버튼을 클릭합니다."
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "추가할 사용자 또는 팀을 선택하고 **다음**을 클릭합니다."
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "이름 옆에 있는 체크박스를 클릭하여 목록에서 하나 이상의 사용자 또는 팀을 선택하여 멤버로 추가하고 **다음**을 클릭합니다."
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "이 예에서는 두 명의 사용자를 추가하도록 선택했습니다."
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "선택한 사용자 또는 팀에 부여할 역할을 선택합니다. 전체 역할 목록을 보려면 아래로 스크롤하십시오. 리소스에 따라 다양한 옵션을 사용할 수 있습니다."
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "**저장** 버튼을 클릭하여 선택한 사용자 또는 팀에 역할을 적용하고 멤버로 추가합니다."
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "사용자/팀 추가 창이 닫히고 각 사용자 및 팀에 할당된 역할이 업데이트되어 표시됩니다."
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "특정 사용자의 역할을 제거하려면 리소스 옆에 있는 연결 해제(x) 버튼을 클릭합니다."
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "그러면 연결을 해제할지 묻는 확인 대화 상자가 열립니다."
+
+#: ../../source/organizations.rst:101
+msgid "A user or team with roles associated will retain them even after they have been reassigned to another organization."
+msgstr "역할이 연결된 사용자 또는 팀은 다른 조직에 다시 할당된 후에도 유지됩니다."
+
+#: ../../source/organizations.rst:106
+msgid "Work with Notifications"
+msgstr "알림 작업"
+
+#: ../../source/organizations.rst:111
+msgid "Clicking the **Notifications** tab allows you to review any notification integrations you have setup."
+msgstr "**알림** 탭을 클릭하면 설정한 알림 통합을 검토할 수 있습니다."
+
+#: ../../source/organizations.rst:115
+msgid "Use the toggles to enable or disable the notifications to use with your particular organization. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "특정 조직에 사용할 알림을 활성화하거나 비활성화하려면 토글을 사용합니다. 자세한 내용은 :ref:`ug_notifications_on_off`를 참조하십시오."
+
+#: ../../source/organizations.rst:117
+msgid "If no notifications have been set up, you must create them from the **Notifications** option on the left navigation bar."
+msgstr "알림이 설정되지 않은 경우 왼쪽 탐색 모음의 **탐색** 옵션에서 생성해야 합니다."
+
+#: ../../source/organizations.rst:121
+msgid "Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types."
+msgstr "다양한 알림 유형 구성에 대한 자세한 내용은 :ref:`ug_notifications_types`을 참조하십시오."
+

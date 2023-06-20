@@ -1,0 +1,1085 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../common/source/user-data-tracking.rst:2
+msgid "Usability Analytics and Data Collection"
+msgstr "ユーザビリティーアナリティクスおよびデータ収集"
+
+#: ../../../common/source/user-data-tracking.rst:12
+msgid "Usability data collection is included with Tower to collect data to better understand how Tower users specifically interact with Tower, to help enhance future releases, and to continue streamlining your user experience."
+msgstr "ユーザビリティーのデータ収集は、Tower に含まれており、Tower ユーザーが Tower とどのように相互作用するかをよりよく理解するためのデータを収集し、今後のリリースの強化に役立て、ユーザーエクスペリエンスの合理化を継続していきます。"
+
+#: ../../../common/source/user-data-tracking.rst:14
+msgid "Only users installing a trial of Tower or a fresh installation of Tower are opted-in for this data collection."
+msgstr "Tower の試用版をインストールする場合または Tower を新規インストールする場合のみ、このデータ収集に参加するかどうかを選択できます。"
+
+#: ../../../common/source/user-data-tracking.rst:16
+msgid "If you want to change how you participate in this analytics collection, you can opt out or change your settings in the **User Interface settings**, by clicking **Settings** from the left navigation bar."
+msgstr "このアナリティクスの収集への参加方法を変更する場合は、左側のナビゲーションバーの **設定** をクリックし、**ユーザーインターフェースの設定** の選択を解除するか、設定を変更できます。"
+
+#: ../../../common/source/user-data-tracking.rst:19
+msgid "Ansible Tower collects user data automatically to help improve the Tower product. You can control the way Tower collects data by setting your participation level in the **User Interface settings** in the Settings menu."
+msgstr "Ansible Tower は、Tower 製品の向上に役立てるために自動的にユーザーのデータを収集します。設定メニューの **ユーザーインターフェースの設定** で参加レベルを設定して、Tower のデータ収集方法を制御することができます。"
+
+#: ../../../common/source/user-data-tracking.rst:23
+msgid "Select the desired level of data collection from the User Analytics Tracking State drop-down list:"
+msgstr "アナリティクストラッキングの状態ドロップダウンリストから希望のデータ収集レベルを選択します。"
+
+#: ../../../common/source/user-data-tracking.rst:25
+msgid "**Off**: Prevents any data collection."
+msgstr "**オフ**: データ収集を行いません。"
+
+#: ../../../common/source/user-data-tracking.rst:27
+msgid "**Anonymous**: Enables data collection without your specific user data."
+msgstr "**匿名**: ユーザー固有のデータを含めないデータ収集を有効化します。"
+
+#: ../../../common/source/user-data-tracking.rst:29
+msgid "**Detailed**: Enables data collection including your specific user data."
+msgstr "**詳細**: お使いのユーザー固有のデータを含めたデータ収集を有効化します。"
+
+#: ../../../common/source/user-data-tracking.rst:31
+msgid "Click **Save** to apply the settings or **Cancel** to abandon the changes."
+msgstr "**保存** をクリックして設定を適用するか、**キャンセル** をクリックして変更を破棄します。"
+
+#: ../../../common/source/user-data-tracking.rst:34
+msgid "For more information, see the Red Hat privacy policy at https://www.redhat.com/en/about/privacy-policy."
+msgstr "詳細は、Red Hat プライバシーポリシー (https://www.redhat.com/en/about/privacy-policy) を参照してください。"
+
+#: ../../source/usability_data_collection.rst:9
+msgid "Automation Analytics"
+msgstr "自動化アナリティクス"
+
+#: ../../source/usability_data_collection.rst:16
+msgid "When you imported your license for the first time, you were given options related to the collection of data that powers |AA|, a cloud service that is part of the |aap| subscription. For opt-in of |AA| to have any effect, your instance of |at| **must** be running on |rhel|."
+msgstr "ライセンスを初めてインポートしたときに、|AA| (|aap| サブスクリプションの一部であるクラウドサービス) を強化するデータの収集に関連するオプションが提供されました。|AA| のオプトインで効果を得るには、|at| のインスタンスは |rhel| で **実行している必要があります**。"
+
+#: ../../source/usability_data_collection.rst:18
+msgid "Much like Red Hat Insights, |AA| is built to only collect the minimum amount of data needed. No credential secrets, personal data, automation variables, or task output is gathered. For more information, see :ref:`Details of data collection<usability_data_collection_details>` below."
+msgstr "Red Hat Insights と同じように、|AA| は必要最小限のデータのみを収集するように構築されています。認証情報のシークレット、個人データ、自動化変数、またはタスク出力は収集されません。詳細は、以下の :ref:`Details of data collection<usability_data_collection_details>` を参照してください。"
+
+#: ../../source/usability_data_collection.rst:20
+msgid "In order to enable this feature, turn on data collection for |AA| and enter your Red Hat customer credentials in the **Miscellaneous System settings** of the System configuration list of options located in the **Settings** menu."
+msgstr "この機能を有効にするには、|AA| のデータ収集をオンにし、**設定** メニューにあるオプションのシステム設定一覧の **その他のシステム設定** に、Red Hat カスタマー認証情報を入力します。"
+
+#: ../../source/usability_data_collection.rst:24
+msgid "Note that the **Automation Analytics Upload URL** field is pre-populated with the location to which the collection of insights data will be uploaded."
+msgstr "**Automation Analytics Upload URL** フィールドには、分析データのコレクションがアップロードされる場所が事前に入力されています。"
+
+#: ../../source/usability_data_collection.rst:26
+msgid "By default, the |AA| data is collected every 4 hours and upon enabling the feature, data will be collected up to a month back (or until the previous collection). You may turn off this data collection at any time in the **Miscellaneous System settings** of the System configuration window."
+msgstr "デフォルトでは、|AA| データは 4 時間ごとに収集され、機能を有効にすると、最長 1 カ月前 (または前回の収集まで) のデータが収集されます。このデータ収集は、システム設定ウィンドウの **その他のシステム設定* でいつでもオフにすることができます。"
+
+#: ../../source/usability_data_collection.rst:28
+msgid "This setting can also be enabled via the API by specifying ``INSIGHTS_TRACKING_STATE = True`` in either of these endpoints:"
+msgstr "この設定は、以下のエンドポイントのいずれかで ``INSIGHTS_TRACKING_STATE = True`` を指定し、API 経由で有効にすることも可能です。"
+
+#: ../../source/usability_data_collection.rst:30
+msgid "``api/v2/settings/all``"
+msgstr "``api/v2/settings/all``"
+
+#: ../../source/usability_data_collection.rst:31
+msgid "``api/v2/settings/system``"
+msgstr "``api/v2/settings/system``"
+
+#: ../../source/usability_data_collection.rst:33
+msgid "The |AA| generated from this data collection will be found on the `Red Hat Cloud Services`_ portal."
+msgstr "このデータ収集から生成された |AA| は `Red Hat Cloud Services`_ ポータルで確認できます。"
+
+#: ../../source/usability_data_collection.rst:40
+msgid "The **Clusters** data is the default view. This graph represents the number of job runs across all controller clusters over a period of time. The example above shows a span of a week in a stacked bar-style chart that is organized by the number of jobs that ran successfully (in green) and jobs that failed (in red)."
+msgstr "**Clusters** データはデフォルトのビューです。このグラフは、ある期間において、すべてのコントローラークラスターで実行されているジョブの数を示しています。上記の例は、1 週間の期間を積み重ね棒グラフで表したもので、成功したジョブの数 (緑) と失敗したジョブの数 (赤) で構成されています。"
+
+#: ../../source/usability_data_collection.rst:42
+msgid "Alternatively, you can select a single cluster to view its job status information."
+msgstr "クラスターを 1 つ選択して、そのジョブステータス情報を表示することもできます。"
+
+#: ../../source/usability_data_collection.rst:46
+msgid "This multi-line chart represents the number of job runs for a single controller cluster for a specified period of time. The example here shows a span of a week, organized by the number of successfully running jobs (in green) and jobs that failed (in red). You can specify the number of successful and failed job runs for a selected cluster over a span of one week, two weeks, and monthly increments."
+msgstr "この複数線グラフは、指定の期間における単一のコントローラークラスターのジョブ実行数を表します。この例は、1 週間分表示されており、正常に実行しているジョブ (緑) と失敗したジョブ (赤) の数で整理されています。1 週間、2 週間、および月単位の増分で、選択したクラスターで成功したジョブ数と、失敗したジョブ数を指定できます。"
+
+#: ../../source/usability_data_collection.rst:48
+msgid "Click **Organization Statistics** from the left navigation pane to view information for the following:"
+msgstr "左のナビゲーションペインで **Organization Statistics** をクリックして、以下の情報を表示します。"
+
+#: ../../source/usability_data_collection.rst:54
+msgid "Usage by organization"
+msgstr "組織ごとの使用状況"
+
+#: ../../source/usability_data_collection.rst:56
+msgid "This pie chart represents the number of tasks ran inside all jobs by a particular organization."
+msgstr "この円グラフは、特定の組織がすべてのジョブ内で実行したタスクの数を表します。"
+
+#: ../../source/usability_data_collection.rst:62
+msgid "Job runs by organization"
+msgstr "組織ごとのジョブの実行数"
+
+#: ../../source/usability_data_collection.rst:64
+msgid "This pie chart represents the controller usage across *all* controller clusters by organization, which is calculated by the number of jobs run by that organization."
+msgstr "この円グラフは、組織ごとの *すべての* コントローラークラスターでのコントローラーの使用量を表します。これは、その組織で実行されるジョブの数によって計算されます。"
+
+#: ../../source/usability_data_collection.rst:70
+msgid "Organization status"
+msgstr "組織の状態"
+
+#: ../../source/usability_data_collection.rst:72
+msgid "This bar chart represents the controller usage by organization and date, which is calculated by the number of jobs run by that organization on a particular date. Alternatively, you can specify to show the number of job runs per organization in one week, two weeks, and monthly increments."
+msgstr "この棒グラフは、組織および日付ごとのコントローラーの使用量を表すもので、特定の日付にその組織が実行したジョブの数によって計算されます。または、1 週間、2 週間、および毎月の増分で、組織ごとのジョブ実行数を表示するように指定することもできます。"
+
+#: ../../source/usability_data_collection.rst:77
+msgid "Details of data collection"
+msgstr "データ収集の詳細"
+
+#: ../../source/usability_data_collection.rst:79
+msgid "|AA| collects certain classes of data from |at|:"
+msgstr "|AA| は、|at| から特定のクラスのデータを収集します。"
+
+#: ../../source/usability_data_collection.rst:81
+msgid "Basic configuration, like which features are enabled, and what operating system is being used"
+msgstr "有効になっている機能や使用されているオペレーティングシステムなどの基本設定"
+
+#: ../../source/usability_data_collection.rst:82
+msgid "Topology and status of the controller environment and hosts, including capacity and health"
+msgstr "容量とヘルスなど、コントローラー環境とホストのトポロジーおよびステータス"
+
+#: ../../source/usability_data_collection.rst:83
+msgid "Counts of automation resources:"
+msgstr "自動化リソースの数:"
+
+#: ../../source/usability_data_collection.rst:85
+msgid "organizations, teams, and users"
+msgstr "組織、チーム、ユーザー"
+
+#: ../../source/usability_data_collection.rst:86
+msgid "inventories and hosts"
+msgstr "インベントリーとホスト"
+
+#: ../../source/usability_data_collection.rst:87
+msgid "credentials (indexed by type)"
+msgstr "認証情報 (タイプで索引付け)"
+
+#: ../../source/usability_data_collection.rst:88
+msgid "projects (indexed by type)"
+msgstr "プロジェクト (タイプで索引付け)"
+
+#: ../../source/usability_data_collection.rst:89
+msgid "templates"
+msgstr "テンプレート"
+
+#: ../../source/usability_data_collection.rst:90
+msgid "schedules"
+msgstr "スケジュール"
+
+#: ../../source/usability_data_collection.rst:91
+msgid "active sessions"
+msgstr "アクティブセッション"
+
+#: ../../source/usability_data_collection.rst:92
+msgid "running and pending jobs"
+msgstr "実行中および保留中のジョブ"
+
+#: ../../source/usability_data_collection.rst:94
+msgid "Job execution details (start time, finish time, launch type, and success)"
+msgstr "ジョブ実行の詳細 (開始時間、終了時間、起動タイプ、成功)"
+
+#: ../../source/usability_data_collection.rst:95
+msgid "Automation task details (success, host id, playbook/role, task name, and module used)"
+msgstr "自動化タスクの詳細 (成功、ホスト ID、Playbook/ロール、タスク名、使用モジュール)"
+
+#: ../../source/usability_data_collection.rst:97
+msgid "You can use ``awx-manage gather_analytics`` (without ``--ship``) to inspect the data that the controller sends so you can satisfy your data collection concerns. This will create a tarball that contains the analytics data that would be sent to Red Hat."
+msgstr "``awx-manage gather_analytics`` (``--ship`` なしで) を使用して、コントローラーが送信するデータを検査し、データ収集の懸念を満たすことができます。これにより、Red Hat に送信される分析データを含む tarball が作成されます。"
+
+#: ../../source/usability_data_collection.rst:99
+msgid "This file contains a number of JSON and CSV files. Each file contains a different set of analytics data."
+msgstr "このファイルには、いくつかの JSON ファイルと CSV ファイルが含まれています。各ファイルには、異なる分析データのセットが含まれています。"
+
+#: ../../source/usability_data_collection.rst:105
+msgid "manifest.json"
+msgstr "manifest.json"
+
+#: ../../source/usability_data_collection.rst:107
+msgid "manifest.json is the manifest of the analytics data. It describes each file included in the collection, and what version of the schema for that file is included. An example manifest is:"
+msgstr "manifest.json は、分析データのマニフェストです。コレクションに含まれている各ファイルと、そのファイルのスキーマのバージョンが含まれています。マニフェストの例は次のとおりです。"
+
+#: ../../source/usability_data_collection.rst:132
+msgid "config.json"
+msgstr "config.json"
+
+#: ../../source/usability_data_collection.rst:134
+msgid "The config.json file contains a subset of the configuration endpoint ``/api/v2/config`` from the cluster. An example config.json is:"
+msgstr "config.json ファイルには、クラスターの設定エンドポイント ``/api/v2/config`` のサブセットが含まれています。config.json の例は次のとおりです。"
+
+#: ../../source/usability_data_collection.rst:174
+#: ../../source/usability_data_collection.rst:241
+msgid "A reference of fields collected:"
+msgstr "収集されたフィールドのリファレンス:"
+
+#: ../../source/usability_data_collection.rst:176
+msgid "ansible_version"
+msgstr "ansible_version"
+
+#: ../../source/usability_data_collection.rst:177
+msgid "The system Ansible version on the host"
+msgstr "ホスト上のシステム Ansible バージョン"
+
+#: ../../source/usability_data_collection.rst:180
+msgid "authentication_backends"
+msgstr "authentication_backends"
+
+#: ../../source/usability_data_collection.rst:179
+msgid "What user authentication backends are available. For more information, refer to :ref:`ag_social_auth` or see :ref:`ag_auth_ldap`."
+msgstr "どのようなユーザー認証バックエンドが利用できるか。詳細は、:ref:`ag_social_auth` または :ref:`ag_auth_ldap` を参照してください。"
+
+#: ../../source/usability_data_collection.rst:182
+msgid "external_logger_enabled"
+msgstr "external_logger_enabled"
+
+#: ../../source/usability_data_collection.rst:183
+msgid "Whether external logging is enaled"
+msgstr "外部ロギングが有効かどうか。"
+
+#: ../../source/usability_data_collection.rst:184
+msgid "external_logger_type"
+msgstr "external_logger_type"
+
+#: ../../source/usability_data_collection.rst:185
+msgid "What logging backend is in use if enabled. See :ref:`ag_logging` for details"
+msgstr "有効になっている場合に使用されているロギングバックエンド。詳細は「:ref:`ag_logging`」を参照してください。"
+
+#: ../../source/usability_data_collection.rst:186
+msgid "logging_aggregators"
+msgstr "logging_aggregators"
+
+#: ../../source/usability_data_collection.rst:187
+msgid "What logging categories are sent to external logging. See :ref:`ag_logging` for details"
+msgstr "外部ロギングに送信されるロギングカテゴリー。詳細は「:ref:`ag_logging`」を参照してください。"
+
+#: ../../source/usability_data_collection.rst:188
+msgid "free_instances"
+msgstr "free_instances"
+
+#: ../../source/usability_data_collection.rst:189
+msgid "How many hosts are available in the license. A value of zero means the cluster is fully consuming its license."
+msgstr "ライセンスで利用可能なホストの数。ゼロの値は、クラスターがライセンスを完全に消費していることを意味します。"
+
+#: ../../source/usability_data_collection.rst:190
+msgid "install_uuid"
+msgstr "install_uuid"
+
+#: ../../source/usability_data_collection.rst:191
+msgid "A UUID for the installation (identical for all cluster nodes)"
+msgstr "インストールの UUID (すべてのクラスターノードで同一)"
+
+#: ../../source/usability_data_collection.rst:192
+msgid "instance_uuid"
+msgstr "instance_uuid"
+
+#: ../../source/usability_data_collection.rst:193
+msgid "A UUID for the instance (different for each cluster node)"
+msgstr "インスタンスの UUID (クラスターノードごとに異なる)"
+
+#: ../../source/usability_data_collection.rst:194
+msgid "license_expiry"
+msgstr "license_expiry"
+
+#: ../../source/usability_data_collection.rst:195
+msgid "Time to expiry of the license, in seconds"
+msgstr "ライセンスの有効期限 (秒)"
+
+#: ../../source/usability_data_collection.rst:196
+msgid "license_type"
+msgstr "license_type"
+
+#: ../../source/usability_data_collection.rst:197
+msgid "Type of the license (should be 'enterprise' for most cases)"
+msgstr "ライセンスのタイプ (ほとんどの場合「enterprise」である必要があります)"
+
+#: ../../source/usability_data_collection.rst:198
+msgid "pendo_tracking"
+msgstr "pendo_tracking"
+
+#: ../../source/usability_data_collection.rst:199
+msgid "State of :ref:`usability_data_collection`"
+msgstr ":ref:`usability_data_collection` の状態"
+
+#: ../../source/usability_data_collection.rst:200
+msgid "platform"
+msgstr "platform"
+
+#: ../../source/usability_data_collection.rst:201
+msgid "The operating system the cluster is running on"
+msgstr "クラスターが実行されているオペレーティングシステム"
+
+#: ../../source/usability_data_collection.rst:202
+msgid "total_licensed_instances"
+msgstr "total_licensed_instances"
+
+#: ../../source/usability_data_collection.rst:203
+msgid "The total number of hosts in the license"
+msgstr "このライセンス内のホストの合計数"
+
+#: ../../source/usability_data_collection.rst:204
+msgid "controller_url_base"
+msgstr "controller_url_base"
+
+#: ../../source/usability_data_collection.rst:205
+msgid "The base URL for the cluster used by clients (shown in |AA|)"
+msgstr "クライアントが使用するクラスターのベース URL (|AA| に示す)"
+
+#: ../../source/usability_data_collection.rst:207
+msgid "controller_version"
+msgstr "controller_version"
+
+#: ../../source/usability_data_collection.rst:207
+msgid "Version of the software on the cluster"
+msgstr "クラスター上のソフトウェアのバージョン"
+
+#: ../../source/usability_data_collection.rst:210
+msgid "instance_info.json"
+msgstr "instance_info.json"
+
+#: ../../source/usability_data_collection.rst:212
+msgid "The instance_info.json file contains detailed information on the instances that make up the cluster, organized by instance UUID. An example instance_info.json is:"
+msgstr "instance_info.json ファイルには、クラスターを構成するインスタンスの詳細情報がインスタンスの UUID ごとにまとめられています。instance_info.json の例は次のとおりです。"
+
+#: ../../source/usability_data_collection.rst:243
+msgid "capacity"
+msgstr "capacity"
+
+#: ../../source/usability_data_collection.rst:244
+msgid "The capacity of the instance for executing tasks. See <link> for details on how this is calculated."
+msgstr "タスクを実行するためのインスタンスの容量。この計算方法の詳細は、「<link>」を参照してください。"
+
+#: ../../source/usability_data_collection.rst:245
+msgid "cpu"
+msgstr "cpu"
+
+#: ../../source/usability_data_collection.rst:246
+msgid "CPU cores for the instance"
+msgstr "インスタンスの CPU コア"
+
+#: ../../source/usability_data_collection.rst:247
+msgid "memory"
+msgstr "memory"
+
+#: ../../source/usability_data_collection.rst:248
+msgid "Memory for the instance"
+msgstr "インスタンスのメモリー"
+
+#: ../../source/usability_data_collection.rst:249
+msgid "enabled"
+msgstr "enabled"
+
+#: ../../source/usability_data_collection.rst:250
+msgid "Whether the instance is enabled and accepting tasks"
+msgstr "インスタンスが有効でタスクを受け付けているかどうか"
+
+#: ../../source/usability_data_collection.rst:251
+msgid "managed_by_policy"
+msgstr "managed_by_policy"
+
+#: ../../source/usability_data_collection.rst:252
+msgid "Whether the instance's membership in instance groups is managed by policy, or manually managed"
+msgstr "インスタンスグループのインスタンスのメンバーシップがポリシーによって管理されているか、手動で管理されているか"
+
+#: ../../source/usability_data_collection.rst:254
+msgid "version"
+msgstr "version"
+
+#: ../../source/usability_data_collection.rst:254
+msgid "Version of the software on the instance"
+msgstr "インスタンス上のソフトウェアのバージョン"
+
+#: ../../source/usability_data_collection.rst:257
+msgid "counts.json"
+msgstr "counts.json"
+
+#: ../../source/usability_data_collection.rst:259
+msgid "The counts.json file contains the total number of objects for each relevant category in a cluster. An example counts.json is: ::"
+msgstr "counts.json ファイルには、クラスター内の関連する各カテゴリーにオブジェクトの総数が含まれています。counts.json の例は次のとおりです::"
+
+#: ../../source/usability_data_collection.rst:291
+msgid "Each entry in this file is for the corresponding API objects in ``/api/v2``, with the exception of the active session counts."
+msgstr "このファイルの各エントリーは、アクティブなセッション数を除いて、``/api/v2`` で対応する API オブジェクト用です。"
+
+#: ../../source/usability_data_collection.rst:294
+msgid "org_counts.json"
+msgstr "org_counts.json"
+
+#: ../../source/usability_data_collection.rst:296
+msgid "The org_counts.json file contains information on each organization in the cluster, and the number of users and teams associated with that organization. An example org_counts.json is: ::"
+msgstr "org_counts.json ファイルには、クラスター内の各組織に関する情報と、その組織に関連付けられているユーザーとチームの数が含まれています。org_counts.json の例は以下のようになります::"
+
+#: ../../source/usability_data_collection.rst:320
+msgid "cred_type_counts.json"
+msgstr "cred_type_counts.json"
+
+#: ../../source/usability_data_collection.rst:322
+msgid "The cred_type_counts.json file contains information on the different credential types in the cluster, and how many credentials exist for each type. An example cred_type_counts.json is: ::"
+msgstr "cred_type_counts.json ファイルには、クラスター内のさまざまな認証情報のタイプ、および各タイプに存在する認証情報の数に関する情報が含まれています。cred_type_counts.json の例は次のとおりです::"
+
+#: ../../source/usability_data_collection.rst:361
+msgid "inventory_counts.json"
+msgstr "inventory_counts.json"
+
+#: ../../source/usability_data_collection.rst:363
+msgid "The inventory_counts.json file contains information on the different inventories in the cluster. An example inventory_counts.json is: ::"
+msgstr "inventory_counts.json ファイルには、クラスター内のさまざまなインベントリーに関する情報が含まれています。以下は、inventory_counts.json の例です::"
+
+#: ../../source/usability_data_collection.rst:412
+msgid "projects_by_scm_type.json"
+msgstr "projects_by_scm_type.json"
+
+#: ../../source/usability_data_collection.rst:414
+msgid "The projects_by_scm_type.json file provides a breakdown of all projects in the cluster, by source control type. An example projects_by_scm_type.json is: ::"
+msgstr "projects_by_scm_type.json ファイルは、ソース管理タイプごとに、クラスタ内のすべてのプロジェクトの内訳を提供します。projects_by_scm_type.json の例は次のとおりです::"
+
+#: ../../source/usability_data_collection.rst:428
+msgid "query_info.json"
+msgstr "query_info.json"
+
+#: ../../source/usability_data_collection.rst:430
+msgid "The query_info.json file provides details on when and how the data collection happened. An example query_info.json is:"
+msgstr "query_info.json ファイルは、データ収集がいつどのように行われたかについての詳細を提供します。query_info.json の例は次のとおりです。"
+
+#: ../../source/usability_data_collection.rst:442
+msgid "collection_type is one of \"manual\" or \"automatic\"."
+msgstr "collection_type は、「手動」または「自動」のいずれかです。"
+
+#: ../../source/usability_data_collection.rst:445
+msgid "job_counts.json"
+msgstr "job_counts.json"
+
+#: ../../source/usability_data_collection.rst:447
+msgid "The job_counts.json file provides details on the job history of the cluster, describing both how jobs were launched, and what their finishing status is. An example job_counts.json is: ::"
+msgstr "job_counts.json ファイルは、クラスターのジョブ履歴の詳細を提供し、ジョブの起動方法とジョブの終了ステータスの両方を記述します。job_counts.json の例は次の通りです::"
+
+#: ../../source/usability_data_collection.rst:470
+msgid "job_instance_counts.json"
+msgstr "job_instance_counts.json"
+
+#: ../../source/usability_data_collection.rst:472
+msgid "The job_instance_counts.json file provides the same detail as job_counts.json, broken down by instance. An example job_instance_counts.json is: ::"
+msgstr "job_instance_counts.json ファイルは、job_counts.json と同じ詳細をインスタンスごとに提供します。job_instance_counts.json の例は次の通りです::"
+
+#: ../../source/usability_data_collection.rst:495
+msgid "Note that instances in this file are by hostname, not by UUID as they are in instance_info."
+msgstr "このファイルのインスタンスは、instance_info にあるような UUID ではなく、ホスト名によるものであることに注意してください。"
+
+#: ../../source/usability_data_collection.rst:498
+msgid "unified_job_template_table.csv"
+msgstr "unified_job_template_table.csv"
+
+#: ../../source/usability_data_collection.rst:500
+msgid "The unified_job_template_table.csv file provides information on job templates in the system. Each line contains the following fields for the job template:"
+msgstr "unified_job_template_table.csv ファイルは、システム内のジョブテンプレートに関する情報を提供します。各行には、ジョブテンプレートの次のフィールドが含まれています。"
+
+#: ../../source/usability_data_collection.rst:503
+#: ../../source/usability_data_collection.rst:540
+#: ../../source/usability_data_collection.rst:592
+#: ../../source/usability_data_collection.rst:621
+#: ../../source/usability_data_collection.rst:652
+msgid "id"
+msgstr "id"
+
+#: ../../source/usability_data_collection.rst:504
+msgid "Job template id"
+msgstr "ジョブテンプレート ID"
+
+#: ../../source/usability_data_collection.rst:505
+#: ../../source/usability_data_collection.rst:542
+msgid "name"
+msgstr "name"
+
+#: ../../source/usability_data_collection.rst:506
+msgid "Job template name"
+msgstr "ジョブテンプレート名"
+
+#: ../../source/usability_data_collection.rst:507
+#: ../../source/usability_data_collection.rst:544
+msgid "polymorphic_ctype_id"
+msgstr "polymorphic_ctype_id"
+
+#: ../../source/usability_data_collection.rst:508
+msgid "The id of the type of template it is"
+msgstr "テンプレートのタイプの ID"
+
+#: ../../source/usability_data_collection.rst:509
+#: ../../source/usability_data_collection.rst:546
+msgid "model"
+msgstr "model"
+
+#: ../../source/usability_data_collection.rst:510
+msgid "The name of the polymorphic_ctype_id for the template. Examples include 'project', 'systemjobtemplate', 'jobtemplate', 'inventorysource', and 'workflowjobtemplate'"
+msgstr "テンプレートの polymorphic_ctype_id の名前。例には、「project」、「systemjobtemplate」、「jobtemplate」、「inventorysource」、および「workflowjobtemplate」が含まれます"
+
+#: ../../source/usability_data_collection.rst:511
+#: ../../source/usability_data_collection.rst:552
+#: ../../source/usability_data_collection.rst:594
+#: ../../source/usability_data_collection.rst:623
+#: ../../source/usability_data_collection.rst:656
+msgid "created"
+msgstr "created"
+
+#: ../../source/usability_data_collection.rst:512
+msgid "When the template was created"
+msgstr "テンプレートが作成されたとき"
+
+#: ../../source/usability_data_collection.rst:513
+#: ../../source/usability_data_collection.rst:596
+#: ../../source/usability_data_collection.rst:625
+msgid "modified"
+msgstr "modified"
+
+#: ../../source/usability_data_collection.rst:514
+msgid "When the template was last updated"
+msgstr "テンプレートが最後に更新された日時"
+
+#: ../../source/usability_data_collection.rst:515
+msgid "created_by_id"
+msgstr "created_by_id"
+
+#: ../../source/usability_data_collection.rst:516
+msgid "The userid that created the template. Blank if done by the system."
+msgstr "テンプレートを作成したユーザー ID。システムによって実行された場合は空白です。"
+
+#: ../../source/usability_data_collection.rst:517
+msgid "modified_by_id"
+msgstr "modified_by_id"
+
+#: ../../source/usability_data_collection.rst:518
+msgid "The userid that last modified the template. Blank if done by the system."
+msgstr "テンプレートを最後に変更したユーザー ID。システムによって実行された場合は空白です。"
+
+#: ../../source/usability_data_collection.rst:519
+msgid "current_job_id"
+msgstr "current_job_id"
+
+#: ../../source/usability_data_collection.rst:520
+msgid "Currently executing job id for the template, if any"
+msgstr "テンプレートの現在実行中のジョブ ID (存在する場合)"
+
+#: ../../source/usability_data_collection.rst:521
+msgid "last_job_id"
+msgstr "last_job_id"
+
+#: ../../source/usability_data_collection.rst:522
+msgid "Last execution of the job"
+msgstr "ジョブの最後の実行"
+
+#: ../../source/usability_data_collection.rst:523
+msgid "last_job_run"
+msgstr "last_job_run"
+
+#: ../../source/usability_data_collection.rst:524
+msgid "Time of last execution of the job"
+msgstr "ジョブが最後に実行された時刻"
+
+#: ../../source/usability_data_collection.rst:525
+msgid "last_job_failed"
+msgstr "last_job_failed"
+
+#: ../../source/usability_data_collection.rst:526
+msgid "Whether the last_job_id failed"
+msgstr "last_job_id が失敗したかどうか"
+
+#: ../../source/usability_data_collection.rst:527
+#: ../../source/usability_data_collection.rst:574
+msgid "status"
+msgstr "status"
+
+#: ../../source/usability_data_collection.rst:528
+msgid "Status of last_job_id"
+msgstr "last_job_id のステータス"
+
+#: ../../source/usability_data_collection.rst:529
+msgid "next_job_run"
+msgstr "next_job_run"
+
+#: ../../source/usability_data_collection.rst:530
+msgid "Next scheduled execution of the template, if any"
+msgstr "テンプレートで次にスケジュールされた実行 (該当する場合)"
+
+#: ../../source/usability_data_collection.rst:532
+msgid "next_schedule_id"
+msgstr "next_schedule_id"
+
+#: ../../source/usability_data_collection.rst:532
+msgid "Schedule id for next_job_run, if any"
+msgstr "next_job_run のスケジュール ID (該当する場合)"
+
+#: ../../source/usability_data_collection.rst:535
+msgid "unified_jobs_table.csv"
+msgstr "unified_jobs_table.csv"
+
+#: ../../source/usability_data_collection.rst:537
+msgid "The unified_jobs_table.csv file provides information on jobs run by the system. Each line contains the following fields for a job:"
+msgstr "unified_jobs_table.csv ファイルは、システムによって実行されるジョブに関する情報を提供します。各行には、ジョブの次のフィールドが含まれています。"
+
+#: ../../source/usability_data_collection.rst:541
+msgid "Job id"
+msgstr "ジョブ ID"
+
+#: ../../source/usability_data_collection.rst:543
+msgid "Job name (from the template)"
+msgstr "ジョブ名 (テンプレートから)"
+
+#: ../../source/usability_data_collection.rst:545
+msgid "The id of the type of job it is"
+msgstr "職種の ID。"
+
+#: ../../source/usability_data_collection.rst:547
+msgid "The name of the polymorphic_ctype_id for the job. Examples include 'job', 'worfklow', and more."
+msgstr "そのジョブの polymorphic_ctype_id の名前。例としては、「job」、「worfklow」などがあります。"
+
+#: ../../source/usability_data_collection.rst:548
+msgid "organization_id"
+msgstr "organization_id"
+
+#: ../../source/usability_data_collection.rst:549
+msgid "The organization ID for the job"
+msgstr "ジョブの組織 ID"
+
+#: ../../source/usability_data_collection.rst:550
+msgid "organization_name"
+msgstr "organization_name"
+
+#: ../../source/usability_data_collection.rst:551
+msgid "Name for the organization_id"
+msgstr "organization_id の名前"
+
+#: ../../source/usability_data_collection.rst:553
+msgid "When the job record was created"
+msgstr "ジョブレコードが作成されたとき"
+
+#: ../../source/usability_data_collection.rst:554
+msgid "started"
+msgstr "started"
+
+#: ../../source/usability_data_collection.rst:555
+msgid "When the job started executing"
+msgstr "ジョブが実行を開始したとき"
+
+#: ../../source/usability_data_collection.rst:556
+msgid "finished"
+msgstr "finished"
+
+#: ../../source/usability_data_collection.rst:557
+msgid "When the job finished"
+msgstr "ジョブが終わったとき"
+
+#: ../../source/usability_data_collection.rst:558
+msgid "elapsed"
+msgstr "elapsed"
+
+#: ../../source/usability_data_collection.rst:559
+msgid "Elapsed time for the job in seconds"
+msgstr "秒単位でのジョブの経過時間"
+
+#: ../../source/usability_data_collection.rst:560
+#: ../../source/usability_data_collection.rst:598
+msgid "unified_job_template_id"
+msgstr "unified_job_template_id"
+
+#: ../../source/usability_data_collection.rst:561
+msgid "The template for this job"
+msgstr "このジョブのテンプレート"
+
+#: ../../source/usability_data_collection.rst:562
+msgid "launch_type"
+msgstr "launch_type"
+
+#: ../../source/usability_data_collection.rst:563
+msgid "One of \"manual\", \"scheduled\", \"relaunched\", \"scm\", \"workflow\", or \"dependnecy\""
+msgstr "「manual」、「scheduled」、「relaunched」、「scm」、「workflow」、または「dependnecy」のいずれか"
+
+#: ../../source/usability_data_collection.rst:564
+msgid "schedule_id"
+msgstr "schedule_id"
+
+#: ../../source/usability_data_collection.rst:565
+msgid "The id of the schedule that launched the job, if any"
+msgstr "このジョブを起動したスケジュールの ID (該当する場合)"
+
+#: ../../source/usability_data_collection.rst:566
+msgid "instance_group_id"
+msgstr "instance_group_id"
+
+#: ../../source/usability_data_collection.rst:567
+msgid "The instance group that executed the job"
+msgstr "ジョブを実行したインスタンスグループ"
+
+#: ../../source/usability_data_collection.rst:568
+msgid "execution_node"
+msgstr "execution_node"
+
+#: ../../source/usability_data_collection.rst:569
+msgid "The node that executed the job (hostname, not UUID)"
+msgstr "ジョブを実行したノード (UUID ではなくホスト名)"
+
+#: ../../source/usability_data_collection.rst:570
+msgid "controller_node"
+msgstr "controller_node"
+
+#: ../../source/usability_data_collection.rst:571
+msgid "The controller node for the job, if run as an isolated job, or in a container group"
+msgstr "分離されたジョブとして実行される場合、またはコンテナーグループ内で実行される場合、ジョブのコントローラーノード"
+
+#: ../../source/usability_data_collection.rst:572
+msgid "cancel_flag"
+msgstr "cancel_flag"
+
+#: ../../source/usability_data_collection.rst:573
+msgid "Whether the job was cancelled"
+msgstr "ジョブがキャンセルされたかどうか"
+
+#: ../../source/usability_data_collection.rst:575
+msgid "Status of the job"
+msgstr "ジョブのステータス"
+
+#: ../../source/usability_data_collection.rst:576
+#: ../../source/usability_data_collection.rst:664
+msgid "failed"
+msgstr "失敗"
+
+#: ../../source/usability_data_collection.rst:577
+msgid "Whether the job failed"
+msgstr "ジョブが失敗したかどうか"
+
+#: ../../source/usability_data_collection.rst:578
+msgid "job_explanation"
+msgstr "job_explanation"
+
+#: ../../source/usability_data_collection.rst:579
+msgid "Any additional detail for jobs that failed to execute properly"
+msgstr "適切に実行できなかったジョブの追加の詳細"
+
+#: ../../source/usability_data_collection.rst:582
+msgid "forks"
+msgstr "forks"
+
+#: ../../source/usability_data_collection.rst:581
+msgid "Number of forks executed for this job"
+msgstr "このジョブで実行されたフォークの数"
+
+#: ../../source/usability_data_collection.rst:585
+msgid "workflow_job_template_node_table.csv"
+msgstr "workflow_job_template_node_table.csv"
+
+#: ../../source/usability_data_collection.rst:587
+msgid "The workflow_job_template_node_table.csv provides information on the nodes defined in workflow job templates on the system."
+msgstr "workflow_job_template_node_table.csv は、システムのワークフロージョブテンプレートで定義されるノードの情報を提供します。"
+
+#: ../../source/usability_data_collection.rst:590
+msgid "Each line contains the following fields for a worfklow job template node:"
+msgstr "各行には、ワークフローのジョブテンプレートノードに以下のフィールドが含まれます。"
+
+#: ../../source/usability_data_collection.rst:593
+#: ../../source/usability_data_collection.rst:622
+msgid "Node id"
+msgstr "Node id"
+
+#: ../../source/usability_data_collection.rst:595
+msgid "When the node was created"
+msgstr "ノードが作成された日時"
+
+#: ../../source/usability_data_collection.rst:597
+msgid "When the node was last updated"
+msgstr "ノードが最後に更新された日時"
+
+#: ../../source/usability_data_collection.rst:599
+msgid "The id of the job template, project, inventory, or other parent resource for this node"
+msgstr "このノードのジョブテンプレート、プロジェクト、インベントリー、またはその他の親リソースの ID"
+
+#: ../../source/usability_data_collection.rst:600
+msgid "workflow_job_template_id"
+msgstr "workflow_job_template_id"
+
+#: ../../source/usability_data_collection.rst:601
+msgid "The workflow job template that contains this node"
+msgstr "このノードを含むワークフローのジョブテンプレート"
+
+#: ../../source/usability_data_collection.rst:602
+#: ../../source/usability_data_collection.rst:633
+msgid "inventory_id"
+msgstr "inventory_id"
+
+#: ../../source/usability_data_collection.rst:603
+msgid "The inventory used by this node"
+msgstr "このノードによって使用されるインベントリー"
+
+#: ../../source/usability_data_collection.rst:604
+#: ../../source/usability_data_collection.rst:635
+msgid "success_nodes"
+msgstr "success_nodes"
+
+#: ../../source/usability_data_collection.rst:605
+msgid "Nodes that are triggered after this node succeeds"
+msgstr "このノードに成功するとトリガーされるノード"
+
+#: ../../source/usability_data_collection.rst:606
+#: ../../source/usability_data_collection.rst:637
+msgid "failure_nodes"
+msgstr "failure_nodes"
+
+#: ../../source/usability_data_collection.rst:607
+msgid "Nodes that are triggered after this node fails"
+msgstr "このノードに障害が発生した後にトリガーされるノード"
+
+#: ../../source/usability_data_collection.rst:608
+#: ../../source/usability_data_collection.rst:639
+msgid "always_nodes"
+msgstr "always_nodes"
+
+#: ../../source/usability_data_collection.rst:609
+msgid "Nodes that always are triggered after this node finishes"
+msgstr "このノードの終了後に常にトリガーされるノード"
+
+#: ../../source/usability_data_collection.rst:611
+#: ../../source/usability_data_collection.rst:644
+msgid "all_parents_must_converge"
+msgstr "all_parents_must_converge"
+
+#: ../../source/usability_data_collection.rst:611
+msgid "Whether this node requires all its parent conditions satisfied to start"
+msgstr "このノードが開始するためにすべての親条件が満たされる必要があるかどうか"
+
+#: ../../source/usability_data_collection.rst:614
+msgid "workflow_job_node_table.csv"
+msgstr "workflow_job_node_table.csv"
+
+#: ../../source/usability_data_collection.rst:616
+msgid "The workflow_job_node_table.csv provides information on the jobs that have been executed as part of a workflow on the system."
+msgstr "workflow_job_node_table.csv は、システム上のワークフローの一部として実行されたジョブに関する情報を提供します。"
+
+#: ../../source/usability_data_collection.rst:619
+msgid "Each line contains the following fields for a job run as part of a workflow:"
+msgstr "各行には、ワークフローの一部として実行されるジョブに次のフィールドが含まれています。"
+
+#: ../../source/usability_data_collection.rst:624
+msgid "When the node record was created"
+msgstr "ノードレコードが作成された日時"
+
+#: ../../source/usability_data_collection.rst:626
+msgid "When the node record was last updated"
+msgstr "ノードレコードの最終更新時"
+
+#: ../../source/usability_data_collection.rst:627
+#: ../../source/usability_data_collection.rst:676
+msgid "job_id"
+msgstr "job_id"
+
+#: ../../source/usability_data_collection.rst:628
+msgid "The job id for the job run for this node"
+msgstr "このノードのジョブ実行のジョブ ID"
+
+#: ../../source/usability_data_collection.rst:629
+msgid "unified_job_tempalte_id"
+msgstr "unified_job_tempalte_id"
+
+#: ../../source/usability_data_collection.rst:630
+msgid "The id of the job template, project, inventory, or other parent resource for this job run"
+msgstr "このジョブ実行のジョブテンプレート、プロジェクト、インベントリー、またはその他の親リソースの ID"
+
+#: ../../source/usability_data_collection.rst:631
+msgid "workflow_job_id"
+msgstr "workflow_job_id"
+
+#: ../../source/usability_data_collection.rst:632
+msgid "The parent workflow job for this job run"
+msgstr "このジョブの親ワークフロージョブの実行"
+
+#: ../../source/usability_data_collection.rst:634
+msgid "The inventory used by this job"
+msgstr "このジョブによって使用されるインベントリー"
+
+#: ../../source/usability_data_collection.rst:636
+msgid "Nodes that were/would be triggered after this node succeded"
+msgstr "このノードが成功した後にトリガーされた、またはトリガーされるノード"
+
+#: ../../source/usability_data_collection.rst:638
+msgid "Nodes that were/would be triggered after this node failed"
+msgstr "このノードが失敗した後にトリガーされた、またはトリガーされるノード"
+
+#: ../../source/usability_data_collection.rst:640
+msgid "Nodes that were/would be triggered after this node finished"
+msgstr "このノードの終了後にトリガーされた、またはトリガーされるノード"
+
+#: ../../source/usability_data_collection.rst:641
+msgid "do_not_run"
+msgstr "do_not_run"
+
+#: ../../source/usability_data_collection.rst:642
+msgid "Nodes that were not run in the workflow due to their start conditions not being triggered"
+msgstr "開始条件がトリガーされていないためにワークフローで実行されなかったノード"
+
+#: ../../source/usability_data_collection.rst:644
+msgid "Whether this node required all its parent conditions satisfied to start"
+msgstr "このノードが開始するためにすべての親条件が満たされる必要があるかどうか"
+
+#: ../../source/usability_data_collection.rst:647
+msgid "events_table.csv"
+msgstr "events_table.csv"
+
+#: ../../source/usability_data_collection.rst:649
+msgid "The events_table.csv file provides information on all job events from all job runs in the system. Each line contains the following fields for a job event:"
+msgstr "events_table.csv ファイルは、システム内のすべてのジョブ実行からのすべてのジョブイベントに関する情報を提供します。各行には、ジョブイベントの次のフィールドが含まれています。"
+
+#: ../../source/usability_data_collection.rst:653
+msgid "Event id"
+msgstr "イベント ID"
+
+#: ../../source/usability_data_collection.rst:654
+msgid "uuid"
+msgstr "uuid"
+
+#: ../../source/usability_data_collection.rst:655
+msgid "Event UUID"
+msgstr "イベント UUID"
+
+#: ../../source/usability_data_collection.rst:657
+msgid "When the event was created"
+msgstr "イベントが作成されたとき"
+
+#: ../../source/usability_data_collection.rst:658
+msgid "parent_uuid"
+msgstr "parent_uuid"
+
+#: ../../source/usability_data_collection.rst:659
+msgid "The parent UUID for this event, if any"
+msgstr "このイベントの親 UUID (存在する場合)"
+
+#: ../../source/usability_data_collection.rst:660
+msgid "event"
+msgstr "イベント"
+
+#: ../../source/usability_data_collection.rst:661
+msgid "The Ansible event type (such as runner_on_failed"
+msgstr "Ansible イベントタイプ (runner_on_failed など)"
+
+#: ../../source/usability_data_collection.rst:662
+msgid "task_action"
+msgstr "task_action"
+
+#: ../../source/usability_data_collection.rst:663
+msgid "The module associated with this event, if any (such as 'command' or 'yum')"
+msgstr "このイベントに関連付けられているモジュール (存在する場合) (「command」または「yum」など）"
+
+#: ../../source/usability_data_collection.rst:665
+msgid "Whether the event returned \"failed\""
+msgstr "イベントが「失敗」を返したかどうか"
+
+#: ../../source/usability_data_collection.rst:666
+msgid "changed"
+msgstr "changed"
+
+#: ../../source/usability_data_collection.rst:667
+msgid "Whether the event returned \"changed\""
+msgstr "イベントが「変更」を返したかどうか"
+
+#: ../../source/usability_data_collection.rst:668
+msgid "playbook"
+msgstr "playbook"
+
+#: ../../source/usability_data_collection.rst:669
+msgid "Playbook associated with the event"
+msgstr "イベントに関連付けられた Playbook"
+
+#: ../../source/usability_data_collection.rst:670
+msgid "play"
+msgstr "play"
+
+#: ../../source/usability_data_collection.rst:671
+msgid "Play name from playbook"
+msgstr "Playbook から名前を再生"
+
+#: ../../source/usability_data_collection.rst:672
+msgid "task"
+msgstr "task"
+
+#: ../../source/usability_data_collection.rst:673
+msgid "Task name from playbook"
+msgstr "Playbook のタスク名"
+
+#: ../../source/usability_data_collection.rst:674
+msgid "role"
+msgstr "role"
+
+#: ../../source/usability_data_collection.rst:675
+msgid "Role name from playbook"
+msgstr "Playbook のロール名"
+
+#: ../../source/usability_data_collection.rst:677
+msgid "Id of the job this event is from"
+msgstr "このイベントが発生したジョブの ID"
+
+#: ../../source/usability_data_collection.rst:678
+msgid "host_id"
+msgstr "host_id"
+
+#: ../../source/usability_data_collection.rst:679
+msgid "Id of the host this event is associated with, if any"
+msgstr "このイベントが関連付けられているホストの ID (存在する場合)"
+
+#: ../../source/usability_data_collection.rst:680
+msgid "host_name"
+msgstr "host_name"
+
+#: ../../source/usability_data_collection.rst:681
+msgid "Name of the host this event is associated with, if any"
+msgstr "このイベントが関連付けられているホストの名前 (存在する場合)"
+
+#: ../../source/usability_data_collection.rst:682
+msgid "start"
+msgstr "start"
+
+#: ../../source/usability_data_collection.rst:683
+msgid "Start time of the task"
+msgstr "タスクの開始時間"
+
+#: ../../source/usability_data_collection.rst:684
+msgid "end"
+msgstr "end"
+
+#: ../../source/usability_data_collection.rst:685
+msgid "End time of the task"
+msgstr "タスクの終了時間"
+
+#: ../../source/usability_data_collection.rst:686
+msgid "duration"
+msgstr "duration"
+
+#: ../../source/usability_data_collection.rst:687
+msgid "Duration of the task"
+msgstr "タスクの期間"
+
+#: ../../source/usability_data_collection.rst:688
+msgid "warnings"
+msgstr "warnings"
+
+#: ../../source/usability_data_collection.rst:689
+msgid "Any warnings from the task/module"
+msgstr "タスク/モジュールからのすべての警告"
+
+#: ../../<generated>:1
+msgid "deprecations"
+msgstr "deprecations"
+
+#: ../../source/usability_data_collection.rst:691
+msgid "Any deprecation warnings from the task/module"
+msgstr "タスク/モジュールから非推奨となった警告"
+

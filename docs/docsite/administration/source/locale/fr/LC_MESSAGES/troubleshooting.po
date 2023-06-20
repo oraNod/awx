@@ -1,0 +1,346 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/troubleshooting.rst:5
+msgid "Troubleshooting Tower"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:13
+msgid "Error logs"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:18
+msgid ""
+"Tower server errors are logged in ``/var/log/tower``. Supervisors logs "
+"can be found in ``/var/log/supervisor/``. Apache web server errors are "
+"logged in the httpd error log. Configure other Tower logging needs in "
+"``/etc/tower/conf.d/``."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:20
+msgid ""
+"Explore client-side issues using the JavaScript console built into most "
+"browsers and report any errors to Ansible via the Red Hat Customer portal"
+" at https://access.redhat.com/."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:23
+msgid "Problems connecting to your host"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:28
+msgid ""
+"If you are unable to run the ``helloworld.yml`` example playbook from the"
+" Quick Start Guide or other playbooks due to host connection errors, try "
+"the following:"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:30
+msgid ""
+"Can you ``ssh`` to your host? Ansible depends on SSH access to the "
+"servers you are managing."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:31
+msgid ""
+"Are your hostnames and IPs correctly added in your inventory file? (Check"
+" for typos.)"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:35
+msgid "Changing the WebSockets port for live events"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:43
+msgid ""
+"|at| uses port 8080 on the Tower server to stream live updates of "
+"playbook activity and other events to the client browser. If this port is"
+" already in use or is blocked by your firewall, you can reconfigure Tower"
+" to use a different port."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:45
+msgid ""
+"Create a ``local_settings.json`` file in "
+"``/var/lib/awx/public/static/local_settings.json``, add an entry for "
+"``websocket_port``, and set the value to the desired port, such as: "
+"``{\"websocket_port\": 8080}``."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:46
+msgid ""
+"Edit ``/etc/tower/settings.py`` and add a new line like the following (in"
+" this example, 8081 is your new desired port): "
+"``SOCKETIO_LISTEN_PORT=8081``"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:47
+msgid "Make sure your firewall allows traffic through this port."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:48
+msgid ""
+"Restart Tower by running the admin utility script, ``ansible-tower-"
+"service restart``."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:50
+msgid ""
+"Note that ``local_settings.json`` is removed when upgrading Tower to a "
+"new release. You must recreate and reapply the change on each upgrade of "
+"Tower."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:54
+msgid "Problems running a playbook"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:59
+msgid ""
+"If you are unable to run the ``helloworld.yml`` example playbook from the"
+" Quick Start Guide or other playbooks due to playbook errors, try the "
+"following:"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:61
+msgid ""
+"Are you authenticating with the user currently running the commands? If "
+"not, check how the username has been setup or pass the "
+"``--user=username`` or ``-u username`` commands to specify a user."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:62
+msgid ""
+"Is your YAML file correctly indented? You may need to line up your "
+"whitespace correctly. Indentation level is significant in YAML. You can "
+"use ``yamlint`` to check your playbook. For more information, refer to "
+"the YAML primer at: http://docs.ansible.com/YAMLSyntax.html"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:63
+msgid ""
+"Items beginning with a ``-`` are considered list items or plays. Items "
+"with the format of ``key: value`` operate as hashes or dictionaries. "
+"Ensure you don't have extra or missing ``-`` plays."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:67
+msgid "Problems when running a job"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:72
+msgid ""
+"If you are having trouble running a job from a playbook, you should "
+"review the playbook YAML file. When importing a playbook, either manually"
+" or via a source control mechanism, keep in mind that the host definition"
+" is controlled by Tower and should be set to ``hosts: all``."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:76
+msgid "Playbooks aren't showing up in the \"Job Template\" drop-down"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:82
+msgid ""
+"If your playbooks are not showing up in the Job Template drop-down list, "
+"here are a few things you can check:"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:84
+msgid "Make sure that the playbook is valid YML and can be parsed by Ansible."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:85
+msgid ""
+"Make sure the permissions and ownership of the project path "
+"(/var/lib/awx/projects) is set up so that the \"awx\" system user can "
+"view the files. You can run this command to change the ownership:"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:93
+msgid "Playbook stays in pending"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:98
+msgid ""
+"If you are attempting to run a playbook Job and it stays in the "
+"\"Pending\" state indefinitely, try the following:"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:100
+msgid "Ensure all supervisor services are running via ``supervisorctl status``."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:101
+msgid ""
+"Check to ensure that the ``/var/`` partition has more than 1 GB of space "
+"available. Jobs will not complete with insufficient space on the "
+"``/var/`` partition."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:102
+msgid "Run ``ansible-tower-service restart`` on the Tower server."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:105
+msgid ""
+"If you continue to have problems, run ``sosreport`` as root on the Tower "
+"server, then file a `support request`_ with the result."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:111
+msgid "Cancel a Tower job"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:115
+msgid ""
+"When issuing a ``cancel`` request on a currently running Tower job, Tower"
+" issues a ``SIGINT`` to the ``ansible-playbook`` process. While this "
+"causes Ansible to stop dispatching new tasks and exit, in many cases, "
+"module tasks that were already dispatched to remote hosts will run to "
+"completion. This behavior is similar to pressing ``Ctrl-C`` during a "
+"command-line Ansible run."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:117
+msgid ""
+"With respect to software dependencies, if a running job is canceled, the "
+"job is essentially removed but the dependencies will remain."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:122
+msgid "Reusing an external HA database causes installations to fail"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:126
+msgid ""
+"Instances have been reported where reusing the external DB during "
+"subsequent HA installations causes installation failures."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:128
+msgid ""
+"For example, say that you performed an HA installation. Next, say that "
+"you needed to do this again and performed a second HA installation "
+"reusing the same external database, only this subsequent installation "
+"failed."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:130
+msgid ""
+"When setting up an external HA database which has been used in a prior "
+"installation, the HA database must be manually cleared before any "
+"additional installations can succeed."
+msgstr ""
+
+#: ../../../common/source/proot_func_variables.rst:2
+msgid "PRoot functionality and variables"
+msgstr ""
+
+#: ../../../common/source/proot_func_variables.rst:9
+msgid ""
+"The PRoot functionality in |at| limits which directories on the Tower "
+"file system are available for playbooks to see and use during playbook "
+"runs. You may find that you need to customize your PRoot settings in some"
+" cases. To fine tune your usage of PRoot, there are certain variables "
+"that can be set:"
+msgstr ""
+
+#: ../../../common/source/proot_func_variables.rst:25
+msgid ""
+"To customize your PRoot settings, navigate to ``the "
+"/etc/tower/settings.py`` file. Once your changes have been saved, restart"
+" services with the ``ansible-tower-service restart`` command."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:136
+msgid "Private EC2 VPC Instances in Tower Inventory"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:143
+msgid ""
+"By default, Tower only shows instances in a VPC that have an Elastic IP "
+"(EIP) associated with them. To see all of your VPC instances, perform the"
+" following steps:"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:145
+msgid "In the Tower interface, select your inventory."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:146
+msgid ""
+"Click on the group that has the Source set to AWS, and click on the "
+"Source tab."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:147
+msgid "In the ``Source Variables`` box, enter:"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:153
+msgid ""
+"Next, save and then trigger an update of the group. Once this is done, "
+"you should be able to see all of your VPC instances."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:157
+msgid ""
+"Tower must be running inside the VPC with access to those instances if "
+"you want to configure them."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:162
+msgid "Troubleshooting \"Error: provided hosts list is empty\""
+msgstr ""
+
+#: ../../source/troubleshooting.rst:168
+msgid ""
+"If you receive the message \"Skipping: No Hosts Matched\" when you are "
+"trying to run a playbook through Tower, here are a few things to check:"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:170
+msgid ""
+"Make sure that your hosts declaration line in your playbook matches the "
+"name of your group/host in inventory exactly (these are case sensitive)."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:171
+msgid ""
+"If it does match and you are using Ansible Core 2.0 or later, check your "
+"group names for spaces and modify them to use underscores or no spaces to"
+" ensure that the groups can be recognized."
+msgstr ""
+
+#: ../../source/troubleshooting.rst:172
+msgid ""
+"Make sure that if you have specified a Limit in the Job Template that it "
+"is a valid limit value and still matches something in your inventory. The"
+" Limit field takes a pattern argument, described here: "
+"http://docs.ansible.com/intro_patterns.html"
+msgstr ""
+
+#: ../../source/troubleshooting.rst:174
+msgid ""
+"Please file a support ticket if you still run into issues after checking "
+"these options."
+msgstr ""
+

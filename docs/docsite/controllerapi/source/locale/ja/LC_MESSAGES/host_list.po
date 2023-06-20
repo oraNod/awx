@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/host_list.rst:3
+msgid "Host List API Endpoint"
+msgstr "ホストリストの API エンドポイント"
+
+#: ../../source/host_list.rst:8
+msgid "Make a GET request to this resource to retrieve the list of hosts."
+msgstr "このリソースに GET 要求を実行して、ホストリストを取得します。"
+
+#: ../../source/host_list.rst:19
+msgid "The resulting data structure contains:"
+msgstr "返されるデータ構造には以下が含まれます。"
+
+#: ../../source/host_list.rst:32
+msgid "The ``count`` field indicates the total number of hosts found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more host records."
+msgstr "``count`` フィールドは指定のクエリーで見つかったホストの合計数を示します。``next`` および ``previous`` フィールドは、結果が単一ページに収まらない場合に、それらの結果へのリンクを提供します。``results`` にはホストのレコードが一覧表示されますが、ゼロの場合もあります。"
+
+#: ../../source/host_list.rst:35
+msgid "Results"
+msgstr "結果"
+
+#: ../../source/host_list.rst:40
+msgid "Each host data structure includes the following fields:"
+msgstr "各ホストのデータ構造には以下のフィールドが含まれます。"
+
+#: ../../source/host_list.rst:42
+msgid "``id``: Database ID for this host. (integer)"
+msgstr "``id``: ホストのデータベース ID (整数)"
+
+#: ../../source/host_list.rst:43
+msgid "``type``: Data type for this host. (multiple choice)"
+msgstr "``type``: ホストのデータタイプ (複数選択)"
+
+#: ../../source/host_list.rst:44
+msgid "``host``: Host"
+msgstr "``host``: ホスト"
+
+#: ../../source/host_list.rst:45
+msgid "``url``: URL for this host. (string)"
+msgstr "``url``: ホストの URL (文字列)"
+
+#: ../../source/host_list.rst:46
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``: 関連リソースの URL のあるデータ構造 (オブジェクト)"
+
+#: ../../source/host_list.rst:47
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``: 関連リソースの名前/説明のあるデータ構造 (オブジェクト)"
+
+#: ../../source/host_list.rst:48
+msgid "``created``: Timestamp when this host was created. (datetime)"
+msgstr "``created``: ホスト作成時のタイムスタンプ (日時)"
+
+#: ../../source/host_list.rst:49
+msgid "``modified``: Timestamp when this host was last modified. (datetime)"
+msgstr "``modified``: ホストの最終更新時のタイムスタンプ (日時)"
+
+#: ../../source/host_list.rst:50
+msgid "``name``: (string)"
+msgstr "``name``: (文字列)"
+
+#: ../../source/host_list.rst:51
+msgid "``description``: (string)"
+msgstr "``description``: (文字列)"
+
+#: ../../source/host_list.rst:52
+msgid "``inventory``: (field)"
+msgstr "``inventory``: (フィールド)"
+
+#: ../../source/host_list.rst:53
+msgid "``enabled``: Is this host online and available for running jobs? (boolean)"
+msgstr "``enabled``: このホストがオンラインどうか、またジョブを実行するために利用できるかどうか (ブール値)"
+
+#: ../../source/host_list.rst:54
+msgid "``instance_id``: (string)"
+msgstr "``instance_id``: (文字列)"
+
+#: ../../source/host_list.rst:55
+msgid "``variables``: Host variables in JSON or YAML format. (string)"
+msgstr "``variables``: JSON または YAML 形式のグループ変数 (文字列)"
+
+#: ../../source/host_list.rst:56
+msgid "``has_active_failures``: Flag indicating whether the last job failed for this host. (boolean)"
+msgstr "``has_active_failures``: このホストの最後のジョブが失敗したかどうかを示すフラグ (ブール値)"
+
+#: ../../source/host_list.rst:57
+msgid "``has_inventory_sources``: Flag indicating whether this host was created/updated from any external inventory sources. (boolean)"
+msgstr "``has_inventory_sources``: このホストが外部インベントリーソースから作成/更新されたかどうかを示すフラグ"
+
+#: ../../source/host_list.rst:58
+msgid "``last_job``: (field)"
+msgstr "``last_job``: (フィールド)"
+
+#: ../../source/host_list.rst:59
+msgid "``last_job_host_summary``: (field)"
+msgstr "``last_job_host_summary``: (フィールド)"
+
+#: ../../source/host_list.rst:63
+msgid "Create Hosts"
+msgstr "ホストの作成"
+
+#: ../../source/host_list.rst:68
+msgid "Make a POST request to this resource with the following host fields to create a new host:"
+msgstr "新規ホストを作成するには、以下のホストフィールドを使ってリソースに POST 要求を実行します。"
+
+#: ../../source/host_list.rst:70
+msgid "``name``: (string, required)"
+msgstr "``name``: (文字列。必須)"
+
+#: ../../source/host_list.rst:71
+msgid "``description``: (string, default=\"\")"
+msgstr "``description``: (文字列。デフォルトは \"\")"
+
+#: ../../source/host_list.rst:72
+msgid "``inventory``: (field, required)"
+msgstr "``inventory``: (フィールド。必須)"
+
+#: ../../source/host_list.rst:73
+msgid "``enabled``: Is this host online and available for running jobs? (boolean, default=True)"
+msgstr "``enabled``: このホストがオンラインかどうか、またジョブを実行するために利用できるかどうか (ブール値。デフォルトは True)"
+
+#: ../../source/host_list.rst:74
+msgid "``instance_id``: (string, default=\"\")"
+msgstr "``instance_id``: (文字列。デフォルトは \"\")"
+
+#: ../../source/host_list.rst:75
+msgid "``variables``: Host variables in JSON or YAML format. (string, default=\"\")"
+msgstr "``variables``: JSON または YAML 形式のホスト変数 (文字列。デフォルトは \"\")"
+
+#: ../../source/host_list.rst:76
+msgid "``last_job``: (field, default=None)"
+msgstr "``last_job``: (フィールド。デフォルトは None)"
+
+#: ../../source/host_list.rst:77
+msgid "``last_job_host_summary``: (field, default=None)"
+msgstr "``last_job_host_summary``: (フィールド。デフォルトは None)"
+
+#: ../../source/host_list.rst:81
+msgid "Reviewing the Options Endpoint"
+msgstr "オプションエンドポイントの確認"
+
+#: ../../source/host_list.rst:86
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*オプションエンドポイント* テーブルでは、このエンドポイントのオプションを確認できます。ブラウザー表示が可能な API でエンドポイントを表示している場合は、「オプション」ボタンをクリックすると以下の raw JSON が表示されます。"
+

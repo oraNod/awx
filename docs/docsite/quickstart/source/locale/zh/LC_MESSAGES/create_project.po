@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_project.rst:2
+msgid "Setting up a Project"
+msgstr "设置项目"
+
+#: ../../source/create_project.rst:8
+msgid "A Project is a logical collection of Ansible playbooks, represented in the controller."
+msgstr "项目是在控制器中用于代表 Ansible playbook 的逻辑集合。"
+
+#: ../../source/create_project.rst:10
+msgid "You can manage playbooks and playbook directories by either placing them manually under the Project Base Path on your controller server, or by placing your playbooks into a source code management (SCM) system supported by the controller, including Git, Subversion, and Mercurial."
+msgstr "您可以将 playbook 和 playbook 目录手动放置到控制器服务器的 Project Base 路径下，或者将 playbook 放置到控制器支持的源代码管理 (SCM) 系统，包括 Git、Subversion 和 Mercurial，这两种方法均可管理 playbook 和 playbook 目录。"
+
+#: ../../source/create_project.rst:14
+msgid "It is recommended that, whenever possible, you use source control to manage your playbooks. This type of best practice provides the ability to treat your infrastructure as code and is in line with DevOps ideals. While this Quick Start Guide uses lightweight examples to get you up and running, we suggest using source control to manage playbook for production purposes."
+msgstr "建议尽量使用源控制来管理 playbook。这种类型的最佳实践提供了将基础架构视为代码并使其符合 DevOps 理想情况的功能。虽然本快速入门指南使用轻量级示例来启动和运行，我们建议您使用源控制来管理 playbook 来实现生产目的。"
+
+#: ../../source/create_project.rst:16
+msgid "To review existing projects, click **Projects** from the left navigation bar."
+msgstr "要查看现有项目，点左侧导航栏中的 **Projects**。"
+
+#: ../../source/create_project.rst:18
+msgid "|Projects - home|"
+msgstr "|Projects - home|"
+
+#: ../../source/create_project.rst:22
+msgid "The |at| simplifies the startup process by providing you with a Demo Project to work with initially."
+msgstr "|at| 简化启动过程，为您提供演示项目供初始使用。"
+
+#: ../../source/create_project.rst:24
+msgid "Click on **Demo Project** to view its details."
+msgstr "点 **Demo Project** 查看它的详细信息。"
+
+#: ../../source/create_project.rst:26
+msgid "|Projects - demo project|"
+msgstr "|Projects - demo project|"
+
+#: ../../source/create_project.rst:30
+msgid "For the purpose of this Quick Start Guide, leave the default demo project as is. But to edit the default project later - from the Details tab, click **Edit**, or from the Projects list view, click the Edit (|edit|) button next to the project name to edit the appropriate details, then save your changes."
+msgstr "在本快速入门指南中，请不要修改默认演示项目模板。但要在以后编辑默认项目 - 从 Details 选项卡中点 **Edit**，或从 Projects 列视图中，点凭证名称旁的 Edit（|edit|）按钮来编辑相关的详情，然后保存您的更改。"
+
+#: ../../source/create_project.rst:34
+msgid "If you want to fetch the project for latest changes, you can manually start an SCM sync for this project. Update the SCM-based demo project from the Details tab, click **Sync**, or from the Projects list view, click the Sync (|sync|) button next to the project name."
+msgstr "如果需要获取项目的最新改变，您必须手动启动这个项目的 SCM 同步。从 Details 选项卡中更新基于 SCM 的演示项目、点 **Sync**，或从 Projects 列表视图中更新，点项目名称旁边的 Sync（|sync|）按钮。"
+
+#: ../../source/create_project.rst:40
+msgid "Please note that immediately after adding new projects setup to use source control, a \"sync\" automatically starts that fetches the project details from the configured source control."
+msgstr "请注意，在添加新项目设置以使用源控制后，会立即自动启动一个“同步”进程来从配置的源控制获取项目详情。"
+

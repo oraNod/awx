@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/access_resources.rst:3
+msgid "Access Resources"
+msgstr "액세스 리소스"
+
+#: ../../source/access_resources.rst:8
+msgid "Traditionally, |at| uses a primary key to access individual resource objects. Starting in 3.2 and API v2, the named URL feature allows you to access controller resources via resource-specific human-readable identifiers. In |at| versions prior to 3.2, the only way of accessing a resource object without auxiliary query string is via resource primary key number, for example, via URL path: ``/api/v2/hosts/2/``. Now, you can use a named URL to do the same thing, for example, via URL path ``/api/v2/hosts/host_name++inv_name++org_name/``."
+msgstr "일반적으로 |at|는 기본 키를 사용하여 개별 리소스 오브젝트에 액세스합니다. 3.2 및 API v2부터는 이름이 지정된 URL 기능을 사용하여 사람이 읽을 수 있는 리소스별 ID를 통해 컨트롤러 리소스에 액세스할 수 있습니다. |at| 3.2 이전 버전에서 보조 쿼리 문자열 없이 리소스 오브젝트에 액세스하는 유일한 방법은 리소스 기본 키 번호를 사용하는 것입니다(예: URL 경로(``/api/v2/hosts/2/``)를 통해). 이제 이름이 지정된 URL을 사용하여(예: URL 경로(``/api/v2/hosts/host_name++inv_name++org_name/``)를 통해) 동일한 작업을 수행할 수 있습니다."
+
+#: ../../source/access_resources.rst:11
+msgid "Configuration Settings"
+msgstr "구성 설정"
+
+#: ../../source/access_resources.rst:13
+msgid "There are two named-URL-related configuration settings available under ``/api/v2/settings/named-url/``:"
+msgstr "``/api/v2/settings/named-url/``에는 이름이 지정된 URL 관련 구성 설정이 두 개 있습니다."
+
+#: ../../source/access_resources.rst:15
+msgid "``NAMED_URL_FORMATS`` and ``NAMED_URL_GRAPH_NODES``"
+msgstr "``NAMED_URL_FORMATS`` 및 ``NAMED_URL_GRAPH_NODES``"
+
+#: ../../source/access_resources.rst:17
+msgid "``NAMED_URL_FORMATS`` is a read only key-value pair list of all available named URL identifier formats. A typical ``NAMED_URL_FORMATS`` looks like this:"
+msgstr "``NAMED_URL_FORMATS``는 이름이 지정된 모든 사용 가능한 URL ID 형식으로 이루어진 읽기 전용 키-값 쌍 목록입니다. 일반적인 ``NAMED_URL_FORMATS``는 다음과 같습니다."
+
+#: ../../source/access_resources.rst:43
+msgid "For each item in ``NAMED_URL_FORMATS``, the key is the API name of the resource to have named URL, the value is a string indicating how to form a human-readable unique identifier for that resource. ``NAMED_URL_FORMATS`` exclusively lists every resource that can have named URL, any resource not listed there has no named URL. If a resource can have named URL, its objects should have a named_url field which represents the object-specific named URL. That field should only be visible under detail view, not list view. You can access specified resource objects using accurately generated named URL. This includes not only the object itself but also its related URLs. For example, if ``/api/v2/res_name/obj_slug/`` is valid, ``/api/v2/res_name/obj_slug/related_res_name/`` should also be valid."
+msgstr "``NAMED_URL_FORMATS``의 각 항목에서 키는 이름이 지정된 URL이 제공될 리소스의 API 이름이고, 값은 해당 리소스에 대해 사람이 읽을 수 있는 고유 ID를 형성하는 방법을 나타내는 문자열입니다. ``NAMED_URL_FORMATS``는 이름이 지정된 URL을 포함할 수 있는 리소스만 모두 나열합니다. 여기에 나열되지 않은 리소스에는 이름이 지정된 URL이 없습니다. 리소스에 이름이 지정된 URL을 포함할 수 있는 경우 해당 오브젝트에 오브젝트 고유의 이름이 지정된 URL을 나타내는 named_url 필드가 있어야 합니다. 해당 필드는 목록 뷰가 아닌 세부 정보 뷰에만 표시되어야 합니다. 지정된 리소스 오브젝트는 정확하게 생성된 이름이 지정된 URL을 사용하여 액세스할 수 있습니다. 여기에는 오브젝트 자체뿐만 아니라 관련 URL도 포함됩니다. 예를 들어, ``/api/v2/res_name/obj_slug/``가 유효한 경우 ``/api/v2/res_name/obj_slug/related_res_name/``도 유효해야 합니다."
+
+#: ../../source/access_resources.rst:45
+msgid "``NAMED_URL_FORMATS`` are instructive enough to compose human-readable unique identifier and named URL themselves. For ease-of-use, every object of a resource that can have named URL will have a related field ``named_url`` that displays that object's named URL. You can copy and paste that field for your own custom use. Also refer to the help text of API browser if a resource object has named URL for further guidance."
+msgstr "``NAMED_URL_FORMATS``은 사람이 읽을 수 있는 고유 ID와 이름이 지정된 URL 자체를 구성할 만큼 충분히 유용합니다. 사용하기 쉽도록 이름이 지정된 URL을 포함할 수 있는 리소스의 모든 오브젝트에는 해당 오브젝트의 이름이 지정된 URL을 표시하는 관련 필드 ``named_url``이 있습니다. 사용자 정의 용도로 해당 필드를 복사하여 붙여넣을 수 있습니다. 또한 리소스 오브젝트에 추가 지침을 위한 이름이 지정된 URL이 있는 경우 API 브라우저의 도움말 텍스트를 참조하십시오."
+
+#: ../../source/access_resources.rst:47
+msgid "Suppose you want to manually determine the named URL for a label with ID 5. A typical procedure of composing a named URL for this specific resource object using ``NAMED_URL_FORMATS`` is to first look up the labels field of ``NAMED_URL_FORMATS`` to get the identifier format ``<name>++<organization.name>``:"
+msgstr "ID가 5인 레이블의 이름이 지정된 URL을 수동으로 결정한다고 가정하겠습니다. ``NAMED_URL_FORMATS``를 사용하여 이 특정 리소스 오브젝트에 대해 이름이 지정된 URL을 구성하는 일반적인 절차는 먼저 ``NAMED_URL_FORMATS``의 레이블 필드를 찾아 ID 형식 ``<name>++<organization.name>``을 가져오는 것입니다."
+
+#: ../../source/access_resources.rst:49
+msgid "The first part of the URL format is ``<name>``, which indicates that the label resource detail can be found in ``/api/v2/labels/5/``, and look for ``name`` field in returned JSON. Suppose you have the ``name`` field with value 'Foo', then the first part of the unique identifier is **Foo**."
+msgstr "URL 형식의 첫 번째 부분은 ``<name>``이며, 이는 레이블 리소스 세부 정보가 ``/api/v2/labels/5/``에 있고 반환된 JSON에서 ``name`` 필드를 찾을 수 있음을 나타냅니다. 값이 'Foo'인 ``name`` 필드가 있다고 가정하면 고유 ID의 첫 번째 부분은 **Foo**가 됩니다."
+
+#: ../../source/access_resources.rst:50
+msgid "The second part of the format are double pluses ++. That is the delimiter that separates different parts of a unique identifier. Append them to the unique identifier to get **Foo++**"
+msgstr "형식의 두 번째 부분은 이중 더하기 기호(++)입니다. 이 기호는 고유 ID의 다양한 부분을 구분합니다. **Foo++**를 가져오려면 고유 ID에 추가합니다."
+
+#: ../../source/access_resources.rst:51
+msgid "The third part of the format is ``<organization.name>``, which indicates that field is not in the current label object under investigation, but in an organization which the label object points to. Thus, as the format indicates, look up the organization in the related field of current returned JSON. That field may or may not exist. If it exists, follow the URL given in that field, for example, ``/api/v2/organizations/3/``, to get the detail of the specific organization, extract its ``name`` field, for example, 'Default', and append it to our current unique identifier. Since ``<organizations.name>`` is the last part of format, thus, generating the resulting named URL: ``/api/v2/labels/Foo++Default/``.  In the case where organization does not exist in related field of the label object detail, append an empty string instead, which essentially does not alter the current identifier. So ``Foo++`` becomes the final unique identifier and the resulting generated named URL becomes ``/api/v2/labels/Foo++/``."
+msgstr "형식의 세 번째 부분은 ``<organization.name>``이며, 이는 해당 필드가 조사 중인 현재 레이블 오브젝트에 있지 않고 레이블 오브젝트가 가리키는 조직에 있음을 나타냅니다. 따라서 형식이 표시되면 현재 반환된 JSON의 관련 필드에서 조직을 찾습니다. 해당 필드가 존재하거나 존재하지 않을 수 있습니다. 존재하는 경우 해당 필드에 지정된 URL(예: ``/api/v2/organizations/3/``)을 따라 특정 조직의 세부 정보를 가져와서 ``name`` 필드(예: ‘기본값’)를 추출한 후 현재의 고유 ID에 추가합니다. ``<organizations.name>``은 형식의 마지막 부분이므로 결과적으로 생성되는 이름이 지정된 URL은 ``/api/v2/labels/Foo++Default/``입니다.  레이블 오브젝트 세부 정보의 관련 필드에 조직이 없는 경우에는 대신 빈 문자열을 추가합니다. 빈 문자열은 기본적으로 현재 ID를 변경하지 않습니다. 따라서 ``Foo++``가 최종 고유 ID가 되고, 결과적으로 생성되는 이름이 지정된 URL은 ``/api/v2/labels/Foo++/``입니다."
+
+#: ../../source/access_resources.rst:53
+msgid "An important aspect of generating a unique identifier for named URL has to do with reserved characters. Because the identifier is part of a URL, the following reserved characters by URL standard is encoded by percentage symbols: ``;/?:@=&[]``. For example, if an organization is named ``;/?:@=&[]``, its unique identifier should be ``%3B%2F%3F%3A%40%3D%26%5B%5D``. Another special reserved character is ``+``, which is not reserved by URL standard but used by named URL to link different parts of an identifier. It is encoded by ``[+]``. For example, if an organization is named ``[+]``, its unique identifier is ``%5B[+]%5D``, where original ``[`` and ``]`` are percent encoded and ``+`` is converted to ``[+]``."
+msgstr "이름이 지정된 URL에 대한 고유 ID를 생성하는 작업의 중요한 측면은 예약된 문자와 관련이 있습니다. ID는 URL의 일부이므로 URL 표준에 의해 예약된 ``;/?:@=&[]`` 문자는 퍼센트 기호로 인코딩됩니다. 예를 들어, 조직 이름이 ``;/?:@=&[]``인 경우 고유 ID는 ``%3B%2F%3F%3A%40%3D%26%5B%5D``입니다. 또 다른 특수 예약 문자는 ``+``로, URL 표준에 의해 예약되지는 않았지만 이름이 지정된 URL에서 ID의 다른 부분을 연결하는 데 사용합니다. 이 문자는 ``[+]``로 인코딩됩니다. 예를 들어, 조직 이름이 ``[+]``인 경우 고유 ID는 ``%5B[+]%5D``입니다. 여기서 원래의 ``[`` 및 ``]``는 퍼센트 기호로 인코딩되고 ``+``는 ``[+]``로 변환됩니다."
+
+#: ../../source/access_resources.rst:55
+msgid "Although ``NAMED_URL_FORMATS`` cannot be manually modified, modifications do occur automatically and expanded over time, reflecting underlying resource modification and expansion. Consult the ``NAMED_URL_FORMATS`` on the same cluster where you want to use the named URL feature."
+msgstr "``NAMED_URL_FORMATS``는 수동으로 수정할 수 없지만 기본 리소스 수정 및 확장을 반영하여 시간이 지남에 따라 수정이 자동으로 수행되고 확장됩니다. 이름이 지정된 URL 기능을 사용할 해당 클러스터의 ``NAMED_URL_FORMATS``를 참조하십시오."
+
+#: ../../source/access_resources.rst:57
+msgid "``NAMED_URL_GRAPH_NODES`` is another read-only list of key-value pairs that exposes the internal graph data structure used to manage named URLs. This is not intended to be human-readable but should be used for programmatically generating named URLs. An example script for generating named URL given the primary key of arbitrary resource objects that can have a named URL, using info provided by ``NAMED_URL_GRAPH_NODES``, can be found in GitHub at https://github.com/ansible/awx/blob/devel/tools/scripts/pk_to_named_url.py."
+msgstr "``NAMED_URL_GRAPH_NODES``는 이름이 지정된 URL을 관리하는 데 사용되는 내부 그래프 데이터 구조를 노출하는 또 다른 읽기 전용 키-값 쌍 목록입니다. 이 목록은 사람이 읽을 수 있도록 고안된 것은 아니지만 이름이 지정된 URL을 프로그래밍 방식으로 생성하는 데 사용해야 합니다. 이름이 지정된 URL을 포함할 수 있는 임의의 리소스 오브젝트 기본 키를 제공하고 ``NAMED_URL_GRAPH_NODES``에서 제공하는 정보를 사용하여 이름이 지정된 URL을 생성하는 스크립트의 예는 GitHub(https://github.com/ansible/awx/blob/devel/tools/scripts/pk_to_named_url.py.)에서 확인할 수 있습니다."
+
+#: ../../source/access_resources.rst:60
+msgid "Identifier Format Protocol"
+msgstr "ID 형식 프로토콜"
+
+#: ../../source/access_resources.rst:62
+msgid "Resources are identifiable by their unique keys, which are basically tuples of resource fields. Every resource is guaranteed to have its primary key number alone as a unique key, but there might be multiple other unique keys. A resource can generate an identifier format thus, have a named URL if it contains at least one unique key that satisfies the rules below:"
+msgstr "리소스는 기본적으로 리소스 필드의 튜플인 고유 키로 식별할 수 있습니다. 모든 리소스는 고유 키로 기본 키 번호만 사용해야 하지만 다른 고유 키가 여러 개 있을 수 있습니다. 리소스는 하나의 ID 형식을 생성할 수 있으므로 아래 규칙을 충족하는 고유 키가 한 개 이상 포함된 경우 이름이 지정된 URL을 포함할 수 있습니다."
+
+#: ../../source/access_resources.rst:64
+msgid "The key must contain only fields that are either the ``name`` field, or text fields with a finite number of possible choices (like credential type resource's ``kind`` field)."
+msgstr "키에는 ``name`` 필드인 필드만 포함하거나 가능한 선택 항목이 제한된 텍스트 필드(예: 인증 정보 유형 리소스의 ``kind`` 필드)만 포함되어야 합니다."
+
+#: ../../source/access_resources.rst:66
+msgid "The only allowed exceptional fields that breaks rule #1 is a many-to-one related field relating to a resource other than itself, which is also allowed to have a slug."
+msgstr "1번 규칙을 위반하며 유일하게 허용되는 예외적인 필드는 해당 리소스 이외의 리소스와 관련된 다대일 관련 필드입니다. 이러한 리소스에는 슬러그도 포함될 수 있습니다."
+
+#: ../../source/access_resources.rst:68
+msgid "Suppose there are resources ``Foo`` and ``Bar``, both ``Foo`` and ``Bar`` contain a ``name`` field and a ``choice`` field that can only have value 'yes' or 'no'. Additionally, resource ``Foo`` contains a many-to-one field (a foreign key) relating to ``Bar``, e.g. ``fk``. ``Foo`` has a unique key tuple (``name``, ``choice``, ``fk``) and ``Bar`` has a unique key tuple (``name``, ``choice``). ``Bar`` can have named URL because it satisfies rule #1 above. ``Foo`` can also have named URL, even though it breaks rule #1, the extra field breaking rule #1 is the ``fk`` field, which is many-to-one-related to ``Bar`` and ``Bar`` can have named URL."
+msgstr "리소스 ``Foo`` 및 ``Bar``가 있고 ``Foo``와 ``Bar`` 둘 다 'yes' 또는 'no' 값만 포함할 수 있는 ``name`` 필드와 ``choice`` 필드가 있다고 가정하겠습니다. 또한 리소스 ``Foo``에는 ``Bar``와 관련된 다대일 필드(외래 키)가 포함되어 있습니다(예: ``fk``). ``Foo``의 고유 키 튜플은 ``name``, ``choice``, ``fk``이고, ``Bar``의 고유 키 튜플은 ``name``, ``choice``입니다. ``Bar``는 위의 1번 규칙을 충족하기 때문에 이름이 지정된 URL을 포함할 수 있습니다. ``Foo``는 1번 규칙을 위반하더라도 이름이 지정된 URL을 포함할 수 있습니다. 1번 규칙을 위반하는 추가 필드는 ``Bar``와 관련된 다대일 ``fk`` 필드이며, ``Bar``는 이름이 지정된 URL을 포함할 수 있습니다."
+
+#: ../../source/access_resources.rst:70
+msgid "For resources satisfying rule #1 above, their human-readable unique identifiers are combinations of foreign key fields, delimited by ``+``. In specific, resource ``Bar`` in the above example will have slug format ``<name>+<choice>``. Note the field order matters in slug format: ``name`` field always comes first if present, following by all the rest fields arranged in lexicographic order of field name. For example, if Bar also has an ``a_choice`` field satisfying rule #1 and the unique key becomes (``name``, ``choice``, ``a_choice``), its slug format becomes ``<name>+<a_choice>+<choice>``."
+msgstr "위의 1번 규칙을 충족하는 리소스의 경우 사람이 읽을 수 있는 고유 ID는 ``+``로 구분된 외래 키 필드의 조합입니다. 특히 위 예에서 리소스 ``Bar``는 슬러그 형식 ``<name>+<choice>``를 취합니다. 슬러그 형식에서는 필드 순서가 중요합니다. ``name`` 필드가 있는 경우 항상 먼저 오고 나머지 모든 필드가 필드 이름의 사전순으로 정렬되어 그 뒤에 이어집니다. 예를 들어, Bar에도 1번 규칙을 충족하는 ``a_choice`` 필드가 있어 고유 키가 ``name``, ``choice``, ``a_choice``가 되는 경우 슬러그 형식은 ``<name>+<a_choice>+<choice>``입니다."
+
+#: ../../source/access_resources.rst:72
+msgid "For resources satisfying rule #2 above, if traced back via the extra foreign key fields, the result is a tree of resources that all together identify objects of that resource. In order to generate identifier format, each resource in the traceback tree generates its own part of standalone format in the way previously described, using all fields but the foreign keys. Finally all parts are combined by ``++`` in the following order:"
+msgstr "위의 2번 규칙을 충족하는 리소스의 경우 추가 외래 키 필드를 통해 역추적하면 결과는 해당 리소스의 오브젝트를 모두 함께 식별하는 리소스 트리입니다. ID 형식을 생성하기 위해 역추적 트리의 각 리소스는 외래 키를 제외한 모든 필드를 사용하여 이전에 설명한 방식으로 독립 형식의 고유한 부분을 생성합니다. 마지막으로 모든 부분은 ``++``에 의해 다음 순서대로 결합됩니다."
+
+#: ../../source/access_resources.rst:74
+msgid "Put stand-alone format as the first identifier component."
+msgstr "첫 번째 ID 구성 요소로 독립 형식을 배치합니다."
+
+#: ../../source/access_resources.rst:75
+msgid "Recursively generate unique identifiers for each resource. The underlying resource is pointing to using a foreign key (a child of a traceback tree node)."
+msgstr "각 리소스에 대한 고유 ID를 재귀적으로 생성합니다. 기본 리소스는 외래 키(역추적 트리의 자식 노드) 사용을 나타냅니다."
+
+#: ../../source/access_resources.rst:76
+msgid "Treat generated unique identifiers as the rest of the identifier components. Sort them in lexicographic order of corresponding foreign keys."
+msgstr "생성된 고유 ID를 나머지 ID 구성 요소로 취급합니다. 이러한 ID는 해당 외래 키의 사전순으로 정렬합니다."
+
+#: ../../source/access_resources.rst:77
+msgid "Combine all components together using ``++`` to generate the final identifier format."
+msgstr "``++``를 사용하여 모든 구성 요소를 결합하여 최종 ID 형식을 생성합니다."
+
+#: ../../source/access_resources.rst:79
+msgid "In reference to the example above, when generating an identifier format for resource ``Foo``, the controller generates the stand-alone formats, ``<name>+<choice>`` for ``Foo`` and ``<fk.name>+<fk.choice>`` for ``Bar``, then combine them together to be ``<name>+<choice>++<fk.name>+<fk.choice>``."
+msgstr "위 예에 대한 참조에서 리소스 ``Foo``의 ID 형식을 생성할 때 컨트롤러는 독립 형식(``Foo``의 경우 ``<name>+<choice>``, ``<fk.name>+<fk.choice>``의 경우 ``Bar``)을 생성한 다음 이를 ``<name>+<choice>++<fk.name>+<fk.choice>``로 결합합니다."
+
+#: ../../source/access_resources.rst:81
+msgid "When generating identifiers according to the given identifier format, there are cases where a foreign key may point to nowhere. In this case, the controller substitutes the part of the format corresponding to the resource the foreign key should point to with an empty string ''. For example, if a ``Foo`` object has the name ='alice', choice ='yes', but ``fk`` field = None, its resulting identifier will be ``alice+yes++``."
+msgstr "지정된 ID 형식에 따라 ID를 생성할 때 외래 키가 위치를 가리키지 않을 수도 있습니다. 이 경우 컨트롤러는 외래 키가 가리켜야 하는 리소스에 해당하는 형식 부분을 빈 문자열 ''로 대체합니다. 예를 들어, ``Foo`` 오브젝트에 name ='alice', choice ='yes'가 있지만 ``fk``에 field = None이 있는 경우 ID는 ``alice+yes++``가 됩니다."
+

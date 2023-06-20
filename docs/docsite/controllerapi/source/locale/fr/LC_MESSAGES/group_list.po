@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/group_list.rst:3
+msgid "Group List API Endpoint"
+msgstr ""
+
+#: ../../source/group_list.rst:8
+msgid "Make a GET request to this resource to retrieve the list of groups."
+msgstr ""
+
+#: ../../source/group_list.rst:19
+msgid "The resulting data structure contains:"
+msgstr ""
+
+#: ../../source/group_list.rst:32
+msgid ""
+"The ``count`` field indicates the total number of groups found for the "
+"given query. The ``next`` and ``previous`` fields provides links to "
+"additional results if there are more than will fit on a single page. The "
+"``results`` list contains zero or more group records."
+msgstr ""
+
+#: ../../source/group_list.rst:35
+msgid "Results"
+msgstr ""
+
+#: ../../source/group_list.rst:40
+msgid "Each group data structure includes the following fields:"
+msgstr ""
+
+#: ../../source/group_list.rst:42
+msgid "``id``: Database ID for this group. (integer)"
+msgstr ""
+
+#: ../../source/group_list.rst:43
+msgid "``type``: Data type for this group. (multiple choice)"
+msgstr ""
+
+#: ../../source/group_list.rst:44
+msgid "``group``: Group"
+msgstr ""
+
+#: ../../source/group_list.rst:45
+msgid "``url``: URL for this group. (string)"
+msgstr ""
+
+#: ../../source/group_list.rst:46
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr ""
+
+#: ../../source/group_list.rst:47
+msgid ""
+"``summary_fields``: Data structure with name/description for related "
+"resources. (object)"
+msgstr ""
+
+#: ../../source/group_list.rst:48
+msgid "``created``: Timestamp when this group was created. (datetime)"
+msgstr ""
+
+#: ../../source/group_list.rst:49
+msgid "``modified``: Timestamp when this group was last modified. (datetime)"
+msgstr ""
+
+#: ../../source/group_list.rst:50
+msgid "``name``: (string)"
+msgstr ""
+
+#: ../../source/group_list.rst:51
+msgid "``description``: (string)"
+msgstr ""
+
+#: ../../source/group_list.rst:52
+msgid "``inventory``: (field)"
+msgstr ""
+
+#: ../../source/group_list.rst:53
+msgid "``variables``: Group variables in JSON or YAML format. (string)"
+msgstr ""
+
+#: ../../source/group_list.rst:54
+msgid ""
+"``has_active_failures``: Flag indicating whether this group has any hosts"
+" with active failures. (boolean)"
+msgstr ""
+
+#: ../../source/group_list.rst:55
+msgid ""
+"``total_hosts``: Total number of hosts directly or indirectly in this "
+"group. (integer)"
+msgstr ""
+
+#: ../../source/group_list.rst:56
+msgid ""
+"``hosts_with_active_failures``: Number of hosts in this group with active"
+" failures. (integer)"
+msgstr ""
+
+#: ../../source/group_list.rst:57
+msgid ""
+"``total_groups``: Total number of child groups contained within this "
+"group. (integer)"
+msgstr ""
+
+#: ../../source/group_list.rst:58
+msgid ""
+"``groups_with_active_failures``: Number of child groups within this group"
+" that have active failures. (integer)"
+msgstr ""
+
+#: ../../source/group_list.rst:59
+msgid ""
+"``has_inventory_sources``: Flag indicating whether this group was "
+"created/updated from any external inventory sources. (boolean)"
+msgstr ""
+
+#: ../../source/group_list.rst:62
+msgid "Create Groups"
+msgstr ""
+
+#: ../../source/group_list.rst:67
+msgid ""
+"Make a POST request to this resource with the following group fields to "
+"create a new group:"
+msgstr ""
+
+#: ../../source/group_list.rst:69
+msgid "``name``: (string, required)"
+msgstr ""
+
+#: ../../source/group_list.rst:70
+msgid "``description``: (string, default=\"\")"
+msgstr ""
+
+#: ../../source/group_list.rst:71
+msgid "``inventory``: (field, required)"
+msgstr ""
+
+#: ../../source/group_list.rst:72
+msgid ""
+"``variables``: Group variables in JSON or YAML format. (string, "
+"default=\"\")"
+msgstr ""
+
+#: ../../source/group_list.rst:76
+msgid "Reviewing the Options Endpoint"
+msgstr ""
+
+#: ../../source/group_list.rst:81
+msgid ""
+"The *Options Endpoint* table offers a view of the Options for this "
+"endpoint. When viewing the endpoint in the browsable API, clicking the "
+"\"Options\" button gives you the raw JSON for the following:"
+msgstr ""
+

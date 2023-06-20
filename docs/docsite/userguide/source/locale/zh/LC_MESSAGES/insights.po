@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/insights.rst:4
+msgid "Setting up Insights Remediations"
+msgstr "设置 Insights 修复"
+
+#: ../../source/insights.rst:10
+msgid "|At| supports integration with Red Hat Insights. Once a host is registered with Insights, it will be continually scanned for vulnerabilities and known configuration conflicts. Each of the found problems may have an associated fix in the form of an Ansible playbook. Insights users create a maintenance plan to group the fixes and, ultimately, create a playbook to mitigate the problems. |At| tracks the maintenance plan playbooks via an Insights project. Authentication to Insights via Basic Auth is backed by a special Insights Credential, which must first be established in |at|. To ultimately run an Insights Maintenance Plan, you need an Insights project, and an Insights inventory."
+msgstr "|At| 支持与 Red Hat Insights 集成。通过智能分析工具注册主机后，它将持续扫描是否存在漏洞和已知配置冲突。发现的每个问题都可能具有 Ansible playbook 形式的关联修复。Insights 用户创建一个维护计划来对修复程序进行分组，并最终创建一个 playbook 来缓解问题。|At| 通过 Insights 项目跟踪维护计划 playbook。 通过 Basic Auth 对 Insights 进行身份验证由一个特殊的 Insights 凭据支持，该凭据必须在 |at| 中建立。要最终运行 Insights Maintenance Plan，您需要一个 Insights 项目和一个 Insights 清单。"
+
+#: ../../source/insights.rst:14
+msgid "Create Insights Credential"
+msgstr "创建 Insights 凭证"
+
+#: ../../source/insights.rst:19
+msgid "To create a new credential for use with Insights:"
+msgstr "要创建用于 Insights 的新凭证，请执行以下操作："
+
+#: ../../source/insights.rst:21
+msgid "Click **Credentials** from the left navigation bar to access the Credentials page."
+msgstr "点左侧导航栏中的 **Credentials** 访问 Credentials 页面。"
+
+#: ../../source/insights.rst:23
+msgid "Click the **Add** button located in the upper right corner of the Credentials screen."
+msgstr "点 Credentials 屏幕右上角的 **Add** 按钮。"
+
+#: ../../source/insights.rst:25
+msgid "Enter the name of the credential to be used in the **Name** field."
+msgstr "在 **Name** 字段中输入要使用的凭证名称。"
+
+#: ../../source/insights.rst:27
+msgid "Optionally enter a description for this credential in the **Description** field."
+msgstr "在 **Description** 字段输入此凭证的描述。"
+
+#: ../../source/insights.rst:29
+msgid "In the **Organization** field, optionally enter the name of the organization with which the credential is associated, or click the |search| button and select it from the pop-up window."
+msgstr "在 **Organization** 字段中输入与凭证关联的可选机构名称，或者点击 |search| 按钮并从弹出窗口中选择它。"
+
+#: ../../source/insights.rst:33
+msgid "In the **Credential Type** field, enter **Insights** or select it from the drop-down list."
+msgstr "在 **Credential Type** 字段中输入 **Insights**，或者从下拉列表中选择它。"
+
+#: ../../source/insights.rst:37
+msgid "Enter a valid Insights credential in the **Username** and **Password** fields. The Insights credential is the user's `Red Hat Customer Portal`_ account username and password."
+msgstr "在 **Username** 和 **Password** 字段中输入一个有效的 Insights 凭证。Insights 凭证是用户的 `Red Hat Customer Portal`_ 帐户用户名和密码。"
+
+#: ../../source/insights.rst:41
+msgid "|Credentials - create with demo insights credentials|"
+msgstr "|Credentials - create with demo insights credentials|"
+
+#: ../../source/insights.rst:45
+#: ../../source/insights.rst:77
+#: ../../source/insights.rst:124
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/insights.rst:49
+msgid "Create an Insights Project"
+msgstr "创建 Insights 项目"
+
+#: ../../source/insights.rst:54
+msgid "To create a new Insights project:"
+msgstr "要创建新 Insights 项目，请执行以下操作："
+
+#: ../../source/insights.rst:56
+msgid "Click **Projects** from the left navigation bar to access the Projects page."
+msgstr "点左侧导航栏中的 **Projects** 访问 Projects 页面。"
+
+#: ../../source/insights.rst:58
+msgid "Click the **Add** button located in the upper right corner of the Projects screen."
+msgstr "点 Projects 屏幕右上角的 **Add** 按钮。"
+
+#: ../../source/insights.rst:60
+msgid "Enter the appropriate details into the required fields, at minimum. Note the following fields requiring specific Insights-related entries:"
+msgstr "至少在必填字段中输入相关详情。请注意以下字段需要特定的 Insights 相关条目："
+
+#: ../../source/insights.rst:62
+msgid "**Name**: Enter the name for your Insights project."
+msgstr "**Name**：输入 Insights 项目的名称。"
+
+#: ../../source/insights.rst:63
+msgid "**Organization**: Enter the name of the organization associated with this project, or click the |search| button and select it from the pop-up window."
+msgstr "**Organization**：输入与这个项目关联的机构名称，或者点击 |search| 按钮并从弹出窗口中选择它。"
+
+#: ../../source/insights.rst:64
+msgid "**SCM Type**: Select **Red Hat Insights**."
+msgstr "**SCM Type**：选择 **Red Hat Insights**。"
+
+#: ../../source/insights.rst:65
+msgid "Upon selecting the SCM type, the **Source Details** field expands."
+msgstr "选择 SCM 类型后，**Source Details** 字段会展开。"
+
+#: ../../source/insights.rst:67
+msgid "The **Credential** field is pre-populated with the Insights credential you previously created. If not, enter the credential, or click the |search| button and select it from the pop-up window."
+msgstr "**Credential** 字段已预先填充您之前创建的 Insights 凭证。如果没有预先填充，请输入凭证，或者点击 |search| 按钮并从弹出窗口中选择它。"
+
+#: ../../source/insights.rst:69
+msgid "Click to select the update option(s) for this project from the **Options** field, and provide any additional values, if applicable. For information about each option, click the tooltip |tooltip| next to the options."
+msgstr "点击以从 **Options** 字段中选择此项目的更新选项，并提供任何其他值（如果适用）。有关每个选项的信息，请点击选项旁边的提示 |tooltip| 按钮。"
+
+#: ../../source/insights.rst:73
+msgid "|Insights - create demo insights project form|"
+msgstr "|Insights - create demo insights project form|"
+
+#: ../../source/insights.rst:79
+msgid "All SCM/Project syncs occur automatically the first time you save a new project. However, if you want them to be updated to what is current in Insights, manually update the SCM-based project by clicking the |update| button under the project's available Actions."
+msgstr "所有 SCM/项目同步都会在您第一次保存新项目时自动进行。但是，如果您希望将其更新为 Insights 中当前的内容，请点击项目可用 Actions 下的 |update| 按钮手动更新基于 SCM 的项目。"
+
+#: ../../source/insights.rst:83
+msgid "This process syncs your Insights project with your Insights account solution. Notice that the status dot beside the name of the project updates once the sync has run."
+msgstr "此过程会将 Insights 项目与 Insights 帐户解决方案同步。请注意，当同步运行后，项目名称旁的状态点会更新。"
+
+#: ../../source/insights.rst:85
+msgid "|Insights - demo insights project success|"
+msgstr "|Insights - demo insights project success|"
+
+#: ../../source/insights.rst:91
+msgid "Create Insights Inventory"
+msgstr "创建 Insights 清单"
+
+#: ../../source/insights.rst:96
+msgid "The Insights playbook contains a `hosts:` line where the value is the hostname that Insights itself knows about,  which may be different than the hostname that Tower knows about. To use an Insights playbook, you will need an Insights inventory."
+msgstr "Insights playbook 包含一个 `hosts:` 行，其中值是 Insights 本身所知的主机名，它可能与 Tower 所知的主机名不同。要使用 Insights playbook，您需要 Insights 清单。"
+
+#: ../../source/insights.rst:98
+msgid "To create a new inventory for use with Insights, see :ref:`ug_source_insights`."
+msgstr "要创建用于 Insights 的新清单，请参阅 :ref:`ug_source_insights`。"
+
+#: ../../source/insights.rst:101
+msgid "Remediate Insights Inventory"
+msgstr "修复 Insights 清单"
+
+#: ../../source/insights.rst:106
+msgid "Remediation of an Insights inventory allows Tower to run Insights playbooks with a single click. This is done by creating a Job Template to run the Insights remediation."
+msgstr "对 Insights 清单进行修复后，Tower 只需一次点击便可运行 Insights playbook。这可以通过创建作业模板来运行 Insights 修复来进行。"
+
+#: ../../source/insights.rst:108
+msgid "Click **Job Templates** from the left navigation bar to access the Job Templates page."
+msgstr "点左侧导航栏中的 **Job Templates** 访问 Job Templates 页面。"
+
+#: ../../source/insights.rst:110
+msgid "Create a new Job Template, with the appropriate details into the required fields, at minimum.  Note the following fields requiring specific Insights-related entries:"
+msgstr "至少创建一个新作业模板，其详情包括在必填字段中。请注意以下字段需要特定的 Insights 相关条目："
+
+#: ../../source/insights.rst:112
+msgid "**Name**: Enter the name of your Maintenance Plan."
+msgstr "**Name**：输入维护计划的名称。"
+
+#: ../../source/insights.rst:113
+msgid "**Job Type**: If not already populated, select **Run** from the drop-down menu list."
+msgstr "**Job Type**：如果还没有填充，请从下拉菜单中选择 **Run**。"
+
+#: ../../source/insights.rst:114
+msgid "**Inventory**: Select the Insights Inventory you previously created."
+msgstr "**Inventory**：选择您之前创建的 Insights 清单。"
+
+#: ../../source/insights.rst:115
+msgid "**Project**: Select the Insights project you previously created."
+msgstr "**Project**：选择您之前创建的 Insights 项目。"
+
+#: ../../source/insights.rst:116
+msgid "**Playbook**: Select a playbook associated with the Maintenance Plan you want to run from the drop-down menu list."
+msgstr "**Playbook**：从下拉菜单中选择一个与您要运行的维护计划关联的 playbook。"
+
+#: ../../source/insights.rst:117
+msgid "**Credential**: Enter the credential to use for this project or click the |search| button and select it from the pop-up window. The credential does not have to be an Insights credential."
+msgstr "**Credential**：输入要用于这个项目的凭证，或者点击 |search| 按钮并从弹出窗口中选择它。凭证不必是 Insights 凭证。"
+
+#: ../../source/insights.rst:118
+msgid "**Verbosity**: Keep the default setting, or select the desired verbosity from the drop-down menu list."
+msgstr "**Verbosity**：保持默认设置，或者从下拉菜单中选择所需详细程度。"
+
+#: ../../source/insights.rst:120
+msgid "|Insights - maintenance plan template filled|"
+msgstr "|Insights - maintenance plan template filled|"
+
+#: ../../source/insights.rst:126
+msgid "Click the |launch| icon to launch the job template."
+msgstr "点击 |launch| 图标启动作业模板。"
+
+#: ../../source/insights.rst:130
+msgid "Once complete, the job results display in the Job Details page."
+msgstr "完成后，作业结果会显示在 Job Details 页面中。"
+

@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/users.rst:4
+msgid "Users"
+msgstr "用户"
+
+#: ../../source/users.rst:10
+msgid "A :term:`User` is someone who has access to |at| with associated permissions and credentials. Access the Users page by clicking **Users** from the left navigation bar. The User list may be sorted and searched by **Username**, **First Name**, or **Last Name** and click the headers to toggle your sorting preference."
+msgstr ":term:`User`是可以通过关联的权限和凭证访问 |at| 的人员。点击左侧导航栏中的 **Users** 访问 Users 页面。用户列表可以按 **Username**、**First Name** 或 **Last Name** 进行排序和搜索，点击标题可切换您的排序首选项。"
+
+#: ../../source/users.rst:15
+msgid "You can easily view permissions and user type information by looking beside their user name in the User overview screen."
+msgstr "您可以通过在用户概述屏幕中查看其用户名旁边的权限和用户类型信息，轻松查看权限和用户类型信息。"
+
+#: ../../source/users.rst:21
+msgid "Create a User"
+msgstr "创建用户"
+
+#: ../../source/users.rst:23
+msgid "To create a new user:"
+msgstr "要创建新用户，请执行以下操作："
+
+#: ../../source/users.rst:25
+msgid "Click the **Add** button, which opens the Create User dialog."
+msgstr "点 **Add** 按钮，打开 Create User 对话框。"
+
+#: ../../source/users.rst:27
+msgid "Enter the appropriate details about your new user. Fields marked with an asterisk (*) are required."
+msgstr "输入有关新用户的适当详情。使用星号(*)标记的字段是必需的。"
+
+#: ../../source/users.rst:31
+msgid "When modifying your own password, log out and log back in again in order for it to take effect."
+msgstr "修改您自己的密码时，请退出并重新登录以便其生效。"
+
+#: ../../source/users.rst:33
+msgid "Three types of Users can be assigned:"
+msgstr "可以分配三种类型的用户："
+
+#: ../../source/users.rst:35
+msgid "**Normal User**: Normal Users have read and write access limited to the resources (such as inventory, projects, and job templates) for which that user has been granted the appropriate roles and privileges."
+msgstr "**Normal User**：普通用户拥有的读写访问权限仅限于该用户获得了适当角色和权限的资源（如清单、项目和作业模板）。"
+
+#: ../../source/users.rst:37
+msgid "**System Auditor**: Auditors implicitly inherit the read-only capability for all objects within the environment."
+msgstr "**System Auditor**：审核员隐式继承环境中所有对象的只读权限。"
+
+#: ../../source/users.rst:39
+msgid "**System Administrator**: A System Administrator (also known as Superuser) has full system administration privileges -- with full read and write privileges over the entire installation. A System Administrator is typically responsible for managing all aspects of |at| and delegating responsibilities for day-to-day work to various Users. Assign with caution!"
+msgstr "**System Administrator**：系统管理员（也称为超级用户）具有完整的系统管理权限 -- 具有对整个安装的完整读写权限。系统管理员通常负责管理 |at| 的所有方面并将日常工作的职责委派给不同的用户。请谨慎分配！"
+
+#: ../../source/users.rst:46
+msgid "The initial user (usually \"admin\") created by the installation process is a Superuser. One Superuser must always exist. To delete the \"admin\" user account, you must first create another Superuser account."
+msgstr "安装过程创建的初始用户（通常为“admin”）即为超级用户。始终必须存在一个超级用户。要删除“admin”用户帐户，您必须首先创建另一个超级用户帐户。"
+
+#: ../../source/users.rst:48
+msgid "Select **Save** when finished."
+msgstr "完成后请选择 **Save**。"
+
+#: ../../source/users.rst:50
+msgid "Once the user is successfully created, the **User** dialog opens for that newly created User."
+msgstr "成功创建用户后，会为新创建的用户打开 **User** 对话框。"
+
+#: ../../source/users.rst:57
+msgid "You may delete the user from its Details screen by clicking **Delete**, or once you exit the details screen, you can delete users from a list of current users. See :ref:`ug_users_delete` for more detail."
+msgstr "您可以点 **Delete** 从 Details 屏幕中删除用户，也可以在退出详情屏幕后，从当前用户列表中删除用户。如需更多详情，请参阅 :ref:`ug_users_delete`。"
+
+#: ../../source/users.rst:59
+msgid "The count for the number of users has also been updated, and a new entry for the new user is added to the list of users below the edit form. The same window opens whether you click on the user's name, or the Edit (|edit-button|) button beside the user. Here, the User's **Organizations**, **Teams**, and **Permissions**, as well as other user membership details, may be reviewed and modified."
+msgstr "用户数量的计数也已更新，并且新用户的新条目已添加到编辑表单下方的用户列表中。无论您点击用户名还是编辑 (|edit-button|) 按钮，都会打开同一窗口。在这里，可以查看和修改用户的 **Organizations**、**Teams** 和 **Permissions** 以及其他用户成员资格详情。"
+
+#: ../../source/users.rst:63
+msgid "If the user is not a newly-created user, the user's details screen displays the last login activity of that user."
+msgstr "如果用户不是新建的用户，用户的详细信息屏幕会显示该用户的最后登录活动。"
+
+#: ../../source/users.rst:67
+msgid "When you log in as yourself, and view the details of your own user profile, you can manage tokens from your user profile. See :ref:`ug_users_tokens` for more detail."
+msgstr "当您以自己的身份登录并查看您自己的用户配置集详情时，您可以从您的用户配置集中管理令牌。如需了解更多详情，请参阅 :ref:`ug_users_tokens`。"
+
+#: ../../source/users.rst:74
+msgid "Delete a User"
+msgstr "删除用户"
+
+#: ../../source/users.rst:76
+msgid "Before you can delete a user, you must have user permissions. When you delete a user account, the name and email of the user are permanently removed from |at|."
+msgstr "在删除用户前，需要有用户权限。当您删除用户帐户时，用户的名称和电子邮件将从 |at| 中永久删除。"
+
+#: ../../source/users.rst:78
+msgid "Expand the **Access** menu from the left navigation bar, and click **Users** to display a list of the current users."
+msgstr "展开左侧导航栏中的 **Access** 菜单，然后点 **Users** 显示当前用户列表。"
+
+#: ../../source/users.rst:80
+msgid "Select the check box(es) for the user(s) that you want to remove and click **Delete**."
+msgstr "选择您要删除的用户的复选框，并点击 **Delete**。"
+
+#: ../../source/users.rst:84
+msgid "Click **Delete** in the confirmation warning message to permanently delete the user."
+msgstr "点警告消息中的 **Delete** 以永久删除该用户。"
+
+#: ../../source/users.rst:88
+msgid "Users - Organizations"
+msgstr "用户 - 机构"
+
+#: ../../source/users.rst:93
+msgid "This displays the list of organizations of which that user is a member. This list may be searched by Organization Name or Description. Organization membership cannot be modified from this display panel."
+msgstr "这会显示该用户所属机构的列表。这个列表可以按 Organization Name 或 Description 进行搜索。您无法在此显示面板中修改机构成员资格。"
+
+#: ../../source/users.rst:96
+msgid "|Users - Organizations list for example user|"
+msgstr "|Users - Organizations list for example user|"
+
+#: ../../source/users.rst:101
+msgid "Users - Teams"
+msgstr "Users - Teams"
+
+#: ../../source/users.rst:106
+msgid "This displays the list of teams of which that user is a member. This list may be searched by **Team Name** or **Description**. Team membership cannot be modified from this display panel. For more information, refer to :ref:`ug_teams`."
+msgstr "这会显示该用户所属团队的列表。这个列表可以按 **Team Name** 或 **Description** 进行搜索。您无法在此显示面板中修改团队成员资格。如需更多信息，请参阅 :ref:`ug_teams`。"
+
+#: ../../source/users.rst:108
+msgid "Until a Team has been created and the user has been assigned to that team, the assigned Teams Details for the User appears blank."
+msgstr "在创建了团队并且为该团队分配了用户之前，用户的分配团队详情会显示为空白。"
+
+#: ../../source/users.rst:110
+msgid "|Users - teams list for example user|"
+msgstr "|Users - teams list for example user|"
+
+#: ../../source/users.rst:119
+msgid "Users - Permissions"
+msgstr "Users - Permissions"
+
+#: ../../source/users.rst:124
+msgid "The set of Permissions assigned to this user (role-based access controls) that provide the ability to read, modify, and administer projects, inventories, job templates, and other |at| elements are Privileges."
+msgstr "权限是指分配给此用户的权限集（基于角色的访问控制），可提供读取、修改和管理项目、清单、作业模板及其他 |at| 元素的能力。"
+
+#: ../../source/users.rst:128
+msgid "It is important to note that the job template administrator may not have access to any inventory, project, or credentials associated with the template. Without access to these, certain fields in the job template aren't editable."
+msgstr "务必要注意，作业模板管理员可能无法访问任何与模板关联的任何清单、项目或凭证。如果没有这些访问权限，作业模板中的某些字段不可编辑。"
+
+#: ../../source/users.rst:130
+msgid "This screen displays a list of the roles that are currently assigned to the selected User and can be sorted and searched by **Name**, **Type**, or **Role**."
+msgstr "这个屏幕显示目前分配给所选用户的角色列表，可按照 **Name**、**Type** 或 **Role** 进行排序和搜索。"
+
+#: ../../source/users.rst:132
+msgid "|Users - permissions list for example user|"
+msgstr "|Users - permissions list for example user|"
+
+#: ../../source/users.rst:138
+msgid "Add Permissions"
+msgstr "添加权限"
+
+#: ../../source/users.rst:140
+msgid "To add permissions to a particular user:"
+msgstr "要为特定用户添加权限，请执行以下操作："
+
+#: ../../source/users.rst:142
+msgid "Click the **Add** button, which opens the Add Permissions Wizard."
+msgstr "点 **Add** 按钮，打开 Add Permissions 向导。"
+
+#: ../../source/users.rst:147
+msgid "Click to select the object for which the user will have access and click **Next**."
+msgstr "点来选择用户可访问的对象，并点 **Next**。"
+
+#: ../../source/users.rst:149
+msgid "Click to select the resource to assign team roles and click **Next**."
+msgstr "点以选择分配资源以分配团队角色并点 **Next**。"
+
+#: ../../source/users.rst:153
+msgid "Click the checkbox beside the role to assign that role to your chosen type of resource. Different resources have different options available."
+msgstr "单击角色旁边的复选框，将该角色分配到您选择的资源类型。不同的资源具有不同的可用选项。"
+
+#: ../../source/users.rst:158
+msgid "Click **Save** when done, and the Add Permissions Wizard closes to display the updated profile for the user with the roles assigned for each selected resource."
+msgstr "完成后，点击 **Save**，此时 Add Permissions 向导将关闭，并显示更新的用户配置集，其中已包含为每个所选资源分配的角色。"
+
+#: ../../source/users.rst:162
+msgid "To remove Permissions for a particular resource, click the disassociate (x) button next to its resource. This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "要删除特定资源的权限，请单击其资源旁边的解除关联(x)按钮。这将启动一个确认对话框，要求您确认解除关联。"
+
+#: ../../source/users.rst:167
+msgid "You can also add teams, individual, or multiple users and assign them permissions at the object level (projects, inventories, job templates, and workflow templates) as well. This feature reduces the time for an organization to onboard many users at one time."
+msgstr "您还可以添加团队、个人或多个用户，并在对象一级（项目、清单、作业模板和工作流模板）为其分配权限。此功能减少了机构一次性设置多个用户的时间。"
+
+#: ../../source/users.rst:173
+msgid "Users - Tokens"
+msgstr "Users - Tokens"
+
+#: ../../source/users.rst:175
+msgid "The **Tokens** tab will only be present for your user (yourself). Before you add a token for your user, you may want to :ref:`create an application <ug_applications_auth_create>` if you want to associate your token to it. You may also create a personal access token (PAT) without associating it with any application. To create a token for your user:"
+msgstr "**Tokens** 标签页将只会显示给您的用户（您自己）。若要将令牌关联至应用程序，您可能需要先:ref:`create an application <ug_applications_auth_create>`。您也可以创建个人访问令牌 (PAT)，而不将它与任何应用程序关联。要为您的用户创建令牌，请执行以下步骤："
+
+#: ../../source/users.rst:177
+msgid "If not already selected, click on your user from the Users list view to configure your OAuth 2 tokens."
+msgstr "如果还没有选择用户，请在 Users 列表视图中点击您的用户来配置您的 OAuth 2 令牌。"
+
+#: ../../../common/source/add-token.rst:3
+msgid "Click the **Tokens** tab from your user's profile."
+msgstr "在用户档案中点 **Tokens** 标签页。"
+
+#: ../../../common/source/add-token.rst:5
+msgid "When no tokens are present, the Tokens screen prompts you to add them:"
+msgstr "当没有令牌时，Tokens 屏幕会提示您添加它们："
+
+#: ../../../common/source/add-token.rst:9
+msgid "Click the **Add** button, which opens the Create Token window."
+msgstr "点 **Add** 按钮，打开 Create Token 窗口。"
+
+#: ../../../common/source/add-token.rst:11
+msgid "Enter the following details in Create Token window:"
+msgstr "在 Create Token 窗口中输入以下信息："
+
+#: ../../../common/source/add-token.rst:13
+msgid "**Application**: enter the name of the application with which you want to associate your token. Alternatively, you can search for it by clicking the |search| button. This opens a separate window that allows you to choose from the available options. Use the Search bar to filter by name if the list is extensive. Leave this field blank if you want to create a Personal Access Token (PAT) that is not linked to any application."
+msgstr "**Application**：输入要与您的令牌关联的应用程序名称，或通过点击 |search| 按钮进行搜索。这会打开一个单独的窗口，允许您从可用选项中选择。如果列表太长，则可以使用搜索栏按名称过滤。如果您想创建一个不和任何应用程序相关联的 Personal Access Token (PAT)，请保留此字段为空白。"
+
+#: ../../../common/source/add-token.rst:15
+msgid "**Description**: optionally provide a short description for your token."
+msgstr "**Description**（可选）：为您的令牌提供简短描述。"
+
+#: ../../../common/source/add-token.rst:17
+msgid "**Scope** (required): specify the level of access you want this token to have."
+msgstr "**Scope**（必需）：指定此令牌具有的访问级别。"
+
+#: ../../../common/source/add-token.rst:21
+msgid "When done, click **Save** or **Cancel** to abandon your changes."
+msgstr "完成后，点击 **Save**，或者点 **Cancel** 取消更改。"
+
+#: ../../../common/source/add-token.rst:23
+msgid "After the token is saved, the newly created token for the user displays with the token information and when it expires."
+msgstr "保存令牌后，新生成的令牌会显示令牌信息及其过期的时间。"
+
+#: ../../../common/source/add-token.rst:27
+msgid "This is the only time the token value and associated refresh token value will ever be shown."
+msgstr "这是唯一显示令牌值和关联刷新令牌值的时间。"
+
+#: ../../../common/source/add-token.rst:29
+msgid "In the user's profile, the application for which it is assigned to and its expiration displays in the token list view."
+msgstr "在用户的档案中，分配给它的应用程序及其过期时间显示在令牌列表视图中。"
+

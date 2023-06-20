@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/setup.rst:3
+msgid "The Settings Page"
+msgstr "설정 페이지"
+
+#: ../../../common/source/settings-menu.rst:8
+msgid "To enter the Settings window for |at|, click **Settings** from the left navigation bar. This page allows you to modify your controller's configuration, such as settings associated with authentication, jobs, system, user interface, and view or retrieve your subscription information."
+msgstr "|at|의 설정 창에 들어가려면 왼쪽 탐색 모음에서 **설정**을 클릭합니다. 이 페이지에서는 인증, 작업, 시스템, 사용자 인터페이스 관련 설정 등 컨트롤러의 구성을 수정하고 서브스크립션 정보를 보거나 검색할 수 있습니다."
+
+#: ../../../common/source/settings-menu.rst:12
+msgid "For more information on configuring these settings, refer to :ref:`ag_configure_tower` section of the |ata|."
+msgstr "이러한 설정 구성에 대한 자세한 내용은 |ata|의 :ref:`ag_configure_tower` 섹션을 참조하십시오."
+

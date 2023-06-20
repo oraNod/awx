@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/best_practices.rst:2
+msgid "Best Practices"
+msgstr "最佳实践"
+
+#: ../../source/best_practices.rst:8
+msgid "Use Source Control"
+msgstr "使用源控制"
+
+#: ../../source/best_practices.rst:13
+msgid "While |at| supports playbooks stored directly on the server, best practice is to store your playbooks, roles, and any associated details in source control. This way you have an audit trail describing when and why you changed the rules that are automating your infrastructure. Plus, it allows for easy sharing of playbooks with other parts of your infrastructure or team."
+msgstr "虽然 |at| 支持把 playbook 直接存储在服务器上，但最佳实践方案是将 playbook 、role 以及任何关联的信息数据存储在源控制系统中。通过这种方式，您可以了解何时和为什么更改了用于自动化基础架构的规则。另外，它还可以帮助您轻松地与其他相关团队共享 playbook。"
+
+#: ../../source/best_practices.rst:16
+msgid "Ansible file and directory structure"
+msgstr "Ansible 文件和目录结构"
+
+#: ../../source/best_practices.rst:21
+msgid "Please review the `Ansible Tips and Tricks <https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html>`_ from the Ansible documentation. If creating a common set of roles to use across projects, these should be accessed via source control submodules, or a common location such as ``/opt``. Projects should not expect to import roles or content from other projects."
+msgstr "请参阅 Ansible 文档中的 `Ansible Tips and Tricks <https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html>`_。如果创建了一组可用于多个项目的常用角色，则应该通过源控制子模块或常见位置（如 ``/opt`` ）来访问这些角色。项目不应该从其他项目中输入角色或内容。"
+
+#: ../../source/best_practices.rst:24
+msgid "Playbooks should not use the ``vars_prompt`` feature, as |at| does not interactively allow for ``vars_prompt`` questions. If you must use ``vars_prompt``, refer to and make use of the :ref:`ug_surveys` functionality."
+msgstr "playbook 不应该使用 ``vars_prompt`` 功能，因为 |at| 并不能以互动方式处理 ``vars_prompt`` 问题。如果您必须使用 ``vars_prompt``，请使用 :ref:`ug_surveys` 功能。"
+
+#: ../../source/best_practices.rst:27
+msgid "Playbooks should not use the ``pause`` feature of Ansible without a timeout, as |at| does not allow for interactively cancelling a pause. If you must use ``pause``, ensure that you set a timeout."
+msgstr "playbook 不应该在没有设置超时的情况下使用 Ansible 的 ``pause`` 功能，因为 |at| 不允许交互式取消暂停。如果必须使用 ``pause``，请设置超时。"
+
+#: ../../source/best_practices.rst:29
+msgid "Jobs run use the playbook directory as the current working directory, although jobs should be coded to use the ``playbook_dir`` variable rather than relying on this."
+msgstr "作业运行会使用 playbook 目录作为当前工作目录，当最佳做法是将作业设置为使用 ``playbook_dir`` 变量。"
+
+#: ../../source/best_practices.rst:34
+msgid "Use Dynamic Inventory Sources"
+msgstr "使用动态清单源（Dynamic Inventory Sources）"
+
+#: ../../source/best_practices.rst:39
+msgid "If you have an external source of truth for your infrastructure, whether it is a cloud provider or a local CMDB, it is best to define an inventory sync process and use the support for dynamic inventory (including cloud inventory sources). This ensures your inventory is always up to date."
+msgstr "如果您的基础架构有外部的数据源，无论是云供应商还是本地 CMDB，最好定义一个清单同步过程，并使用对动态清单（包括云清单源）的支持。 这样可确保您的清单始终保持最新状态。"
+
+#: ../../../common/source/overwrite_var_note_2-4-0.rst:3
+msgid "Edits and additions to Inventory host variables persist beyond an inventory sync as long as ``--overwrite_vars`` is **not** set."
+msgstr "只要 ``--overwrite_vars`` **没有**设置，对清单进行同步后编辑和添加的 Inventory 主机变量仍然会保持。"
+
+#: ../../source/best_practices.rst:44
+msgid "Variable Management for Inventory"
+msgstr "清单的变量管理"
+
+#: ../../source/best_practices.rst:49
+msgid "Keeping variable data along with the hosts and groups definitions (see the inventory editor) is encouraged, rather than using ``group_vars/`` and ``host_vars/``. If you use dynamic inventory sources, the controller can sync such variables with the database as long as the **Overwrite Variables** option is not set."
+msgstr "我们建议将变量数据与主机和组定义一起保留（请参阅清单编辑器），而不是使用 ``group_vars/`` 和 ``host_vars/``。如果使用动态清单源，只要未设置 **Overwrite Variables** 选项，控制器就可以与数据库同步这些变量。"
+
+#: ../../source/best_practices.rst:56
+msgid "Autoscaling"
+msgstr "自动缩放"
+
+#: ../../source/best_practices.rst:61
+msgid "Using the \"callback\" feature to allow newly booting instances to request configuration is very useful for auto-scaling scenarios or provisioning integration."
+msgstr "在自动缩放或置备集成的情况下，使用 \"callback\" 功能来允许新引导的实例请求配置是非常有用的。"
+
+#: ../../source/best_practices.rst:66
+msgid "Larger Host Counts"
+msgstr "大量主机"
+
+#: ../../source/best_practices.rst:71
+msgid "Consider setting \"forks\" on a job template to larger values to increase parallelism of execution runs. For more information on tuning Ansible, see `the Ansible blog <http://www.ansible.com/blog/ansible-performance-tuning>`__."
+msgstr "考虑在一个作业模板中把 \"forks\" 设置为一个大的值来增加任务执行的并行性。如需了解更多与微调 Ansible 相关的信息，请参阅 `the Ansible blog <http://www.ansible.com/blog/ansible-performance-tuning>`__。"
+
+#: ../../source/best_practices.rst:77
+msgid "Continuous integration / Continuous Deployment"
+msgstr "持续集成/持续部署"
+
+#: ../../source/best_practices.rst:83
+msgid "For a Continuous Integration system, such as Jenkins, to spawn a job, it should make a curl request to a job template. The credentials to the job template should not require prompting for any particular passwords. Refer to the `CLI documentation`_ for configuration and usage instructions."
+msgstr "对于为一个持续集成的系统（如 Jenkins）生成作业，应该向作业模板发出 curl 请求。作业模板的凭证应该可以在不需要提示任何特定密码的情况下提供。更多相关信息，请参阅 `CLI documentation`。"
+
+#: ../../source/best_practices.rst:90
+msgid "LDAP authentication performance tips"
+msgstr "LDAP 身份验证性能提示"
+
+#: ../../source/best_practices.rst:95
+msgid "When an LDAP user authenticates, by default, all user-related attributes will be updated in the database on each log in. In some environments, this operation can be skipped due to performance issues. To avoid it, you can disable the option `AUTH_LDAP_ALWAYS_UPDATE_USER`. Refer to the `Knowledge Base Article 5823061`_ for its configuration and usage instructions. Please note that new users will still be created and get their attributes pushed to the database on their first login."
+msgstr "当为 LDAP 用户进行身份验证时，默认情况下，所有用户相关属性都会在每次登录时在数据库中更新。在某些环境中，可能会因为性能问题而跳过此操作。为了避免这个问题，您可以禁用选项 `AUTH_LDAP_ALWAYS_UPDATE_USER`。如需相关配置和用法说明，请参阅 `Knowledge Base Article 5823061`_。请注意，在第一次登录时新用户会被创建，并将其属性推送到数据库。"
+
+#: ../../source/best_practices.rst:100
+msgid "With this option set to False, no changes to LDAP user's attributes will be updated. Attributes will only be updated the first time the user is created."
+msgstr "将此选项设置为 False 时，不会更新对 LDAP 用户属性的更改。属性仅在首次创建用户时更新。"
+

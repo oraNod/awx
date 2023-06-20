@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/inventory_list.rst:2
+msgid "Inventory List API Endpoint"
+msgstr "清单列表 API 端点"
+
+#: ../../source/inventory_list.rst:7
+msgid "Make a GET request to this resource to retrieve the list of inventories."
+msgstr "向此资源发出 GET 请求，以检索清单。"
+
+#: ../../source/inventory_list.rst:19
+msgid "The resulting data structure contains: ::"
+msgstr "得到的数据结构包括：："
+
+#: ../../source/inventory_list.rst:29
+msgid "The ``count`` field indicates the total number of inventory lists found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more inventory records."
+msgstr "``count`` 字段显示为给定查询找到的清单列表总数。如果单个页面无法包括所有项，使用 ``next`` 和 ``previous`` 字段可以查看其他结果。``results`` 列表包含零或更多个清单记录。"
+
+#: ../../source/inventory_list.rst:32
+msgid "Results"
+msgstr "结果"
+
+#: ../../source/inventory_list.rst:37
+msgid "Each inventory data structure includes the following fields:"
+msgstr "每个清单数据结构包括以下字段："
+
+#: ../../source/inventory_list.rst:39
+msgid "``id``: Database ID for this inventory. (integer)"
+msgstr "``id``：此清单的数据库 ID。（整数）"
+
+#: ../../source/inventory_list.rst:40
+msgid "``type``: Data type for this inventory. (multiple choice)"
+msgstr "``type``：此清单的数据类型。（多选项）"
+
+#: ../../source/inventory_list.rst:41
+msgid "``inventory``: Inventory"
+msgstr "``inventory``：清单"
+
+#: ../../source/inventory_list.rst:42
+msgid "``url``: URL for this inventory. (string)"
+msgstr "``url``：此清单的 URL。（字符串）"
+
+#: ../../source/inventory_list.rst:43
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``：包含相关资源的 URL 的数据结构。（对象）"
+
+#: ../../source/inventory_list.rst:44
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``：包含相关资源的名称/描述的数据结构。（对象）"
+
+#: ../../source/inventory_list.rst:45
+msgid "``created``: Timestamp when this inventory was created. (datetime)"
+msgstr "``created``：创建此清单时的时间戳。（日期时间）"
+
+#: ../../source/inventory_list.rst:46
+msgid "``modified``: Timestamp when this inventory was last modified. (datetime)"
+msgstr "``modified``：最后一次修改此清单时的时间戳。（日期时间）"
+
+#: ../../source/inventory_list.rst:47
+msgid "``name``: (string)"
+msgstr "``name``：（字符串）"
+
+#: ../../source/inventory_list.rst:48
+msgid "``description``: (string)"
+msgstr "``description``：（字符串）"
+
+#: ../../source/inventory_list.rst:49
+msgid "``organization``: (field)"
+msgstr "``organization``：（字段）"
+
+#: ../../source/inventory_list.rst:50
+msgid "``variables``: Inventory variables in JSON or YAML format. (string)"
+msgstr "``variables``：JSON 或 YAML 格式的清单变量。（字符串）"
+
+#: ../../source/inventory_list.rst:51
+msgid "``has_active_failures``: Flag indicating whether any hosts in this inventory have failed. (boolean)"
+msgstr "``has_active_failures``：指示此清单中是否有主机失败的标志。（布尔值）"
+
+#: ../../source/inventory_list.rst:52
+msgid "``total_hosts``: Total number of hosts in this inventory. (integer)"
+msgstr "``total_hosts``：此清单中的主机总数。（整数）"
+
+#: ../../source/inventory_list.rst:53
+msgid "``hosts_with_active_failures``: Number of hosts in this inventory with active failures. (integer)"
+msgstr "``hosts_with_active_failures``：此清单中有活跃故障的主机数量。（整数）"
+
+#: ../../source/inventory_list.rst:54
+msgid "``total_groups``: Total number of groups in this inventory. (integer)"
+msgstr "``total_groups``：此清单中的组总数。（整数）"
+
+#: ../../source/inventory_list.rst:55
+msgid "``groups_with_active_failures``: Number of groups in this inventory with active failures. (integer)"
+msgstr "``groups_with_active_failures``：此清单中有活跃故障的组数。（整数）"
+
+#: ../../source/inventory_list.rst:56
+msgid "``has_inventory_sources``: Flag indicating whether this inventory has any external inventory sources. (boolean)"
+msgstr "``has_inventory_sources``：指示此清单是否具有任何外部清单来源的标志。（布尔值）"
+
+#: ../../source/inventory_list.rst:57
+msgid "``total_inventory_sources``: Total number of external inventory sources configured within this inventory. (integer)"
+msgstr "``total_inventory_sources``：在此清单中配置的外部清单源总数。（整数）"
+
+#: ../../source/inventory_list.rst:58
+msgid "``inventory_sources_with_failures``: Number of external inventory sources in this inventory with failures. (integer)"
+msgstr "``inventory_sources_with_failures``：此清单中有故障的外部清单源数量。（整数）"
+
+#: ../../source/inventory_list.rst:62
+msgid "Create Inventories"
+msgstr "创建清单"
+
+#: ../../source/inventory_list.rst:67
+msgid "Make a POST request to this resource with the following inventory fields to create a new inventory:"
+msgstr "使用以下清单字段向此资源发布 POST 请求，以创建新清单："
+
+#: ../../source/inventory_list.rst:69
+msgid "``name``: (string, required)"
+msgstr "``name``：（字符串，必需）"
+
+#: ../../source/inventory_list.rst:70
+msgid "``description``: (string, default=\"\")"
+msgstr "``description``：（字符串，默认=\"\"）"
+
+#: ../../source/inventory_list.rst:71
+msgid "``organization``: (field, required)"
+msgstr "``organization``：（字段，必需）"
+
+#: ../../source/inventory_list.rst:72
+msgid "``variables``: Inventory variables in JSON or YAML format. (string, default=\"\")"
+msgstr "``variables``：JSON 或 YAML 格式的清单变量。（字符串，默认=\"\"）"
+
+#: ../../source/inventory_list.rst:77
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/inventory_list.rst:82
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/job_slices.rst:4
+msgid "Job Slicing"
+msgstr "작업 분할"
+
+#: ../../source/job_slices.rst:13
+msgid "A :term:`sliced job` refers to the concept of a distributed job. Distributed jobs are used for running a job across a very large number of hosts, allowing you to run multiple ansible-playbooks, each on a subset of an inventory, that can be scheduled in parallel across a cluster."
+msgstr ":term:`sliced job`은 분산 작업의 개념을 나타냅니다. 분산 작업은 매우 많은 호스트에서 작업을 실행하는 데 사용되며, 이 작업을 사용하면 클러스터 전체에서 병렬로 스케줄링할 수 있는 여러 개의 ansible-playbook을 인벤토리 하위 집합에서 각각 실행할 수 있습니다."
+
+#: ../../source/job_slices.rst:16
+msgid "By default, Ansible runs jobs from a single control instance. For jobs that do not require cross-host orchestration, job slicing takes advantage of |at|'s ability to distribute work to multiple nodes in a cluster. Job slicing works by adding a Job Template field ``job_slice_count``, which specifies the number of jobs into which to slice the Ansible run. When this number is greater than 1, |at| will generate a workflow from a job template instead of a job. The inventory will be distributed evenly amongst the slice jobs. The workflow job is then started, and proceeds as though it were a normal workflow. When launching a job, the API will return either a job resource (if ``job_slice_count = 1``) or a workflow job resource. The corresponding User Interface will redirect to the appropriate screen to display the status of the run."
+msgstr "기본적으로 Ansible은 단일 제어 인스턴스의 작업을 실행합니다. 호스트 간 오케스트레이션이 필요하지 않은 작업의 경우 작업 분할은 |at|의 기능을 활용하여 클러스터의 여러 노드에 작업을 분산합니다. 작업 분할은 Ansible 실행을 분할할 작업 수를 지정하는 작업 템플릿 필드 ``job_slice_count``를 추가하여 작동합니다. 이 숫자가 1보다 크면 |at|는 작업이 아닌 작업 템플릿에서 워크플로우를 생성합니다. 인벤토리는 슬라이스 작업에 균등하게 배포됩니다. 그러면 워크플로우 작업이 시작되고 일반 워크플로우처럼 진행됩니다. 작업을 시작하면 API에서 작업 리소스(``job_slice_count = 1``인 경우) 또는 워크플로우 작업 리소스를 반환합니다. 해당 사용자 인터페이스는 실행 상태를 표시하기 위해 적절한 화면으로 리디렉션됩니다."
+
+#: ../../source/job_slices.rst:20
+msgid "Job slice considerations"
+msgstr "작업 슬라이스 고려 사항"
+
+#: ../../source/job_slices.rst:22
+msgid "Consider the following when setting up job slices:"
+msgstr "작업 슬라이스를 설정할 때는 다음을 고려해야 합니다."
+
+#: ../../source/job_slices.rst:24
+msgid "A sliced job creates a workflow job, and then that creates jobs."
+msgstr "분할된 작업은 워크플로우 작업을 생성한 후 작업을 생성합니다."
+
+#: ../../source/job_slices.rst:26
+msgid "A job slice consists of a job template, an inventory, and a slice count."
+msgstr "작업 슬라이스는 작업 템플릿, 인벤토리, 슬라이스 수로 구성됩니다."
+
+#: ../../source/job_slices.rst:28
+msgid "When executed, a sliced job splits each inventory into a number of \"slice size\" chunks. It then queues jobs of ansible-playbook runs on each chunk of the appropriate inventory. The inventory fed into ansible-playbook is a pared-down version of the original inventory that only contains the hosts in that particular slice. The completed sliced job that displays on the Jobs list are labeled accordingly, with the number of sliced jobs that have run:"
+msgstr "실행하면 분할된 작업에서 각 인벤토리를 여러 개의 \"슬라이스 크기\" 청크로 분할합니다. 그런 다음 적절한 인벤토리의 각 청크에서 ansible-playbook 실행 작업을 대기열에 넣습니다. ansible-playbook에 제공된 인벤토리는 해당 특정 슬라이스의 호스트만 포함하는 원래 인벤토리의 축소된 버전입니다. 작업 목록에 표시되는 완료된 분할된 작업에는 실행된 분할 작업 수로 적절하게 레이블이 지정됩니다."
+
+#: ../../source/job_slices.rst:33
+msgid "These sliced jobs follow normal scheduling behavior (number of forks, queuing due to capacity, assignation to instance groups based on inventory mapping)."
+msgstr "이러한 분할된 작업은 일반 스케줄링 동작(포크 수, 용량으로 인한 대기, 인벤토리 매핑을 기반으로 인스턴스 그룹에 할당)을 따릅니다."
+
+#: ../../../common/source/job-slicing-rule.rst:3
+msgid "Job slicing is intended to scale job executions horizontally. Enabling job slicing on a job template divides an inventory to be acted upon in the number of slices configured at launch time and then starts a job for each slice."
+msgstr "작업 분할은 작업 실행을 수평으로 스케일링하기 위한 것입니다. 작업 템플릿에 분할하면 시작 시 구성된 슬라이스 수에 따라 인벤토리가 분할된 다음 각 슬라이스에 대한 작업이 시작됩니다."
+
+#: ../../../common/source/job-slicing-rule.rst:5
+msgid "It is expected that the number of slices will be equal to or less than the number of controller nodes. Setting an extremely high number of job slices (e.g., thousands), while allowed, can cause performance degradation as the job scheduler is not designed to schedule simultaneously thousands of workflow nodes, which are what the sliced jobs become."
+msgstr "슬라이스 수가 컨트롤러 노드 수보다 크거나 같을 것으로 예상됩니다. 작업 스케줄러가 수천 개의 워크플로우 노드를 동시에 예약하도록 설계되지 않으므로 작업 슬라이스 수가 매우 많은 작업 슬라이스(예: 수천)를 설정하면 분할된 작업이 생성되는 작업 스케줄러를 동시에 예약하도록 설계되지 않으므로 성능이 저하될 수 있습니다."
+
+#: ../../source/job_slices.rst:39
+msgid "Sliced job templates with prompts and/or extra variables behave the same as standard job templates, applying all variables and limits to the entire set of slice jobs in the resulting workflow job. However, when passing a limit to a Sliced Job, if the limit causes slices to have no hosts assigned, those slices will fail, causing the overall job to fail."
+msgstr "프롬프트 및/또는 추가 변수가 있는 분할된 작업 템플릿은 표준 작업 템플릿과 동일하게 동작하여 모든 변수 및 제한을 결과 워크플로우 작업의 전체 슬라이스 작업 세트에 적용합니다. 그러나 분할된 작업에 제한을 전달할 때 이 제한으로 인해 호스트가 할당되지 않으면 해당 슬라이스가 실패하고 전체 작업이 실패합니다."
+
+#: ../../source/job_slices.rst:42
+msgid "A job slice job status of a distributed job is calculated in the same manner as workflow jobs; failure if there are any unhandled failures in its sub-jobs."
+msgstr "분산된 작업의 작업 슬라이스 작업 상태는 워크플로우 작업과 동일한 방식으로 계산됩니다. 하위 작업에 처리되지 않은 오류가 있는 경우 실패합니다."
+
+#: ../../source/job_slices.rst:46
+msgid "Any job that intends to orchestrate across hosts (rather than just applying changes to individual hosts) should not be configured as a slice job. Any job that does, may fail, and |at| will not attempt to discover or account for playbooks that fail when run as slice jobs."
+msgstr "(개별 호스트에 변경 사항만 적용하는 대신) 호스트 간 오케스트레이션을 수행하려는 작업은 분할된 작업으로 구성되어서는 안 됩니다. 이 경우 작업이 실패할 수 있으며 |at|에서 슬라이스 작업으로 실행 시 실패하는 플레이북을 검색하거나 고려하지 않습니다."
+
+#: ../../source/job_slices.rst:52
+msgid "Job slice execution behavior"
+msgstr "작업 슬라이스 실행 동작"
+
+#: ../../source/job_slices.rst:54
+msgid "When jobs are sliced, they can run on any node and some may not run at the same time (insufficient capacity in the system, for example). When slice jobs are running, job details display the workflow and job slice(s) currently running, as well as a link to view their details individually."
+msgstr "분할된 작업은 모든 노드에서 실행할 수 있고 일부는 동시에 실행되지 않을 수 있습니다(예: 시스템의 용량 부족). 슬라이스 작업이 실행 중인 경우 작업 세부 정보에 현재 실행 중인 워크플로우 및 작업 슬라이스와 세부 정보를 개별적으로 볼 수 있는 링크가 표시됩니다."
+
+#: ../../source/job_slices.rst:58
+msgid "By default, job templates are not normally configured to execute simultaneously (``allow_simultaneous`` must be checked in the API or **Enable Concurrent Jobs** in the UI). Slicing overrides this behavior and implies ``allow_simultaneous`` even if that setting is unchecked. See :ref:`ug_JobTemplates` for information on how to specify this, as well as the number of job slices on your job template configuration."
+msgstr "기본적으로 작업 템플릿은 일반적으로 동시에 실행되도록 구성되어 있지 않습니다(API에서 ``allow_simultaneous`` 또는 UI에서 **동시 작업 활성화**를 선택해야 함). 분할 작업은 이 동작을 덮어쓰고 해당 설정이 선택되지 않은 경우에도 ``allow_simultaneous``를 의미합니다. :ref:`ug_JobTemplates`에서 이 동작을 지정하는 방법에 대한 자세한 내용과 작업 템플릿 구성의 작업 슬라이스 수를 참조하십시오."
+
+#: ../../source/job_slices.rst:60
+msgid "The :ref:`ug_JobTemplates` section provides additional detail on performing the following operations in the User Interface:"
+msgstr ":ref:`ug_JobTemplates` 섹션에는 사용자 인터페이스에서 다음 작업을 수행하는 방법에 대한 추가 세부 정보가 있습니다."
+
+#: ../../source/job_slices.rst:62
+msgid "Launch workflow jobs with a job template that has a slice number greater than one"
+msgstr "슬라이스 번호가 1보다 큰 작업 템플릿을 사용하여 워크플로우 작업 시작"
+
+#: ../../source/job_slices.rst:63
+msgid "Cancel the whole workflow or individual jobs after launching a slice job template"
+msgstr "슬라이스 작업 템플릿을 시작한 후 전체 워크플로우 또는 개별 작업 취소"
+
+#: ../../source/job_slices.rst:64
+msgid "Relaunch the whole workflow or individual jobs after slice jobs finish running"
+msgstr "슬라이스 작업의 실행을 완료한 후 전체 워크플로우 또는 개별 작업 다시 시작"
+
+#: ../../source/job_slices.rst:65
+msgid "View the details about the workflow and slice jobs after a launching a job template"
+msgstr "작업 템플릿을 시작한 후 워크플로우 및 슬라이스 작업의 세부 정보 보기"
+
+#: ../../source/job_slices.rst:66
+msgid "Search slice jobs specifically after you create them (see subsequent section, :ref:`ug_job_slice_search`)"
+msgstr "슬라이스 작업을 생성한 후 구체적으로 검색(다음 섹션인 :ref:`ug_job_slice_search` 참조)"
+
+#: ../../source/job_slices.rst:74
+msgid "Search job slices"
+msgstr "작업 슬라이스 검색"
+
+#: ../../source/job_slices.rst:76
+msgid "To make it easier to find slice jobs, use the Search functionality to apply a search filter to:"
+msgstr "슬라이스 작업을 더 쉽게 찾으려면 검색 기능을 사용하여 다음 목록에 검색 필터를 적용합니다."
+
+#: ../../source/job_slices.rst:78
+msgid "job lists to show only slice jobs"
+msgstr "슬라이스 작업만 표시하는 작업 목록"
+
+#: ../../source/job_slices.rst:79
+msgid "job lists to show only parent workflow jobs of job slices"
+msgstr "작업 슬라이스의 상위 워크플로우 작업만 표시하는 작업 목록"
+
+#: ../../source/job_slices.rst:80
+msgid "job templates lists to only show job templates that produce slice jobs"
+msgstr "슬라이스 작업을 생성하는 작업 템플릿만 표시하는 작업 템플릿 목록"
+
+#: ../../source/job_slices.rst:83
+msgid "To show only slice jobs in job lists, as with most cases, you can filter either on the type (jobs here) or ``unified_jobs``:"
+msgstr "대부분의 경우처럼 작업 목록에 슬라이스 작업만 표시하려면 해당 유형(여기 있는 작업) 또는 ``unified_jobs``에서 필터링할 수 있습니다."
+
+#: ../../source/job_slices.rst:90
+msgid "To show only parent workflow jobs of job slices:"
+msgstr "작업 슬라이스의 상위 워크플로우 작업만 표시하려면 다음을 실행합니다."
+
+#: ../../source/job_slices.rst:97
+msgid "To show only job templates that produce slice jobs:"
+msgstr "슬라이스 작업을 생성하는 작업 템플릿만 표시하려면 다음을 실행합니다."
+

@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/browseable.rst:5
+msgid "Browsable API"
+msgstr "탐색 가능한 API"
+
+#: ../../source/browseable.rst:11
+msgid "REST APIs provide access to resources (data entities) via URI paths.  You can visit the |at| REST API in a web browser at: ``http://<server name>/api/``"
+msgstr "REST API는 URI 경로를 통해 리소스(데이터 엔터티)에 대한 액세스 권한을 제공합니다.  웹 브라우저(``http://<server name>/api/``)에서 |at| REST API를 방문할 수 있습니다."
+
+#: ../../source/browseable.rst:13
+msgid "|REST API|"
+msgstr "|REST API|"
+
+#: ../../source/browseable.rst:17
+msgid "|at| 3.2 introduced version 2 of the API, which can be accessed by clicking the v2 link next to \"available versions\":"
+msgstr "|at| 3.2에는 API 버전 2가 도입되었으며, \"사용 가능한 버전\" 옆에 있는 v2 링크를 클릭하여 액세스할 수 있습니다."
+
+#: ../../source/browseable.rst:19
+msgid "|REST API V2|"
+msgstr "|REST API V2|"
+
+#: ../../source/browseable.rst:23
+msgid "Alternatively, you can still access version 1 of the API this way, but it **will be removed** in a future release of |at|."
+msgstr "또는 이러한 방법으로 API 버전 1에 계속 액세스할 수 있지만 향후 |at| 릴리스에서 **제거될 예정입니다**."
+
+#: ../../source/browseable.rst:25
+msgid "If you perform a **GET** just the ``/api/`` endpoint, it gives the ``current_version``, which would be the recommended version."
+msgstr "``/api/`` 끝점에 대해서만 **GET**을 수행하면 권장 버전인 ``current_version``이 제공됩니다."
+
+#: ../../source/browseable.rst:27
+msgid "Clicking on various links in the API allows you to explore related resources."
+msgstr "API에서 다양한 링크를 클릭하면 관련 리소스를 살펴볼 수 있습니다."
+
+#: ../../source/browseable.rst:32
+msgid "Clicking on the |question| next to the page name (toward the top of the screen) for an API endpoint gives you documentation on the access methods for that particular API endpoint and what data is returned when using those methods."
+msgstr "API 끝점 페이지 이름(화면 상단에 있음) 옆에 있는 |question|를 클릭하면 해당 API 끝점에 대한 액세스 방법과 해당 방법을 사용할 때 반환되는 데이터에 대한 문서가 제공됩니다."
+
+#: ../../source/browseable.rst:44
+msgid "You can also use PUT and POST verbs on the specific API pages by formatting JSON in the various text fields."
+msgstr "다양한 텍스트 필드에서 JSON을 포맷하여 특정 API 페이지에서 PUT 및 POST 동사를 사용할 수도 있습니다."
+
+#: ../../source/browseable.rst:47
+msgid "|REST API - POST to API via form|"
+msgstr "|REST API - POST to API via form|"
+
+#: ../../source/browseable.rst:51
+msgid "You can also view changed settings from factory defaults at ``/api/v2/settings/changed/`` endpoint. It reflects changes you made in the API browser, not changed settings that come from static settings files."
+msgstr "또한 ``/api/v2/settings/changed/`` 끝점에서 팩토리 기본값에서 변경된 설정을 볼 수 있습니다. 정적 설정 파일에서 제공되는 변경된 설정이 아닌, API 브라우저에서 수행한 변경 사항이 반영됩니다."
+
+#: ../../source/browseable.rst:53
+msgid "|REST API - Changes to Settings|"
+msgstr "|REST API - Changes to Settings|"
+

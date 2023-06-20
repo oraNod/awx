@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/tower-manage.rst:2
+msgid "The *tower-manage* Utility"
+msgstr ""
+
+#: ../../source/tower-manage.rst:7
+msgid ""
+"The ``tower-manage`` (formerly awx-manage) utility is used to access "
+"detailed internal information of Tower. Commands for ``tower-manage`` "
+"should run as the ``awx`` or ``root`` user."
+msgstr ""
+
+#: ../../source/tower-manage.rst:10
+msgid "Inventory Import"
+msgstr ""
+
+#: ../../source/tower-manage.rst:15
+msgid ""
+"``tower-manage`` is a mechanism by which a Tower administrator can import"
+" inventory directly into Tower, for those who cannot use Custom Inventory"
+" Scripts."
+msgstr ""
+
+#: ../../source/tower-manage.rst:17
+msgid ""
+"To use ``tower-manage`` properly, you must first create an inventory in "
+"Tower to use as the destination for the import."
+msgstr ""
+
+#: ../../source/tower-manage.rst:19
+msgid ""
+"For help with ``tower-manage``, run the following command: ``tower-manage"
+" inventory_import [--help]``"
+msgstr ""
+
+#: ../../source/tower-manage.rst:21
+msgid ""
+"The ``inventory\\_import`` command synchronizes a Tower inventory object "
+"with a text-based inventory file, dynamic inventory script, or a "
+"directory of one or more of the above as supported by core Ansible."
+msgstr ""
+
+#: ../../source/tower-manage.rst:23
+msgid ""
+"When running this command, specify either an ``--inventory-id`` or "
+"``--inventory-name``, and the path to the Ansible inventory source "
+"(``--source``)."
+msgstr ""
+
+#: ../../source/tower-manage.rst:29
+msgid ""
+"By default, inventory data already stored in Tower blends with data from "
+"the external source. To use only the external data, specify "
+"``--overwrite``. To specify that any existing hosts get variable data "
+"exclusively from the ``--source``, specify ``--overwrite_vars``. The "
+"default behavior adds any new variables from the external source, "
+"overwriting keys that do not already exist, but preserves any variables "
+"that were not sourced from the external data source."
+msgstr ""
+
+#: ../../../common/source/overwrite_var_note_2-4-0.rst:3
+msgid ""
+"With the release of |at| 2.4.0, edits and additions to Inventory host "
+"variables now persist beyond an inventory sync as long as "
+"``--overwrite_vars`` is **not** set. To have inventory syncs behave as "
+"they did before, it is now required that both ``--overwrite`` and "
+"``--overwrite_vars`` are set."
+msgstr ""
+
+#: ../../source/tower-manage.rst:39
+msgid "Cleanup of old data"
+msgstr ""
+
+#: ../../source/tower-manage.rst:44
+msgid ""
+"``tower-manage`` has a variety of commands used to clean old data from "
+"Tower. Tower administrators can use the Tower Management Jobs interface "
+"for access or use the command line."
+msgstr ""
+
+#: ../../source/tower-manage.rst:46
+msgid "``tower-manage cleanup_jobs [--help]``"
+msgstr ""
+
+#: ../../source/tower-manage.rst:48
+msgid ""
+"This permanently deletes the job details and job output for jobs older "
+"than a specified number of days."
+msgstr ""
+
+#: ../../source/tower-manage.rst:50
+msgid "``tower-manage cleanup-deleted [--help]``"
+msgstr ""
+
+#: ../../source/tower-manage.rst:52
+msgid ""
+"This permanently deletes any deleted Tower objects that are older than a "
+"specified number of days."
+msgstr ""
+
+#: ../../source/tower-manage.rst:54
+msgid "``tower-manage cleanup_activitystream [--help]``"
+msgstr ""
+
+#: ../../source/tower-manage.rst:56
+msgid ""
+"This permanently deletes any `activity stream <#activity-streams>`__ data"
+" older than a specific number of days."
+msgstr ""
+
+#: ../../source/tower-manage.rst:60
+msgid "HA management"
+msgstr ""
+
+#: ../../source/tower-manage.rst:65
+msgid ""
+"Refer to the :ref:`ag_highavailability` section for details on the "
+"``tower-manage register_instance`` and ``tower-manage remove_instance`` "
+"commands."
+msgstr ""
+
+#: ../../source/tower-manage.rst:71
+msgid ""
+"Do not run other ``tower-manage`` commands unless instructed by Ansible "
+"Support."
+msgstr ""
+

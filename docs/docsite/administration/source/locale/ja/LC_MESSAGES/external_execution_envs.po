@@ -1,0 +1,629 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.7.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-07 07:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/external_execution_envs.rst:4
+msgid "Execution Environments"
+msgstr "実行環境"
+
+#: ../../source/external_execution_envs.rst:15
+msgid "The controller allows you to execute jobs via ansible playbook runs directly on a member of the cluster or on a pre-provisioned isolated node. In |atversionshortest|, you can execute jobs in a container group only as-needed per playbook. For more information, see :ref:`ag_container_groups` towards the end of this section."
+msgstr "コントローラーを使用すると、クラスターのメンバーまたは事前にプロビジョニングされた分離ノードで直接実行可能な Ansible Playbook を介してジョブを実行できます。|atversionshortest| では、必要に応じて Playbook ごとにコンテナーグループでジョブを実行できます。詳細については、このセクションに後述されている「:ref:`ag_container_groups`」を参照してください。"
+
+#: ../../source/external_execution_envs.rst:21
+msgid "Instance Groups"
+msgstr "インスタンスグループ"
+
+#: ../../source/external_execution_envs.rst:23
+msgid "Instances can be grouped into one or more Instance Groups. Instance groups can be assigned to one or more of the resources listed below."
+msgstr "インスタンスは、1 つまたは複数のインスタンスグループにグループ化することができます。インスタンスグループは、以下に記載のリソース 1 つまたは複数に割り当てることができます。"
+
+#: ../../source/external_execution_envs.rst:25
+msgid "Organizations"
+msgstr "組織"
+
+#: ../../source/external_execution_envs.rst:26
+msgid "Inventories"
+msgstr "インベントリー"
+
+#: ../../source/external_execution_envs.rst:27
+msgid "Job Templates"
+msgstr "ジョブテンプレート"
+
+#: ../../source/external_execution_envs.rst:29
+msgid "When a job associated with one of the resources executes, it will be assigned to the instance group associated with the resource. During the execution process, instance groups associated with Job Templates are checked before those associated with Inventories. Similarly, instance groups associated with Inventories are checked before those associated with Organizations. Thus, Instance Group assignments for the three resources form a hierarchy: Job Template **>** Inventory **>** Organization."
+msgstr "リソースの 1 つに関連付けられているジョブが実行されると、そのリソースに関連付けられているインスタンスグループに割り当てられます。実行プロセス中に、インベントリーに関連付けられたインスタンスグループではなく、ジョブテンプレートに関連付けられたインスタンスグループが先に確認されます。同様に、インベントリーに関連付けられているインスタンスグループは、組織に関連付けられているインスタンスグループよりも先に確認されます。そのため、3 つのリソースのインスタンスグループの割り当てには、Job Template **>** Inventory **>** Organization の階層が形成されます。"
+
+#: ../../source/external_execution_envs.rst:31
+msgid "Here are some of the things to consider when working with instance groups:"
+msgstr "インスタンスグループの使用時に考慮すべき事項を複数、以下に示します。"
+
+#: ../../source/external_execution_envs.rst:33
+msgid "You may optionally define other groups and group instances in those groups. These groups should be prefixed with ``instance_group_``. Instances are not required to be in the controller group alongside other ``instance_group_`` groups, but one instance **must** be present in the ``controller`` group. Technically, ``controller`` is a group like any other ``instance_group_`` group, but it must always be present, and if a specific group is not associated with a specific resource, then job execution will always fall back to the ``controller`` group. The ``controller`` instance group always exists (it cannot be deleted nor renamed)."
+msgstr "必要に応じて、これらのグループで他のグループやグループインスタンスを定義することができます。これらのグループには、``instance_group_`` のプレフィックスを指定する必要があります。インスタンスは、``instance_group_`` グループ以外にコントローラーグループに所属する必要はありませんが、``controller`` グループにはインスタンスが 1 つ存在している **必要があります**。技術的には、``controller`` は他の ``instance_group_`` グループと同様ですが、常に存在させておく必要があります。特定のグループが特定のリソースに関連付けられていない場合、ジョブ実行は常に ``controller`` グループにフォールバックします。``controller`` のインスタンスグループは常に存在します (削除したり、名前を変更したりできません)。"
+
+#: ../../source/external_execution_envs.rst:35
+msgid "Do not create a group named ``instance_group_controller``."
+msgstr "名前が ``instance_group_controller`` のグループは作成しないでください。"
+
+#: ../../source/external_execution_envs.rst:37
+msgid "Do not name any instance the same as a group name."
+msgstr "インスタンスにグループ名と同じ名前を指定しないでください。"
+
+#: ../../source/external_execution_envs.rst:42
+msgid "Configuring Instance Groups from the API"
+msgstr "API からのインスタンスグループの設定"
+
+#: ../../source/external_execution_envs.rst:47
+msgid "Instance groups can be created by POSTing to ``/api/v2/instance_groups`` as a system administrator."
+msgstr "インスタンスグループは、システム管理者として ``/api/v2/instance_groups`` に POST 要求を出すことで作成できます。"
+
+#: ../../source/external_execution_envs.rst:49
+msgid "Once created, instances can be associated with an instance group with:"
+msgstr "インスタンスグループを作成したら、インスタンスをインスタンスグループに関連付けることができます。"
+
+#: ../../source/external_execution_envs.rst:55
+msgid "An instance that is added to an instance group will automatically reconfigure itself to listen on the group's work queue. See the following section, :ref:`ag_instance_group_policies`, for more details."
+msgstr "インスタンスグループに追加したインスタンスは、自動的にグループの作業キューをリッスンするように再設定されます。詳細は、以下の「:ref:`ag_instance_group_policies`」セクションを参照してください。"
+
+#: ../../source/external_execution_envs.rst:61
+msgid "Instance group policies"
+msgstr "インスタンスグループのポリシー"
+
+#: ../../source/external_execution_envs.rst:67
+msgid "You can configure the controller instances to automatically join Instance Groups when they come online by defining a :term:`policy`. These policies are evaluated for every new instance that comes online."
+msgstr ":term:`policy` を定義することにより、オンラインになると自動的にインスタンスグループに参加するようにコントローラーインスタンスを設定できます。これらのポリシーは、新しいインスタンスがオンラインになるたびに評価されます。"
+
+#: ../../source/external_execution_envs.rst:69
+msgid "Instance Group Policies are controlled by three optional fields on an ``Instance Group``:"
+msgstr "インスタンスグループポリシーは、``Instance Group`` の 3 つの任意フィールドにより制御されます。"
+
+#: ../../source/external_execution_envs.rst:71
+msgid "``policy_instance_percentage``: This is a number between 0 - 100. It guarantees that this percentage of active controller instances will be added to this Instance Group. As new instances come online, if the number of Instances in this group relative to the total number of instances is less than the given percentage, then new ones will be added until the percentage condition is satisfied."
+msgstr "``policy_instance_percentage``: これは、0 ~ 100 の間の数字で指定します。これにより、確実に、アクティブなコントローラーインスタンスの割合が対象のインスタンスグループに追加されるようになります。新しいインスタンスがオンラインになると、このグループのインスタンス数が、インスタンスの全体数に対して、指定の割合より少ない場合には、指定の割合の条件を満たすまで、新しいインスタンスが追加されます。"
+
+#: ../../source/external_execution_envs.rst:72
+msgid "``policy_instance_minimum``: This policy attempts to keep at least this many instances in the Instance Group. If the number of available instances is lower than this minimum, then all instances will be placed in this Instance Group."
+msgstr "``policy_instance_minimum``: このポリシーは、インスタンスグループに配置するように試行する最小インスタンス数を指定します。利用可能なインスタンス数がこの最小数よりも少ない場合には、すべてのインスタンスがこのインスタンスグループに配置されます。"
+
+#: ../../source/external_execution_envs.rst:73
+msgid "``policy_instance_list``: This is a fixed list of instance names to always include in this Instance Group."
+msgstr "``policy_instance_list``: これは、このインスタンスグループに常に含めるインスタンス名の固定一覧です。"
+
+#: ../../source/external_execution_envs.rst:75
+msgid "The Instance Groups list view from the |at| User Interface provides a summary of the capacity levels for each instance group according to instance group policies:"
+msgstr "|at| ユーザーインターフェースのインスタンスグループ一覧ビューでは、インスタンスグループのポリシーをもとにした各インスタンスグループのキャパシティーレベルの概要がわかります。"
+
+#: ../../source/external_execution_envs.rst:77
+msgid "|Instance Group policy example|"
+msgstr "|Instance Group policy example|"
+
+#: ../../source/external_execution_envs.rst:79
+msgid "Instance Group policy example"
+msgstr "インスタンスグループのポリシーの例"
+
+#: ../../source/external_execution_envs.rst:83
+msgid "Notable policy considerations"
+msgstr "主なポリシーの考慮事項"
+
+#: ../../source/external_execution_envs.rst:85
+msgid "``policy_instance_percentage`` and ``policy_instance_minimum`` both set minimum allocations. The rule that results in more instances assigned to the group will take effect. For example, if you have a ``policy_instance_percentage`` of 50% and a ``policy_instance_minimum`` of 2 and you start 6 instances, 3 of them would be assigned to the Instance Group. If you reduce the number of total instances in the cluster to 2, then both of them would be assigned to the Instance Group to satisfy ``policy_instance_minimum``. This way, you can set a lower bound on the amount of available resources."
+msgstr "``policy_instance_percentage`` および ``policy_instance_minimum`` はいずれも、最小割り当てレベルを指定します。このグループに割り当てる数が多いルールが適用されます。たとえば、``policy_instance_percentage`` が 50%、``policy_instance_minimum`` が 2 の場合に、6 台のインスタンスを起動すると、3 台がこのインスタンスグループに割り当てられます。クラスター内のインスタンス総数を 2 に減らすと、``policy_instance_minimum`` の条件を満たすために、この 2 台のインスタンスがいずれも、インスタンスグループに割り当てられます。こうすることで、利用可能なリソースの制限に合わせて、低い値を設定できます。"
+
+#: ../../source/external_execution_envs.rst:87
+msgid "Policies do not actively prevent instances from being associated with multiple Instance Groups, but this can effectively be achieved by making the percentages add up to 100. If you have 4 instance groups, assign each a percentage value of 25 and the instances will be distributed among them with no overlap."
+msgstr "ポリシーは、自発的にインスタンスが複数のインスタンスグループに割り当てられないように規制するわけではありませんが、割合を合計すると 100 になるように指定すると実質的に、複数のインスタンスグループに割り当てないようにできます。インスタンスグループが 4 つあり、割合の値が 25 に割り当てると、インスタンスは重複することなく分散されます。"
+
+#: ../../source/external_execution_envs.rst:91
+msgid "Manually pinning instances to specific groups"
+msgstr "固有のグループへのインスタンスの手動固定"
+
+#: ../../source/external_execution_envs.rst:98
+msgid "If you have a special instance which needs to be exclusively assigned to a specific Instance Group but don't want it to automatically join other groups via \"percentage\" or \"minimum\" policies:"
+msgstr "インスタンスが特別で、特定のインスタンスグループだけに割り当てる必要があり、「percentage」または「minimum」のポリシーで他のグループに自動的に参加させない場合には、以下を行います。"
+
+#: ../../source/external_execution_envs.rst:100
+msgid "Add the instance to one or more Instance Groups' ``policy_instance_list``"
+msgstr "インスタンスを 1 つまたは複数のインスタンスグループの ``policy_instance_list`` に追加します。"
+
+#: ../../source/external_execution_envs.rst:102
+msgid "Update the instance's ``managed_by_policy`` property to be ``False``."
+msgstr "インスタンスの ``managed_by_policy`` プロパティーを ``False`` に更新します。"
+
+#: ../../source/external_execution_envs.rst:104
+msgid "This will prevent the Instance from being automatically added to other groups based on percentage and minimum policy; it will only belong to the groups you've manually assigned it to:"
+msgstr "こうすることで、割合や最小ポリシーをもとに、インスタンスが他のグループに自動的に追加されないようにします。手動で割り当てたグループにのみ所属するようになります。"
+
+#: ../../source/external_execution_envs.rst:120
+msgid "Job Runtime Behavior"
+msgstr "ジョブランタイムの動作"
+
+#: ../../source/external_execution_envs.rst:122
+msgid "When you run a job associated with a instance group, some behaviors worth noting are:"
+msgstr "インスタンスグループに関連付けられたジョブを実行する場合は、以下の動作に注意してください。"
+
+#: ../../source/external_execution_envs.rst:124
+msgid "If a cluster is divided into separate instance groups, then the behavior is similar to the cluster as a whole. If two instances are assigned to a group then either one is just as likely to receive a job as any other in the same group."
+msgstr "クラスターを複数のインスタンスグループに分類する場合は、クラスター全体の動作と類似します。インスタンス 2 台がグループに割り当てられると、同じグループ内の他のインスタンスと同様に、いずれかのインスタンスがジョブを受信する可能性が高いです。"
+
+#: ../../source/external_execution_envs.rst:125
+msgid "As controller instances are brought online, it effectively expands the work capacity of the controller system. If those instances are also placed into instance groups, then they also expand that group's capacity. If an instance is performing work and it is a member of multiple groups, then capacity will be reduced from all groups for which it is a member. De-provisioning an instance will remove capacity from the cluster wherever that instance was assigned. See the :ref:`ag_cluster_deprovision` section for more detail."
+msgstr "コントローラーインスタンスがオンラインになると、コントローラーシステムの作業容量が効率的に拡張されます。これらのインスタンスがインスタンスグループにも置かれている場合、グループの容量も拡張されます。複数のグループが所属するインスタンスが作業を実行する場合は、所属する全グループから容量が減少します。インスタンスのプロビジョニングを解除すると、インスタンスの割当先のクラスターから容量がなくなります。詳細については「:ref:`ag_cluster_deprovision`」のセクションを参照してください。"
+
+#: ../../source/external_execution_envs.rst:128
+msgid "Not all instances are required to be provisioned with an equal capacity."
+msgstr "すべてのインスタンスを同じ容量でプロビジョニングする必要はありません。"
+
+#: ../../source/external_execution_envs.rst:132
+msgid "Control Where a Job Runs"
+msgstr "ジョブ実行場所の制御"
+
+#: ../../source/external_execution_envs.rst:134
+msgid "If any of the job template, inventory, or organization has instance groups associated with them, a job ran from that job template will not be eligible for the default behavior. That means that if all of the instances inside of the instance groups associated with these 3 resources are out of capacity, the job will remain in the pending state until capacity becomes available."
+msgstr "ジョブテンプレート、インベントリー、または組織にインスタンスグループが割り当てられている場合には、対象のジョブテンプレートから実行されたジョブはデフォルトの動作を実行する資格はありません。つまり、これら 3 つのリソースに関連付けられたインスタンスグループに所属する全インスタンスに十分な容量がない場合には、容量が使用可能になるまでジョブは保留状態のままになります。"
+
+#: ../../source/external_execution_envs.rst:136
+msgid "The order of preference in determining which instance group to submit the job to is as follows:"
+msgstr "ジョブの送信先のインスタンスグループを決定する場合の優先順位は、以下のとおりです。"
+
+#: ../../source/external_execution_envs.rst:138
+msgid "job template"
+msgstr "ジョブテンプレート"
+
+#: ../../source/external_execution_envs.rst:139
+msgid "inventory"
+msgstr "インベントリー"
+
+#: ../../source/external_execution_envs.rst:140
+msgid "organization (by way of project)"
+msgstr "組織 (プロジェクトの形式)"
+
+#: ../../source/external_execution_envs.rst:142
+msgid "If instance groups are associated with the job template, and all of these are at capacity, then the job will be submitted to instance groups specified on inventory, and then organization. Jobs should execute in those groups in preferential order as resources are available."
+msgstr "インスタンスグループがジョブテンプレートと関連付けられており、いずれも許容容量内である場合には、ジョブはインベントリーで指定したインスタンスグループ、次に組織で指定したインスタンスグループに送信されます。リソースがあるので、ジョブはこれらのグループ内で、任意の順番で実行してください。"
+
+#: ../../source/external_execution_envs.rst:144
+msgid "The global ``controller`` group can still be associated with a resource, just like any of the custom instance groups defined in the playbook. This can be used to specify a preferred instance group on the job template or inventory, but still allow the job to be submitted to any instance if those are out of capacity."
+msgstr "グローバルの ``controller`` グループは、Playbook で定義されるカスタムのインスタンスグループと同様に、リソースと関連付けることができます。これは、ジョブテンプレートやインベントリーに希望のインスタンスグループを指定するのに使用できますが、容量が足りない場合にはジョブは別のインスタンスに送信できます。"
+
+#: ../../source/external_execution_envs.rst:146
+msgid "As an example, by associating ``group_a`` with a Job Template and also associating the ``controller`` group with its inventory, you allow the ``controller`` group to be used as a fallback in case ``group_a`` gets out of capacity."
+msgstr "たとえば、ジョブテンプレートと ``group_a`` を関連付けたり、インベントリーと ``controller``グループを関連付けたりすることで、``group_a`` の容量が足りなくなると、 ``controller`` グループをフォールバックとして使用できるようになります。"
+
+#: ../../source/external_execution_envs.rst:148
+msgid "In addition, it is possible to not associate an instance group with one resource but designate another resource as the fallback. For example, not associating an instance group with a job template and have it fall back to the inventory and/or the organization's instance group."
+msgstr "さらに、インスタンスグループにリソースを関連付けずに、フォールバックとして別のリソースを指定することができます。たとえば、ジョブテンプレートにインスタンスグループを割り当てずに、インベントリーや組織のインスタンスグループにフォールバックするように設定できます。"
+
+#: ../../source/external_execution_envs.rst:150
+msgid "This presents two other great use cases:"
+msgstr "この設定には、優れたユースケースが他に 2 つあります。"
+
+#: ../../source/external_execution_envs.rst:152
+msgid "Associating instance groups with an inventory (omitting assigning the job template to an instance group) will allow the user to ensure that any playbook run against a specific inventory will run only on the group associated with it. This can be super useful in the situation where only those instances have a direct link to the managed nodes."
+msgstr "(ジョブテンプレートをインスタンスグループに割り当てずに) インスタンスグループにインベントリーを関連付けることで、特定のインベントリーに対して実行される Playbook が関連付けられたグループでのみ実行されるようにすることができます。これらのインスタンスのみが管理ノードに直接関連付けられている場合に非常に便利です。"
+
+#: ../../source/external_execution_envs.rst:154
+msgid "An administrator can assign instance groups to organizations. This effectively allows the administrator to segment out the entire infrastructure and guarantee that each organization has capacity to run jobs without interfering with any other organization's ability to run jobs."
+msgstr "管理者は、インスタンスグループに組織を割り当てることができます。これにより、管理者はインフラストラクチャー全体をセグメントに分け、各組織が他の組織のジョブ実行機能を妨げずに、ジョブを実行できるように保証します。"
+
+#: ../../source/external_execution_envs.rst:156
+msgid "Likewise, an administrator could assign multiple groups to each organization as desired, as in the following scenario:"
+msgstr "同様に、以下のシナリオのように、管理者は希望に合わせて複数のグループを各組織に割り当てることもできます。"
+
+#: ../../source/external_execution_envs.rst:158
+msgid "There are three instance groups: A, B, and C. There are two organizations: Org1 and Org2."
+msgstr "A、B、C の 3 つのインスタンスグループがあり、Org1 および Org2 の 2 つの組織がある場合"
+
+#: ../../source/external_execution_envs.rst:159
+msgid "The administrator assigns group A to Org1, group B to Org2 and then assign group C to both Org1 and Org2 as an overflow for any extra capacity that may be needed."
+msgstr "管理者が Org1 にグループ A を、Org2 にグループ B を、容量が余分に必要となる可能性があるのでオーバーフロー用として Org1 および Org2 両方にグループ C を割り当てる場合"
+
+#: ../../source/external_execution_envs.rst:160
+msgid "The organization administrators are then free to assign inventory or job templates to whichever group they want (or just let them inherit the default order from the organization)."
+msgstr "組織の管理者が自由にインベントリーまたはジョブテンプレートを希望のグループに割り当てる (か、組織からのデフォルトの順番を継承する) 場合"
+
+#: ../../source/external_execution_envs.rst:162
+msgid "|Instance Group example|"
+msgstr "|Instance Group example|"
+
+#: ../../source/external_execution_envs.rst:164
+msgid "Instance Group example"
+msgstr "インスタンスグループの例"
+
+#: ../../source/external_execution_envs.rst:166
+msgid "Arranging resources in this way offers a lot of flexibility. Also, you can create instance groups with only one instance, thus allowing you to direct work towards a very specific Host in the controller cluster."
+msgstr "このような方法でリソースを割り当てると柔軟性が高くなります。また、インスタンスが 1 つしか含まれないインスタンスグループを作成することができるため、コントローラークラスターの固有のホストに作業を割り当てることができるようになります。"
+
+#: ../../source/external_execution_envs.rst:172
+msgid "Deprovision Instance Groups"
+msgstr "インスタンスグループのプロビジョニング解除"
+
+#: ../../source/external_execution_envs.rst:177
+msgid "Re-running the setup playbook does not automatically deprovision instances since clusters do not currently distinguish between an instance that was taken offline intentionally or due to failure. Instead, shut down all services on the controller instance and then run the deprovisioning tool from any other instance:"
+msgstr "Playbook の設定を再実行しても、自動的にインスタンスのプロビジョニングが解除されるわけではありません。これは現在、インスタンスがオフラインになった理由が意図的なのか、障害が原因なのかをクラスターでは識別できないためです。代わりに、コントローラーインスタンスの全サービスをシャットダウンしてから、他のインスタンスからプロビジョニング解除ツールを実行します。"
+
+#: ../../source/external_execution_envs.rst:179
+msgid "Shut down the instance or stop the service with the command, ``automation-controller-service stop``."
+msgstr "``automation-controller-service stop`` のコマンドで、インスタンスをシャットダウンするか、サービスを停止します。"
+
+#: ../../source/external_execution_envs.rst:181
+msgid "Run the deprovision command ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>`` from another instance to remove it from the controller cluster registry."
+msgstr "別のインスタンスから、プロビジョニング解除のコマンド ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>`` を実行して、コントローラーのクラスターレジストリーから削除します。"
+
+#: ../../source/external_execution_envs.rst:183
+msgid "Example: ``awx-manage deprovision_instance --hostname=hostB``"
+msgstr "例: ``awx-manage deprovision_instance --hostname=hostB``"
+
+#: ../../source/external_execution_envs.rst:186
+msgid "Similarly, deprovisioning instance groups in the controller does not automatically deprovision or remove instance groups, even though re-provisioning will often cause these to be unused. They may still show up in API endpoints and stats monitoring. These groups can be removed with the following command:"
+msgstr "同様に、プロビジョニングを解除しても、多くの場合、コントローラーのインスタンスグループが使用されないにも関わらず、コントローラーのインスタンスグループのプロビジョニングを解除しても、インスタンスグループが自動的に削除されたり、プロビジョニングが解除されたりしません。そのまま API エンドポイントに表示されたり、統計が監視されたりする可能性があります。これらのグループは、以下のコマンドを使用すると、削除することができます。"
+
+#: ../../source/external_execution_envs.rst:188
+msgid "Example: ``awx-manage unregister_queue --queuename=<name>``"
+msgstr "例: ``awx-manage unregister_queue --queuename=<name>``"
+
+#: ../../source/external_execution_envs.rst:190
+msgid "Removing an instance's membership from an instance group in the inventory file and re-running the setup playbook does not ensure the instance won't be added back to a group. To be sure that an instance will not be added back to a group, remove via the API and also remove it in your inventory file, or you can stop defining instance groups in the inventory file altogether. You can also manage instance group topology through the |at| User Interface. For more information on managing instance groups in the UI, refer to :ref:`Instance Groups <userguide:ug_instance_groups>` in the |atu|."
+msgstr "このインベントリーファイルのインスタンスグループから、インスタンスのメンバーシップを削除して、Playbook の設定を再実行しても、インスタンスがグループに再度追加されなくなるわけではありません。インスタンスがグループに追加されないようにするには、API 経由で削除し、インベントリーファイルからも削除するか、インベントリーファイルでインスタンスグループの定義をなくします。|at| ユーザーインターフェースでインスタンスグループのトポロジーを管理することも可能です。UI でのインスタンスグループの管理に関する詳細は、『|atu|』の「:ref:`Instance Groups <userguide:ug_instance_groups>`」を参照してください。"
+
+#: ../../source/external_execution_envs.rst:196
+msgid "Isolated Instance Groups"
+msgstr "分離インスタンスグループ"
+
+#: ../../source/external_execution_envs.rst:202
+msgid "The controller has the ability to optionally define isolated groups inside security-restricted networking zones from which to run jobs and ad hoc commands. Instances in these groups will not have a full installation of the controller, but will have a minimal set of utilities used to run jobs. Isolated groups must be specified in the inventory file prefixed with ``isolated_group_``. Below is an example of an inventory file for an isolated instance group."
+msgstr "コントローラーには、任意でセキュリティーの制限があるネットワークゾーン内に分離グループを定義して、そのゾーンからジョブやアドホックのコマンドを実行する機能があります。これらのグループ内のインスタンスには、コントローラーのシステム環境は完全ではなく、ジョブ実行に使用するユーティリティーが最小限となっています。分離グループは、プレフィックスが ``isolated_group_`` のインベントリーファイルに指定する必要があります。以下は、分離インスタンスグループのインベントリーファイルの例です。"
+
+#: ../../source/external_execution_envs.rst:222
+msgid "In the isolated instance group model, \"controller\" instances interact with \"isolated\" instances via a series of Ansible playbooks over SSH. At installation time, by default, a randomized RSA key is generated and distributed as an authorized key to all \"isolated\" instances. The private half of the key is encrypted and stored within the controller database, and is used to authenticate from \"controller\" instances to \"isolated\" instances when jobs are run."
+msgstr "分離グループモデルでは、「コントローラー」インスタンスは、SSH 経由で一連の Ansible Playbook を使用して「分離」インスタンスと対話します。インストール時には、デフォルトで RSA 鍵が無作為に作成され、認証キーとしてすべての「分離」インスタンスに配布されます。その鍵に対応する秘密鍵は暗号化され、コントローラーデータベースに保存されます。この鍵はジョブの実行時に、「コントローラー」インスタンスから「分離」インスタンスへの認証を行う際に使用します。"
+
+#: ../../source/external_execution_envs.rst:224
+msgid "When a job is scheduled to run on an \"isolated\" instance:"
+msgstr "ジョブが「分離」インスタンスで実行されるように予定されている場合:"
+
+#: ../../source/external_execution_envs.rst:226
+msgid "The \"controller\" instance compiles metadata required to run the job and copies it to the \"isolated\" instance."
+msgstr "「コントローラー」インスタンスは、ジョブの実行に必要なメタデータをコンパイルし、「分離」インスタンスにコピーします。"
+
+#: ../../source/external_execution_envs.rst:228
+msgid "Once the metadata has been synchronized to the isolated host, the \"controller\" instance starts a process on the \"isolated\" instance, which consumes the metadata and starts running ``ansible/ansible-playbook``. As the playbook runs, job artifacts (such as stdout and job events) are written to disk on the \"isolated\" instance."
+msgstr "メタデータが、分離ホストに同期されたら、「コントローラー」インスタンスは「分離」インスタンスでプロセスを開始し、メタデータを使って ``ansible/ansible-playbook`` の実行を開始します。Playbook が実行されると、(標準出力やジョブインベントなど) ジョブのアーティファクトが「分離」インスタンスのディスクに書き込まれます。"
+
+#: ../../source/external_execution_envs.rst:230
+msgid "While the job runs on the \"isolated\" instance, the \"controller\" instance periodically copies job artifacts (stdout and job events) from the \"isolated\" instance. It consumes these until the job finishes running on the \"isolated\" instance."
+msgstr "ジョブが「分離」インスタンスで実行されると、「コントローラー」インスタンスは「分離」インスタンスから定期的に (標準出力やジョブイベントなど) ジョブのアーティファクトをコピーし、「分離」インスタンスでジョブが完了するまで、ジョブのアーティファクトを使用します。"
+
+#: ../../source/external_execution_envs.rst:234
+msgid "Controller nodes fail if they go offline in the middle of an isolated run. If a controller node restarts, or the dispatcher stops during playbook runs, jobs running on that node fails and won't start again when the dispatcher comes online."
+msgstr "分離して実行中にオフラインになると、コントローラーノードは失敗します。コントローラーノードが再起動するか、ディスパッチャーが Playbook の実行中に停止すると、対象のノードで実行中のジョブが失敗し、ディスパッチャーがオンラインになっても起動しません。"
+
+#: ../../source/external_execution_envs.rst:237
+msgid "Isolated groups (nodes) may be created in a way that allow them to exist inside of a VPC with security rules that only permit the instances in its controller group to access them; only ingress SSH traffic from \"controller\" instances to \"isolated\" instances is required. When provisioning isolated nodes, your install machine needs to be able to have connectivity to the isolated nodes. In cases where an isolated node is not directly accessible but can be reached indirectly through other hosts, you can designate a \"jump host\" by using ProxyCommand in your SSH configuration to specify the jump host and then run the installer."
+msgstr "分離グループ (ノード) は、コントローラーグループに所属するインスタンスだけのアクセスを許可するセキュリティールールを持つ VPC の内部でのみ存在できるように作成されます。「コントローラー」インスタンスから「分離」インスタンスへの SSH 経由の受信トラフィックのみが必要です。分離ノードをプロビジョニングする場合は、インストールマシンは分離ノードに接続できる必要があります。分離ノードに直接アクセスできないが、他のホスト経由で間接的に到達できる場合には、SSH 設定で ProxyCommand を使用して「ジャンプホスト」を指定して、インストーラーを実行してください。"
+
+#: ../../source/external_execution_envs.rst:239
+msgid "|Isolated nodes daisy chain example|"
+msgstr "|Isolated nodes daisy chain example|"
+
+#: ../../source/external_execution_envs.rst:241
+msgid "Isolated nodes daisy chain example"
+msgstr "分離ノードのデイジーチェーンの例"
+
+#: ../../source/external_execution_envs.rst:243
+msgid "|Jump Host example|"
+msgstr "|Jump Host example|"
+
+#: ../../source/external_execution_envs.rst:245
+msgid "Jump Host example"
+msgstr "ジャンプホストの例"
+
+#: ../../source/external_execution_envs.rst:248
+msgid "The recommended system configurations with isolated groups are as follows:"
+msgstr "分離グループの推奨のシステム設定は以下のとおりです。"
+
+#: ../../source/external_execution_envs.rst:250
+msgid "Do not create a group named ``isolated_group_controller``."
+msgstr "名前が ``isolated_group_controller`` のグループは作成しないでください。"
+
+#: ../../source/external_execution_envs.rst:251
+msgid "Do not put any isolated instances inside the controller group or other ordinary instance groups."
+msgstr "コントローラーグループや他の一般的なインスタンスグループに分離インスタンスを配置しないでください。"
+
+#: ../../source/external_execution_envs.rst:252
+msgid "Define the controller variable as either a group variable or as a host variable on all the instances in the isolated group. Do not allow isolated instances in the same group to have a different value for this variable - the behavior in this case cannot be predicted."
+msgstr "コントローラー変数を分離グループの全インスタンスのグループ変数またはホスト変数として定義します。この変数については、同じグループ内にある分離インスタンスに異なる値を割り当てられないようにしてください。割り当ててしまうと、予期せぬ動作が発生する可能性があります。"
+
+#: ../../source/external_execution_envs.rst:253
+msgid "Do not put an isolated instance in more than one isolated group."
+msgstr "複数の分離グループに分離インスタンスを配置しないでください。"
+
+#: ../../source/external_execution_envs.rst:254
+msgid "Do not put an instance in both ordinary groups and isolated groups."
+msgstr "通常のグループや分離グループにはインスタンスを配置しないでください。"
+
+#: ../../source/external_execution_envs.rst:255
+msgid "Isolated instances can be installed on RHEL 7 and later."
+msgstr "分離インスタンスは、RHEL 7 以降にインストールできます。"
+
+#: ../../source/external_execution_envs.rst:257
+msgid "The following durations associated with isolated groups can be configured in the **Jobs settings** of the Settings menu:"
+msgstr "分離グループに関連付けられている以下の期間は、設定メニューの **ジョブ設定** で設定できます。"
+
+#: ../../source/external_execution_envs.rst:259
+msgid "**Isolated Status Check Interval**: 30 seconds is the default amount of time set to sleep between status checks for jobs running on isolated instances."
+msgstr "**分離インスタンスでのステータスチェックの間隔**: 分離インスタンスで実行中のジョブに対して次回にステータスチェックを行うまでスリープ状態になる時間はデフォルトでは 30 秒となっています。"
+
+#: ../../source/external_execution_envs.rst:260
+msgid "**Isolated Launch Timeout**: 600 seconds (10 mins) is the default timeout for launching jobs on isolated instances. This includes the time needed to copy source control files (playbooks) to the isolated instance."
+msgstr "**分離インスタンスでの起動のタイムアウト**: 分離インスタンスでジョブを起動する時のデフォルトのタイムアウト時間は 600 秒 (10 分) です。これには、分離インスタンスにソースコントロールファイル (Playbook) をコピーするために必要な時間が含まれます。"
+
+#: ../../source/external_execution_envs.rst:261
+msgid "**Isolated Connection Timeout**: 10 seconds is the default Ansible SSH connection timeout when communicating with isolated instances. This value should be substantially greater than the expected network latency."
+msgstr "**分離インスタンスでの接続のタイムアウト**: 分離インスタンスとの通信時に使用する Ansible SSH 接続のタイムアウトはデフォルトで 10 秒となっています。この値は想定されるネットワークのレイテンシーよりも大幅に大きな値になるはずです。"
+
+#: ../../source/external_execution_envs.rst:263
+msgid "Isolated groups are labeled accordingly in the Instance Groups list view of the controller user interface."
+msgstr "分離グループには、コントローラーユーザーインターフェースのインスタンスグループのリストビューで、適宜ラベルが付けられます。"
+
+#: ../../source/external_execution_envs.rst:272
+msgid "Container Groups"
+msgstr "コンテナーグループ"
+
+#: ../../source/external_execution_envs.rst:275
+msgid "The Container Groups feature is in tech preview and is subject to change in a future release."
+msgstr "コンテナーグループ機能はテクノロジープレビュー機能で、今後のリリースで変更になる可能性があります。"
+
+#: ../../source/external_execution_envs.rst:281
+msgid "|at| supports :term:`Container Groups`, which allow you to execute jobs in the controller regardless of whether the controller is installed as a standalone, in  a virtual environment, or in a container. Container groups act as a pool of resources within a virtual environment. You can create instance groups to point to an OpenShift or Kubernetes container, which are job environments that are provisioned on-demand as a Pod that exists only for the duration of the playbook run. This is known as the ephemeral execution model and ensures a clean environment for every job run."
+msgstr "|at| は、:term:`Container Groups` をサポートしています。これにより、コントローラーがスタンドアロンとしてインストールされているか、仮想環境またはコンテナーにインストールされているかに関係なく、コントローラーでジョブを実行できます。コンテナーグループは、仮想環境内のリソースのプールとして機能します。OpenShift または Kubernetes コンテナーを指すインスタンスグループを作成できます。OpenShift または Kubernetes コンテナーは、Playbook の実行中のみ存在する Pod としてオンデマンドでプロビジョニングされるジョブ環境です。これは一時的な実行モデルと呼ばれ、すべてのジョブ実行に対してクリーンな環境を確保します。"
+
+#: ../../source/external_execution_envs.rst:283
+msgid "In some cases, it is desirable to have the execution environment be \"always-on\", which is configured through the creation of an instance."
+msgstr "場合によっては、実行環境を「常時オン」にしておくことが望ましい場合があります。これは、インスタンスの作成時に設定されます。"
+
+#: ../../source/external_execution_envs.rst:286
+msgid "Create a container group"
+msgstr "コンテナーグループの作成"
+
+#: ../../source/external_execution_envs.rst:288
+msgid "A ``ContainerGroup`` is simply an ``InstanceGroup`` that has an associated Credential that allows for connecting to an OpenShift or Kubernetes cluster. To set up a container group on Kubernetes or OpenShift, you must first have the following:"
+msgstr "``ContainerGroup`` は、OpenShift または Kubernetes クラスターに接続できる資格情報が割り当てられた ``InstanceGroup`` です。Kubernetes または OpenShift でコンテナーグループを設定するには、まず、以下が必要です。"
+
+#: ../../source/external_execution_envs.rst:290
+msgid "A namespace you can launch into (there is a \"default\" namespace but most likely varied by customer)"
+msgstr "起動の対象となる namespace (「default」 namespace はありますが、ほとんどの場合はお客様によって異なります)"
+
+#: ../../source/external_execution_envs.rst:291
+msgid "A service account that has the roles that allow it to launch and manage Pods in this namespace"
+msgstr "この namespace で Pod を起動および管理可能なロールを持つサービスアカウント"
+
+#: ../../source/external_execution_envs.rst:292
+msgid "A token associated with that service account (Kubernetes or OpenShift Bearer Token)"
+msgstr "そのサービスアカウントに関連付けられたトークン (Kubernetes または OpenShift ベアラートークン)"
+
+#: ../../source/external_execution_envs.rst:293
+msgid "A CA certificate associated with the cluster"
+msgstr "クラスターに関連付けられた CA 証明書"
+
+#: ../../source/external_execution_envs.rst:295
+msgid "To create a container group:"
+msgstr "コンテナーグループを作成するには、以下を実行します。"
+
+#: ../../source/external_execution_envs.rst:297
+msgid "Use the controller user interface to create an OpenShift or Kubernetes API bearer token credential that will be used with your container group, see :ref:`ug_credentials_add` in the |atu| for detail."
+msgstr "コントローラーのユーザーインターフェースを使用して、コンテナーグループで使用される OpenShift または Kubernetes API ベアラートークンの認証情報を作成します。詳細については、『|atu|』の「:ref:`ug_credentials_add`」を参照してください。"
+
+#: ../../source/external_execution_envs.rst:299
+msgid "Create a new container group by navigating to the Instance Groups configuration window by clicking **Instance Groups** from the left navigation bar."
+msgstr "左側のナビゲーションバーから **インスタンスグループ** をクリックして、インスタンスグループ設定ウィンドウに移動して、新しいコンテナーグループを作成します。"
+
+#: ../../source/external_execution_envs.rst:301
+msgid "Click the |add| button and select **Create Container Group**."
+msgstr "|add| ボタンをクリックして、**Create Container Group** を選択します。"
+
+#: ../../source/external_execution_envs.rst:303
+msgid "add"
+msgstr "追加"
+
+#: ../../source/external_execution_envs.rst:305
+msgid "|IG - create new CG|"
+msgstr "|IG - create new CG|"
+
+#: ../../source/external_execution_envs.rst:307
+msgid "IG - create new CG"
+msgstr "IG - 新しい CG の作成"
+
+#: ../../source/external_execution_envs.rst:309
+msgid "Enter a name for your new container group and select the credential previously created to associate it to the container group."
+msgstr "新しいコンテナーグループの名前を入力し、以前に作成した資格情報を選択して、コンテナーグループに割り当てます。"
+
+#: ../../source/external_execution_envs.rst:313
+msgid "Customize the Pod spec"
+msgstr "Pod 仕様のカスタマイズ"
+
+#: ../../source/external_execution_envs.rst:315
+msgid "The controller provides a simple default Pod specification, however, you can provide a custom YAML (or JSON) document that overrides the default Pod spec. This field uses any custom fields (i.e., ``image`` or ``namespace``) that can be \"serialized\" as valid Pod JSON or YAML. A full list of options can be found in the `Kubernetes documentation <https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/>`_."
+msgstr "コントローラーにはデフォルトのシンプルな Pod の仕様が用意されていますが、カスタムの YAML (または JSON) ドキュメントを指定して、デフォルトの Pod の仕様をオーバーライドすることができます。このフィールドでは、有効な Pod JSON または YAML として「シリアル化」できる任意のカスタムフィールド (``image`` または ``namespace``) が使用可能です。オプションの完全な一覧は `Kubernetes documentation <https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/>`_ にあります。"
+
+#: ../../source/external_execution_envs.rst:317
+msgid "To customize the Pod spec, specify the namespace in the **Pod Spec Override** field by using the toggle to enable and expand the **Pod Spec Override** field and click **Save** when done."
+msgstr "Pod の仕様をカスタマイズするには、**Pod Spec Override** フィールドを使用します。トグルを使用して **Pod Spec Override** フィールドを有効化、展開し、作業が完了したら **Save** をクリックします。"
+
+#: ../../source/external_execution_envs.rst:319
+msgid "|IG - CG customize pod|"
+msgstr "|IG - CG customize pod|"
+
+#: ../../source/external_execution_envs.rst:321
+msgid "IG - CG customize pod"
+msgstr "IG - CG カスタマイズの Pod"
+
+#: ../../source/external_execution_envs.rst:323
+msgid "You may provide additional customizations, if needed. Click **Expand** to view the entire customization window."
+msgstr "必要に応じて、追加のカスタマイズを指定できます。カスタマイズウィンドウ全体を表示するには、**Expand** をクリックします。"
+
+#: ../../source/external_execution_envs.rst:329
+msgid "The default container group image is pulled from ``registry.redhat.com``. That means that an image pull secret (``imagePullSecrets``) should be specified in the Pod spec. Refer to the *Allowing Pods to Reference Images from Other Secured Registries* section of the `Red Hat Container Registry Authentication article <https://access.redhat.com/RegistryAuthentication>`_ for more information on how to create image pull secrets."
+msgstr "デフォルトのコンテナグループイメージは、``registry.redhat.com`` からプルします。つまり、イメージのプルシークレット (``imagePullSecrets``) は、Pod 仕様で指定する必要がありますい。イメージのプルシークレットを作成する方法は、`Red Hat Container Registry Authentication article <https://access.redhat.com/RegistryAuthentication>`_ の「他のセキュアなレジストリーからのイメージを参照する pod の許可」を参照してください"
+
+#: ../../source/external_execution_envs.rst:331
+msgid "Once the container group is successfully created, the **Details** tab of the newly created container group remains, which allows you to review and edit your container group information. This is the same menu that is opened if the Edit (|edit-button|) button is clicked from the **Instance Group** link. You can also edit **Instances** and review **Jobs** associated with this instance group."
+msgstr "コンテナーグループが正常に作成されると、新規に作成されたコンテナーグループの **Details** タブがそのまま表示され、コンテナーグループの情報をレビューして編集することができます。これは、**Instance Group** リンクから編集 (|edit-button|) ボタンをクリックして開くメニューと同じです。また、**Instances** を編集して、このインスタンスグループに関連付けられた **Jobs** をレビューすることも可能です。"
+
+#: ../../source/external_execution_envs.rst:333
+msgid "edit-button"
+msgstr "編集ボタン"
+
+#: ../../source/external_execution_envs.rst:335
+msgid "|IG - example CG successfully created|"
+msgstr "|IG - example CG successfully created|"
+
+#: ../../source/external_execution_envs.rst:337
+msgid "IG - example CG successfully created"
+msgstr "IG -CG の例が正常に作成"
+
+#: ../../source/external_execution_envs.rst:339
+msgid "Container groups and instance groups are labeled accordingly."
+msgstr "コンテナーグループとインスタンスグループは適宜ラベル付けされます。"
+
+#: ../../source/external_execution_envs.rst:343
+msgid "Despite the fact that customers have custom Pod specs, upgrades may be difficult if the default ``pod_spec`` changes. Most any manifest can be applied to any namespace, with the namespace specified separately, most likely you will only need to override the namespace. Similarly, pinning a default image for different releases of the controller to different versions of the default job runner container is tricky. If the default image is specified in the Pod spec, then upgrades do not pick up the new default changes are made to the default Pod spec."
+msgstr "カスタムの Pod 仕様を指定している場合でも、デフォルトの ``pod_spec`` が変更されていると、アップグレードが困難な場合があります。マニフェストの多くは任意の名前空間に適用することができますが、名前空間が個別に指定すると、大抵の場合はその名前空間をオーバーライドするだけですみます。同様に、デフォルトのジョブランナーコンテナーの各種バージョンに、コントローラーの各種リリースのデフォルトイメージを固定する場合も注意が必要です。デフォルトイメージが Pod の仕様で定義されている場合は、デフォルトの Pod 仕様に対して行われた新しいデフォルトの変更は、アップグレードには反映されません。"
+
+#: ../../source/external_execution_envs.rst:347
+msgid "Verify container group functions"
+msgstr "コンテナーグループ機能の検証"
+
+#: ../../source/external_execution_envs.rst:348
+msgid "To verify the deployment and termination of your container:"
+msgstr "コンテナーのデプロイと終了を確認するには、以下を実行します。"
+
+#: ../../source/external_execution_envs.rst:350
+msgid "Create a mock inventory and associate the container group to it by populating the name of the container group in the **Instance Group** field. See :ref:`ug_inventories_add` in the |atu| for detail."
+msgstr "模擬インベントリーを作成し、**インスタンスグループ** フィールドにコンテナーグループの名前を入力してコンテナーグループをそのインベントリーに関連付けます。詳細については、『|atu|』の「:ref:`ug_inventories_add`」を参照してください。"
+
+#: ../../source/external_execution_envs.rst:352
+msgid "|Dummy inventory|"
+msgstr "|Dummy inventory|"
+
+#: ../../source/external_execution_envs.rst:354
+msgid "Dummy inventory"
+msgstr "ダミーインベントリー"
+
+#: ../../source/external_execution_envs.rst:356
+msgid "Create \"localhost\" host in inventory with variables:"
+msgstr "以下の変数を使用して、インベントリーに「localhost」ホストを作成します。"
+
+#: ../../source/external_execution_envs.rst:362
+msgid "|Inventory with localhost|"
+msgstr "|Inventory with localhost|"
+
+#: ../../source/external_execution_envs.rst:364
+msgid "Inventory with localhost"
+msgstr "ローカルホストを使用するインベントリー"
+
+#: ../../source/external_execution_envs.rst:366
+msgid "Launch an ad hoc job against the localhost using the *ping* or *setup* module. Even though the **Machine Credential** field is required, it does not matter which one is selected for this simple test."
+msgstr "*ping* または *setup* モジュールを使用して、localhost に対してアドホックジョブを起動します。**マシンの認証情報** フィールドは必須ですが、このシンプルなテストではどちらを選択してもかまいません。"
+
+#: ../../source/external_execution_envs.rst:368
+msgid "|Launch inventory with localhost|"
+msgstr "|Launch inventory with localhost|"
+
+#: ../../source/external_execution_envs.rst:370
+msgid "Launch inventory with localhost"
+msgstr "ローカルホストでインベントリーを起動"
+
+#: ../../source/external_execution_envs.rst:372
+msgid "You can see in the jobs detail view the container was reached successfully using one of ad hoc jobs."
+msgstr "ジョブの詳細ビューに、アドホックジョブの 1 つを使用してコンテナーに正常に到達したことが表示されます。"
+
+#: ../../source/external_execution_envs.rst:374
+msgid "|Inventory with localhost ping success|"
+msgstr "|Inventory with localhost ping success|"
+
+#: ../../source/external_execution_envs.rst:376
+msgid "Inventory with localhost ping success"
+msgstr "ローカルホストの ping が成功したインベントリー"
+
+#: ../../source/external_execution_envs.rst:379
+msgid "If you have an OpenShift or Kubernetes UI, you can see Pods appear and disappear as they deploy and terminate. Alternatively, you can use the CLI to perform a ``get pod`` operation on your namespace to watch these same events occurring in real-time."
+msgstr "OpenShift または Kubernetes UI を使用している場合には、Pod のデプロイ時や終了時に、Pod が表示されたり非表示になったりします。また、CLI を使用して namespace で ``get pod`` の操作を実行すると、これらの同じイベントがリアルタイムで発生するのを確認できます。"
+
+#: ../../source/external_execution_envs.rst:383
+msgid "View container group jobs"
+msgstr "コンテナーグループジョブの表示"
+
+#: ../../source/external_execution_envs.rst:385
+msgid "When you run a job associated with a container group, you can see the details of that job in the **Details** view and its associated Instance Group and the execution node that spun up."
+msgstr "コンテナーグループに関連付けられたジョブを実行すると、そのジョブの詳細を **詳細** ビューと、関連付けられたインスタンスグループ、および起動した実行ノードで確認できます。"
+
+#: ../../source/external_execution_envs.rst:387
+msgid "|IG - instances jobs|"
+msgstr "|IG - instances jobs|"
+
+#: ../../source/external_execution_envs.rst:389
+msgid "IG - instances jobs"
+msgstr "IG - インスタンスジョブ"
+
+#: ../../source/external_execution_envs.rst:393
+msgid "Kubernetes failure conditions"
+msgstr "Kubernetes の障害状態"
+
+#: ../../source/external_execution_envs.rst:399
+msgid "When running a container group and Kubernetes responds that the resource quota has been exceeded, the controller keeps the job in pending state. Other failures result in the traceback of the **Error Details** field showing the failure reason, similar to the example here:"
+msgstr "コンテナーグループを実行しており、Kubernetes からリソースのクォータを超えたという応答があると、コントローラーはジョブを保留状態のままにします。他の障害では、以下の例のように、障害の理由を示す **エラーの詳細** フィールドのトレースバックになります。"
+
+#: ../../source/external_execution_envs.rst:407
+msgid "Container capacity limits"
+msgstr "コンテナーの容量制限"
+
+#: ../../source/external_execution_envs.rst:412
+msgid "Capacity limits and quotas for containers are defined via objects in the Kubernetes API:"
+msgstr "コンテナーの容量制限と割り当ては、Kubernetes API のオブジェクトを介して定義されます。"
+
+#: ../../source/external_execution_envs.rst:414
+msgid "To set limits on all pods within a given namespace, use the ``LimitRange`` object. Refer to the Kubernetes documentation for `Configure Default Memory Requests and Limits for a Namespace <https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/>`_."
+msgstr "特定の名前空間内のすべての Pod に制限を設定するには、``LimitRange`` オブジェクトを使用します。`Configure Default Memory Requests and Limits for a Namespace <https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/>`_ は、Kubernetes のドキュメントを参照してください。"
+
+#: ../../source/external_execution_envs.rst:416
+msgid "To set limits directly on the pod definition launched by the controller, see `Customize the Pod spec`_ and refer to the Kubernetes documentation to set the options to `Assign Memory Resources to Containers and Pods <https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/>`_."
+msgstr "コントローラーによって起動した Pod 定義に直接制限を設定するには、「`Customize the Pod spec`_」を参照し、Kubernetes のドキュメントを参照してオプションを `Assign Memory Resources to Containers and Pods <https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/>`_ に設定します。"
+
+#: ../../source/external_execution_envs.rst:420
+msgid "Container groups do not use the capacity algorithm that normal nodes use. You would need to explicitly set the number of forks at the job template level, for instance. If forks are configured in the controller, that setting will be passed along to the container."
+msgstr "コンテナーグループは、通常のノードが使用する容量アルゴリズムを使用しません。たとえば、フォークの数をジョブテンプレートレベルで明示的に設定する必要があります。コントローラーでフォークが構成されている場合、その設定はコンテナーに渡されます。"
+
+#~ msgid "You may optionally define other groups and group instances in those groups. These groups should be prefixed with ``instance_group_``. Instances are not required to be in the tower group alongside other ``instance_group_`` groups, but one instance **must** be present in the ``tower`` group. Technically, ``tower`` is a group like any other ``instance_group_`` group, but it must always be present, and if a specific group is not associated with a specific resource, then job execution will always fall back to the ``tower`` group. The ``tower`` instance group always exists (it cannot be deleted nor renamed)."
+#~ msgstr "オプションで、これらのグループで他のグループやグループインスタンスを定義することができます。これらのグループには、``instance_group_`` のプレフィックスを指定する必要があります。インスタンスは、``instance_group_`` グループ以外に Tower のグループに所属する必要はありませんが、``tower`` グループには1 つインスタンスが存在している **必要があります**。技術的には、``tower`` は他の ``instance_group_`` グループと同様ですが、常に存在させておく必要があります。特定のグループが特定のリソースに関連付けられていない場合には、ジョブ実行は常に ``tower`` グループにフォールバックします。``tower`` のインスタンスグループは常に存在します (削除したり、名前を変更したりできません)。"
+
+#~ msgid "Similarly, deprovisioning instance groups in Tower does not automatically deprovision or remove instance groups, even though re-provisioning will often cause these to be unused. They may still show up in API endpoints and stats monitoring. These groups can be removed with the following command:"
+#~ msgstr "同様に、再プロビジョニングの際には通常、Tower のインスタンスグループが使用されないにも拘らず、Tower のインスタンスグループのプロビジョニングを解除しても、インスタンスグループが自動的に削除されたり、プロビジョニングが解除されたりしません。そのまま API エンドポイントに表示されたり、統計が監視されたりする可能性があります。これらのグループは、以下のコマンドを使用すると、削除することができます。"
+
+#~ msgid "|at| supports :term:`Container Groups`, which allow you to execute jobs in Tower regardless of whether Tower is installed as a standalone, in  a virtual environment, or in a container. Container groups act as a pool of resources within a virtual environment. You can create instance groups to point to an OpenShift or Kubernetes container, which are job environments that are provisioned on-demand as a Pod that exists only for the duration of the playbook run. This is known as the ephemeral execution model and ensures a clean environment for every job run."
+#~ msgstr "|at| は、:term:`Container Groups` をサポートしています。これにより、Tower がスタンドアロンとしてインストールされているか、仮想環境またはコンテナーにインストールされているかに関係なく、Tower でジョブを実行できます。コンテナーグループは、仮想環境内のリソースのプールとして機能します。OpenShift または Kubernetes コンテナーを指すインスタンスグループを作成できます。OpenShift または Kubernetes コンテナーは、Playbook の実行中のみ存在する Pod としてオンデマンドでプロビジョニングされるジョブ環境です。これは一時的な実行モデルと呼ばれ、すべてのジョブ実行に対してクリーンな環境を確保します。"
+
+#~ msgid "Tower provides a simple default Pod specification, however, you can provide a custom YAML (or JSON) document that overrides the default Pod spec. This field uses any custom fields (i.e., ``image`` or ``namespace``) that can be \"serialized\" as valid Pod JSON or YAML. A full list of options can be found in the `Kubernetes documentation <https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/>`_."
+#~ msgstr "Tower にはデフォルトのシンプルな Pod の仕様が用意されていますが、カスタムの YAML (または JSON) ドキュメントを指定して、デフォルトの Pod の仕様をオーバーライドすることができます。このフィールドでは、有効な Pod JSON または YAML として「シリアル化」できる任意のカスタムフィールド (``image`` または ``namespace`` など) が使用可能です。オプションの完全な一覧は `Kubernetes documentation <https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/>`_ にあります。"
+
+#~ msgid "Despite the fact that customers have custom Pod specs, upgrades may be difficult if the default ``pod_spec`` changes. Most any manifest can be applied to any namespace, with the namespace specified separately, most likely you will only need to override the namespace. Similarly, pinning a default image for different releases of Tower to different versions of the default job runner container is tricky. If the default image is specified in the Pod spec, then upgrades do not pick up the new default changes are made to the default Pod spec."
+#~ msgstr "カスタムの Pod 仕様を指定している場合でも、デフォルトの ``pod_spec`` が変更されていると、アップグレードが困難な場合があります。マニフェストの多くは、namespace が個別に指定された任意の namespace に適用することができ、大抵の場合はその namespace をオーバーライドするだけですみます。同様に、Tower の各種リリースのデフォルトイメージをデフォルトのジョブランナーコンテナーの各種バージョンに固定する場合も注意が必要です。デフォルトイメージが Pod の仕様で定義されている場合、デフォルトの Pod 仕様に対して行われた新しいデフォルトの変更は、アップグレードには反映されません。"
+
+#~ msgid "When running a container group and Kubernetes responds that the resource quota has been exceeded, Tower keeps the job in pending state. Other failures result in the traceback of the **Error Details** field showing the failure reason, similar to the example here:"
+#~ msgstr "コンテナーグループを実行しており、Kubernetes からリソースのクォータを超えたという応答があると、Tower はジョブを保留状態のままにします。他の障害では、以下の例のように、障害の理由を示す **エラーの詳細** フィールドのトレースバックになります。"
+

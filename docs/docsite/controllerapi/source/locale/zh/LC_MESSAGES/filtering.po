@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/filtering.rst:3
+msgid "Filtering"
+msgstr "过滤"
+
+#: ../../source/filtering.rst:9
+msgid "Any collection is what the system calls a \"queryset\" and can be filtered via various operators."
+msgstr "一个集合就是一个系统所称的 \"queryset\"，它可以通过不同的操作符进行过滤。"
+
+#: ../../source/filtering.rst:11
+msgid "For example, to find the groups that contain the name \"foo\":"
+msgstr "例如，查找包含名称 “foo” 的组："
+
+#: ../../source/filtering.rst:17
+msgid "To find an exact match:"
+msgstr "要找到准确的匹配项："
+
+#: ../../source/filtering.rst:23
+msgid "If a resource is of an integer type, you must add ``\\_\\_int`` to the end to cast your string input value to an integer, like so:"
+msgstr "如果资源是整数类型，则必须添加 ``\\_\\_int`` 到结尾，以将字符串输入值设置为整数，如："
+
+#: ../../source/filtering.rst:29
+msgid "Related resources can also be queried, like so:"
+msgstr "相关资源也可以查询，如："
+
+#: ../../source/filtering.rst:35
+msgid "This will return all users with names that include the string \"Kim\" in them."
+msgstr "这会返回包含字符串“Kim”的名称的所有用户。"
+
+#: ../../source/filtering.rst:37
+msgid "You can also filter against multiple fields at once:"
+msgstr "您还可以一次对多个字段进行过滤："
+
+#: ../../source/filtering.rst:43
+msgid "This finds all groups containing the name \"test\" that has no active failures."
+msgstr "它会找到所有包含名称为 “test” 的、没有活跃故障的组。"
+
+#: ../../source/filtering.rst:45
+msgid "For more about what types of operators are available, refer to: https://docs.djangoproject.com/en/dev/ref/models/querysets/"
+msgstr "如需了解更多可用的 Operator 类型，请参阅： https://docs.djangoproject.com/en/dev/ref/models/querysets/"
+
+#: ../../source/filtering.rst:50
+msgid "You can also watch the API as the UI is being used to see how it is filtering on various criteria."
+msgstr "您还可以监视 API，因为 UI 被用来查看如何过滤各种条件。"
+
+#: ../../source/filtering.rst:55
+msgid "Any additional query string parameters may be used to filter the list of results returned to those matching a given value. Only fields and relations that exist in the database may be used for filtering. Any special characters in the specified value should be url-encoded. For example:"
+msgstr "任何额外的查询字符串参数都可用来过返回到与给定值匹配的结果列表。只有数据库中存在的字段和关系时才可以用于过滤。指定的值中的任何特殊字符都应该是 url-encoded。例如："
+
+#: ../../source/filtering.rst:61
+msgid "Fields may also span relations, only for fields and relationships defined in the database:"
+msgstr "字段也可以跨越关系，仅适用于数据库中定义的字段和关系："
+
+#: ../../source/filtering.rst:67
+msgid "To exclude results matching certain criteria, prefix the field parameter with ``not__``:"
+msgstr "要排除与特定条件匹配的结果，请为字段参数添加前缀 ``not__``："
+
+#: ../../source/filtering.rst:73
+msgid "By default, all query string filters are AND'ed together, so only the results matching all filters will be returned. To combine results matching any one of multiple criteria, prefix each query string parameter with ``or__``:"
+msgstr "默认情况下，所有查询字符串过滤器都是 AND，因此只有与所有过滤器匹配的结果才会返回。要组合与多个条件之一匹配的结果，请为每个查询字符串参数添加前缀 ``or__``："
+
+#: ../../source/filtering.rst:80
+msgid "The default AND filtering applies all filters simultaneously to each related object being filtered across database relationships. The chain filter instead applies filters separately for each related object. To use, prefix the query string parameter with ``chain__``:"
+msgstr "默认的 AND 过滤同时适用于跨数据库关系过滤的每个相关对象。chain 过滤器会单独为每个相关对象应用过滤器。要使用它，请为查询字符串参数添加前缀 ``chain__``："
+
+#: ../../source/filtering.rst:87
+msgid "If the first query above were written as ``?related__field=value&related__field2=othervalue``, it would return only the primary objects where the same related object satisfied both conditions. As written using the chain filter, it would return the intersection of primary objects matching each condition."
+msgstr "如果上面的第一个查询被写为 ``?related__field=value&related__field2=othervalue``，它将只返回相关对象满足这两个条件的主对象。如使用 chain 过滤器写入，它将返回与每个条件匹配的主对象交集。"
+
+#: ../../source/filtering.rst:89
+msgid "Field lookups may also be used for more advanced queries, by appending the lookup to the field name:"
+msgstr "通过将查询附加到字段名，也可以将字段查询用于更高级的查询："
+
+#: ../../source/filtering.rst:95
+msgid "The following field lookups are supported:"
+msgstr "支持以下字段查找："
+
+#: ../../source/filtering.rst:97
+msgid "``exact``: Exact match (default lookup if not specified)."
+msgstr "``exact``：完全匹配（如果没有指定，则默认查找）。"
+
+#: ../../source/filtering.rst:98
+msgid "``iexact``: Case-insensitive version of exact."
+msgstr "``iexact``：完全不区分大小写的版本。"
+
+#: ../../source/filtering.rst:99
+msgid "``contains``: Field contains value."
+msgstr "``contains``：字段包含值。"
+
+#: ../../source/filtering.rst:100
+msgid "``icontains``: Case-insensitive version of contains."
+msgstr "``icontains``：包含不区分大小写的版本。"
+
+#: ../../source/filtering.rst:101
+msgid "``startswith``: Field starts with value."
+msgstr "``startswith``：字段以值开头。"
+
+#: ../../source/filtering.rst:102
+msgid "``istartswith``: Case-insensitive version of startswith."
+msgstr "``istartswith``：开头不区分大小写的版本。"
+
+#: ../../source/filtering.rst:103
+msgid "``endswith``: Field ends with value."
+msgstr "``endswith``：字段以值结尾。"
+
+#: ../../source/filtering.rst:104
+msgid "``iendswith``: Case-insensitive version of endswith."
+msgstr "``iendswith``：结尾不区分大小写的版本。"
+
+#: ../../source/filtering.rst:105
+msgid "``regex``: Field matches the given regular expression."
+msgstr "``regex``：字段与给出的正则表达式匹配。"
+
+#: ../../source/filtering.rst:106
+msgid "``iregex``: Case-insensitive version of regex."
+msgstr "``iregex``：regex 不区分大小写的版本。"
+
+#: ../../source/filtering.rst:107
+msgid "``gt``: Greater than comparison."
+msgstr "``gt``：大于比较。"
+
+#: ../../source/filtering.rst:108
+msgid "``gte``: Greater than or equal to comparison."
+msgstr "``gte``：大于或等于比较。"
+
+#: ../../source/filtering.rst:109
+msgid "``lt``: Less than comparison."
+msgstr "``lt``：小于比较。"
+
+#: ../../source/filtering.rst:110
+msgid "``lte``: Less than or equal to comparison."
+msgstr "``lte``：小于或等于比较。"
+
+#: ../../source/filtering.rst:111
+msgid "``isnull``: Check whether the given field or related object is null; expects a boolean value."
+msgstr "``isnull``：检查给定字段或相关对象是否为 null；需要布尔值。"
+
+#: ../../source/filtering.rst:112
+msgid "``in``: Check whether the given field's value is present in the list provided; expects a list of items."
+msgstr "``in``：检查给定字段的值是否出现在提供的列表中；需要项目列表。"
+
+#: ../../source/filtering.rst:113
+msgid "Boolean values may be specified as ``True`` or ``1`` for true, ``False`` or ``0`` for false (both case-insensitive)."
+msgstr "对于 true 布尔值可指定为 ``True`` 或 ``1``，对于 false 可指定为 ``False`` 或 ``0``（均不区分大小写）。"
+
+#: ../../source/filtering.rst:115
+msgid "For example, ``?created__gte=2020-01-01`` will provide a list of items created after 1/1/2020."
+msgstr "例如，``?created__gte=2020-01-01`` 将提供一个在 2020 年 1 月 1 日后创建的项目列表。"
+
+#: ../../source/filtering.rst:117
+msgid "Null values may be specified as ``None`` or ``Null`` (both case-insensitive), though it is preferred to use the ``isnull`` lookup to explicitly check for null values."
+msgstr "Null 值可指定为 ``None`` 或 ``Null``（不区分大小写），但是它首选使用 ``isnull`` 查询来显式检查 null 值。"
+
+#: ../../source/filtering.rst:119
+msgid "Lists (for the ``in`` lookup) may be specified as a comma-separated list of values."
+msgstr "列表（用于 ``in`` 查询）可指定为用逗号分隔的值列表。"
+
+#: ../../source/filtering.rst:121
+msgid "Filtering based on the requesting user's level of access by query string parameter (added in |at| 3.1):"
+msgstr "根据请求的用户的访问权限级别通过查询字符串参数进行过滤（在 |at| 3.1 中添加）："
+
+#: ../../source/filtering.rst:123
+msgid "``role_level``: Level of role to filter on, such as ``admin_role``"
+msgstr "``role_level``：要过滤的角色级别，如 ``admin_role``"
+

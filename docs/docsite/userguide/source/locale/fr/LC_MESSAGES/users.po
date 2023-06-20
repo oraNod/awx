@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/users.rst:4
+msgid "Users"
+msgstr ""
+
+#: ../../source/users.rst:10
+msgid ""
+"A :term:`User` is someone who has access to Tower with associated "
+"permissions and credentials. The Users link (found by clicking on the "
+"Settings (|settings|) menu and selecting **Users**) allows you to manage "
+"all Tower users. The User list may be sorted and searched by "
+"**Username**, **First Name**, or **Last Name** headers to toggle your "
+"sorting preference)."
+msgstr ""
+
+#: ../../source/users.rst:17
+msgid ""
+"There are three types of Tower Users that can assigned from the Create "
+"User screen:"
+msgstr ""
+
+#: ../../source/users.rst:19
+msgid ""
+"**Normal User**: Normal Users have read and write access limited to the "
+"resources (such as inventory, projects, and job templates) for which that"
+" user has been granted the appropriate roles and privileges."
+msgstr ""
+
+#: ../../source/users.rst:21
+msgid ""
+"**System Auditor**: Auditors implicitly inherit the read-only capability "
+"for all objects within the Tower environment."
+msgstr ""
+
+#: ../../source/users.rst:24
+msgid ""
+"**System Administrator**: A Tower System Administrator (also known as "
+"Superuser) has admin, read, and write"
+msgstr ""
+
+#: ../../source/users.rst:24
+msgid ""
+"privileges over the entire Tower installation. A System Administrator is "
+"typically responsible for managing all aspects of Tower and delegating "
+"responsibilities for day-to-day work to various Users."
+msgstr ""
+
+#: ../../source/users.rst:31
+msgid ""
+"The initial user (usually \"admin\") created by the Tower installation "
+"process is a Superuser. One Superuser must always exist. To delete the "
+"\"admin\" user account, you must first create another Superuser account."
+msgstr ""
+
+#: ../../source/users.rst:36
+msgid "Create a User"
+msgstr ""
+
+#: ../../source/users.rst:38
+msgid "To create a new user:"
+msgstr ""
+
+#: ../../source/users.rst:40
+msgid "Click the |add| button, which opens the Create User dialog."
+msgstr ""
+
+#: ../../source/users.rst:47
+msgid "Enter the appropriate details into the following fields:"
+msgstr ""
+
+#: ../../source/users.rst:49
+msgid "First Name"
+msgstr ""
+
+#: ../../source/users.rst:50
+msgid "Last Name"
+msgstr ""
+
+#: ../../source/users.rst:51
+msgid "Email"
+msgstr ""
+
+#: ../../source/users.rst:52
+msgid "Username"
+msgstr ""
+
+#: ../../source/users.rst:53
+msgid ""
+"Organization (Choose from an existing organization--this is the default "
+"organization if you are using a Self-Supported level license.)"
+msgstr ""
+
+#: ../../source/users.rst:54
+msgid "Password"
+msgstr ""
+
+#: ../../source/users.rst:55
+msgid "Confirmation Password"
+msgstr ""
+
+#: ../../source/users.rst:56
+msgid ""
+"User Type (The System Administrator, superuser, has full system "
+"administration privileges for Tower. Assign with caution!)"
+msgstr ""
+
+#: ../../source/users.rst:58
+msgid "Select **Save** when finished."
+msgstr ""
+
+#: ../../source/users.rst:60
+msgid ""
+"Once the user is successfully created, the **User** dialog opens for that"
+" newly created User. Note the count for the number of users has also been"
+" updated, and a new entry for the new user is added to the list of users "
+"below the edit form. This is the same dialog that is opened if the Edit "
+"(|edit-button|) button beside a User is clicked from the **Users** link "
+"within Tower's Settings (|settings|). Here, the User's **Organizations**,"
+" **Teams** and **Permissions**, as well as other user membership details,"
+" may be reviewed and modified."
+msgstr ""
+
+#: ../../source/users.rst:68
+msgid "User Types - Quick View"
+msgstr ""
+
+#: ../../source/users.rst:70
+msgid ""
+"Once a user has been created, you can easily view permissions and user "
+"type information by looking beside their user name in the User overview "
+"screen."
+msgstr ""
+
+#: ../../source/users.rst:75
+msgid ""
+"If the user account is associated with an enterprise-level authentication"
+" method (such as SAML, RADIUS, or LDAP), the user type may look like:"
+msgstr ""
+
+#: ../../source/users.rst:80
+msgid ""
+"If the user account is associated with a social authentication method, "
+"the user type will look like:"
+msgstr ""
+
+#: ../../source/users.rst:87
+msgid "Users - Organizations"
+msgstr ""
+
+#: ../../source/users.rst:92
+msgid ""
+"This displays the list of organizations of which that user is a member. "
+"This list may be searched by Organization Name or Description. "
+"Organization membership cannot be modified from this display panel."
+msgstr ""
+
+#: ../../source/users.rst:95
+msgid "|Users - Organizations list for example user|"
+msgstr ""
+
+#: ../../source/users.rst:100
+msgid "Users - Teams"
+msgstr ""
+
+#: ../../source/users.rst:105
+msgid ""
+"This displays the list of teams of which that user is a member. This list"
+" may be searched by **Team Name** or **Description**. Team membership "
+"cannot be modified from this display panel. For more information, refer "
+"to :ref:`ug_teams`."
+msgstr ""
+
+#: ../../source/users.rst:107
+msgid ""
+"Until a Team has been created and the user has been assigned to that "
+"team, the assigned Teams Details for the User appears blank."
+msgstr ""
+
+#: ../../source/users.rst:109
+msgid "|Users - teams list for example user|"
+msgstr ""
+
+#: ../../source/users.rst:118
+msgid "Users - Permissions"
+msgstr ""
+
+#: ../../source/users.rst:123
+msgid ""
+"The set of Permissions assigned to this user (role-based access controls)"
+" that provide the ability to read, modify, and administer projects, "
+"inventories, job templates, and other Tower elements are Privileges."
+msgstr ""
+
+#: ../../source/users.rst:125
+msgid ""
+"This screen displays a list of the privileges that are currently "
+"available for a selected User. The privileges list may be sorted and "
+"searched by **Name**, **Type**, or **Role**."
+msgstr ""
+
+#: ../../source/users.rst:127
+msgid "|Users - permissions list for example user|"
+msgstr ""
+
+#: ../../source/users.rst:133
+msgid "Add Permissions"
+msgstr ""
+
+#: ../../source/users.rst:135
+msgid "To add permissions to a particular user:"
+msgstr ""
+
+#: ../../source/users.rst:137
+msgid ""
+"Click the |add permissions| button, which opens the Add Permissions "
+"Wizard."
+msgstr ""
+
+#: ../../source/users.rst:144
+msgid "Click to select the Tower object for which the user will have access:"
+msgstr ""
+
+#: ../../source/users.rst:146
+msgid ""
+"**Job Templates**. This is the default tab displayed in the Add "
+"Permissions Wizard."
+msgstr ""
+
+#: ../../source/users.rst:147
+msgid "**Workflow Templates**"
+msgstr ""
+
+#: ../../source/users.rst:148
+msgid "**Projects**"
+msgstr ""
+
+#: ../../source/users.rst:149
+msgid "**Inventories**"
+msgstr ""
+
+#: ../../source/users.rst:150
+msgid "**Credentials**"
+msgstr ""
+
+#: ../../source/users.rst:154
+msgid ""
+"You can assign different roles to different resources all at once to "
+"avoid having to click the |add permissions| button. To do so, simply go "
+"from one tab to another after making your selections without saving."
+msgstr ""
+
+#: ../../source/users.rst:156
+msgid ""
+"Perform the following steps to assign the user specific roles for each "
+"type of resource:"
+msgstr ""
+
+#: ../../source/users.rst:158
+msgid ""
+"In the desired tab, click the checkbox beside the name of the resource to"
+" select it."
+msgstr ""
+
+#: ../../source/users.rst:160
+msgid ""
+"The dialog expands to allow you to select the role for the resource you "
+"chose."
+msgstr ""
+
+#: ../../source/users.rst:162
+msgid "Select the role from the drop-down menu list provided:"
+msgstr ""
+
+#: ../../source/users.rst:164
+msgid ""
+"**Admin** allows read, run, and edit privileges (applicable to all Tower "
+"objects)"
+msgstr ""
+
+#: ../../source/users.rst:165
+msgid ""
+"**Execute** allows read and run privileges (applicable to job templates "
+"and workflow templates)"
+msgstr ""
+
+#: ../../source/users.rst:166
+msgid ""
+"**Use** allows use of the project in a job template (applicable to "
+"projects, inventories, and credentials)"
+msgstr ""
+
+#: ../../source/users.rst:167
+msgid ""
+"**Update** allows updating of project, inventory, or group via the SCM "
+"Update (applicable to projects and inventories)"
+msgstr ""
+
+#: ../../source/users.rst:168
+msgid "**Ad Hoc** allows running of ad hoc commands (applicable to inventories)"
+msgstr ""
+
+#: ../../source/users.rst:174
+msgid ""
+"Use the **Key** button to display the help text for each of the roles "
+"applicable to the resource selected."
+msgstr ""
+
+#: ../../source/users.rst:177
+msgid ""
+"Review your role assignments for each of the Tower objects by clicking on"
+" their respective buttons in the expanded section 2 of the Add "
+"Permissions Wizard."
+msgstr ""
+
+#: ../../source/users.rst:182
+msgid ""
+"Click **Save** when done, and the Add Permissions Wizard closes to "
+"display the updated profile for the user with the roles assigned for each"
+" selected resource."
+msgstr ""
+
+#: ../../source/users.rst:187
+msgid ""
+"To remove Permissions for a particular User, click the Disassociate "
+"(|x-button|) button under **Actions**. This launches a **Remove Role** "
+"dialog, asking you to confirm the disassociation."
+msgstr ""
+
+#: ../../source/users.rst:193
+msgid ""
+"You can also add teams or individual users and assign them permissions at"
+" the object level (projects, inventories, job templates, and workflow "
+"templates) as well. |at| release 3.1 introduces the ability to batch "
+"assign permissions. This feature reduces the time for an organization to "
+"onboard many users at one time. For more details, refer to their "
+"respective chapters in the :ref:`ug_start`."
+msgstr ""
+

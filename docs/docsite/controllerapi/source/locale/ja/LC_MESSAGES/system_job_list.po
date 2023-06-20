@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/system_job_list.rst:3
+msgid "System Job List API Endpoint"
+msgstr "システムジョブリストの API エンドポイント"
+
+#: ../../source/system_job_list.rst:8
+msgid "Make a GET request to this resource to retrieve the list of system jobs."
+msgstr "このリソースに GET 要求を実行して、システムジョブリストを取得します。"
+
+#: ../../source/system_job_list.rst:20
+msgid "The resulting data structure contains:"
+msgstr "返されるデータ構造には以下が含まれます。"
+
+#: ../../source/system_job_list.rst:33
+msgid "The ``count`` field indicates the total number of system jobs found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more system job records."
+msgstr "``count`` フィールドは指定のクエリーで見つかったシステムジョブの合計数を示します。``next`` および ``previous`` フィールドは、結果が単一ページに収まらない場合に、それらの結果へのリンクを提供します。``results`` にはシステムジョブレコードが一覧表示されますが、ゼロの場合もあります。"
+
+#: ../../source/system_job_list.rst:37
+msgid "Results"
+msgstr "結果"
+
+#: ../../source/system_job_list.rst:42
+msgid "Each system job data structure includes the following fields:"
+msgstr "各システムジョブデータ構造には以下のフィールドが含まれます。"
+
+#: ../../source/system_job_list.rst:44
+msgid "``id``: Database ID for this system job. (integer)"
+msgstr "``id``: システムジョブのデータベース ID (整数)"
+
+#: ../../source/system_job_list.rst:45
+msgid "``type``: Data type for this system job. (multiple choice)"
+msgstr "``type``: システムジョブのデータタイプ (複数選択)"
+
+#: ../../source/system_job_list.rst:46
+msgid "``system_job``: Management Job"
+msgstr "``system_job``: 管理ジョブ"
+
+#: ../../source/system_job_list.rst:47
+msgid "``url``: URL for this system job. (string)"
+msgstr "``url``: システムジョブの URL (文字列)"
+
+#: ../../source/system_job_list.rst:48
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``: 関連リソースの URL のあるデータ構造 (オブジェクト)"
+
+#: ../../source/system_job_list.rst:49
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``: 関連リソースの名前/説明のあるデータ構造 (オブジェクト)"
+
+#: ../../source/system_job_list.rst:50
+msgid "``created``: Timestamp when this system job was created. (datetime)"
+msgstr "``created``: システムジョブ作成時のタイムスタンプ (日時)"
+
+#: ../../source/system_job_list.rst:51
+msgid "``modified``: Timestamp when this system job was last modified. (datetime)"
+msgstr "``modified``: システムジョブの最終更新時のタイムスタンプ (日時)"
+
+#: ../../source/system_job_list.rst:52
+msgid "``name``: (string)"
+msgstr "``name``: (文字列)"
+
+#: ../../source/system_job_list.rst:53
+msgid "``description``: (string)"
+msgstr "``description``: (文字列)"
+
+#: ../../source/system_job_list.rst:54
+msgid "``unified_job_template``: (field)"
+msgstr "``unified_job_template``: (フィールド)"
+
+#: ../../source/system_job_list.rst:58
+msgid "``launch_type``: (multiple choice)"
+msgstr "``launch_type``: (複数選択)"
+
+#: ../../source/system_job_list.rst:56
+msgid "``manual``: Manual"
+msgstr "``manual``: 手動"
+
+#: ../../source/system_job_list.rst:57
+msgid "``callback``: Callback"
+msgstr "``callback``: コールバック"
+
+#: ../../source/system_job_list.rst:58
+msgid "``scheduled``: Scheduled"
+msgstr "``scheduled``: スケジュール済み"
+
+#: ../../source/system_job_list.rst:59
+msgid "``dependency``: Dependency"
+msgstr "``dependency``: 依存関係"
+
+#: ../../source/system_job_list.rst:67
+msgid "``status``: (multiple choice)"
+msgstr "``status``: (複数選択)"
+
+#: ../../source/system_job_list.rst:61
+msgid "``new``: New"
+msgstr "``new``: 新規"
+
+#: ../../source/system_job_list.rst:62
+msgid "``pending``: Pending"
+msgstr "``pending``: 保留中"
+
+#: ../../source/system_job_list.rst:63
+msgid "``waiting``: Waiting"
+msgstr "``waiting``: 待機中"
+
+#: ../../source/system_job_list.rst:64
+msgid "``running``: Running"
+msgstr "``running``: 実行中"
+
+#: ../../source/system_job_list.rst:65
+msgid "``successful``: Successful"
+msgstr "``successful``: 成功"
+
+#: ../../source/system_job_list.rst:66
+msgid "``failed``: Failed"
+msgstr "``failed``: 失敗"
+
+#: ../../source/system_job_list.rst:67
+msgid "``error``: Error"
+msgstr "``error``: エラー"
+
+#: ../../source/system_job_list.rst:68
+msgid "``canceled``: Canceled"
+msgstr "``canceled``: 取り消し"
+
+#: ../../source/system_job_list.rst:69
+msgid "``failed``: (boolean)"
+msgstr "``failed``: (ブール値)"
+
+#: ../../source/system_job_list.rst:70
+msgid "``started``: (datetime)"
+msgstr "``started``: (日時)"
+
+#: ../../source/system_job_list.rst:71
+msgid "``finished``: (datetime)"
+msgstr "``finished``: (日時)"
+
+#: ../../source/system_job_list.rst:72
+msgid "``elapsed``: (decimal)"
+msgstr "``elapsed``: (小数点)"
+
+#: ../../source/system_job_list.rst:73
+msgid "``job_explanation``: (string)"
+msgstr "``job_explanation``: (文字列)"
+
+#: ../../source/system_job_list.rst:74
+msgid "``system_job_template``: (field)"
+msgstr "``system_job_template``: (フィールド)"
+
+#: ../../source/system_job_list.rst:79 ../../source/system_job_list.rst:100
+msgid "``job_type``: (multiple choice)"
+msgstr "``job_type``: (複数選択)"
+
+#: ../../source/system_job_list.rst:76
+msgid "``\"\"``: ---------"
+msgstr "``\"\"``: ---------"
+
+#: ../../source/system_job_list.rst:77 ../../source/system_job_list.rst:98
+msgid "``cleanup_jobs``: Remove jobs older than a certain number of days"
+msgstr "``cleanup_jobs``: 特定の日数より前のジョブを削除"
+
+#: ../../source/system_job_list.rst:78 ../../source/system_job_list.rst:99
+msgid "``cleanup_activitystream``: Remove activity stream entries older than a certain number of days"
+msgstr "``cleanup_activitystream``: 特定の日数より前のアクティビティーストリームのエントリーを削除"
+
+#: ../../source/system_job_list.rst:79 ../../source/system_job_list.rst:100
+msgid "``cleanup_deleted``: Purge previously deleted items from the database"
+msgstr "``cleanup_deleted``: 削除済みのアイテムをデータベースから完全削除"
+
+#: ../../source/system_job_list.rst:80 ../../source/system_job_list.rst:101
+msgid "``cleanup_facts``: Purge and/or reduce the granularity of system tracking data"
+msgstr "``cleanup_facts``: システムトラッキングデータの詳細度の削除/削減"
+
+#: ../../source/system_job_list.rst:81
+msgid "``extra_vars``: (string)"
+msgstr "``extra_vars``: (文字列)"
+
+#: ../../source/system_job_list.rst:85
+msgid "Create System Jobs"
+msgstr "システムジョブの作成"
+
+#: ../../source/system_job_list.rst:91
+msgid "Make a POST request to this resource with the following system job fields to create a new system job:"
+msgstr "新規システムジョブを作成するには、以下のシステムジョブフィールドを使ってリソースに POST 要求を実行します。"
+
+#: ../../source/system_job_list.rst:93
+msgid "``name``: (string, required)"
+msgstr "``name``: (文字列。必須)"
+
+#: ../../source/system_job_list.rst:94
+msgid "``description``: (string, default=\"\")"
+msgstr "``description``: (文字列。デフォルトは \"\")"
+
+#: ../../source/system_job_list.rst:95
+msgid "``system_job_template``: (field, default=None)"
+msgstr "``system_job_template``: (フィールド。デフォルトは None)"
+
+#: ../../source/system_job_list.rst:97
+msgid "``\"\"``: --------- (default)"
+msgstr "``\"\"``: --------- (デフォルト)"
+
+#: ../../source/system_job_list.rst:102
+msgid "``extra_vars``: (string, default=\"\")"
+msgstr "``extra_vars``: (文字列。デフォルトは \"\")"
+
+#: ../../source/system_job_list.rst:106
+msgid "Reviewing the Options Endpoint"
+msgstr "オプションエンドポイントの確認"
+
+#: ../../source/system_job_list.rst:111
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*オプションエンドポイント* テーブルでは、このエンドポイントのオプションを確認できます。ブラウザー表示が可能な API でエンドポイントを表示している場合は、「オプション」ボタンをクリックすると以下の raw JSON が表示されます。"
+

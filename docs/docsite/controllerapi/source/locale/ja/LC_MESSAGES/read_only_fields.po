@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/read_only_fields.rst:3
+msgid "Read-only Fields"
+msgstr "読み取り専用フィールド"
+
+#: ../../source/read_only_fields.rst:9
+msgid "Certain fields in the REST API are marked read-only. These usually include the URL of a resource, the ID, and occasionally some internal fields. For instance, the ``'created\\_by'`` attribute of each object indicates which user created the resource, and cannot be edited."
+msgstr "REST API の特定のフィールドは読み取り専用とマークされています。通常、これはリソースの URL や ID、また内部フィールドなどです。たとえば、各オブジェクトの ``'created\\_by'`` 属性はどのユーザーがリソースを作成したかを示し、これは編集できません。"
+
+#: ../../source/read_only_fields.rst:14
+msgid "If you post some values and notice that they are not changing, these fields may be read-only."
+msgstr "値を記載してもこれが変更されない場合は、フィールドが読み取り専用である可能性があります。"
+

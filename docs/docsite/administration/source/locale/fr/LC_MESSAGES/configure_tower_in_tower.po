@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/configure_tower_in_tower.rst:4
+msgid "Configure Tower in Tower"
+msgstr ""
+
+#: ../../../common/source/configure_tower_overview.rst:3
+msgid ""
+"In |at| version 3.1.0, you can configure various Tower settings within "
+"the Tower user interface, in the following tabs:"
+msgstr ""
+
+#: ../../../common/source/configure_tower_overview.rst:5
+msgid "**Authentication**: Enable simplified login for your Tower applications."
+msgstr ""
+
+#: ../../../common/source/configure_tower_overview.rst:7
+msgid "**Jobs**: Update settings pertaining to Jobs within Tower."
+msgstr ""
+
+#: ../../../common/source/configure_tower_overview.rst:9
+msgid "**System**: Define system-level features and functions."
+msgstr ""
+
+#: ../../../common/source/configure_tower_overview.rst:11
+msgid ""
+"**User Interface**: Set the level of data collection for use in usability"
+" analytics."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:3
+msgid ""
+"Each tab contains fields with a **Reset** button, allowing you to revert "
+"any value entered back to the default value. **Reset All** allows you to "
+"revert all the values in the Edit Tower Configuration to their factory "
+"default values."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:5
+msgid ""
+"**Save** applies changes you make, but it does not exit the edit dialog. "
+"Click (|settings|) to return to the Settings Menu screen."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:11
+msgid "Authentication"
+msgstr ""
+
+#: ../../../common/source/configure_tower_authentication.rst:1
+msgid ""
+"Through the Tower user interface, you can set up a simplified login "
+"through various authentication types: GitHub, Google, LDAP, RADIUS, and "
+"SAML. After you create and register your developer application with the "
+"appropriate service, you can set up authorizations for them. Since "
+"configuration files are now saved to the postgres DB now in |at| 3.1 "
+"instead of flat files, setting up authorizations in the |at| User "
+"Interface is the recommended method. For more detail about each "
+"authentication type, refer to the :ref:`Setting Up Authentication "
+"<administration:ag_authentication>` of the Administration Guide."
+msgstr ""
+
+#: ../../../common/source/configure_tower_authentication.rst:3
+#: ../../../common/source/configure_tower.rst:29
+#: ../../../common/source/configure_tower.rst:48
+#: ../../../common/source/configure_tower.rst:77
+msgid "From the Settings (|settings|) Menu screen, click on **Configure Tower**."
+msgstr ""
+
+#: ../../../common/source/configure_tower_authentication.rst:6
+msgid ""
+"The Authentication tab displays initially by default. Select the "
+"appropriate authentication type from the drop-down list."
+msgstr ""
+
+#: ../../../common/source/configure_tower_authentication.rst:10
+msgid ""
+"Different authentication types require you to enter different "
+"information. Be sure to include all the information as required."
+msgstr ""
+
+#: ../../../common/source/configure_tower_authentication.rst:12
+#: ../../../common/source/configure_tower.rst:37
+#: ../../../common/source/configure_tower.rst:56
+#: ../../../common/source/configure_tower.rst:89
+msgid "Click **Save** to apply the settings or **Cancel** to abandon the changes."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:22
+msgid "Jobs"
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:27
+msgid ""
+"The Jobs tab allows you to configure the types of modules that are "
+"allowed to be used by Tower's Ad Hoc Commands feature, set limits on the "
+"number of jobs that can be scheduled, define their output size, and other"
+" details pertaining to working with Jobs in Tower."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:31
+msgid "Select the **Jobs** tab."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:33
+#: ../../../common/source/configure_tower.rst:52
+msgid "Set the configurable options from the fields provided."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:42
+msgid "System"
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:46
+msgid ""
+"The System tab allows you to define the base URL for the Tower host, "
+"configure alerts, enable activity capturing, control visibility of users,"
+" and enable certain Tower features and functionality through a license "
+"file."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:50
+msgid "Select the **System** tab."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:60
+msgid "User Interface"
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:69
+msgid ""
+"The User Interface tab allows you to set Tower analytics settings, as "
+"well as configure custom logos and login messages."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:75
+msgid ""
+"Ansible Tower collects user data automatically to help improve the Tower "
+"product. You can control the way Tower collects data by setting your "
+"participation level in the User Interface tab."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:79
+msgid "Select the **User Interface** tab."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:81
+msgid ""
+"Select the desired level of data collection from the Analystics Tracking "
+"State drop-down list:"
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:83
+msgid "**Off**: Prevents any data collection."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:85
+msgid "**Anonymous**: Enables data collection without your specific user data."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:87
+msgid "**Detailed**: Enables data collection including your specific user data."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:92
+msgid ""
+"You can also add a custom logo by uploading an image and supply a custom "
+"login message from this screen."
+msgstr ""
+
+#: ../../../common/source/configure_tower.rst:94
+msgid "Refer to the tooltips (|viewdocs|) for acceptable formats."
+msgstr ""
+

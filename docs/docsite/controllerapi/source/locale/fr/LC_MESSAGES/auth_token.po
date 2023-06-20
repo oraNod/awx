@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/auth_token.rst:3
+msgid "Auth Token API Endpoint"
+msgstr ""
+
+#: ../../source/auth_token.rst:8
+msgid ""
+"Make a POST request to this resource with ``username`` and ``password`` "
+"fields to obtain an authentication token to use for subsequent request."
+msgstr ""
+
+#: ../../source/auth_token.rst:25
+msgid "Example JSON to POST (content type is ``application/json``):"
+msgstr ""
+
+#: ../../source/auth_token.rst:31
+msgid ""
+"Example form data to post (content type is ``application/x-www-form-"
+"urlencoded``):"
+msgstr ""
+
+#: ../../source/auth_token.rst:37
+msgid ""
+"If the username and password provided are valid, the response will "
+"contain a ``token`` field with the authentication token to use and an "
+"``expires`` field with the timestamp when the token will expire:"
+msgstr ""
+
+#: ../../source/auth_token.rst:46
+msgid ""
+"Otherwise, the response will indicate the error that occurred and return "
+"a 4xx status code."
+msgstr ""
+
+#: ../../source/auth_token.rst:48
+msgid ""
+"For subsequent requests, pass the token via the HTTP ``Authorization`` "
+"request header:"
+msgstr ""
+
+#: ../../source/auth_token.rst:54
+msgid ""
+"The auth token is only valid when used from the same remote address and "
+"user agent that originally obtained it."
+msgstr ""
+
+#: ../../source/auth_token.rst:56
+msgid ""
+"Each request that uses the token for authentication will refresh its "
+"expiration timestamp and keep it from expiring. A token only expires when"
+" it is not used for the configured timeout interval (default 1800 "
+"seconds)."
+msgstr ""
+
+#: ../../source/auth_token.rst:59
+msgid "Reviewing the Options Endpoint"
+msgstr ""
+
+#: ../../source/auth_token.rst:64
+msgid ""
+"The *Options Endpoint* table offers a view of the Options for this "
+"endpoint. When viewing the endpoint in the browsable API, clicking the "
+"\"Options\" button gives you the raw JSON for the following:"
+msgstr ""
+

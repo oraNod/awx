@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/isolation_variables.rst:5
+msgid "Isolation functionality and variables"
+msgstr "격리 기능 및 변수"
+
+#: ../../../common/source/isolation_variables.rst:2
+msgid "|At| uses container technology to isolate jobs from each other. By default, only the current project is exposed to the container running a job template."
+msgstr "|At|에서는 컨테이너 기술을 사용하여 각 작업을 격리합니다. 기본적으로 현재 프로젝트만 작업 템플릿을 실행하는 컨테이너에 노출됩니다."
+
+#: ../../../common/source/isolation_variables.rst:4
+msgid "You may find that you need to customize your playbook runs to expose additional directories. To fine tune your usage of job isolation, there are certain variables that can be set."
+msgstr "추가 디렉터리를 노출하도록 플레이북 실행을 사용자 지정해야 할 수도 있습니다. 작업 격리 사용을 미세 조정하기 위해 설정할 수 있는 특정 변수가 있습니다."
+
+#: ../../../common/source/isolation_variables.rst:6
+msgid "By default, |at| will use the system's ``tmp`` directory (``/tmp`` by default) as its staging area. This can be changed in the **Job Execution Path** field of the Jobs settings screen, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "기본적으로 |at|에서는 시스템의 ``tmp`` 디렉터리(기본적으로 ``/tmp``)를 스테이징 영역으로 사용합니다. 작업 설정 화면의 **작업 실행 경로** 필드 또는 ``/api/v2/settings/jobs``의 REST API에서 이 설정을 변경할 수 있습니다."
+
+#: ../../../common/source/isolation_variables.rst:8
+msgid "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+msgstr "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+
+#: ../../../common/source/isolation_variables.rst:10
+msgid "If there are any additional directories that should specifically be exposed from the host to the container that playbooks run in, you can specify those in the **Paths to Expose to Isolated Jobs** field of the Jobs setting scren, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "구체적으로 호스트에서 플레이북이 실행되는 컨테이너로 노출되어야 하는 추가 디렉터리가 있는 경우 작업 설정 화면의 **격리된 작업에 노출된 경로** 필드 또는 ``/api/v2/settings/jobs``의 REST API에서 지정할 수 있습니다."
+
+#: ../../../common/source/isolation_variables.rst:13
+msgid "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/isolation_variables.rst:16
+msgid "The primary file you may want to add to ``AWX_ISOLATION_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "플레이북에서 경로에 정의된 키 또는 설정을 사용해야 하는 경우 ``AWX_ISOLATION_SHOW_PATHS``에 ``/var/lib/awx/.ssh`` 파일을 추가하는 것이 좋습니다."
+
+#: ../../../common/source/isolation_variables.rst:18
+msgid "The above fields can be found in the Jobs Settings window:"
+msgstr "위의 필드는 작업 설정 창에서 찾을 수 있습니다."
+

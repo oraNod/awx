@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/init_script.rst:4
+msgid "Starting, Stopping, and Restarting the Controller"
+msgstr "启动、停止和重启控制器"
+
+#: ../../source/init_script.rst:17
+msgid "|At| ships with an *admin utility script*, ``automation-controller-service``, that can start, stop, and restart all the controller services running on the current single controller node (including the message queue components, and the database if it is an integrated installation). External databases must be explicitly managed by the administrator. The services script resides in ``/usr/bin/automation-controller-service`` and can be invoked as follows:"
+msgstr "|At| 附带一个 *管理员实用程序脚本* ``automation-controller-service``，它可以启动、停止和重启当前 Tower 节点上运行的所有控制器服务（包括消息队列组件，如果集成安装了数据库，还包括数据库）。外部数据库必须明确由管理员管理。服务脚本在 ``/usr/bin/automation-controller-service`` 中，可按照如下所示调用："
+
+#: ../../source/init_script.rst:26
+msgid "In clustered installs, ``automation-controller-service restart`` does not include PostgreSQL as part of the services that are restarted because it exists external to the controller, and because PostgreSQL does not always require a restart. Use ``systemctl restart automation-controller`` to restart services on clustered environments instead. Also you must restart each cluster node for certain changes to persist as opposed to a single node for a localhost install. For more information on clustered environments, see the :ref:`ag_clustering` section."
+msgstr "在集群的安装中, ``automation-controller-service restart`` 不将 PostgreSQL 作为重启的服务的一部分，因为它存在于控制器以外，而且 PostgreSQL 并不总是需要重启。使用 ``systemctl restart automation-controller`` 在集群环境中重启服务。 另外，您必须重启每个集群节点,以使特定的更改持久化，而不是象 localhost 安装一样只重启一个节点。有关集群环境的更多信息，请参阅 :ref:`ag_clustering` 部分。"
+
+#: ../../source/init_script.rst:29
+msgid "You can also invoke the services script via distribution-specific service management commands. Distribution packages often provide a similar script, sometimes as an init script, to manage services. Refer to your distribution-specific service management system for more information."
+msgstr "您还可以通过特定于发行版的服务管理命令调用服务脚本。发行版的软件包通常会提供类似的脚本（有时作为初始化脚本）来管理服务。如需更多信息，请参阅特定于发行版的服务管理系统。"
+
+#: ../../source/init_script.rst:33
+msgid "When running the controller in a container, do not use the ``automation-controller-service`` script. Restart the pod using the container environment instead."
+msgstr "在容器中运行控制器时，请不要使用 ``automation-controller-service`` 脚本，而是使用容器环境重启 pod。"
+

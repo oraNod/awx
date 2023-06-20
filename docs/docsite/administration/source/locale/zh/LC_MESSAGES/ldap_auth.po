@@ -1,0 +1,366 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ldap_auth.rst:4
+msgid "Setting up LDAP Authentication"
+msgstr "设置 LDAP 身份验证"
+
+#: ../../source/ldap_auth.rst:13
+msgid "If the LDAP server you want to connect to has a certificate that is self-signed or signed by a corporate internal certificate authority (CA), the CA certificate must be added to the system's trusted CAs. Otherwise, connection to the LDAP server will result in an error that the certificate issuer is not recognized."
+msgstr "如果您想要连接的 LDAP 服务器有由公司内部证书认证机构 (CA) 自签名或签名的证书，则必须将 CA 证书添加到系统的信任 CA 中。否则，到 LDAP 服务器的连接会导致证书签发者无法识别的错误。"
+
+#: ../../source/ldap_auth.rst:15
+msgid "Administrators use LDAP as a source for account authentication information for the controller users. User authentication is provided, but not the synchronization of user permissions and credentials. Organization membership (as well as the organization admin) and team memberships can be synchronized."
+msgstr "管理员使用 LDAP 作为控制器用户的帐户身份验证信息来源。它提供了用户身份验证，而未提供用户权限和凭证的同步功能。机构成员资格（以及机构管理员）和团队成员资格可以同步。"
+
+#: ../../source/ldap_auth.rst:17
+msgid "When so configured, a user who logs in with an LDAP username and password automatically gets a controller account created for them and they can be automatically placed into organizations as either regular users or organization administrators."
+msgstr "当这样配置时，使用 LDAP 用户名和密码登录的用户会自动获得为其创建的控制器帐户，并可作为常规用户或机构管理员自动将其放置到机构中。"
+
+#: ../../source/ldap_auth.rst:19
+msgid "Users created via an LDAP login cannot change their username, first name, last name, or set a local password for themselves. This is also tunable to restrict editing of other field names."
+msgstr "通过 LDAP 登录创建的用户无法为自己更改用户名、名、姓或设置本地密码。也可以调整此项来限制其他字段名称的编辑。"
+
+#: ../../source/ldap_auth.rst:21
+msgid "To configure LDAP integration for the controller:"
+msgstr "为控制器配置 LDAP 集成："
+
+#: ../../source/ldap_auth.rst:23
+msgid "First, create a user in LDAP that has access to read the entire LDAP structure."
+msgstr "首先，在 LDAP 中创建有权读取整个 LDAP 结构的用户。"
+
+#: ../../source/ldap_auth.rst:25
+msgid "Test if you can make successful queries to the LDAP server, use the ``ldapsearch`` command, which is a command line tool that can be installed on the controller system's command line as well as on other Linux and OSX systems. Use the following command to query the ldap server, where *josie* and *Josie4Cloud* are replaced by attributes that work for your setup:"
+msgstr "如果您能够成功查询 LDAP 服务器，请使用 ``ldapsearch`` 命令，这是一个命令行工具，可以安装在控制器系统的命令行上，也可以安装在其他 Linux 和 OSX 系统上。使用以下命令查询 ldap 服务器，其中 *josie* 和 *Josie4Cloud* 由适用于您的设置的属性替代："
+
+#: ../../source/ldap_auth.rst:31
+msgid "Here ``CN=josie,CN=users,DC=website,DC=com`` is the Distinguished Name of the connecting user."
+msgstr "此处 ``CN=josie,CN=users,DC=website,DC=com`` 是连接的用户的可辨识名称。"
+
+#: ../../source/ldap_auth.rst:35
+msgid "The ``ldapsearch`` utility is not automatically pre-installed with |at|, however, you can install it from the ``openldap-clients`` package."
+msgstr "|at| 不会自动预安装 ``ldapsearch`` 工具程序，您可以从 ``openldap-clients`` 软件包中安装它。"
+
+#: ../../source/ldap_auth.rst:37
+msgid "In the |at| User Interface, click **Settings** from the left navigation and click to select **LDAP settings** from the list of Authentication options."
+msgstr "在 |at| 用户界面中，从左面导航中点 **Settings**，点 Authentication 选项列表中的 **LDAP settings**。"
+
+#: ../../source/ldap_auth.rst:41
+msgid "You can configure multiple LDAP servers by specifying the server to configure (otherwise, leave the server at **Default**):"
+msgstr "您可以通过指定要配置的服务器来配置多个 LDAP 服务器（否则，使服务器保留为 **Default**）："
+
+#: ../../source/ldap_auth.rst:47
+msgid "The equivalent API endpoints will show ``AUTH_LDAP_*`` repeated: ``AUTH_LDAP_1_*``, ``AUTH_LDAP_2_*``, ..., ``AUTH_LDAP_5_*`` to denote server designations."
+msgstr "等同的 API 端点将显示 ``AUTH_LDAP_*`` 重复：``AUTH_LDAP_1_*``、``AUTH_LDAP_2_*``、......、``AUTH_LDAP_5_*`` 用于表示服务器的名称。"
+
+#: ../../source/ldap_auth.rst:50
+msgid "Click **Edit** and enter the LDAP server address to connect to in the **LDAP Server URI** field using the same format as the one shown in the text field. Below is an example:"
+msgstr "点 **Edit**，在 **LDAP Server URI** 字段中输入要连接的 LDAP 服务器地址，其格式与文本字段中显示的格式相同。以下是一个示例："
+
+#: ../../source/ldap_auth.rst:54
+msgid "Enter the Distinguished Name in the **LDAP Bind DN** text field to specify the user that the controller uses to connect (Bind) to the LDAP server. Below uses the example, ``CN=josie,CN=users,DC=website,DC=com``:"
+msgstr "在 **LDAP Bind DN** 文本字段中输入可辨识的名称，以指定控制器用来连接（绑定）LDAP 服务器的用户。以下使用了示例 ``CN=josie,CN=users,DC=website,DC=com``："
+
+#: ../../source/ldap_auth.rst:58
+msgid "Enter the password to use for the Binding user in the **LDAP Bind Password** text field. In this example, the password is 'passme':"
+msgstr "在 **LDAP Bind Password** 文本字段中输入用于绑定用户的密码。在本例中，密码是“passme”："
+
+#: ../../source/ldap_auth.rst:62
+msgid "If that name is stored in key ``sAMAccountName``, the **LDAP User DN Template** populates with ``(sAMAccountName=%(user)s)``. Active Directory stores the username to ``sAMAccountName``. Similarly, for OpenLDAP, the key is ``uid``--hence the line becomes ``(uid=%(user)s)``."
+msgstr "如果该名称存储在键 ``sAMAccountName`` 中，则**LDAP User DN Template** 使用 ``(sAMAccountName=%(user)s)`` 填充。Active Directory 将用户名保存到 ``sAMAccountName``。同样，对于 OpenLDAP，键是 ``uid``，行变为 ``(uid=%(user)s)``。"
+
+#: ../../source/ldap_auth.rst:64
+msgid "Click to select a group type from the **LDAP Group Type** drop-down menu list."
+msgstr "点击以从 **LDAP Group Type** 下拉菜单中选择组类型。"
+
+#: ../../source/ldap_auth.rst:66
+msgid "LDAP Group Types include:"
+msgstr "LDAP 组类型包括："
+
+#: ../../source/ldap_auth.rst:68
+msgid "``PosixGroupType``"
+msgstr "``PosixGroupType``"
+
+#: ../../source/ldap_auth.rst:69
+msgid "``GroupOfNamesType``"
+msgstr "``GroupOfNamesType``"
+
+#: ../../source/ldap_auth.rst:70
+msgid "``GroupOfUniqueNamesType``"
+msgstr "``GroupOfUniqueNamesType``"
+
+#: ../../source/ldap_auth.rst:71
+msgid "``ActiveDirectoryGroupType``"
+msgstr "``ActiveDirectoryGroupType``"
+
+#: ../../source/ldap_auth.rst:72
+msgid "``OrganizationalRoleGroupType``"
+msgstr "``OrganizationalRoleGroupType``"
+
+#: ../../source/ldap_auth.rst:73
+msgid "``MemberDNGroupType``"
+msgstr "``MemberDNGroupType``"
+
+#: ../../source/ldap_auth.rst:74
+msgid "``NISGroupType``"
+msgstr "``NISGroupType``"
+
+#: ../../source/ldap_auth.rst:75
+msgid "``NestedGroupOfNamesType``"
+msgstr "``NestedGroupOfNamesType``"
+
+#: ../../source/ldap_auth.rst:76
+msgid "``NestedGroupOfUniqueNamesType``"
+msgstr "``NestedGroupOfUniqueNamesType``"
+
+#: ../../source/ldap_auth.rst:77
+msgid "``NestedActiveDirectoryGroupType``"
+msgstr "``NestedActiveDirectoryGroupType``"
+
+#: ../../source/ldap_auth.rst:78
+msgid "``NestedOrganizationalRoleGroupType``"
+msgstr "``NestedOrganizationalRoleGroupType``"
+
+#: ../../source/ldap_auth.rst:79
+msgid "``NestedMemberDNGroupType``"
+msgstr "``NestedMemberDNGroupType``"
+
+#: ../../source/ldap_auth.rst:80
+msgid "``PosixUIDGroupType``"
+msgstr "``PosixUIDGroupType``"
+
+#: ../../source/ldap_auth.rst:82
+msgid "The LDAP Group Types that are supported by the controller leverage the underlying `django-auth-ldap library`_."
+msgstr "控制器支持的 LDAP 组类型利用底层 `django-auth-ldap library`_。"
+
+#: ../../source/ldap_auth.rst:87
+msgid "Each **LDAP Group Type** can potentially take different parameters. The controller exposes ``LDAP_GROUP_TYPE_PARAMS`` to account for this. ``LDAP_GROUP_TYPE_PARAMS`` is a dictionary, which will be converted by the controller to kwargs and passed to the LDAP Group Type class selected. There are two common parameters used by any of the LDAP Group Type; ``name_attr`` and ``member_attr``. Where ``name_attr`` defaults to ``cn`` and ``member_attr`` defaults to ``member``:"
+msgstr "每个 **LDAP Group Type** 都可能采用不同的参数。因此控制器将 ``LDAP_GROUP_TYPE_PARAMS`` 公开给帐户。``LDAP_GROUP_TYPE_PARAMS`` 是字典，控制器把它转换成 kwargs，并传递给所选的 LDAP 组类型类。所有 LDAP 组类型常用的参数有两个：``name_attr`` 和 ``member_attr``。其中 ``name_attr`` 默认为 ``cn`` ，而 ``member_attr`` 默认为 ``member``："
+
+#: ../../source/ldap_auth.rst:93
+msgid "To determine what parameters a specific LDAP Group Type expects. refer to the `django_auth_ldap`_ documentation around the classes ``init`` parameters."
+msgstr "要确定特定 LDAP 组类型所需的参数，请参阅有关类 ``init`` 参数的 `django_auth_ldap`_ 文档。"
+
+#: ../../source/ldap_auth.rst:98
+msgid "Enter the group distinguish name to allow users within that group to access the controller in the **LDAP Require Group** field, using the same format as the one shown in the text field. In this example, use: ``CN=controller Users,OU=Users,DC=website,DC=com``"
+msgstr "在 **LDAP Require Group** 字段中输入组可辨识名称以允许该组中的用户访问控制器，使用的格式与文本字段中显示的格式相同。在本例中，请使用：``CN=controller Users,OU=Users,DC=website,DC=com``"
+
+#: ../../source/ldap_auth.rst:102
+msgid "Enter the group distinguish name to prevent users within that group to access the controller in the **LDAP Deny Group** field, using the same format as the one shown in the text field. In this example, leave the field blank."
+msgstr "在 **LDAP Deny Group** 字段中输入组可辨识名称以防止该组中的用户访问控制器，使用的格式与文本字段中显示的格式相同。在本例中，将该字段留空。"
+
+#: ../../source/ldap_auth.rst:104
+msgid "The **LDAP Start TLS** is disabled by default. To enable TLS when the LDAP connection is not using SSL, click the toggle to **ON**."
+msgstr "**LDAP Start TLS** 默认禁用。当 LDAP 连接未使用 SSL 时，若要启用 TLS，请点击切换到 **ON**。"
+
+#: ../../source/ldap_auth.rst:108
+msgid "Enter where to search for users while authenticating in the **LDAP USER SEARCH** field using the same format as the one shown in the text field. In this example, use:"
+msgstr "在 **LDAP USER SEARCH** 字段中输入在身份验证时搜索用户的位置，使用的格式与文本字段中显示的格式相同。在本例中，使用："
+
+#: ../../source/ldap_auth.rst:118
+msgid "The first line specifies where to search for users in the LDAP tree. In the above example, the users are searched recursively starting from ``DC=website,DC=com``."
+msgstr "第一行指定在 LDAP 树中搜索用户的位置。在上例中，从 ``DC=website,DC=com`` 开始以递归方式搜索用户。"
+
+#: ../../source/ldap_auth.rst:120
+msgid "The second line specifies the scope where the users should be searched:"
+msgstr "第二行指定搜索用户的范围："
+
+#: ../../source/ldap_auth.rst:122
+msgid "SCOPE_BASE:  This value is used to indicate searching only the entry at the base DN, resulting in only that entry being returned"
+msgstr "SCOPE_BASE：此值只用于指定仅搜索基本 DN 处的条目，从而只返回该条目"
+
+#: ../../source/ldap_auth.rst:123
+msgid "SCOPE_ONELEVEL:  This value is used to indicate searching all entries one level under the base DN - but not including the base DN and not including any entries under that one level under the base DN."
+msgstr "SCOPE_ONELEVEL：此值用于指定搜索基本 DN 下某一个级别的所有条目，但不包括基本 DN，且不包括基本 DN 下某一级别下的条目。"
+
+#: ../../source/ldap_auth.rst:124
+msgid "SCOPE_SUBTREE: This value is used to indicate searching of all entries at all levels under and including the specified base DN."
+msgstr "SCOPE_SUBTREE：此值用于指定搜索所有级别的全部条目，且包括指定的基本 DN。"
+
+#: ../../source/ldap_auth.rst:126
+msgid "The third line specifies the key name where the user name is stored."
+msgstr "第三行指定存储用户名的键名。"
+
+#: ../../source/ldap_auth.rst:132
+msgid "For multiple search queries, the proper syntax is: ::"
+msgstr "对于多个搜索查询，正确的语法是："
+
+#: ../../source/ldap_auth.rst:154
+msgid "In the **LDAP Group Search** text field, specify which groups should be searched and how to search them. In this example, use:"
+msgstr "在 **LDAP Group Search** 文本字段中，指定应当搜索哪些组以及如何搜索它们。在本例中，使用："
+
+#: ../../source/ldap_auth.rst:164
+msgid "The first line specifies the BASE DN where the groups should be searched."
+msgstr "第一行指定应当搜索组的基本 DN。"
+
+#: ../../source/ldap_auth.rst:165
+msgid "The second lines specifies the scope and is the same as that for the user directive."
+msgstr "第二行指定范围，与用户指令的范围相同。"
+
+#: ../../source/ldap_auth.rst:166
+msgid "The third line specifies what the ``objectclass`` of a group object is in the LDAP you are using."
+msgstr "第三行指定在您使用的 LDAP 中组对象的 ``objectclass`` 是什么。"
+
+#: ../../source/ldap_auth.rst:171
+msgid "Enter the user attributes in the **LDAP User Attribute Map** the text field. In this example, use:"
+msgstr "在 **LDAP User Attribute Map** 文本字段中输入用户属性。在本例中，使用："
+
+#: ../../source/ldap_auth.rst:182
+msgid "The above example retrieves users by last name from the key ``sn``. You can use the same LDAP query for the user to figure out what keys they are stored under."
+msgstr "上面的示例按姓从键 ``sn`` 中检索用户。您可以对用户使用相同的 LDAP 查询，以找出他们存储在哪些键下。"
+
+#: ../../source/ldap_auth.rst:186
+msgid "Enter the user profile flags in the **LDAP User Flags by Group** the text field. In this example, use the following syntax to set LDAP users as \"Superusers\" and \"Auditors\":"
+msgstr "在 **LDAP User Flags by Group** 文本字段中输入用户配置集标志。在本例中，使用以下语法将 LDAP 用户设置为“Superusers”和“Auditors”："
+
+#: ../../source/ldap_auth.rst:195
+msgid "The above example retrieves users who are flagged as superusers or as auditor in their profile."
+msgstr "上例检索在其配置集中标记为 superusers 或 auditor 的用户。"
+
+#: ../../source/ldap_auth.rst:199
+#: ../../source/ldap_auth.rst:233
+msgid "For details on completing the mapping fields, see :ref:`ag_ldap_org_team_maps`."
+msgstr "如需完成映射字段的详情，请参阅 :ref:`ag_ldap_org_team_maps`。"
+
+#: ../../source/ldap_auth.rst:201
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/ldap_auth.rst:203
+msgid "With these values entered on this form, you can now make a successful authentication with LDAP."
+msgstr "使用此表单上输入的这些值，您现在可以通过 LDAP 进行成功身份验证。"
+
+#: ../../source/ldap_auth.rst:207
+msgid "The controller does not actively sync users, but they are created during their initial login. To improve performance associated with LDAP authentication, see :ref:`ug_ldap_auth_perf_tips` in the |atu|."
+msgstr "控制器不会主动同步用户，而是在首次登录过程中创建用户。要提高与 LDAP 身份验证关联的性能请参阅 :ref:中的`ug_ldap_auth_perf_tips` |atu|。"
+
+#: ../../source/ldap_auth.rst:213
+msgid "Referrals"
+msgstr "引用"
+
+#: ../../source/ldap_auth.rst:219
+msgid "Active Directory uses \"referrals\" in case the queried object is not available in its database. It has been noted that this does not work properly with the django LDAP client and, most of the time, it helps to disable referrals. Disable LDAP referrals by adding the following lines to your ``/etc/tower/conf.d/custom.py`` file:"
+msgstr "当查询对象不存在于数据库中时，Active Directory 将使用“引用（referral）”。此项不适用于 django LDAP 客户端，大部分时间最好禁用引用。将以下行添加到您的 ``/etc/tower/conf.d/custom.py`` 文件来禁用 LDAP 引用。"
+
+#: ../../source/ldap_auth.rst:231
+msgid "\"Referrals\" are disabled by default in |at| version 2.4.3 and above.  If you are running an earlier version of the controller, you should consider adding this parameter to your configuration file."
+msgstr "在 |at| 版本 2.4.3 版及更高版本中，“引用” 被默认禁用。如果您运行的是较早版本的控制器，您应当考虑将此参数添加到您的配置文件中。"
+
+#: ../../source/ldap_auth.rst:239
+msgid "Enabling Logging for LDAP"
+msgstr "为 LDAP 启用日志记录"
+
+#: ../../source/ldap_auth.rst:245
+msgid "To enable logging for LDAP, you must set the level to ``DEBUG`` in the Settings configuration window:"
+msgstr "要为 LDAP 启用日志记录，您必须在 Settings 配置窗口中将级别设置为 ``DEBUG``："
+
+#: ../../source/ldap_auth.rst:247
+msgid "Click **Settings** from the left navigation pane and click to select **Logging settings** from the System list of options."
+msgstr "从左侧导航窗格中点 **Settings**，再点系统选项列表中的 **Logging settings**。"
+
+#: ../../source/ldap_auth.rst:248
+msgid "Click **Edit**."
+msgstr "点 **Edit**。"
+
+#: ../../source/ldap_auth.rst:249
+msgid "Set the **Logging Aggregator Level Threshold** field to **Debug**."
+msgstr "将 **Logging Aggregator Level Threshold** 字段设置为 **Debug**。"
+
+#: ../../source/ldap_auth.rst:253
+msgid "Click **Save** to save your changes."
+msgstr "点击 **Save** 保存您的更改。"
+
+#: ../../source/ldap_auth.rst:259
+msgid "LDAP Organization and Team Mapping"
+msgstr "LDAP 机构和团队映射"
+
+#: ../../source/ldap_auth.rst:270
+msgid "Next, you will need to control which users are placed into which controller organizations based on LDAP attributes (mapping out between your organization admins/users and LDAP groups)."
+msgstr "接下来，需要根据 LDAP 的属性控制哪些用户放置到哪个控制器机构中（在您的机构管理员/用户和 LDAP 组之间进行映射）。"
+
+#: ../../source/ldap_auth.rst:272
+msgid "Keys are organization names. Organizations will be created if not present. Values are dictionaries defining the options for each organization's membership. For each organization, it is possible to specify what groups are automatically users of the organization and also what groups can administer the organization."
+msgstr "键是机构的名称。如果机构不存在，则会创建机构。值是字典，用于定义每个机构成员资格的选项。对于每个机构来说，可以指定哪些组自动成为机构的用户，以及哪些组可以管理机构。"
+
+#: ../../source/ldap_auth.rst:278
+msgid "**admins**: None, True/False, string or list/tuple of strings."
+msgstr "**admins**：None、True/False、字符串或字符串的列表/元组。"
+
+#: ../../source/ldap_auth.rst:275
+msgid "If **None**, organization admins will not be updated based on LDAP values."
+msgstr "如果为 **None**，则机构管理员不会根据 LDAP 值进行更新。"
+
+#: ../../source/ldap_auth.rst:276
+msgid "If **True**, all users in LDAP will automatically be added as admins of the organization."
+msgstr "如果为 **True**，则 LDAP 中的所有用户将自动添加为机构管理员。"
+
+#: ../../source/ldap_auth.rst:277
+msgid "If **False**, no LDAP users will be automatically added as admins of the organiation."
+msgstr "如果为 **False**，则没有 LDAP 用户自动添加为机构的管理员。"
+
+#: ../../source/ldap_auth.rst:278
+msgid "If a string or list of strings, specifies the group DN(s) that will be added of the organization if they match any of the specified groups."
+msgstr "如果为字符串或字符串列表，则指定在与任何指定组匹配时将添加到机构的组 DN。"
+
+#: ../../source/ldap_auth.rst:281
+msgid "**remove_admins**: True/False. Defaults to **False**."
+msgstr "**remove_admins**：True/False。默认为 **False**。"
+
+#: ../../source/ldap_auth.rst:281
+msgid "When **True**, a user who is not an member of the given groups will be removed from the organization's administrative list."
+msgstr "当为 **True** 时，不属于指定组的成员将从机构的管理列表中删除。"
+
+#: ../../source/ldap_auth.rst:283
+msgid "**users**: None, True/False, string or list/tuple of strings. Same rules apply as for **admins**."
+msgstr "**users**：None、True/False、字符串或字符串列表/元组。应用的规则与 **admins** 相同。"
+
+#: ../../source/ldap_auth.rst:285
+msgid "**remove_users**: True/False. Defaults to **False**. Same rules apply as **remove_admins**."
+msgstr "**remove_users**：True/False。默认为 **False**。应用的规则与 **remove_admins** 相同。"
+
+#: ../../source/ldap_auth.rst:310
+msgid "Mapping between team members (users) and LDAP groups. Keys are team names (will be created if not present). Values are dictionaries of options for each team's membership, where each can contain the following parameters:"
+msgstr "组成员（用户）和 LDAP 组之间的映射。键是团队名称（如果不存在就会创建）。值是每个团队成员资格选项的字典，其中每项可以包含以下参数："
+
+#: ../../source/ldap_auth.rst:315
+msgid "**organization**: string. The name of the organization to which the team"
+msgstr "**organization**：字符串。团队所属机构的名称。"
+
+#: ../../source/ldap_auth.rst:313
+msgid "belongs.  The team will be created if the combination of organization and team name does not exist.  The organization will first be created if it does not exist."
+msgstr "如果机构和团队名称的组合不存在，将会创建团队。如果机构不存在，则会首先创建机构。"
+
+#: ../../source/ldap_auth.rst:317
+msgid "**users**: None, True/False, string or list/tuple of strings."
+msgstr "**users**：None、True/False、字符串或字符串列表/元组。"
+
+#: ../../source/ldap_auth.rst:319
+msgid "If **None**, team members will not be updated."
+msgstr "如果为 **None**，则不会更新团队成员。"
+
+#: ../../source/ldap_auth.rst:320
+msgid "If **True/False**, all LDAP users will be added/removed as team members."
+msgstr "如果为 **True/False**，则所有 LDAP 用户将作为团队成员添加/删除。"
+
+#: ../../source/ldap_auth.rst:321
+msgid "If a string or list of strings, specifies the group DN(s). User will be added as a team member if the user is a member of ANY of these groups."
+msgstr "如果为字符串或字符串列表，则指定组 DN。如果用户是这些组中任意组的成员，则用户将添加为团队成员。"
+
+#: ../../source/ldap_auth.rst:323
+msgid "**remove**: True/False. Defaults to **False**. When **True**, a user who is not a member of the given groups will be removed from the team."
+msgstr "**remove**：True/False。默认为 **False**。当为 **True** 时，不是给定组成员的用户将从团队中删除。"
+

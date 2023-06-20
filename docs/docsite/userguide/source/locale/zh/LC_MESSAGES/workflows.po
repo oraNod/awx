@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/workflows.rst:5
+msgid "Workflows"
+msgstr "工作流"
+
+#: ../../source/workflows.rst:10
+msgid "Workflows allow you to configure a sequence of disparate job templates (or workflow templates) that may or may not share inventory, playbooks, or permissions. However, workflows have ‘admin’ and ‘execute’ permissions, similar to job templates. A workflow accomplishes the task of tracking the full set of jobs that were part of the release process as a single unit."
+msgstr "利用工作流，您可以配置一个由不同作业模板（或工作流模板）组成的序列，它们可能会也可能不会共享清单、playbook 或权限。但是，工作流具有“admin”和“execute”权限，类似于作业模板。工作流完成的任务是将属于发布过程一部分的完整作业集合作为一个单元来跟踪。"
+
+#: ../../source/workflows.rst:13
+msgid "Job or workflow templates are linked together using a graph-like structure called nodes. These nodes can be jobs, project syncs, or inventory syncs. A template can be part of different workflows or used multiple times in the same workflow. A copy of the graph structure is saved to a workflow job when you launch the workflow."
+msgstr "作业或工作流模板使用一个称为节点的图形类结构链接在一起。这些节点可以是作业、项目同步或清单同步。模板可以作为不同工作流的一部分，也可以在同一工作流中使用多次。在启动工作流时，图形结构的副本会保存到工作流作业中。"
+
+#: ../../source/workflows.rst:15
+msgid "The example below shows a workflow that contains all three, as well as a workflow job template:"
+msgstr "以下示例显示了包含所有三个节点以及工作流作业模板的工作流："
+
+#: ../../source/workflows.rst:20
+msgid "As the workflow runs, jobs are spawned from the node's linked template. Nodes linking to a job template which has prompt-driven fields (``job_type``, ``job_tags``, ``skip_tags``, ``limit``) can contain those fields, and will not be prompted on launch. Job templates with promptable credential and/or inventory, WITHOUT defaults, will not be available for inclusion in a workflow."
+msgstr "当工作流运行时，作业会从节点的链接模板生成。如果节点链接至的作业模板具有提示型字段（``job_type``、``job_tags``、``skip_tags``、``limit``），则节点可以包含这些字段，且不会在启动时提示。具有可提示凭证和/或清单的作业模板没有默认值，将无法包含在工作流中。"
+
+#: ../../source/workflows.rst:24
+msgid "Workflow scenarios and considerations"
+msgstr "工作流场景和注意事项"
+
+#: ../../source/workflows.rst:26
+msgid "Consider the following scenarios for building workflows:"
+msgstr "假设以下构建工作流的场景："
+
+#: ../../source/workflows.rst:28
+msgid "A root node is set to ALWAYS by default and it not editable."
+msgstr "根节点默认设置为 ALWAYS，且不可编辑。"
+
+#: ../../source/workflows.rst:32
+msgid "A node can have multiple parents and children may be linked to any of the states of success, failure, or always. If always, then the state is neither success or failure. States apply at the node level, not at the workflow job template level. A workflow job will be marked as successful unless it is canceled or encounters an error."
+msgstr "节点可以有多个父对象，子对象可以与 success、failure 或 always 中的任何状态相连。如果为 always，则状态既不是 success，也不是 failure。状态应用到节点级别，而非工作流工作模板级别。除非工作流作业被取消或遇到错误，否则会被标记为成功。"
+
+#: ../../source/workflows.rst:36
+msgid "If you remove a job or workflow template within the workflow, the node(s) previously connected to those deleted, automatically get connected upstream and retains its edge type as in the example below:"
+msgstr "如果您删除工作流中的作业或工作流模板，则之前连接到已删除项的节点会自动连接到上游，并保留其边缘类型，如下例所示："
+
+#: ../../source/workflows.rst:40
+msgid "You could have a convergent workflow, where multiple jobs converge into one. In this scenario, any of the jobs or all of them must complete before the next one runs, as shown in the example below:"
+msgstr "您可以有一个聚合的工作流，其中包括多个聚合在一起的作业。在这种情况下，任何作业或所有作业都必须在下一个运行前完成。如下例所示："
+
+#: ../../source/workflows.rst:44
+msgid "In the example provided, |at| runs the first two job templates in parallel. When they both finish and succeed as specified, the 3rd downstream (:ref:`convergence node <convergence_node>`), will trigger."
+msgstr "在提供的示例中，|at| 会并行运行前两个作业模板。当它们都完成并成功时，下游的第三个（:ref:`convergence node <convergence_node>`）将触发。"
+
+#: ../../source/workflows.rst:46
+msgid "Prompts for inventory and surveys will apply to workflow nodes in workflow job templates."
+msgstr "库存和问卷调查提示将应用到工作流作业模板中的工作流节点。"
+
+#: ../../source/workflows.rst:48
+msgid "If you launch from the API, running a ``get`` command displays a list of warnings and highlights missing components. The basic workflow for a workflow job template is illustrated below."
+msgstr "如果从 API 启动，运行 ``get`` 命令会显示一个警告列表并突出显示缺少的组件。以下演示了工作流作业模板的基本工作流。"
+
+#: ../../source/workflows.rst:52
+msgid "It is possible to launch several workflows simultaneously, and set a schedule for when to launch them. You can set notifications on workflows, such as when a job completes, similar to that of job templates."
+msgstr "可以同时启动多个工作流，并为它们的启动时间设置计划。您可以在工作流上设置通知，例如在作业完成时，类似于作业模板的通知。"
+
+#: ../../../common/source/job-slicing-rule.rst:3
+msgid "Job slicing is intended to scale job executions horizontally. Enabling job slicing on a job template divides an inventory to be acted upon in the number of slices configured at launch time and then starts a job for each slice."
+msgstr "作业分片旨在对作业的执行镜像水平扩展。在作业模板中启用作业分片，在启动时会将清单划分为配置的分片数量，然后为每个分片启动作业。"
+
+#: ../../../common/source/job-slicing-rule.rst:5
+msgid "It is expected that the number of slices will be equal to or less than the number of controller nodes. Setting an extremely high number of job slices (e.g., thousands), while allowed, can cause performance degradation as the job scheduler is not designed to schedule simultaneously thousands of workflow nodes, which are what the sliced jobs become."
+msgstr "预计的分片数量应等于或小于控制器节点的数量。虽然可以设置非常高的作业分片数量（例如，数千个），但可能会导致性能降低。因为工作负载调度程序并不是针对同时调度数千个工作流程节点而设计的，但对作业进行大量分片会造成这个情况。"
+
+#: ../../source/workflows.rst:59
+msgid "You can build a recursive workflow, but if |at| detects an error, it will stop at the time the nested workflow attempts to run."
+msgstr "您可以构建递归工作流，但如果 |at| 检测到错误，它将在嵌套工作流尝试运行时停止。"
+
+#: ../../source/workflows.rst:61
+msgid "Artifacts gathered in jobs in the sub-workflow will be passed to downstream nodes."
+msgstr "在子工作流的作业中收集到的工件会传递到下游节点。"
+
+#: ../../source/workflows.rst:63
+msgid "An inventory can be set at the workflow level, or prompt for inventory on launch."
+msgstr "清单可以在工作流级别设置，或在启动时提示设置清单。"
+
+#: ../../source/workflows.rst:65
+msgid "When launched, all job templates in the workflow that have ``ask_inventory_on_launch=true`` will use the workflow level inventory."
+msgstr "启动后，工作流中 ``ask_inventory_on_launch=true`` 的所有作业模板都会使用工作流级别清单。"
+
+#: ../../source/workflows.rst:67
+msgid "Job templates that do not prompt for inventory will ignore the workflow inventory and run against their own inventory."
+msgstr "不提示设置清单的作业模板将忽略工作流清单，并针对自己的清单运行。"
+
+#: ../../source/workflows.rst:69
+msgid "If a workflow prompts for inventory, schedules and other workflow nodes may provide the inventory."
+msgstr "如果工作流提示设置清单，则计划和其他工作流节点可能会提供清单。"
+
+#: ../../source/workflows.rst:71
+msgid "In a workflow convergence scenario, ``set_stats`` data will be merged in an undefined way, so it is recommended that you set unique keys."
+msgstr "在工作流聚合场景中，``set_stats`` 数据将以未定义的方式合并，因此建议您设置唯一键。"
+
+#: ../../source/workflows.rst:75
+msgid "Extra Variables"
+msgstr "额外变量"
+
+#: ../../source/workflows.rst:81
+msgid "Also similar to job templates, workflows use surveys to specify variables to be used in the playbooks in the workflow, called extra_vars. Survey variables are combined with extra_vars defined on the workflow job template, and saved to the workflow job extra_vars. extra_vars in the workflow job are combined with job template variables when spawning jobs within the workflow."
+msgstr "与作业模板类似，工作流使用问卷调查来指定要在工作流的 playbook 中使用的变量，称为 extra_vars。问卷调查变量与工作流作业模板上定义的 extra_vars 合并，并保存到工作流作业 extra_vars 中。在生成工作流中的作业时，工作流作业中的 extra_vars 会与作业模板变量合并。"
+
+#: ../../source/workflows.rst:83
+msgid "Workflows utilize the same behavior (hierarchy) of variable precedence as Job Templates with the exception of three additional variables. Refer to the Variable Precedence Hierarchy in the :ref:`ug_jobtemplates_extravars` section of the Job Templates chapter of this guide. The three additional variables include:"
+msgstr "工作流使用与作业模板相同的变量优先级行为（层次结构），但有三个额外变量例外。请参阅本指南“作业模板”章节的 :ref:`ug_jobtemplates_extravars` 部分中的“变量优先级层次结构”。三个额外变量包括："
+
+#: ../../source/workflows.rst:87
+msgid "Workflows included in a workflow will follow the same variable precedence - they will only inherit variables if they are specifically prompted for, or defined as part of a survey."
+msgstr "工作流中包含的工作流将遵循相同的变量优先级 - 只有在被专门提示或定义为问卷调查的一部分时，它们才会继承变量。"
+
+#: ../../source/workflows.rst:89
+msgid "In addition to the workflow ``extra_vars``, jobs and workflows ran as part of a workflow can inherit variables in the artifacts dictionary of a parent job in the workflow (also combining with ancestors further upstream in its branch). These can be defined by the ``set_stats`` `Ansible module`_."
+msgstr "除了工作流 ``extra_vars`` 外，作为工作流的一部分运行的作业和工作流还可继承工作流中的父作业工件字典中的变量（也与分支中上游的深一层祖先合并）。这些变量可由 ``set_stats`` `Ansible module`_ 定义。"
+
+#: ../../source/workflows.rst:93
+msgid "If you use the ``set_stats`` module in your playbook, you can produce results that can be consumed downstream by another job, for example, notify users as to the success or failure of an integration run. In this example, there are two playbooks that can be combined in a workflow to exercise artifact passing:"
+msgstr "如果在 playbook 中使用 ``set_stats`` 模块，您可以生成可供下游其他作业使用的结果，例如，通知用户集成运行是成功还是失败。在本例中，工作流中有两个 playbook 可以合并起来执行工件传递："
+
+#: ../../source/workflows.rst:95
+msgid "**invoke_set_stats.yml**: first playbook in the workflow:"
+msgstr "**invoke_set_stats.yml**：工作流中的第一个 playbook："
+
+#: ../../source/workflows.rst:112
+msgid "**use_set_stats.yml**: second playbook in the workflow"
+msgstr "**use_set_stats.yml**：工作流中的第二个 playbook"
+
+#: ../../source/workflows.rst:130
+msgid "The ``set_stats`` module processes this workflow as follows:"
+msgstr "``set_stats`` 模块会按照以下方式处理这个工作流："
+
+#: ../../source/workflows.rst:132
+msgid "The contents of an integration results (example: integration_results.txt below) is first uploaded to the web."
+msgstr "集成结果的内容（示例：下面的 integration_results.txt）首先上传到 Web。"
+
+#: ../../source/workflows.rst:138
+msgid "Through the **invoke_set_stats** playbook, ``set_stats`` is then invoked to artifact the URL of the uploaded integration_results.txt into the Ansible variable \"integration_results_url\"."
+msgstr "然后，通过 **invoke_set_stats** playbook，调用 ``set_stats`` 以将上传的 integration_results.txt 的 URL 打包到 Ansible 变量“integration_results_url”中。"
+
+#: ../../source/workflows.rst:139
+msgid "The second playbook in the workflow consumes the Ansible extra variable \"integration_results_url\". It calls out to the web using the ``uri`` module to get the contents of the file uploaded by the previous Job Template Job. Then, it simply prints out the contents of the gotten file."
+msgstr "工作流中的第二个 playbook 会使用 Ansible 额外变量“integration_results_url”。它会使用 ``uri`` 模块调出 Web 来获取由以前的作业模板作业上传的文件内容。然后，它即会输出 gotten 文件的内容。"
+
+#: ../../source/workflows.rst:143
+msgid "For artifacts to work, keep the default setting, ``per_host = False`` in the ``set_stats`` module."
+msgstr "要使工件正常工作，请保留 ``set_stats`` 模块中的默认设置 ``per_host = False``。"
+
+#: ../../source/workflows.rst:147
+msgid "Workflow States"
+msgstr "工作流状态"
+
+#: ../../source/workflows.rst:149
+msgid "The workflow job can have the following states (no Failed state):"
+msgstr "工作流可以具有以下状态（无“Failed”状态）："
+
+#: ../../source/workflows.rst:151
+msgid "Waiting"
+msgstr "Waiting"
+
+#: ../../source/workflows.rst:153
+msgid "Running"
+msgstr "Running"
+
+#: ../../source/workflows.rst:155
+msgid "Success (finished)"
+msgstr "Success (finished)"
+
+#: ../../source/workflows.rst:157
+msgid "Cancel"
+msgstr "Cancel"
+
+#: ../../source/workflows.rst:159
+msgid "Error"
+msgstr "错误"
+
+#: ../../source/workflows.rst:161
+msgid "Failed"
+msgstr "Failed"
+
+#: ../../source/workflows.rst:163
+msgid "In the workflow scheme, canceling a job cancels the branch, while canceling the workflow job cancels the entire workflow."
+msgstr "在工作流方案中，取消作业会取消分支，而取消工作流作业会取消整个工作流。"
+
+#: ../../source/workflows.rst:167
+msgid "Role-Based Access Controls"
+msgstr "基于角色的访问控制"
+
+#: ../../source/workflows.rst:171
+msgid "To edit and delete a workflow job template, you must have the admin role. To create a workflow job template, you must be an organization admin or a system admin. However, you can run a workflow job template that contains job templates you don't have permissions for. Similar to projects, organization admins can create a blank workflow and then grant an 'admin_role' to a low-level user, after which they can go about delegating more access and building the graph. You must have execute access to a job template to add it to a workflow job template."
+msgstr "要编辑和删除工作流作业模板，您必须具有 admin 角色。要创建工作流作业模板，您必须是机构管理员或系统管理员。但是，您可以运行一个包含您没有相应权限的作业模板的工作流作业模板。与项目类似，机构管理员可以创建一个空白工作流，然后为低级别用户授予一个“admin_role”，让他们可以委托更多访问权限并构建图形。您必须具有作业模板的执行访问权限才能将它添加到工作流作业模板。"
+
+#: ../../source/workflows.rst:173
+msgid "Other tasks such as the ability to make a duplicate copy and re-launch a workflow can also be performed, depending on what kinds of permissions are granted to a particular user. Generally, you should have permissions to all the resources used in a workflow (like job templates) before relaunching or making a copy."
+msgstr "也可以执行其他任务，比如复制副本和重新启动工作流，具体取决于为特定用户授予哪几种权限。通常，在重新启动或复制之前，您应该具有对工作流中所有资源（如作业模板）的权限。"
+
+#: ../../source/workflows.rst:177
+msgid "For more information on performing the tasks described in this section, refer to the :ref:`Administration Guide <administration:ag_start>`."
+msgstr "有关执行本部分所述任务的更多信息，请参阅 :ref:`Administration Guide <administration:ag_start>`。"
+

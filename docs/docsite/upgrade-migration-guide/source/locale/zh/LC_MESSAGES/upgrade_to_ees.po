@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Upgrade and Migration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/upgrade_to_ees.rst:4
+msgid "Upgrading to Execution Environments"
+msgstr "升级至执行环境"
+
+#: ../../source/upgrade_to_ees.rst:12
+msgid "If upgrading from older versions of |at| to 4.0 or later, the controller has the ability to detect previous versions of virtual environments associated with Organizations, Inventory, and Job Templates; and inform you that you will need to migrate to the new |ee| model. A brand new installation of |at| creates two virtualenvs during installation--one is used to run the controller itself, while the other is used to run Ansible. Like legacy virtual environments, |ees| allow the controller to run in a stable environment, while allowing you to add or update modules to your |ee| as necessary to run your playbooks. For more information, see :ref:`ug_execution_environments` in the |atu|."
+msgstr "如果从旧版本的 |at| 升级到 4.0 或更高版本，控制器可以检测到与机构、清单和作业模板关联的虚拟环境的以前版本，并通知您需要将它们迁移到新的 |ee| 模型。|at| 的一个全新安装会在安装过程中创建两个 virtualenv：一个用于运行控制器本身，另一个用于运行 Ansible。与旧的虚拟环境一样，|ees| 允许控制器在一个稳定的环境中运行，同时允许您根据需要在 |ee| 中添加或更新模块以运行 playbook。如需更多信息，请参阅 |atu| 中的 :ref:`ug_execution_environments`。"
+
+#: ../../source/upgrade_to_ees.rst:17
+msgid "When upgrading, it is highly recommended to always rebuild on top of the base |ee| that corresponds to the platform version you are using. See :ref:`ug_build_ees` for more information."
+msgstr "升级时，强烈建议您始终在与您使用的平台版本对应的基本 |ee| 上重建。如需更多信息，请参阅 :ref:`ug_build_ees`。"
+
+#: ../../source/upgrade_to_ees.rst:26
+msgid "Migrate legacy venvs to execution environments"
+msgstr "将旧的 venvs 迁移到执行环境"
+
+#: ../../source/upgrade_to_ees.rst:28
+msgid "You can have the exact same setup in an |ee| that you had in a prior custom virtual environment by migrating them to the new |ee|. Use the ``awx-manage`` commands in this section to:"
+msgstr "通过将之前自定义虚拟环境中的设置迁移到新的 |ee|，您在 |ee| 中会有一个和以前一样的设置。使用本节中的 ``awx-manage`` 命令："
+
+#: ../../source/upgrade_to_ees.rst:30
+msgid "list of all the current custom virtual environments and their paths (``list_custom_venvs``)"
+msgstr "所有当前自定义虚拟环境及其路径列表（``list_custom_venvs``）"
+
+#: ../../source/upgrade_to_ees.rst:31
+msgid "view the resources that rely a particular custom virtual environment (``custom_venv_associations``)"
+msgstr "查看依赖特定自定义虚拟环境的资源（``custom_venv_associations``）"
+
+#: ../../source/upgrade_to_ees.rst:32
+msgid "export a particular custom virtual environment to a format that can be used to migrate to an |ee| (``export_custom_venv``)"
+msgstr "将特定的自定义虚拟环境导出为可用于迁移到 |ee| 的格式（``export_custom_venv``）"
+
+#: ../../source/upgrade_to_ees.rst:34
+msgid "Before you migrate, it is recommended that you view all the custom virtual environments you currently have running by using the ``awx-manage list`` command:"
+msgstr "在迁移前，建议您使用 ``awx-manage list`` 命令查看所有当前运行的自定义虚拟环境："
+
+#: ../../source/upgrade_to_ees.rst:40
+#: ../../source/upgrade_to_ees.rst:53
+msgid "Below is an example output when running this command:"
+msgstr "以下是运行这个命令时的输出示例："
+
+#: ../../source/upgrade_to_ees.rst:44
+msgid "The above output shows three custom virtual environments and their paths. If you have a custom virtual environment that is not located within the default ``/var/lib/awx/venv/`` directory path, it will not be included here."
+msgstr "以上输出显示了三个自定义虚拟环境及其路径。如果您有一个没有位于默认 ``/var/lib/awx/venv/`` 目录路径中的自定义虚拟环境，则它不会包含在这个输出中。"
+
+#: ../../source/upgrade_to_ees.rst:46
+msgid "Use the ``_associations`` command to view what organizations, jobs, and inventory sources a custom virtual environment is associated with in order to determine which resources rely on them:"
+msgstr "使用 ``_associations`` 命令查看自定义虚拟环境关联的机构、作业和清单源，以确定哪些资源依赖它们："
+
+#: ../../source/upgrade_to_ees.rst:57
+msgid "Select a path for the virtual environment that you want to migrate and specify it in the ``awx-manage export`` command:"
+msgstr "为您要迁移的虚拟环境选择一个路径，并在 ``awx-manage export`` 命令中指定："
+
+#: ../../source/upgrade_to_ees.rst:63
+msgid "The resulting output is essentially the results of executing a ``pip freeze`` command. The example shows the contents of the selected custom virtual environment:"
+msgstr "生成的输出实际上就是执行 ``pip freeze`` 命令的结果。示例显示了所选自定义虚拟环境的内容："
+
+#: ../../source/upgrade_to_ees.rst:69
+msgid "All of these commands can be run with a ``-q`` option, which removes the instructional content provided on each output."
+msgstr "这些命令都可使用 ``-q`` 选项运行，该选项会删除每个输出中提供的指导性内容。"
+
+#: ../../source/upgrade_to_ees.rst:72
+msgid "Now that you have the output from this ``pip freeze`` data, you can paste it into a definition file that can be used to spin up your new |ee| using |ab|. Anyone (both normal users and admins) can use |ab| to create an |ee|. See :ref:`ug_build_ees` in the |atu| for further detail."
+msgstr "现在，您已拥有这个 ``pip freeze`` 数据的输出，您可以将这些数据粘贴到一个定义文件中，该文件可以使用 |ab| 来启动您的新 |ee|。任何人（包括普通用户和管理员）都可以使用 |ab| 创建一个 |ee|。详情请查看 |atu| 中的 :ref:`ug_build_ees`。"
+
+#: ../../source/upgrade_to_ees.rst:79
+msgid "Migrate isolated instances to execution nodes"
+msgstr "将隔离实例迁移到执行节点"
+
+#: ../../source/upgrade_to_ees.rst:81
+msgid "The move from isolated instance groups to execution nodes enables inbound or outbound connections. Contrast this with versions 3.8 and older where only outbound connections were allowed from controller nodes to isolated nodes."
+msgstr "从隔离实例组转为执行节点可启用入站或出站连接。这与版本 3.8 及更早版本不同，在以前的版本中，只有控制器节点到隔离节点的出站连接被允许。"
+
+#: ../../source/upgrade_to_ees.rst:83
+msgid "Migrating legacy isolated instance groups to execution nodes in order to function properly in the |at| mesh architecture in 4.1, is a preflight function of the installer that essentially creates an inventory file based on your old file. Even though both .ini and .yml files are still accepted formats, the generated file output is only an .ini file at this time."
+msgstr "将旧的隔离实例组迁移到执行节点以便在 4.1 中的 |at| 网格架构中正常工作，是安装程序的 preflight 功能，它根据旧文件创建清单文件。虽然 .ini 和 .yml 文件仍然被接受，但生成的文件输出目前仅为 .ini 文件。"
+
+#: ../../source/upgrade_to_ees.rst:85
+msgid "The preflight check leverages Ansible; and Ansible flattens the concept of children, this means that not every single inventory file can be replicated exactly, but it is very close. It will be functionally the same to Ansible, but may look different to you. The automated preflight processing does its best to create child relationships based on heuristics, but be aware that the tool lacks the nuance and judgment that human users have. Therefore, once the file is created, do **NOT** use it as-is. Check the file over and use it as a template to ensure that they work well for both you and the Ansible engine."
+msgstr "preflight 会检查对 Ansible 的使用；Ansible 扁平化子概念，这意味着，并非每一个清单文件都可以被完全准确复制，但非常接近。它虽然看上去可能有所不同，但从功能上讲与 Ansible 相同，但可能与您不同。 自动进行的 preflight 处理会“智能地”创建子关系，但请注意，该工具可能无法象人一样完全准确地创建。因此，创建文件后，**不要**在没有进行检查的情况下原样使用该文件。请检查生成的文件，并将它作为模板使用，以确保它们适用于您和 Ansible 引擎。"
+
+#: ../../source/upgrade_to_ees.rst:87
+msgid "Here is an example of a before and after preflight check, demonstrating how Ansible flattens an inventory file and how the installer reconstructs a new inventory file. To Ansible, both of these files are essentially the same."
+msgstr "以下是 preflight 检查前后的一个示例，演示了 Ansible 如何扁平化清单文件，以及安装程序如何重建新的清单文件。对于 Ansible，这些文件基本上都是相同的。"
+
+#: ../../source/upgrade_to_ees.rst:90
+msgid "Old style (from Ansible docs)"
+msgstr "旧格式（来自 Ansible 文档）"
+
+#: ../../source/upgrade_to_ees.rst:90
+msgid "New style (generated by installer)"
+msgstr "新样式（由安装程序生成）"
+
+#: ../../source/upgrade_to_ees.rst:137
+msgid "View mesh topology"
+msgstr "查看网格拓扑"
+
+#: ../../source/upgrade_to_ees.rst:144
+msgid "If you configured a :term:`mesh` topology, the installer can graphically validate your mesh configuration through a generated graph rendering tool. The graph is generated by reading the contents of the inventory file. See the `Red Hat Ansible Automation Platform automation mesh guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/index>`_ for further detail."
+msgstr "如果配置了 :term:`mesh` 拓扑，安装程序可以通过生成的图形渲染工具以图形方式验证网格配置。相关的图会根据清单文件的内容生成。如需更多详情，请参阅 `Red Hat Ansible Automation Platform automation mesh guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/index>`。"
+
+#: ../../source/upgrade_to_ees.rst:148
+msgid "Any given inventory file must include some sort of execution capacity that is governed by at least one control :term:`node`. That is, it is unacceptable to produce an inventory file that only contains control-only nodes, execution-only nodes or hop-only nodes. There is a tightly coupled relationship between control and execution nodes that must be respected at all times. The installer will fail if the inventory files aren't properly defined. The only exception to this rule would be a single hybrid node, as it will satisfy the control and execution constraints."
+msgstr "任何给定清单文件都必须包含某种执行能力，这些执行能力由至少一个控制 :term:`node` 管理。 也就是说，不能生成一个仅包含控制节点、或仅包含执行节点、或仅包含跃点的点的清单文件。 控制节点和执行节点之间紧密耦合的关系必须始终保持。 如果未正确定义清单文件，安装程序将失败。 此规则的唯一例外是单个混合节点，因为它能够满足控制和执行限制。"
+
+#: ../../source/upgrade_to_ees.rst:150
+msgid "In order to run jobs on an execution node, either the installer needs to pre-register the node, or user needs to make a PATCH request to ``/api/v2/instances/N/`` to change the enabled field to true."
+msgstr "要在执行节点上运行作业，安装程序需要预注册该节点，或者用户需要向 ``/api/v2/instances/N/`` 发出 PATCH 请求，以将已启用的字段更改为 true。"
+
+#: ../../source/upgrade_to_ees.rst:152
+msgid "If you have already deployed a mesh topology and want to view node type, node health, and specific details about each node, see :ref:`ag_topology_viewer` in the |ata|."
+msgstr "如果您已经部署了网格拓扑，并希望查看节点类型、节点健康状况以及每个节点的具体详情，请参阅 |ata| 中的 :ref:`ag_topology_viewer`。"
+

@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/instance_groups.rst:4
+msgid "Instance Groups"
+msgstr "인스턴스 그룹"
+
+#: ../../source/instance_groups.rst:9
+msgid "An :term:`Instance Group` provides the ability to group instances in a clustered environment. Additionally, policies dictate how instance groups behave and how jobs are executed. The following view displays the capacity levels based on policy algorithms:"
+msgstr ":term:`Instance Group`은 클러스터형 환경에서 인스턴스를 그룹화하는 기능을 제공합니다. 또한 정책은 인스턴스 그룹이 작동하는 방식과 작업이 실행되는 방식을 나타냅니다. 다음 뷰에는 정책 알고리즘에 따른 용량 수준이 표시되어 있습니다."
+
+#: ../../source/instance_groups.rst:11
+msgid "|Instance Group policy example|"
+msgstr "|Instance Group policy example|"
+
+#: ../../source/instance_groups.rst:15
+msgid "For more information about the policy or rules associated with instance groups, see the :ref:`ag_instance_groups` section of the |ata|."
+msgstr "인스턴스 그룹과 연결된 정책 또는 규칙에 대한 자세한 내용은 |ata|의 :ref:`ag_instance_groups` 섹션을 참조하십시오."
+
+#: ../../source/instance_groups.rst:17
+msgid "If you want to connect your instance group to a container, refer to :ref:`ag_container_groups` for further detail."
+msgstr "인스턴스 그룹을 컨테이너에 연결하려는 경우 :ref:`ag_container_groups`에서 자세한 내용을 참조하십시오."
+
+#: ../../source/instance_groups.rst:19
+msgid "For an in-depth discussion on these concepts, refer to the *Feature Spotlight: Instance Groups and Isolated Nodes* `blog <https://www.ansible.com/blog/ansible-tower-feature-spotlight-instance-groups-and-isolated-nodes>`_."
+msgstr "이러한 개념에 대한 자세한 내용은 *Feature Spotlight: Instance Groups and Isolated Nodes* `blog <https://www.ansible.com/blog/ansible-tower-feature-spotlight-instance-groups-and-isolated-nodes>`_를 참조하십시오."
+
+#: ../../source/instance_groups.rst:24
+msgid "Create an instance group"
+msgstr "인스턴스 그룹 생성"
+
+#: ../../source/instance_groups.rst:26
+msgid "To create a new instance group:"
+msgstr "새 인스턴스 그룹을 생성하려면 다음을 수행합니다."
+
+#: ../../source/instance_groups.rst:28
+msgid "Click **Instance Groups** from the left navigation menu to open the Instance Groups configuration window."
+msgstr "왼쪽 탐색 메뉴에서 **인스턴스 그룹**을 클릭하여 인스턴스 그룹 구성 창을 엽니다."
+
+#: ../../source/instance_groups.rst:30
+msgid "Click the **Add** button and select **Create Instance Group**."
+msgstr "**추가** 버튼을 클릭하고 **인스턴스 그룹 생성**을 선택합니다."
+
+#: ../../source/instance_groups.rst:32
+msgid "|IG - create new IG|"
+msgstr "|IG - create new IG|"
+
+#: ../../source/instance_groups.rst:36
+msgid "Enter the appropriate details into the following fields:"
+msgstr "다음 필드에 적절한 세부 정보를 입력합니다."
+
+#: ../../source/instance_groups.rst:38
+msgid "**Name**. Names must be unique and must not be named *controller*."
+msgstr "**이름** 이름은 고유해야 하며 *controller*로 지정해서는 안 됩니다."
+
+#: ../../source/instance_groups.rst:39
+msgid "**Policy Instance Minimum**. Enter the minimum number of instances to automatically assign to this group when new instances come online."
+msgstr "**최소 정책 인스턴스 수** 새 인스턴스가 온라인 상태가 되면 이 그룹에 자동으로 할당되는 최소 인스턴스 수를 입력합니다."
+
+#: ../../source/instance_groups.rst:40
+msgid "**Policy Instance Percentage**. Use the slider to select a minimum percentage of instances to automatically assign to this group when new instances come online."
+msgstr "**정책 인스턴스 백분율** 슬라이더를 사용하여 새 인스턴스가 온라인 상태가 되면 이 그룹에 자동으로 할당되는 최소 인스턴스 백분율을 선택합니다."
+
+#: ../../source/instance_groups.rst:44
+msgid "Policy Instance fields are not required to create a new instance group. If you do not specify values, then the Policy Instance Minimum and Policy Instance Percentage default to 0."
+msgstr "정책 인스턴스 필드는 새 인스턴스 그룹을 생성하는 데 필요하지 않습니다. 값을 지정하지 않는 경우 최소 정책 인스턴스 수 및 정책 인스턴스 백분율의 기본값은 0입니다."
+
+#: ../../source/instance_groups.rst:46
+msgid "Click **Save**."
+msgstr "**저장**을 클릭합니다."
+
+#: ../../source/instance_groups.rst:48
+msgid "Once the instance group is successfully created, the **Details** tab of the newly created instance group remains, which allows you to review and edit your instance group information. This is the same menu that is opened if the Edit (|edit-button|) button is clicked from the **Instance Group** link. You can also edit **Instances** and review **Jobs** associated with this instance group."
+msgstr "인스턴스 그룹이 성공적으로 생성되면 새로 생성된 인스턴스 그룹의 **세부 정보** 탭이 유지되므로 인스턴스 그룹 정보를 검토하고 편집할 수 있습니다. **인스턴스 그룹** 링크에서 편집(|edit-button|) 버튼을 클릭했을 때 열리는 메뉴와 같습니다. **인스턴스**를 편집하고 이 인스턴스 그룹과 연결된 **작업**을 검토할 수도 있습니다."
+
+#: ../../source/instance_groups.rst:52
+msgid "|IG - example IG successfully created|"
+msgstr "|IG - example IG successfully created|"
+
+#: ../../source/instance_groups.rst:58
+msgid "Associate instances to an instance group"
+msgstr "인스턴스를 인스턴스 그룹에 연결"
+
+#: ../../source/instance_groups.rst:60
+msgid "To associate instances to an instance group:"
+msgstr "인스턴스를 인스턴스 그룹에 연결하려면 다음을 수행합니다."
+
+#: ../../source/instance_groups.rst:62
+msgid "Click the **Instances** tab of the Instance Group window and click the **Add** button."
+msgstr "인스턴스 그룹 창의 **인스턴스** 탭을 클릭하고 **추가** 버튼을 클릭합니다."
+
+#: ../../source/instance_groups.rst:64
+msgid "Click the checkbox next to one or more available instances from the list to select the instance(s) you want to add to the instance group."
+msgstr "목록에서 하나 이상의 사용 가능한 인스턴스 옆에 있는 체크박스를 클릭하여 인스턴스 그룹에 추가할 인스턴스를 선택합니다."
+
+#: ../../source/instance_groups.rst:66
+msgid "|IG - select instances|"
+msgstr "|IG - select instances|"
+
+#: ../../source/instance_groups.rst:70
+msgid "In the following example, the instances added to the instance group displays along with information about their capacity."
+msgstr "다음 예에서는 인스턴스 그룹에 추가된 인스턴스가 해당 용량 정보와 함께 표시됩니다."
+
+#: ../../source/instance_groups.rst:72
+msgid "|IG - instances in IG|"
+msgstr "|IG - instances in IG|"
+
+#: ../../source/instance_groups.rst:76
+msgid "This view also allows you to edit some key attributes associated with the instances in your instance group:"
+msgstr "이 뷰를 사용하면 인스턴스 그룹의 인스턴스와 연결된 일부 키 특성을 편집할 수도 있습니다."
+
+#: ../../source/instance_groups.rst:78
+msgid "|IG - instances in IG callouts|"
+msgstr "|IG - instances in IG callouts|"
+
+#: ../../source/instance_groups.rst:84
+msgid "View jobs associated with an instance group"
+msgstr "인스턴스 그룹과 연결된 작업 보기"
+
+#: ../../source/instance_groups.rst:86
+msgid "To view the jobs associated with the instance group, click the **Jobs** tab of the Instance Group window and then click **Expanded** to expand the view to show details about each job."
+msgstr "인스턴스 그룹과 연결된 작업을 보려면 인스턴스 그룹 창에서 **작업** 탭을 클릭한 다음 각 작업에 대한 세부 정보가 표시되도록 **펼치기**를 클릭하여 뷰를 펼칩니다."
+
+#: ../../source/instance_groups.rst:88
+msgid "|IG - instances jobs|"
+msgstr "|IG - instances jobs|"
+
+#: ../../source/instance_groups.rst:92
+msgid "Each job displays the job status, ID, and name; type of job, time started and completed, who started the job; and which template, inventory, project, and credential were used."
+msgstr "각 작업에 작업 상태, ID, 이름, 작업 유형, 시작 및 완료 시간, 작업을 시작한 사용자, 사용된 템플릿, 인벤토리, 프로젝트, 인증 정보가 표시됩니다."
+
+#: ../../source/instance_groups.rst:94
+msgid "The instances are run in accordance with instance group policies. Refer to :ref:`Instance Group Policies <administration:ag_instance_group_policies>` in the |ata|."
+msgstr "인스턴스는 인스턴스 그룹 정책에 따라 실행됩니다. |ata|의 :ref:`Instance Group Policies <administration:ag_instance_group_policies>`을 참조하십시오."
+

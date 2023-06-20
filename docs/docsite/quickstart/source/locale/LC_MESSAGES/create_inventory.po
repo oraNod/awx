@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower Quick
+# Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Quick Setup 3.7.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 09:55-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/create_inventory.rst:2
+msgid "Create a new Inventory and add it to the Organization"
+msgstr ""
+
+#: ../../source/create_inventory.rst:8
+msgid ""
+"An inventory is a collection of hosts managed by Tower. Inventories are "
+"assigned to organizations, while permissions to launch playbooks against "
+"inventories are controlled at the user and/or team level. For more "
+"information, refer to :ref:`Inventories <userguide:ug_inventories>`, "
+":ref:`Users - Permissions <userguide:ug_users_permissions>`, and "
+":ref:`Teams - Permissions <userguide:ug_teams_permissions>` in the |atu|."
+msgstr ""
+
+#: ../../source/create_inventory.rst:10
+msgid "To review existing inventories:"
+msgstr ""
+
+#: ../../source/create_inventory.rst:12
+msgid ""
+"Click the Inventories (|inventories-icon|) icon from the left navigation "
+"bar."
+msgstr ""
+
+#: ../../source/create_inventory.rst:16
+msgid ""
+"Click the |add| button and select **Inventory** from the drop-down menu "
+"list. Smart Inventories are described in further detail in :ref:`Smart "
+"Inventories <userguide:ug_inventories_smart>`."
+msgstr ""
+
+#: ../../source/create_inventory.rst:20
+msgid "|Inventories - create new inventory|"
+msgstr ""
+
+#: ../../source/create_inventory.rst:24
+msgid ""
+"|at| provides a demo inventory for you to use as you learn how Tower "
+"works. Click on the \"Demo Inventory\" link for the stock inventory "
+"provided by |at|."
+msgstr ""
+
+#: ../../source/create_inventory.rst:27
+msgid "Groups and Hosts"
+msgstr ""
+
+#: ../../source/create_inventory.rst:29
+msgid ""
+"Note that inventories are divided into groups and hosts. A group might "
+"represent a particular environment (e.g. \"Datacenter 1\" or \"Stage "
+"Testing\"), a server type (e.g. \"Application Servers\" or \"DB "
+"Servers\"), or any other representation of your environment. The groups "
+"and hosts that belong to the Demo inventory are shown in the **Groups** "
+"and **Hosts** tabs, respectively."
+msgstr ""
+
+#: ../../source/create_inventory.rst:31
+msgid "|Inventories - Demo inventory details|"
+msgstr ""
+
+#: ../../source/create_inventory.rst:35
+msgid ""
+"In the **Groups** tab, click the |add| button to add groups to the "
+"inventory."
+msgstr ""
+
+#: ../../source/create_inventory.rst:39
+msgid "|Inventories - click to create new group|"
+msgstr ""
+
+#: ../../source/create_inventory.rst:43
+msgid ""
+"Similarly, in the **Hosts** tab, click the |add| button to add hosts to "
+"groups."
+msgstr ""
+
+#: ../../source/create_inventory.rst:45
+msgid "|Inventories - click to create new host|"
+msgstr ""
+
+#: ../../source/create_inventory.rst:50
+msgid ""
+"Prior to Ansible Tower 2.2, hosts could not be added to the Web Servers "
+"inventory before adding a group. If you are using an older version of "
+"Tower, click the \"Plus\" button above the 'Groups' section to add a "
+"group before adding a host."
+msgstr ""
+
+#: ../../source/create_inventory.rst:52
+msgid ""
+"For this example, suppose that the organization you created earlier has a"
+" group of web server hosts supporting the corporate CMS application. To "
+"add these hosts to the Web Servers inventory, create a \"CMS Web\" group."
+"  Click the **Save** button to create the group."
+msgstr ""
+
+#: ../../source/create_inventory.rst:55
+msgid ""
+"For the purposes of this Quick Start and to test that Tower is setup "
+"properly, a local host has been added for your use."
+msgstr ""
+
+#: ../../source/create_inventory.rst:57
+msgid "|Inventories - host properties form|"
+msgstr ""
+
+#: ../../source/create_inventory.rst:61
+msgid ""
+"Click **Cancel** (if no changes were made) or use the breadcrumb "
+"navigational links at the top of the |at| browser to return to the "
+"Inventories overview screen. Clicking **Save** does not exit the edit "
+"dialog."
+msgstr ""
+

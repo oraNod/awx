@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_job.rst:2
+msgid "Create a new Job Template"
+msgstr "新規ジョブテンプレートの作成"
+
+#: ../../source/create_job.rst:7
+msgid "A job template combines an Ansible playbook from a project and the settings required to launch it. Review existing job templates by clicking **Templates** from the left navigation bar."
+msgstr "ジョブテンプレートは、プロジェクトの Ansible Playbook と、起動に必要な設定を組み合わせたものです。左側のナビゲーションバーから **テンプレート** をクリックして、既存のジョブテンプレートを確認します。"
+
+#: ../../source/create_job.rst:9
+msgid "|Job templates - home|"
+msgstr "|Job templates - home|"
+
+#: ../../source/create_job.rst:13
+msgid "For the purpose of this Quick Start, a Demo Job Template has been created for your initial use."
+msgstr "このクイックスタートガイドの目的上、最初にお使いいただけるように、デモジョブテンプレートが作成されています。"
+
+#: ../../source/create_job.rst:15
+msgid "Click **Demo Job Template** to view its details."
+msgstr "**デモ用ジョブテンプレート** をクリックして、その詳細を表示します。"
+
+#: ../../source/create_job.rst:17
+msgid "|Job templates - review demo template|"
+msgstr "|Job templates - review demo template|"
+
+#: ../../source/create_job.rst:21
+msgid "For the purpose of this Quick Start Guide, leave the default demo job template as is. But to edit the default template later - from the Details tab, click **Edit**, or from the Templates list view, click the Edit (|edit|) button next to the template name to edit the appropriate details, then save your changes."
+msgstr "本クイックスタートガイドの目的上、デフォルトのデモ用ジョブテンプレートをそのまま残します。ただし、後でデフォルトのテンプレートを編集するには、詳細タブで **編集** をクリックするか、テンプレート一覧表示でテンプレート名の横にある編集 (|edit|) ボタンをクリックして適切な詳細を編集し、変更を保存します。"
+
+#: ../../source/create_job.rst:26
+msgid "|Job templates - edit demo|"
+msgstr "|Job templates - edit demo|"
+
+#: ../../source/create_job.rst:31
+msgid "Click **Cancel** (if no changes were made) or use the breadcrumb navigational links at the top of the |at| browser to return to the Templates list view. Clicking **Save** does not exit the Details dialog."
+msgstr "**キャンセル** (変更がない場合) をクリックするか、|at| ブラウザーの上部にあるブレッドクラムのナビゲーションリンクを使用して、テンプレートの一覧表示に戻ります。**保存** をクリックしても詳細ダイアログは終了しません。"
+

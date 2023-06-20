@@ -1,0 +1,467 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/social_auth.rst:4
+msgid "Setting up Social Authentication"
+msgstr "ソーシャル認証の設定"
+
+#: ../../source/social_auth.rst:10
+msgid "Authentication methods help simplify logins for end users--offering single sign-ons using existing login information to sign into a third party website rather than creating a new login account specifically for that website."
+msgstr "認証メソッドを使用して、サードパーティーの Web サイト専用のログインアカウントを新規作成するのではなく、既存のログイン情報を使用してシングルサインオンでサードパーティーのサイトにサインインするなど、エンドユーザーのログインを簡素化することができます。"
+
+#: ../../source/social_auth.rst:12
+msgid "Account authentication can be configured in the |at| User Interface and saved to the PostgreSQL database. For instructions, refer to the :ref:`ag_configure_tower` section."
+msgstr "アカウント認証は |at| ユーザーインターフェースで設定でき、PostgreSQL データベースに保存されます。手順については :ref:`ag_configure_tower` セクションを参照してください。"
+
+#: ../../source/social_auth.rst:14
+msgid "Account authentication in |at| can be configured to centrally use OAuth2, while enterprise-level account authentication can be configured for SAML, RADIUS, or even LDAP as a source for authentication information. See :ref:`ag_ent_auth`."
+msgstr "|at| のアカウント認証は、OAuth2 を使用して一元的に設定できますが、エンタープライズレベルのアカウント認証については、認証情報のソースとして、SAML、RADIUS や LDAP も設定できます。:ref:`ag_ent_auth` を参照してください。"
+
+#: ../../source/social_auth.rst:16
+msgid "For websites, such as Microsoft Azure, Google or GitHub, that provide account information, account information is often implemented using the OAuth standard. OAuth is a secure authorization protocol which is commonly used in conjunction with account authentication to grant 3rd party applications a \"session token\" allowing them to make API calls to providers on the user’s behalf."
+msgstr "アカウント情報を提供する Microsoft Azure、Google または GitHub などの Web サイトでは、アカウント情報は通常 OAuth 標準を使用して実装されます。OAuth とは、一般的にアカウント認証と合わせて使用されるセキュアな認証プロトコルのことで、ユーザーの代わりにプロバイダーに対して API 呼び出しを行うことができるように、サードパーティーのアプリケーションに「セッショントークン」を付与します。"
+
+#: ../../source/social_auth.rst:18
+msgid "SAML (Security Assertion Markup Language) is an XML-based, open-standard data format for exchanging account authentication and authorization data between  an identity provider and a service provider."
+msgstr "SAML (Security Assertion Markup Language) は、ID プロバイダーとサービスプロバイダー間でアカウント認証と承認データを交換するための、オープン標準の XML データ形式です。"
+
+#: ../../source/social_auth.rst:20
+msgid "The RADIUS distributed client/server system allows you to secure networks against unauthorized access and can be implemented in network environments requiring high levels of security while maintaining network access for remote users."
+msgstr "RADIUS の分散クライアント/サーバーシステムは、不正アクセスからネットワークを保護することができます。このシステムは、高いレベルのセキュリティーを必要とし、リモートユーザー向けにネットワークアクセスを維持する必要のあるネットワーク環境に実装することができます。"
+
+#: ../../source/social_auth.rst:25
+msgid "GitHub settings"
+msgstr "GitHub 設定"
+
+#: ../../source/social_auth.rst:30
+msgid "To set up social authentication for GitHub, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register the new application with GitHub at https://github.com/settings/developers. In order to register the application, you must supply it with your homepage URL, which is the **Callback URL** shown in the Details tab for the GitHub default settings page. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "GitHub にソーシャル認証を設定するには、Web アプリケーションの OAuth2 キーおよびシークレットを取得する必要があります。これを行うには、最初に https://github.com/settings/developers. で、GitHub に新しいアプリケーションを登録する必要があります。アプリケーションを登録するには、ホームページの URL を指定する必要があります。これは、GitHub デフォルト設定ページの詳細タブに表示される **コールバック URL** です。OAuth2 キー (クライアント ID) およびシークレット (クライアントシークレット) は、|at| ユーザーインターフェースの必須フィールドを提供するために使用されます。"
+
+#: ../../source/social_auth.rst:32
+#: ../../source/social_auth.rst:69
+#: ../../source/social_auth.rst:107
+#: ../../source/social_auth.rst:140
+#: ../../source/social_auth.rst:177
+#: ../../source/social_auth.rst:218
+#: ../../source/social_auth.rst:257
+msgid "Click **Settings** from the left navigation bar."
+msgstr "左側のナビゲーションバーで **設定** をクリックします。"
+
+#: ../../source/social_auth.rst:34
+#: ../../source/social_auth.rst:71
+#: ../../source/social_auth.rst:109
+#: ../../source/social_auth.rst:142
+#: ../../source/social_auth.rst:179
+#: ../../source/social_auth.rst:220
+msgid "On the left side of the Settings window, click **GitHub settings** from the list of Authentication options."
+msgstr "設定ウィンドウの左側で、認証オプションの一覧から **GitHub 設定** をクリックします。"
+
+#: ../../source/social_auth.rst:36
+msgid "Click the **GitHub Default** tab if not already selected."
+msgstr "**GitHub のデフォルト** タブを選択していない場合には、このタブをクリックします。"
+
+#: ../../source/social_auth.rst:38
+msgid "The **GitHub OAuth2 Callback URL** field is already pre-populated and non-editable. Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub OAuth2 コールバック URL** フィールドには、事前に情報が入力されており、編集できません。アプリケーションを登録すると、GitHub ではクライアント ID およびクライアントシークレットが表示されます。"
+
+#: ../../source/social_auth.rst:40
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub OAuth2 Key** field."
+msgstr "**編集** をクリックし、GitHub のクライアント ID を **GitHub OAuth2 キー** フィールドにコピーアンドペーストします。"
+
+#: ../../source/social_auth.rst:42
+msgid "Copy and paste GitHub's Client Secret into the **GitHub OAuth2 Secret** field."
+msgstr "GitHub のクライアントシークレットを **GitHub OAuth2 シークレット** フィールドにコピーアンドペーストします。"
+
+#: ../../source/social_auth.rst:44
+#: ../../source/social_auth.rst:85
+#: ../../source/social_auth.rst:121
+#: ../../source/social_auth.rst:158
+#: ../../source/social_auth.rst:197
+#: ../../source/social_auth.rst:238
+#: ../../source/social_auth.rst:273
+msgid "For details on completing the mapping fields, see :ref:`ag_org_team_maps`."
+msgstr "マッピングフィールドの入力に関する情報は、:ref:`ag_org_team_maps` を参照してください。"
+
+#: ../../source/social_auth.rst:46
+#: ../../source/social_auth.rst:87
+#: ../../source/social_auth.rst:123
+#: ../../source/social_auth.rst:160
+#: ../../source/social_auth.rst:199
+#: ../../source/social_auth.rst:240
+#: ../../source/social_auth.rst:275
+msgid "Click **Save** when done."
+msgstr "完了したら **保存** をクリックします。"
+
+#: ../../source/social_auth.rst:48
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub logo to allow logging in with those credentials."
+msgstr "認証が正しく設定されたかどうかは、|at| からログアウトします。ログイン画面に、GitHub のロゴが表示され、GitHub の認証情報を使用してログインできるようになっていることを確認してください。"
+
+#: ../../source/social_auth.rst:56
+msgid "GitHub Organization settings"
+msgstr "GitHub の組織設定"
+
+#: ../../source/social_auth.rst:61
+msgid "When defining account authentication with either an organization or a team within an organization, you should use the specific organization and team settings. Account authentication can be limited by an organization as well as by a team within an organization."
+msgstr "組織または組織内のチームでアカウント認証を定義する場合には、特定の組織およびチームの設定を使用する必要があります。アカウントの認証は、組織または組織内のチーム別に絞り込むことができます。"
+
+#: ../../source/social_auth.rst:63
+msgid "You can also choose to allow all by specifying non-organization or non-team based settings (as shown above)."
+msgstr "(上記のように) 組織以外またはチーム以外の設定を指定してすべてを許可するように設定することも可能です。"
+
+#: ../../source/social_auth.rst:65
+msgid "You can limit users who can login to the controller by limiting only those in an organization or on a team within an organization."
+msgstr "コントローラーにログインできるユーザーを、組織または組織内のチームに所属するユーザーのみに制限することができます。"
+
+#: ../../source/social_auth.rst:67
+msgid "To set up social authentication for a GitHub Organization, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register your organization-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "GitHub 組織のソーシャル認証を設定するには、Web アプリケーションの OAuth2 キーとシークレットを取得する必要があります。これには、まず、``https://github.com/organizations/<yourorg>/settings/applications`` から組織が所有するアプリケーションに登録する必要があります。アプリケーションを登録するには、認証コールバック URL とアプリケーションを指定する必要があります。この URL は、詳細ページに表示されている **コールバック URL** です。各キーおよびシークレットは、一意のアプリケーションに所属する必要があり、認証バックエンドが異なる場合に共有や再利用はできません。OAuth2 キー (クライアント ID) およびシークレット (クライアントシークレット) は |at| ユーザーインターフェースの必須フィールドに指定するために使用されます。"
+
+#: ../../source/social_auth.rst:73
+msgid "Click the **GitHub Organization** tab."
+msgstr "**GitHub 組織** タブをクリックします。"
+
+#: ../../source/social_auth.rst:75
+msgid "The **GitHub Organization OAuth2 Callback URL** field is already pre-populated and non-editable."
+msgstr "**GitHub 組織の OAuth2 コールバック URL** フィールドには、事前に情報が入力されており、編集できません。"
+
+#: ../../source/social_auth.rst:77
+msgid "Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "アプリケーションの登録が済むと、GitHub ではクライアント ID およびクライアントシークレットが表示されます。"
+
+#: ../../source/social_auth.rst:79
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub Organization OAuth2 Key** field."
+msgstr "**編集** をクリックし、GitHub のクライアント ID を **GitHub 組織 OAuth2 キー** フィールドにコピーアンドペーストします。"
+
+#: ../../source/social_auth.rst:81
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Organization OAuth2 Secret** field."
+msgstr "GitHub のクライアントシークレットを **GitHub 組織の OAuth2 シークレット** フィールドにコピーアンドペーストします。"
+
+#: ../../source/social_auth.rst:83
+msgid "Enter the name of your GitHub organization, as used in your organization's URL (e.g., https://github.com/<yourorg>/) in the **GitHub Organization Name** field."
+msgstr "**GitHub 組織名** フィールドに、組織の URL で使用されている GitHub 組織の名前を入力します (例:https://github.com/<yourorg>/)。"
+
+#: ../../source/social_auth.rst:89
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Organization logo to allow logging in with those credentials."
+msgstr "認証が正しく設定されたかどうかは、|at| からログアウトします。ログイン画面に、GitHub 組織のロゴが表示され、GitHub の認証情報を使用してログインできるようになっていることを確認してください。"
+
+#: ../../source/social_auth.rst:97
+msgid "GitHub Team settings"
+msgstr "GitHub チーム設定"
+
+#: ../../source/social_auth.rst:103
+msgid "To set up social authentication for a GitHub Team, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first register your team-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "GitHub チームのソーシャル認証を設定するには、Web アプリケーションの OAuth2 キーとシークレットを取得する必要があります。これには、まず、 ``https://github.com/organizations/<yourorg>/settings/applications`` からチームが所有するアプリケーションに登録する必要があります。アプリケーションを登録するには、認証コールバック URL とアプリケーションを指定する必要があります。この URL は、詳細ページに表示されている **コールバック URL** です。各キーおよびシークレットは、一意のアプリケーションに所属する必要があり、認証バックエンドが異なる場合に共有や再利用はできません。OAuth2 キー (クライアント ID) およびシークレット (クライアントシークレット) は |at| ユーザーインターフェースの必須フィールドに指定するために使用されます。"
+
+#: ../../source/social_auth.rst:105
+#: ../../source/social_auth.rst:216
+msgid "Find the numeric team ID using the GitHub API: http://fabian-kostadinov.github.io/2015/01/16/how-to-find-a-github-team-id/. The Team ID will be used to supply a required field in the |at| User Interface."
+msgstr "http://fabian-kostadinov.github.io/2015/01/16/how-to-find-a-github-team-id/ から GitHub API を使用して数値のチーム ID を検索します。チーム ID は、|at| ユーザーインターフェイスの必須フィールドに投入するために使用されます。"
+
+#: ../../source/social_auth.rst:111
+msgid "Click the **GitHub Team** tab."
+msgstr "**GitHub チーム** タブをクリックします。"
+
+#: ../../source/social_auth.rst:113
+msgid "The **GitHub Team OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub チーム OAuth2 コールバック URL** フィールドには、事前に情報が入力されており、編集できません。アプリケーションを登録すると、GitHub ではクライアント ID およびクライアントシークレットが表示されます。"
+
+#: ../../source/social_auth.rst:115
+msgid "Click **Edit** and copy and paste GitHub's Client ID into the **GitHub Team OAuth2 Key** field."
+msgstr "**編集** をクリックし、GitHub のクライアント ID を **GitHub チーム OAuth2 キー** フィールドにコピーアンドペーストします。"
+
+#: ../../source/social_auth.rst:117
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Team OAuth2 Secret** field."
+msgstr "GitHub のクライアントシークレットを **GitHub チームの OAuth2 シークレット** フィールドにコピーアンドペーストします。"
+
+#: ../../source/social_auth.rst:119
+msgid "Copy and paste GitHub's team ID in the **GitHub Team ID** field."
+msgstr "GitHub のチーム ID をコピーして **GitHub チーム ID** フィールドに貼り付けます。"
+
+#: ../../source/social_auth.rst:125
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Team logo to allow logging in with those credentials."
+msgstr "認証が正しく設定されたかどうかは、|at| からログアウトします。ログイン画面に、GitHub チームのロゴが表示され、GitHub の認証情報を使用してログインできるようになっていることを確認してください。"
+
+#: ../../source/social_auth.rst:131
+msgid "GitHub Enterprise settings"
+msgstr "GitHub Enterprise の設定"
+
+#: ../../source/social_auth.rst:136
+msgid "To set up social authentication for a GitHub Enterprise, you will need to obtain a GitHub Enterprise URL, an API URL, OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "GitHub Enterprise のソーシャル認証を設定するには、GitHub Enterprise URL、API URL、Web アプリケーションの OAuth2 キーとシークレットを取得する必要があります。URL を取得するには、GitHub のドキュメント `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ を参照してください。キーとシークレットを取得するには、最初に企業所有のアプリケーションを ``https://github.com/organizations/<yourorg>/settings/applications`` で登録する必要があります。アプリケーションを登録するには、承認コールバック URL で指定する必要があります。これは、詳細ページに表示される **コールバック URL** です。github.com ではなくサイトでホストされているため、通信する認証アダプターを指定する必要があります。"
+
+#: ../../source/social_auth.rst:138
+#: ../../source/social_auth.rst:175
+#: ../../source/social_auth.rst:214
+msgid "Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. The OAuth2 key (Client ID) and secret (Client Secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "各キーとシークレットは一意のアプリケーションに属している必要があり、異なる認証バックエンド間で共有または再利用することはできません。OAuth2 キー (クライアント ID) とシークレット (クライアントシークレット) は、|at|ユーザーインターフェイスで必要なフィールドを指定するために使用されます。"
+
+#: ../../source/social_auth.rst:144
+msgid "Click the **GitHub Enterprise** tab."
+msgstr "**GitHub Enterprise** タブをクリックします。"
+
+#: ../../source/social_auth.rst:146
+msgid "The **GitHub Enterprise OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise OAuth2 コールバック URL** フィールドには、事前に情報が入力されており、編集できません。アプリケーションを登録すると、GitHub ではクライアント ID およびクライアントシークレットが表示されます。"
+
+#: ../../source/social_auth.rst:148
+msgid "Click **Edit** to configure GitHub Enterprise settings."
+msgstr "GitHub Enterprise の設定を行うには、**編集** をクリックします。"
+
+#: ../../source/social_auth.rst:150
+msgid "In the **GitHub Enterprise URL** field, enter the hostname of the GitHub Enterprise instance (e.g., https://github.example.com)."
+msgstr "**GitHub Enterprise URL** フィールドに、GitHub Enterprise インスタンスのホスト名を入力します (例: https://github.example.com)。"
+
+#: ../../source/social_auth.rst:152
+msgid "In the **GitHub Enterprise API URL** field, enter the API URL of the GitHub Enterprise instance (e.g., https://github.example.com/api/v3)"
+msgstr "**GitHub Enterprise API URL** フィールドに、GitHub Enterprise インスタンスの API URL を入力します (例: https://github.example.com/api/v3)。"
+
+#: ../../source/social_auth.rst:154
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise OAuth2 Key** field."
+msgstr "GitHub のクライアント ID をコピーして **GitHub Enterprise OAuth2 キー** フィールドに貼り付けます。"
+
+#: ../../source/social_auth.rst:156
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise OAuth2 Secret** field."
+msgstr "GitHub のクライアントシークレットをコピーして **GitHub Enterprise OAuth2 シークレット** フィールドに貼り付けます。"
+
+#: ../../source/social_auth.rst:162
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise logo to allow logging in with those credentials."
+msgstr "認証が正しく設定されたかどうかは、|at| からログアウトします。ログイン画面に、GitHub Enterprise のロゴが表示され、GitHub の認証情報を使用してログインできるようになっていることを確認してください。"
+
+#: ../../source/social_auth.rst:168
+msgid "GitHub Enterprise Organization settings"
+msgstr "GitHub Enterprise の組織設定"
+
+#: ../../source/social_auth.rst:173
+msgid "To set up social authentication for a GitHub Enterprise Org, you will need to obtain a GitHub Enterprise Org URL, an Org API URL, an Org OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise organization-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "GitHub Enterprise 組織のソーシャル認証を設定するには、GitHub Enterprise 組織 URL、API URL、Web アプリケーションの OAuth2 キーとシークレットを取得する必要があります。URL を取得するには、GitHub のドキュメント `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ を参照してください。キーとシークレットを取得するには、最初に企業組織所有のアプリケーションを ``https://github.com/organizations/<yourorg>/settings/applications`` で登録する必要があります。アプリケーションを登録するには、承認コールバック URL で指定する必要があります。これは、詳細ページに表示される **コールバック URL** です。github.com ではなくサイトでホストされているため、通信する認証アダプターを指定する必要があります。"
+
+#: ../../source/social_auth.rst:181
+msgid "Click the **GitHub Enterprise Organization** tab."
+msgstr "**GitHub Enterprise 組織** タブをクリックします。"
+
+#: ../../source/social_auth.rst:183
+msgid "The **GitHub Enterprise Organization OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise 組織 OAuth2 コールバック URL** フィールドはすでに事前入力されており、編集できません。アプリケーションが登録されると、GitHub はクライアント ID とクライアントシークレットを表示します。"
+
+#: ../../source/social_auth.rst:185
+msgid "Click **Edit** to configure GitHub Enterprise Organization settings."
+msgstr "GitHub Enterprise 組織の設定を行うには、**編集** をクリックします。"
+
+#: ../../source/social_auth.rst:187
+msgid "In the **GitHub Enterprise Organization URL** field, enter the hostname of the GitHub Enterprise Org instance (e.g., https://github.orgexample.com)."
+msgstr "**GitHub Enterprise 組織 URL** フィールドに、GitHub Enterprise 組織インスタンスのホスト名を入力します (例: https://github.orgexample.com)。"
+
+#: ../../source/social_auth.rst:189
+msgid "In the **GitHub Enterprise Organization API URL** field, enter the API URL of the GitHub Enterprise Org instance (e.g., https://github.orgexample.com/api/v3)"
+msgstr "**GitHub Enterprise 組織 API URL** フィールドに、GitHub Enterprise 組織インスタンスの API URL を入力します (例: https://github.orgexample.com/api/v3)。"
+
+#: ../../source/social_auth.rst:191
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise Organization OAuth2 Key** field."
+msgstr "GitHub のクライアント ID をコピーして **GitHub Enterprise 組織 OAuth2 キー** フィールドに貼り付けます。"
+
+#: ../../source/social_auth.rst:193
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise Organization OAuth2 Secret** field."
+msgstr "GitHub のクライアントシークレットをコピーして **GitHub Enterprise 組織 OAuth2 シークレット** フィールドに貼り付けます。"
+
+#: ../../source/social_auth.rst:195
+msgid "Enter the name of your GitHub Enterprise organization, as used in your organization's URL (e.g., https://github.com/<yourorg>/) in the **GitHub Enterprise Organization Name** field."
+msgstr "**GitHub Enterprise 組織名** フィールドに、組織の URL で使用されている GitHub Enterprise 組織の名前を入力します (例:https://github.com/<yourorg>/)。"
+
+#: ../../source/social_auth.rst:201
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise Organization logo to allow logging in with those credentials."
+msgstr "認証が正しく設定されたかどうかは、|at| からログアウトします。ログイン画面に、GitHub Enterprise 組織のロゴが表示され、それらの認証情報を使用してログインできるようになっていることを確認してください。"
+
+#: ../../source/social_auth.rst:207
+msgid "GitHub Enterprise Team settings"
+msgstr "GitHub Enterprise チームの設定"
+
+#: ../../source/social_auth.rst:212
+msgid "To set up social authentication for a GitHub Enterprise teams, you will need to obtain a GitHub Enterprise Org URL, an Org API URL, an Org OAuth2 key and secret for a web application. To obtain the URLs, refer to the GitHub documentation on `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ . To obtain the  key and secret, you must first register your enterprise team-owned application at ``https://github.com/organizations/<yourorg>/settings/applications``. In order to register the application, you must supply it with your Authorization callback URL, which is the **Callback URL** shown in the Details page. Because its hosted on site and not github.com, you must specify which auth adapter it will talk to."
+msgstr "GitHub Enterprise チームのソーシャル認証を設定するには、GitHub Enterprise 組織 URL、組織 API URL、Web アプリケーションの組織 OAuth2 キーとシークレットを取得する必要があります。URL を取得するには、GitHub のドキュメント `GitHub Enterprise administration <https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin>`_ を参照してください。キーとシークレットを取得するには、最初に企業チーム所有のアプリケーションを ``https://github.com/organizations/<yourorg>/settings/applications`` で登録する必要があります。アプリケーションを登録するには、承認コールバック URL で指定する必要があります。これは、詳細ページに表示される **コールバック URL** です。github.com ではなくサイトでホストされているため、通信する認証アダプターを指定する必要があります。"
+
+#: ../../source/social_auth.rst:222
+msgid "Click the **GitHub Enterprise Team** tab."
+msgstr "**GitHub Enterprise チーム** タブをクリックします。"
+
+#: ../../source/social_auth.rst:224
+msgid "The **GitHub Enterprise Team OAuth2 Callback URL** field is already pre-populated and non-editable.  Once the application is registered, GitHub displays the Client ID and Client Secret."
+msgstr "**GitHub Enterprise チーム OAuth2 コールバック URL** フィールドには、事前に情報が入力されており、編集できません。アプリケーションを登録すると、GitHub ではクライアント ID およびクライアントシークレットが表示されます。"
+
+#: ../../source/social_auth.rst:226
+msgid "Click **Edit** to configure GitHub Enterprise Team settings."
+msgstr "GitHub Enterprise チームの設定を行うには、**編集** をクリックします。"
+
+#: ../../source/social_auth.rst:228
+msgid "In the **GitHub Enterprise Team URL** field, enter the hostname of the GitHub Enterprise team instance (e.g., https://github.teamexample.com)."
+msgstr "**GitHub Enterprise チーム URL** フィールドに、GitHub Enterprise チームインスタンスのホスト名を入力します (例: https://github.teamexample.com)。"
+
+#: ../../source/social_auth.rst:230
+msgid "In the **GitHub Enterprise Team API URL** field, enter the API URL of the GitHub Enterprise team instance (e.g., https://github.teamexample.com/api/v3)"
+msgstr "**GitHub Enterprise チーム API URL** フィールドに、GitHub Enterprise チームインスタンスの API URL を入力します (例: https://github.teamexample.com/api/v3)。"
+
+#: ../../source/social_auth.rst:232
+msgid "Copy and paste GitHub's Client ID into the **GitHub Enterprise Team OAuth2 Key** field."
+msgstr "GitHub のクライアント ID をコピーして **GitHub Enterprise チーム OAuth2 キー** フィールドに貼り付けます。"
+
+#: ../../source/social_auth.rst:234
+msgid "Copy and paste GitHub's Client Secret into the **GitHub Enterprise Team OAuth2 Secret** field."
+msgstr "GitHub のクライアントシークレットをコピーして **GitHub Enterprise チーム OAuth2 シークレット** フィールドに貼り付けます。"
+
+#: ../../source/social_auth.rst:236
+msgid "Copy and paste GitHub's team ID in the **GitHub Enterprise Team ID** field."
+msgstr "GitHub のチーム ID をコピーして **GitHub Enterprise チーム ID** フィールドに貼り付けます。"
+
+#: ../../source/social_auth.rst:242
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the GitHub Enterprise Teams logo to allow logging in with those credentials."
+msgstr "認証が正しく設定されたかどうかは、|at| からログアウトします。ログイン画面に、GitHub Enterprise チームのロゴが表示され、GitHub の認証情報を使用してログインできるようになっていることを確認してください。"
+
+#: ../../source/social_auth.rst:250
+msgid "Google OAuth2 settings"
+msgstr "Google OAuth2 の設定"
+
+#: ../../source/social_auth.rst:255
+msgid "To set up social authentication for Google, you will need to obtain an OAuth2 key and secret for a web application. To do this, you must first create a project and set it up with Google. Refer to https://support.google.com/googleapi/answer/6158849 for instructions. If you already completed the setup process, you can access those credentials by going to the Credentials section of the `Google API Manager Console <https://console.developers.google.com/>`_. The OAuth2 key (Client ID) and secret (Client secret) will be used to supply the required fields in the |at| User Interface."
+msgstr "Google のソーシャル認証を設定するには、Web アプリケーションの OAuth2 キーとシークレットを取得する必要があります。これには、最初にプロジェクトを作成して、Google で設定する必要があります。方法は https://support.google.com/googleapi/answer/6158849 を参照してください。設定プロセスが完了している場合には、`Google API Manager Console <https://console.developers.google.com/>`_ の Credntials のセクションに移動すると、これらの認証を利用することができます。OAuth2 キー (Client ID) および シークレット (クライアントシークレット) は、|at| ユーザーインターフェイスの必須フィールドで使用します。"
+
+#: ../../source/social_auth.rst:259
+msgid "On the left side of the Settings window, click **Google OAuth 2 settings** from the list of Authentication options."
+msgstr "設定ウィンドウの左側で、認証オプションの一覧から **Google OAuth2 の設定** をクリックします。"
+
+#: ../../source/social_auth.rst:261
+msgid "The **Google OAuth2 Callback URL** field is already pre-populated and non-editable."
+msgstr "**Google OAuth2 コールバック URL** フィールドには、事前に情報が入力されており、編集できません。"
+
+#: ../../source/social_auth.rst:263
+msgid "The following fields are also pre-populated. If not, use the credentials Google supplied during the web application setup process, and look for the values with the same format as the ones shown in the example below:"
+msgstr "以下のフィールドは事前に入力されています。入力されていない場合には、Web アプリケーションの設定プロセスで Google が提示した認証情報を使用し、以下の例と同じ形式の値を探します。"
+
+#: ../../source/social_auth.rst:265
+msgid "Click **Edit** and copy and paste Google's Client ID into the **Google OAuth2 Key** field."
+msgstr "**編集** をクリックし、Google のクライアント ID を **Google OAuth2 キー** フィールドにコピーアンドペーストします。"
+
+#: ../../source/social_auth.rst:267
+msgid "Copy and paste Google's Client secret into the **Google OAuth2 Secret** field."
+msgstr "Google のクライアントシークレットを **Google OAuth2 シークレット** フィールドにコピーアンドペーストします。"
+
+#: ../../source/social_auth.rst:271
+msgid "To complete the remaining optional fields, refer to the tooltips in each of the fields for instructions and required format."
+msgstr "残りの任意フィールドを入力するには、説明や必要な形式について各フィールドのヒントを参照してください。"
+
+#: ../../source/social_auth.rst:277
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the Google logo to indicate it as a alternate method of logging into |at|."
+msgstr "認証が正しく設定されていることを確認するには、|at| からログアウトしてください。|at| への別のログイン方法として、ログイン画面に Google のロゴが表示されているはずです。"
+
+#: ../../source/social_auth.rst:288
+msgid "Organization and Team Mapping"
+msgstr "組織およびチームマッピング"
+
+#: ../../source/social_auth.rst:297
+msgid "Organization mapping"
+msgstr "組織マッピング"
+
+#: ../../source/social_auth.rst:299
+msgid "You will need to control which users are placed into which controller organizations based on their username and email address (mapping out your organization admins/users from social or enterprise-level authentication accounts)."
+msgstr "ユーザー名およびメールアドレスをもとに、どのユーザーがどのコントローラー組織に配置されるかを制御する必要があります (ソーシャルまたはエンタープライズレベルの認証アカウントからの組織の管理者/ユーザーをマッピング)。"
+
+#: ../../source/social_auth.rst:301
+msgid "Dictionary keys are organization names. Organizations will be created, if not already present and if the license allows for multiple organizations. Otherwise, the single default organization is used regardless of the key."
+msgstr "ディクショナリーキーとは組織名のことです。組織が存在しない場合や、対象のライセンスで複数の組織に対応できる場合には、組織が作成されます。それ以外の場合は、キーが何であっても、単一のデフォルトの組織が使用されます。"
+
+#: ../../source/social_auth.rst:303
+msgid "Values are dictionaries defining the options for each organization's membership.  For each organization, it is possible to specify which users are automatically users of the organization and also which users can administer the organization."
+msgstr "値は、各組織のメンバーシップのオプションを定義するディクショナリーです。各組織に対して、自動的に組織に所属するユーザーや、組織の管理ができるユーザーを指定することができます。"
+
+#: ../../source/social_auth.rst:305
+msgid "**admins**: None, True/False, string or list/tuple of strings."
+msgstr "**admins**: None、True/False、文字列または文字列のリスト/タプル"
+
+#: ../../source/social_auth.rst:307
+msgid "If **None**, organization admins will not be updated."
+msgstr "**None** の場合は、組織の管理者は更新されません。"
+
+#: ../../source/social_auth.rst:308
+msgid "If **True**, all users using account authentication will automatically be added as admins of the organization."
+msgstr "**True** の場合は、アカウント認証を使用する全ユーザーが自動的に組織の管理者として追加されます。"
+
+#: ../../source/social_auth.rst:309
+msgid "If **False**, no account authentication users will be automatically added as admins of the organization."
+msgstr "**False** の場合は、組織の管理者として追加されるアカウント認証ユーザーはありません。"
+
+#: ../../source/social_auth.rst:310
+msgid "If a string or list of strings, specifies the usernames and emails for users who will be added to the organization. Strings beginning and ending with ``/`` will be compiled into regular expressions; modifiers ``i`` (case-insensitive) and ``m`` (multi-line) may be specified after the ending ``/``."
+msgstr "文字列または文字列のリストの場合は、組織に追加予定のユーザーのユーザー名およびメールアドレスを指定します。末尾と文頭が ``/`` の文字列は、通常の表現にコンパイルされ、修飾子 ``i`` (大文字、小文字の区別あり) と ``m`` (複数行) は末尾の ``/`` の後ろに指定することができます。"
+
+#: ../../source/social_auth.rst:312
+msgid "**remove_admins**: True/False. Defaults to **True**."
+msgstr "**remove_admins**: True/False。デフォルト値は **True** です。"
+
+#: ../../source/social_auth.rst:314
+msgid "When **True**, a user who does not match is removed from the organization's administrative list."
+msgstr "**True** の場合は、合致がないユーザーは、組織の管理者リストから削除されます。"
+
+#: ../../source/social_auth.rst:316
+msgid "**users**: None, True/False, string or list/tuple of strings. Same rules apply as for **admins**."
+msgstr "**users**: None、True/False、文字列または文字列のリスト/タプル。**admins** と同じルールが適用されます。"
+
+#: ../../source/social_auth.rst:318
+msgid "**remove_users**: True/False. Defaults to **True**. Same rules apply as for **remove_admins**."
+msgstr "**remove_users**: True/False。デフォルト値は **True** で、**remove_admins** と同じルールが適用されます。"
+
+#: ../../source/social_auth.rst:337
+msgid "Organization mappings may be specified separately for each account authentication backend.  If defined, these configurations will take precedence over the global configuration above."
+msgstr "アカウント認証のバックエンドごとに、組織マッピングを指定することができます。定義した場合には、上記のグローバル設定より、これらの設定が優先されます。"
+
+#: ../../source/social_auth.rst:349
+msgid "Team mapping"
+msgstr "チームマッピング"
+
+#: ../../source/social_auth.rst:351
+msgid "Team mapping is the mapping of team members (users) from social auth accounts. Keys are team names (will be created if not present). Values are dictionaries of options for each team's membership, where each can contain the following parameters:"
+msgstr "チームマッピングは、ソーシャル認証アカウントからのチームメンバー (ユーザー) のマッピングです。キーはチーム名です (存在しない場合に作成されます)。値は、各チームのメンバーシップに関するオプションのディクショナリーとなります。各値には以下のパラメーターを含めることができます。"
+
+#: ../../source/social_auth.rst:353
+msgid "**organization**: string. The name of the organization to which the team belongs.  The team will be created if the combination of organization and team name does not exist.  The organization will first be created if it does not exist.  If the license does not allow for multiple organizations, the team will always be assigned to the single default organization."
+msgstr "**組織**: 文字列。チームが所属する組織の名前。チームは、組織とチームの組み合わせが存在しない場合には作成されます。組織が存在しない場合には、先に作成されます。ライセンスが複数の組織に対応しない場合は、チームは常に、単一のデフォルトの組織に割り当てられます。"
+
+#: ../../source/social_auth.rst:359
+msgid "**users**: None, True/False, string or list/tuple of strings."
+msgstr "**users**: None、True/False、文字列または文字列のリスト/タプル"
+
+#: ../../source/social_auth.rst:361
+msgid "If **None**, team members will not be updated."
+msgstr "**None** の場合には、チームメンバーは更新されません。"
+
+#: ../../source/social_auth.rst:362
+msgid "If **True**/**False**, all social auth users will be added/removed as team members."
+msgstr "**True/False** の場合には、全ソーシャル認証ユーザーがチームメンバーとして追加/削除されます。"
+
+#: ../../source/social_auth.rst:363
+msgid "If a string or list of strings, specifies expressions used to match users. User will be added as a team member if the username or email matches. Strings beginning and ending with ``/`` will be compiled into regular expressions; modifiers ``i`` (case-insensitive) and ``m`` (multi-line) may be specified after the ending ``/``."
+msgstr "文字列または文字列のリストの場合は、ユーザーの照合に使用する表現を指定します。ユーザー名またはメールが合致すると、そのユーザーはチームメンバーとして追加されます。末尾と文頭が ``/`` の文字列は、通常の表現にコンパイルされ、修飾子 ``i`` (大文字、小文字の区別あり) と ``m`` (複数行) は末尾の ``/`` の後ろに指定することができます。"
+
+#: ../../source/social_auth.rst:365
+msgid "**remove**: True/False. Defaults to **True**. When **True**, a user who does not match the rules above is removed from the team."
+msgstr "**remove**: True/False。デフォルト値は **True** です。**True** の場合は、上記のルールに一致しないユーザーは、チームから削除されます。"
+
+#: ../../source/social_auth.rst:383
+msgid "Team mappings may be specified separately for each account authentication backend, based on which of these you setup.  When defined, these configurations take precedence over the the global configuration above."
+msgstr "アカウント認証のバックエンドごとに、設定した内容をもとにチームマッピングを指定することができます。定義した場合には、上記のグローバル設定より、これらの設定が優先されます。"
+
+#: ../../source/social_auth.rst:393
+msgid "Uncomment the line below (i.e. set ``SOCIAL_AUTH_USER_FIELDS`` to an empty list) to prevent new user accounts from being created.  Only users who have previously logged in to the controller using social or enterprise-level authentication or have a user account with a matching email address will be able to login."
+msgstr "以下の行のコメント設定を解除 (つまり ``SOCIAL_AUTH_USER_FIELDS`` を空のリストに設定) して、新規アカウントが作成されないようにします。ソーシャル認証またはエンタープライズレベルの認証でコントローラーにログインしたことのあるユーザーまたはユーザーアカウントのメールアドレスが一致するユーザーのみがログインできます。"
+

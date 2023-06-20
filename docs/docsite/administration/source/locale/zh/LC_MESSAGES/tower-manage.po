@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tower-manage.rst:4
+msgid "The *awx-manage* Utility"
+msgstr "*awx-manage* 工具程序"
+
+#: ../../source/tower-manage.rst:9
+msgid "The ``awx-manage`` utility is used to access detailed internal information of the controller. Commands for ``awx-manage`` should run as the ``awx`` or ``root`` user."
+msgstr "``awx-manage`` 工具用于访问控制器的详细内部信息。``awx-manage`` 的命令应该以 ``awx`` 或 ``root`` 用户身份运行。"
+
+#: ../../source/tower-manage.rst:12
+msgid "Running awx-manage commands via playbook is not recommended or supported."
+msgstr "不建议（不支持）通过 playbook 运行 awx-manage 命令。"
+
+#: ../../source/tower-manage.rst:15
+msgid "Inventory Import"
+msgstr "清单导入"
+
+#: ../../source/tower-manage.rst:20
+msgid "``awx-manage`` is a mechanism by which a controller administrator can import inventory directly into the controller, for those who cannot use Custom Inventory Scripts."
+msgstr "``awx-manage`` 是控制器管理员用于直接将清单导入控制器的机制，适合那些无法使用自定义清单脚本的用户。"
+
+#: ../../source/tower-manage.rst:22
+msgid "To use ``awx-manage`` properly, you must first create an inventory in the controller to use as the destination for the import."
+msgstr "要正确使用 ``awx-manage``，您必须首先在控制器中创建清单，以用作导入的目的地。"
+
+#: ../../source/tower-manage.rst:24
+msgid "For help with ``awx-manage``, run the following command: ``awx-manage inventory_import [--help]``"
+msgstr "要获得 ``awx-manage`` 的帮助信息，请运行以下命令：``awx-manage inventory_import [--help]``"
+
+#: ../../source/tower-manage.rst:26
+msgid "The ``inventory_import`` command synchronizes a controller inventory object with a text-based inventory file, dynamic inventory script, or a directory of one or more of the above as supported by core Ansible."
+msgstr "``inventory_import`` 命令将控制器清单对象与基于文本的清单文件、动态清单脚本或者以上核心 Ansible 支持的一个或多个项的目录进行同步。"
+
+#: ../../source/tower-manage.rst:28
+msgid "When running this command, specify either an ``--inventory-id`` or ``--inventory-name``, and the path to the Ansible inventory source (``--source``)."
+msgstr "在运行此命令时，请指定 ``--inventory-id`` 或 ``--inventory-name``，或指定到 Ansible 清单源 (``--source``) 的路径。"
+
+#: ../../source/tower-manage.rst:34
+msgid "By default, inventory data already stored in the controller blends with data from the external source. To use only the external data, specify ``--overwrite``. To specify that any existing hosts get variable data exclusively from the ``--source``, specify ``--overwrite_vars``. The default behavior adds any new variables from the external source, overwriting keys that already exist, but preserves any variables that were not sourced from the external data source."
+msgstr "默认情况下，已存储在控制器的清单数据与来自外部来源的数据合并。要仅使用外部数据，请指定 ``--overwrite``。要指定任何现有主机只从 ``--source`` 获取变量数据，请指定 ``--overwrite_vars``。默认行为从外部源添加任何新变量，覆盖已存在的键值，但保留所有不是来自外部数据源的变量。"
+
+#: ../../../common/source/overwrite_var_note_2-4-0.rst:3
+msgid "Edits and additions to Inventory host variables persist beyond an inventory sync as long as ``--overwrite_vars`` is **not** set."
+msgstr "只要 ``--overwrite_vars`` **没有**设置，对清单进行同步后编辑和添加的 Inventory 主机变量仍然会保持。"
+
+#: ../../source/tower-manage.rst:45
+msgid "Cleanup of old data"
+msgstr "清理旧数据"
+
+#: ../../source/tower-manage.rst:50
+msgid "``awx-manage`` has a variety of commands used to clean old data from the controller. The controller administrators can use the controller Management Jobs interface for access or use the command line."
+msgstr "``awx-manage`` 具有各种命令用于从控制器清理旧数据。控制器管理员可以使用控制器管理作业界面访问或使用命令行。"
+
+#: ../../source/tower-manage.rst:52
+msgid "``awx-manage cleanup_jobs [--help]``"
+msgstr "``awx-manage cleanup_jobs [--help]``"
+
+#: ../../source/tower-manage.rst:54
+msgid "This permanently deletes the job details and job output for jobs older than a specified number of days."
+msgstr "这会永久删除超过指定天数的作业详情和作业输出。"
+
+#: ../../source/tower-manage.rst:56
+msgid "``awx-manage cleanup_activitystream [--help]``"
+msgstr "``awx-manage cleanup_activitystream [--help]``"
+
+#: ../../source/tower-manage.rst:58
+msgid "This permanently deletes any :ref:`ug_activitystreams` data older than a specific number of days."
+msgstr "这会永久删除超过指定天数的任何 :ref:`ug_activitystreams` 数据。"
+
+#: ../../source/tower-manage.rst:61
+msgid "Cluster management"
+msgstr "集群管理"
+
+#: ../../source/tower-manage.rst:66
+msgid "Refer to the :ref:`ag_clustering` section for details on the ``awx-manage provision_instance`` and ``awx-manage deprovision_instance`` commands."
+msgstr "如需 ``awx-manage provision_instance`` 和 ``awx-manage deprovision_instance`` 命令的详情，请参阅 :ref:`ag_clustering` 部分。"
+
+#: ../../source/tower-manage.rst:72
+msgid "Do not run other ``awx-manage`` commands unless instructed by Ansible Support."
+msgstr "在一般情况下，请不要运行其他 ``awx-manage`` 命令。"
+
+#: ../../source/tower-manage.rst:78
+msgid "Token and session management"
+msgstr "令牌和会话管理"
+
+#: ../../source/tower-manage.rst:84
+msgid "|at| supports the following commands for OAuth2 token management:"
+msgstr "|at| 支持以下 OAuth2 令牌管理命令："
+
+#: ../../source/tower-manage.rst:91
+msgid "``create_oauth2_token``"
+msgstr "``create_oauth2_token``"
+
+#: ../../source/tower-manage.rst:93
+msgid "Use this command to create OAuth2 tokens (specify actual username for ``example_user`` below):"
+msgstr "使用这个命令创建 OAuth2 令牌（指定以下 ``example_user`` 的实际用户名）："
+
+#: ../../source/tower-manage.rst:101
+msgid "Make sure you provide a valid user when creating tokens. Otherwise, you will get an error message that you tried to issue the command without specifying a user, or supplying a username that does not exist."
+msgstr "在创建令牌时，请确保提供有效用户。否则，您会得到一个错误消息：您在未指定用户的情况下尝试发出命令，或者提供的用户名不存在。"
+
+#: ../../source/tower-manage.rst:108
+msgid "``revoke_oauth2_tokens``"
+msgstr "``revoke_oauth2_tokens``"
+
+#: ../../source/tower-manage.rst:110
+msgid "Use this command to revoke OAuth2 tokens (both application tokens and personal access tokens (PAT)). By default, it revokes all application tokens (but not their associated refresh tokens), and revokes all personal access tokens. However, you can also specify a user for whom to revoke all tokens."
+msgstr "使用这个命令来撤销 OAuth2 令牌（应用程序令牌和个人访问令牌 (PAT) ）。默认情况下，它会撤销所有应用令牌（但不含其关联的刷新令牌），并撤销所有个人访问令牌。但是，您还可以指定用户为其撤销所有令牌。"
+
+#: ../../source/tower-manage.rst:112
+msgid "To revoke all existing OAuth2 tokens:"
+msgstr "撤销所有现有的 OAuth2 令牌："
+
+#: ../../source/tower-manage.rst:118
+msgid "To revoke all OAuth2 tokens & their refresh tokens:"
+msgstr "撤销所有 OAuth2 令牌及其刷新令牌："
+
+#: ../../source/tower-manage.rst:124
+msgid "To revoke all OAuth2 tokens for the user with ``id=example_user`` (specify actual username for ``example_user`` below):"
+msgstr "使用 ``id=example_user``（指定以下 ``example_user`` 的实际用户名）为用户撤销所有 OAuth2 令牌："
+
+#: ../../source/tower-manage.rst:130
+msgid "To revoke all OAuth2 tokens and refresh token for the user with ``id=example_user``:"
+msgstr "使用 ``id=example_user`` 为用户撤销所有 OAuth2 令牌和刷新令牌 ："
+
+#: ../../source/tower-manage.rst:139
+msgid "``cleartokens``"
+msgstr "``cleartokens``"
+
+#: ../../source/tower-manage.rst:141
+msgid "Use this command to clear tokens which have already been revoked. Refer to `Django's Oauth Toolkit documentation on cleartokens`_ for more detail."
+msgstr "使用此命令清理已撤销的令牌。如需详情，请参阅 `Django's Oauth Toolkit documentation on cleartokens`_。"
+
+#: ../../source/tower-manage.rst:147
+msgid "``expire_sessions``"
+msgstr "``expire_sessions``"
+
+#: ../../source/tower-manage.rst:149
+msgid "Use this command to terminate all sessions or all sessions for a specific user. Consider using this command when a user changes role in an organization, is removed from assorted groups in LDAP/AD, or the administrator wants to ensure the user can no longer execute jobs due to membership in these groups."
+msgstr "使用此命令终止所有会话或特定用户的所有会话。请在用户更改机构中的角色时使用此命令，从 LDAP/AD 中的分类组中删除，或者管理员要确保用户由于这些组中的成员资格而无法再执行作业。"
+
+#: ../../source/tower-manage.rst:156
+msgid "This command terminates all sessions by default. The users associated with those sessions will be consequently logged out. To only expire the sessions of a specific user, you can pass their username using the ``--user`` flag (specify actual username for ``example_user`` below):"
+msgstr "这个命令会默认终止所有会话。与这些会话关联的用户将随后注销。要仅使特定用户的会话过期，您可以使用 ``--user`` 标志传递其用户名（指定以下 ``example_user`` 的实际用户名）："
+
+#: ../../source/tower-manage.rst:165
+msgid "``clearsessions``"
+msgstr "``clearsessions``"
+
+#: ../../source/tower-manage.rst:167
+msgid "Use this command to delete all sessions that have expired. Refer to `Django's documentation on clearsessions`_ for more detail."
+msgstr "使用此命令删除所有已过期的会话，详情请参阅 `Django's documentation on clearsessions`_。"
+
+#: ../../source/tower-manage.rst:173
+msgid "For more information on OAuth2 token management in the controller user interface, see the :ref:`ug_applications_auth` section of the |atu|."
+msgstr "如需控制器用户界面中 OAuth2 令牌管理的更多信息，请参阅 |atu| 的 :ref:`ug_applications_auth` 部分。"
+
+#: ../../source/tower-manage.rst:177
+msgid "Analytics gathering"
+msgstr "分析收集"
+
+#: ../../source/tower-manage.rst:184
+msgid "Use this command to gather analytics on-demand outside of the predefined window (default is 4 hours):"
+msgstr "使用此命令在预定义的时间窗口外（默认为 4 小时）按需收集分析信息："
+
+#: ../../source/tower-manage.rst:191
+msgid "For customers with disconnected environments who want to collect usage information about unique hosts automated across a time period, use this command:"
+msgstr "对于那些希望在一段时间内自动收集有关唯一主机的使用信息，但处于一个断开连接的环境的用户，请使用以下命令："
+
+#: ../../source/tower-manage.rst:198
+msgid "The parameters ``--since`` and ``--until`` specify date ranges and are optional, but one of them has to be present. The ``--json`` flag specifies the output format and is optional."
+msgstr "参数 ``--since`` 和 ``--until`` 用于指定日期范围，它们是可选的，但需要最少有一个。``--json`` 标志指定输出格式且是可选的。"
+

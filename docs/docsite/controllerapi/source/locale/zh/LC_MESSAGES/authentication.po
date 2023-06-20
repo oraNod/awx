@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/authentication.rst:3
+msgid "Authentication Methods Using the API"
+msgstr "使用 API 的验证方法"
+
+#: ../../source/authentication.rst:11
+msgid "This chapter describes the numerous enterprise authentication methods, the best use case for each, and examples:"
+msgstr "本章论述了多个企业级身份验证方法，每个方法的最佳用例和示例："
+
+#: ../../source/authentication.rst:16
+msgid "|At| is designed for organizations to centralize and control their automation with a visual dashboard for out-of-the box control while providing a REST API to integrate with your other tooling on a deeper level. |At| supports a number of authentication methods to make it easy to embed the controller into existing tools and processes to help ensure the right people can access controller resources."
+msgstr "|At| 为机构提供了使用一个仪表板来以中央化的方式控制自动化的功能。处理开箱即用的控制功能还，它同时提供了一个 REST API 用于与您的其他工具进行深层次的集成。|At| 支持通过多种身份验证方法轻松将控制器嵌入到现有工具和进程中，以帮助适当的人员访问控制器资源。"
+
+#: ../../source/authentication.rst:21
+msgid "Session Authentication"
+msgstr "会话身份验证"
+
+#: ../../source/authentication.rst:23
+msgid "Session authentication is used when logging in directly to |at|’s API or UI to manually create resources (inventory, project, job template) and launch jobs in the browser. With this method, you can remain logged in for a prolonged period of time, not just for that HTTP request, but for instance, when browsing the UI or API in a browser like Chrome or Firefox. When a user logs in, a session cookie is created, which enables the user to remain logged in when navigating to different pages within the |at|. Below represents the communication that occurs between the client and server in a session."
+msgstr "当登录到 |at| 的 API 或 UI 时，使用会话身份验证来手动创建资源（清单、项目、作业模板）并在浏览器中启动作业。 使用此方法，您可以在一段时间内保持登录的状态（不仅仅在该 HTTP 请求中，对于使用 UI 进行浏览或在如 Chrome 或 Firefox 等浏览器中使用 API 时也时如此）。 当用户登录时，会创建一个会话 Cookie，当用户访问 |at| 中的不同页面时也让用户保持登录状态。 以下显示了客户端和服务器间的通信。"
+
+#: ../../source/authentication.rst:27
+msgid "Using the curl tool, you can see the activity that occurs when you log into the controller."
+msgstr "使用 curl 工具，您可以看到登录到控制器时发生的活动。"
+
+#: ../../source/authentication.rst:29
+msgid "GET to the ``/api/login/`` endpoint to grab the ``csrftoken`` cookie."
+msgstr "GET 到 ``/api/login/`` 端点以获取 ``csrftoken`` Cookie。"
+
+#: ../../source/authentication.rst:38
+msgid "POST to the ``/api/login/`` endpoint with username, password, and X-CSRFToken=<token-value>."
+msgstr "POST 到<token-value> 端点，使用用户名、密码和 X-CSRFToken=``/api/login/``。"
+
+#: ../../source/authentication.rst:49
+msgid "All of this is done by the |at| when you log in to the UI or API in the browser, and should only be used when authenticating in the browser. For programmatic integration with |at|, see :ref:`api_oauth2_auth`."
+msgstr "当您登陆到 UI 或在浏览器中使用 API时，所有这一切都由 |at| 完成，这只在浏览器中进行身份验证时才应使用。有关在程序中集成 |at| 的信息，请参阅 :ref:`api_oauth2_auth`。"
+
+#: ../../source/authentication.rst:51
+msgid "A typical response might look like:"
+msgstr "一个典型的响应可能类似如下："
+
+#: ../../source/authentication.rst:77
+msgid "When a user is successfully authenticated with this method, the server will respond with a header called ``X-API-Session-Cookie-Name``, indicating the configured name of the session cookie. The default value is ``awx_session_id`` which you can see later in the ``Set-Cookie`` headers."
+msgstr "当使用此方法成功验证用户后，服务器将生成一个名为 ``X-API-Session-Cookie-Name`` 的标头，指示会话 Cookie 的配置名称。默认值为 ``awx_session_id``，稍后您可以在 ``Set-Cookie`` 标头中看到。"
+
+#: ../../source/authentication.rst:81
+msgid "The session expiration time can be changed by specifying it in the ``SESSION_COOKIE_AGE`` parameter. Refer to :ref:`ag_session_limits` for further detail."
+msgstr "可以通过在 ``SESSION_COOKIE_AGE`` 参数中指定会话过期时间来更改会话过期时间。如需更多详情，请参阅 :ref:`ag_session_limits`。"
+
+#: ../../source/authentication.rst:86
+msgid "Basic Authentication"
+msgstr "基本身份验证"
+
+#: ../../source/authentication.rst:88
+msgid "Basic Authentication (Basic Auth) is stateless, thus the base64-encoded ``username`` and ``password`` must be sent along with each request via the Authorization header. This can be used for API calls from curl requests, python scripts, or individual requests to the API. :ref:`api_oauth2_auth` is recommended for accessing the API when at all possible."
+msgstr "基本身份验证(Basic Auth)是无状态的，因此，base64 编码的 ``username`` 和 ``password`` 必须通过授权标头与每个请求一起发送。这可用于来自 curl 请求、python 脚本的 API 调用，或单独的对 API 的请求。如果可能，建议使用 :ref:`api_oauth2_auth` 访问 API。"
+
+#: ../../source/authentication.rst:90
+msgid "Example with curl:"
+msgstr "使用 curl 的示例："
+
+#: ../../source/authentication.rst:99
+msgid "For more information about the Basic HTTP Authentication scheme, see `RFC 7617 <https://datatracker.ietf.org/doc/html/rfc7617>`_."
+msgstr "有关基本 HTTP 验证方案的详情，请参考 `RFC 7617 <https://datatracker.ietf.org/doc/html/rfc7617>`_。"
+
+#: ../../source/authentication.rst:103
+msgid "You can disable the Basic Auth for security purposes from the Miscellaneous Authentication settings of the controller UI Settings menu:"
+msgstr "您可以从控制器 UI 设置菜单的 Miscellaneous Authentication 设置中禁用 Basic Auth："
+
+#: ../../source/authentication.rst:110
+msgid "OAuth 2 Token Authentication"
+msgstr "OAuth 2 令牌身份验证"
+
+#: ../../source/authentication.rst:112
+msgid "OAuth (Open Authorization) is an open standard for token-based authentication and authorization. OAuth 2 authentication is commonly used when interacting with the controller API programmatically. Like Basic Auth, an OAuth 2 token is supplied with each API request via the Authorization header. Unlike Basic Auth, OAuth 2 tokens have a configurable timeout and are scopable. Tokens have a configurable expiration time and can be easily revoked for one user or for the entire |at| system by an admin if needed. This can be done with the :ref:`ag_manage_utility_revoke_tokens` management command, which is covered in more detail in |ata| or by using the API as explained in :ref:`ag_oauth2_token_revoke`."
+msgstr "OAuth（Open Authorization）是基于令牌的身份验证和授权的开放标准。 在以编程方式与控制器 API 交互时，通常使用 OAuth 2 身份验证。 与 Basic Auth 一样，通过 Authorization 标头向每个 API 请求提供一个 OAuth 2 令牌。 与 Basic Auth 不同的是，OAuth 2 令牌带有一个可配置的超时，并可以被限制。 令牌具有可配置的过期时间，管理员可以根据需要，为某个用户或整个 |at| 系统撤销。 这可以通过 :ref:`ag_manage_utility_revoke_tokens` 管理命令完成（在 |ata| 中进行了详细介绍），或者使用 API（如 :ref:`ag_oauth2_token_revoke` 所示）。"
+
+#: ../../source/authentication.rst:116
+msgid "By default, external users such as those created by SSO are not allowed to generate OAuth tokens for security purposes. This can be changed from the Miscellaneous Authentication settings of the controller UI Settings menu:"
+msgstr "出于安全目的，在默认情况下，不允许 SSO 创建的外部用户生成 OAuth 令牌。这可以通过在控制器 UI 设置菜单的 Miscellaneous Authentication 设置中进行更改："
+
+#: ../../source/authentication.rst:120
+msgid "The different methods for obtaining OAuth 2 Access Tokens in |at| are:"
+msgstr "在 |at| 中获取 OAuth 2 访问令牌的不同方法是："
+
+#: ../../source/authentication.rst:122
+msgid "Personal access tokens (PAT)"
+msgstr "个人访问令牌(PAT)"
+
+#: ../../source/authentication.rst:123
+msgid "Application Token: Password grant type"
+msgstr "应用程序令牌：密码授权类型"
+
+#: ../../source/authentication.rst:124
+msgid "Application Token: Implicit grant type"
+msgstr "应用程序令牌：隐性授权类型"
+
+#: ../../source/authentication.rst:125
+msgid "Application Token: Authorization Code grant type"
+msgstr "应用程序令牌：授权代码授权类型"
+
+#: ../../source/authentication.rst:127
+msgid "For more information on the above methods, see :ref:`ag_oauth2_token_auth` in the |ata|."
+msgstr "有关以上方法的更多信息，请参阅 |ata| 中的 :ref:`ag_oauth2_token_auth`。"
+
+#: ../../source/authentication.rst:130
+msgid "First, a user needs to create an OAuth 2 Access Token in the API or in their User’s **Tokens** tab in the UI. For further detail on creating them through the UI, see :ref:`ug_users_tokens`. For the purposes of this example, use the PAT method for creating a token in the API. Upon token creation, the user can set the scope."
+msgstr "首先，用户需要在 API 中创建 OAuth 2 访问令牌，或在 UI 中的用户 **Tokens** 标签页中创建 OAuth 2 访问令牌。有关通过 UI 创建它们的详情，请参阅 :ref:`ug_users_tokens`。有关本例中的 PAT 方法，使用 PAT 方法在 API 中创建令牌。令牌创建后，用户可以设置范围。"
+
+#: ../../source/authentication.rst:134
+msgid "The expiration time of the token can be configured system-wide. See :ref:`ag_use_oauth_pat` for more detail."
+msgstr "可以在系统范围内配置令牌的过期时间。如需更多详情，请参阅 :ref:`ag_use_oauth_pat`。"
+
+#: ../../source/authentication.rst:136
+msgid "Token authentication is best used for any programmatic use of the |at| API, such as Python scripts or tools like curl, as in the example for creating a PAT (without an associated application) below."
+msgstr "令牌身份验证最适合用于任何 |at| API 的编程使用，如 Python 脚本或 curl 等工具，如创建 PAT（不带关联应用程序）的示例。"
+
+#: ../../source/authentication.rst:138
+msgid "**Curl Example**"
+msgstr "**curl 示例**"
+
+#: ../../source/authentication.rst:145
+msgid "This call will return JSON data like:"
+msgstr "此调用将返回 JSON 数据，如下所示："
+
+#: ../../source/authentication.rst:149
+msgid "The value of the ``token`` property is what you can now use to perform a GET request for an |at| resource, e.g., Hosts."
+msgstr "``token`` 属性的值现在是您可以用来为 |at| 资源执行 GET 请求（如 Hosts）的值。"
+
+#: ../../source/authentication.rst:158
+msgid "Similarly, you can launch a job by making a POST to the job template that you want to launch."
+msgstr "同样，您可以通过向要启动的作业模板发出 POST 来启动作业。"
+
+#: ../../source/authentication.rst:169
+msgid "**Python Example**"
+msgstr "**Python 示例**"
+
+#: ../../source/authentication.rst:171
+msgid "`awxkit <https://pypi.org/project/awxkit/>`_ is an open source tool that makes it easy to use HTTP requests to access the |at| API. You can have awxkit acquire a PAT on your behalf by using the ``awxkit login`` command. Refer to the `AWX Command Line Interface <https://docs.ansible.com/automation-controller/latest/html/controllercli/index.html>`_ for more detail."
+msgstr "`awxkit <https://pypi.org/project/awxkit/>`_ 是一个开源工具，它可让您轻松使用 HTTP 请求来访问 |at| API。您可以使用 ``awxkit login`` 命令通过 awxkit 代表您 获取 PAT。如需更多详情，请参阅 `AWX Command Line Interface <https://docs.ansible.com/automation-controller/latest/html/controllercli/index.html>`_。"
+
+#: ../../source/authentication.rst:174
+msgid "For more information on how to use OAuth 2 in the |at| in the context of integrating external applications, see :ref:`ag_oauth2_token_auth` in the |ata|."
+msgstr "有关如何在集成外部应用程序的 |at| 中使用 OAuth 2 的更多信息，请参阅 |ata| 中的 :ref:`ag_oauth2_token_auth`。"
+
+#: ../../source/authentication.rst:176
+msgid "If you need to write custom requests, you can write a Python script using `Python library requests <https://pypi.org/project/requests/>`_, like in this example:"
+msgstr "如果您需要编写自定义请求，您可以使用 `Python library requests <https://pypi.org/project/requests/>`_ 编写 Python 脚本，如下例所示："
+
+#: ../../source/authentication.rst:197
+msgid "SSO Authentication"
+msgstr "SSO 身份验证"
+
+#: ../../source/authentication.rst:199
+msgid "Single sign-on (SSO) authentication methods are fundamentally different from other methods because the authentication of the user happens external to the |at|, like Google SSO, Azure SSO, SAML, or GitHub. For example, with GitHub SSO, GitHub is the single source of truth, which verifies your identity based on the username and password you gave the controller."
+msgstr "单点登录(SSO)身份验证方法与其它方法不同，因为用户的身份验证发生在 |at| 的外部，如 Google SSO、Azure SSO、SAML 或 GitHub。例如，GitHub SSO，GitHub 是真实的来源，它根据您发送了控制器的用户名和密码来验证您的身份。"
+
+#: ../../source/authentication.rst:201
+msgid "You can configure SSO authentication using the |at| inside a large organization with a central Identity Provider. Once you have configured an SSO method in the controller, a button for that SSO will be present on the login screen. If you click that button, it will redirect you to the Identity Provider, in this case GitHub, where you will present your credentials. If the Identity Provider verifies you successfully, then the controller will make a user linked to your GitHub user (if this is your first time logging in via this SSO method), and log you in."
+msgstr "您可以使用带有中央身份提供程序的大型机构中的 |at| 配置 SSO 身份验证。当您在控制器中配置了 SSO 方法后，该 SSO 的按钮将出现在登录屏幕中。如果您点击该按钮，它将把您重定向到身份提供程序，在 GitHub 中，您将会显示您的凭证。如果该身份提供程序成功验证了您的凭证，则控制器将会产生一个用户。"
+
+#: ../../source/authentication.rst:203
+msgid "For the various types of supported SSO authentication methods, see :ref:`ag_social_auth` and :ref:`ag_ent_auth` in the |ata|."
+msgstr "有关各种支持的 SSO 验证方法，请参阅 |ata| 中的 :ref:`ag_social_auth` 和 :ref:`ag_ent_auth`。"
+

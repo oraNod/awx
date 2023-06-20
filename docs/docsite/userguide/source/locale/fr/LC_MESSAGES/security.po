@@ -1,0 +1,635 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/security.rst:4
+msgid "Security"
+msgstr ""
+
+#: ../../source/security.rst:9
+msgid ""
+"The following sections will help you gain an understanding of how |at| "
+"handles and lets you control file system security."
+msgstr ""
+
+#: ../../source/security.rst:11
+msgid ""
+"All playbooks are executed via the ``awx`` file system user. For running "
+"jobs, Ansible Tower defaults to offering job isolation via Linux "
+"namespacing and chroots. This projection ensures jobs can only access "
+"playbooks and roles from the Project directory for that job template and "
+"common locations such as ``/opt``. Playbooks are not able to access "
+"roles, playbooks, or data from other Projects by default."
+msgstr ""
+
+#: ../../source/security.rst:13
+msgid ""
+"If you need to disable this protection (not recommended), you can edit "
+"``/etc/tower/settings.py`` and set ``AWX_PROOT_ENABLED`` to ``False``."
+msgstr ""
+
+#: ../../source/security.rst:16
+msgid ""
+"In this scenario, playbooks have access to the file system and all that "
+"that implies; therefore, users who have access to edit playbooks **must**"
+" be trusted."
+msgstr ""
+
+#: ../../source/security.rst:18
+msgid ""
+"For credential security, users may choose to upload locked SSH keys and "
+"set the unlock password to \"ask\". You can also choose to have the "
+"system prompt them for SSH credentials or sudo passwords rather than "
+"having the system store them in the database."
+msgstr ""
+
+#: ../../source/security.rst:22
+msgid "Playbook Access and Information Sharing"
+msgstr ""
+
+#: ../../source/security.rst:30
+msgid ""
+"By default, Tower's multi-tenant security prevents playbooks from reading"
+" files outside of their project directory. To share information between "
+"playbooks or to read files on the file system outside of their project "
+"directory, you must edit ``/etc/tower/settings.py`` and add the "
+"directories that are available to the ``AWX_PROOT_SHOW_PATHS`` setting."
+msgstr ""
+
+#: ../../source/security.rst:32
+msgid ""
+"The following paths, plus any user specified paths, are hidden by "
+"``AWX_PROOT_HIDE_PATHS``:"
+msgstr ""
+
+#: ../../source/security.rst:34
+msgid "``/etc/tower``"
+msgstr ""
+
+#: ../../source/security.rst:35
+msgid "``/var/lib/awx``"
+msgstr ""
+
+#: ../../source/security.rst:36
+msgid "``/var/log``"
+msgstr ""
+
+#: ../../source/security.rst:37
+msgid "``/tmp``"
+msgstr ""
+
+#: ../../source/security.rst:38
+msgid "``/var/lib/awx/projects``"
+msgstr ""
+
+#: ../../source/security.rst:39
+msgid "``/var/lib/awx/job_status``"
+msgstr ""
+
+#: ../../source/security.rst:42
+msgid ""
+"The following paths, plus any user specified paths, are shown by "
+"``AWX_PROOT_SHOW_PATHS``:"
+msgstr ""
+
+#: ../../source/security.rst:44
+msgid "``/var/lib/awx/projects/<current_project>``"
+msgstr ""
+
+#: ../../source/security.rst:45
+msgid "``/tmp/ansible_tower_xxxxx``"
+msgstr ""
+
+#: ../../source/security.rst:48
+msgid ""
+"The primary file you may want to add to ``AWX_PROOT_SHOW_PATHS`` is "
+"``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings "
+"defined there."
+msgstr ""
+
+#: ../../../common/source/proot_func_variables.rst:2
+msgid "PRoot functionality and variables"
+msgstr ""
+
+#: ../../../common/source/proot_func_variables.rst:9
+msgid ""
+"The PRoot functionality in |at| limits which directories on the Tower "
+"file system are available for playbooks to see and use during playbook "
+"runs. You may find that you need to customize your PRoot settings in some"
+" cases. To fine tune your usage of PRoot, there are certain variables "
+"that can be set:"
+msgstr ""
+
+#: ../../../common/source/proot_func_variables.rst:25
+msgid ""
+"To customize your PRoot settings, navigate to ``the "
+"/etc/tower/settings.py`` file. Once your changes have been saved, restart"
+" services with the ``ansible-tower-service restart`` command."
+msgstr ""
+
+#: ../../source/security.rst:55
+msgid "Role-Based Access Controls"
+msgstr ""
+
+#: ../../source/security.rst:61
+msgid ""
+"Role-Based Access Controls (RBAC) are built into Tower and allow Tower "
+"administrators to delegate access to server inventories, organizations, "
+"and more. Administrators can also centralize the management of various "
+"credentials, allowing end users to leverage a needed secret without ever "
+"exposing that secret to the end user. RBAC controls allow Tower to help "
+"you increase security and streamline management."
+msgstr ""
+
+#: ../../source/security.rst:63
+msgid ""
+"RBACs are easiest to think of in terms of Roles which define precisely "
+"who or what can see, change, or delete an \"object\" for which a specific"
+" capability is being set. In releases prior to |at| version 3.0, RBAC was"
+" thought of in terms of granting permissions to users or teams. Starting "
+"with Tower 3.0, RBAC is best thought of as granting roles to users or "
+"teams, which is a more intuitive approach."
+msgstr ""
+
+#: ../../source/security.rst:65
+msgid ""
+"There are a few main concepts that you should become familiar with "
+"regarding Tower's RBAC design--roles, resources, and users. Users can be "
+"members of a role, which gives them certain access to any resources "
+"associated with that role, or any resources associated with "
+"\"descendant\" roles."
+msgstr ""
+
+#: ../../source/security.rst:67
+msgid ""
+"A role is essentially a collection of capabilities. Users are granted "
+"access to these capabilities and Tower's resources through the roles to "
+"which they are assigned or through roles inherited through the role "
+"hierarchy."
+msgstr ""
+
+#: ../../source/security.rst:69
+msgid ""
+"Roles associate a group of capabilities with a group of users. All "
+"capabilities are derived from membership within a role. Users receive "
+"capabilities only through the roles to which they are assigned or through"
+" roles they inherit through the role hierarchy. All members of a role "
+"have all capabilities granted to that role. Within an organization, roles"
+" are relatively stable, while users and capabilities are both numerous "
+"and may change rapidly. Users can have many roles."
+msgstr ""
+
+#: ../../source/security.rst:73
+msgid "Role Hierarchy and Access Inheritance"
+msgstr ""
+
+#: ../../source/security.rst:75
+msgid ""
+"Imagine that you have an organization named \"SomeCompany\" and want to "
+"allow two people, \"Josie\" and \"Carter\", access to manage all the "
+"settings associated with that organization. You should made both people "
+"members of the organization's ``admin_role``."
+msgstr ""
+
+#: ../../source/security.rst:77
+msgid "|user-role-relationship|"
+msgstr ""
+
+#: ../../source/security.rst:81
+msgid ""
+"Often, you will have many Roles in a system and you will want some roles "
+"to include all of the capabilities of other roles. For example, you may "
+"want a System Administrator to have access to everything that an "
+"Organization Administrator has access to, who has everything that a "
+"Project Administrator has access to, and so on."
+msgstr ""
+
+#: ../../source/security.rst:83
+msgid "This concept is referred to as the 'Role Hierarchy':"
+msgstr ""
+
+#: ../../source/security.rst:85
+msgid "Parent roles get all capabilities bestowed on any child roles"
+msgstr ""
+
+#: ../../source/security.rst:86
+msgid ""
+"Members of roles automatically get all capabilities for the role they are"
+" a member of, as well as any child roles."
+msgstr ""
+
+#: ../../source/security.rst:88
+msgid ""
+"The Role Hierarchy is represented by allowing Roles to have \"Parent "
+"Roles\". Any capability that a Role has is implicitly granted to any "
+"parent roles (or parents of those parents, and so on)."
+msgstr ""
+
+#: ../../source/security.rst:90
+msgid "|rbac-role-hierarchy|"
+msgstr ""
+
+#: ../../source/security.rst:94
+msgid ""
+"Often, you will have many Roles in a system and you will want some roles "
+"to include all of the capabilities of other roles. For example, you may "
+"want a System Administrator to have access to everything that an "
+"Organization Administrator has access to, who has everything that a "
+"Project Administrator has access to, and so on. We refer to this concept "
+"as the 'Role Hierarchy' and it is represented by allowing Roles to have "
+"\"Parent Roles\". Any capability that a Role has is implicitly granted to"
+" any parent roles (or parents of those parents, and so on). Of course "
+"Roles can have more than one parent, and capabilities are implicitly "
+"granted to all parents."
+msgstr ""
+
+#: ../../source/security.rst:96
+msgid "|rbac-heirarchy-morecomplex|"
+msgstr ""
+
+#: ../../source/security.rst:100
+msgid ""
+"RBAC controls also give you the capability to explicitly permit User and "
+"Teams of Users to run playbooks against certain sets of hosts. Users and "
+"teams are restricted to just the sets of playbooks and hosts to which "
+"they are granted capabilities. And, with Tower, you can create or import "
+"as many Users and Teams as you require--create users and teams manually "
+"or import them from LDAP or Active Directory."
+msgstr ""
+
+#: ../../source/security.rst:102
+msgid ""
+"RBACs are easiest to think of in terms of who or what can see, change, or"
+" delete an \"object\" for which a specific capability is being "
+"determined."
+msgstr ""
+
+#: ../../source/security.rst:105
+msgid "Applying RBAC"
+msgstr ""
+
+#: ../../source/security.rst:107
+msgid ""
+"The following sections cover how to apply Tower's RBAC system in your "
+"environment."
+msgstr ""
+
+#: ../../source/security.rst:111
+msgid "Editing Users"
+msgstr ""
+
+#: ../../source/security.rst:113
+msgid ""
+"When editing a user, a Tower system administrator may specify the user as"
+" being either a *System Administrator* (also referred to as the "
+"Superuser) or an *Auditor*."
+msgstr ""
+
+#: ../../source/security.rst:115
+msgid ""
+"System administrators implicitly inherit all capabilities for all objects"
+" (read/write/execute) within the Tower environment."
+msgstr ""
+
+#: ../../source/security.rst:116
+msgid ""
+"Auditors implicitly inherit the read-only capability for all objects "
+"within the Tower environment."
+msgstr ""
+
+#: ../../source/security.rst:119
+msgid "Editing Organizations"
+msgstr ""
+
+#: ../../source/security.rst:121
+msgid ""
+"When editing an organization, system administrators may specify the "
+"following roles:"
+msgstr ""
+
+#: ../../source/security.rst:123
+msgid "One or more users as organization administrators"
+msgstr ""
+
+#: ../../source/security.rst:124
+msgid "One or more users as organization auditors"
+msgstr ""
+
+#: ../../source/security.rst:125
+msgid "And one or more users (or teams) as organization members"
+msgstr ""
+
+#: ../../source/security.rst:128
+msgid ""
+"Users/teams that are members of an organization can view their "
+"organization administrator."
+msgstr ""
+
+#: ../../source/security.rst:130
+msgid ""
+"Users who are organization administrators implicitly inherit all "
+"capabilities for all objects within that Tower organization."
+msgstr ""
+
+#: ../../source/security.rst:132
+msgid ""
+"Users who are organization auditors implicitly inherit the read-only "
+"capability for all objects within that Tower organization."
+msgstr ""
+
+#: ../../source/security.rst:136
+msgid "Editing Projects in an Organization"
+msgstr ""
+
+#: ../../source/security.rst:138
+msgid ""
+"When editing a project in an organization for which they are the "
+"administrator, system administrators and organization administrators may "
+"specify:"
+msgstr ""
+
+#: ../../source/security.rst:140
+msgid "One or more users/teams that are project administrators"
+msgstr ""
+
+#: ../../source/security.rst:141
+msgid "One or more users/teams that are project members"
+msgstr ""
+
+#: ../../source/security.rst:142
+msgid ""
+"And one or more users/teams that may update the project from SCM, from "
+"among the users/teams that are members of that organization."
+msgstr ""
+
+#: ../../source/security.rst:144
+msgid "Users who are members of a project can view their project administrators."
+msgstr ""
+
+#: ../../source/security.rst:146
+msgid ""
+"Project administrators implicitly inherit the capability to update the "
+"project from SCM."
+msgstr ""
+
+#: ../../source/security.rst:150
+msgid "Creating Inventories and Credentials within an Organization"
+msgstr ""
+
+#: ../../source/security.rst:152
+msgid ""
+"All access that is granted to use, read, or write credentials is now "
+"handled through roles. You no longer set the “team” or “user” for a "
+"credential. Instead, you use Tower's RBAC system to grant ownership, "
+"auditor, or usage roles."
+msgstr ""
+
+#: ../../source/security.rst:154
+msgid ""
+"System administrators and organization administrators may create "
+"inventories and credentials within organizations under their "
+"administrative capabilities."
+msgstr ""
+
+#: ../../source/security.rst:156
+msgid ""
+"Whether editing an inventory or a credential, System administrators and "
+"organization administrators may specify one or more users/teams (from "
+"those that are members of that organization) to be granted the usage "
+"capability for that inventory or credential."
+msgstr ""
+
+#: ../../source/security.rst:158
+msgid ""
+"System administrators and organization administrators may specify one or "
+"more users/teams (from those that are members of that organization) that "
+"have the capabilities to update (dynamic or manually) an inventory.  "
+"Administrators can also execute ad hoc commands for an inventory."
+msgstr ""
+
+#: ../../source/security.rst:162
+msgid "Editing Job Templates"
+msgstr ""
+
+#: ../../source/security.rst:164
+msgid ""
+"System administrators, organization administrators, and project "
+"administrators, within a project under their administrative capabilities,"
+" may create and modify new job templates for that project."
+msgstr ""
+
+#: ../../source/security.rst:166
+msgid ""
+"When editing a job template, administrators (Tower, organization, and "
+"project) can select among the inventory and credentials in the "
+"organization for which they have usage capabilities or they may leave "
+"those fields blank so that they will be selected at runtime."
+msgstr ""
+
+#: ../../source/security.rst:168
+msgid ""
+"Administrators can also specify one or more users/teams (from those that "
+"are members of that project) that can use that project in a job template."
+msgstr ""
+
+#: ../../source/security.rst:170
+msgid ""
+"Additionally, they may specify one or more users/teams (from those that "
+"are members of that project) that have execution capabilities for that "
+"job template. The execution capability is valid regardless of any "
+"explicit capabilities the user/team may have been granted against the "
+"inventory or credential specified in the job template."
+msgstr ""
+
+#: ../../source/security.rst:173
+msgid "User View"
+msgstr ""
+
+#: ../../source/security.rst:175
+msgid "A user can:"
+msgstr ""
+
+#: ../../source/security.rst:177
+msgid "See any organization or project for which they are a member"
+msgstr ""
+
+#: ../../source/security.rst:178
+msgid "Create their own credential objects which only belong to them"
+msgstr ""
+
+#: ../../source/security.rst:179
+msgid ""
+"See and execute any job template for which they have been granted "
+"execution capabilities"
+msgstr ""
+
+#: ../../source/security.rst:181
+msgid ""
+"If a job template a user has been granted execution capabilities on does "
+"not specify an inventory or credential, the user will be prompted at run-"
+"time to select among the inventory and credentials in the organization "
+"they own or have been granted usage capabilities."
+msgstr ""
+
+#: ../../source/security.rst:183
+msgid ""
+"Users that are job template administrators can make changes to job "
+"templates; however, to make changes to the inventory, project, playbook, "
+"or credentials used in the job template, the user must also have the "
+"\"Use\" role for the project, inventory, and all credentials currently "
+"being used or being set."
+msgstr ""
+
+#: ../../source/security.rst:188
+msgid "Roles"
+msgstr ""
+
+#: ../../source/security.rst:190
+msgid ""
+"As stated earlier in this documentation, all access that is granted to "
+"use, read, or write credentials is now handled through roles, and  roles "
+"are defined for a resource."
+msgstr ""
+
+#: ../../source/security.rst:194
+msgid "Built-in roles"
+msgstr ""
+
+#: ../../source/security.rst:196
+msgid ""
+"The following table lists the RBAC system roles and a brief description "
+"of the how that role is defined with regard to privileges in Tower."
+msgstr ""
+
+#: ../../source/security.rst:199
+msgid "System Role"
+msgstr ""
+
+#: ../../source/security.rst:199
+msgid "What it can do"
+msgstr ""
+
+#: ../../source/security.rst:201
+msgid "System Administrator - System wide singleton"
+msgstr ""
+
+#: ../../source/security.rst:201
+msgid "Manages all aspects of the system"
+msgstr ""
+
+#: ../../source/security.rst:203
+msgid "System Auditor - System wide singleton"
+msgstr ""
+
+#: ../../source/security.rst:203
+msgid "Views all aspects of the system"
+msgstr ""
+
+#: ../../source/security.rst:205
+msgid "Ad Hoc Role - Inventory"
+msgstr ""
+
+#: ../../source/security.rst:205
+msgid "Runs ad hoc commands on an Inventory"
+msgstr ""
+
+#: ../../source/security.rst:207
+msgid "Admin Role - Organizations, Projects, Inventory, Projects, Job Templates"
+msgstr ""
+
+#: ../../source/security.rst:207
+msgid ""
+"Manages all aspects of a defined Organization, Project, Inventory, or Job"
+" Template"
+msgstr ""
+
+#: ../../source/security.rst:210
+msgid "Auditor Role - Organizations, Projects, Inventory, Projects, Job Templates"
+msgstr ""
+
+#: ../../source/security.rst:210
+msgid ""
+"Views all aspects of a defined Organization, Project, Inventory, or Job "
+"Template"
+msgstr ""
+
+#: ../../source/security.rst:213
+msgid "Execute Role - Job Templates"
+msgstr ""
+
+#: ../../source/security.rst:213
+msgid "Runs assigned Job Template"
+msgstr ""
+
+#: ../../source/security.rst:215
+msgid "Member Role - Organization, Team"
+msgstr ""
+
+#: ../../source/security.rst:215
+msgid "User is a member of a defined Organization or Team"
+msgstr ""
+
+#: ../../source/security.rst:217
+msgid "Read Role - All"
+msgstr ""
+
+#: ../../source/security.rst:217
+msgid ""
+"Views settings for a defined Organization, Project, Inventory, or Job "
+"Template"
+msgstr ""
+
+#: ../../source/security.rst:219
+msgid "SCM Update Role - Project"
+msgstr ""
+
+#: ../../source/security.rst:219
+msgid "Updates the Project from the configured source control management system"
+msgstr ""
+
+#: ../../source/security.rst:221
+msgid "Update Role - Inventory"
+msgstr ""
+
+#: ../../source/security.rst:221
+msgid "Updates the Inventory using the cloud source update system"
+msgstr ""
+
+#: ../../source/security.rst:223
+msgid "Owner Role - Credential"
+msgstr ""
+
+#: ../../source/security.rst:223
+msgid "Owns and manages all aspects of this Credential"
+msgstr ""
+
+#: ../../source/security.rst:225
+msgid "Use Role - Credential, Inventory, Project"
+msgstr ""
+
+#: ../../source/security.rst:225
+msgid "Uses the Credential, Inventory, or Project in a Job Template"
+msgstr ""
+
+#: ../../source/security.rst:229
+msgid ""
+"A Singleton Role is a special role that you can create and is intended "
+"for system wide roles."
+msgstr ""
+

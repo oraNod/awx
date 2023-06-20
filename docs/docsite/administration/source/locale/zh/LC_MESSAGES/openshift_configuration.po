@@ -1,0 +1,379 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.7.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-07 07:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/openshift_configuration.rst:4
+msgid "OpenShift Deployment and Configuration"
+msgstr "OpenShift 部署和配置"
+
+#: ../../source/openshift_configuration.rst:10
+msgid "|at| supports container-based clusters running on OpenShift. This section provides a high-level overview of OpenShift and controller Pod configuration, notably the following:"
+msgstr "|at| 支持在 OpenShift 上运行的基于容器的集群。本节概述了 OpenShift 和控制器 Pod 配置，特别是："
+
+#: ../../source/openshift_configuration.rst:12
+msgid "The main differences in the standard controller vs OpenShift controller (i.e., auto-removal of instances)"
+msgstr "标准控制器与 OpenShift 控制器的主要区别（如自动删除实例）"
+
+#: ../../source/openshift_configuration.rst:13
+msgid "The controller deploys as a single pod first and can scale up after migrations"
+msgstr "控制器首先作为单个 pod 进行部署，并可在迁移后扩展"
+
+#: ../../source/openshift_configuration.rst:14
+msgid "Migrations run in the task-runner pod"
+msgstr "迁移在任务运行程序 pod 中运行"
+
+#: ../../source/openshift_configuration.rst:20
+msgid "Controller and OpenShift Basics"
+msgstr "Controller 和 OpenShift 基本信息"
+
+#: ../../source/openshift_configuration.rst:22
+msgid "The controller OpenShift documentation assumes an understanding of how to use OpenShift at an administrative level and should include some experience maintaining container based infrastructure. The differences are:"
+msgstr "控制器 OpenShift 文档假定读者了解如何在管理级别使用 OpenShift，并具有维护基于容器的基础架构的一些体验。不同之处是："
+
+#: ../../source/openshift_configuration.rst:24
+msgid "Standalone controller and OpenShift controller use different installers. Download the OpenShift installer from `access.redhat.com <https://access.redhat.com>`_."
+msgstr "独立控制器和 OpenShift 控制器使用不同的安装程序。从 `access.redhat.com <https://access.redhat.com>`_ 下载 OpenShift 安装程序。"
+
+#: ../../source/openshift_configuration.rst:25
+msgid "The controller links to OpenShift itself in order to facilitate scaling up and down without requiring you to manually execute the playbook (to bring up new nodes) or run management commands in the shell (to take nodes offline purposefully). You can configure the controller Deployment once the system is up to add more or remove extra controller Pods."
+msgstr "控制器连接到 OpenShift 自身，以便在不需要用户手动执行 playbook（使新节点上线）或在 shell 中运行管理命令（使下线节点）的情况下，进行扩展和缩减。用户可在系统启动后配置 Tower Deployment 来添加更多的控制器 Pod，或删除额外的控制器 Pod。"
+
+#: ../../source/openshift_configuration.rst:26
+msgid "The controller pods are configured without HTTPs and the installer will configure an OpenShift Route which will handle SSL termination and distribute requests to all controller Pods. This is somewhat of an internal OpenShift load balancer."
+msgstr "在没有 HTTPs 的情况下配置控制器 Pod，安装程序会配置一个 OpenShift 路由，该路由将处理 SSL 终止问题，并将请求发送到所有控制器 Pod。这在某种程度上相当于一个内部 OpenShift 负载均衡器。"
+
+#: ../../source/openshift_configuration.rst:27
+msgid "Database migrations run as part of the process of bringing up the task executor container within the pod (see diagram) and thus will likely happen after the playbook has completed."
+msgstr "数据库迁移作为在 pod 中上线任务执行器容器程序的一部分运行（见图），因此通常在 playbook 完成后进行。"
+
+#: ../../source/openshift_configuration.rst:28
+msgid "Capacity / Performance Detection (see the section on :ref:`ag_os_request_planning`)."
+msgstr "容量/性能检测（请参阅 :ref:`ag_os_request_planning`）。"
+
+#: ../../source/openshift_configuration.rst:29
+msgid "Isolated instances are not supported in conjunction with running |at| in OpenShift."
+msgstr "在 OpenShift 中运行 |at| 不支持隔离的实例。"
+
+#: ../../source/openshift_configuration.rst:33
+msgid "Configuration Options"
+msgstr "配置选项"
+
+#: ../../source/openshift_configuration.rst:35
+msgid "**Requirements**"
+msgstr "**要求**"
+
+#: ../../source/openshift_configuration.rst:37
+msgid "Latest supported OpenShift versions 3.x and 4.x (see `Red Hat Container Registry Authentication <https://access.redhat.com/RegistryAuthentication>`_ for detail)"
+msgstr "最新支持的 OpenShift 版本 3.x 和 4.x（详情请参阅 `Red Hat Container Registry Authentication <https://access.redhat.com/RegistryAuthentication>`_）"
+
+#: ../../source/openshift_configuration.rst:39
+msgid "Per pod default resource requirements:"
+msgstr "每个 pod 默认资源要求："
+
+#: ../../source/openshift_configuration.rst:39
+msgid "6GB RAM"
+msgstr "6GB RAM"
+
+#: ../../source/openshift_configuration.rst:40
+msgid "3CPU cores"
+msgstr "3CPU 内核"
+
+#: ../../source/openshift_configuration.rst:41
+msgid "Openshift command-line tool (oc) on the machine running the installer"
+msgstr "在运行安装程序的机器上使用 OpenShift 命令行工具 (oc)"
+
+#: ../../source/openshift_configuration.rst:42
+msgid "A setup and running Openshift cluster"
+msgstr "已设置并正在运行的 Openshift 集群"
+
+#: ../../source/openshift_configuration.rst:43
+msgid "Admin privileges for the account running the openshift installer (``cluster-admin`` role is required)"
+msgstr "运行 openshift 安装程序的帐户的 admin 权限 （需要 ``cluster-admin`` 角色）"
+
+#: ../../source/openshift_configuration.rst:47
+msgid "Basic Configuration"
+msgstr "基本配置"
+
+#: ../../source/openshift_configuration.rst:49
+msgid "An OpenShift install requires the following parameters to be set:"
+msgstr "OpenShift 安装需要设置以下参数："
+
+#: ../../source/openshift_configuration.rst:51
+msgid "``openshift_host``"
+msgstr "``openshift_host``"
+
+#: ../../source/openshift_configuration.rst:52
+msgid "``openshift_project``"
+msgstr "``openshift_project``"
+
+#: ../../source/openshift_configuration.rst:53
+msgid "``openshift_user``"
+msgstr "``openshift_user``"
+
+#: ../../source/openshift_configuration.rst:54
+msgid "``openshift_password``"
+msgstr "``openshift_password``"
+
+#: ../../source/openshift_configuration.rst:55
+msgid "``admin_password``"
+msgstr "``admin_password``"
+
+#: ../../source/openshift_configuration.rst:56
+msgid "``secret_key``"
+msgstr "``secret_key``"
+
+#: ../../source/openshift_configuration.rst:57
+msgid "``pg_username``"
+msgstr "``pg_username``"
+
+#: ../../source/openshift_configuration.rst:58
+msgid "``pg_password``"
+msgstr "``pg_password``"
+
+#: ../../source/openshift_configuration.rst:61
+msgid "For OpenShift install method, the settings are the same as the :ref:`traditional controller install method <installandreference:traditional_tower_install>`, except:"
+msgstr "对于 OpenShift 安装方法，设置与 :ref:`traditional controller install method <installandreference:traditional_tower_install>` 相同，除了："
+
+#: ../../source/openshift_configuration.rst:63
+msgid "SSL termination for the controller UI and API is handled through the OpenShift service object. The certificates used here will be generated and signed by the OpenShift internal CA."
+msgstr "控制器 UI 和 API 的 SSL 终止通过 OpenShift 服务对象处理。这里使用的证书由 OpenShift 内部 CA 生成并签名。"
+
+#: ../../source/openshift_configuration.rst:64
+msgid "The containerized PostgreSQL pod optionally deployed to OpenShift installs cannot be configured for SSL. If you want SSL-enabled PostgreSQL in an OpenShift environment, you must deploy your PostgreSQL server separately, and configure the controller nodes (using ``pg_sslmode``)."
+msgstr "可以选择部署到 OpenShift 安装中的容器化 PostgreSQL pod 无法配置 SSL。如果您在 OpenShift 环境中需要启用 SSL 的 PostgreSQL，则必须单独部署 PostgreSQL 服务器并配置控制器节点（使用 ``pg_sslmode``）。"
+
+#: ../../source/openshift_configuration.rst:66
+msgid "The Project will be created if it doesn’t exist but the user given there should have either:"
+msgstr "如果项目不存在，则创建项目，但用户需要满足以下条件之一："
+
+#: ../../source/openshift_configuration.rst:68
+msgid "The ability to create the project and populate it with controller-needed pods"
+msgstr "能够创建项目并在项目中添加控制器所需的 pod"
+
+#: ../../source/openshift_configuration.rst:70
+msgid "**OR**"
+msgstr "**或**"
+
+#: ../../source/openshift_configuration.rst:72
+msgid "Access to create whatever pods are needed in the project, if it already exists"
+msgstr "如果项目已存在，具有可以在项目中创建所需 pod 的权限"
+
+#: ../../source/openshift_configuration.rst:74
+msgid "The password should be given on the command line as shown when executing the installer."
+msgstr "在执行安装程序时，需要在命令行中提供密码。"
+
+#: ../../source/openshift_configuration.rst:76
+msgid "The oc command line client should be installed and available and the client version should match the server version."
+msgstr "oc 命令行客户端应已安装并可用，客户端的版本应与服务器版本匹配。"
+
+#: ../../source/openshift_configuration.rst:78
+msgid "The secret-key, admin password, and postgresql username and password should be populated in the inventory file prior to running the installer."
+msgstr "在运行安装程序前，secret-key、管理员密码和 postgresql 用户名和密码应该被填充到清单文件中。"
+
+#: ../../source/openshift_configuration.rst:86
+msgid "The controller uses Bubblewrap (from Project Atomic) as a mechanism to give the (relatively) unprivileged awx user the ability to isolate Ansible processes from each other. There are certain privileges that need to be granted to the container that necessitates running the controller web and task containers in privileged mode."
+msgstr "控制器使用 Bubblewrap（来自 Project Atomic），为（相对）非特权的 awx 用户提供能够相互隔离不同 Ansible 进程的机制。运行控制器 web 所需的容器及特权模式中的任务容器需要被授予特定权限。"
+
+#: ../../source/openshift_configuration.rst:89
+msgid "The default type for the controller web service is ``NodePort``. To customize this, set ``kubernetes_web_svc_type`` to ``ClusterIP`` or ``LoadBalancer`` in your inventory file, or pass it as an extra var."
+msgstr "控制器 web 服务的默认类型为 ``NodePort``。要对它进行定制，在于清单文件中把 ``kubernetes_web_svc_type`` 设置为 ``ClusterIP`` 或 ``LoadBalancer``，或作为额外变量进行传递。"
+
+#: ../../source/openshift_configuration.rst:95
+msgid "Resource Requests and Request Planning"
+msgstr "资源请求和请求规划"
+
+#: ../../source/openshift_configuration.rst:97
+msgid "Normally the controller examines the system that it runs on in order to determine what its own capacity is for running Jobs and performing background requests. On OpenShift this works differently since pods and containers will tend to coexist on systems. Pods can also migrate between hosts depending on current conditions (for instance, if the OpenShift cluster is being upgraded or is experiencing an outage)."
+msgstr "通常控制器会检查运行它的系统，以确定其自身运行作业和执行后台请求的能力。在 OpenShift 上会有所不同，因为 pod 和容器会共同存在于系统中。Pod 也可以根据当前状况（例如，如果 OpenShift 集群正在升级或处于停机状态）在主机间迁移。"
+
+#: ../../source/openshift_configuration.rst:99
+msgid "It’s common for Pods and Containers to Request the resources that they need. OpenShift then uses this information to decide Where things run (or even if they can run)."
+msgstr "Pod 和容器请求所需资源很常见。OpenShift 会根据此信息来决定运行位置（甚至确定是否可以运行）。"
+
+#: ../../source/openshift_configuration.rst:101
+msgid "The controller will also use this information to configure its own capacity for how many (and the size of) individual jobs can be run."
+msgstr "控制器还会使用这些信息配置其自身容量，确定可运行的单个作业的数量（及大小）。"
+
+#: ../../source/openshift_configuration.rst:103
+msgid "Each controller pod is made up of 3 containers (see :ref:`diagram <ag_openshift_configuration>`), each container is configured with a conservative default, but taken all together they can be somewhat substantial. These defaults are also configurable but it’s helpful to know what effect that has on the controller cluster."
+msgstr "每个控制器 pod 都由 3 个容器组成（请参阅 :ref:`diagram <ag_openshift_configuration>`），每个容器都配置有比较保守的默认值，但在将它们集中在一起时就可能会具有较大的值。这些默认设置也可以进行配置，但您最好在了解它们对控制器集群的影响时才进行配置。"
+
+#: ../../source/openshift_configuration.rst:105
+msgid "The two most important values control the CPU and memory allocation for the task execution container. This container is the one that is actually responsible for launching jobs, as such these values directly control how many and what size jobs can run. The settings can be changed in the inventory and here are the default values:"
+msgstr "两个最重要的用来控制任务执行容器的 CPU 和内存分配的值。该容器实际上负责启动作业，因此这些值直接控制可以运行的作业数量和大小。这些设置可以在清单中更改，以下是它们的默认值："
+
+#: ../../source/openshift_configuration.rst:111
+msgid "This is the amount of CPU to dedicate, the value of 1500 refers to how OpenShift itself views CPU requests (see https://docs.OpenShift.com/container-platform/3.9/dev_guide/compute_resources.html#dev-cpu-requests) (for value meanings see: https://docs.OpenShift.com/container-platform/3.9/dev_guide/compute_resources.html#dev-compute-resources)"
+msgstr "这是要使用的 CPU 数量，1500 代表 OpenShift 自身的 CPU 请求（请参阅 https://docs.OpenShift.com/container-platform/3.9/dev_guide/compute_resources.html#dev-cpu-requests）（有关值的含义，请参阅 https://docs.OpenShift.com/container-platform/3.9/dev_guide/compute_resources.html#dev-compute-resources）"
+
+#: ../../source/openshift_configuration.rst:113
+msgid "**1500** is 1500 millicores which translates to roughly 1.5 CPU Cores."
+msgstr "**1500** 是 1500 毫秒，可转换为大约 1.5 个 CPU 内核。"
+
+#: ../../source/openshift_configuration.rst:115
+msgid "This value is used to configure the controller capacity in the following way:"
+msgstr "这个值用于配置控制器容量，其方式如下："
+
+#: ../../source/openshift_configuration.rst:121
+msgid "Which is to say that, by default, the controller in OpenShift (when configured entirely for cpu-based algorithm) can run at most **6** simultaneous forks."
+msgstr "也就是说，默认情况下，OpenShift 的控制器（完全配置为基于 cpu 的算法进行配置）可以最多运行 **6** 个并发分叉。"
+
+#: ../../source/openshift_configuration.rst:123
+msgid "The other value that can be tuned:"
+msgstr "可调整的其他值："
+
+#: ../../source/openshift_configuration.rst:129
+msgid "This value is used to configure the controller capacity in the following way"
+msgstr "这个值用于配置控制器容量，其方式如下"
+
+#: ../../source/openshift_configuration.rst:135
+msgid "Which is to say that, by default, the controller can run at most **40** simultaneous forks when configured for mem-based algorithm."
+msgstr "也就是说，默认情况下，在为基于内存算法进行配置时，控制器最多可运行 **40** 个并发分叉。"
+
+#: ../../source/openshift_configuration.rst:137
+msgid "For the default resource requests, see ``roles/kubernetes/defaults/main.yml``."
+msgstr "有关默认资源请求，请参阅 ``roles/kubernetes/defaults/main.yml``。"
+
+#: ../../source/openshift_configuration.rst:139
+msgid "All together the default requested resources for a single controller pod total to:"
+msgstr "将默认请求资源合并在一起的单个控制器 pod 的总计："
+
+#: ../../source/openshift_configuration.rst:141
+msgid "3 CPU Cores"
+msgstr "3 个 CPU 内核"
+
+#: ../../source/openshift_configuration.rst:142
+msgid "6 GB memory"
+msgstr "6 GB 内存"
+
+#: ../../source/openshift_configuration.rst:144
+msgid "The OpenShift instances that you want to run the controller on should at least match that. If the defaults are changed then the system will need to be updated to match the new requirements."
+msgstr "要运行控制器的 OpenShift 实例应至少匹配这些值。如果更改了默认值，系统将需要更新以符合新要求。"
+
+#: ../../source/openshift_configuration.rst:148
+msgid "If other Pods are running on the OpenShift instance or the systems are too small to meet these requirements then the controller may not be able to run anywhere. Refer to :ref:`Capacity Algorithm <userguide:ug_job_concurrency>` for more detail."
+msgstr "如果其他 Pod 在 OpenShift 实例上运行，或者系统太小，无法满足这些要求，那么控制器可能无法在任何位置运行。如需详情，请参阅 :ref:`Capacity Algorithm <userguide:ug_job_concurrency>`。"
+
+#: ../../source/openshift_configuration.rst:154
+msgid "Database Configuration and Usage"
+msgstr "数据库配置和使用"
+
+#: ../../source/openshift_configuration.rst:156
+msgid "There are two methods for configuring the the controller PostgreSQL database for the controller running in Openshift:"
+msgstr "对于在 Openshift 中运行的控制器，有两个方法配置控制器 PostgreSQL 数据库："
+
+#: ../../source/openshift_configuration.rst:158
+msgid "(Recommended) **Externally Managed Database** (not installed by the controller setup playbook). The PostgreSQL server is installed before the controller either inside or outside of the Openshift cluster and the controller is configured to point at it"
+msgstr "（推荐）**外部管理的数据库**（不是由控制器设置(setup)playbook 安装）。PostgreSQL 服务器会在控制器之前安装在 Openshift 集群内部或外部，控制器被配置为指向此集群"
+
+#: ../../source/openshift_configuration.rst:159
+msgid "PostgreSQL is installed in Openshift using the Platform installer by providing a pre-created ``PersistentVolumeClaim`` and providing it the controller install playbook inventory file as ``openshift_pg_pvc_name``."
+msgstr "使用 Platform 安装程序在 Openshift 中安装 PostgreSQL，方法是提供预创建的 ``PersistentVolumeClaim`` 并为其提供控制器安装 playbook 清单文件 ``openshift_pg_pvc_name``。"
+
+#: ../../source/openshift_configuration.rst:161
+msgid "If you are installing the controller for demo/evaluation purposes you may set ``openshift_pg_emptydir=true`` and OpenShift will create a temporary volume for use by the pod."
+msgstr "如果您安装控制器的目的是用于演示/评估，您可以设置 ``openshift_pg_emptydir=true``，OpenShift 将创建一个临时卷供 pod 使用。"
+
+#: ../../source/openshift_configuration.rst:165
+msgid "This volume is temporary for demo/evaluation purposes only, and will be deleted when the pod is stopped."
+msgstr "此卷仅用于演示/评估目的，并在 pod 停止后删除。"
+
+#: ../../source/openshift_configuration.rst:170
+msgid "Backup and Restore"
+msgstr "备份和恢复"
+
+#: ../../source/openshift_configuration.rst:172
+msgid "The process for backup and restore resembles that of the traditional controller. From the root of the installer directory of the current controller version, run:"
+msgstr "备份和恢复的过程类似传统控制器。从当前控制器版本的安装程序的根目录，运行："
+
+#: ../../source/openshift_configuration.rst:181
+msgid "``configmap`` will be recreated from values in the inventory file. The inventory file is included in backup tarball."
+msgstr "将利用清单文件中的值重新创建 ``configmap``。清单文件包含在 tarball 中。"
+
+#: ../../source/openshift_configuration.rst:187
+msgid "Upgrading"
+msgstr "升级"
+
+#: ../../source/openshift_configuration.rst:189
+msgid "To upgrade a controller deployment in OpenShift, you need to download and use the most recent installer from `access.redhat.com <https://access.redhat.com>`_. Expect some downtime, just as |AAP| installations."
+msgstr "要升级 OpenShift 中的控制器部署，您需要从 `access.redhat.com <https://access.redhat.com>`_ 下载并使用最新的安装程序。与 |AAP| 安装一样，预期会停机一段时间。"
+
+#: ../../source/openshift_configuration.rst:195
+msgid "Migrating"
+msgstr "迁移"
+
+#: ../../source/openshift_configuration.rst:197
+msgid "The controller supports migration from traditional setup to a setup in OpenShift, as outlined below:"
+msgstr "控制器支持从传统设置迁移到 OpenShift 中的设置，如下所示："
+
+#: ../../source/openshift_configuration.rst:199
+msgid "First, upgrade your controller setup to the latest release of |at| (or to version 4.0 at minimum), using the normal upgrade procedure."
+msgstr "首先，使用正常升级过程，将控制器设置升级到最新的 |at| 发行版本（至少升级到 4.0 版本）。"
+
+#: ../../source/openshift_configuration.rst:200
+msgid "Download the OpenShift installer."
+msgstr "下载 OpenShift 安装程序。"
+
+#: ../../source/openshift_configuration.rst:201
+msgid "Edit the ``inventory`` file and change ``pg_username``, ``pg_password``, ``pg_database``, and ``pg_port`` to point to the upgraded controller database from your traditional controller setup."
+msgstr "编辑 ``inventory`` 文件，把 ``pg_username``、``pg_password``、``pg_database`` 和 ``pg_port`` 的值从您的传统控制器设置改为升级的控制器数据库设置。"
+
+#: ../../source/openshift_configuration.rst:202
+msgid "Run the OpenShift installer as normal."
+msgstr "以正常方式运行 OpenShift 安装程序。"
+
+#: ../../source/openshift_configuration.rst:206
+msgid "Do not use special characters in ``pg_password`` as it may cause the setup to fail."
+msgstr "不要在 ``pg_password`` 中使用特殊字符， 因为它可能导致设置失败。"
+
+#~ msgid "The image must be tagged with 3.3.0 or pass version variable to installer to override."
+#~ msgstr "镜像必须使用 3.3.0 标签（tag），或者将版本变量传递给安装程序进行覆盖。"
+
+#~ msgid "When hosting all images in a local registry, such as offline installs, you’ll need to include these other images:"
+#~ msgstr "在本地 registry 中托管所有镜像（如离线安装）时，您需要包含这些其他镜像："
+
+#~ msgid "Prior to performing an upgrade, you must backup and restore into the same version before upgrading. To upgrade a Tower deployment in OpenShift, download the most recent installer from http://releases.ansible.com/ansible-tower/setup_openshift. Expect some downtime, just as traditional Tower installations."
+#~ msgstr "在进行升级前，您必须进行备份并保证可以恢复到升级前的版本。要升级 OpenShift 中的 Tower 部署，请从 http://releases.ansible.com/ansible-tower/setup_openshift 下载最新的安装程序。预期会停机一段时间，与传统的 Tower 安装一样。"
+
+#~ msgid "Normally Tower examines the system that it runs on in order to determine what its own capacity is for running Jobs and performing background requests. On OpenShift this works differently since pods and containers will tend to coexist on systems. Pods can also migrate between hosts depending on current conditions (for instance, if the OpenShift cluster is being upgraded or is experiencing an outage)."
+#~ msgstr "通常 Tower 会检查运行它的系统，以确定其自身运行作业和执行后台请求的能力。在 OpenShift 上会有所不同，因为 pod 和容器会共同存在于系统中。Pod 也可以根据当前状况（例如，如果 OpenShift 集群正在升级或处于停机状态）在主机间迁移。"
+
+#~ msgid "To upgrade a Tower deployment in OpenShift, you need to download and use the most recent installer from http://releases.ansible.com/ansible-tower/setup_openshift. Expect some downtime, just as traditional Tower installations."
+#~ msgstr "要升级 OpenShift 中的 Tower 部署，您需要从 http://releases.ansible.com/ansible-tower/setup_openshift 下载并使用最新的安装程序。与传统的 Tower 安装一样，预期会停机一段时间。"
+
+#~ msgid "Build custom virtual environments"
+#~ msgstr "构建自定义虚拟环境"
+
+#~ msgid "It is possible to override the base container image to build custom virtual environments (*virtualenvs*). Overriding the base container is used for customization and custom virtualenv support or for local mirroring. If you want to use custom virtual environments with Tower deployed in OpenShift, you will need to customize the container image used by Tower."
+#~ msgstr "可能会覆盖基础容器镜像来构建自定义虚拟环境（*virtualenvs*）。覆盖基础容器用于定制和自定义 virtualenv 支持，或用于本地镜像 (mirroring)。如果要使用 OpenShift 中部署 Tower 的自定义虚拟环境，则需要定制 Tower 使用的容器镜像。"
+
+#~ msgid "Here is a Dockerfile that can be used as an example. This installs Ansible into a custom virtual environment:"
+#~ msgstr "以下是一个可用作示例的 Dockerfile。这可将 Ansible 安装到自定义的虚拟环境中："
+
+#~ msgid "If you need to install other python dependencies (such as those for custom modules) you can add additional **RUN** commands to the docker file that activate the virtual environment and call ``pip``."
+#~ msgstr "如果您需要安装其他 python 依赖项（如自定义模块的依赖项），您可以在激活虚拟环境和调用 ``pip`` 的 docker 文件中添加其他 **RUN** 命令。"
+
+#~ msgid "Once the image is built, make sure that image is in your registry and that the OpenShift cluster and installer have access to it."
+#~ msgstr "构建镜像后，请确保镜像位于 registry 中，并且 OpenShift 集群和安装程序有权访问该镜像。"
+
+#~ msgid "Override the following variables in ``group_vars/all`` in the OpenShift installer to point to the image you have pushed to your registry:"
+#~ msgstr "覆盖 ``group_vars/all`` OpenShift 安装程序中的以下变量，以指向推送到 registry 的镜像："
+
+#~ msgid "If mirroring the vanilla Red Hat images:"
+#~ msgstr "如果镜像 (mirroring) 了 vanilla Red Hat 镜像："
+

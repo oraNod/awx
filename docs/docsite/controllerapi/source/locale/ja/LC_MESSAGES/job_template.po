@@ -1,0 +1,348 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/job_template.rst:3
+msgid "Job Template List API Endpoint"
+msgstr "ジョブテンプレートリストの API エンドポイント"
+
+#: ../../source/job_template.rst:8
+msgid "Make a GET request to this resource to retrieve the list of job templates."
+msgstr "このリソースに GET 要求を実行して、ジョブテンプレートリストを取得します。"
+
+#: ../../source/job_template.rst:20
+msgid "The resulting data structure contains: ::"
+msgstr "返されるデータ構造には以下が含まれます。"
+
+#: ../../source/job_template.rst:32
+msgid "The ``count`` field indicates the total number of job templates found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more job template records."
+msgstr "``count`` フィールドは指定のクエリーで見つかったジョブテンプレートの合計数を示します。``next`` および ``previous`` フィールドは、結果が単一ページに収まらない場合に、それらの結果へのリンクを提供します。``results`` にはジョブテンプレートレコードが一覧表示されますが、ゼロの場合もあります。"
+
+#: ../../source/job_template.rst:35
+msgid "Results"
+msgstr "結果"
+
+#: ../../source/job_template.rst:41
+msgid "Each job template data structure includes the following fields:"
+msgstr "各ジョブテンプレートのデータ構造には以下のフィールドが含まれます。"
+
+#: ../../source/job_template.rst:43
+msgid "``id``: Database ID for this job template. (integer)"
+msgstr "``id``: ジョブテンプレートのデータベース ID (整数)"
+
+#: ../../source/job_template.rst:44
+msgid "``type``: Data type for this job template. (multiple choice)"
+msgstr "``type``: ジョブテンプレートのデータタイプ (複数選択)"
+
+#: ../../source/job_template.rst:45
+msgid "``job_template``: Job Template"
+msgstr "``job_template``: ジョブテンプレート"
+
+#: ../../source/job_template.rst:46
+msgid "``url``: URL for this job template. (string)"
+msgstr "``url``: ジョブテンプレートの URL (文字列)"
+
+#: ../../source/job_template.rst:47
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``: 関連リソースの URL のあるデータ構造 (オブジェクト)"
+
+#: ../../source/job_template.rst:48
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``: 関連リソースの名前/説明のあるデータ構造 (オブジェクト)"
+
+#: ../../source/job_template.rst:49
+msgid "``created``: Timestamp when this job template was created. (datetime)"
+msgstr "``created``: ジョブテンプレート作成時のタイムスタンプ (日時)"
+
+#: ../../source/job_template.rst:50
+msgid "``modified``: Timestamp when this job template was last modified. (datetime)"
+msgstr "``modified``: ジョブテンプレートの最終更新時のタイムスタンプ (日時)"
+
+#: ../../source/job_template.rst:51
+msgid "``name``: (string)"
+msgstr "``name``: (文字列)"
+
+#: ../../source/job_template.rst:52
+msgid "``description``: (string)"
+msgstr "``description``: (文字列)"
+
+#: ../../source/job_template.rst:55
+msgid "``job_type``: (multiple choice)"
+msgstr "``job_type``: (複数選択)"
+
+#: ../../source/job_template.rst:54
+msgid "``run``: Run"
+msgstr "``run``: 実行"
+
+#: ../../source/job_template.rst:55 ../../source/job_template.rst:108
+msgid "``check``: Check"
+msgstr "``check``: チェック"
+
+#: ../../source/job_template.rst:56 ../../source/job_template.rst:109
+msgid "``scan``: Scan"
+msgstr "``scan``: スキャン"
+
+#: ../../source/job_template.rst:57
+msgid "``inventory``: (field)"
+msgstr "``inventory``: (フィールド)"
+
+#: ../../source/job_template.rst:58
+msgid "``project``: (field)"
+msgstr "``project``: (フィールド)"
+
+#: ../../source/job_template.rst:59
+msgid "``playbook``: (string)"
+msgstr "``playbook``: (文字列)"
+
+#: ../../source/job_template.rst:60
+msgid "``credential``: (field)"
+msgstr "``credential``: (フィールド)"
+
+#: ../../source/job_template.rst:61
+msgid "``cloud_credential``: (field)"
+msgstr "``cloud_credential``: (フィールド)"
+
+#: ../../source/job_template.rst:62
+msgid "``forks``: (integer)"
+msgstr "``forks``: (整数)"
+
+#: ../../source/job_template.rst:63
+msgid "``limit``: (string)"
+msgstr "``limit``: (文字列)"
+
+#: ../../source/job_template.rst:69 ../../source/job_template.rst:122
+msgid "``verbosity``: (multiple choice)"
+msgstr "``verbosity``: (複数選択)"
+
+#: ../../source/job_template.rst:65
+msgid "``0``: 0 (Normal)"
+msgstr "``0``: 0 (正常)"
+
+#: ../../source/job_template.rst:66 ../../source/job_template.rst:119
+msgid "``1``: 1 (Verbose)"
+msgstr "``1``: 1 (詳細)"
+
+#: ../../source/job_template.rst:67 ../../source/job_template.rst:120
+msgid "``2``: 2 (More Verbose)"
+msgstr "``2``: 2 (より詳細)"
+
+#: ../../source/job_template.rst:68 ../../source/job_template.rst:121
+msgid "``3``: 3 (Debug)"
+msgstr "``3``: 3 (デバッグ)"
+
+#: ../../source/job_template.rst:69 ../../source/job_template.rst:122
+msgid "``4``: 4 (Connection Debug)"
+msgstr "``4``: 4 (接続デバッグ)"
+
+#: ../../source/job_template.rst:70 ../../source/job_template.rst:123
+msgid "``5``: 5 (WinRM Debug)"
+msgstr "``5``: 5 (WinRM デバッグ)"
+
+#: ../../source/job_template.rst:71
+msgid "``extra_vars``: (string)"
+msgstr "``extra_vars``: (文字列)"
+
+#: ../../source/job_template.rst:72
+msgid "``job_tags``: (string)"
+msgstr "``job_tags``: (文字列)"
+
+#: ../../source/job_template.rst:73
+msgid "``force_handlers``: (boolean)"
+msgstr "``force_handlers``: (ブール値)"
+
+#: ../../source/job_template.rst:74
+msgid "``skip_tags``: (string)"
+msgstr "``skip_tags``: (文字列)"
+
+#: ../../source/job_template.rst:75
+msgid "``start_at_task``: (string)"
+msgstr "``start_at_task``: (文字列)"
+
+#: ../../source/job_template.rst:76
+msgid "``last_job_run``: (datetime)"
+msgstr "``last_job_run``: (日時)"
+
+#: ../../source/job_template.rst:77
+msgid "``last_job_failed``: (boolean)"
+msgstr "``last_job_failed``: (ブール値)"
+
+#: ../../source/job_template.rst:78
+msgid "``has_schedules``: (boolean)"
+msgstr "``has_schedules``: (ブール値)"
+
+#: ../../source/job_template.rst:79
+msgid "``next_job_run``: (datetime)"
+msgstr "``next_job_run``: (日時)"
+
+#: ../../source/job_template.rst:88
+msgid "``status``: (multiple choice)"
+msgstr "``status``: (複数選択)"
+
+#: ../../source/job_template.rst:81
+msgid "``new``: New"
+msgstr "``new``: 新規"
+
+#: ../../source/job_template.rst:82
+msgid "``pending``: Pending"
+msgstr "``pending``: 保留中"
+
+#: ../../source/job_template.rst:83
+msgid "``waiting``: Waiting"
+msgstr "``waiting``: 待機中"
+
+#: ../../source/job_template.rst:84
+msgid "``running``: Running"
+msgstr "``running``: 実行中"
+
+#: ../../source/job_template.rst:85
+msgid "``successful``: Successful"
+msgstr "``successful``: 成功"
+
+#: ../../source/job_template.rst:86
+msgid "``failed``: Failed"
+msgstr "``failed``: 失敗"
+
+#: ../../source/job_template.rst:87
+msgid "``error``: Error"
+msgstr "``error``: エラー"
+
+#: ../../source/job_template.rst:88
+msgid "``canceled``: Canceled"
+msgstr "``canceled``: 取り消し"
+
+#: ../../source/job_template.rst:89
+msgid "``never updated``: Never Updated"
+msgstr "``never updated``: 未更新"
+
+#: ../../source/job_template.rst:90
+msgid "``host_config_key``: (string)"
+msgstr "``host_config_key``: (文字列)"
+
+#: ../../source/job_template.rst:91
+msgid "``ask_variables_on_launch``: (boolean)"
+msgstr "``ask_variables_on_launch``: (ブール値)"
+
+#: ../../source/job_template.rst:92
+msgid "``survey_enabled``: (boolean)"
+msgstr "``survey_enabled``: (ブール値)"
+
+#: ../../source/job_template.rst:93
+msgid "``become_enabled``: (boolean)"
+msgstr "``become_enabled``: (ブール値)"
+
+#: ../../source/job_template.rst:97
+msgid "Create Job Templates"
+msgstr "ジョブテンプレートの作成"
+
+#: ../../source/job_template.rst:102
+msgid "Make a POST request to this resource with the following job template fields to create a new job template:"
+msgstr "新規ジョブテンプレートを作成するには、以下のジョブテンプレートフィールドを使ってリソースに POST 要求を実行します。"
+
+#: ../../source/job_template.rst:104
+msgid "``name``: (string, required)"
+msgstr "``name``: (文字列。必須)"
+
+#: ../../source/job_template.rst:105
+msgid "``description``: (string, default=\"\")"
+msgstr "``description``: (文字列。デフォルトは \"\")"
+
+#: ../../source/job_template.rst:108
+msgid "``job_type``: (multiple choice, required)"
+msgstr "``job_type``: (複数選択。必須)"
+
+#: ../../source/job_template.rst:107
+msgid "``run``: Run (default)"
+msgstr "``run``: 実行 (デフォルト)"
+
+#: ../../source/job_template.rst:110
+msgid "``inventory``: (field, default=None)"
+msgstr "``inventory``: (フィールド。デフォルトは None)"
+
+#: ../../source/job_template.rst:111
+msgid "``project``: (field, default=None)"
+msgstr "``project``: (フィールド。デフォルトは None)"
+
+#: ../../source/job_template.rst:112
+msgid "``playbook``: (string, default=\"\")"
+msgstr "``playbook``: (文字列。デフォルトは \"\")"
+
+#: ../../source/job_template.rst:113
+msgid "``credential``: (field, default=None)"
+msgstr "``credential``: (フィールド。デフォルトは None)"
+
+#: ../../source/job_template.rst:114
+msgid "``cloud_credential``: (field, default=None)"
+msgstr "``cloud_credential``: (フィールド。デフォルトは None)"
+
+#: ../../source/job_template.rst:115
+msgid "``forks``: (integer, default=0)"
+msgstr "``forks``: (整数。デフォルトは 0)"
+
+#: ../../source/job_template.rst:116
+msgid "``limit``: (string, default=\"\")"
+msgstr "``limit``: (文字列。デフォルトは \"\")"
+
+#: ../../source/job_template.rst:118
+msgid "``0``: 0 (Normal) (default)"
+msgstr "``0``: 0 (正常。これがデフォルト)"
+
+#: ../../source/job_template.rst:124
+msgid "``extra_vars``: (string, default=\"\")"
+msgstr "``extra_vars``: (文字列。デフォルトは \"\")"
+
+#: ../../source/job_template.rst:125
+msgid "``job_tags``: (string, default=\"\")"
+msgstr "``job_tags``: (文字列。デフォルトは \"\")"
+
+#: ../../source/job_template.rst:126
+msgid "``force_handlers``: (boolean, default=False)"
+msgstr "``force_handlers``: (ブール値。デフォルトは False)"
+
+#: ../../source/job_template.rst:127
+msgid "``skip_tags``: (string, default=\"\")"
+msgstr "``skip_tags``: (文字列。デフォルトは \"\")"
+
+#: ../../source/job_template.rst:128
+msgid "``start_at_task``: (string, default=\"\")"
+msgstr "``start_at_task``: (文字列。デフォルトは \"\")"
+
+#: ../../source/job_template.rst:129
+msgid "``host_config_key``: (string, default=\"\")"
+msgstr "``host_config_key``: (文字列。デフォルトは \"\")"
+
+#: ../../source/job_template.rst:130
+msgid "``ask_variables_on_launch``: (boolean, default=False)"
+msgstr "``ask_variables_on_launch``: (ブール値。デフォルトは False)"
+
+#: ../../source/job_template.rst:131
+msgid "``survey_enabled``: (boolean, default=False)"
+msgstr "``survey_enabled``: (ブール値。デフォルトは False)"
+
+#: ../../source/job_template.rst:132
+msgid "``become_enabled``: (boolean, default=False)"
+msgstr "``become_enabled``: (ブール値。デフォルトは False)"
+
+#: ../../source/job_template.rst:136
+msgid "Reviewing the Options Endpoint"
+msgstr "オプションエンドポイントの確認"
+
+#: ../../source/job_template.rst:141
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*オプションエンドポイント* テーブルでは、このエンドポイントのオプションを確認できます。ブラウザー表示が可能な API でエンドポイントを表示している場合は、「オプション」ボタンをクリックすると以下の raw JSON が表示されます。"
+

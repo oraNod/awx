@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/instance_groups.rst:4
+msgid "Instance Groups"
+msgstr "实例组"
+
+#: ../../source/instance_groups.rst:9
+msgid "An :term:`Instance Group` provides the ability to group instances in a clustered environment. Additionally, policies dictate how instance groups behave and how jobs are executed. The following view displays the capacity levels based on policy algorithms:"
+msgstr ":term:`Instance Group` 提供了在集群环境中对实例进行分组的能力。另外，策略规定了实例组的行为方式，以及作业的执行方式。以下显示了基于策略算法的容量等级："
+
+#: ../../source/instance_groups.rst:11
+msgid "|Instance Group policy example|"
+msgstr "|Instance Group policy example|"
+
+#: ../../source/instance_groups.rst:15
+msgid "For more information about the policy or rules associated with instance groups, see the :ref:`ag_instance_groups` section of the |ata|."
+msgstr "有关与实例组关联的策略或规则的详情，请查看 |ata| 中的 :ref:`ag_instance_groups` 部分。"
+
+#: ../../source/instance_groups.rst:17
+msgid "If you want to connect your instance group to a container, refer to :ref:`ag_container_groups` for further detail."
+msgstr "如果要将实例组连接到一个容器，请参阅 :ref:`ag_container_groups`。"
+
+#: ../../source/instance_groups.rst:19
+msgid "For an in-depth discussion on these concepts, refer to the *Feature Spotlight: Instance Groups and Isolated Nodes* `blog <https://www.ansible.com/blog/ansible-tower-feature-spotlight-instance-groups-and-isolated-nodes>`_."
+msgstr "有关这些概念的深入讨论，请参考 *Feature Spotlight: Instance Groups and Isolated Nodes* `blog <https://www.ansible.com/blog/ansible-tower-feature-spotlight-instance-groups-and-isolated-nodes>`_。"
+
+#: ../../source/instance_groups.rst:24
+msgid "Create an instance group"
+msgstr "创建实例组"
+
+#: ../../source/instance_groups.rst:26
+msgid "To create a new instance group:"
+msgstr "创建新实例组："
+
+#: ../../source/instance_groups.rst:28
+msgid "Click **Instance Groups** from the left navigation menu to open the Instance Groups configuration window."
+msgstr "从左侧导航菜单中点 **Instance Groups** 打开实例组配置窗口。"
+
+#: ../../source/instance_groups.rst:30
+msgid "Click the **Add** button and select **Create Instance Group**."
+msgstr "点 **Add** 按钮并选择 **Create Instance Group**。"
+
+#: ../../source/instance_groups.rst:32
+msgid "|IG - create new IG|"
+msgstr "|IG - create new IG|"
+
+#: ../../source/instance_groups.rst:36
+msgid "Enter the appropriate details into the following fields:"
+msgstr "在以下字段中输入相关信息："
+
+#: ../../source/instance_groups.rst:38
+msgid "**Name**. Names must be unique and must not be named *controller*."
+msgstr "**Name**。名称必须是唯一的，且不能命名为 *controller*。"
+
+#: ../../source/instance_groups.rst:39
+msgid "**Policy Instance Minimum**. Enter the minimum number of instances to automatically assign to this group when new instances come online."
+msgstr "**Policy Instance Minimum**。新实例上线时，自动分配给此组的最少实例数量。"
+
+#: ../../source/instance_groups.rst:40
+msgid "**Policy Instance Percentage**. Use the slider to select a minimum percentage of instances to automatically assign to this group when new instances come online."
+msgstr "**Policy Instance Percentage**。使用滑块来选择，当新实例上线时，自动分配给这个组的最小实例百分比。"
+
+#: ../../source/instance_groups.rst:44
+msgid "Policy Instance fields are not required to create a new instance group. If you do not specify values, then the Policy Instance Minimum and Policy Instance Percentage default to 0."
+msgstr "创建新实例组时 Policy Instance 项并不是必需的。如果没有为它指定值，则 Policy Instance Minimum 和 Policy Instance Percentage 都会被默认设置为 0。"
+
+#: ../../source/instance_groups.rst:46
+msgid "Click **Save**."
+msgstr "点 **Save**。"
+
+#: ../../source/instance_groups.rst:48
+msgid "Once the instance group is successfully created, the **Details** tab of the newly created instance group remains, which allows you to review and edit your instance group information. This is the same menu that is opened if the Edit (|edit-button|) button is clicked from the **Instance Group** link. You can also edit **Instances** and review **Jobs** associated with this instance group."
+msgstr "实例组成功创建后，新创建的实例组的 **Details** 标签页将会显示，您可以通过它来检查和编辑实例组信息。在 **Instance Group** 链接中点 (|edit-button|) 按钮所打开的界面与它相同。您也可以在其中编辑与这个实例组相关联的**实例**和**作业**。"
+
+#: ../../source/instance_groups.rst:52
+msgid "|IG - example IG successfully created|"
+msgstr "|IG - example IG successfully created|"
+
+#: ../../source/instance_groups.rst:58
+msgid "Associate instances to an instance group"
+msgstr "将实例关联到一个实例组"
+
+#: ../../source/instance_groups.rst:60
+msgid "To associate instances to an instance group:"
+msgstr "将实例管理到一个实例组："
+
+#: ../../source/instance_groups.rst:62
+msgid "Click the **Instances** tab of the Instance Group window and click the **Add** button."
+msgstr "点 Instance Group 窗口中的 **Instances** 标签页，然后点 **Add** 按钮。"
+
+#: ../../source/instance_groups.rst:64
+msgid "Click the checkbox next to one or more available instances from the list to select the instance(s) you want to add to the instance group."
+msgstr "选择您需要添加到实例组的一个或多个实例。"
+
+#: ../../source/instance_groups.rst:66
+msgid "|IG - select instances|"
+msgstr "|IG - select instances|"
+
+#: ../../source/instance_groups.rst:70
+msgid "In the following example, the instances added to the instance group displays along with information about their capacity."
+msgstr "在以下示例中，添加到实例组的实例以及其容量的信息一起显示。"
+
+#: ../../source/instance_groups.rst:72
+msgid "|IG - instances in IG|"
+msgstr "|IG - instances in IG|"
+
+#: ../../source/instance_groups.rst:76
+msgid "This view also allows you to edit some key attributes associated with the instances in your instance group:"
+msgstr "通过这个界面，可以编辑实例组中实例的一些关键属性："
+
+#: ../../source/instance_groups.rst:78
+msgid "|IG - instances in IG callouts|"
+msgstr "|IG - instances in IG callouts|"
+
+#: ../../source/instance_groups.rst:84
+msgid "View jobs associated with an instance group"
+msgstr "查看与实例组关联的作业"
+
+#: ../../source/instance_groups.rst:86
+msgid "To view the jobs associated with the instance group, click the **Jobs** tab of the Instance Group window and then click **Expanded** to expand the view to show details about each job."
+msgstr "要查看与实例组关联的作业，请点击 Instance Group 窗口中的 **Jobs** 标签页，然后点击**Expanded** 来扩展视图以显示每个作业的详细信息。"
+
+#: ../../source/instance_groups.rst:88
+msgid "|IG - instances jobs|"
+msgstr "|IG - instances jobs|"
+
+#: ../../source/instance_groups.rst:92
+msgid "Each job displays the job status, ID, and name; type of job, time started and completed, who started the job; and which template, inventory, project, and credential were used."
+msgstr "每个作业都会显示作业状态、ID 和名称、作业类型、启动和完成的时间、谁启动了作业，以及使用了哪个模板、清单、项目和凭证。"
+
+#: ../../source/instance_groups.rst:94
+msgid "The instances are run in accordance with instance group policies. Refer to :ref:`Instance Group Policies <administration:ag_instance_group_policies>` in the |ata|."
+msgstr "实例会根据实例组的策略运行。请参阅 |ata| 中的 :ref:`Instance Group Policies <administration:ag_instance_group_policies>`。"
+

@@ -1,0 +1,1566 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/job_templates.rst:4
+msgid "Job Templates"
+msgstr ""
+
+#: ../../source/job_templates.rst:13
+msgid ""
+"A :term:`job template` is a definition and set of parameters for running "
+"an Ansible job. Job templates are useful to execute the same job many "
+"times. Job templates also encourage the reuse of Ansible playbook content"
+" and collaboration between teams. While the REST API allows for the "
+"execution of jobs directly, Tower requires that you first create a job "
+"template."
+msgstr ""
+
+#: ../../source/job_templates.rst:16
+msgid ""
+"This menu opens a list of the job templates that are currently available."
+" The job template list may be sorted and searched by **Name** or "
+"**Description**. The **Job Templates** tab also enables the user to "
+"launch, schedule, modify, and remove a job template."
+msgstr ""
+
+#: ../../source/job_templates.rst:18
+msgid "|Job templates - home with example job template|"
+msgstr ""
+
+#: ../../source/job_templates.rst:22
+msgid "To create a new job template:"
+msgstr ""
+
+#: ../../source/job_templates.rst:24
+msgid "Click the |add| button then select **Job Template** from the menu list."
+msgstr ""
+
+#: ../../source/job_templates.rst:28
+msgid "|Job templates - create new job template|"
+msgstr ""
+
+#: ../../source/job_templates.rst:33
+msgid "Enter the appropriate details into the following fields:"
+msgstr ""
+
+#: ../../source/job_templates.rst:35
+msgid "**Name**: Enter a name for the job."
+msgstr ""
+
+#: ../../source/job_templates.rst:36
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)."
+msgstr ""
+
+#: ../../source/job_templates.rst:37
+msgid "**Job Type**:"
+msgstr ""
+
+#: ../../source/job_templates.rst:39
+msgid ""
+"Run: Execute the playbook when launched, running Ansible tasks on the "
+"selected hosts."
+msgstr ""
+
+#: ../../source/job_templates.rst:40
+msgid ""
+"Check: Setting the type to Check does not execute the playbook, but does "
+"check the syntax, test the environment setup, and report problems. Think "
+"of this as running the playbook in dry-run mode and having it report "
+"\"changed\" when an item would be changed, but not actually making "
+"changes."
+msgstr ""
+
+#: ../../source/job_templates.rst:41
+msgid ""
+"Scan: Gather system tracking information. Users who have 'Use' "
+"permissions on a particular inventory have permission to create scan "
+"jobs. A default playbook has been created for your use. Custom written "
+"scan playbooks can use scan modules."
+msgstr ""
+
+#: ../../source/job_templates.rst:42
+msgid ""
+"**Prompt on Launch** -- If selected, even if a default value is supplied,"
+" you will be prompted upon launch to choose a job type of run or check "
+"(scan job types cannot be changed at the time of launch)."
+msgstr ""
+
+#: ../../source/job_templates.rst:46
+msgid ""
+"More information on job types can be found in the `Playbooks: Special "
+"Topics <http://docs.ansible.com/playbooks_special_topics.html>`__ section"
+" of the Ansible documentation."
+msgstr ""
+
+#: ../../source/job_templates.rst:48
+msgid ""
+"**Inventory**: Choose the inventory to be used with this job template "
+"from the inventories available to the currently logged in Tower user. - "
+"**Prompt on Launch** -- If selected, even if a default value is supplied,"
+" you will be prompted upon launch to choose an inventory to run this job "
+"template against."
+msgstr ""
+
+#: ../../source/job_templates.rst:51
+msgid ""
+"**Project**: Choose the project to be used with this job template from "
+"the projects available to the currently logged in Tower user."
+msgstr ""
+
+#: ../../source/job_templates.rst:52
+msgid ""
+"**Playbook**: Choose the playbook to be launched with this job template "
+"from the available playbooks. This menu is automatically populated with "
+"the names of the playbooks found in the project base path for the "
+"selected project. For example, a playbook named \"jboss.yml\" in the "
+"project path appears in the menu as \"jboss\"."
+msgstr ""
+
+#: ../../source/job_templates.rst:53
+msgid ""
+"**Machine Credential**: Choose the machine credential to be used with "
+"this job template from the credentials available to the currently logged "
+"in Tower user."
+msgstr ""
+
+#: ../../source/job_templates.rst:54
+msgid ""
+"**Cloud Credential**: Choose the credential to be used with this job "
+"template from the credentials available to the currently logged in Tower "
+"user."
+msgstr ""
+
+#: ../../source/job_templates.rst:55 ../../source/job_templates.rst:478
+msgid ""
+"**Network Credential** Choose the network credential to be used with this"
+" job template from the credentials availale to the currently logged in "
+"Tower user."
+msgstr ""
+
+#: ../../source/job_templates.rst:56
+msgid ""
+"**Forks**: The number of parallel or simultaneous processes to use while "
+"executing the playbook. A value of zero uses the Ansible default setting,"
+" which is 5 parallel processes unless overridden in "
+"``/etc/ansible/ansible.cfg``."
+msgstr ""
+
+#: ../../source/job_templates.rst:57
+msgid "**Limit**:"
+msgstr ""
+
+#: ../../source/job_templates.rst:59
+msgid ""
+"A host pattern to further constrain the list of hosts managed or affected"
+" by the playbook. Multiple patterns can be separated by colons (\":\"). "
+"As with core Ansible, \"a:b\" means \"in group a or b\", \"a:b:&c\" means"
+" \"in a or b but must be in c\", and \"a:!b\" means \"in a, and "
+"definitely not in b\"."
+msgstr ""
+
+#: ../../source/job_templates.rst:60 ../../source/job_templates.rst:484
+msgid ""
+"**Prompt on Launch**: If selected, even if a default value is supplied, "
+"you will be prompted upon launch to choose a limit."
+msgstr ""
+
+#: ../../source/job_templates.rst:64
+msgid ""
+"For more information and examples refer to `Patterns "
+"<http://docs.ansible.com/intro_patterns.html>`__ in the Ansible "
+"documentation."
+msgstr ""
+
+#: ../../source/job_templates.rst:66
+msgid ""
+"**Verbosity**: Control the level of output Ansible produces as the "
+"playbook executes. Set the verbosity to any of Default, Verbose, or "
+"Debug. This only appears in the \"details\" report view. Verbose logging "
+"includes the output of all commands. Debug logging is exceedingly verbose"
+" and includes information on SSH operations that can be useful in certain"
+" support instances. Most users do not need to see debug mode output."
+msgstr ""
+
+#: ../../source/job_templates.rst:67
+msgid "**Job Tags**:"
+msgstr ""
+
+#: ../../source/job_templates.rst:69
+msgid ""
+"Provide a comma-separated list of playbook tags to specify what parts of "
+"the playbooks should be executed."
+msgstr ""
+
+#: ../../source/job_templates.rst:70 ../../source/job_templates.rst:76
+#: ../../source/job_templates.rst:495
+msgid ""
+"For more information and examples refer to `Tags "
+"<http://docs.ansible.com/playbooks_tags.html>`__ in the Ansible "
+"documentation."
+msgstr ""
+
+#: ../../source/job_templates.rst:71 ../../source/job_templates.rst:77
+#: ../../source/job_templates.rst:490 ../../source/job_templates.rst:496
+msgid ""
+"**Prompt on Launch** -- If selected, even if a default value is supplied,"
+" you will be prompted upon launch to choose a job tag."
+msgstr ""
+
+#: ../../source/job_templates.rst:73 ../../source/job_templates.rst:492
+msgid "**Skip Tags**:"
+msgstr ""
+
+#: ../../source/job_templates.rst:75 ../../source/job_templates.rst:494
+msgid ""
+"Provide a comma-separated list of playbook tags to skip certain tasks or "
+"parts of the playbooks to be executed."
+msgstr ""
+
+#: ../../source/job_templates.rst:79 ../../source/job_templates.rst:505
+msgid ""
+"**Labels**: Supply optional labels that describe this job template, such "
+"as \"dev\" or \"test\". Labels can be used to group and filter job "
+"templates and completed jobs in the Tower display."
+msgstr ""
+
+#: ../../source/job_templates.rst:81 ../../source/job_templates.rst:507
+msgid ""
+"Labels are created when they are added to the Job Template. Labels are "
+"associated to a single Organization using the Project that is provided in"
+" the Job Template. Members of the Organization can create labels on a Job"
+" Template if they have edit permissions (such as an admin role)."
+msgstr ""
+
+#: ../../source/job_templates.rst:82 ../../source/job_templates.rst:508
+msgid ""
+"Once the Job Template is saved, the labels appear in the Job Templates "
+"overview."
+msgstr ""
+
+#: ../../source/job_templates.rst:83 ../../source/job_templates.rst:509
+msgid ""
+"Click on the \"x\" beside a label to remove it. When a label is removed, "
+"and is no longer associated with a Job or Job Template, the label is "
+"permanently deleted from the list of Organization labels."
+msgstr ""
+
+#: ../../source/job_templates.rst:84 ../../source/job_templates.rst:510
+msgid ""
+"Jobs inherit labels from the Job Template at the time of launch. If a "
+"label is deleted from a Job Template, it is also deleted from the Job."
+msgstr ""
+
+#: ../../source/job_templates.rst:91 ../../source/job_templates.rst:517
+msgid "**Extra Variables**:"
+msgstr ""
+
+#: ../../source/job_templates.rst:93 ../../source/job_templates.rst:519
+msgid ""
+"Pass extra command line variables to the playbook. This is the \"-e\" or "
+"\"--extra-vars\" command line parameter for ansible-playbook that is "
+"documented in the Ansible documentation at `Passing Variables on the "
+"Command Line <http://docs.ansible.com/playbooks_variables.html#passing-"
+"variables-on-the-command-line>`__."
+msgstr ""
+
+#: ../../source/job_templates.rst:94
+msgid ""
+"Provide key/value pairs using either YAML or JSON. These variables have a"
+" maximum value of precedence and overrides other variables specified "
+"elsewhere. An example value might be:"
+msgstr ""
+
+#: ../../source/job_templates.rst:100 ../../source/job_templates.rst:521
+msgid ""
+"**Prompt on Launch** -- If selected, even if a default value is supplied,"
+" you will be prompted upon launch to choose command line variables."
+msgstr ""
+
+#: ../../source/job_templates.rst:102 ../../source/job_templates.rst:500
+msgid ""
+"**Enable Privilege Escalation**: If enabled, run this playbook as an "
+"administrator. This is the equivalent of passing the ``--become`` option "
+"to the ``ansible-playbook`` command."
+msgstr ""
+
+#: ../../source/job_templates.rst:103 ../../source/job_templates.rst:501
+msgid ""
+"**Allow Provisioning Callbacks**: Enable a host to call back to Tower via"
+" the Tower API and invoke the launch of a job from this job template. "
+"Refer to :ref:`ug_provisioning_callbacks` for additional information."
+msgstr ""
+
+#: ../../source/job_templates.rst:104 ../../source/job_templates.rst:502
+msgid ""
+"**Enable Concurrent Jobs**: Allow jobs in the queue to run "
+"simulataneously if not dependent on one another. Refer to "
+":ref:`ug_job_concurrency` for additional information."
+msgstr ""
+
+#: ../../source/job_templates.rst:106
+msgid "When you have completed configuring the job template, select **Save**."
+msgstr ""
+
+#: ../../source/job_templates.rst:108
+msgid ""
+"When editing an existing job template, by clicking the job template name "
+"or the **Edit** button, the bottom of the screen displays a list of all "
+"of the jobs that have been launched from this template. Refer to the "
+"section :ref:`ug_jobs` for more information about this interface."
+msgstr ""
+
+#: ../../source/job_templates.rst:112
+msgid ""
+"Starting with |at| 3.0, Job Templates now have an option to be copied. If"
+" you choose to **Copy** a Job Template, you must understand that this "
+"**does not** copy any associated schedule, notifications, or permissions."
+" Schedules and notifications must be recreated by the user or admin "
+"creating the copy of the Job Template. The user copying the Job Template "
+"will be granted the admin permission, but no permissions are assigned "
+"(copied) to the Job Template."
+msgstr ""
+
+#: ../../source/job_templates.rst:115
+msgid ""
+"The **Details** view of a saved job allows you to review, edit, and add a"
+" survey (if the job type is not a scan)."
+msgstr ""
+
+#: ../../source/job_templates.rst:120
+msgid ""
+"The **Completed Jobs** view provides details of how this job has been "
+"run. It provides you with the ID, Name, Job Type, when it completed, and "
+"allows you to relaunch or delete the job. You can filter the list of "
+"completed jobs using the job ID, Name, Type, or if the Job Failed."
+msgstr ""
+
+#: ../../source/job_templates.rst:124
+msgid ""
+"Clicking on **Permissions** allows you to review, grant, edit, and remove"
+" associated permissions for users as well as team members."
+msgstr ""
+
+#: ../../source/job_templates.rst:128
+msgid "Click the |add| button to create new permissions for this Job Template."
+msgstr ""
+
+#: ../../source/job_templates.rst:130
+msgid ""
+"In this example, two users and one team have been selected and each have "
+"been granted permissions for this Job Template."
+msgstr ""
+
+#: ../../source/job_templates.rst:134
+msgid ""
+"Note that you do not have to choose between teams or users, and that you "
+"can assign permissions to both at the same time."
+msgstr ""
+
+#: ../../source/job_templates.rst:136
+msgid ""
+"Clicking on **Notifications** allows you to review any notification "
+"integrations you have setup."
+msgstr ""
+
+#: ../../source/job_templates.rst:138
+msgid "Click on the |add notifications| button to create a notification."
+msgstr ""
+
+#: ../../source/job_templates.rst:142
+msgid "Refer to :ref:`ug_notifications` for more information."
+msgstr ""
+
+#: ../../source/job_templates.rst:150
+msgid "Utilitzing Cloud Credentials"
+msgstr ""
+
+#: ../../source/job_templates.rst:157
+msgid ""
+"Cloud Credentials can be used when syncing a respective cloud inventory. "
+"Cloud Credentials may also be associated with a Job Template and included"
+" in the runtime environment for use by a playbook. The use of Cloud "
+"Credentials was introduced in |at| version 2.4.0."
+msgstr ""
+
+#: ../../source/job_templates.rst:160
+msgid "OpenStack"
+msgstr ""
+
+#: ../../source/job_templates.rst:165
+msgid ""
+"The sample playbook below invokes the ``nova_compute`` Ansible OpenStack "
+"cloud module and requires credentials to do anything meaningful, and "
+"specifically requires the following information: ``auth_url``, "
+"``username``, ``password``, and ``project_name``. These fields are made "
+"available to the playbook via the environmental variable "
+"``OS_CLIENT_CONFIG_FILE``, which points to a YAML file written by Tower "
+"based on the contents of the cloud credential. This sample playbook loads"
+" the YAML file into the Ansible variable space."
+msgstr ""
+
+#: ../../source/job_templates.rst:167
+msgid "``OS_CLIENT_CONFIG_FILE`` example:"
+msgstr ""
+
+#: ../../source/job_templates.rst:179
+msgid "Playbook example:"
+msgstr ""
+
+#: ../../source/job_templates.rst:214
+msgid "Amazon Web Services"
+msgstr ""
+
+#: ../../source/job_templates.rst:219
+msgid ""
+"Amazon Web Services cloud credentials are exposed as the following "
+"environment variables during playbook execution (in the job template, "
+"choose the cloud credential needed for your setup):"
+msgstr ""
+
+#: ../../source/job_templates.rst:221
+msgid "``AWS_ACCESS_KEY``"
+msgstr ""
+
+#: ../../source/job_templates.rst:222
+msgid "``AWS_SECRET_KEY``"
+msgstr ""
+
+#: ../../source/job_templates.rst:224
+msgid ""
+"All of the AWS modules will implicitly use these credentials when run via"
+" Tower without having to set the ``aws_access_key`` or ``aws_secret_key``"
+" module options."
+msgstr ""
+
+#: ../../source/job_templates.rst:227
+msgid "Rackspace"
+msgstr ""
+
+#: ../../source/job_templates.rst:232
+msgid ""
+"Rackspace cloud credentials are exposed as the following environment "
+"variables during playbook execution (in the job template, choose the "
+"cloud credential needed for your setup):"
+msgstr ""
+
+#: ../../source/job_templates.rst:234
+msgid "``RAX_USERNAME``"
+msgstr ""
+
+#: ../../source/job_templates.rst:235
+msgid "``RAX_API_KEY``"
+msgstr ""
+
+#: ../../source/job_templates.rst:237
+msgid ""
+"All of the Rackspace modules will implicitly use these credentials when "
+"run via Tower without having to set the ``username`` or ``api_key`` "
+"module options."
+msgstr ""
+
+#: ../../source/job_templates.rst:240
+msgid "Google"
+msgstr ""
+
+#: ../../source/job_templates.rst:245
+msgid ""
+"Google cloud credentials are exposed as the following environment "
+"variables during playbook execution (in the job template, choose the "
+"cloud credential needed for your setup):"
+msgstr ""
+
+#: ../../source/job_templates.rst:247
+msgid "``GCE_EMAIL``"
+msgstr ""
+
+#: ../../source/job_templates.rst:248
+msgid "``GCE_PROJECT``"
+msgstr ""
+
+#: ../../source/job_templates.rst:249
+msgid "``GCE_CREDENTIALS_FILE_PATH``"
+msgstr ""
+
+#: ../../source/job_templates.rst:251
+msgid ""
+"All of the Google modules will implicitly use these credentials when run "
+"via Tower without having to set the ``service_account_email``, "
+"``project_id``, or ``pem_file`` module options."
+msgstr ""
+
+#: ../../source/job_templates.rst:254
+msgid "Azure"
+msgstr ""
+
+#: ../../source/job_templates.rst:259
+msgid ""
+"Azure cloud credentials are exposed as the following environment "
+"variables during playbook execution (in the job template, choose the "
+"cloud credential needed for your setup):"
+msgstr ""
+
+#: ../../source/job_templates.rst:261
+msgid "``AZURE_SUBSCRIPTION_ID``"
+msgstr ""
+
+#: ../../source/job_templates.rst:262
+msgid "``AZURE_CERT_PATH``"
+msgstr ""
+
+#: ../../source/job_templates.rst:264
+msgid ""
+"All of the Azure modules implicitly use these credentials when run via "
+"Tower without having to set the ``subscription_id`` or "
+"``management_cert_path`` module options."
+msgstr ""
+
+#: ../../source/job_templates.rst:267
+msgid "VMware"
+msgstr ""
+
+#: ../../source/job_templates.rst:272
+msgid ""
+"VMware cloud credentials are exposed as the following environment "
+"variables during playbook execution (in the job template, choose the "
+"cloud credential needed for your setup):"
+msgstr ""
+
+#: ../../source/job_templates.rst:274
+msgid "``VMWARE_USER``"
+msgstr ""
+
+#: ../../source/job_templates.rst:275
+msgid "``VMWARE_PASSWORD``"
+msgstr ""
+
+#: ../../source/job_templates.rst:276
+msgid "``VMWARE_HOST``"
+msgstr ""
+
+#: ../../source/job_templates.rst:278
+msgid "The sample playbook below demonstrates usage of these credentials:"
+msgstr ""
+
+#: ../../source/job_templates.rst:297
+msgid "Surveys"
+msgstr ""
+
+#: ../../source/job_templates.rst:303
+msgid ""
+"Job types of Run or Check will provide a way to set up surverys in the "
+"Job Template creation or editing screens. Surveys set extra variables for"
+" the playbook similar to 'Prompt for Extra Variables' does, but in a "
+"user-friendly question and answer way. Surveys also allows for validation"
+" of user input. Click the |survey| button to create a survey."
+msgstr ""
+
+#: ../../source/job_templates.rst:307
+msgid ""
+"Use cases for surveys are numerous. An example might be if operations "
+"wanted to give developers a \"push to stage\" button they could run "
+"without advanced Ansible knowledge. When launched, this task could prompt"
+" for answers to questions such as, \"What tag should we release?\""
+msgstr ""
+
+#: ../../source/job_templates.rst:309
+msgid "Many types of questions can be asked, including multiple-choice questions."
+msgstr ""
+
+#: ../../source/job_templates.rst:313
+msgid "Surveys are only available to those with Enterprise-level licenses."
+msgstr ""
+
+#: ../../source/job_templates.rst:318
+msgid "Creating a Survey"
+msgstr ""
+
+#: ../../source/job_templates.rst:325
+msgid "To create a survey:"
+msgstr ""
+
+#: ../../source/job_templates.rst:327
+msgid "Click on the |survey| button to bring up the **Add Survey** window."
+msgstr ""
+
+#: ../../source/job_templates.rst:332 ../../source/job_templates.rst:664
+#: ../../source/job_templates.rst:980
+msgid ""
+"Use the **ON/OFF** toggle button to quickly activate or deactivate this "
+"survey prompt."
+msgstr ""
+
+#: ../../source/job_templates.rst:334
+msgid ""
+"A survey can consist of any number of questions. For each question, enter"
+" the following information:"
+msgstr ""
+
+#: ../../source/job_templates.rst:336
+msgid "**Name**: The question to ask the user"
+msgstr ""
+
+#: ../../source/job_templates.rst:337
+msgid ""
+"**Description**: (optional) A description of what's being asked of the "
+"user."
+msgstr ""
+
+#: ../../source/job_templates.rst:338
+msgid ""
+"**Answer Variable Name**: The Ansible variable name to store the user's "
+"response in. This is the variable to be used by the playbook. Variable "
+"names cannot contain spaces."
+msgstr ""
+
+#: ../../source/job_templates.rst:339
+msgid "**Answer Type**: Choose from the following question types."
+msgstr ""
+
+#: ../../source/job_templates.rst:341
+msgid ""
+"*Text*: A single line of text. You can set the minimum and maximum length"
+" (in characters) for this answer."
+msgstr ""
+
+#: ../../source/job_templates.rst:342
+msgid ""
+"*Textarea*: A multi-line text field. You can set the minimum and maximum "
+"length (in characters) for this answer."
+msgstr ""
+
+#: ../../source/job_templates.rst:343
+msgid ""
+"*Password*: Responses are treated as sensitive information, much like an "
+"actual password is treated. You can set the minimum and maximum length "
+"(in characters) for this answer."
+msgstr ""
+
+#: ../../source/job_templates.rst:344
+msgid ""
+"*Multiple Choice (single select)*: A list of options, of which only one "
+"can be selected at a time. Enter the options, one per line, in the "
+"**Multiple Choice Options** box."
+msgstr ""
+
+#: ../../source/job_templates.rst:345
+msgid ""
+"*Multiple Choice (multiple select)*: A list of options, any number of "
+"which can be selected at a time. Enter the options, one per line, in the "
+"**Multiple Choice Options** box."
+msgstr ""
+
+#: ../../source/job_templates.rst:348
+msgid ""
+"*Integer*: An integer number. You can set the minimum and maximum length "
+"(in characters) for this answer."
+msgstr ""
+
+#: ../../source/job_templates.rst:349
+msgid ""
+"*Float*: A decimal number. You can set the minimum and maximum length (in"
+" characters) for this answer."
+msgstr ""
+
+#: ../../source/job_templates.rst:351
+msgid ""
+"**Default Answer**: The default answer to the question. This value is "
+"pre-filled in the interface and is used if the answer is not provided by "
+"the user."
+msgstr ""
+
+#: ../../source/job_templates.rst:352
+msgid ""
+"**Required**: Whether or not an answer to this question is required from "
+"the user."
+msgstr ""
+
+#: ../../source/job_templates.rst:354
+msgid ""
+"Once you have entered the question information, click the |add| button to"
+" add the question."
+msgstr ""
+
+#: ../../source/job_templates.rst:356
+msgid ""
+"A stylized version of the survey is presented in the Preview pane. For "
+"any question, you can click on the **Edit** button to edit the question, "
+"the **Delete** button to delete the question, and click anad drag on the "
+"grid icon to rearrange the order of the questions."
+msgstr ""
+
+#: ../../source/job_templates.rst:358
+msgid "Return to the left pane to add additional questions."
+msgstr ""
+
+#: ../../source/job_templates.rst:360
+msgid "When done, click **Save** to save the survey."
+msgstr ""
+
+#: ../../source/job_templates.rst:363
+msgid "|job-template-completed-survey|"
+msgstr ""
+
+#: ../../source/job_templates.rst:370
+msgid "Optional Survey Questions"
+msgstr ""
+
+#: ../../source/job_templates.rst:376
+msgid ""
+"The **Required** setting on a survey question determines whether the "
+"answer is optional or not for the user interacting with it."
+msgstr ""
+
+#: ../../source/job_templates.rst:378
+msgid ""
+"Behind the scenes, optional survey variables can be passed to the "
+"playbook in ``extra_vars``, even when they aren't filled in."
+msgstr ""
+
+#: ../../source/job_templates.rst:380
+msgid ""
+"If a non-text variable (input type) is marked as optional, and is not "
+"filled in, no survey ``extra_var`` is passed to the playbook."
+msgstr ""
+
+#: ../../source/job_templates.rst:382
+msgid ""
+"If a text input or text area input is marked as optional, is not filled "
+"in, and has a minimum ``length > 0``, no survey ``extra_var`` is passed "
+"to the playbook."
+msgstr ""
+
+#: ../../source/job_templates.rst:384
+msgid ""
+"If a text input or text area input is marked as optional, is not filled "
+"in, and has a minimum ``length === 0``, that survey ``extra_var`` is "
+"passed to the playbook, with the value set to an empty string ( \"\" )."
+msgstr ""
+
+#: ../../source/job_templates.rst:389
+msgid "Extra Variables"
+msgstr ""
+
+#: ../../source/job_templates.rst:397
+msgid ""
+"Additional strict ``extra_vars`` validation was added in |at| 3.0.0. "
+"``extra_vars`` passed to the job launch API are only honored if one of "
+"the following is true:"
+msgstr ""
+
+#: ../../source/job_templates.rst:399
+msgid "They correspond to variables in an enabled survey"
+msgstr ""
+
+#: ../../source/job_templates.rst:400
+msgid "``ask_variables_on_launch`` is set to True"
+msgstr ""
+
+#: ../../source/job_templates.rst:402
+msgid ""
+"When you pass survey variables, they are passed as extra variables "
+"(``extra_vars``) within Tower. This can be tricky, as passing extra "
+"variables to a job template (as you would do with a survey) can override "
+"other variables being passed from the inventory and project."
+msgstr ""
+
+#: ../../source/job_templates.rst:404
+msgid ""
+"For example, say that you have a defined variable for an inventory for "
+"``debug = true``. It is entirely possible that this variable, ``debug = "
+"true``, can be overridden in a job template survey."
+msgstr ""
+
+#: ../../source/job_templates.rst:406
+msgid ""
+"To ensure that the variables you need to pass are not overridden, ensure "
+"they are included by redefining them in the survey. Keep in mind that "
+"extra variables can be defined at the inventory, group, and host levels."
+msgstr ""
+
+#: ../../source/job_templates.rst:417
+msgid ""
+"Beginning with |at| version 2.4, the behavior for Job Template extra "
+"variables and Survey variables has changed. Previously, variables set "
+"using a Survey overrode any extra variables specified in the Job "
+"Template. In 2.4 and later, the Job Template extra variables dictionary "
+"is merged with the Survey variables. This may result in a change of "
+"behavior upon upgrading to 2.4."
+msgstr ""
+
+#: ../../source/job_templates.rst:419
+msgid ""
+"The following table notes the behavior (hierarchy) of variable precedence"
+" in |at| as it compares to variable precedence in Ansible."
+msgstr ""
+
+#: ../../source/job_templates.rst:421
+msgid "**Ansible Tower Variable Precedence Hierarchy (last listed wins)**"
+msgstr ""
+
+#: ../../source/job_templates.rst:426
+msgid "Relaunching Job Templates"
+msgstr ""
+
+#: ../../source/job_templates.rst:431
+msgid ""
+"Another change for |at| version 2.4  introduced a ``launch_type`` setting"
+" for your jobs. Instead of manually relaunching a job, a relaunch is "
+"denoted by setting ``launch_type`` to ``relaunch``. The relaunch behavior"
+" deviates from the launch behavior in that it **does not** inherit "
+"``extra_vars``."
+msgstr ""
+
+#: ../../source/job_templates.rst:433
+msgid ""
+"Job relaunching does not go through the inherit logic. It uses the same "
+"``extra_vars`` that were calculated for the job being relaunched."
+msgstr ""
+
+#: ../../source/job_templates.rst:435
+msgid ""
+"For example, say that you launch a Job Template with no ``extra_vars`` "
+"which results in the creation of a Job called **j1**. Next, say that you "
+"edit the Job Template and add in some ``extra_vars`` (such as adding "
+"``\"{ \"hello\": \"world\" }\"``)."
+msgstr ""
+
+#: ../../source/job_templates.rst:437
+msgid ""
+"Relaunching **j1** results in the creation of **j2**, but because there "
+"is no inherit logic and **j1** had no ``extra_vars``, **j2** will not "
+"have any ``extra_vars``."
+msgstr ""
+
+#: ../../source/job_templates.rst:439
+msgid ""
+"To continue upon this example, if you launched the Job Template with the "
+"``extra_vars`` you added after the creation of **j1**, the relaunch job "
+"created (**j3**) will include the ``extra_vars``. And relaunching **j3** "
+"results in the creation of **j4**, which would also include "
+"``extra_vars``."
+msgstr ""
+
+#: ../../source/job_templates.rst:443
+msgid "Scan Job Templates"
+msgstr ""
+
+#: ../../source/job_templates.rst:449
+msgid ""
+"Scan jobs are special Job Templates that only collect information about "
+"the host on which the job is running."
+msgstr ""
+
+#: ../../source/job_templates.rst:451
+msgid "To create this special type of job template:"
+msgstr ""
+
+#: ../../source/job_templates.rst:453
+msgid "Click on **Templates**."
+msgstr ""
+
+#: ../../source/job_templates.rst:455
+msgid ""
+"2. Click the |add| button then select **Job Template** from the menu "
+"list, which launches the **Create Job Template** window. |Scan Job - add|"
+msgstr ""
+
+#: ../../source/job_templates.rst:460
+msgid ""
+"Enter values for the following fields (required fields are marked with a "
+"red asterisk):"
+msgstr ""
+
+#: ../../source/job_templates.rst:462
+msgid "**Name**: Enter a name appropriate for this inventory."
+msgstr ""
+
+#: ../../source/job_templates.rst:464
+msgid "**Description**: Enter an arbitrary description as appropriate."
+msgstr ""
+
+#: ../../source/job_templates.rst:466
+msgid "**Job Type**: Jobs can be of type Run, Check, or **Scan**."
+msgstr ""
+
+#: ../../source/job_templates.rst:468
+msgid ""
+"**Inventory**: Select the inventory containing the hosts you want this "
+"job to manage."
+msgstr ""
+
+#: ../../source/job_templates.rst:470
+msgid ""
+"**Project**: Select the project containing the playbook you want this job"
+" to execute. Use the default project included with Tower unless you have "
+"a specific project to scan."
+msgstr ""
+
+#: ../../source/job_templates.rst:472
+msgid ""
+"**Playbook**: Select the playbook to be executed by this job. Use the "
+"default playbook included with Tower unless you have a specific playbook "
+"to scan."
+msgstr ""
+
+#: ../../source/job_templates.rst:474
+msgid ""
+"**Machine Credential**: Select the credential you want the job to use "
+"when accessing the remote hosts. Choose the credential containing the "
+"username and SSH key or password that Ansible will need to log into the "
+"remote hosts."
+msgstr ""
+
+#: ../../source/job_templates.rst:476
+msgid ""
+"**Cloud Credential**: Selecting an optional cloud credential in the job "
+"template will pass along the access credentials to the running playbook, "
+"allowing provisioning into the cloud without manually passing parameters "
+"to the included modules."
+msgstr ""
+
+#: ../../source/job_templates.rst:480
+msgid ""
+"**Forks**: The number of parallel or simultaneous processes to use while "
+"executing the playbook."
+msgstr ""
+
+#: ../../source/job_templates.rst:482
+msgid ""
+"**Limit**: Provide a host pattern to further constrain the list of hosts "
+"that will be managed or affected by the playbook."
+msgstr ""
+
+#: ../../source/job_templates.rst:486
+msgid ""
+"**Verbosity**: Control the level of output Ansible produces as the "
+"playbook executes."
+msgstr ""
+
+#: ../../source/job_templates.rst:488
+msgid ""
+"**Job Tags**: Provide a comma separated list of tags to run a specific "
+"part of a play or task."
+msgstr ""
+
+#: ../../source/job_templates.rst:498
+msgid "**Options**:"
+msgstr ""
+
+#: ../../source/job_templates.rst:520
+msgid ""
+"Provide key/value pairs using either YAML or JSON. These variables have a"
+" maximum value of precedence and overrides other variables specified "
+"elsewhere."
+msgstr ""
+
+#: ../../source/job_templates.rst:528
+msgid ""
+"You cannot assign a new inventory at the time of launch to a scan job. "
+"Scan jobs must be tied to a fixed inventory."
+msgstr ""
+
+#: ../../source/job_templates.rst:532
+msgid ""
+"You cannot change the Job Type at the time of launch to or from the type "
+"of \"scan\". The ``ask_job_type_on_launch`` option only enables you to "
+"toggle \"run\" versus \"check\" at launch time."
+msgstr ""
+
+#: ../../source/job_templates.rst:534
+msgid "When you have completed configuring the job template, click **Save**."
+msgstr ""
+
+#: ../../source/job_templates.rst:538
+msgid "Supported OSes for Scan Job Templates"
+msgstr ""
+
+#: ../../source/job_templates.rst:540
+msgid "The following operating systems are supported for Scan Jobs:"
+msgstr ""
+
+#: ../../source/job_templates.rst:542
+msgid "|rhel| 5, 6, & 7"
+msgstr ""
+
+#: ../../source/job_templates.rst:543
+msgid "CentOS 5, 6, & 7"
+msgstr ""
+
+#: ../../source/job_templates.rst:544
+msgid "Ubuntu 12.04, 14.04, 16.04"
+msgstr ""
+
+#: ../../source/job_templates.rst:545
+msgid "OEL 6 & 7"
+msgstr ""
+
+#: ../../source/job_templates.rst:546
+msgid "SLES 11 & 12"
+msgstr ""
+
+#: ../../source/job_templates.rst:547
+msgid "Debian 6 & 7"
+msgstr ""
+
+#: ../../source/job_templates.rst:548
+msgid "Fedora 22, 23, 24"
+msgstr ""
+
+#: ../../source/job_templates.rst:549
+msgid "Amazon Linux 2016.03"
+msgstr ""
+
+#: ../../source/job_templates.rst:551
+msgid ""
+"Note that some of these operating systems may require initial "
+"configuration in order to be able to run python and/or have access to the"
+" python packages that the scan modules depend on."
+msgstr ""
+
+#: ../../source/job_templates.rst:555
+msgid "Pre-scan Setup"
+msgstr ""
+
+#: ../../source/job_templates.rst:557
+msgid ""
+"The following are examples of playbooks that configure certain "
+"distributions so that scan jobs can be run against them."
+msgstr ""
+
+#: ../../source/job_templates.rst:559
+msgid "**Bootstrap Ubuntu (16.04)**"
+msgstr ""
+
+#: ../../source/job_templates.rst:578
+msgid "**Bootstrap Fedora (23, 24)**"
+msgstr ""
+
+#: ../../source/job_templates.rst:597
+msgid "CentOS 5 or |rhel| 5 may also need the ``simplejson`` package installed."
+msgstr ""
+
+#: ../../source/job_templates.rst:601
+msgid "Launching a Scan Job Template"
+msgstr ""
+
+#: ../../source/job_templates.rst:608
+msgid "|Inventories Scan Job - saved|"
+msgstr ""
+
+#: ../../source/job_templates.rst:612
+msgid ""
+"You can **Launch**, **Schedule**, **Edit**, **Delete**, or **Copy** the "
+"scan job template using the buttons to the right."
+msgstr ""
+
+#: ../../source/job_templates.rst:614
+msgid ""
+"Click on the |launch| button.  Enter any necessary credentials, "
+"passwords, passphrases, etc. that were setup for this job template."
+msgstr ""
+
+#: ../../source/job_templates.rst:616
+msgid ""
+"The Jobs page shows details of all the tasks and events for that playbook"
+" run."
+msgstr ""
+
+#: ../../source/job_templates.rst:618
+msgid "|Inventories Scan Job - job page|"
+msgstr ""
+
+#: ../../source/job_templates.rst:624
+msgid "Scheduling a Scan Job Template"
+msgstr ""
+
+#: ../../source/job_templates.rst:631
+msgid ""
+"To access scheduling for your scan job, click the |schedule| button (most"
+" easily accessible from the **Job Templates** navigational link)."
+msgstr ""
+
+#: ../../source/job_templates.rst:635
+msgid "|Inventories Scan Job - schedule home|"
+msgstr ""
+
+#: ../../source/job_templates.rst:639
+msgid "Click the |add| button to add a schedule."
+msgstr ""
+
+#: ../../source/job_templates.rst:641 ../../source/job_templates.rst:961
+msgid "|Inventories Scan Job - schedule add|"
+msgstr ""
+
+#: ../../source/job_templates.rst:645 ../../source/job_templates.rst:963
+msgid ""
+"Enter the appropriate details into the following fields and select "
+"**Save**:"
+msgstr ""
+
+#: ../../source/job_templates.rst:647 ../../source/job_templates.rst:965
+msgid "Name (required)"
+msgstr ""
+
+#: ../../source/job_templates.rst:648 ../../source/job_templates.rst:966
+msgid "Start Date (required)"
+msgstr ""
+
+#: ../../source/job_templates.rst:649 ../../source/job_templates.rst:967
+msgid "Start Time (required)"
+msgstr ""
+
+#: ../../source/job_templates.rst:650 ../../source/job_templates.rst:968
+msgid "Local Time Zone (the entered Start Time should be in this timezone)"
+msgstr ""
+
+#: ../../source/job_templates.rst:651 ../../source/job_templates.rst:969
+msgid ""
+"Repeat Frequency (the appropriate options display as the update frequency"
+" is modified.)"
+msgstr ""
+
+#: ../../source/job_templates.rst:653 ../../source/job_templates.rst:973
+msgid ""
+"The **Details** tab displays a description of the schedule and a list of "
+"the scheduled occurrences in the selected Local Time Zone."
+msgstr ""
+
+#: ../../source/job_templates.rst:657 ../../source/job_templates.rst:977
+msgid ""
+"Jobs are scheduled in UTC. Repeating jobs that runs at a specific time of"
+" day may move relative to a local timezone when Daylight Saving Time "
+"shifts occur."
+msgstr ""
+
+#: ../../source/job_templates.rst:660 ../../source/job_templates.rst:971
+#: ../../source/job_templates.rst:987
+msgid "|Inventories Scan Job - schedule saved|"
+msgstr ""
+
+#: ../../source/job_templates.rst:666 ../../source/job_templates.rst:982
+msgid ""
+"There are several actions available for schedules, under the Actions "
+"column:"
+msgstr ""
+
+#: ../../source/job_templates.rst:668 ../../source/job_templates.rst:984
+msgid "Edit Schedule"
+msgstr ""
+
+#: ../../source/job_templates.rst:669 ../../source/job_templates.rst:985
+msgid "Delete schedule"
+msgstr ""
+
+#: ../../source/job_templates.rst:672
+msgid "Custom Scan Job Templates"
+msgstr ""
+
+#: ../../source/job_templates.rst:678
+msgid ""
+"Custom scan jobs are normal scan job templates which use a custom scan "
+"playbook with customized fact modules. Additional Ansible fact modules "
+"can be included easily via custom scan playbooks."
+msgstr ""
+
+#: ../../source/job_templates.rst:682
+msgid "Fact Scan Playbooks"
+msgstr ""
+
+#: ../../source/job_templates.rst:689
+msgid ""
+"The default scan job playbook bundled with Tower, ``scan_facts.yml``, "
+"contains invocations of three ``fact scan modules`` - packages, services,"
+" and files, along with Ansible's standard fact gathering. The "
+"``scan_facts.yml`` playbook file looks like the following:"
+msgstr ""
+
+#: ../../source/job_templates.rst:707
+msgid ""
+"The ``scan_files`` fact module is the only module that accepts "
+"parameters, passed via ``extra_vars`` on the scan job template."
+msgstr ""
+
+#: ../../source/job_templates.rst:716
+msgid ""
+"The ``scan_file_paths`` parameter may have multiple settings (such as "
+"``/tmp/`` or ``/var/log``)."
+msgstr ""
+
+#: ../../source/job_templates.rst:717
+msgid ""
+"The ``scan_use_checksum`` and ``scan_use_recursive`` parameters may also "
+"be set to false or omitted. An omission is the same as a false setting."
+msgstr ""
+
+#: ../../source/job_templates.rst:721
+msgid "Custom Fact Scans"
+msgstr ""
+
+#: ../../source/job_templates.rst:729
+msgid ""
+"A playbook for a custom fact scan is similar to the example of the Fact "
+"Scan Playbook above. As an example, a playbook that only uses a custom "
+"``scan_foo`` Ansible fact module would look like this:"
+msgstr ""
+
+#: ../../source/job_templates.rst:731
+msgid "*scan_custom.yml*:"
+msgstr ""
+
+#: ../../source/job_templates.rst:741
+msgid "*scan_foo.py*:"
+msgstr ""
+
+#: ../../source/job_templates.rst:762
+msgid ""
+"To use a custom fact module, ensure that it lives in the ``/library/`` "
+"subdirectory of the Ansible project used in the scan job template. This "
+"fact scan module is very simple, returning a hard-coded set of facts:"
+msgstr ""
+
+#: ../../source/job_templates.rst:780
+msgid "Provisioning Callbacks"
+msgstr ""
+
+#: ../../source/job_templates.rst:786
+msgid ""
+"Provisioning callbacks are a feature of Tower that allow a host to "
+"initiate a playbook run against itself, rather than waiting for a user to"
+" launch a job to manage the host from the tower console. Please note that"
+" provisioning callbacks are *only* used to run playbooks on the calling "
+"host. Provisioning callbacks are meant for cloud bursting, ie: new "
+"instances with a need for client to server communication for "
+"configuration (such as transmitting an authorization key), not to run a "
+"job against another host. This provides for automatically configuring a "
+"system after it has been provisioned by another system (such as AWS auto-"
+"scaling, or a OS provisioning system like kickstart or preseed) or for "
+"launching a job programmatically without invoking the Tower API directly."
+" The Job Template launched only runs against the host requesting the "
+"provisioning."
+msgstr ""
+
+#: ../../source/job_templates.rst:790
+msgid ""
+"Frequently this would be accessed via a firstboot type script, or from "
+"cron."
+msgstr ""
+
+#: ../../source/job_templates.rst:792
+msgid ""
+"To enable callbacks, check the *Allow Provisioning Callbacks* checkbox in"
+" the Job Template. This displays the **Provisioning Callback URL** for "
+"this job template."
+msgstr ""
+
+#: ../../source/job_templates.rst:796
+msgid ""
+"If you intend to use Tower's provisioning callback feature with a dynamic"
+" inventory, Update on Launch should be set for the inventory group used "
+"in the Job Template."
+msgstr ""
+
+#: ../../source/job_templates.rst:800
+msgid ""
+"Callbacks also require a Host Config Key, to ensure that foreign hosts "
+"with the URL cannot request configuration. Click the |create| button to "
+"create a unique host key for this callback, or enter your own key. The "
+"host key may be reused across multiple hosts to apply this job template "
+"against multiple hosts. Should you wish to control what hosts are able to"
+" request configuration, the key may be changed at any time."
+msgstr ""
+
+#: ../../source/job_templates.rst:804
+msgid ""
+"To callback manually via REST, look at the callback URL in the UI, which "
+"is of the form:"
+msgstr ""
+
+#: ../../source/job_templates.rst:810
+msgid "The '1' in this sample URL is the job template ID in Tower."
+msgstr ""
+
+#: ../../source/job_templates.rst:812
+msgid ""
+"The request from the host must be a POST. Here is an example using curl "
+"(all on a single line):"
+msgstr ""
+
+#: ../../source/job_templates.rst:819
+msgid ""
+"The requesting host must be defined in your inventory for the callback to"
+" succeed. If Tower fails to locate the host either by name or IP address "
+"in one of your defined inventories, the request is denied. When running a"
+" Job Template in this way, the host initiating the playbook run against "
+"itself must be in the inventory. If the host is missing from the "
+"inventory, the Job Template will fail with a \"No Hosts Matched\" type "
+"error message."
+msgstr ""
+
+#: ../../source/job_templates.rst:823
+msgid ""
+"If your host is not in inventory and ``Update on Launch`` is set for the "
+"inventory group, Tower attempts to update cloud based inventory source "
+"before running the callback."
+msgstr ""
+
+#: ../../source/job_templates.rst:825
+msgid ""
+"Successful requests result in an entry on the Jobs tab, where the results"
+" and history can be viewed."
+msgstr ""
+
+#: ../../source/job_templates.rst:827
+msgid ""
+"While the callback can be accessed via REST, the suggested method of "
+"using the callback is to use one of the example scripts that ships with "
+"Tower - ``/usr/share/awx/request_tower_configuration.sh`` (Linux/UNIX) or"
+" ``/usr/share/awx/request_tower_configuration.ps1`` (Windows). Usage is "
+"described in the source code of the file by passing the ``-h`` flag, as "
+"shown below:"
+msgstr ""
+
+#: ../../source/job_templates.rst:847
+msgid ""
+"This script is intelligent in that it knows how to retry commands and is "
+"therefore a more robust way to use callbacks than a simple curl request. "
+"As written, the script retries once per minute for up to ten minutes."
+msgstr ""
+
+#: ../../source/job_templates.rst:851
+msgid ""
+"Please note that this is an example script. You should edit this script "
+"if you need more dynamic behavior when detecting failure scenarios, as "
+"any non-200 error code may not be a transient error requiring retry."
+msgstr ""
+
+#: ../../source/job_templates.rst:853
+msgid ""
+"Most likely you will use callbacks with dynamic inventory in Tower, such "
+"as pulling cloud inventory from one of the supported cloud providers. In "
+"these cases, along with setting *Update On Launch*, be sure to configure "
+"an inventory cache timeout for the inventory source, to avoid hammering "
+"of your Cloud's API endpoints. Since the "
+"``request_tower_configuration.sh`` script polls once per minute for up to"
+" ten minutes, a suggested cache invalidation time for inventory "
+"(configured on the inventory source itself) would be one or two minutes."
+msgstr ""
+
+#: ../../source/job_templates.rst:855
+msgid ""
+"While we recommend against running the ``request_tower_configuration.sh``"
+" script from a cron job, a suggested cron interval would be perhaps every"
+" 30 minutes. Repeated configuration can be easily handled by scheduling "
+"in Tower, so the primary use of callbacks by most users is to enable a "
+"base image that is bootstrapped into the latest configuration upon coming"
+" online. To do so, running at first boot is a better practice. First boot"
+" scripts are just simple init scripts that typically self-delete, so you "
+"would set up an init script that called a copy of the "
+"``request_tower_configuration.sh`` script and make that into an "
+"autoscaling image."
+msgstr ""
+
+#: ../../source/job_templates.rst:858
+msgid "Passing Extra Variables to Provisioning Callbacks"
+msgstr ""
+
+#: ../../source/job_templates.rst:864
+msgid ""
+"Just as you can pass ``extra_vars`` in a regular Job Template, you can "
+"also pass them to provisioning callbacks. To pass ``extra_vars``, the "
+"data sent must be part of the body of the POST request as "
+"application/json (as the content type). Use the following JSON format as "
+"an example when adding your own ``extra_vars`` to be passed:"
+msgstr ""
+
+#: ../../source/job_templates.rst:870
+msgid "(Added in |at| version 2.2.0.)"
+msgstr ""
+
+#: ../../source/job_templates.rst:872
+msgid ""
+"You can also pass extra variables to the Job Template call using "
+"``curl``, such as is shown in the following example::"
+msgstr ""
+
+#: ../../source/job_templates.rst:878
+msgid ""
+"For more information, refer to :ref:`Launching Jobs with "
+"Curl<administration:launch_jobs_curl>`."
+msgstr ""
+
+#: ../../source/job_templates.rst:881
+msgid "Launching Jobs"
+msgstr ""
+
+#: ../../source/job_templates.rst:886
+msgid ""
+"A major benefit of Ansible Tower is the push-button deployment of Ansible"
+" playbooks. You can easily configure a template within Tower to store all"
+" parameters you would normally pass to the ansible-playbook on the "
+"command line--not just the playbooks, but the inventory, credentials, "
+"extra variables, and all options and settings you can specify on the "
+"command line."
+msgstr ""
+
+#: ../../source/job_templates.rst:888
+msgid ""
+"Easier deployments drive consistency, by running your playbooks the same "
+"way each time, and allow you to delegate responsibilities--even users who"
+" aren’t Ansible experts can run Tower playbooks written by others."
+msgstr ""
+
+#: ../../source/job_templates.rst:891
+msgid "To launch a job template, click the |launch| button."
+msgstr ""
+
+#: ../../source/job_templates.rst:895
+msgid ""
+"A job may require additional information to run. The following data may "
+"be requested at launch:"
+msgstr ""
+
+#: ../../source/job_templates.rst:897
+msgid "Credentials that were setup"
+msgstr ""
+
+#: ../../source/job_templates.rst:898
+msgid "Passwords or passphrases that have been set to **Ask**"
+msgstr ""
+
+#: ../../source/job_templates.rst:899
+msgid "A survey, if one has been configured for the job templates"
+msgstr ""
+
+#: ../../source/job_templates.rst:900
+msgid "Extra variables, if requested by the job template"
+msgstr ""
+
+#: ../../source/job_templates.rst:902
+msgid ""
+"Here is an example job launch that prompts for Job Tags, and runs the "
+"example survey created in :ref:`ug_surveys`."
+msgstr ""
+
+#: ../../source/job_templates.rst:904
+msgid "|job-launch-with-prompt-job-tags|"
+msgstr ""
+
+#: ../../source/job_templates.rst:908
+msgid "|job-launch-with-prompt-survey|"
+msgstr ""
+
+#: ../../source/job_templates.rst:913
+msgid ""
+"Along with any extra variables set in the job template and survey, Tower "
+"automatically adds the following variables to the job environment:"
+msgstr ""
+
+#: ../../source/job_templates.rst:915
+msgid "``tower_job_id``: The Job ID for this job run"
+msgstr ""
+
+#: ../../source/job_templates.rst:916
+msgid ""
+"``tower_job_launch_type``: One of *manual*, *callback*, or *scheduled* to"
+" indicate how the job was started"
+msgstr ""
+
+#: ../../source/job_templates.rst:917
+msgid "``tower_job_template_id``: The Job Template ID that this job run uses"
+msgstr ""
+
+#: ../../source/job_templates.rst:918
+msgid "``tower_job_template_name``: The Job Template name that this job uses"
+msgstr ""
+
+#: ../../source/job_templates.rst:919
+msgid ""
+"``tower_user_id``: The user ID of the Tower user that started this job. "
+"This is not available for callback or scheduled jobs."
+msgstr ""
+
+#: ../../source/job_templates.rst:920
+msgid ""
+"``tower_user_name``: The user name of the Tower user that started this "
+"job. This is not available for callback or scheduled jobs."
+msgstr ""
+
+#: ../../source/job_templates.rst:922
+msgid ""
+"Upon launch, Tower automatically redirects the web browser to the Job "
+"Status page for this job under the **Jobs** tab."
+msgstr ""
+
+#: ../../source/job_templates.rst:925
+msgid "Scheduling"
+msgstr ""
+
+#: ../../source/job_templates.rst:931
+msgid ""
+"Launching job templates may also be scheduled via the |schedule| button. "
+"Clicking this button opens the **Schedules** page."
+msgstr ""
+
+#: ../../source/job_templates.rst:933
+msgid "|Job Templates - schedule launch|"
+msgstr ""
+
+#: ../../source/job_templates.rst:937
+msgid ""
+"This page displays a list of the schedules that are currently available "
+"for the selected **Job Template**. The schedule list may be sorted and "
+"searched by **Name**."
+msgstr ""
+
+#: ../../source/job_templates.rst:939
+msgid ""
+"The list of schedules includes: - **Name**: Clicking the schedule name "
+"opens the **Edit Schedule** dialog - **First Run**: The first scheduled "
+"run of this task - **Next Run**: The next scheduled run of this task - "
+"**Final Run**: If the task has an end date, this is the last run of the "
+"task"
+msgstr ""
+
+#: ../../source/job_templates.rst:945
+msgid ""
+"Buttons located in the upper right corner of the **Schedules** screen "
+"provide the following actions:"
+msgstr ""
+
+#: ../../source/job_templates.rst:947
+msgid "Create a new schedule"
+msgstr ""
+
+#: ../../source/job_templates.rst:948
+msgid "Refresh this view"
+msgstr ""
+
+#: ../../source/job_templates.rst:949
+msgid "View Activity Stream"
+msgstr ""
+
+#: ../../source/job_templates.rst:953
+msgid "*Add a new schedule*"
+msgstr ""
+
+#: ../../source/job_templates.rst:959
+msgid "To create a new schedule click the |add| button."
+msgstr ""
+

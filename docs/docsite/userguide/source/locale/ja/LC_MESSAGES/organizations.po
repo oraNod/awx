@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/organizations.rst:4
+msgid "Organizations"
+msgstr "組織"
+
+#: ../../source/organizations.rst:9
+msgid "An :term:`Organization` is a logical collection of **Users**, **Teams**, **Projects**, and **Inventories**, and is the highest level in the |at| object hierarchy."
+msgstr ":term:`Organization` (組織) は、**ユーザー**、**チーム**、**プロジェクト**、および **インベントリー** の論理コレクションで、|at| オブジェクトの階層の最上位のオブジェクトです。"
+
+#: ../../source/organizations.rst:11
+msgid "|tower hierarchy|"
+msgstr "|tower hierarchy|"
+
+#: ../../source/organizations.rst:15
+msgid "Access the Organizations page by clicking **Organizations** from the left navigation bar. The Organizations page displays all of the existing organizations for your installation. Organizations can be searched by **Name** or **Description**. Modify and remove organizations using the **Edit** and **Delete** buttons."
+msgstr "左のナビゲーションバーから **組織** アイコンをクリックして、組織ページにアクセスします。組織ページでは、インストールの既存組織をすべて表示します。組織は、**名前** または **説明** で検索できます。**編集** ボタンおよび **削除** ボタンを使用して組織を変更したり、削除したりします。"
+
+#: ../../source/organizations.rst:18
+msgid "A default organization is automatically created."
+msgstr "デフォルトの組織が自動的に作成されます。"
+
+#: ../../source/organizations.rst:20
+msgid "|Organizations - home showing example organization|"
+msgstr "|Organizations - home showing example organization|"
+
+#: ../../source/organizations.rst:24
+msgid "From this list view, you can edit the details of an organization (|edit button|) from the **Actions** menu."
+msgstr "このリストビューでは、**アクション** メニューから組織の詳細を編集することができます (|edit button|)。"
+
+#: ../../source/organizations.rst:31
+msgid "Creating a New Organization"
+msgstr "新しい組織の作成"
+
+#: ../../source/organizations.rst:33
+msgid "You can create a new organization by clicking the **Add** button."
+msgstr "**追加** ボタンをクリックすると、新しい組織を作成できます。"
+
+#: ../../source/organizations.rst:35
+msgid "|Organizations - new organization form|"
+msgstr "|Organizations - new organization form|"
+
+#: ../../source/organizations.rst:39
+msgid "An organization has several attributes that may be configured:"
+msgstr "組織には、設定可能な属性が複数あります。"
+
+#: ../../source/organizations.rst:41
+msgid "Enter the **Name** for your organization (required)."
+msgstr "組織の **名前** を入力します (必須)。"
+
+#: ../../source/organizations.rst:42
+msgid "Enter a **Description** for the organization."
+msgstr "組織の **説明** を入力します。"
+
+#: ../../source/organizations.rst:43
+msgid "The **Max Hosts** is only editable by a superuser to set an upper limit on the number of license hosts that an organization can have. Setting this value to **0** signifies no limit. If you try to add a host to an organization that has reached or exceeded its cap on hosts, an error message displays:"
+msgstr "**最大ホスト数** を編集できるのは、スーパーユーザーのみで、これを使用して、組織に割り当てることのできるライセンスホスト数の上限を設定します。この値を **0** に設定すると上限がなくなります。ホスト数の上限に到達するか超えた組織に、ホストを追加しようとすると、エラーメッセージが表示されます。"
+
+#: ../../source/organizations.rst:47
+msgid "The inventory sync output view also shows the host limit error. Click **Details** for additional detail about the error."
+msgstr "インベントリー同期の出力ビューでも、ホストの上限エラーが表示されます。エラーの詳細については、**詳細** をクリックしてください。"
+
+#: ../../source/organizations.rst:51
+msgid "Enter **Instance Groups** on which to run this organization."
+msgstr "この組織の実行先の **インスタンスグループ** を入力します。"
+
+#: ../../source/organizations.rst:52
+msgid "Enter the name of the execution environment or search for an existing **Default Execution Environment** on which to run this organization. See :ref:`upgrade_venv` in the |atumg| for more information."
+msgstr "実行環境の名前を入力するか、この組織の実行先の既存の **デフォルトの実行環境** を検索します。詳細は |atumg| の :ref:`upgrade_venv` を参照してください。"
+
+#: ../../source/organizations.rst:53
+msgid "If used, enter the **Galaxy Credentials** or search from a list of existing ones."
+msgstr "使用する場合は、** Galaxy 認証情報** を入力するか、既存の認証情報の一覧から検索します。"
+
+#: ../../source/organizations.rst:56
+msgid "Click **Save** to finish creating the organization."
+msgstr "組織の作成を完了するには、**保存** をクリックします。"
+
+#: ../../source/organizations.rst:58
+msgid "Once created, |at| displays the Organization details, and allows for the managing access and execution environments for the organization."
+msgstr "組織が作成されると、|at| にその組織の詳細が表示され、組織のアクセスおよび実行環境を管理できるようになります。"
+
+#: ../../source/organizations.rst:60
+msgid "|Organizations - show record for example organization|"
+msgstr "|Organizations - show record for example organization|"
+
+#: ../../source/organizations.rst:65
+msgid "From the **Details** tab, you can edit or delete the organization."
+msgstr "**詳細** タブでは、組織の編集や削除を行うことができます。"
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "他の作業アイテムが使用するアイテムを削除する場合は、メッセージが開き、削除されるアイテムと、削除の確認を促すプロンプトが表示されます。画面によっては、無効なアイテムや、過去に削除されたアイテムが含まれる場合があるので、それらのアイテムは実行に失敗します。以下は、これらのメッセージ例です。"
+
+#: ../../source/organizations.rst:72
+msgid "Work with Access"
+msgstr "アクセスの操作"
+
+#: ../../source/organizations.rst:80
+msgid "Clicking on **Access** (beside **Details** when viewing your organization), displays all the Users associated with this Organization and their roles."
+msgstr "**アクセス** をクリックすると、この組織に関連するすべてのユーザーとそのロールが表示されます (組織を表示しているときは **詳細** の横にあります)。"
+
+#: ../../source/organizations.rst:82
+msgid "|Organizations - show users for example organization|"
+msgstr "|Organizations - show users for example organization|"
+
+#: ../../source/organizations.rst:86
+msgid "As you can manage the user membership for this Organization here, you can manage user membership on a per-user basis from the Users page by clicking **Users** from the left navigation bar. Organizations have a unique set of roles not described here. You can assign specific users certain levels of permissions within your organization, or allow them to act as an admin for a particular resource. Refer to :ref:`rbac-ug` for more information."
+msgstr "ここでは、この組織のユーザーメンバーシップを管理できますが、左のナビゲーションバーから **ユーザー** をクリックして、ユーザーページからユーザーごとのメンバーシップを管理することもできます。組織には、ここでは説明されていない独自のロールセットがあります。組織内の特定のユーザーに特定レベルの権限を割り当てたり、特定のリソースの管理者として機能させたりすることができます。詳細は「:ref:`rbac-ug`」を参照してください。"
+
+#: ../../source/organizations.rst:88
+msgid "Clicking on a user brings up that user's details, allowing you to review, grant, edit, and remove associated permissions for that user. For more information, refer to :ref:`ug_users`."
+msgstr "ユーザーをクリックすると、そのユーザーの詳細が表示されるため、そのユーザーに関連付けられたパーミッションの確認や、そのパーミッションの付与、編集および削除を実行できます。詳細は、:ref:`ug_users` を参照してください。"
+
+#: ../../source/organizations.rst:91
+msgid "Add a User or Team"
+msgstr "ユーザーまたはチームの追加"
+
+#: ../../source/organizations.rst:93
+msgid "In order to add a user or team to an organization, the user or team must already be created. See :ref:`ug_users_create` and :ref:`ug_team_create` for additional detail. To add existing users or team to the Organization:"
+msgstr "ユーザーやチームを組織に追加するには、そのユーザーやチームがすでに作成されている必要があります。詳細は、「:ref:`ug_users_create`」および「:ref:`ug_team_create`」を参照してください。既存のユーザーやチームを組織に追加するには、以下を行います。"
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "**アクセス** タブで **追加** ボタンをクリックします。"
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "追加するユーザーまたはチームを選択し、**次へ**をクリックします。"
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "リストから 1 つまたは複数のユーザーを選択します。これには、メンバーとして追加するユーザーの隣にあるチェックボックスをクリックして、**次へ** をクリックします。"
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "この例では、追加するユーザーが 2 つ選択されています。"
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "選択したユーザーやチームに割り当てるロールを選択します。役割の一覧は、下にスクロールして確認してください。リソースによって利用できるオプションが異なります。"
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "**保存** ボタンをクリックすると、選択したユーザーまたはチームにロールが適用され、メンバーとして追加されます。"
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "ユーザー/チームの追加ウィンドウが閉じ、各ユーザーやチームに割り当てられた更新済みのロールが表示されます。"
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "特定ユーザーのロールを削除するには、そのリソースの横にある「関連付けの解除」(x) ボタンをクリックします。"
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "これにより確認ダイアログが起動し、関連付けの解除を確定するように求められます。"
+
+#: ../../source/organizations.rst:101
+msgid "A user or team with roles associated will retain them even after they have been reassigned to another organization."
+msgstr "ロールが関連付けられたユーザーまたはチームは、認証情報が別の組織に再割り当てされた後でも保持されます。"
+
+#: ../../source/organizations.rst:106
+msgid "Work with Notifications"
+msgstr "通知の使用"
+
+#: ../../source/organizations.rst:111
+msgid "Clicking the **Notifications** tab allows you to review any notification integrations you have setup."
+msgstr "**通知** タブをクリックすると、設定した通知の統合を確認できます。"
+
+#: ../../source/organizations.rst:115
+msgid "Use the toggles to enable or disable the notifications to use with your particular organization. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "トグルを使用して、特定の組織で使用する通知を有効または無効にします。詳細については、:ref:`ug_notifications_on_off` を参照してください。"
+
+#: ../../source/organizations.rst:117
+msgid "If no notifications have been set up, you must create them from the **Notifications** option on the left navigation bar."
+msgstr "通知が設定されていない場合は、左のナビゲーションバーにある「**通知**」オプションから通知を作成する必要があります。"
+
+#: ../../source/organizations.rst:121
+msgid "Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types."
+msgstr "さまざまな通知タイプの設定に関する追加の情報は、:ref:`ug_notifications_types` を参照してください。"
+

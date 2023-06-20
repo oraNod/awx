@@ -1,0 +1,371 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/oauth2_token_auth.rst:4
+msgid "Token-Based Authentication"
+msgstr "トークンベースの認証"
+
+#: ../../source/oauth2_token_auth.rst:12
+msgid "OAuth 2 is used for token-based authentication. You can manage OAuth tokens as well as applications, a server-side representation of API clients used to generate tokens. By including an OAuth token as part of the HTTP authentication header, you can authenticate yourself and adjust the degree of restrictive permissions in addition to the base RBAC permissions. Refer to `RFC 6749`_ for more details of OAuth 2 specification."
+msgstr "OAuth 2 がトークンベースの認証に使用されます。OAuth トークン、アプリケーション、トークン生成に使用する API クライアントのサーバー側の表現を管理できます。HTTP 認証ヘッダーの一部として OAuth トークンを追加して、自身の認証を行い、基本の RBAC パーミッションの他に制限するパーミッション範囲を調節します。OAuth 2 仕様の詳細は、「`RFC 6749`_」を参照してください。"
+
+#: ../../source/oauth2_token_auth.rst:16
+msgid "For details on using the ``manage`` utility to create tokens, refer to the :ref:`ag_token_utility` section."
+msgstr "``manage`` ユーティリティーを使用してトークンを作成する方法は、「:ref:`ag_token_utility`」セクションを参照してください。"
+
+#: ../../source/oauth2_token_auth.rst:20
+msgid "Managing OAuth 2 Applications and Tokens"
+msgstr "OAuth 2 アプリケーションおよびトークンの管理"
+
+#: ../../source/oauth2_token_auth.rst:22
+msgid "Applications and tokens can be managed as a top-level resource at ``/api/<version>/applications`` and ``/api/<version>/tokens``. These resources can also be accessed respective to the user at ``/api/<version>/users/N/<resource>``. Applications can be created by making a **POST** to either ``api/<version>/applications`` or ``/api/<version>/users/N/applications``."
+msgstr "アプリケーションおよびトークンは、``/api/<version>/applications`` および ``/api/<version>/tokens`` でトップレベルリソースとして管理できます。これらのリソースは、各ユーザーに対応する ``/api/<version>/users/N/<resource>`` からもアクセスできます。アプリケーションは、``api/<version>/applications`` または ``/api/<version>/users/N/applications`` に **POST** を要求することで作成できます。"
+
+#: ../../source/oauth2_token_auth.rst:24
+msgid "Each OAuth 2 application represents a specific API client on the server side. For an API client to use the API via an application token, it must first have an application and issue an access token. Individual applications are accessible via their primary keys: ``/api/<version>/applications/<pk>/``. Here is a typical application:"
+msgstr "OAuth 2 アプリケーションはそれぞれ、サーバー側で特定の API クライントを表現します。API クライアントがアプリケーショントークン経由で API を使用するには、アプリケーションを先に用意し、アクセストークンを発行する必要があります。個別のアプリケーションは、``/api/<version>/applications/<pk>/`` の主要キー経由でアクセス可能です。以下は、一般的なアプリケーションです。"
+
+#: ../../source/oauth2_token_auth.rst:64
+msgid "As shown in the example above, ``name`` is the human-readable identifier of the application. The rest of the fields, like ``client_id`` and ``redirect_uris``, are mainly used for OAuth2 authorization, which is covered later in :ref:`ag_use_oauth_pat`."
+msgstr "上記の例で示されるように、``name`` は人間が判読可能なアプリケーションの識別子です。``client_id`` や ``redirect_uris`` など、残りのフィールドは、OAuth2 認可に使用されます。これについては、あとで「:ref:`ag_use_oauth_pat`」で説明します。"
+
+#: ../../source/oauth2_token_auth.rst:66
+msgid "The values for the ``client_id`` and ``client_secret`` fields are generated during creation and are non-editable identifiers of applications, while ``organization`` and ``authorization_grant_type`` are required upon creation and become non-editable."
+msgstr "``client_id`` および ``client_secret`` フィールドの値は作成時に生成されるアプリケーション識別子で、編集できません。反対に、``organization`` および ``authorization_grant_type`` は作成時に必要で、その後に編集不可になります。"
+
+#: ../../source/oauth2_token_auth.rst:70
+msgid "Access Rules for Applications"
+msgstr "アプリケーションのアクセスルール"
+
+#: ../../source/oauth2_token_auth.rst:72
+msgid "Access rules for applications are as follows:"
+msgstr "アプリケーションのアクセスルールは以下のとおりです。"
+
+#: ../../source/oauth2_token_auth.rst:74
+msgid "System administrators can view and manipulate all applications in the system"
+msgstr "システム管理者は、システム内の全アプリケーションを表示し、操作できます。"
+
+#: ../../source/oauth2_token_auth.rst:75
+msgid "Organization administrators can view and manipulate all applications belonging to Organization members"
+msgstr "組織の管理者は、組織メンバーに属するアプリケーションすべてを表示し、操作できます。"
+
+#: ../../source/oauth2_token_auth.rst:76
+msgid "Other users can only view, update, and delete their own applications, but cannot create any new applications"
+msgstr "他のユーザーは、自身のアプリケーションの表示、更新、削除が可能ですが、新規アプリケーションは作成できません。"
+
+#: ../../source/oauth2_token_auth.rst:78
+msgid "Tokens, on the other hand, are resources used to actually authenticate incoming requests and mask the permissions of the underlying user. There are two ways to create a token:"
+msgstr "反対に、トークンは受信要求を実際に認証して、基盤のユーザーのパーミッションをマスクするために使用するリソースです。トークンの作成方法には 2 種類あります。"
+
+#: ../../source/oauth2_token_auth.rst:80
+msgid "POST to the ``/api/v2/tokens/`` endpoint with ``application`` and ``scope`` fields to point to the related application and specify token scope"
+msgstr "``application`` および ``scope`` フィールドで、関連のアプリケーションを参照して、トークンの範囲を指定し、``/api/v2/tokens/`` エンドポイントに POST 要求を送信する"
+
+#: ../../source/oauth2_token_auth.rst:81
+msgid "POST to the ``/api/v2/applications/<pk>/tokens/`` endpoint with the ``scope`` field (the parent application will be automatically linked)"
+msgstr "``scope`` フィールドで ``/api/v2/applications/<pk>/tokens/`` エンドポイントに POST 要求を送信する (親アプリケーションは自動的にリンクされます)"
+
+#: ../../source/oauth2_token_auth.rst:83
+msgid "Individual tokens are accessible via their primary keys: ``/api/<version>/tokens/<pk>/``. Here is an example of a typical token:"
+msgstr "個別のトークンには ``/api/<version>/tokens/<pk>/`` の主要キー経由でアクセスできます。以下は一般的なトークンの例です。"
+
+#: ../../source/oauth2_token_auth.rst:121
+msgid "For an OAuth 2 token, the only fully editable fields are ``scope`` and ``description``. The ``application`` field is non-editable on update, and all other fields are entirely non-editable, and are auto-populated during creation, as follows:"
+msgstr "OAuth 2 トークンでは、完全に編集可能なフィールドは ``scope`` と ``description`` だけです。以下のように、``application`` フィールドは更新時に編集不可で、他のフィールドはすべて編集できず、作成時に自動生成されます。"
+
+#: ../../source/oauth2_token_auth.rst:123
+msgid "``user`` field corresponds to the user the token is created for, and in this case, is also the user creating the token"
+msgstr "``user`` フィールドは、作成したトークンの対象ユーザーと同じです。今回は、トークンを作成したユーザーもこれになります。"
+
+#: ../../source/oauth2_token_auth.rst:124
+msgid "``expires`` is generated according to the controller configuration setting ``OAUTH2_PROVIDER``"
+msgstr "``expires`` は、コントローラーの設定 ``OAUTH2_PROVIDER`` に基づいて生成されます。"
+
+#: ../../source/oauth2_token_auth.rst:125
+msgid "``token`` and ``refresh_token`` are auto-generated to be non-clashing random strings"
+msgstr "``token`` および ``refresh_token`` は、クラッシュなしの乱数文字列として自動生成されます。"
+
+#: ../../source/oauth2_token_auth.rst:127
+msgid "Both application tokens and personal access tokens are shown at the ``/api/v2/tokens/`` endpoint. The ``application`` field in the personal access tokens is always **null**. This is a good way to differentiate the two types of tokens."
+msgstr "アプリケーショントークンとパーソナルアクセストークンは両方、``/api/v2/tokens/`` エンドポイントに表示されます。パーソナルアクセストークンの ``application`` フィールドは常に **null** です。これは、2 種類のトークンを区別するのに適した方法です。"
+
+#: ../../source/oauth2_token_auth.rst:131
+msgid "Access rules for tokens"
+msgstr "トークンのアクセスルール"
+
+#: ../../source/oauth2_token_auth.rst:133
+msgid "Access rules for tokens are as follows:"
+msgstr "トークンのアクセスルールは以下のとおりです。"
+
+#: ../../source/oauth2_token_auth.rst:135
+msgid "Users can create a token if they are able to view the related application; and are also able to create a personal token for themselves"
+msgstr "ユーザーは、関連のアプリケーションを表示できる場合にはトークンを作成でき、自身の個人トークンも作成可能です。"
+
+#: ../../source/oauth2_token_auth.rst:136
+msgid "System administrators are able to view and manipulate every token in the system"
+msgstr "システム管理者は、システム内の全トークンを表示し、操作できます。"
+
+#: ../../source/oauth2_token_auth.rst:137
+msgid "Organization administrators are able to view and manipulate all tokens belonging to Organization members"
+msgstr "組織の管理者は、組織メンバーに属する全トークンの表示と操作が可能です。"
+
+#: ../../source/oauth2_token_auth.rst:138
+msgid "System Auditors can view all tokens and applications"
+msgstr "システム監査者は全トークンおよびアプリケーションの表示が可能です。"
+
+#: ../../source/oauth2_token_auth.rst:139
+msgid "Other normal users are only able to view and manipulate their own tokens"
+msgstr "他の通常ユーザーは自身のトークンのみの表示と操作が可能です。"
+
+#: ../../source/oauth2_token_auth.rst:142
+msgid "Users can only view the token or refresh the token value at the time of creation only."
+msgstr "ユーザーは、トークンの表示または、作成時にのみトークンの値の更新が可能です。"
+
+#: ../../source/oauth2_token_auth.rst:147
+msgid "Using OAuth 2 Token System for Personal Access Tokens (PAT)"
+msgstr "パーソナルアクセストークン (PAT) 向けの OAuth2 トークンシステムの使用"
+
+#: ../../source/oauth2_token_auth.rst:149
+msgid "The easiest and most common way to obtain an OAuth 2 token is to create a personal access token at the ``/api/v2/users/<userid>/personal_tokens/`` endpoint, as shown in this example below:"
+msgstr "以下の例のように、最も簡単かつ一般的に OAuth 2 トークンを使用する方法は、``/api/v2/users/<userid>/personal_tokens/`` エンドポイントでパーソナルアクセストークンを作成する方法です。"
+
+#: ../../source/oauth2_token_auth.rst:155
+msgid "You could also pipe the JSON output through ``jq``, if installed."
+msgstr "インストールされている場合は、``jq`` から JSON 出力をパイプすることもできます。"
+
+#: ../../source/oauth2_token_auth.rst:158
+msgid "Following is an example of using the personal token to access an API endpoint using curl:"
+msgstr "以下は、curl を使用して API エンドポイントにアクセスするためにパーソナルトークンを使用する例です。"
+
+#: ../../source/oauth2_token_auth.rst:165
+msgid "In |at|, the OAuth 2 system is built on top of the `Django Oauth Toolkit`_, which provides dedicated endpoints for authorizing, revoking, and refreshing tokens. These endpoints can be found under the ``/api/v2/users/<USER_ID>/personal_tokens/`` endpoint, which also provides detailed examples on some typical usage of those endpoints. These special OAuth 2 endpoints only support using the ``x-www-form-urlencoded`` **Content-type**, so none of the ``api/o/*`` endpoints accept ``application/json``."
+msgstr "|at| では、OAuth 2 システムは `Django Oauth Toolkit`_ 上にビルドされ、トークンの承認、呼び出し、更新を専用とするエンドポイントを提供します。このようなエンドポイントは ``/api/v2/users/<USER_ID>/personal_tokens/`` エンドポイントに配置されており、ここに、これらのエンドポイントの一般的な用途に関する詳細例も含まれています。特別な OAuth 2 エンドポイントは、``x-www-form-urlencoded`` **Content-type** の使用のみサポートします。そのため、``api/o/*`` エンドポイントはどれも ``application/json`` を受け入れません。"
+
+#: ../../source/oauth2_token_auth.rst:171
+msgid "You can also request tokens using the ``/api/o/token`` endpoint by specifying ``null`` for the application type."
+msgstr "アプリケーションタイプに ``null`` を指定して、``/api/o/token`` エンドポイントを使用してトークンをリクエストすることもできます。"
+
+#: ../../source/oauth2_token_auth.rst:174
+msgid "Alternatively, you can :ref:`add tokens <userguide:ug_tokens_auth_create>` for users through the controller user interface, as well as configure the expiration of an access token and its associated refresh token (if applicable)."
+msgstr "または、コントローラーユーザーインターフェースを使用してユーザーの「:ref:`add tokens <userguide:ug_tokens_auth_create>`」や、アクセストークンおよび関連の更新トークン (該当する場合) の有効期限を設定できます。"
+
+#: ../../source/oauth2_token_auth.rst:180
+msgid "Token scope mask over RBAC system"
+msgstr "RBAC システム全体のトークンスコープのマスク"
+
+#: ../../source/oauth2_token_auth.rst:182
+msgid "The scope of an OAuth 2 token is a space-separated string composed of valid scope keywords, 'read' and 'write'. These keywords are configurable and used to specify permission level of the authenticated API client. Read and write scopes provide a mask layer over the Role-Based Access Control (RBAC) permission system of |at|. Specifically, a 'write' scope gives the authenticated user the full permissions the RBAC system provides, while a 'read' scope gives the authenticated user only read permissions the RBAC system provides. Note that 'write' implies 'read' as well."
+msgstr "OAuth 2 トークンのスコープは、有効なスコープキーワード「read」と「write」で構成されるスペース区切りの文字列です。これらのキーワードは、設定可能で、認証済みの API クライアントのパーミッションレベルを指定するのに使用します。Read (読み取り) および Write (書き込み) スコープを設定することで、|at| のロールベースアクセス制御 (RBAC: Role-Based Access Control) パーミッションシステムにマスク層を提供します。具体的には、「write」スコープでは、RBAC システムが提供する全パーミッションを認証済みのユーザーに付与し、「read」スコープでは RBAC システムが提供する読み取りパーミッションのみを認証済みのユーザーに付与します。「write」パーミッションには、「read」も含まれている点に注意してください。"
+
+#: ../../source/oauth2_token_auth.rst:184
+msgid "For example, if you have administrative permissions to a job template, you can view, modify, launch, and delete the job template if authenticated via session or basic authentication. In contrast, if you are authenticated using OAuth 2 token, and the related token scope is 'read', you can only view, but not manipulate or launch the job template, despite being an administrator. If the token scope is 'write' or 'read write', you can take full advantage of the job template as its administrator."
+msgstr "たとえば、ジョブテンプレートに管理者権限がある場合には、セッションまたは Basic 認証で認証済みであればジョブテンプレートの表示、変更、起動、削除が可能です。反対に、OAuth 2 トークンを使用して認証しており、関連のトークンスコープが 'read' の場合は、管理者であってもジョブテンプレートの表示はできますが、操作や起動はできません。トークンスコープが 'write' または 'read write' の場合は、管理者としてジョブテンプレートをすべて活用できます。"
+
+#: ../../source/oauth2_token_auth.rst:187
+msgid "To acquire and use a token, first create an application token:"
+msgstr "トークンを取得して使用するには、まずアプリケーショントークンを作成します。"
+
+#: ../../source/oauth2_token_auth.rst:189
+msgid "Make an application with ``authorization_grant_type`` set to ``password``. HTTP POST the following to the ``/api/v2/applications/`` endpoint  (supplying your own organization ID):"
+msgstr "アプリケーションの ``authorization_grant_type`` を ``password`` に設定します。以下の HTTP POST 要求を ``/api/v2/applications/`` エンドポイントに実行します  (独自の組織 ID を指定)。"
+
+#: ../../source/oauth2_token_auth.rst:204
+msgid "Make a token and POST to the ``/api/v2/tokens/`` endpoint:"
+msgstr "トークンを作成して、POST 要求を ``/api/v2/tokens/`` エンドポイントに実行します。"
+
+#: ../../source/oauth2_token_auth.rst:214
+msgid "This returns a <token-value> that you can use to authenticate with for future requests (this will not be shown again)."
+msgstr "これで、今後の要求の認証に使用できるように <token-value> を返します (これは今後表示されません)。"
+
+#: ../../source/oauth2_token_auth.rst:216
+msgid "Use the token to access a resource. The following uses curl as an example:"
+msgstr "このトークンを使用してリソースにアクセスします。以下は、例として curl を使用します。"
+
+#: ../../source/oauth2_token_auth.rst:223
+msgid "The ``-k`` flag may be needed if you have not set up a CA yet and are using SSL."
+msgstr "CA をまだ設定しておらず、SSL を使用する場合には、``-k`` フラグが必要な場合があります。"
+
+#: ../../source/oauth2_token_auth.rst:226
+msgid "To revoke a token, you can make a DELETE on the detail page for that token, using that token's ID. For example:"
+msgstr "トークンを取り消すには、そのトークンに対して、トークンの ID を使用し、詳細ページで DELETE 要求を実行します。以下に例を示します。"
+
+#: ../../source/oauth2_token_auth.rst:233
+msgid "Similarly, using a token:"
+msgstr "同様に、トークンを使用する場合:"
+
+#: ../../source/oauth2_token_auth.rst:243
+msgid "Application Functions"
+msgstr "アプリケーションの機能"
+
+#: ../../source/oauth2_token_auth.rst:245
+msgid "This page lists OAuth 2 utility endpoints used for authorization, token refresh, and revoke. The ``/api/o/`` endpoints are not meant to be used in browsers and do not support HTTP GET. The endpoints prescribed here strictly follow RFC specifications for OAuth 2, so use that for detailed reference. The following is an example of the typical usage of these endpoints in the controller, in particular, when creating an application using various grant types:"
+msgstr "このページには、認証、トークンの更新、および取り消しに使用される OAuth 2 ユーティリティーエンドポイントが一覧表示されます。``/api/o/`` エンドポイントはブラウザーで使用するためのものではなく、HTTP GET をサポートしていません。ここで示されているエンドポイントは、OAuth 2 の RFC 仕様に厳密に準拠しているため、詳細なリファレンスとして使用してください。以下は、特にさまざまな付与タイプでアプリケーションを作成する場合など、コントローラーでこのようなエンドポイントを使用する一般的な例を紹介しています。"
+
+#: ../../source/oauth2_token_auth.rst:247
+msgid "Authorization Code"
+msgstr "認可コード"
+
+#: ../../source/oauth2_token_auth.rst:248
+msgid "Password"
+msgstr "パスワード"
+
+#: ../../source/oauth2_token_auth.rst:252
+msgid "You can perform any of the application functions described here using the controller user interface. Refer to the :ref:`Applications <userguide:ug_applications_auth>` section of the |atu| for more detail."
+msgstr "コントローラーユーザーインターフェースを使用して、個々に記載のアプリケーション機能を実行できます。詳細は、『|atu|』の「:ref:`Applications <userguide:ug_applications_auth>`」セクションを参照してください。"
+
+#: ../../source/oauth2_token_auth.rst:257
+msgid "Application using ``authorization code`` grant type"
+msgstr "``authorization code`` 付与タイプを使用したアプリケーション"
+
+#: ../../source/oauth2_token_auth.rst:259
+msgid "The application ``authorization code`` grant type should be used when access tokens need to be issued directly to an external application or service."
+msgstr "アクセストークンを外部アプリケーションまたはサービスに直接発行する必要がある場合は、アプリケーションの ``authorization code`` 付与タイプを使用する必要があります。"
+
+#: ../../source/oauth2_token_auth.rst:263
+msgid "You can only use the ``authorization code`` type to acquire an access token when using an application. When integrating an external webapp with |at|, that webapp may need to create OAuth2 Tokens on behalf of users in that other webapp. Creating an application in the controller with the ``authorization code`` grant type is the preferred way to do this because:"
+msgstr "``authorization code`` タイプを使用して、アプリケーションを使用する場合にのみアクセストークンを取得できます。|at| と外部の Web アプリケーションを統合する場合には、別の Web アプリのユーザーの代わりに OAuth2 トークンを作成する必要があります。以下の理由により、``authorization code`` 付与タイプを使用してコントローラーでアプリケーションを作成することを推奨します。"
+
+#: ../../source/oauth2_token_auth.rst:265
+msgid "this allows an external application to obtain a token from the controller for a user, using their credentials."
+msgstr "外部アプリケーションは、ユーザーの認証情報を使用してユーザーのコントローラーからトークンを取得できるため"
+
+#: ../../source/oauth2_token_auth.rst:266
+msgid "compartmentalized tokens issued for a particular application allows those tokens to be easily managed (revoke all tokens associated with that application without having to revoke *all* tokens in the system, for example)"
+msgstr "区分化されたトークンが特定のアプリケーション向けに発行されることで、これらのトークンを簡単に管理できるため (例: システムで *すべて* のトークンを取り消さず、対象のアプリケーションに関連する全トークンの取り消し)"
+
+#: ../../source/oauth2_token_auth.rst:268
+msgid "To create an application named *AuthCodeApp* with the ``authorization-code`` grant type, perform a POST to the ``/api/v2/applications/`` endpoint:"
+msgstr "``authorization-code`` 付与タイプで *AuthCodeApp* という名前のアプリケーションを作成するには、``/api/v2/applications/`` エンドポイントに対して POST を実行します。"
+
+#: ../../source/oauth2_token_auth.rst:284
+msgid "The workflow that occurs when you issue a **GET** to the ``authorize`` endpoint from the client application with the ``response_type``, ``client_id``, ``redirect_uris``, and ``scope``:"
+msgstr "``response_type``、``client_id``、``redirect_uris`` および ``scope`` で、クライアントアプリケーションから ``authorize`` エンドポイントに、**GET** 要求を実行すると発生するワークフロー"
+
+#: ../../source/oauth2_token_auth.rst:286
+msgid "The controller responds with the authorization code and status to the ``redirect_uri`` specified in the application."
+msgstr "コントローラーは、アプリケーションに指定されている ``redirect_uri`` に対して、認可コードとステータスで応答します。"
+
+#: ../../source/oauth2_token_auth.rst:287
+msgid "The client application then makes a **POST** to the ``api/o/token/`` endpoint on the controller with the ``code``, ``client_id``, ``client_secret``, ``grant_type``, and ``redirect_uri``."
+msgstr "次にクライアントアプリケーションは、``code``、``client_id``、``client_secret``、``grant_type`` および ``redirect_uri`` を指定して、コントローラーの ``api/o/token/`` エンドポイントに、**POST** 要求を実行します。"
+
+#: ../../source/oauth2_token_auth.rst:288
+msgid "The controller responds with the ``access_token``, ``token_type``, ``refresh_token``, and ``expires_in``."
+msgstr "コントローラーは、``access_token``、``token_type``、``refresh_token``、および ``expires_in`` で応答します。"
+
+#: ../../source/oauth2_token_auth.rst:291
+msgid "Refer to `Django's Test Your Authorization Server`_ toolkit to test this flow."
+msgstr "このフローのテストは、「 `Django's Test Your Authorization Server`_ 」ツールキットを参照してください。"
+
+#: ../../source/oauth2_token_auth.rst:295
+msgid "You may specify the number of seconds an authorization code remains valid in the **System settings** screen:"
+msgstr "**System** 設定から、認可コードが有効な期間を秒単位で指定します。"
+
+#: ../../source/oauth2_token_auth.rst:300
+msgid "Requesting an access token after this duration will fail. The duration defaults to 600 seconds (10 minutes), based on the `RFC6749 <https://tools.ietf.org/html/rfc6749>`_ recommendation."
+msgstr "この期間を過ぎてからアクセストークンを要求すると失敗します。「`RFC6749 <https://tools.ietf.org/html/rfc6749>`_ 」の推奨をもとに、この期間は、600 秒 (10 分) にデフォルト設定されています。"
+
+#: ../../source/oauth2_token_auth.rst:302
+msgid "The best way to set up app integrations with |at| using the Authorization Code grant type is to whitelist the origins for those cross-site requests. More generally, you need to whitelist the service or application you are integrating with the controller, for which you want to provide access tokens. To do this, have your Administrator add this whitelist to their local controller settings:"
+msgstr "認可コードの付与タイプを使用して |at| とのアプリの統合を設定する最適な方法は、これらのクロスサイト要求の送信元をホワイトリストに設定することです。より一般的に説明すると、アクセストークンを提供する対象である、コントローラーと統合するサービスやアプリケーションをホワイトリスト化する必要があります。そのためには、管理者に依頼して、以下のようにこのホワイトリストをローカルのコントローラーの設定に追加してもらいます。"
+
+#: ../../source/oauth2_token_auth.rst:311
+msgid "Where ``http://django-oauth-toolkit.herokuapp.com`` and ``http://www.example.com`` are applications needing tokens with which to access the controller."
+msgstr "ここで、``http://django-oauth-toolkit.herokuapp.com`` および ``http://www.example.com`` はコントローラーにアクセスするのにトークンを必要とするアプリケーションです。"
+
+#: ../../source/oauth2_token_auth.rst:314
+msgid "Application using ``password`` grant type"
+msgstr "``password`` 付与タイプを使用したアプリケーション"
+
+#: ../../source/oauth2_token_auth.rst:316
+msgid "The ``password`` grant type or ``Resource owner password-based`` grant type is ideal for users who have native access to the web app and should be used when the client is the Resource owner. The following supposes an application, 'Default Application' with grant type ``password``:"
+msgstr "``password`` 付与タイプまたは ``Resource owner password-based`` 付与タイプは、Web アプリケーションにネイティブアクセスのあるユーザーに最適で、クライアントがリソースの所有者である場合に使用する必要があります。以下は、付与タイプが ``password`` であるアプリケーション 「Default Application」を前提としています。"
+
+#: ../../source/oauth2_token_auth.rst:335
+msgid "Logging in is not required for ``password`` grant type, so you can simply use curl to acquire a personal access token through the ``/api/v2/tokens/`` endpoint:"
+msgstr "``password`` の付与タイプにはロギングは必要ないので、curl を使用して ``/api/v2/tokens/`` エンドポイントからパーソナルアクセストークンを取得するだけです。"
+
+#: ../../source/oauth2_token_auth.rst:351
+#: ../../source/oauth2_token_auth.rst:411
+#: ../../source/oauth2_token_auth.rst:450
+msgid "The special OAuth 2 endpoints only support using the ``x-www-form-urlencoded`` **Content-type**, so as a result, none of the ``api/o/*`` endpoints accept ``application/json``."
+msgstr "特別な OAuth 2 エンドポイントは、``x-www-form-urlencoded`` **Content-type** の使用のみをサポートするので、``api/o/*`` のエンドポイントで ``application/json`` を受け入れるものはありません。"
+
+#: ../../source/oauth2_token_auth.rst:353
+msgid "Upon success, a response displays in JSON format containing the access token, refresh token and other information:"
+msgstr "成功すると、JSON 形式でアクセストークンを含めて応答が表示され、トークンと他の情報が更新されます。"
+
+#: ../../source/oauth2_token_auth.rst:373
+msgid "Application Token Functions"
+msgstr "アプリケーショントークンの機能"
+
+#: ../../source/oauth2_token_auth.rst:375
+msgid "This section describes the refresh and revoke functions associated with tokens. Everything that follows (Refreshing and revoking tokens at the ``/api/o/`` endpoints) can currently only be done with application tokens."
+msgstr "このセクションでは、トークンに関連する更新および取り消し機能について説明します。以降のすべて (``/api/o/`` エンドポイントでのトークンの更新と取り消し) は、現在アプリケーショントークンでしか実行できません。"
+
+#: ../../source/oauth2_token_auth.rst:379
+msgid "Refresh an existing access token"
+msgstr "既存のアクセストークンの更新"
+
+#: ../../source/oauth2_token_auth.rst:381
+msgid "The following example shows an existing access token with a refresh token provided:"
+msgstr "以下の例には、提供された更新トークンと既存のアクセストークンが示されています。"
+
+#: ../../source/oauth2_token_auth.rst:397
+msgid "The ``/api/o/token/`` endpoint is used for refreshing the access token:"
+msgstr "``/api/o/token/`` エンドポイントは、アクセストークンの更新に使用します。"
+
+#: ../../source/oauth2_token_auth.rst:407
+msgid "In the above POST request, ``refresh_token`` is provided by ``refresh_token`` field of the access token above that. The authentication information is of format ``<client_id>:<client_secret>``, where ``client_id`` and ``client_secret`` are the corresponding fields of the underlying related application of the access token."
+msgstr "上記の POST 要求では、``refresh_token`` は、その上にあるアクセストークンの ``refresh_token`` フィールドから渡されます。認証情報の形式は ``<client_id>:<client_secret>`` で、``client_id`` と ``client_secret`` は、配下にあるアクセストークンの関連アプリケーションの対応するフィールドに置き換えます。"
+
+#: ../../source/oauth2_token_auth.rst:413
+msgid "Upon success, a response displays in JSON format containing the new (refreshed) access token with the same scope information as the previous one:"
+msgstr "成功すると、JSON 形式で以前のものと同じスコープ情報を含む、新しい (更新済み) アクセストークンを含めて応答が表示されます。"
+
+#: ../../source/oauth2_token_auth.rst:431
+msgid "Essentially, the refresh operation replaces the existing token by deleting the original and then immediately creating a new token with the same scope and related application as the original one. Verify that new token is present and the old one is deleted in the ``/api/v2/tokens/`` endpoint."
+msgstr "基本的に、更新の操作では、元のトークンを削除した直後に、元のトークンと同じスコープと関連のアプリケーションを持つ新規トークンを作成することで、既存のトークンを置き換えます。``/api/v2/tokens/`` エンドポイントに、新しいトークンがあり、以前のトークンが削除されていることを確認してください。"
+
+#: ../../source/oauth2_token_auth.rst:436
+msgid "Revoke an access token"
+msgstr "アクセストークンの取り消し"
+
+#: ../../source/oauth2_token_auth.rst:438
+msgid "Similarly, you can revoke an access token by using the ``/api/o/revoke-token/`` endpoint."
+msgstr "同様に、``/api/o/revoke-token/`` エンドポイントを使用してアクセストークンを取り消すことができます。"
+
+#: ../../source/oauth2_token_auth.rst:440
+msgid "Revoking an access token by this method is the same as deleting the token resource object, but it allows you to delete a token by providing its token value, and the associated ``client_id`` (and ``client_secret`` if the application is ``confidential``). For example:"
+msgstr "この方法でアクセストークンを取り消すのも、トークンリソースオブジェクトを削除するのも同じですが、トークンの値と関連の ``client_id`` (およアプリケーションが ``confidential`` の場合には ``client_secret``) を指定してトークンを削除することができます。"
+
+#: ../../source/oauth2_token_auth.rst:455
+msgid "The **Allow External Users to Create Oauth2 Tokens** (``ALLOW_OAUTH2_FOR_EXTERNAL_USERS`` in the API) setting is disabled by default. External users refer to users authenticated externally with a service like LDAP, or any of the other SSO services. This setting ensures external users cannot *create* their own tokens. If you enable then disable it, any tokens created by external users in the meantime will still exist, and are not automatically revoked."
+msgstr "**外部ユーザーによる OAuth2 トークンの作成を許可** (API では ``ALLOW_OAUTH2_FOR_EXTERNAL_USERS``) の設定はデフォルトでは無効になっています。外部ユーザーは、LDAP やその他の SSO サービスなどのサービスで外部認証されたユーザーを指します。この設定では、外部ユーザーは独自のトークンを*作成*できません。有効にしてから再度無効にした場合には、有効にしていた期間に外部ユーザーが作成したトークンは依然として存在しますが、自動的に呼び出されません。"
+
+#: ../../source/oauth2_token_auth.rst:458
+msgid "Alternatively, you can use the ``manage`` utility, :ref:`ag_manage_utility_revoke_tokens`, to revoke tokens as described in the the :ref:`ag_token_utility` section."
+msgstr "または、``manage`` ユーティリティー 「:ref:`ag_manage_utility_revoke_tokens`」を使用して、「:ref:`ag_token_utility`」セクションに記載されているように、トークンを呼び出すことができます。"
+
+#: ../../source/oauth2_token_auth.rst:461
+msgid "This setting can be configured at the system-level in the |at| User Interface:"
+msgstr "この設定は、|at| ユーザーインターフェースからシステムレベルで構成できます。"
+
+#: ../../source/oauth2_token_auth.rst:466
+msgid "Upon success, a response of ``200 OK`` displays. Verify the deletion by checking whether the token is present in the ``/api/v2/tokens/`` endpoint."
+msgstr "成功すると、``200 OK`` の応答が表示されます。トークンが ``/api/v2/tokens/`` エンドポイントに存在するかどうかをチェックして、削除されていることを確認します。"
+

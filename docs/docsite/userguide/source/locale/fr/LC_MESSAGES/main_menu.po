@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/main_menu.rst:2
+msgid "The Tower Dashboard and Interface"
+msgstr ""
+
+#: ../../source/main_menu.rst:9
+msgid ""
+"Ansible Tower 3.0 provides a streamlined interface, with the Settings "
+"(|settings|) button offering access to administrative configuration "
+"options. Users of older versions of Ansible Tower (2.4.5 or older) can "
+"access most of these through the top-level navigational menu or from "
+"their \"Setup\" menu button."
+msgstr ""
+
+#: ../../source/main_menu.rst:14
+msgid ""
+"The Tower Dashboard offers a friendly graphical framework for your IT "
+"orchestration needs. Across the top-left side of the Tower Dashboard, "
+"administrators can quickly navigate to their **Projects**, "
+"**Inventories**, **Job Templates**, and **Jobs**."
+msgstr ""
+
+#: ../../source/main_menu.rst:16
+msgid ""
+"Across the top-right side of this interface, administrators can access "
+"the tools they need to configure organizations, users, groups, and "
+"permissions as well as view related documentation, access portal mode, "
+"and log out."
+msgstr ""
+
+#: ../../source/main_menu.rst:20
+msgid ""
+"At the top of the Dashboard is a summary of your hosts, inventories, and "
+"projects. Each of these is linked to the corresponding object in Tower, "
+"for easy access."
+msgstr ""
+
+#: ../../source/main_menu.rst:25
+msgid ""
+"On the main Tower Dashboard screen, a summary appears listing your "
+"current **Job Status**. Also available for review are summaries of "
+"**Recently Used Job Templates** and **Recently Run Jobs**."
+msgstr ""
+
+#: ../../source/main_menu.rst:32
+msgid ""
+"Clicking on the Ansible Tower logo at any time returns you to the "
+"Dashboard."
+msgstr ""
+
+#: ../../source/main_menu.rst:36
+msgid "Tower Admin Menu"
+msgstr ""
+
+#: ../../source/main_menu.rst:42
+msgid "The Tower user menu is accessed by clicking |admin|."
+msgstr ""
+
+#: ../../source/main_menu.rst:46
+msgid "From here, you can:"
+msgstr ""
+
+#: ../../source/main_menu.rst:48
+msgid "View/Edit the properties of the Tower admin account"
+msgstr ""
+
+#: ../../source/main_menu.rst:49
+msgid ""
+"View the activity stream for that user (by clicking on the Activity "
+"Stream |activitystream| button)"
+msgstr ""
+
+#: ../../source/main_menu.rst:50
+msgid "View the **Organizations** which have been setup for the Tower user"
+msgstr ""
+
+#: ../../source/main_menu.rst:51
+msgid "View the **Teams** to which the Tower user has been added"
+msgstr ""
+
+#: ../../source/main_menu.rst:52
+msgid "View the **Permissions** for this Tower admin account"
+msgstr ""
+
+#: ../../source/main_menu.rst:60
+msgid "Settings Menu"
+msgstr ""
+
+#: ../../../common/source/settings-menu.rst:16
+msgid ""
+"To enter the Settings Menu screen for Ansible Tower, click the |settings|"
+" button. This screen allows you to create your organizations, add "
+"credentials, add users and teams, schedule management jobs, modify your "
+"Tower's configuration, and more. You can also view your license from the "
+"Settings Menu’s ‘View Your License’ link."
+msgstr ""
+
+#: ../../source/main_menu.rst:66
+msgid "My View -- User Menu"
+msgstr ""
+
+#: ../../source/main_menu.rst:73
+msgid ""
+"My View, a user's single-page view of jobs and job templates, can be "
+"accessed by clicking the My View (|portalmode|) button."
+msgstr ""
+
+#: ../../source/main_menu.rst:77
+msgid ""
+"My View is a simplified interface for users that need to run Ansible "
+"jobs, but that do not need an advanced knowledge of Ansible or Tower. My "
+"View could be used by, for instance, development teams, or even "
+"departmental users in non-technical fields."
+msgstr ""
+
+#: ../../source/main_menu.rst:79
+msgid ""
+"My View offers Tower users a simplified, clean interface to the jobs that"
+" they are able to run, and the results of jobs that they have run in the "
+"past."
+msgstr ""
+
+#: ../../source/main_menu.rst:81
+msgid ""
+"Pressing the |launch| button beside a job in My View launches it, "
+"potentially asking some survey questions if the job is configured to do "
+"so."
+msgstr ""
+
+#: ../../source/main_menu.rst:85
+msgid ""
+"Other portions of the interface are hidden from view until My View is "
+"exited."
+msgstr ""
+
+#: ../../source/main_menu.rst:87
+msgid "|Portal mode|"
+msgstr ""
+
+#: ../../source/main_menu.rst:91
+msgid "My View can be accessed in two ways:"
+msgstr ""
+
+#: ../../source/main_menu.rst:93
+msgid ""
+"via the My View (|portalmode|) button at the top-right of the Tower "
+"interface"
+msgstr ""
+
+#: ../../source/main_menu.rst:94
+msgid "by navigating to ``https://<Tower server name>/portal``"
+msgstr ""
+
+#: ../../source/main_menu.rst:96
+msgid ""
+"My View displays two main sections--:ref:`ug_portalmode_jobtemplates` and"
+" :ref:`ug_portalmode_myjobs`."
+msgstr ""
+
+#: ../../source/main_menu.rst:101
+msgid "Job Templates"
+msgstr ""
+
+#: ../../source/main_menu.rst:106
+msgid ""
+"This shows the job templates that are available for the user to run. This"
+" list can be searched by **Name** or **Description**, and can be sorted "
+"by those keys as well. To launch a job template, click the |launch| "
+"button. This launches the job, which can be viewed in **My Jobs**."
+msgstr ""
+
+#: ../../source/main_menu.rst:110
+msgid ""
+"Unlike Tower's main interface, you are not automatically redirected to "
+"the Job view for the launched job. This view is still accessible via the "
+"**View Details** button for this job run in the **My Jobs** panel. This "
+"is useful for instances when a job fails and a non-technical user needs "
+"an Ansible expert look at what might have gone wrong."
+msgstr ""
+
+#: ../../source/main_menu.rst:115
+msgid "Jobs"
+msgstr ""
+
+#: ../../source/main_menu.rst:120
+msgid "This shows the list of jobs that have run in the past."
+msgstr ""
+
+#: ../../source/main_menu.rst:122
+msgid ""
+"Sort for jobs specific to you by clicking on the **My Jobs** button or "
+"review all jobs you have access to view by clicking on the **All Jobs** "
+"button, next to the search bar."
+msgstr ""
+
+#: ../../source/main_menu.rst:124
+msgid "**My Jobs**: View jobs that you (as the user) ran ."
+msgstr ""
+
+#: ../../source/main_menu.rst:125
+msgid ""
+"**All Jobs**: View your team members' completed jobs, viewable based on "
+"your RBAC permissions."
+msgstr ""
+
+#: ../../source/main_menu.rst:127
+msgid ""
+"For each job, you can view the Job **ID**, the **Status** of the job "
+"(*Running*, *Pending*, *Successful*, or *Failed*), its start time, and "
+"the job **Name**. The job list can be sorted by any of these fields. "
+"Clicking on the *Details* button opens a new window with the **Job "
+"Details** for that job (refer to :ref:`ug_jobs` for more information)."
+msgstr ""
+
+#: ../../source/main_menu.rst:132
+msgid "Dashboard Views"
+msgstr ""
+
+#: ../../source/main_menu.rst:136
+msgid ""
+"The central interface to Tower is the Dashboard. You will use the "
+"dashboard to quickly view job statuses, recently run jobs, and recently "
+"used job templates."
+msgstr ""
+
+#: ../../source/main_menu.rst:138
+msgid "|Tower Dashboard|"
+msgstr ""
+
+#: ../../source/main_menu.rst:144
+msgid "Job Status"
+msgstr ""
+
+#: ../../source/main_menu.rst:149
+msgid ""
+"The Job Status graph displays the number of successful and failed jobs "
+"over a specified time period. You can choose to limit the job types that "
+"are viewed, and to change the time horizon of the graph."
+msgstr ""
+
+#: ../../source/main_menu.rst:155
+msgid "Recently Used Job Templates"
+msgstr ""
+
+#: ../../source/main_menu.rst:162
+msgid ""
+"The Jobs section of this display shows a summary of the most recently "
+"used jobs. You can also access this summary by clicking on the **Jobs** "
+"entry in the main navigation menu."
+msgstr ""
+
+#: ../../source/main_menu.rst:166
+msgid "Recently Run Jobs"
+msgstr ""
+
+#: ../../source/main_menu.rst:171
+msgid ""
+"The Recently Run Jobs section displays which jobs were most recently run,"
+" their status, and notes when they were run as well."
+msgstr ""
+
+#: ../../source/main_menu.rst:178
+msgid "Activity Streams"
+msgstr ""
+
+#: ../../source/main_menu.rst:183
+msgid ""
+"Most screens in Tower have an Activity Stream (|activitystream|) button. "
+"Clicking this brings up the **Activity Stream** for this object."
+msgstr ""
+
+#: ../../source/main_menu.rst:187
+msgid "|Users - Activity Stream|"
+msgstr ""
+
+#: ../../source/main_menu.rst:191
+msgid ""
+"An Activity Stream shows all changes for a particular object. For each "
+"change, the Activity Stream shows the time of the event, the user that "
+"initiated the event, and the action. Clicking on the Examine (|examine|) "
+"button shows the event log for the change."
+msgstr ""
+
+#: ../../source/main_menu.rst:198
+msgid "|event log|"
+msgstr ""
+
+#: ../../source/main_menu.rst:202
+msgid ""
+"The Activity Stream can be filtered by the initiating user (or the "
+"system, if it was system initiated), and by any related Tower object, "
+"such as a particular credential, job template, or schedule."
+msgstr ""
+
+#: ../../source/main_menu.rst:206
+msgid ""
+"The Activity Stream on the main Dashboard shows the Activity Stream for "
+"the entire Tower instance. Most pages in Tower allow viewing an activity "
+"stream filtered for that specific object."
+msgstr ""
+

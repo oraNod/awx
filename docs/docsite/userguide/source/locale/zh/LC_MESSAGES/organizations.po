@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/organizations.rst:4
+msgid "Organizations"
+msgstr "机构"
+
+#: ../../source/organizations.rst:9
+msgid "An :term:`Organization` is a logical collection of **Users**, **Teams**, **Projects**, and **Inventories**, and is the highest level in the |at| object hierarchy."
+msgstr ":term:`Organization` 是 **Users**、**Teams**、**Projects** 和 **Inventories** 的逻辑集合，是 |at| 对象层次结构的最高级别。"
+
+#: ../../source/organizations.rst:11
+msgid "|tower hierarchy|"
+msgstr "|tower hierarchy|"
+
+#: ../../source/organizations.rst:15
+msgid "Access the Organizations page by clicking **Organizations** from the left navigation bar. The Organizations page displays all of the existing organizations for your installation. Organizations can be searched by **Name** or **Description**. Modify and remove organizations using the **Edit** and **Delete** buttons."
+msgstr "点左面导航栏中的 **Organizations** 访问 Organizations 页面。Organizations 页面显示了您的安装中的所有现有机构。机构可以按 **Name** 或 **Description** 进行搜索。可使用**Edit** 和 **Delete** 按钮修改和删除机构。"
+
+#: ../../source/organizations.rst:18
+msgid "A default organization is automatically created."
+msgstr "自动创建默认组织。"
+
+#: ../../source/organizations.rst:20
+msgid "|Organizations - home showing example organization|"
+msgstr "|Organizations - home showing example organization|"
+
+#: ../../source/organizations.rst:24
+msgid "From this list view, you can edit the details of an organization (|edit button|) from the **Actions** menu."
+msgstr "在这个列表视图中，您可以从 **Actions** 菜单中编辑机构 (|edit button|) 的详情。"
+
+#: ../../source/organizations.rst:31
+msgid "Creating a New Organization"
+msgstr "创建新机构"
+
+#: ../../source/organizations.rst:33
+msgid "You can create a new organization by clicking the **Add** button."
+msgstr "您可以点 **Add** 按钮来创建新机构。"
+
+#: ../../source/organizations.rst:35
+msgid "|Organizations - new organization form|"
+msgstr "|Organizations - new organization form|"
+
+#: ../../source/organizations.rst:39
+msgid "An organization has several attributes that may be configured:"
+msgstr "机构有几个可以配置的属性："
+
+#: ../../source/organizations.rst:41
+msgid "Enter the **Name** for your organization (required)."
+msgstr "为您的机构输入 **Name**（必需）。"
+
+#: ../../source/organizations.rst:42
+msgid "Enter a **Description** for the organization."
+msgstr "为机构输入 **Description**。"
+
+#: ../../source/organizations.rst:43
+msgid "The **Max Hosts** is only editable by a superuser to set an upper limit on the number of license hosts that an organization can have. Setting this value to **0** signifies no limit. If you try to add a host to an organization that has reached or exceeded its cap on hosts, an error message displays:"
+msgstr "**Max Hosts** 只能由超级用户编辑，以设置机构可以拥有的许可证主机数的上限。将此值设置为 **0** 表示没有限制。如果您尝试将主机添加到已达到或超过其主机上限的机构，则会显示错误消息："
+
+#: ../../source/organizations.rst:47
+msgid "The inventory sync output view also shows the host limit error. Click **Details** for additional detail about the error."
+msgstr "清单同步输出视图还显示主机限制错误。点 **Details** 可以获取有关错误的更多详情。"
+
+#: ../../source/organizations.rst:51
+msgid "Enter **Instance Groups** on which to run this organization."
+msgstr "输入 **Instance Groups** 以针对其运行此机构。"
+
+#: ../../source/organizations.rst:52
+msgid "Enter the name of the execution environment or search for an existing **Default Execution Environment** on which to run this organization. See :ref:`upgrade_venv` in the |atumg| for more information."
+msgstr "输入执行环境的名称，或搜索运行此机构的现有 **Default Execution Environment**。如需更多信息，请参阅 |atumg| 中的 :ref:`upgrade_venv`。"
+
+#: ../../source/organizations.rst:53
+msgid "If used, enter the **Galaxy Credentials** or search from a list of existing ones."
+msgstr "如果使用，输入 **Galaxy Credentials** 或从现有凭证列表中搜索。"
+
+#: ../../source/organizations.rst:56
+msgid "Click **Save** to finish creating the organization."
+msgstr "点击 **Save** 完成机构创建。"
+
+#: ../../source/organizations.rst:58
+msgid "Once created, |at| displays the Organization details, and allows for the managing access and execution environments for the organization."
+msgstr "创建后，|at| 会显示机构详情，并允许管理该机构的访问和执行环境。"
+
+#: ../../source/organizations.rst:60
+msgid "|Organizations - show record for example organization|"
+msgstr "|Organizations - show record for example organization|"
+
+#: ../../source/organizations.rst:65
+msgid "From the **Details** tab, you can edit or delete the organization."
+msgstr "在 **Details** 选项卡中，您可以编辑或删除机构。"
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "如果删除了由其他工作项目使用的项，则会打开一条信息，列出会受到删除影响的项，并提示您确认删除。一些界面会包括无效的或以前已被删除的项，因此它们将无法运行。以下是这类信息的一个示例："
+
+#: ../../source/organizations.rst:72
+msgid "Work with Access"
+msgstr "使用访问权限"
+
+#: ../../source/organizations.rst:80
+msgid "Clicking on **Access** (beside **Details** when viewing your organization), displays all the Users associated with this Organization and their roles."
+msgstr "点 **Access**（当查看您的机构时在 **Details** 旁边），显示与此机构关联的所有用户及其角色。"
+
+#: ../../source/organizations.rst:82
+msgid "|Organizations - show users for example organization|"
+msgstr "|Organizations - show users for example organization|"
+
+#: ../../source/organizations.rst:86
+msgid "As you can manage the user membership for this Organization here, you can manage user membership on a per-user basis from the Users page by clicking **Users** from the left navigation bar. Organizations have a unique set of roles not described here. You can assign specific users certain levels of permissions within your organization, or allow them to act as an admin for a particular resource. Refer to :ref:`rbac-ug` for more information."
+msgstr "由于您可以在此处管理这个机构的用户成员资格，因此您可以点左侧导航栏中的 **Users**，从 Users 页面中管理每个用户的用户成员资格。机构带有一组没有在此处描述的唯一角色。您可以在机构内为特定用户分配特定级别的权限，或者允许他们充当特定资源的管理员。如需更多信息，请参阅 :ref:`rbac-ug`。"
+
+#: ../../source/organizations.rst:88
+msgid "Clicking on a user brings up that user's details, allowing you to review, grant, edit, and remove associated permissions for that user. For more information, refer to :ref:`ug_users`."
+msgstr "点击某个用户可调出该用户的详情，让您可以查看、授予、编辑和删除该用户的相关权限。如需了解更多信息，请参阅 :ref:`ug_users`。"
+
+#: ../../source/organizations.rst:91
+msgid "Add a User or Team"
+msgstr "添加用户或团队"
+
+#: ../../source/organizations.rst:93
+msgid "In order to add a user or team to an organization, the user or team must already be created. See :ref:`ug_users_create` and :ref:`ug_team_create` for additional detail. To add existing users or team to the Organization:"
+msgstr "要为机构添加用户或团队，必须已创建用户或团队。如需了解更多详情，请参阅 :ref:`ug_users_create` 和 :ref:`ug_team_create`。向机构中添加现有用户或团队："
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "在 **Access** 选项卡中，点 **Add** 按钮。"
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "选择要添加的用户或团队并点 **Next**"
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "点名称旁边的复选框从列表中选择一个或多个用户或团队，将它们添加为成员并点 **Next**。"
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "在这个示例中，选择了两个用户来添加。"
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "选择您希望所选用户或团队具有的角色。请确保向下滚动以获得完整的角色列表。不同的资源有不同的可用选项。"
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "点 **Save** 按钮将角色应用到所选用户或团队，并将它们添加为成员。"
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "将关闭 Add Users/Teams 窗口，以显示为每个用户和团队分配的更新角色。"
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "若要删除特定用户的角色，可单击其资源旁边的解除关联(x)按钮。"
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "这会出现确认对话框，要求您确认解除关联。"
+
+#: ../../source/organizations.rst:101
+msgid "A user or team with roles associated will retain them even after they have been reassigned to another organization."
+msgstr "具有关联角色的用户或团队会保留它们，即使它们被重新分配给另一个机构。"
+
+#: ../../source/organizations.rst:106
+msgid "Work with Notifications"
+msgstr "使用通知"
+
+#: ../../source/organizations.rst:111
+msgid "Clicking the **Notifications** tab allows you to review any notification integrations you have setup."
+msgstr "点击 **Notifications** 标签页可以查看您设置的任何通知集成。"
+
+#: ../../source/organizations.rst:115
+msgid "Use the toggles to enable or disable the notifications to use with your particular organization. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "请使用切换按钮启用或禁用要与特定机构搭配使用的通知。更多详情请参阅 :ref:`ug_notifications_on_off`。"
+
+#: ../../source/organizations.rst:117
+msgid "If no notifications have been set up, you must create them from the **Notifications** option on the left navigation bar."
+msgstr "如果没有设置通知，您必须从左侧导航栏中的 **Notifications** 选项创建它们。"
+
+#: ../../source/organizations.rst:121
+msgid "Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types."
+msgstr "有关配置各种通知类型的其他详情，请参阅 :ref:`ug_notifications_types`。"
+

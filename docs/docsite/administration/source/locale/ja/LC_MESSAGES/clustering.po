@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/clustering.rst:5
+msgid "Clustering"
+msgstr "クラスタリング"
+
+#: ../../source/clustering.rst:11
+msgid "Clustering is sharing load between hosts. Each instance should be able to act as an entry point for UI and API access. This should enable the controller administrators to use load balancers in front of as many instances as they wish and maintain good data visibility."
+msgstr "クラスタリングでは、ホスト間で負荷が共有されます。各インスタンスは、UI および API アクセスのエントリーポイントとして機能します。これにより、コントローラーの管理者が複数のインスタンスの手前でロードバランサーを使用できるようになり、データの可視性が向上されるはずです。"
+
+#: ../../source/clustering.rst:14
+msgid "Load balancing is optional and is entirely possible to have ingress on one or all instances as needed."
+msgstr "負荷分散はオプションで、必要に応じて 1 つまたはすべてのインスタンスで受信することも可能です。"
+
+#: ../../source/clustering.rst:16
+msgid "Each instance should be able to join the controller cluster and expand its ability to execute jobs. This is a simple system where jobs can and will run anywhere rather than be directed on where to run. Also, clustered instances can be grouped into different pools/queues, called :ref:`ag_instance_groups`."
+msgstr "各インスタンスは、コントローラーのクラスターに参加して、ジョブの実行機能を拡張することができます。これは、ジョブの実行場所を指定するのではなく、ジョブをどこでも実行できる簡単なシステムです。また、クラスターインスタンスは異なるプール/キューにグループ化すること (:ref:`ag_instance_groups`) が可能です。"
+
+#: ../../source/clustering.rst:18
+msgid "|aap| supports container-based clusters using Kubernetes, meaning new controller instances can be installed on this platform without any variation or diversion in functionality. You can create instance groups to point to a Kubernetes container. For more detail, see the :ref:`ag_ext_exe_env` section."
+msgstr "|aap| は、Kubernetes を使用するコンテナーベースのクラスターをサポートしています。つまり、これらのプラットフォームに新しいコントローラーインスタンスを、機能の変更や転換を行うことなくインストールできます。Kubernetes コンテナーを指定するインスタンスグループを作成できます。詳細は「:ref:`ag_ext_exe_env`」のセクションを参照してください。"
+
+#: ../../source/clustering.rst:21
+msgid "**Supported Operating Systems**"
+msgstr "**サポート対象のオペレーティングシステム**"
+
+#: ../../source/clustering.rst:29
+msgid "The following operating systems are supported for establishing a clustered environment:"
+msgstr "クラスター環境の確立には、以下のオペレーティングシステムがサポートされます。"
+
+#: ../../source/clustering.rst:31
+msgid "|rhel| 7 or later (RHEL8 recommended, can be either RHEL 7 or Centos 7 instances)"
+msgstr "|rhel| 7 以降 (RHEL8 を推奨。RHEL 7 または Centos 7 インスタンスも可)"
+
+#: ../../source/clustering.rst:35
+msgid "Isolated instances are not supported in conjunction with running |at| in OpenShift."
+msgstr "OpenShift での分離インスタンスと |at| の実行の組み合わせはサポートされません。"
+
+#: ../../source/clustering.rst:39
+msgid "Setup Considerations"
+msgstr "設定の留意事項"
+
+#: ../../source/clustering.rst:45
+msgid "This section covers initial setup of clusters only. For upgrading an existing cluster, refer to :ref:`Upgrade Planning <upgrade-migration-guide:upgrade_planning>` of the |atumg|."
+msgstr "本セクションは、クラスターの初期設定のみを対象とします。既存のクラスターのアップグレードについては、『|atumg|』の「:ref:`Upgrade Planning <upgrade-migration-guide:upgrade_planning>`」を参照してください。"
+
+#: ../../source/clustering.rst:47
+msgid "Important considerations to note in the new clustering environment:"
+msgstr "新規クラスタリング環境における重要な留意事項:"
+
+#: ../../source/clustering.rst:49
+msgid "PostgreSQL is still a standalone instance and is not clustered. The controller does not manage replica configuration or database failover (if the user configures standby replicas)."
+msgstr "PostgreSQL はまだスタンドアロンのインスタンスで、クラスター化されていません。(ユーザーが待機レプリカを設定した場合) コントローラーはレプリカ設定やデータベースのフェイルオーバーを管理しません。"
+
+#: ../../source/clustering.rst:51
+msgid "When spinning up a cluster, the database node should be a standalone server, and PostgreSQL should not be installed on one of the controller nodes."
+msgstr "クラスターを起動する場合は、データベースノードをスタンドアロンサーバーにする必要があり、PostgreSQL はコントローラーノードの 1 つにインストールしないでください。"
+
+#: ../../source/clustering.rst:53
+msgid "The maximum supported instances in a cluster is 20."
+msgstr "クラスターでサポートされるインスタンスの最大数は 20 です。"
+
+#: ../../source/clustering.rst:55
+msgid "All instances should be reachable from all other instances and they should be able to reach the database. It is also important for the hosts to have a stable address and/or hostname (depending on how the controller host is configured)."
+msgstr "全インスタンスは、他のすべてのインスタンスから到達でき、データベースにアクセスできるようにする必要があります。ホストに安定したアドレスおよび/またはホスト名を指定することも重要です (コントローラーホストの設定方法により異なる)。"
+
+#: ../../source/clustering.rst:57
+msgid "All instances must be geographically collocated, with reliable low-latency connections between instances."
+msgstr "全インスタンスは、地理的に近い場所に配置する必要があります。インスタンス間はレイテンシーが低く信頼性のある接続を使用します。"
+
+#: ../../source/clustering.rst:59
+msgid "For purposes of upgrading to a clustered environment, your primary instance must be part of the ``default`` group in the inventory *AND* it needs to be the first host listed in the ``default`` group."
+msgstr "クラスター環境にアップグレードするには、プライマリーのインスタンスがインベントリーの ``default`` グループに所属し、*さらに* ``default`` グループの最初のホストとしてリストされる必要があります。"
+
+#: ../../source/clustering.rst:61
+msgid "Manual projects must be manually synced to all instances by the customer, and updated on all instances at once."
+msgstr "手動のプロジェクトでは、顧客が手動で全インスタンスを同期して、一度に全インスタンスを更新する必要があります。"
+
+#: ../../source/clustering.rst:63
+msgid "The ``inventory`` file for platform deployments should be saved/persisted. If new instances are to be provisioned, the passwords and configuration options, as well as host names, must be made available to the installer."
+msgstr "プラットフォームデプロイメントの ``inventory`` ファイルは保存/永続的にする必要があります。新規インスタンスをプロビジョニングする場合は、パスワード、設定オプション、およびホスト名をインストーラーで利用できるようにする必要があります。"
+
+#: ../../source/clustering.rst:67
+msgid "Install and Configure"
+msgstr "インストールおよび設定"
+
+#: ../../source/clustering.rst:69
+msgid "Provisioning new instances involves updating the ``inventory`` file and re-running the setup playbook. It is important that the ``inventory`` file contains all passwords and information used when installing the cluster or other instances may be reconfigured. The ``inventory`` file inventory contains a single inventory group, ``automationcontroller``."
+msgstr "新規インスタンスのプロビジョニングは、``inventory`` ファイルを更新して、設定 Playbook を再実行します。この ``inventory`` ファイルには、クラスターのインストール時に使用するすべてのパスワードと情報が含まれていることが重要です。含まれていない場合には、他のインスタンスが再設定される場合があります。``inventory`` ファイルインベントリーには、単一のインベントリーグループ ``automationcontroller`` が含まれています。"
+
+#: ../../source/clustering.rst:72
+msgid "All instances are responsible for various housekeeping tasks related to task scheduling, like determining where jobs are supposed to be launched and processing playbook events, as well as periodic cleanup."
+msgstr "インスタンスはすべて、ジョブの起動先や Playbook イベントの処理、定期的なクリーンアップなど、タスクのスケジュールに関連するハウスキーピングタスクを担当します。"
+
+#: ../../source/clustering.rst:90
+msgid "If no groups are selected for a resource then the ``automationcontroller`` group is used, but if any other group is selected, then the ``automationcontroller`` group will not be used in any way."
+msgstr "リソースにグループが選択されていない場合には、``automationcontroller`` グループが使用されますが、他のグループが選択されている場合は ``automationcontroller`` グループは使用されません。"
+
+#: ../../source/clustering.rst:92
+msgid "The ``database`` group remains for specifying an external PostgreSQL. If the database host is provisioned separately, this group should be empty:"
+msgstr "``database`` グループは、外部の PostgreSQL を指定します。データベースホストが別にプロビジョニングされる場合には、このグループは空にしておく必要があります。"
+
+#: ../../source/clustering.rst:104
+msgid "When a playbook runs on an individual controller instance in a cluster, the output of that playbook is broadcast to all of the other nodes as part of the controller's websocket-based streaming output functionality.  It is best to handle this data broadcast using internal addressing by specifying a private routable address for each node in your inventory:"
+msgstr "Playbook がクラスター内の個別のコントローラーインスタンスで実行すると、その Playbook の出力は、コントローラーの websocket ベースのストリーミング出力機能の一部として他のすべてのノードにブロードキャストされます。インベントリー内の各ノードにプライベートルーティング可能アドレスを指定し、内部アドレスを使用してこのデータブロードキャストを処理するのが最適です。"
+
+#: ../../source/clustering.rst:115
+msgid "Prior versions of |at| used the variable name ``rabbitmq_host``. If you are upgrading from a previous version of the platform, and you previously specified ``rabbitmq_host`` in your inventory, simply rename ``rabbitmq_host`` to ``routable_hostname`` before upgrading."
+msgstr "|at| の以前のバージョンでは、変数名 ``rabbitmq_host`` を使用していました。以前のバージョンのプラットフォームからアップグレードし、インベントリーに ``rabbitmq_host`` を指定している場合は、アップグレードの前に、名前を ``rabbitmq_host`` から ``routable_hostname`` に変更してください。"
+
+#: ../../source/clustering.rst:119
+msgid "Instances and Ports Used by the Controller and Automation Hub"
+msgstr "コントローラーおよびオートメーションハブによって使用されるインスタンスおよびポート"
+
+#: ../../source/clustering.rst:121
+msgid "Ports and instances used by the controller and also required by the on-premise |ah| node are as follows:"
+msgstr "コントローラーで使用され、オンプレミスの |ah| ノードでも必要なポートとインスタンスは次のとおりです。"
+
+#: ../../source/clustering.rst:123
+msgid "80, 443 (normal controller and |ah| ports)"
+msgstr "80、443 (通常コントローラーおよび |ah| ポート)"
+
+#: ../../source/clustering.rst:125
+msgid "22 (ssh - ingress only required)"
+msgstr "22 (ssh - 入力のみが必要)"
+
+#: ../../source/clustering.rst:127
+msgid "5432 (database instance - if the database is installed on an external instance, needs to be opened to the controller instances)"
+msgstr "5432 (データベースインスタンス: データベースを外部インスタンスにインストールする場合は、コントローラーインスタンスに対してこのポートを開放する必要があります。)"
+
+#: ../../source/clustering.rst:131
+msgid "Status and Monitoring via Browser API"
+msgstr "ブラウザーの API を使用したステータスの確認およびモニタリング"
+
+#: ../../source/clustering.rst:133
+msgid "The controller itself reports as much status as it can via the Browsable API at ``/api/v2/ping`` in order to provide validation of the health of the cluster, including:"
+msgstr "コントローラーは、``/api/v2/ping`` で、クラスターのヘルスを検証するために Browsable API を使用してステータスをできるだけレポートします。以下に例を示します。"
+
+#: ../../source/clustering.rst:135
+msgid "The instance servicing the HTTP request"
+msgstr "HTTP 要求にサービスを提供するインスタンス"
+
+#: ../../source/clustering.rst:137
+msgid "The timestamps of the last heartbeat of all other instances in the cluster"
+msgstr "クラスター内にある他の全インスタンスが出した最後のハートビートのタイムスタンプ"
+
+#: ../../source/clustering.rst:139
+msgid "Instance Groups and Instance membership in those groups"
+msgstr "これらのグループのインスタンスグループおよびインスタンスのメンバーシップ"
+
+#: ../../source/clustering.rst:141
+msgid "View more details about Instances and Instance Groups, including running jobs and membership information at ``/api/v2/instances/`` and ``/api/v2/instance_groups/``."
+msgstr "実行中のジョブやメンバー情報など、インスタンスおよびインスタンスグループに関する詳細情報は、``/api/v2/instances/`` および ``/api/v2/instance_groups/`` を参照してください。"
+
+#: ../../source/clustering.rst:145
+msgid "Instance Services and Failure Behavior"
+msgstr "インスタンスサービスおよび障害時の動作"
+
+#: ../../source/clustering.rst:147
+msgid "Each controller instance is made up of several different services working collaboratively:"
+msgstr "各コントローラーインスタンスは、複数の異なるサービスで構成されており、これらのサービスは連携しています。"
+
+#: ../../source/clustering.rst:149
+msgid "HTTP Services - This includes the controller application itself as well as external web services."
+msgstr "HTTP サービス: これには、コントローラーアプリケーション自体と外部の Web サービスが含まれます。"
+
+#: ../../source/clustering.rst:151
+msgid "Callback Receiver - Receives job events from running Ansible jobs."
+msgstr "Callback Receiver: 実行中の Ansible ジョブからジョブイベントを受信します。"
+
+#: ../../source/clustering.rst:153
+msgid "Dispatcher - The worker queue that processes and runs all jobs."
+msgstr "ディスパッチャー: 全ジョブを処理して実行するワーカーキュー"
+
+#: ../../source/clustering.rst:155
+msgid "Redis - This key value store is used as a queue for event data propagated from ansible-playbook to the application."
+msgstr "Redis: このキー値ストアは、ansible-playbook からアプリケーションに伝搬されるイベントデータのキューとして使用されます。"
+
+#: ../../source/clustering.rst:157
+msgid "Rsyslog - log processing service used to deliver logs to various external logging services."
+msgstr "Rsyslog: ログをさまざまな外部ロギングサービスに配信するために使用されるログ処理サービス。"
+
+#: ../../source/clustering.rst:159
+msgid "The controller is configured in such a way that if any of these services or their components fail, then all services are restarted. If these fail sufficiently often in a short span of time, then the entire instance will be placed offline in an automated fashion in order to allow remediation without causing unexpected behavior."
+msgstr "サービスやコンポーネントに障害が発生すると、全サービスが再起動されるようにコントローラーは構成されています。サービスやコンポーネントが短期間で何度も機能しなくなった場合には、予期せぬ動作を起こさずに修正できるように自動的に全インスタンスがオフラインに切り替えられます。"
+
+#: ../../source/clustering.rst:161
+msgid "For backing up and restoring a clustered environment, refer to :ref:`ag_clustering_backup_restore` section."
+msgstr "クラスター環境のバックアップおよび復元については、「:ref:`ag_clustering_backup_restore`」のセクションを参照してください。"
+
+#: ../../source/clustering.rst:165
+msgid "Job Runtime Behavior"
+msgstr "ジョブランタイムの動作"
+
+#: ../../source/clustering.rst:167
+msgid "The way jobs are run and reported to a 'normal' user of controller does not change. On the system side, some differences are worth noting:"
+msgstr "ジョブの実行や、コントローラーの「通常」ユーザーへレポートする方法は変更されません。システム側には、注目すべき相違点が複数あります。"
+
+#: ../../source/clustering.rst:169
+msgid "When a job is submitted from the API interface it gets pushed into the dispatcher queue.  Each controller instance will connect to and receive jobs from that queue using a particular scheduling algorithm. Any instance in the cluster is just as likely to receive the work and execute the task. If a instance fails while executing jobs, then the work is marked as permanently failed."
+msgstr "ジョブが API インターフェースから送信されると、ディスパッチャーキューにプッシュされます。各コントローラーインスタンスは特定のスケジュールアルゴリズムを使用してキューに接続し、そのキューからジョブを受信します。クラスター内のいずれのインスタンスも、同じ確率でジョブを受信してタスクを実行します。ジョブの実行時にインスタンスが失敗すると、ジョブは永続的に「失敗」とマークされます。"
+
+#: ../../source/clustering.rst:171
+msgid "|Controller Cluster example|"
+msgstr "|Controller Cluster example|"
+
+#: ../../source/clustering.rst:175
+msgid "Project updates run successfully on any instance that could potentially run a job. Projects will sync themselves to the correct version on the instance immediately prior to running the job. If the needed revision is already locally checked out and Galaxy or Collections updates are not needed, then a sync may not be performed."
+msgstr "プロジェクトの更新は、ジョブを実行する可能性のあるすべてのインスタンスで正常に実行されます。プロジェクトは、ジョブを実行する直前に、インスタンス上の正しいバージョンに自分自身を同期します。必要なリビジョンがすでにローカルでチェックアウトされており、Galaxy またはコレクションの更新が不要な場合、同期は実行されない可能性があります。"
+
+#: ../../source/clustering.rst:177
+msgid "When the sync happens, it is recorded in the database as a project update with a ``launch_type = sync`` and ``job_type =  run``. Project syncs will not change the status or version of the project; instead, they will update the source tree *only* on the instance where they run."
+msgstr "同期が行われると、``launch_type = sync`` と ``job_type =  run`` のプロジェクトの更新として記録されます。プロジェクトの同期によってステータスやプロジェクトのバージョンが変更されることはありません。代わりに、プロジェクトが実行されているインスタンスのソースツリー*のみ*が更新されます。"
+
+#: ../../source/clustering.rst:179
+msgid "If updates are needed from Galaxy or Collections, a sync is performed that downloads the required roles, consuming that much more space in your /tmp file. In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "Galaxy またはコレクションから更新が必要な場合は、必要なロールをダウンロードし、/tmp ファイルでより多くの領域を消費する同期が実行されます。大規模なプロジェクト (約 10 GB) があると、``/tmp`` のディスク容量が問題になる可能性があります。"
+
+#: ../../source/clustering.rst:183
+msgid "Job Runs"
+msgstr "ジョブの実行"
+
+#: ../../source/clustering.rst:185
+msgid "By default, when a job is submitted to the controller queue, it can be picked up by any of the workers. However, you can control where a particular job runs, such as restricting the instances from which a job runs on."
+msgstr "デフォルトでは、ジョブがコントローラーのキューに送信されると、どのワーカーでもジョブを取得できます。ただし、ジョブの実行元となるインスタンスを制限するなど、特定のジョブを実行する場所を制御できます。"
+
+#: ../../source/clustering.rst:187
+msgid "In order to support temporarily taking an instance offline, there is a property enabled defined on each instance. When this property is disabled, no jobs will be assigned to that instance. Existing jobs will finish, but no new work will be assigned."
+msgstr "一時的にインスタンスをオフラインにするため、インスタンスごとにプロパティーを有効に定義します。このプロパティーが無効の場合は、対象のインスタンスにジョブは割り当てられません。既存のジョブが完了しますが、新しいジョブは割り当てられません。"
+
+#: ../../source/clustering.rst:193
+msgid "Deprovision Instances"
+msgstr "インスタンスのプロビジョニング解除"
+
+#: ../../source/clustering.rst:198
+msgid "Re-running the setup playbook does not automatically deprovision instances since clusters do not currently distinguish between an instance that was taken offline intentionally or due to failure. Instead, shut down all services on the controller instance and then run the deprovisioning tool from any other instance:"
+msgstr "Playbook の設定を再実行しても、自動的にインスタンスのプロビジョニングが解除されるわけではありません。これは現在、インスタンスがオフラインになった理由が意図的なのか、障害が原因なのかをクラスターでは識別できないためです。代わりに、コントローラーインスタンスの全サービスをシャットダウンしてから、他のインスタンスからプロビジョニング解除ツールを実行します。"
+
+#: ../../source/clustering.rst:200
+msgid "Shut down the instance or stop the service with the command, ``automation-controller-service stop``."
+msgstr "``automation-controller-service stop`` のコマンドで、インスタンスをシャットダウンするか、サービスを停止します。"
+
+#: ../../source/clustering.rst:202
+msgid "Run the deprovision command ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>`` from another instance to remove it from the controller cluster."
+msgstr "別のインスタンスからプロビジョニング解除のコマンド (``$ awx-manage deprovision_instance --hostname=<name used in inventory file>``) を実行して、コントローラーのクラスターから削除します。"
+
+#: ../../source/clustering.rst:204
+msgid "Example: ``awx-manage deprovision_instance --hostname=hostB``"
+msgstr "例: ``awx-manage deprovision_instance --hostname=hostB``"
+
+#: ../../source/clustering.rst:207
+msgid "Similarly, deprovisioning instance groups in the controller does not automatically deprovision or remove instance groups. For more information, refer to the :ref:`ag_instancegrp_deprovision` section."
+msgstr "同様に、コントローラーでインスタンスグループのプロビジョニングを解除しても、インスタンスグループは自動的にプロビジョニング解除されたり、削除されたりしません。詳細は、「:ref:`ag_instancegrp_deprovision`」のセクションを参照してください。"
+

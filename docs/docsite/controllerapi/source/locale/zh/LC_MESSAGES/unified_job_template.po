@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/unified_job_template.rst:3
+msgid "Unified Job Template List API Endpoint"
+msgstr "统一的作业模板列表 API 端点"
+
+#: ../../source/unified_job_template.rst:8
+msgid "Make a GET request to this resource to retrieve the list of unified job templates."
+msgstr "向此资源发出 GET 请求，以检索统一作业模板列表。"
+
+#: ../../source/unified_job_template.rst:19
+msgid "The resulting data structure contains:"
+msgstr "得到的数据结构包括："
+
+#: ../../source/unified_job_template.rst:32
+msgid "The ``count`` field indicates the total number of unified job templates found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more unified job template records."
+msgstr "``count`` 字段显示为给定查询找到的统一作业模板总数。如果单个页面没有包括所有项，使用 ``next`` 和 ``previous`` 字段可以查看其他结果。``results`` 列表包含零或更多个统一作业模板记录。"
+
+#: ../../source/unified_job_template.rst:35
+msgid "Results"
+msgstr "结果"
+
+#: ../../source/unified_job_template.rst:40
+msgid "Each unified job template data structure includes the following fields:"
+msgstr "每个统一作业模板数据结构包括以下字段："
+
+#: ../../source/unified_job_template.rst:42
+msgid "``id``: Database ID for this unified job template. (integer)"
+msgstr "``id``：此统一作业模板的数据库 ID。（整数）"
+
+#: ../../source/unified_job_template.rst:46
+msgid "``type``: Data type for this unified job template. (multiple choice)"
+msgstr "``type``：此统一作业模板的数据类型。（多选项）"
+
+#: ../../source/unified_job_template.rst:44
+msgid "``project``: Project"
+msgstr "``project``：项目"
+
+#: ../../source/unified_job_template.rst:45
+msgid "``inventory_source``: Inventory Source"
+msgstr "``inventory_source``：清单源列表"
+
+#: ../../source/unified_job_template.rst:46
+msgid "``job_template``: Job Template"
+msgstr "``job_template``：作业模板"
+
+#: ../../source/unified_job_template.rst:47
+msgid "``system_job_template``: System Job Template"
+msgstr "``system_job_template``：系统作业模板"
+
+#: ../../source/unified_job_template.rst:48
+msgid "``url``: URL for this unified job template. (string)"
+msgstr "``url``：此统一作业模板的 URL。（字符串）"
+
+#: ../../source/unified_job_template.rst:49
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``：包含相关资源的 URL 的数据结构。（对象）"
+
+#: ../../source/unified_job_template.rst:50
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``：包含相关资源的名称/描述的数据结构。（对象）"
+
+#: ../../source/unified_job_template.rst:51
+msgid "``created``: Timestamp when this unified job template was created. (datetime)"
+msgstr "``created``：创建此统一作业模板时的时间戳。（日期时间）"
+
+#: ../../source/unified_job_template.rst:52
+msgid "``modified``: Timestamp when this unified job template was last modified. (datetime)"
+msgstr "``modified``：最后一次修改此统一作业模板时的时间戳。（日期时间）"
+
+#: ../../source/unified_job_template.rst:53
+msgid "``name``: (string)"
+msgstr "``name``：（字符串）"
+
+#: ../../source/unified_job_template.rst:54
+msgid "``description``: (string)"
+msgstr "``description``：（字符串）"
+
+#: ../../source/unified_job_template.rst:55
+msgid "``last_job_run``: (datetime)"
+msgstr "``last_job_run``：（日期时间）"
+
+#: ../../source/unified_job_template.rst:56
+msgid "``last_job_failed:`` (boolean)"
+msgstr "``last_job_failed:``（布尔值）"
+
+#: ../../source/unified_job_template.rst:57
+msgid "``has_schedules``: (boolean)"
+msgstr "``has_schedules``：（布尔值）"
+
+#: ../../source/unified_job_template.rst:58
+msgid "``next_job_run``: (datetime)"
+msgstr "``next_job_run``：（日期时间）"
+
+#: ../../source/unified_job_template.rst:73
+msgid "``status``: (multiple choice)"
+msgstr "``status``：（多选项）"
+
+#: ../../source/unified_job_template.rst:60
+msgid "``new``: New"
+msgstr "``new``：新"
+
+#: ../../source/unified_job_template.rst:61
+msgid "``pending``: Pending"
+msgstr "``pending``：待处理"
+
+#: ../../source/unified_job_template.rst:62
+msgid "``waiting``: Waiting"
+msgstr "``waiting``：等待"
+
+#: ../../source/unified_job_template.rst:63
+msgid "``running``: Running"
+msgstr "``running``：运行中"
+
+#: ../../source/unified_job_template.rst:64
+msgid "``successful``: Successful"
+msgstr "``successful``：成功"
+
+#: ../../source/unified_job_template.rst:65
+msgid "``failed``: Failed"
+msgstr "``failed``：失败"
+
+#: ../../source/unified_job_template.rst:66
+msgid "``error``: Error"
+msgstr "``error``：错误"
+
+#: ../../source/unified_job_template.rst:67
+msgid "``canceled``: Canceled"
+msgstr "``canceled``：已取消"
+
+#: ../../source/unified_job_template.rst:68
+msgid "``never updated``: Never Updated"
+msgstr "``never updated``：永不更新"
+
+#: ../../source/unified_job_template.rst:69
+msgid "``ok``: OK"
+msgstr "``ok``：确定"
+
+#: ../../source/unified_job_template.rst:70
+msgid "``missing``: Missing"
+msgstr "``missing``：缺少"
+
+#: ../../source/unified_job_template.rst:71
+msgid "``none``: No External Source"
+msgstr "``none``：没有外部源"
+
+#: ../../source/unified_job_template.rst:72
+msgid "``updating``: Updating"
+msgstr "``updating``：更新"
+
+#: ../../source/unified_job_template.rst:76
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/unified_job_template.rst:81
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

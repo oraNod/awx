@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/execution_environments.rst:4
+msgid "Execution Environments"
+msgstr "実行環境"
+
+#: ../../../common/source/execution_environs.rst:2
+msgid "The ability to build and deploy Python virtual environments for automation has been replaced by Ansible execution environments. Unlike legacy virtual environments, execution environments are container images that make it possible to incorporate system-level dependencies and collection-based content. Each execution environment allows you to have a customized image to run jobs, and each of them contain only what you need when running the job, nothing more."
+msgstr "自動化用に Python 仮想環境をビルドおよびデプロイできる機能は、Ansible 実行環境に置き換えられました。レガシーの仮想環境とは異なり、システムレベルの依存関係やコレクションベースのコンテンツを組み込むことができるコンテナーイメージがあります。各実行環境では、ジョブを実行するためのカスタマイズされたイメージを使用できます。また、各実行環境には、ジョブの実行時に必要なものだけが含まれ、それ以上のものは含まれていません。"
+
+#: ../../source/execution_environments.rst:17
+msgid "Building an Execution Environment"
+msgstr "実行環境のビルド"
+
+#: ../../source/execution_environments.rst:24
+msgid "Using Ansible content that depends on non-default dependencies (custom virtual environments) can be tricky. Packages must be installed on each node, play nicely with other software installed on the host system, and be kept in sync. Previously, jobs ran inside of a virtual environment at ``/var/lib/awx/venv/ansible`` by default, which was pre-loaded with dependencies for ansible-runner and certain types of Ansible content used by the Ansible control machine."
+msgstr "デフォルト以外の依存関係 (カスタムの仮想環境) に依存する Ansible コンテンツの使用には注意が必要です。パッケージは各ノードにインストールされ、ホストシステムにインストールされている他のソフトウェアとうまく連携し、同期を保つ必要があります。以前は、ジョブはデフォルトで ``/var/lib/awx/venv/ansible`` の仮想環境内で実行されていました。これには、ansible-runner と、Ansible コントロールマシンで使用される特定のタイプの Ansible コンテンツの依存関係がプリロードされていました。"
+
+#: ../../source/execution_environments.rst:26
+msgid "To help simplify this process, container images can be built that serve as Ansible `control nodes <https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#control-node>`_. These container images are referred to as automation |ees|, which you can create with ansible-builder and then ansible-runner can make use of those images."
+msgstr "このプロセスを簡素化するために、Ansible として機能するコンテナーイメージをビルドできます`control nodes <https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#control-node>`_。これらのコンテナーイメージは自動化 |ees| と呼ばれ、ansible-builder で作成してから、ansible-runner でこれらの画像を利用できます。"
+
+#: ../../source/execution_environments.rst:29
+msgid "Install ansible-builder"
+msgstr "ansible-builder のインストール"
+
+#: ../../source/execution_environments.rst:31
+msgid "In order to build images, either installations of podman or docker is required along with the ansible-builder Python package. The ``--container-runtime`` option needs to correspond to the Podman/Docker executable you intend to use."
+msgstr "イメージをビルドするには、podman または docker のいずれかを ansible-builder Python パッケージとともにインストールする必要があります。``--container-runtime`` オプションは、使用する予定の Podman / Docker 実行可能ファイルに対応している必要があります。"
+
+#: ../../source/execution_environments.rst:33
+msgid "To install from PyPi:"
+msgstr "PyPi からインストールする場合:"
+
+#: ../../source/execution_environments.rst:39
+msgid "To install from the mainline development branch:"
+msgstr "メインライン開発ブランチからインストールする場合:"
+
+#: ../../source/execution_environments.rst:45
+msgid "To install from a specific tag or branch, replace ``<ref>`` in the following example:"
+msgstr "特定のタグまたはブランチからインストールする場合は、以下の例で ``<ref>`` を置き換えます。"
+
+#: ../../source/execution_environments.rst:56
+msgid "Build an execution environment"
+msgstr "実行環境のビルド"
+
+#: ../../source/execution_environments.rst:58
+msgid "Ansible-builder is used to create an |ee|."
+msgstr "|ee| の作成に ansible-builder を使用します。"
+
+#: ../../source/execution_environments.rst:60
+msgid "An |ee| is expected to contain:"
+msgstr "|ee| には以下が含まれると想定されます。"
+
+#: ../../source/execution_environments.rst:62
+msgid "Ansible"
+msgstr "Ansible"
+
+#: ../../source/execution_environments.rst:63
+msgid "Ansible Runner"
+msgstr "Ansible Runner"
+
+#: ../../source/execution_environments.rst:64
+msgid "Ansible Collections"
+msgstr "Ansible コレクション"
+
+#: ../../source/execution_environments.rst:65
+msgid "Python and/or system dependencies of:"
+msgstr "以下のPython および/またはシステムの依存関係"
+
+#: ../../source/execution_environments.rst:67
+msgid "modules/plugins in collections"
+msgstr "コレクション内のモジュール/プラグイン"
+
+#: ../../source/execution_environments.rst:68
+msgid "content in ansible-base"
+msgstr "ansible-base のコンテンツ"
+
+#: ../../source/execution_environments.rst:69
+msgid "custom user needs"
+msgstr "カスタムのユーザーニーズ"
+
+#: ../../source/execution_environments.rst:71
+msgid "Building a new |ee| involves a definition (a ``.yml`` file) that specifies which content you would like to include in your |ee|, such as collections, Python requirements, and system-level packages. The content from the output generated from migrating to |ees| has some of the required data that can be piped to a file or pasted into this definition file. See :ref:`migrate_new_venv` for more detail. If you did not migrate from a virtual environment, you can create a definition file with the required data outlined in :ref:`ref_ee_definition`."
+msgstr "新しい |ee| のビルドには、コレクション、Python 要件、システムレベルのパッケージなど、|ee| に含めるコンテンツを指定する定義 (``.yml`` ファイル) が関わっています。|ees| への移行から生成された出力のコンテンツには、ファイルにパイプしたり、この定義ファイルに貼り付けたりできる必要なデータがいくつか含まれています。詳細は、:ref:`migrate_new_venv` を参照してください。仮想環境から移行しなかった場合は、:ref:`ref_ee_definition` で概説されている必要なデータを使用して定義ファイルを作成できます。"
+
+#: ../../source/execution_environments.rst:73
+msgid "Collection developers can declare requirements for their content by providing the appropriate metadata. For more information, refer to :ref:`ref_collections_metadata`."
+msgstr "コレクション開発者は、適切なメタデータを提供することにより、コンテンツの要件を宣言できます。詳細については、:ref:`ref_collections_metadata` を参照してください。"
+
+#: ../../source/execution_environments.rst:77
+msgid "Run the builder"
+msgstr "ビルダーの実行"
+
+#: ../../source/execution_environments.rst:79
+msgid "Once you created a definition, use this procedure to build your |ee|."
+msgstr "定義を作成したら、この手順を使用して |ee| を作成します。"
+
+#: ../../source/execution_environments.rst:81
+msgid "The ``ansible-builder build`` command takes an |ee| definition as an input. It outputs the build context necessary for building an |ee| image, and proceeds with building that image. The image can be re-built with the build context elsewhere, and produces the same result. By default, it looks for a file named ``execution-environment.yml`` in the current directory."
+msgstr "``ansible-builder build`` コマンドは、|ee| 定義を入力として受け取ります。|ee| イメージのビルドに必要なビルドコンテキストを出力し、そのイメージのビルドを続行します。イメージは他の場所のビルドコンテキストで再ビルドでき、同じ結果を生成します。デフォルトでは、現在のディレクトリーで ``execution-environment.yml`` という名前のファイルを検索します。"
+
+#: ../../source/execution_environments.rst:83
+msgid "For the illustration purposes, the following example ``execution-environment.yml`` file is used as a starting point:"
+msgstr "説明のために、以下のサンプル ``execution-environment.yml`` ファイルを開始点として使用します。"
+
+#: ../../source/execution_environments.rst:92
+msgid "The content of ``requirements.yml``:"
+msgstr "``requirements.yml`` のコンテンツ"
+
+#: ../../source/execution_environments.rst:100
+msgid "To build an |ee| using the files above, run:"
+msgstr "上記のファイルを使用して |ee| をビルドするには、以下を実行します。"
+
+#: ../../source/execution_environments.rst:111
+msgid "In addition to producing a ready-to-use container image, the build context is preserved, which can be rebuilt at a different time and/or location with the tooling of your choice, such as ``docker build`` or ``podman build``."
+msgstr "すぐに使用できるコンテナーイメージの生成に加え、ビルドコンテキストが保持されます。これは、``docker build`` または ``podman build`` などの選択したツールを使用して、別の時間や場所で再ビルドすることができます。"
+
+#: ../../source/execution_environments.rst:115
+msgid "Use an execution environment in jobs"
+msgstr "ジョブでの実行環境の使用"
+
+#: ../../source/execution_environments.rst:117
+msgid "In order to use an |ee| in a job, a few components are required:"
+msgstr "ジョブで |ee| を使用するには、いくつかのコンポーネントが必要です。"
+
+#: ../../source/execution_environments.rst:119
+msgid "An |ee| must have been created using |ab|. See :ref:`build_ee` for detail. Once an |ee| is created, you can use it to run jobs. Use the |at| user interface to specify the |ee| to use in your job templates."
+msgstr "|ee| は、必ず |ab| を使用して作成しておく必要があります。詳細は :ref:`build_ee` を参照してください。|ee| が作成されると、これを使用してジョブを実行できます。|at| ユーザーインターフェースを使用して、ジョブテンプレートで使用する |ee| を指定します。"
+
+#: ../../source/execution_environments.rst:121
+msgid "Depending on whether an |ee| is made available for global use or tied to an organization, you must have the appropriate level of administrator privileges in order to use an |ee| in a job. |Ees| tied to an organization require Organization administrators to be able to run jobs with those |ees|."
+msgstr "|ee| をグローバルに使用できるようにするか、組織に関連付けるかによって、ジョブで |ee| を使用するには、適切なレベルの管理者権限が必要です。組織に関連付けられた |Ees| では、組織管理者がそれらの |ees| でジョブを実行できる必要があります。"
+
+#: ../../source/execution_environments.rst:123
+msgid "Before running a job or job template that uses an |ee| that has a credential assigned to it, be sure that the credential contains a username, host, and password."
+msgstr "認証情報が割り当てられた |ee| を使用するジョブまたはジョブテンプレートを実行する前に、認証情報にユーザー名、ホスト、およびパスワードが含まれていることを確認してください。"
+
+#: ../../source/execution_environments.rst:125
+msgid "Click **Execution Environments** from the left navigation bar of the controller user interface."
+msgstr "コントローラーユーザーインターフェイスの左側にあるナビゲーションバーから **Execution Environments** をクリックします。"
+
+#: ../../source/execution_environments.rst:127
+msgid "Add an |ee| by selecting the **Add** button."
+msgstr "**追加** ボタンを選択して |ee| を追加します。"
+
+#: ../../source/execution_environments.rst:129
+msgid "Enter the appropriate details into the following fields:"
+msgstr "以下のフィールドに該当する詳細を入力します。"
+
+#: ../../source/execution_environments.rst:131
+msgid "**Name**: Enter a name for the |ee| (required)."
+msgstr "**Name**: |ee| の名前を入力します (必須)。"
+
+#: ../../source/execution_environments.rst:132
+msgid "**Image**: Enter the image name (required). The image name requires its full location (repo), the registry, image name, and version tag in the example format of ``quay.io/ansible/awx-ee:latestrepo/project/image-name:tag``."
+msgstr "**Image**: イメージ名を入力します (必須)。イメージ名には、正確な場所 (リポジトリー)、レジストリー、イメージ名、およびバージョンタグが ``quay.io/ansible/awx-ee:latestrepo/project/image-name:tag`` のサンプル形式で必要です。"
+
+#: ../../source/execution_environments.rst:133
+msgid "**Pull**: optionally choose the type of pull when running jobs:"
+msgstr "**Pull**: オプションで、ジョブの実行時にプルのタイプを選択します。"
+
+#: ../../source/execution_environments.rst:135
+msgid "**Always pull container before running**: Pulls the latest image file for the container."
+msgstr "**Always pull container before running**: コンテナーの最新のイメージファイルをプルします。"
+
+#: ../../source/execution_environments.rst:136
+msgid "**Only pull the image if not present before running**: Only pulls latest image if none specified."
+msgstr "**Only pull the image if not present before running**: 指定されていない場合のみ最新のイメージをプルします。"
+
+#: ../../source/execution_environments.rst:137
+msgid "**Never pull container before running**: Never pull the latest version of the container image."
+msgstr "**Never pull container before running**: コンテナーイメージの最新バージョンをプルしないでください。"
+
+#: ../../source/execution_environments.rst:139
+msgid "**Description**: optional."
+msgstr "**Description**: オプション。"
+
+#: ../../source/execution_environments.rst:140
+msgid "**Organization**: optionally assign the organization to specifically use this |ee|. To make the |ee| available for use across multiple organizations, leave this field blank."
+msgstr "**Organization**: オプションで、この |ee| を明確に使用するように組織を割り当てます。複数の組織にまたがって |ee| を使用できるようにするには、このフィールドを空白のままにします。"
+
+#: ../../source/execution_environments.rst:141
+msgid "**Registry credential**: If the image has a protected container registry, provide the credential to access it."
+msgstr "**Registry credential**: イメージに保護されたコンテナーレジストリーがある場合は、それにアクセスするための認証情報を提供します。"
+
+#: ../../source/execution_environments.rst:145
+msgid "Click **Save**."
+msgstr "**保存** をクリックします。"
+
+#: ../../source/execution_environments.rst:147
+msgid "Now your newly added |ee| is ready to be used in a job template. To add an |ee| to a job template, specify it in the **Execution Environment** field of the job template, as shown in the example below. For more information on setting up a job template, see :ref:`ug_JobTemplates` in the |atu|."
+msgstr "新しく追加された |ee| は、ジョブテンプレートで使用できるようになりました。ジョブテンプレートに |ee| を追加するには、以下の例に示すようにジョブテンプレートの **Execution Environment** フィールドで指定します。ジョブテンプレートの設定の詳細については、『|atu|』の「:ref:`ug_JobTemplates`」を参照してください。"
+
+#: ../../source/execution_environments.rst:151
+msgid "Once you added an |ee| to a job template, you can see those templates listed in the **Templates** tab of the |ee|:"
+msgstr "|ee| をジョブテンプレートに追加すると、|ee| の **Templates** タブにそれらのテンプレートが一覧表示されていることを確認できます。"
+
+#: ../../source/execution_environments.rst:157
+msgid "Execution environment mount options"
+msgstr "実行環境のマウントオプション"
+
+#: ../../source/execution_environments.rst:165
+msgid "Rebuilding an |ee| is one way to add certs, but inheriting certs from the host provides a more convenient solution. For VM-based installs, the controller automatically mounts the system trust store in the |ee| when jobs run."
+msgstr "|ee| を再構築して証明書を追加するのも 1 つの方法ですが、ホストから証明書を継承することで、より便利なソリューションが提供されます。VM ベースのインストールでは、ジョブ実行時にコントローラーが自動的にシステムトラストストアを |ee| にマウントします。"
+
+#: ../../source/execution_environments.rst:169
+msgid "Additionally, you may customize |ee| mount options and mount paths in the **Paths to expose to isolated jobs** field of the Job Settings page, where it supports podman-style volume mount syntax. Refer to the `Podman documentation <https://docs.podman.io/en/latest/markdown/podman-run.1.html#volume-v-source-volume-host-dir-container-dir-options>`_ for detail."
+msgstr "さらに、|ee| マウントオプションとマウントパスをジョブ設定ページの **分離されたジョブに公開するパス** フィールドでカスタマイズすることができ、そこでは podman スタイルのボリュームマウント構文がサポートされています。詳細は、`Podman documentation <https://docs.podman.io/en/latest/markdown/podman-run.1.html#volume-v-source-volume-host-dir-container-dir-options>`_ を参照してください。"
+
+#: ../../source/execution_environments.rst:171
+msgid "In some cases where the ``/etc/ssh/*`` files were added to the |ee| image due to customization of an |ee|, an SSH error may occur. For example, exposing the ``/etc/ssh/ssh_config.d:/etc/ssh/ssh_config.d:O`` path allows the container to be mounted, but the ownership permissions are not mapped correctly."
+msgstr "|ee| のカスタマイズにより、|ee| のイメージに ``/etc/ssh/*`` のファイルが追加された場合、SSH エラーが発生することがあります。たとえば、``/etc/ssh/ssh_config.d:/etc/ssh/ssh_config.d:O`` パスを公開すると、コンテナーはマウントできますが、所有権パーミッションは正しくマッピングされません。"
+
+#: ../../source/execution_environments.rst:173
+msgid "If you encounter this error, or have upgraded from an older version of the controller (e.g. 3.8.x), perform the following steps:"
+msgstr "このエラーが発生した場合、または古いバージョンのコントローラー (3.8.x など) からアップグレードした場合は、次の手順を実行します。"
+
+#: ../../source/execution_environments.rst:175
+msgid "Change the container ownership on the mounted volume  to ``root``."
+msgstr "マウントされたボリュームのコンテナー所有権を ``root`` に変更します。"
+
+#: ../../source/execution_environments.rst:177
+msgid "In the **Paths to expose to isolated jobs** field of the Job Settings page, using the current example, expose the path as such:"
+msgstr "ジョブ設定ページの **分離されたジョブに公開するパス** フィールドで、現在の例を用いて、以下のようにパスを公開します。"
+
+#: ../../source/execution_environments.rst:183
+msgid "The ``:O`` option is only supported for directories. It is highly recommended that you be as specific as possible, especially when specifying system paths. Mounting ``/etc`` or ``/usr`` directly have impact that make it difficult to troubleshoot."
+msgstr "``:O`` オプションは、ディレクトリーに対してのみサポートされています。特にシステムパスを指定する場合は、できるだけ具体的に指定することを強くお勧めします。``/etc`` や ``/usr`` を直接マウントすると、トラブルシューティングが困難になるほどの影響があります。"
+
+#: ../../source/execution_environments.rst:185
+msgid "This informs podman to run a command similar to the example below, where the configuration is mounted and the ``ssh`` command works as expected."
+msgstr "これにより、Podman に以下の例のようなコマンドを実行するように通知されます。このコマンドにより、設定がマウントされ、``ssh`` コマンドが想定どおりに動作するようになります。"
+
+#: ../../source/execution_environments.rst:194
+msgid "To expose isolated paths in OpenShift or Kubernetes containers as HostPath, assume the following configuration:"
+msgstr "OpenShift または Kubernetes コンテナー内の分離されたパスを HostPath として公開するには、以下の設定を想定してください。"
+
+#: ../../source/execution_environments.rst:198
+msgid "Use the **Expose host paths for Container Groups** toggle to enable it."
+msgstr "**コンテナーグループのホストパスの公開** トグルを使用して有効にします。"
+
+#: ../../source/execution_environments.rst:200
+msgid "Once the playbook runs, the resulting Pod spec will display similar to the example below. Note the details of the ``volumeMounts`` and ``volumes`` sections."
+msgstr "Playbook が実行されると、結果として以下の例のような Pod 仕様が表示されます。``volumeMounts`` と ``volumes`` セクションの詳細に注目してください。"
+

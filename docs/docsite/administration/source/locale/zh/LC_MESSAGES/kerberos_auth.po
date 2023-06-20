@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/kerberos_auth.rst:2
+msgid "User Authentication with Kerberos"
+msgstr "使用 Kerberos 进行用户身份验证"
+
+#: ../../source/kerberos_auth.rst:8
+msgid "User authentication via Active Directory (AD), also referred to as authentication through Kerberos, is supported through the |at|."
+msgstr "|at| 支持通过 Active Directory (AD) 进行用户身份验证（也称为通过 Kerberos 进行身份验证）。"
+
+#: ../../source/kerberos_auth.rst:10
+msgid "To get started, first set up the Kerberos packages in the controller system so that you can successfully generate a Kerberos ticket. To install the packages, use the following steps:"
+msgstr "要开始使用，首先请在控制器系统中设置 Kerberos 软件包，以便您能够成功生成 Kerberos 票据（ticket）。要安装这些软件包，请使用以下步骤："
+
+#: ../../source/kerberos_auth.rst:18
+msgid "Once installed, edit the ``/etc/krb5.conf`` file, as follows, to provide the address of the AD, the domain, etc.:"
+msgstr "安装后，按如下所示编辑 ``/etc/krb5.conf`` 文件，以提供 AD 的地址、域等："
+
+#: ../../source/kerberos_auth.rst:45
+msgid "After the configuration file has been updated, you should be able to successfully authenticate and get a valid token. The following steps show how to authenticate and get a token:"
+msgstr "更新配置文件后，您应当能够成功进行身份验证并获得一个有效令牌。以下步骤演示了如何进行身份验证并获得令牌："
+
+#: ../../source/kerberos_auth.rst:65
+msgid "Once you have a valid ticket, you can check to ensure that everything is working as expected from command line. To test this, make sure that your inventory looks like the following:"
+msgstr "在获得有效票据后，您可以从命令行检查以确保所有操作均正常工作。要测试这一点，请确保您的清单类似如下："
+
+#: ../../source/kerberos_auth.rst:77
+msgid "You should also:"
+msgstr "您还应当："
+
+#: ../../source/kerberos_auth.rst:79
+msgid "Ensure that the hostname is the proper client hostname matching the entry in AD and is not the IP address."
+msgstr "确定主机名是与 AD 中条目匹配的正确客户端主机名，且不是 IP 地址。"
+
+#: ../../source/kerberos_auth.rst:81
+msgid "In the username declaration, ensure that the domain name (the text after ``@``) is properly entered with regard to upper- and lower-case letters, as Kerberos is case sensitive. For the controller, you should also ensure that the inventory looks the same."
+msgstr "在用户名声明中，请确保正确输入了域名（``@`` 之后的文本），注意 Kerberos 大小写字母，因为 Kerberos 区分大小写。对于控制器，您还应当确保清单看起来相同。"
+
+#: ../../source/kerberos_auth.rst:86
+msgid "If you encounter a ``Server not found in Kerberos database`` error message, and your inventory is configured using FQDNs (**not IP addresses**), ensure that the service principal name is not missing or mis-configured."
+msgstr "如果您遇到 ``Server not found in Kerberos database`` 出错信息，且您的清单是使用 FQDN（**不是 IP 地址**）配置的，请确保服务主体名称未缺失或错误配置。"
+
+#: ../../source/kerberos_auth.rst:89
+msgid "Now, running a playbook should run as expected. You can test this by running the playbook as the ``awx`` user."
+msgstr "现在，playbook 操作应当可以按预期运行。您可以使用 ``awx`` 用户身份运行 playbook 来测试这一点。"
+
+#: ../../source/kerberos_auth.rst:91
+msgid "Once you have verified that playbooks work properly, integration with the controller is easy. Generate the Kerberos ticket as the ``awx`` user and the controller should automatically pick up the generated ticket for authentication."
+msgstr "当您验证了 playbook 正常工作后，与控制器集成就容易了。以 ``awx`` 用户身份生成 Kerberos 票据，控制器应该自动获取生成的票据进行验证。"
+
+#: ../../source/kerberos_auth.rst:95
+msgid "The python ``kerberos`` package must be installed. Ansible is designed to check if ``kerberos`` package is installed and, if so, it uses kerberos authentication."
+msgstr "必须安装 python ``kerberos`` 软件包。Ansible 旨在检查是否安装了 ``kerberos`` 软件包，如果安装了，则使用 kerberos 身份验证。"
+
+#: ../../source/kerberos_auth.rst:99
+msgid "AD and Kerberos Credentials"
+msgstr "AD 和 Kerberos 凭证"
+
+#: ../../source/kerberos_auth.rst:101
+msgid "Active Directory only:"
+msgstr "仅限 Active Directory："
+
+#: ../../source/kerberos_auth.rst:103
+msgid "If you are only planning to run playbooks against Windows machines with AD usernames and passwords as machine credentials, you can use \"user@<domain>\" format for the username and an associated password."
+msgstr "如果您只计划对 Windows 机器运行 playbook，且这些 Windows 机器使用 AD 用户名和密码作为凭证 ，则用户名和关联的密码可以使用“user@<domain>”格式。"
+
+#: ../../source/kerberos_auth.rst:105
+msgid "With Kerberos:"
+msgstr "对于 Kerberos："
+
+#: ../../source/kerberos_auth.rst:107
+msgid "If Kerberos is installed, you can create a machine credential with the username and password, using the \"user@<domain>\" format for the username."
+msgstr "如果安装了 Kerberos，您可以使用用户名和密码创建机器凭证，为该用户名使用“user@<domain>”格式。"
+
+#: ../../source/kerberos_auth.rst:111
+msgid "Working with Kerberos Tickets"
+msgstr "使用 Kerberos 票据"
+
+#: ../../source/kerberos_auth.rst:113
+msgid "Ansible defaults to automatically managing Kerberos tickets when both the username and password are specified in the machine credential for a host that is configured for kerberos. A new ticket is created in a temporary credential cache for each host, before each task executes (to minimize the chance of ticket expiration). The temporary credential caches are deleted after each task, and will not interfere with the default credential cache."
+msgstr "在为 kerberos 配置的主机的机器凭证中指定用户名和密码时，Ansible 默认为自动管理 Kerberos 票据。在每个任务执行（以尽可能减少票据过期的机会）前，在每个主机的临时凭据缓存中创建新的票据。在每次任务后都会删除临时凭证缓存，且不会影响默认的凭证缓存。"
+
+#: ../../source/kerberos_auth.rst:115
+msgid "To disable automatic ticket management (e.g., to use an existing SSO ticket or call ``kinit`` manually to populate the default credential cache), set ``ansible_winrm_kinit_mode=manual`` via the inventory."
+msgstr "要禁用自动票据管理（例如，使用现有的 SSO 票据或手动调用 ``kinit`` 来填充默认凭证缓存），请通过清单设置 ``ansible_winrm_kinit_mode=manual``。"
+
+#: ../../source/kerberos_auth.rst:117
+msgid "Automatic ticket management requires a standard kinit binary on the control host system path. To specify a different location or binary name, set the ``ansible_winrm_kinit_cmd`` inventory variable to the fully-qualified path to an MIT krbv5 kinit-compatible binary."
+msgstr "自动票据管理需要在控制主机系统路径上有一个标准 kinit 二进制文件。要指定不同的位置或二进制名称，请将 ``ansible_winrm_kinit_cmd`` 清单变量设置为与 MIT krbv5 kinit 兼容的二进制文件的完全限定路径。"
+

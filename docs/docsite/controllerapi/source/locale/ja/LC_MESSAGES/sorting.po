@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/sorting.rst:4
+msgid "Sorting"
+msgstr "並び替え"
+
+#: ../../source/sorting.rst:9
+msgid "To provide examples that are easy to follow, the following URL is used throughout this guide:"
+msgstr "本ガイドでは、分かりやすい例として以下の URL を使用します。"
+
+#: ../../source/sorting.rst:16
+msgid "To specify that {{ model_verbose_name_plural }} are returned in a particular order, use the ``order_by`` query string parameter on the **GET** request."
+msgstr "特定の順番で {{ model_verbose_name_plural }} が返されることを指定するには、``order_by`` クエリー文字列のパラメーターを **GET** 要求で使用します。"
+
+#: ../../source/sorting.rst:22
+msgid "Prefix the field name with a dash (``-``) to sort in reverse:"
+msgstr "逆の順序に並び替えるには、フィールド名の前にダッシュ (``-``) を加えます。"
+
+#: ../../source/sorting.rst:28
+msgid "Multiple sorting fields may be specified by separating the field names with a comma (``,``):"
+msgstr "フィールド名をコンマ (``,``) 区切りにすると、複数のフィールドの並び替えを指定できます。"
+

@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.7.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-23 21:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/perf_stats.rst:4
+msgid "Resource Profiling"
+msgstr "资源性能分析"
+
+#: ../../source/perf_stats.rst:13
+msgid "|at| has the ability to collect raw performance data including CPU, memory, and PID count during the execution of a playbook run. This is made possible by resource profiling capabilities provided by **Runner**, which uses Linux :term:`control groups` (`'cgroups'`) to measure actual resource usage over time. For more information about cgroups, refer to `Introduction to Control Groups`_."
+msgstr "|at| 具有在执行 playbook 运行的过程中收集原始性能数据（包括 CPU、内存和 PID 计数）的功能。这可以通过 **Runner** 提供的资源配置集功能实现，该功能使用 Linux :term:`control groups`（`'cgroups'`）来测量一段时间内的实际资源使用情况。如需更多有关 cgroups 的信息，请参阅 `Introduction to Control Groups`_。"
+
+#: ../../source/perf_stats.rst:17
+msgid "When you install |at|, Tower automatically creates the cgroup so that Runner can use it."
+msgstr "安装 |at| 时，Tower 会自动创建 cgroup，以便 Runner 可使用它。"
+
+#: ../../source/perf_stats.rst:21
+msgid "Enable resource profiling"
+msgstr "启用资源配置集"
+
+#: ../../source/perf_stats.rst:23
+msgid "To enable Runner's resource profiling feature in the Tower User Interface:"
+msgstr "在 Tower 用户界面中启用 Runner 资源配置集："
+
+#: ../../source/perf_stats.rst:25
+msgid "From the left navigation bar, click **Settings** then select **Jobs settings** from the Settings screen."
+msgstr "在左侧导航栏中，点 **Settings**，然后从 Settings 界面中选择 **Jobs settings**。"
+
+#: ../../source/perf_stats.rst:27
+msgid "At the bottom of the screen, click **Edit**."
+msgstr "在屏幕底部点 **Edit**。"
+
+#: ../../source/perf_stats.rst:29
+msgid "Use the toggle to turn on the **Enable Detailed Resource Profiling On All Playbook Runs** setting to collect data on all jobs."
+msgstr "使用切换来打开 **Enable Detailed Resource Profiling On All Playbook Runs** 设置，以收集所有作业的数据。"
+
+#: ../../source/perf_stats.rst:33
+msgid "Click **Save** to save your preferences."
+msgstr "点击 **Save** 保存您的首选项。"
+
+#: ../../source/perf_stats.rst:36
+msgid "After performance data has been collected for a job, it is stored under ``/var/log/tower/playbook_profiling/<job_id>/``. **On a cluster**, performance data is stored on the Tower instance that executed the job. If a job is executed using an *isolated instance*, then the data is collected from the isolated node and stored on the controller that was used to deliver the job to the the isolated node."
+msgstr "在为某个作业收集了性能数据后，它保存在 ``/var/log/tower/playbook_profiling/<job_id>/``。**在集群上**，性能数据存储在执行该作业的 Tower 实例上。如果作业是使用*隔离实例*来执行，则从隔离节点收集数据，并存储在用来将作业传送到隔离节点的控制器上。"
+
+#: ../../source/perf_stats.rst:38
+msgid "Three data files (corresponding to CPU, memory, and PID count) are created for each task. Each file contains data in JSON text format; each line of the file will begin with a record separator (RS), continue with a JSON dictionary, and conclude with a line feed (LF) character. Note that if a task runs very quickly, it is possible that performance data may not be collected at all for that task, in which case one or more of the performance data files for that task will not be created."
+msgstr "为每个任务创建三个数据文件（与 CPU、内存和 PID 计数对应）。每个文件都包含 JSON 文本格式的数据；每行文件都以记录的分隔符 (RS) 开头，然后使用一个 JSON 字典，最后使用换行符 (LF) 字符。请注意，如果任务运行得非常块，就有可能根本不会为该任务收集性能数据，在这种情况下，不会为任务创建一个或多个性能数据文件。"
+
+#: ../../source/perf_stats.rst:40
+msgid "Refer to the current `Runner docs`_ for more detail on what the performance data looks like, along with some actual sample data."
+msgstr "请参阅当前的 `Runner docs`_ 来了解有关性能数据的详情，以及一些实际的样本数据。"
+
+#~ msgid "|at| 3.6 introduced the ability to collect raw performance data including CPU, memory, and PID count during the execution of a playbook run. This is made possible by resource profiling capabilities provided by **Runner**, which uses Linux :term:`control groups` (`'cgroups'`) to measure actual resource usage over time. For more information about cgroups, refer to `Introduction to Control Groups`_."
+#~ msgstr "|at| 3.6 引入了在执行 playbook 运行的过程中收集原始性能数据（包括 CPU、内存和 PID 计数）的功能。这可以通过 **Runner** 提供的资源配置集功能实现，该功能使用 Linux :term:`control groups`（`'cgroups'`）来测量一段时间内的实际资源使用情况。如需更多有关 cgroups 的信息，请参阅 `Introduction to Control Groups`_。"
+

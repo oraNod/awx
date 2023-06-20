@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/system_job_template.rst:3
+msgid "System Job Template List API Endpoint"
+msgstr ""
+
+#: ../../source/system_job_template.rst:8
+msgid ""
+"Make a GET request to this resource to retrieve the list of system job "
+"templates."
+msgstr ""
+
+#: ../../source/system_job_template.rst:19
+msgid "The resulting data structure contains:"
+msgstr ""
+
+#: ../../source/system_job_template.rst:32
+msgid ""
+"The ``count`` field indicates the total number of system job templates "
+"found for the given query. The ``next`` and ``previous`` fields provides "
+"links to additional results if there are more than will fit on a single "
+"page. The ``results`` list contains zero or more system job template "
+"records."
+msgstr ""
+
+#: ../../source/system_job_template.rst:35
+msgid "Results"
+msgstr ""
+
+#: ../../source/system_job_template.rst:40
+msgid "Each system job template data structure includes the following fields:"
+msgstr ""
+
+#: ../../source/system_job_template.rst:42
+msgid "``id``: Database ID for this system job template. (integer)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:43
+msgid "``type``: Data type for this system job template. (multiple choice)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:44
+msgid "``system_job_template``: System Job Template"
+msgstr ""
+
+#: ../../source/system_job_template.rst:45
+msgid "``url``: URL for this system job template. (string)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:46
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:47
+msgid ""
+"``summary_fields``: Data structure with name/description for related "
+"resources. (object)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:48
+msgid ""
+"``created``: Timestamp when this system job template was created. "
+"(datetime)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:49
+msgid ""
+"``modified``: Timestamp when this system job template was last modified. "
+"(datetime)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:50
+msgid "``name``: (string)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:51
+msgid "``description``: (string)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:52
+msgid "``last_job_run``: (datetime)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:53
+msgid "``last_job_failed``: (boolean)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:54
+msgid "``has_schedules``: (boolean)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:55
+msgid "``next_job_run``: (datetime)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:68
+msgid "``status``: (multiple choice)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:57
+msgid "``new``: New"
+msgstr ""
+
+#: ../../source/system_job_template.rst:58
+msgid "``pending``: Pending"
+msgstr ""
+
+#: ../../source/system_job_template.rst:59
+msgid "``waiting``: Waiting"
+msgstr ""
+
+#: ../../source/system_job_template.rst:60
+msgid "``running``: Running"
+msgstr ""
+
+#: ../../source/system_job_template.rst:61
+msgid "``successful``: Successful"
+msgstr ""
+
+#: ../../source/system_job_template.rst:62
+msgid "``failed``: Failed"
+msgstr ""
+
+#: ../../source/system_job_template.rst:63
+msgid "``error``: Error"
+msgstr ""
+
+#: ../../source/system_job_template.rst:64
+msgid "``canceled``: Canceled"
+msgstr ""
+
+#: ../../source/system_job_template.rst:65
+msgid "``never updated``: Never Updated"
+msgstr ""
+
+#: ../../source/system_job_template.rst:66
+msgid "``ok``: OK"
+msgstr ""
+
+#: ../../source/system_job_template.rst:67
+msgid "``missing``: Missing"
+msgstr ""
+
+#: ../../source/system_job_template.rst:68
+msgid "``none``: No External Source"
+msgstr ""
+
+#: ../../source/system_job_template.rst:69
+msgid "``updating``: Updating"
+msgstr ""
+
+#: ../../source/system_job_template.rst:76
+msgid "``job_type``: (multiple choice)"
+msgstr ""
+
+#: ../../source/system_job_template.rst:71
+msgid "``\"\"``: ---------"
+msgstr ""
+
+#: ../../source/system_job_template.rst:72
+msgid "``cleanup_jobs``: Remove jobs older than a certain number of days"
+msgstr ""
+
+#: ../../source/system_job_template.rst:73
+msgid ""
+"``cleanup_activitystream``: Remove activity stream entries older than a "
+"certain number of days"
+msgstr ""
+
+#: ../../source/system_job_template.rst:74
+msgid "``cleanup_deleted``: Purge previously deleted items from the database"
+msgstr ""
+
+#: ../../source/system_job_template.rst:75
+msgid ""
+"``cleanup_facts``: Purge and/or reduce the granularity of system tracking"
+" data"
+msgstr ""
+
+#: ../../source/system_job_template.rst:79
+msgid "Reviewing the Options Endpoint"
+msgstr ""
+
+#: ../../source/system_job_template.rst:84
+msgid ""
+"The *Options Endpoint* table offers a view of the Options for this "
+"endpoint. When viewing the endpoint in the browsable API, clicking the "
+"\"Options\" button gives you the raw JSON for the following:"
+msgstr ""
+

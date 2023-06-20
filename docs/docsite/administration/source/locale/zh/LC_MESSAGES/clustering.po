@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/clustering.rst:5
+msgid "Clustering"
+msgstr "集群"
+
+#: ../../source/clustering.rst:11
+msgid "Clustering is sharing load between hosts. Each instance should be able to act as an entry point for UI and API access. This should enable the controller administrators to use load balancers in front of as many instances as they wish and maintain good data visibility."
+msgstr "集群在主机间共享负载。每个实例都应当能够作为 UI 和 API 访问的入口点。这可以让控制器管理员在尽可能多的实例中使用负载均衡器，并保持良好的数据可见性。"
+
+#: ../../source/clustering.rst:14
+msgid "Load balancing is optional and is entirely possible to have ingress on one or all instances as needed."
+msgstr "负载均衡是可选的，可以完全根据需要在一个或多个实例上设有入口。"
+
+#: ../../source/clustering.rst:16
+msgid "Each instance should be able to join the controller cluster and expand its ability to execute jobs. This is a simple system where jobs can and will run anywhere rather than be directed on where to run. Also, clustered instances can be grouped into different pools/queues, called :ref:`ag_instance_groups`."
+msgstr "每个实例都应当能够加入控制器集群并扩展其执行作业的能力。这是一个简单的系统，作业可以并将会在任何位置运行，而不是定向在哪里运行。另外，集群实例可以被分组成不同的池/队列，称为 :ref:`ag_instance_groups`。"
+
+#: ../../source/clustering.rst:18
+msgid "|aap| supports container-based clusters using Kubernetes, meaning new controller instances can be installed on this platform without any variation or diversion in functionality. You can create instance groups to point to a Kubernetes container. For more detail, see the :ref:`ag_ext_exe_env` section."
+msgstr "|aap| 支持使用 Kubernetes 的基于容器的集群，这意味着可在此平台上安装新的控制器实例，无需更改或转变功能。您可以创建实例组以指向 Kubernetes 容器。如需更多详情，请参阅 :ref:`ag_ext_exe_env` 部分。"
+
+#: ../../source/clustering.rst:21
+msgid "**Supported Operating Systems**"
+msgstr "**支持的操作系统**"
+
+#: ../../source/clustering.rst:29
+msgid "The following operating systems are supported for establishing a clustered environment:"
+msgstr "支持以下操作系统来建立集群环境："
+
+#: ../../source/clustering.rst:31
+msgid "|rhel| 7 or later (RHEL8 recommended, can be either RHEL 7 or Centos 7 instances)"
+msgstr "|rhel| 7 或更高版本（推荐使用 RHEL8，可以是 RHEL 7 或 centos 7 实例）"
+
+#: ../../source/clustering.rst:35
+msgid "Isolated instances are not supported in conjunction with running |at| in OpenShift."
+msgstr "在 OpenShift 中运行 |at| 不支持隔离的实例。"
+
+#: ../../source/clustering.rst:39
+msgid "Setup Considerations"
+msgstr "设置注意事项"
+
+#: ../../source/clustering.rst:45
+msgid "This section covers initial setup of clusters only. For upgrading an existing cluster, refer to :ref:`Upgrade Planning <upgrade-migration-guide:upgrade_planning>` of the |atumg|."
+msgstr "本节仅涵盖集群的初始设置。要升级现有集群，请参阅 |atumg| 的 :ref:`Upgrade Planning <upgrade-migration-guide:upgrade_planning>`。"
+
+#: ../../source/clustering.rst:47
+msgid "Important considerations to note in the new clustering environment:"
+msgstr "新集群环境中需要注意的事项："
+
+#: ../../source/clustering.rst:49
+msgid "PostgreSQL is still a standalone instance and is not clustered. The controller does not manage replica configuration or database failover (if the user configures standby replicas)."
+msgstr "PostgreSQL 仍然是一个独立的实例，没有集群。控制器不管理副本配置或数据库故障转移（如果配置了待机备份系统）。"
+
+#: ../../source/clustering.rst:51
+msgid "When spinning up a cluster, the database node should be a standalone server, and PostgreSQL should not be installed on one of the controller nodes."
+msgstr "当集群升级时，数据库节点应当是独立服务器，而 PostgreSQL 则不应安装到控制器的一个节点上。"
+
+#: ../../source/clustering.rst:53
+msgid "The maximum supported instances in a cluster is 20."
+msgstr "一个集群最多支持 20 个实例。"
+
+#: ../../source/clustering.rst:55
+msgid "All instances should be reachable from all other instances and they should be able to reach the database. It is also important for the hosts to have a stable address and/or hostname (depending on how the controller host is configured)."
+msgstr "所有实例都应能够从其他所有实例访问，并应能够访问数据库。另外，主机也必须拥有一个稳定的地址和/或主机名（取决于控制器主机的配置方式）。"
+
+#: ../../source/clustering.rst:57
+msgid "All instances must be geographically collocated, with reliable low-latency connections between instances."
+msgstr "所有实例都必须进行地理上的分配，实例间有可靠的低延迟连接。"
+
+#: ../../source/clustering.rst:59
+msgid "For purposes of upgrading to a clustered environment, your primary instance must be part of the ``default`` group in the inventory *AND* it needs to be the first host listed in the ``default`` group."
+msgstr "为了升级到集群环境，您的主实例必须是清单中的 ``default`` 组的一部分。*并且*它需要是 ``default`` 组中列出的第一个主机。"
+
+#: ../../source/clustering.rst:61
+msgid "Manual projects must be manually synced to all instances by the customer, and updated on all instances at once."
+msgstr "用户必须手动将手动项目同步到所有实例，同时对所有实例进行更新。"
+
+#: ../../source/clustering.rst:63
+msgid "The ``inventory`` file for platform deployments should be saved/persisted. If new instances are to be provisioned, the passwords and configuration options, as well as host names, must be made available to the installer."
+msgstr "用于平台部署的 ``inventory`` 文件应当被保存且有持久性。如果要置备新实例，则必须为安装程序提供密码和配置选项以及主机名。"
+
+#: ../../source/clustering.rst:67
+msgid "Install and Configure"
+msgstr "安装和配置"
+
+#: ../../source/clustering.rst:69
+msgid "Provisioning new instances involves updating the ``inventory`` file and re-running the setup playbook. It is important that the ``inventory`` file contains all passwords and information used when installing the cluster or other instances may be reconfigured. The ``inventory`` file inventory contains a single inventory group, ``automationcontroller``."
+msgstr "置备新实例涉及更新 ``inventory`` 文件并重新运行设置 (setup) playbook。务必确保 ``inventory`` 文件包含在安装集群时使用的所有密码和信息，或者其他实例可以重新配置。``inventory`` 文件包括了一个单一的清单组 ``automationcontroller``。"
+
+#: ../../source/clustering.rst:72
+msgid "All instances are responsible for various housekeeping tasks related to task scheduling, like determining where jobs are supposed to be launched and processing playbook events, as well as periodic cleanup."
+msgstr "所有实例都会负责各种与任务调度相关的托管任务，比如确定要启动的作业和处理 playbook 事件，以及定期清理。"
+
+#: ../../source/clustering.rst:90
+msgid "If no groups are selected for a resource then the ``automationcontroller`` group is used, but if any other group is selected, then the ``automationcontroller`` group will not be used in any way."
+msgstr "如果没有为资源选择任何组，则使用 ``automationcontroller`` 组，但如果选择了组，则不会使用 ``automationcontroller`` 组。"
+
+#: ../../source/clustering.rst:92
+msgid "The ``database`` group remains for specifying an external PostgreSQL. If the database host is provisioned separately, this group should be empty:"
+msgstr "``database`` 组为指定外部 PostgreSQL 而保留。如果单独置备数据库主机，则该组应为空："
+
+#: ../../source/clustering.rst:104
+msgid "When a playbook runs on an individual controller instance in a cluster, the output of that playbook is broadcast to all of the other nodes as part of the controller's websocket-based streaming output functionality.  It is best to handle this data broadcast using internal addressing by specifying a private routable address for each node in your inventory:"
+msgstr "当控制器在集群中的单个 Tower 实例上运行时，该 playbook 的输出会作为基于 websocket 的流传输输出功能的一部分广播到所有其他节点。最好通过为清单中的每个节点指定一个私有可路由的地址来通过内部地址处理此数据广播："
+
+#: ../../source/clustering.rst:115
+msgid "Prior versions of |at| used the variable name ``rabbitmq_host``. If you are upgrading from a previous version of the platform, and you previously specified ``rabbitmq_host`` in your inventory, simply rename ``rabbitmq_host`` to ``routable_hostname`` before upgrading."
+msgstr "|at| 的早期版本使用变量名 ``rabbitmq_host``。如果您是从以前的平台版本进行升级，而在清单中指定了 ``rabbitmq_host``，则需要在升级前将 ``rabbitmq_host`` 重命名为 ``routable_hostname``。"
+
+#: ../../source/clustering.rst:119
+msgid "Instances and Ports Used by the Controller and Automation Hub"
+msgstr "控制器和 Automation Hub 使用的实例和端口"
+
+#: ../../source/clustering.rst:121
+msgid "Ports and instances used by the controller and also required by the on-premise |ah| node are as follows:"
+msgstr "控制器以及内部 |ah| 节点所需的端口和实例如下："
+
+#: ../../source/clustering.rst:123
+msgid "80, 443 (normal controller and |ah| ports)"
+msgstr "80, 443（普通控制器和 |ah| 端口）"
+
+#: ../../source/clustering.rst:125
+msgid "22 (ssh - ingress only required)"
+msgstr "22（SSH - 只需要入口流量）"
+
+#: ../../source/clustering.rst:127
+msgid "5432 (database instance - if the database is installed on an external instance, needs to be opened to the controller instances)"
+msgstr "5432（数据库实例 - 如果数据库安装在外部实例上，则需要对控制器实例打开）"
+
+#: ../../source/clustering.rst:131
+msgid "Status and Monitoring via Browser API"
+msgstr "通过浏览器 API 报告状态和进行监控"
+
+#: ../../source/clustering.rst:133
+msgid "The controller itself reports as much status as it can via the Browsable API at ``/api/v2/ping`` in order to provide validation of the health of the cluster, including:"
+msgstr "控制器本身通过 ``/api/v2/ping`` 处的 Browsable API 报告尽可能多的状态，以便提供集群健康状况验证，包括："
+
+#: ../../source/clustering.rst:135
+msgid "The instance servicing the HTTP request"
+msgstr "为 HTTP 请求提供服务的实例"
+
+#: ../../source/clustering.rst:137
+msgid "The timestamps of the last heartbeat of all other instances in the cluster"
+msgstr "集群中所有其他实例的最后一个心跳 (heartbeat) 的时间戳"
+
+#: ../../source/clustering.rst:139
+msgid "Instance Groups and Instance membership in those groups"
+msgstr "这些组中的实例组和实例成员资格"
+
+#: ../../source/clustering.rst:141
+msgid "View more details about Instances and Instance Groups, including running jobs and membership information at ``/api/v2/instances/`` and ``/api/v2/instance_groups/``."
+msgstr "查看关于实例和实例组的更多详细信息，包括 ``/api/v2/instances/`` 和 ``/api/v2/instance_groups/`` 处的正在运行的作业和成员资格信息。"
+
+#: ../../source/clustering.rst:145
+msgid "Instance Services and Failure Behavior"
+msgstr "实例服务和故障行为"
+
+#: ../../source/clustering.rst:147
+msgid "Each controller instance is made up of several different services working collaboratively:"
+msgstr "每个控制器实例由几个不同的服务组成，它们协调工作："
+
+#: ../../source/clustering.rst:149
+msgid "HTTP Services - This includes the controller application itself as well as external web services."
+msgstr "HTTP 服务 - 包括控制器应用本身以及外部 Web 服务。"
+
+#: ../../source/clustering.rst:151
+msgid "Callback Receiver - Receives job events from running Ansible jobs."
+msgstr "回调接收器 - 从正在运行的 Ansible 作业接收作业事件。"
+
+#: ../../source/clustering.rst:153
+msgid "Dispatcher - The worker queue that processes and runs all jobs."
+msgstr "分配程序 - 处理并运行所有作业的 worker 队列。"
+
+#: ../../source/clustering.rst:155
+msgid "Redis - This key value store is used as a queue for event data propagated from ansible-playbook to the application."
+msgstr "Redis - 此键值存储用作从 ansible-playbook 向应用程序传播的事件数据的队列。"
+
+#: ../../source/clustering.rst:157
+msgid "Rsyslog - log processing service used to deliver logs to various external logging services."
+msgstr "Rsyslog - 用来向各种外部日志记录服务提供日志的日志处理服务。"
+
+#: ../../source/clustering.rst:159
+msgid "The controller is configured in such a way that if any of these services or their components fail, then all services are restarted. If these fail sufficiently often in a short span of time, then the entire instance will be placed offline in an automated fashion in order to allow remediation without causing unexpected behavior."
+msgstr "控制器配置为：如果任何这些服务或其组件故障，则所有服务将会重启。如果这些故障在较短的时间内频繁出现，则整个实例将自动变为离线，以便进行补救，避免造成意外行为。"
+
+#: ../../source/clustering.rst:161
+msgid "For backing up and restoring a clustered environment, refer to :ref:`ag_clustering_backup_restore` section."
+msgstr "要备份和恢复集群环境，请参考 :ref:`ag_clustering_backup_restore` 部分。"
+
+#: ../../source/clustering.rst:165
+msgid "Job Runtime Behavior"
+msgstr "作业运行时行为"
+
+#: ../../source/clustering.rst:167
+msgid "The way jobs are run and reported to a 'normal' user of controller does not change. On the system side, some differences are worth noting:"
+msgstr "作业运行并报告给控制器的“常规”用户的方式不会改变。在系统端，需要注意一些差异："
+
+#: ../../source/clustering.rst:169
+msgid "When a job is submitted from the API interface it gets pushed into the dispatcher queue.  Each controller instance will connect to and receive jobs from that queue using a particular scheduling algorithm. Any instance in the cluster is just as likely to receive the work and execute the task. If a instance fails while executing jobs, then the work is marked as permanently failed."
+msgstr "当从 API 接口提交作业时，作业会被推送到分配程序队列中。每个控制器实例都将使用特定的调度算法连接该队列并从队列接收作业。集群中的任何实例都可能接收工作并执行作业。如果实例在执行任务时失败，则该工作标记为永久失败。"
+
+#: ../../source/clustering.rst:171
+msgid "|Controller Cluster example|"
+msgstr "|Controller Cluster example|"
+
+#: ../../source/clustering.rst:175
+msgid "Project updates run successfully on any instance that could potentially run a job. Projects will sync themselves to the correct version on the instance immediately prior to running the job. If the needed revision is already locally checked out and Galaxy or Collections updates are not needed, then a sync may not be performed."
+msgstr "项目更新在可能运行作业的任何实例上都可以成功运行。在运行作业前，项目会与实例上的正确版本同步。如果需要的修订版本已经在本地签出，并且不需要 galaxy 或集合更新，则无法执行同步。"
+
+#: ../../source/clustering.rst:177
+msgid "When the sync happens, it is recorded in the database as a project update with a ``launch_type = sync`` and ``job_type =  run``. Project syncs will not change the status or version of the project; instead, they will update the source tree *only* on the instance where they run."
+msgstr "当同步发生时，通过 ``launch_type = sync`` 和 ``job_type =  run`` 在数据库中将其记录为项目更新。项目同步不会更改项目的状态或版本；相反，它*仅*在其运行的实例上更新源树。"
+
+#: ../../source/clustering.rst:179
+msgid "If updates are needed from Galaxy or Collections, a sync is performed that downloads the required roles, consuming that much more space in your /tmp file. In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "如果需要从 Galaxy 或 Collections 进行更新，则会执行一个下载所需角色的同步，这将消耗您的 /tmp 文件中的更多空间。当您的项目较大时（大约 10 GB），``/tmp`` 可能会导致磁盘空间的问题。"
+
+#: ../../source/clustering.rst:183
+msgid "Job Runs"
+msgstr "作业运行"
+
+#: ../../source/clustering.rst:185
+msgid "By default, when a job is submitted to the controller queue, it can be picked up by any of the workers. However, you can control where a particular job runs, such as restricting the instances from which a job runs on."
+msgstr "在默认情况下，当作业被提交到控制器队列时，任何 worker 都可以选择它。但是，您可以控制某个特定作业的运行位置，例如限制在其上运行作业的实例。"
+
+#: ../../source/clustering.rst:187
+msgid "In order to support temporarily taking an instance offline, there is a property enabled defined on each instance. When this property is disabled, no jobs will be assigned to that instance. Existing jobs will finish, but no new work will be assigned."
+msgstr "为了支持暂时关闭某个实例的功能，在每个实例上定义了一个启用的属性。禁用这个属性时，不会为该实例分配任何作业。现有的作业将会完成，但不会分配新的工作。"
+
+#: ../../source/clustering.rst:193
+msgid "Deprovision Instances"
+msgstr "取消置备实例"
+
+#: ../../source/clustering.rst:198
+msgid "Re-running the setup playbook does not automatically deprovision instances since clusters do not currently distinguish between an instance that was taken offline intentionally or due to failure. Instead, shut down all services on the controller instance and then run the deprovisioning tool from any other instance:"
+msgstr "重新运行设置 (setup) playbook 不会自动取消置备实例，因为集群目前不会区分有意关闭的实例与因故障而关闭的实例。而是，关闭控制器实例上的所有服务，然后从任何其他实例运行取消置备工具："
+
+#: ../../source/clustering.rst:200
+msgid "Shut down the instance or stop the service with the command, ``automation-controller-service stop``."
+msgstr "使用命令 ``automation-controller-service stop`` 关闭实例或停止服务。"
+
+#: ../../source/clustering.rst:202
+msgid "Run the deprovision command ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>`` from another instance to remove it from the controller cluster."
+msgstr "从另一个实例运行取消置备命令 ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>``，将其从控制器集群中删除。"
+
+#: ../../source/clustering.rst:204
+msgid "Example: ``awx-manage deprovision_instance --hostname=hostB``"
+msgstr "示例：``awx-manage deprovision_instance --hostname=hostB``"
+
+#: ../../source/clustering.rst:207
+msgid "Similarly, deprovisioning instance groups in the controller does not automatically deprovision or remove instance groups. For more information, refer to the :ref:`ag_instancegrp_deprovision` section."
+msgstr "同样，在控制器中取消置备实例组不会自动取消置备或删除实例组。如需了解更多信息，请参阅 :ref:`ag_instancegrp_deprovision` 部分。"
+

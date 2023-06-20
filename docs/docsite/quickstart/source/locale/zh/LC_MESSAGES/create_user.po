@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_user.rst:2
+msgid "Create a User"
+msgstr "创建用户"
+
+#: ../../source/create_user.rst:8
+msgid "Users associated with an organization are shown in the **Access** tab of the Organization."
+msgstr "与某个机构关联的用户在机构的 **Access** 标签页中显示。"
+
+#: ../../source/create_user.rst:10
+msgid "|Organizations - default admin user|"
+msgstr "|Organizations - default admin user|"
+
+#: ../../source/create_user.rst:15
+msgid "A default `admin` user with the role of System Administrator has been automatically created and is available to all users of |at|. It can be used as is or edited later as needed. You may add other users to an organization, but you must create the user(s) first. Refer to the :ref:`Users <userguide:ug_users_create>` section in the |atu| for detail."
+msgstr "已自动创建具有系统管理员角色的默认 `admin` 用户，并可供 |at| 的所有用户使用。它可以原样使用，或者根据需要对其进行编辑。您可以向机构添加其他用户，但您必须首先创建用户。详情请参阅 :ref:中的`Users <userguide:ug_users_create>` |atu| 部分。"
+
+#: ../../source/create_user.rst:17
+msgid "For the purpose of this Quick Start Guide, leave the default user as is."
+msgstr "在本快速入门指南中，请保留默认用户。"
+

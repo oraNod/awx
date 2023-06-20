@@ -1,0 +1,717 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/workflow_templates.rst:4
+msgid "Workflow Job Templates"
+msgstr "워크플로우 작업 템플릿"
+
+#: ../../source/workflow_templates.rst:9
+msgid "A :term:`workflow job template` links together a sequence of disparate resources that accomplishes the task of tracking the full set of jobs that were part of the release process as a single unit. These resources may include:"
+msgstr ":term:`workflow job template`은 릴리스 프로세스에 속한 전체 작업 세트를 단일 단위로 추적하는 작업을 수행하는 일련의 다양한 리소스를 하나로 연결합니다. 이러한 리소스에는 다음이 포함될 수 있습니다."
+
+#: ../../source/workflow_templates.rst:11
+msgid "job templates"
+msgstr "작업 템플릿"
+
+#: ../../source/workflow_templates.rst:12
+msgid "workflow templates"
+msgstr "워크플로우 템플릿"
+
+#: ../../source/workflow_templates.rst:13
+msgid "project syncs"
+msgstr "프로젝트 동기화"
+
+#: ../../source/workflow_templates.rst:14
+msgid "inventory source syncs"
+msgstr "인벤토리 소스 동기화"
+
+#: ../../source/workflow_templates.rst:16
+msgid "The **Templates** menu opens a list of the workflow and job templates that are currently available. The default view is collapsed (Compact), showing the template name, template type, and the statuses of the jobs that ran using that template, but you can click **Expanded** to view more information. This list is sorted alphabetically by name, but you can sort by other criteria, or search by various fields and attributes of a template. From this screen, you can launch (|launch|), edit (|edit|), and copy (|copy|) a job template."
+msgstr "**템플릿** 메뉴는 현재 사용 가능한 워크플로우 및 작업 템플릿 목록을 엽니다. 기본 뷰는 접혀 있으며(콤팩트) 템플릿 이름, 템플릿 유형, 해당 템플릿을 사용하여 실행된 작업의 상태를 표시하지만 **펼치기**를 클릭하면 자세한 정보가 표시됩니다. 이 목록은 이름에 따라 알파벳순으로 정렬되지만 다른 기준에 따라 정렬하거나 템플릿의 다양한 필드 및 속성으로 검색할 수 있습니다. 이 화면에서는 작업 템플릿을 시작(|launch|), 편집(|edit|), 복사(|copy|)할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:21
+msgid "Only workflow templates have the Workflow Visualizer icon (|wf-viz-icon|) as a shortcut for accessing the workflow editor."
+msgstr "워크플로우 편집기에 바로 액세스할 수 있는 워크플로우 시각화 도구 아이콘(|wf-viz-icon|)은 워크플로우 템플릿에만 있습니다."
+
+#: ../../source/workflow_templates.rst:26
+msgid "|Wf templates - home with example wf template|"
+msgstr "|Wf templates - home with example wf template|"
+
+#: ../../source/workflow_templates.rst:33
+msgid "Workflow templates can be used as building blocks for another workflow template. Many parameters in a workflow template allow you to enable **Prompt on Launch** that can be modified at the workflow job template level, and do not affect the values assigned at the individual workflow template level. For instructions, see the :ref:`ug_wf_editor` section."
+msgstr "워크플로 템플릿은 다른 워크플로우 템플릿의 빌드 블록으로 사용할 수 있습니다. 워크플로우 템플릿의 다양한 매개변수를 사용하면 워크플로우 작업 템플릿 수준에서 수정할 수 있는 **시작 시 프롬프트**를 활성화할 수 있으며, 개별 워크플로우 템플릿 수준에서 할당된 값에는 영향을 미치지 않습니다. 관련 지침은 :ref:`ug_wf_editor` 섹션을 참조하십시오."
+
+#: ../../source/workflow_templates.rst:37
+msgid "Create a Workflow Template"
+msgstr "워크플로우 템플릿 생성"
+
+#: ../../source/workflow_templates.rst:39
+msgid "To create a new workflow job template:"
+msgstr "새 워크플로우 작업 템플릿을 생성하려면 다음을 수행합니다."
+
+#: ../../source/workflow_templates.rst:41
+msgid "Click the |add options template| button then select **Workflow Template** from the menu list."
+msgstr "|add options template| 버튼을 클릭한 다음 메뉴 목록에서 **워크플로우 템플릿**을 선택합니다."
+
+#: ../../source/workflow_templates.rst:45
+msgid "|Wf templates - create new wf template|"
+msgstr "|Wf templates - create new wf template|"
+
+#: ../../source/workflow_templates.rst:50
+msgid "Enter the appropriate details into the following fields:"
+msgstr "다음 필드에 적절한 세부 정보를 입력합니다."
+
+#: ../../source/workflow_templates.rst:52
+msgid "**Name**: Enter a name for the workflow template."
+msgstr "**이름**: 워크플로우 템플릿의 이름을 입력합니다."
+
+#: ../../source/workflow_templates.rst:53
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)."
+msgstr "**설명**: 임의의 설명을 적절하게 입력합니다(선택 사항)."
+
+#: ../../source/workflow_templates.rst:54
+msgid "**Organization**: Optionally enter or search for an organization to associate the workflow."
+msgstr "**조직**: 필요한 경우 워크플로우를 연결할 조직을 입력하거나 검색합니다."
+
+#: ../../source/workflow_templates.rst:55
+msgid "**Inventory**: Optionally enter or search for an inventory to be used with this workflow template from the inventories available to the currently logged in user."
+msgstr "**인벤토리**: 필요한 경우 현재 로그인한 사용자에게 제공되는 인벤토리에서 이 워크플로우 템플릿에 사용할 인벤토리를 입력하거나 검색합니다."
+
+#: ../../source/workflow_templates.rst:57
+msgid "**Prompt on Launch**: If selected, you can provide an inventory when this workflow template is launched, or when this workflow template is used within another workflow template."
+msgstr "**시작 시 프롬프트**: 선택하는 경우 이 워크플로우 템플릿이 시작되거나 다른 워크플로우 템플릿 내에서 사용될 때 인벤토리를 제공할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:59
+msgid "**Limit**: Optionally specify a limit for subset of servers that your workflow is going to run.  This value is a host pattern to further constrain the list of hosts managed or affected by the playbook. Multiple patterns can be separated by colons (“:”). As with core Ansible, “a:b” means “in group a or b”, “a:b:&c” means “in a or b but must be in c”, and “a:!b” means “in a, and definitely not in b”."
+msgstr "**제한**: 필요한 경우 워크플로우에서 실행할 서버의 서브 세트에 제한을 지정합니다.  이 값은 플레이북에서 관리하거나 영향을 주는 호스트 목록을 추가로 제한하는 호스트 패턴입니다. 패턴이 여러 개인 경우 콜론(\":\")으로 구분할 수 있습니다. 핵심 Ansible과 마찬가지로 \"a:b\"는 \"그룹 a 또는 b에 있음\", \"a:b:&c\"는 \"a 또는 b에 있으면서 c에 있어야 함\", \"a:!b\"는 \"a에 있고 b에는 분명히 없음\"을 나타냅니다."
+
+#: ../../source/workflow_templates.rst:61
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a limit."
+msgstr "**시작 시 프롬프트**: 선택하는 경우 기본값을 제공해도 시작 시 제한을 선택하라는 메시지가 표시됩니다."
+
+#: ../../source/workflow_templates.rst:63
+msgid "**SCM Branch**: Optionally specify the branch to override all job template nodes that prompt for a branch."
+msgstr "**SCM 분기**: 필요한 경우 분기를 요청하는 모든 작업 템플릿 노드를 덮어쓰는 분기를 지정합니다."
+
+#: ../../source/workflow_templates.rst:65
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose an SCM branch."
+msgstr "**시작 시 프롬프트**: 선택하는 경우 기본값을 제공해도 시작 시 SCM 분기를 선택하라는 메시지가 표시됩니다."
+
+#: ../../source/workflow_templates.rst:67
+msgid "**Labels**: Supply optional labels that describe this workflow template, such as \"dev\" or \"test\". Labels can be used to group and filter workflow templates and completed jobs in the display."
+msgstr "**레이블**: \"dev\" 또는 \"test\"와 같이 이 워크플로우 템플릿을 설명하는 선택적 레이블을 제공합니다. 레이블은 해당 디스플레이에서 워크플로우 템플릿 및 완료된 작업을 그룹화하고 필터링하는 데 사용할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:69
+msgid "Labels are created when they are added to the Workflow Template. Labels are associated to a single Organization using the Project that is provided in the Workflow Template. Members of the Organization can create labels on a Workflow Template if they have edit permissions (such as an admin role)."
+msgstr "레이블은 워크플로우 템플릿에 추가할 때 생성됩니다. 레이블은 워크플로우 템플릿에 제공되는 프로젝트를 사용하여 단일 조직에 연결됩니다. 조직 멤버는 편집 권한이 있는 경우(예: 관리자 역할) 워크플로우 템플릿에 레이블을 생성할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:70
+msgid "Once the Workflow Template is saved, the labels appear in the Templates overview."
+msgstr "워크플로우 템플릿이 저장되면 템플릿 개요에 레이블이 표시됩니다."
+
+#: ../../source/workflow_templates.rst:71
+msgid "Click on the \"x\" beside a label to remove it. When a label is removed, and is no longer associated with a Workflow or Workflow Template, the label is permanently deleted from the list of Organization labels."
+msgstr "레이블을 제거하려면 레이블 옆에 있는 \"x\"를 클릭합니다. 제거되어 더 이상 워크플로우 또는 워크플로우 템플릿과 연결되지 않는 레이블은 조직 레이블 목록에서 영구적으로 삭제됩니다."
+
+#: ../../source/workflow_templates.rst:72
+msgid "Jobs inherit labels from the Workflow Template at the time of launch. If a label is deleted from a Workflow Template, it is also deleted from the Job."
+msgstr "작업은 시작 시 워크플로우 템플릿에서 레이블을 가져옵니다. 워크플로우 템플릿에서 삭제된 레이블은 작업에서도 삭제됩니다."
+
+#: ../../source/workflow_templates.rst:74
+msgid "**Options**:"
+msgstr "**옵션**:"
+
+#: ../../source/workflow_templates.rst:76
+msgid "Check **Enable Concurrent Jobs** to allow simultaneous runs of this workflow. Refer to :ref:`ug_job_concurrency` for additional information."
+msgstr "**동시 작업 활성화**를 선택하면 이 워크플로우를 동시에 실행할 수 있습니다. 자세한 내용은 :ref:`ug_job_concurrency`을 참조하십시오."
+
+#: ../../source/workflow_templates.rst:77
+msgid "Check **Enable Webhooks** to turn on the ability to interface with a predefined SCM system web service that is used to launch a job template. Currently supported SCM systems are GitHub and GitLab."
+msgstr "**Webhook 활성화**를 선택하면 작업 템플릿을 시작하는 데 사용되는 사전 정의된 SCM 시스템 웹 서비스와 연결하는 기능이 켜집니다. 현재 지원되는 SCM 시스템은 GitHub와 GitLab입니다."
+
+#: ../../source/workflow_templates.rst:81
+msgid "If you enable webhooks, other fields display, prompting for additional information:"
+msgstr "Webhook를 활성화하면 다른 필드가 표시되면서 추가 정보를 요청합니다."
+
+#: ../../source/workflow_templates.rst:83
+msgid "**Webhook Service**: Select which service to listen for webhooks from"
+msgstr "**Webhook 서비스**: Webhook에서 수신 대기할 서비스를 선택합니다."
+
+#: ../../source/workflow_templates.rst:84
+msgid "**Webhook Credential**: Optionally, provide a GitHub or GitLab personal access token (PAT) as a credential to use to send status updates back to the webhook service. Before you can select it, the credential must exist. See :ref:`ug_credentials_cred_types` to create one."
+msgstr "**Webhook 인증 정보**: 필요한 경우 Webhook 서비스로 상태 업데이트를 다시 보내는 데 사용할 인증 정보로 GitHub 또는 GitLab PAT(개인 액세스 토큰)을 제공합니다. 인증 정보를 선택하려면 인증 정보가 있어야 합니다. 인증 정보를 생성하려면 :ref:`ug_credentials_cred_types`을 참조하십시오."
+
+#: ../../source/workflow_templates.rst:86
+msgid "Upon **Save**, additional fields populate and the Workflow Visualizer automatically opens."
+msgstr "**저장** 시 추가 필드가 채워지고 워크플로우 시각화 도구가 자동으로 열립니다."
+
+#: ../../source/workflow_templates.rst:88
+msgid "**Webhook URL**: Automatically populated with the URL for the webhook service to POST requests to."
+msgstr "**Webhook URL**: 요청을 POST하는 Webhook 서비스의 URL이 자동으로 채워집니다."
+
+#: ../../source/workflow_templates.rst:89
+msgid "**Webhook Key**: Generated shared secret to be used by the webhook service to sign payloads sent to |at|. This must be configured in the settings on the webhook service in order for |at| to accept webhooks from this service."
+msgstr "**Webhook 키**: |at|로 보낸 페이로드에 서명하는 데 Webhook 서비스에서 사용하도록 생성된 공유 비밀입니다. |at|에서 이 서비스의 Webhook를 수락하려면 Webhook 서비스의 설정에 구성해야 합니다."
+
+#: ../../source/workflow_templates.rst:91
+msgid "For additional information on setting up webhooks, see :ref:`ug_webhooks`."
+msgstr "Webhook 설정에 대한 자세한 내용은 :ref:`ug_webhooks`을 참조하십시오."
+
+#: ../../source/workflow_templates.rst:94
+msgid "**Extra Variables**:"
+msgstr "**추가 변수**:"
+
+#: ../../source/workflow_templates.rst:96
+msgid "Pass extra command line variables to the playbook. This is the \"-e\" or \"--extra-vars\" command line parameter for ansible-playbook that is documented in the Ansible documentation at `Passing Variables on the Command Line <http://docs.ansible.com/playbooks_variables.html#passing-variables-on-the-command-line>`__."
+msgstr "플레이북에 추가 명령행 변수를 전달합니다. 관련 변수인 ansible-playbook의 \"-e\" 또는 \"--extra-vars\" 명령행 매개변수는 `Passing Variables on the Command Line <http://docs.ansible.com/playbooks_variables.html#passing-variables-on-the-command-line>`__의 Ansible 문서에 설명되어 있습니다."
+
+#: ../../source/workflow_templates.rst:97
+msgid "Provide key/value pairs using either YAML or JSON. These variables have a maximum value of precedence and overrides other variables specified elsewhere. An example value might be:"
+msgstr "YAML 또는 JSON을 사용하여 키/값 쌍을 제공합니다. 이러한 변수에는 우선순위 최대값이 있으며 다른 위치에 지정된 다른 변수를 덮어씁니다. 값은 다음과 같을 수 있습니다."
+
+#: ../../source/workflow_templates.rst:104
+msgid "For more information about extra variables, refer to :ref:`ug_wf_templates_extravars`."
+msgstr "추가 변수에 대한 자세한 내용은 :ref:`ug_wf_templates_extravars`를 참조하십시오."
+
+#: ../../source/workflow_templates.rst:106
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose command line variables."
+msgstr "**시작 시 프롬프트**: 선택하는 경우 기본값을 제공해도 시작 시 명령행 변수를 선택하라는 메시지가 표시됩니다."
+
+#: ../../source/workflow_templates.rst:110
+msgid "If you want to be able to specify ``extra_vars`` on a schedule, you must select **Prompt on Launch** for **EXTRA VARIABLES** on the workflow template, or a enable a survey on the workflow template, then those answered survey questions become ``extra_vars``."
+msgstr "일정에 ``extra_vars``를 지정하려면 워크플로우 템플릿에서 **추가 변수**에 **시작 시 프롬프트**를 선택하거나, 워크플로우 템플릿에서 설문 조사를 활성화하여 답변이 달린 설문 조사 질문이 ``extra_vars``가 되도록 해야 합니다."
+
+#: ../../source/workflow_templates.rst:112
+msgid "When you have completed configuring the workflow template, click **Save**."
+msgstr "워크플로우 템플릿 구성을 완료한 경우 **저장**을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:114
+msgid "Saving the template exits the Workflow Template page and the Workflow Visualizer opens to allow you to build a workflow. See the :ref:`ug_wf_editor` section for further instructions. Otherwise, you may close the Workflow Visualizer to return to the Details tab of the newly saved template in order to review, edit, add permissions, notifications, schedules, and surveys, or view completed jobs and build a workflow template at a later time. Alternatively, you can click **Launch** to launch the workflow, but you must first save the template prior to launching, otherwise, the **Launch** button remains grayed-out. Also, note the **Notifications** tab is present only after the template has been saved."
+msgstr "템플릿을 저장하면 워크플로우 템플릿 페이지가 종료되고 워크플로우 시각화 도구가 열려 워크플로우를 빌드할 수 있습니다. 자세한 지침은 :ref:`ug_wf_editor` 섹션을 참조하십시오. 또는 워크플로우 시각화 도구를 닫고 새로 저장된 템플릿의 세부 정보 탭으로 돌아와서 권한, 알림, 일정, 설문 조사를 검토, 편집, 추가하거나 나중에 완료된 작업을 보고 워크플로우 템플릿을 빌드할 수 있습니다. **시작**을 클릭하여 워크플로우를 시작할 수도 있지만 시작하기 전에 템플릿을 먼저 저장해야 합니다. 그러지 않으면 **시작** 버튼이 회색으로 유지되어 사용 불가능합니다. 또한 **알림** 탭은 템플릿을 저장한 후에만 표시됩니다."
+
+#: ../../source/workflow_templates.rst:122
+msgid "Work with Permissions"
+msgstr "권한 작업"
+
+#: ../../source/workflow_templates.rst:124
+msgid "Clicking on **Access** allows you to review, grant, edit, and remove associated permissions for users as well as team members."
+msgstr "**액세스**를 클릭하면 사용자와 팀 멤버의 관련 권한을 검토, 부여, 편집, 제거할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:128
+msgid "Click the **Add** button to create new permissions for this workflow template by following the prompts to assign them accordingly."
+msgstr "**추가** 버튼을 클릭하고 표시되는 메시지에 따라 이 워크플로우 템플릿에 사용할 새 권한을 생성한 후 적절하게 할당합니다."
+
+#: ../../source/workflow_templates.rst:133
+msgid "Work with Notifications"
+msgstr "알림 작업"
+
+#: ../../source/workflow_templates.rst:135
+msgid "Clicking on **Notifications** allows you to review any notification integrations you have setup. The **Notifications** tab is present only after the template has been saved."
+msgstr "**알림**을 클릭하면 설정한 알림 통합을 검토할 수 있습니다. **알림** 탭은 템플릿을 저장한 후에만 표시됩니다."
+
+#: ../../source/workflow_templates.rst:139
+msgid "Use the toggles to enable or disable the notifications to use with your particular template. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "특정 템플릿에 사용할 알림을 활성화하거나 비활성화하려면 토글을 사용합니다. 자세한 내용은 :ref:`ug_notifications_on_off`를 참조하십시오."
+
+#: ../../source/workflow_templates.rst:141
+msgid "If no notifications have been set up, see :ref:`ug_notifications_create` for detail."
+msgstr "알림이 설정되지 않은 경우 :ref:`ug_notifications_create`에서 자세한 내용을 참조하십시오."
+
+#: ../../source/workflow_templates.rst:146
+msgid "Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types."
+msgstr "다양한 알림 유형 구성에 대한 자세한 내용은 :ref:`ug_notifications_types`을 참조하십시오."
+
+#: ../../source/workflow_templates.rst:151
+msgid "View Completed Jobs"
+msgstr "완료된 작업 보기"
+
+#: ../../source/workflow_templates.rst:153
+msgid "The **Completed Jobs** tab provides the list of workflow templates that have ran. Click **Expanded** to view the various details of each job."
+msgstr "**완료된 작업** 탭에는 실행된 워크플로우 템플릿 목록이 있습니다. 각 작업의 다양한 세부 정보를 보려면 **펼치기**를 클릭합니다."
+
+#: ../../source/workflow_templates.rst:158
+msgid "From this view, you can click the job ID - name of the workflow job and see its graphical representation. The example below shows the job details of a workflow job."
+msgstr "이 뷰에서 '작업 ID - 워크플로우 작업 이름'을 클릭하면 해당 작업이 그래프로 표시됩니다. 아래 예제에서는 워크플로우 작업의 세부 정보를 보여 줍니다."
+
+#: ../../source/workflow_templates.rst:170
+msgid "The nodes are marked with labels that help you identify them at a glance. See the legend_ in the :ref:`ug_wf_editor` section for more information."
+msgstr "노드에 레이블이 표시되어 있어 한눈에 노드를 확인할 수 있습니다. 자세한 내용은 :ref:`ug_wf_editor` 섹션의 범례_를 참조하십시오."
+
+#: ../../source/workflow_templates.rst:174
+msgid "Work with Schedules"
+msgstr "스케줄 작업"
+
+#: ../../source/workflow_templates.rst:179
+msgid "Clicking on **Schedules** allows you to review any schedules set up for this template."
+msgstr "**스케줄**을 클릭하면 이 템플릿에 설정된 모든 일정을 검토할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:186
+msgid "Schedule a Workflow Template"
+msgstr "워크플로우 템플릿 예약"
+
+#: ../../source/workflow_templates.rst:192
+msgid "To schedule a job template run, click the **Schedules** tab."
+msgstr "작업 템플릿 실행을 스케줄하려면 **스케줄** 탭을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:194
+msgid "If schedules are already set up; review, edit, or enable/disable your schedule preferences."
+msgstr "스케줄이 이미 설정되어 있는 경우 스케줄 기본 설정을 검토, 편집 또는 활성화/비활성화합니다."
+
+#: ../../source/workflow_templates.rst:195
+msgid "If schedules have not been set up, refer to :ref:`ug_scheduling` for more information."
+msgstr "스케줄이 설정되지 않은 경우 :ref:`ug_scheduling`에서 자세한 내용을 참조하십시오."
+
+#: ../../source/workflow_templates.rst:197
+msgid "If a workflow template used in a nested workflow has a survey, or the **Prompt on Launch** selected for the inventory option, the **PROMPT** button displays next to the **SAVE** and **CANCEL** buttons on the schedule form. Clicking the **PROMPT** button shows an optional INVENTORY step where you can provide or remove an inventory or skip this step without any changes."
+msgstr "중첩된 워크플로우에 사용된 워크플로우 템플릿에 설문 조사가 있거나 인벤토리 옵션에 **시작 시 프롬프트**가 선택되어 있는 경우 일정 양식의 **저장** 및 **취소** 버튼 옆에 **프롬프트** 버튼이 표시됩니다. **프롬프트** 버튼을 클릭하면 인벤토리를 제공 또는 제거하거나 변경 사항 없이 단계를 건너뛸 수 있는 선택적 인벤토리 단계가 표시됩니다."
+
+#: ../../source/workflow_templates.rst:202
+msgid "Surveys"
+msgstr "설문 조사"
+
+#: ../../source/workflow_templates.rst:207
+msgid "Workflows containing job types of Run or Check provide a way to set up surveys in the Workflow Job Template creation or editing screens. Surveys set extra variables for the playbook similar to 'Prompt for Extra Variables' does, but in a user-friendly question and answer way. Surveys also allow for validation of user input. Click the **Survey** tab to create a survey."
+msgstr "실행 또는 확인 작업 유형이 포함된 워크플로우의 경우 워크플로우 작업 템플릿 생성 또는 편집 화면에서 설문 조사를 설정할 수 있습니다. 설문 조사에서는 '추가 변수 요청'와 비슷하지만 간편한 질문 및 답변 방식으로 플레이북의 추가 변수를 설정합니다. 또한 설문 조사에서는 사용자 입력을 검증할 수 있습니다. 설문 조사를 생성하려면 **설문 조사** 탭을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:209
+msgid "Use cases for surveys are numerous. An example might be if operations wanted to give developers a \"push to stage\" button they could run without advanced Ansible knowledge. When launched, this task could prompt for answers to questions such as, \"What tag should we release?\""
+msgstr "설문 조사의 사용 사례는 다양합니다. 예를 들어 고급 Ansible 지식 없이도 실행할 수 있는 \"단계로 푸시\" 버튼을 개발자에게 제공하려는 작업이 있을 수 있습니다. 이 작업이 시작되면 \"릴리스할 태그는 무엇입니까?\"와 같은 질문에 응답하도록 요청하는 메시지가 표시될 수 있습니다."
+
+#: ../../source/workflow_templates.rst:211
+msgid "Many types of questions can be asked, including multiple-choice questions."
+msgstr "선다형 질문을 포함하여 다양한 유형의 질문을 할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:216
+msgid "Create a Survey"
+msgstr "설문 조사 생성"
+
+#: ../../source/workflow_templates.rst:223
+msgid "To create a survey:"
+msgstr "설문 조사를 생성하려면 다음을 수행합니다."
+
+#: ../../source/workflow_templates.rst:225
+msgid "Click the **Survey** tab to bring up the **Add Survey** window."
+msgstr "**설문 조사** 탭을 클릭하여 설문 조사 추가 창을 불러옵니다."
+
+#: ../../source/workflow_templates.rst:230
+msgid "Use the **ON/OFF** toggle button at the top of the screen to quickly activate or deactivate this survey prompt."
+msgstr "화면 상단에 있는 **켜짐/꺼짐** 토글 버튼을 사용하여 이 설문 조사 프롬프트를 신속하게 활성화하거나 비활성화할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:232
+msgid "A survey can consist of any number of questions. For each question, enter the following information:"
+msgstr "설문 조사는 다양한 질문으로 구성될 수 있습니다. 각 질문에 다음 정보를 입력합니다."
+
+#: ../../source/workflow_templates.rst:234
+msgid "**Name**: The question to ask the user."
+msgstr "**이름**: 사용자를 묻는 질문입니다."
+
+#: ../../source/workflow_templates.rst:235
+msgid "**Description**: (optional) A description of what's being asked of the user."
+msgstr "**설명**: 사용자에게 묻는 내용에 대한 설명입니다(선택 사항)."
+
+#: ../../source/workflow_templates.rst:236
+msgid "**Answer Variable Name**: The Ansible variable name to store the user's response in. This is the variable to be used by the playbook. Variable names cannot contain spaces."
+msgstr "**응답 변수 이름**: 사용자 응답을 저장할 Ansible 변수 이름입니다. 플레이북에서 사용할 변수입니다. 변수 이름에는 공백을 포함할 수 없습니다."
+
+#: ../../source/workflow_templates.rst:237
+msgid "**Answer Type**: Choose from the following question types."
+msgstr "**응답 유형**: 다음 질문 유형 중에서 선택합니다."
+
+#: ../../source/workflow_templates.rst:239
+msgid "*Text*: A single line of text. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*텍스트*: 한 행의 텍스트입니다. 이 답변에는 최소 및 최대 길이(문자 수)를 설정할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:240
+msgid "*Textarea*: A multi-line text field. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*텍스트 영역*: 여러 행의 텍스트 필드입니다. 이 답변에는 최소 및 최대 길이(문자 수)를 설정할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:241
+msgid "*Password*: Responses are treated as sensitive information, much like an actual password is treated. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*암호*: 응답은 실제 암호와 유사하게 민감한 정보로 처리됩니다. 이 답변에는 최소 및 최대 길이(문자 수)를 설정할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:242
+msgid "*Multiple Choice (single select)*: A list of options, of which only one can be selected at a time. Enter the options, one per line, in the **Multiple Choice Options** box."
+msgstr "*다중 선택(단일 선택)*: 한 번에 하나만 선택할 수 있는 옵션 목록입니다. **다중 선택 옵션** 박스에서 한 행에 하나씩 옵션을 입력합니다."
+
+#: ../../source/workflow_templates.rst:243
+msgid "*Multiple Choice (multiple select)*: A list of options, any number of which can be selected at a time. Enter the options, one per line, in the **Multiple Choice Options** box."
+msgstr "*다중 선택(여러 선택)*: 한 번에 여러 개를 선택할 수 있는 옵션 목록입니다. **다중 선택 옵션** 박스에서 한 행에 하나씩 옵션을 입력합니다."
+
+#: ../../source/workflow_templates.rst:246
+msgid "*Integer*: An integer number. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*정수*: 정수입니다. 이 답변에는 최소 및 최대 길이(문자 수)를 설정할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:247
+msgid "*Float*: A decimal number. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*부동 값*: 10진수입니다. 이 답변에는 최소 및 최대 길이(문자 수)를 설정할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:249
+msgid "**Default Answer**: Depending on which type chosen, you can supply the default answer to the question. This value is pre-filled in the interface and is used if the answer is not provided by the user."
+msgstr "**기본 응답**: 선택한 유형에 따라 질문에 대한 기본 응답을 제공할 수 있습니다. 이 값은 인터페이스에 미리 입력되며 사용자가 응답을 제공하지 않은 경우 사용됩니다."
+
+#: ../../source/workflow_templates.rst:251
+msgid "**Required**: Whether or not an answer to this question is required from the user."
+msgstr "**필수**: 사용자가 이 질문에 응답해야 하는지 여부를 나타냅니다."
+
+#: ../../source/workflow_templates.rst:253
+msgid "Once you have entered the question information, click the **Add** button to add the question."
+msgstr "질문 정보를 입력했으면 **추가** 버튼을 클릭하여 질문을 추가합니다."
+
+#: ../../source/workflow_templates.rst:255
+msgid "A stylized version of the survey is presented in the Preview pane. For any question, you can click on the **Edit** button to edit the question, the **Delete** button to delete the question, and click and drag on the grid icon to rearrange the order of the questions."
+msgstr "스타일이 지정된 설문 조사 버전이 프리뷰 창에 표시됩니다. 각 질문에서 **편집** 버튼을 클릭하여 질문을 편집하거나, **삭제** 버튼을 클릭하여 질문을 삭제하거나, 그리드 아이콘을 클릭하고 드래그하여 질문 순서를 바꿀 수 있습니다."
+
+#: ../../source/workflow_templates.rst:257
+msgid "Return to the left pane to add additional questions."
+msgstr "질문을 추가하려면 왼쪽 창으로 돌아갑니다."
+
+#: ../../source/workflow_templates.rst:259
+msgid "When done, click **Save** to save the survey."
+msgstr "완료되면 **저장**을 클릭하여 설문 조사를 저장합니다."
+
+#: ../../source/workflow_templates.rst:261
+msgid "|Workflow-template-completed-survey|"
+msgstr "|Workflow-template-completed-survey|"
+
+#: ../../source/workflow_templates.rst:267
+msgid "Optional Survey Questions"
+msgstr "선택적 설문 조사 질문"
+
+#: ../../source/workflow_templates.rst:273
+msgid "The **Required** setting on a survey question determines whether the answer is optional or not for the user interacting with it."
+msgstr "설문 조사 질문의 **필수** 설정에 따라 사용자가 질문에 응답해야 하는지 여부가 결정됩니다."
+
+#: ../../source/workflow_templates.rst:275
+msgid "Behind the scenes, optional survey variables can be passed to the playbook in ``extra_vars``, even when they aren't filled in."
+msgstr "선택적 설문 조사 변수는 입력하지 않은 경우에도 백그라운드에서 ``extra_vars``의 플레이북에 전달될 수 있습니다."
+
+#: ../../source/workflow_templates.rst:277
+msgid "If a non-text variable (input type) is marked as optional, and is not filled in, no survey ``extra_var`` is passed to the playbook."
+msgstr "텍스트가 아닌 변수(입력 유형)가 선택 사항으로 표시되고 미입력 상태인 경우 설문 조사 ``extra_var``이 플레이북에 전달되지 않습니다."
+
+#: ../../source/workflow_templates.rst:279
+msgid "If a text input or text area input is marked as optional, is not filled in, and has a minimum ``length > 0``, no survey ``extra_var`` is passed to the playbook."
+msgstr "텍스트 입력 또는 텍스트 영역 입력이 선택 사항으로 표시되고 미입력 상태이며 최소 ``length > 0``인 경우 설문 조사 ``extra_var``이 플레이북에 전달되지 않습니다."
+
+#: ../../source/workflow_templates.rst:281
+msgid "If a text input or text area input is marked as optional, is not filled in, and has a minimum ``length === 0``, that survey ``extra_var`` is passed to the playbook, with the value set to an empty string ( \"\" )."
+msgstr "텍스트 입력 또는 텍스트 영역 입력이 선택 사항으로 표시되고 미입력 상태이며 최소 ``length === 0``인 경우 설문 조사 ``extra_var``은 값이 빈 문자열(\"\")로 설정되어 플레이북에 전달됩니다."
+
+#: ../../source/workflow_templates.rst:287
+msgid "Workflow Visualizer"
+msgstr "워크플로우 시각화 도구"
+
+#: ../../source/workflow_templates.rst:294
+msgid "The Workflow Visualizer provides a graphical way of linking together job templates, workflow templates, project syncs, and inventory syncs to build a workflow template. Before building a workflow template, refer to the :ref:`ug_workflows` section for considerations associated with various scenarios on parent, child, and sibling nodes."
+msgstr "워크플로우 시각화 도구를 사용하면 그래프를 사용해 작업 템플릿, 워크플로우 템플릿, 프로젝트 동기화, 인벤토리 동기화를 하나로 연결하여 워크플로우 템플릿을 빌드할 수 있습니다. 워크플로우 템플릿을 빌드하기 전에 :ref:`ug_workflows` 섹션에서 부모 노드, 자식 노드, 형제 노드의 다양한 시나리오와 관련된 고려 사항을 참조하십시오."
+
+#: ../../source/workflow_templates.rst:297
+msgid "Build a Workflow"
+msgstr "워크플로우 빌드"
+
+#: ../../source/workflow_templates.rst:299
+msgid "You can set up any combination of two or more of the following node types to build a workflow: Template (Job Template or Workflow Job Template), Project Sync, Inventory Sync, or Approval. Each node is represented by a rectangle while the relationships and their associated edge types are represented by a line (or link) that connects them."
+msgstr "템플릿(작업 템플릿 또는 워크플로우 작업 템플릿), 프로젝트 동기화, 인벤토리 동기화 또는 승인 등의 노드 유형 중 두 개 이상의 조합을 설정하여 워크플로우를 빌드할 수 있습니다. 각 노드는 직사각형으로 표시되고 관계 및 연결된 에지 유형은 노드를 연결하는 선(또는 링크)으로 표시됩니다."
+
+#: ../../source/workflow_templates.rst:302
+msgid "In the details/edit view of a workflow template, click the **Visualizer** tab or from the Templates list view, click the (|wf-viz-icon|) icon to launch the Workflow Visualizer."
+msgstr "워크플로우 템플릿의 세부 정보/편집 뷰에서 **시각화 도구** 탭을 클릭하거나 템플릿 목록 뷰에서 |wf-viz-icon| 아이콘을 클릭하여 워크플로우 시각화 도구를 시작합니다."
+
+#: ../../source/workflow_templates.rst:306
+msgid "Click the |start| button to display a list of nodes to add to your workflow."
+msgstr "|start| 버튼을 클릭하여 워크플로우에 추가할 노드 목록을 표시합니다."
+
+#: ../../source/workflow_templates.rst:312
+msgid "On the right pane, select the type of node you want to add from the drop-down menu:"
+msgstr "오른쪽 창의 드롭다운 메뉴에서 추가할 노드 유형을 선택합니다."
+
+#: ../../source/workflow_templates.rst:316
+msgid "If selecting an **Approval** node, see :ref:`ug_wf_approval_nodes` for further detail."
+msgstr "**승인** 노드를 선택하는 경우 자세한 내용은 :ref:`ug_wf_approval_nodes`를 참조하십시오."
+
+#: ../../source/workflow_templates.rst:318
+msgid "Selecting a node provides the available valid options associated with it."
+msgstr "노드를 선택하면 노드와 연결된 유효한 옵션이 제공됩니다."
+
+#: ../../source/workflow_templates.rst:321
+msgid "If you select a job template that does not have a default inventory when populating a workflow graph, the inventory of the parent workflow will be used. Though a credential is not required in a job template, you will not be able to choose a job template for your workflow if it has a credential that requires a password, unless the credential is replaced by a prompted credential."
+msgstr "워크플로우 그래프를 채울 때 기본 인벤토리가 없는 작업 템플릿을 선택하면 부모 워크플로우의 인벤토리가 사용됩니다. 작업 템플릿에는 인증 정보가 필요하지 않지만 암호가 필요한 인증 정보가 있는 경우 워크플로우의 작업 템플릿을 선택할 수 없습니다. 단, 인증 정보가 요청된 인증 정보로 교체되는 경우는 제외됩니다."
+
+#: ../../source/workflow_templates.rst:323
+msgid "Once a node is selected, the workflow begins to build, and you must specify the type of action to be taken for the selected node. This action is also referred to as *edge type*."
+msgstr "노드가 선택되면 워크플로우가 빌드되기 시작하고 선택한 노드에 수행할 작업 유형을 지정해야 합니다. 이 작업은 *에지 유형*이라고도 합니다."
+
+#: ../../source/workflow_templates.rst:325
+msgid "If the node is a root node, the edge type defaults to **Always** and is non-editable."
+msgstr "노드가 루트 노드인 경우 기본적으로 에지 유형은 **항상**이며 편집할 수 없습니다."
+
+#: ../../source/workflow_templates.rst:327
+msgid "For subsequent nodes, you can select one of the following scenarios (edge type) to apply to each:"
+msgstr "후속 노드의 경우 다음 시나리오(에지 유형) 중 하나를 선택하여 각각에 적용할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:329
+msgid "**Always**: Continue to execute regardless of success or failure."
+msgstr "**항상**: 성공 여부와 관계없이 계속 실행됩니다."
+
+#: ../../source/workflow_templates.rst:330
+msgid "**On Success**: Upon successful completion, execute the next template."
+msgstr "**성공 시**: 성공적으로 완료되면 다음 템플릿을 실행합니다."
+
+#: ../../source/workflow_templates.rst:331
+msgid "**On Failure**: Upon failure, execute a different template."
+msgstr "**실패 시**: 실패 시 다른 템플릿을 실행합니다."
+
+#: ../../source/workflow_templates.rst:335
+msgid "Select the behavior of the node if it is a convergent node from the **Convergence** field:"
+msgstr "통합 노드인 경우 **통합** 필드에서 노드 동작을 선택합니다."
+
+#: ../../source/workflow_templates.rst:337
+msgid "**Any** is the default behavior, allowing *any* of the nodes to complete as specified, before triggering the next converging node. As long as the status of one parent meets one of those run conditions, an ANY child node will run. In other words, an ANY node requires **all** nodes to complete, but only one node must complete with the expected outcome."
+msgstr "**임의**는 기본 동작으로, 다음 통합 노드를 트리거하기 전에 *임의*의 노드를 지정된 대로 완료할 수 있습니다. 한 부모의 상태가 해당 실행 조건 중 하나를 충족하기만 하면 **임의** 자식 노드가 실행됩니다. 즉, **임의** 노드를 완료하는 데 **모든** 노드가 필요하지만 하나의 노드만 예상대로 완료되면 됩니다."
+
+#: ../../source/workflow_templates.rst:339
+msgid "Choose **All** to ensure that *all* nodes complete as specified, before converging and triggering the next node. The purpose of ALL nodes is to make sure that every parent met it's expected outcome in order to run the child node. The workflow checks to make sure every parent behaved as expected in order to run the child node. Otherwise, it will not run the child node."
+msgstr "다음 노드를 통합하고 트리거하기 전에 *모든* 노드가 지정된 대로 완료되도록 **모두**를 선택합니다. **모두** 노드의 목적은 모든 부모가 자식 노드를 실행하기 위해 예상대로 완료되었는지 확인하는 것입니다. 워크플로우는 모든 부모가 자식 노드를 실행하기 위해 예상대로 작동했는지 확인합니다. 예상대로 작동하지 않았다면 자식 노드를 실행하지 않습니다."
+
+#: ../../source/workflow_templates.rst:341
+msgid "If selected, the graphical view will label the node as **ALL**."
+msgstr "선택하면 그래프 뷰에서 노드의 레이블이 **모두**로 지정됩니다."
+
+#: ../../source/workflow_templates.rst:347
+msgid "If a node is a root node, or a node that does not have any nodes converging into it, setting the **Convergence** rule does not apply, as its behavior is dictated by the action that triggers it."
+msgstr "노드가 루트 노드이거나 통합되는 노드가 없는 노드인 경우 **통합** 규칙을 설정해도 적용되지 않습니다. 해당 동작이 이를 트리거하는 작업에 의해 결정되기 때문입니다."
+
+#: ../../source/workflow_templates.rst:350
+msgid "If a job template used in the workflow has **Prompt on Launch** selected for any of its parameters, a **Prompt** button appears, allowing you to change those values at the node level. Use the wizard to change the value(s) in each of the tabs and click **Confirm** in the Preview tab."
+msgstr "워크플로우에 사용된 작업 템플릿의 매개변수에 **시작 시 프롬프트**가 선택되어 있는 경우 노드 수준에서 해당 값을 변경할 수 있는 **프롬프트** 버튼이 표시됩니다. 마법사를 사용하여 각 탭에서 값을 변경하고 프리뷰 탭에서 **확인**을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:354
+msgid "Likewise, if a workflow template used in the workflow has **Prompt on Launch** selected for the inventory option, use the wizard to supply the inventory at the prompt. If the parent workflow has its own inventory, it will override any inventory that is supplied here."
+msgstr "마찬가지로, 워크플로우에 사용된 워크플로우 템플릿의 인벤토리 옵션에 **시작 시 프롬프트**가 선택되어 있는 경우 마법사를 사용하여 프롬프트에서 인벤토리를 제공합니다. 부모 워크플로우에 자체 인벤토리가 있는 경우 여기에 제공된 인벤토리를 덮어씁니다."
+
+#: ../../source/workflow_templates.rst:360
+msgid "For job templates with promptable fields that are required, but don't have a default, you must provide those values when creating a node before the **Select** button becomes enabled. The two cases that disable the **Select** button until a value is provided via the **Prompt** button: 1) when you select the **Prompt on Launch** checkbox in a job template, but do not provide a default, or 2) when you create a survey question that is required but don't provide a default answer. However, this is **NOT** the case with credentials. Credentials that require a password on launch are **not permitted** when creating a workflow node, since everything needed to launch the node must be provided when the node is created. So, if a job template prompts for credentials, |at| prevents you from being able to select a credential that requires a password."
+msgstr "요청 가능한 필수 필드가 있지만 이 필드의 기본값이 없는 작업 템플릿의 경우 노드를 생성할 때 **선택** 버튼이 활성화되기 전에 해당 값을 제공해야 합니다. **프롬프트** 버튼을 사용하여 값을 제공할 때까지 **선택** 버튼을 비활성화하는 두 가지 경우는 1) 작업 템플릿에서 **시작 시 프롬프트** 체크박스를 선택하지만 기본값을 제공하지 않는 경우 또는 2) 필수 설문 조사 질문을 생성하지만 기본 응답을 제공하지 않는 경우입니다. 그러나 인증 정보가 있는 경우는 해당하지 **않습니다**. 시작 시 암호가 필요한 인증 정보는 워크플로우 노드를 생성할 때 **허용되지 않습니다**. 노드를 생성할 때는 노드 시작에 필요한 모든 정보를 제공해야 하기 때문입니다. 따라서 작업 템플릿에서 인증 정보를 입력하라는 메시지가 표시되면 |at|에서 암호가 필요한 인증 정보를 선택할 수 없도록 합니다."
+
+#: ../../source/workflow_templates.rst:362
+msgid "You must also click **Select** when the prompt wizard closes in order to apply the changes at that node. Otherwise, any changes you make will revert back to the values set in the actual job template."
+msgstr "또한 해당 노드에서 변경 사항을 적용하려면 프롬프트 마법사가 닫힐 때 **선택**을 클릭해야 합니다. 그러지 않으면 모든 변경 사항이 실제 작업 템플릿에 설정된 값으로 되돌아갑니다."
+
+#: ../../source/workflow_templates.rst:366
+msgid "Once the node is created, it is labeled with its job type. A template that is associated with each workflow node will run based on the selected run scenario as it proceeds. Click the compass (|compass|) icon to display the legend for each run scenario and their job types."
+msgstr "노드가 생성되면 노드의 레이블이 해당 작업 유형으로 지정됩니다. 각 워크플로우 노드와 연결된 템플릿은 진행하면서 선택한 실행 시나리오를 기반으로 실행됩니다. 나침반(|compass|) 아이콘을 클릭하면 각 실행 시나리오와 해당 작업 유형에 대한 범례가 표시됩니다."
+
+#: ../../source/workflow_templates.rst:374
+msgid "Hovering over a node allows you to add |add node| another node, view info |info node| about the node, edit |edit| the node details, edit an existing link |edit link|, or delete |delete node| the selected node."
+msgstr "노드 위에 마우스를 올리면 다른 노드를 추가하거나(|add node|), 노드에 대한 정보를 보거나(|info node|), 노드 세부 정보를 편집하거나(|edit|), 기존 링크를 편집하거나(|edit link|), 선택한 노드를 삭제할 수 있습니다(|delete node|)."
+
+#: ../../source/workflow_templates.rst:385
+msgid "When done adding/editing a node, click **Select** to save any modifications and render it on the graphical view. For possible ways to build your workflow, see :ref:`ug_wf_building_scenarios`."
+msgstr "노드 추가/편집을 완료하면 **선택**을 클릭하여 모든 수정 사항을 저장하고 그래프 뷰에서 노드를 렌더링합니다. 워크플로우를 빌드하는 방법은 :ref:`ug_wf_building_scenarios`를 참조하십시오."
+
+#: ../../source/workflow_templates.rst:387
+msgid "When done with building your workflow template, click **Save** to save your entire workflow template and return to the new Workflow Template details page."
+msgstr "워크플로우 템플릿 빌드를 완료하면 **저장**을 클릭하여 전체 워크플로우 템플릿을 저장하고 새 워크플로우 템플릿 세부 정보 페이지로 돌아갑니다."
+
+#: ../../source/workflow_templates.rst:391
+msgid "Clicking **Close** on this pane will not save your work, but instead, closes the entire Workflow Visualizer and you will have to start over."
+msgstr "이 창에서 **닫기**를 클릭하면 작업이 저장되지 않고 전체 워크플로우 시각화 도구가 닫히게 되어 처음부터 다시 시작해야 합니다."
+
+#: ../../source/workflow_templates.rst:397
+msgid "Approval nodes"
+msgstr "승인 노드"
+
+#: ../../source/workflow_templates.rst:399
+msgid "Choosing an **Approval** node requires user intervention in order to advance the workflow. This functions as a means to pause the workflow in between playbooks so that a user can give approval to continue on to the next playbook in the workflow, giving the user a specified amount of time to intervene, but also allows the user to continue as quickly as possible without having to wait on some other trigger."
+msgstr "**승인** 노드를 선택할 경우 워크플로우를 진행하기 위해 사용자 개입이 필요합니다. 이 노드를 사용하면 플레이북 간 워크플로우를 일시 중지하여 워크플로우의 다음 플레이북을 계속하도록 승인해 지정된 시간 동안 개입할 수 있을 뿐 아니라 다른 트리거를 기다리지 않고도 최대한 빨리 계속할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:403
+msgid "The default for the timeout is none, but you can specify the length of time before the request expires and automatically gets denied. After selecting and supplying the information for the approval node, it displays on the graphical view with a pause (|pause|) icon next to it."
+msgstr "시간 초과 기본값은 없지만, 요청이 만료되고 자동으로 거부될 때까지의 시간을 지정할 수 있습니다. 승인 노드에 대한 정보를 선택하고 제공하면 해당 노드가 그래프 뷰에서 일시 중지(|pause|) 아이콘 옆에 표시됩니다."
+
+#: ../../source/workflow_templates.rst:409
+msgid "The approver is anyone who can execute the workflow job template containing the approval nodes, has org admin or above privileges (for the org associated with that workflow job template), or any user who has the *Approve* permission explicitly assigned to them within that specific workflow job template."
+msgstr "승인자는 승인 노드가 포함된 워크플로우 작업 템플릿을 실행할 수 있으면서도 해당 워크플로우 작업 템플릿과 연결된 조직에서 조직 관리자 이상의 권한이 있는 구성원이거나, 이 특정 워크플로우 작업 템플릿 내에서 *승인* 권한이 명시적으로 할당된 사용자입니다."
+
+#: ../../source/workflow_templates.rst:413
+msgid "If pending approval nodes are not approved within the specified time limit (if an expiration was assigned) or they are denied, then they are marked as \"timed out\" or \"failed\", respectively, and move on to the next \"on fail node\" or \"always node\". If approved, the \"on success\" path is taken. If you try to POST in the API to a node that has already been approved, denied or timed out, an error message notifies you that this action is redundant, and no further steps will be taken."
+msgstr "만료가 할당된 상태에서 보류 중인 승인 노드가 지정된 제한 시간 내에 승인되지 않거나 거부되는 경우 각각 \"시간 초과\" 또는 \"실패\"로 표시되고 다음 \"실패 시 노드\" 또는 \"항상 노드\"로 이동합니다. 승인되면 \"성공 시\" 경로가 사용됩니다. API에서 이미 승인/거부되거나 시간 초과된 노드에 POST를 시도하면 이 작업이 중복되었음을 알리는 오류 메시지가 표시되고 추가 단계가 수행되지 않습니다."
+
+#: ../../source/workflow_templates.rst:415
+msgid "Below shows the various levels of permissions allowed on approval workflows:"
+msgstr "다음은 승인 워크플로우에 허용되는 다양한 권한 수준을 보여 줍니다."
+
+#: ../../source/workflow_templates.rst:424
+msgid "Node building scenarios"
+msgstr "노드 빌드 시나리오"
+
+#: ../../source/workflow_templates.rst:426
+msgid "You can add a sibling node by clicking the |add node| on the parent node:"
+msgstr "부모 노드에서 |add node|를 클릭하여 형제 노드를 추가할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:430
+msgid "You can insert another node in between nodes by hovering over the line that connects the two until the |add node| appears. Clicking on the |add node| automatically inserts the node between the two nodes."
+msgstr "|add node|가 표시될 때까지 두 노드를 연결하는 선 위에 마우스를 올리면 노드 사이에 다른 노드를 삽입할 수 있습니다. |add node|를 클릭하면 두 노드 사이에 노드가 자동으로 삽입됩니다."
+
+#: ../../source/workflow_templates.rst:434
+msgid "To add a root node to depict a split scenario, click the |start| button again:"
+msgstr "분할 시나리오를 표시하기 위해 루트 노드를 추가하려면 |start| 버튼을 다시 클릭합니다."
+
+#: ../../source/workflow_templates.rst:438
+msgid "At any node where you want to create a split scenario, hover over the node from which the split scenario begins and click the |add node|. This essentially adds multiple nodes from the same parent node, creating sibling nodes:"
+msgstr "분할 시나리오를 생성하려는 임의의 노드에서 분할 시나리오가 시작되는 노드 위에 마우스를 올린 후 |add node|를 클릭합니다. 이 작업은 기본적으로 동일한 부모 노드에 있는 여러 노드를 추가하여 형제 노드를 생성합니다."
+
+#: ../../source/workflow_templates.rst:444
+msgid "When adding a new node, the **PROMPT** button applies to workflow templates as well. Workflow templates will prompt for inventory and surveys."
+msgstr "새 노드를 추가하면 **프롬프트** 버튼이 워크플로우 템플릿에도 적용됩니다. 워크플로우 템플릿에서 인벤토리와 설문 조사를 요청하는 메시지가 표시됩니다."
+
+#: ../../source/workflow_templates.rst:446
+msgid "If you want to undo the last inserted node, click on another node without making a selection from the right pane. Or, click **Cancel** from the right pane."
+msgstr "마지막으로 삽입한 노드를 실행 취소하려면 오른쪽 창에서 선택하지 않고 다른 노드를 클릭합니다. 또는 오른쪽 창에서 **취소**를 클릭합니다."
+
+#: ../../source/workflow_templates.rst:449
+msgid "Below is an example of a workflow that contains all three types of jobs that is initiated by a job template that if it fails to run, proceed to the project sync job, and regardless of whether that fails or succeeds, proceed to the inventory sync job."
+msgstr "다음은 실행에 실패하는 경우 프로젝트 동기화 작업을 진행하고 성공 여부와 관계없이 인벤토리 동기화 작업을 진행하는 작업 템플릿에서 시작된 세 가지 작업을 모두 포함하는 워크플로우의 예제입니다."
+
+#: ../../source/workflow_templates.rst:453
+msgid "Remember to refer to the Key at the top of the window to identify the meaning of the symbols and colors associated with the graphical depiction."
+msgstr "창 상단에 있는 키를 참조하여 그래프 표시와 연결된 기호 및 색상의 의미를 확인합니다."
+
+#: ../../source/workflow_templates.rst:458
+msgid "In a workflow with a set of sibling nodes having varying edge types, and you remove a node that has a follow-on node attached to it, the attached node automatically joins the set of sibling nodes and retains its edge type:"
+msgstr "다양한 에지 유형의 형제 노드 세트가 포함된 워크플로우에서 후속 노드가 연결된 노드를 제거하면 연결된 노드가 자동으로 형제 노드 세트를 결합하고 해당 에지 유형을 유지합니다."
+
+#: ../../source/workflow_templates.rst:464
+msgid "The following ways you can modify your nodes:"
+msgstr "노드를 수정할 수 있는 방법은 다음과 같습니다."
+
+#: ../../source/workflow_templates.rst:466
+msgid "If you want to edit a node, click on the node you want to edit. The right pane displays the current selections. Make your changes and click **Select** to apply them to the graphical view."
+msgstr "노드를 편집하려면 편집할 노드를 클릭합니다. 오른쪽 창에 현재 선택 사항이 표시됩니다. 변경 후 **선택**을 클릭하여 그래프 뷰에 변경 사항을 적용합니다."
+
+#: ../../source/workflow_templates.rst:468
+msgid "To edit the edge type for an existing link (success/failure/always), click on the link. The right pane displays the current selection. Make your changes and click **Save** to apply them to the graphical view."
+msgstr "기존 링크의 에지 유형(성공/실패/항상)을 편집하려면 해당 링크를 클릭합니다. 오른쪽 창에 현재 선택 사항이 표시됩니다. 변경 후 **저장**을 클릭하여 그래프 뷰에 변경 사항을 적용합니다."
+
+#: ../../source/workflow_templates.rst:472
+msgid "To add a new link from one node to another, click the link |edit link| icon that appears on each node. Doing this highlights the nodes that are possible to link to. These feasible options are indicated by the dotted lines. Invalid options are indicated by grayed out boxes (nodes) that would otherwise produce an invalid link. The example below shows the **Demo Project** as a possible option for the **e2e-ec20de52-project** to link to, as indicated by the arrows:"
+msgstr "한 노드의 새 링크를 다른 노드에 추가하려면 각 노드에 표시되는 링크 아이콘(|edit link|)을 클릭합니다. 이렇게 하면 연결할 수 있는 노드가 강조 표시됩니다. 이런 가능한 옵션은 점선으로 표시됩니다. 유효하지 않은 옵션은 회색 박스(노드)로 표시되며, 회색 박스는 이 외의 경우에서 유효하지 않은 링크를 생성합니다. 아래 예제에서는 **e2e-ec20de52-project**가 화살표로 표시된 대로 연결할 수 있는 옵션으로 **데모 프로젝트**를 보여 줍니다."
+
+#: ../../source/workflow_templates.rst:476
+msgid "To remove a link, click the link and click the **Unlink** button."
+msgstr "링크를 제거하려면 링크를 클릭하고 **연결 해제** 버튼을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:480
+msgid "This button only appears in the right hand panel if the target or child node has more than one parent. All nodes must be linked to at least one other node at all times so you must create a new link before removing an old one."
+msgstr "이 버튼은 대상 또는 자식 노드에 부모가 두 개 이상 있는 경우에만 오른쪽 패널에 표시됩니다. 모든 노드는 항상 하나 이상의 다른 노드에 연결되어 있어야 하므로 이전 링크를 제거하기 전에 새 링크를 생성해야 합니다."
+
+#: ../../source/workflow_templates.rst:483
+msgid "Click the settings icon (|settings|) to zoom, pan, or reposition the view. Alternatively, you can drag the workflow diagram to reposition it on the screen or use the scroll on your mouse to zoom."
+msgstr "뷰를 확대/축소, 이동 또는 재배치하려면 설정 아이콘(|settings|)을 클릭합니다. 또는 워크플로우 다이어그램을 드래그하여 화면에 재배치하거나 마우스 스크롤을 사용하여 확대/축소할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:491
+msgid "Launch a Workflow Template"
+msgstr "워크플로우 템플릿 시작"
+
+#: ../../source/workflow_templates.rst:496
+msgid "Launch a workflow template by any of the following ways:"
+msgstr "다음 방법 중 하나로 워크플로우 템플릿을 시작합니다."
+
+#: ../../source/workflow_templates.rst:498
+msgid "Access the workflow templates list from the **Templates** menu on the left navigation bar or while in the Workflow Template Details view, scroll to the bottom to access the |launch| button from the list of templates."
+msgstr "왼쪽 탐색 모음의 **템플릿** 메뉴 또는 워크플로우 템플릿 세부 정보 뷰에서 워크플로우 템플릿 목록에 액세스한 후 아래로 스크롤하여 템플릿 목록의 |launch| 버튼을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:502
+msgid "While in the Job Template Details view of the job template you want to launch, click **Launch**."
+msgstr "시작하려는 작업 템플릿의 작업 템플릿 세부 정보 뷰에서 **시작**을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:506
+msgid "Along with any extra variables set in the job template and survey, |at| automatically adds the same variables as those added for a job template upon launch. Additionally, |at| automatically redirects the web browser to the Jobs Details page for this job, displaying the progress and the results."
+msgstr "|at|는 작업 템플릿 및 설문 조사에 설정된 추가 변수와 함께 시작 시 작업 템플릿에 추가된 변수와 동일한 변수를 자동으로 추가합니다. 또한 |at|는 웹 브라우저를 이 작업의 작업 세부 정보 페이지로 자동 리디렉션하여 진행 상황 및 결과를 표시합니다."
+
+#: ../../source/workflow_templates.rst:508
+msgid "Events related to approvals on workflows display in the Activity Stream (|activity-stream|) with detailed information about the approval requests, if any."
+msgstr "워크플로우 승인과 관련된 이벤트는 승인 요청(있는 경우)에 대한 세부 정보와 함께 활동 스트림(|activity-stream|)에 표시됩니다."
+
+#: ../../source/workflow_templates.rst:516
+msgid "Copy a Workflow Template"
+msgstr "워크플로우 템플릿 복사"
+
+#: ../../source/workflow_templates.rst:518
+msgid "|at| allows you the ability to copy a workflow template. If you choose to copy a workflow template, it **does not** copy any associated schedule, notifications, or permissions. Schedules and notifications must be recreated by the user or admin creating the copy of the workflow template. The user copying the workflow template will be granted the admin permission, but no permissions are assigned (copied) to the workflow template."
+msgstr "|at|를 사용하면 워크플로우 템플릿을 복사할 수 있습니다. 워크플로우 템플릿을 복사하도록 선택하면 연결된 일정, 알림 또는 권한이 복사되지 **않습니다**. 일정 및 알림은 워크플로우 템플릿의 복사본을 생성하는 사용자나 관리자가 다시 생성해야 합니다. 워크플로우 템플릿을 복사하는 사용자에게는 관리자 권한이 부여되지만 워크플로우 템플릿에는 권한이 할당(복사)되지 않습니다."
+
+#: ../../source/workflow_templates.rst:520
+msgid "Access the workflow template that you want to copy from the **Templates** menu on the left navigation bar or while in the Workflow Job Template Details view, scroll to the bottom to access it from a list of templates."
+msgstr "왼쪽 탐색 모음의 **템플릿** 메뉴 또는 워크플로우 작업 템플릿 세부 정보 뷰에서 복사할 워크플로우 템플릿에 액세스합니다. 아래로 스크롤하여 템플릿 목록에서 액세스하면 됩니다."
+
+#: ../../source/workflow_templates.rst:522
+msgid "Click the |copy| button."
+msgstr "|copy| 버튼을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:526
+msgid "A new template opens with the name of the template from which you copied and a timestamp."
+msgstr "복사한 템플릿의 이름과 타임스탬프가 포함된 새 템플릿이 열립니다."
+
+#: ../../source/workflow_templates.rst:530
+msgid "Select the copied template and replace the contents of the **Name** field with a new name, and provide or modify the entries in the other fields to complete this template."
+msgstr "복사한 템플릿을 선택하고 **이름** 필드의 내용을 새 이름으로 교체한 후 다른 필드의 항목을 제공하거나 수정하여 이 템플릿을 완료합니다."
+
+#: ../../source/workflow_templates.rst:532
+msgid "Click **Save** when done."
+msgstr "완료되면 **저장**을 클릭합니다."
+
+#: ../../source/workflow_templates.rst:537
+msgid "If a resource has a related resource that you don't have the right level of permission to, you cannot copy the resource, such as in the case where a project uses a credential that a current user only has *Read* access. However, for a workflow template, if any of its nodes uses an unauthorized job template, inventory, or credential, the workflow template can still be copied. But in the copied workflow template, the corresponding fields in the workflow template node will be absent."
+msgstr "적절한 수준의 권한이 없는 관련 리소스가 리소스에 있으면 현재 사용자에게 *읽기* 권한만 있는 인증 정보를 프로젝트에서 사용하는 경우와 같이 해당 리소스를 복사할 수 없습니다. 그러나 워크플로우 템플릿의 경우 권한이 없는 작업 템플릿, 인벤토리 또는 인증 정보를 해당 노드에서 사용하더라도 워크플로우 템플릿을 복사할 수 있습니다. 그러나 복사한 워크플로우 템플릿에는 워크플로우 템플릿 노드의 해당 필드가 없습니다."
+
+#: ../../source/workflow_templates.rst:543
+msgid "Extra Variables"
+msgstr "추가 변수"
+
+#: ../../source/workflow_templates.rst:551
+msgid "``extra_vars`` passed to the job launch API are only honored if one of the following is true:"
+msgstr "작업 시작 API에 전달된 ``extra_vars``는 다음 중 하나에 해당하는 경우에만 적용됩니다."
+
+#: ../../source/workflow_templates.rst:553
+msgid "They correspond to variables in an enabled survey"
+msgstr "활성화된 설문 조사의 변수에 해당함"
+
+#: ../../source/workflow_templates.rst:554
+msgid "``ask_variables_on_launch`` is set to True"
+msgstr "``ask_variables_on_launch``가 True로 설정되어 있음"
+
+#: ../../source/workflow_templates.rst:556
+msgid "When you pass survey variables, they are passed as extra variables (``extra_vars``). This can be tricky, as passing extra variables to a workflow template (as you would do with a survey) can override other variables being passed from the inventory and project."
+msgstr "설문 조사 변수를 전달하면 추가 변수(``extra_vars``)로 전달됩니다. 이 작업은 설문 조사와 마찬가지로 워크플로우 템플릿에 추가 변수를 전달하면 인벤토리 및 프로젝트에서 전달되는 다른 변수를 덮어쓸 수 있으므로 까다로울 수 있습니다."
+
+#: ../../source/workflow_templates.rst:558
+msgid "For example, say that you have a defined variable for an inventory for ``debug = true``. It is entirely possible that this variable, ``debug = true``, can be overridden in a workflow template survey."
+msgstr "예를 들어 ``debug = true``의 인벤토리에 대해 정의된 변수가 있다고 가정합니다. ``debug = true`` 변수는 워크플로우 템플릿 설문 조사에서 덮어쓸 수 있습니다."
+
+#: ../../source/workflow_templates.rst:560
+msgid "To ensure that the variables you need to pass are not overridden, ensure they are included by redefining them in the survey. Keep in mind that extra variables can be defined at the inventory, group, and host levels."
+msgstr "전달해야 하는 변수를 덮어쓰지 않도록 하려면 해당 변수를 다시 정의하여 설문 조사에 포함해야 합니다. 추가 변수는 인벤토리, 그룹, 호스트 수준에서 정의할 수 있습니다."
+
+#: ../../source/workflow_templates.rst:569
+msgid "The following table notes the behavior (hierarchy) of variable precedence in |at| as it compares to variable precedence in Ansible."
+msgstr "다음 표에서는 Ansible의 변수 우선순위와 비교한 |at|의 변수 우선순위 동작(계층 구조)을 보여 줍니다."
+
+#: ../../source/workflow_templates.rst:571
+msgid "**Variable Precedence Hierarchy (last listed wins)**"
+msgstr "**변수 우선순위 계층 구조(마지막 항목이 우선순위가 높음)**"
+

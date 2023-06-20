@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/instances.rst:5
+msgid "Managing Capacity With Instances"
+msgstr "使用实例管理容量"
+
+#: ../../source/instances.rst:13
+msgid "Scaling your mesh is only available on Openshift deployments of |aap| and is possible through adding or removing nodes from your cluster dynamically, through the **Instances** resource of the |at| User Interface, without running the installation script."
+msgstr "扩展网格只能在 |aap| 的 Openshift 部署中进行，可通过 |at| 用户界面的 **Instances** 资源动态添加或删除集群中的节点，而无需运行安装脚本。"
+
+#: ../../source/instances.rst:16
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/instances.rst:18
+msgid "Be sure you have the minimum requirements for the RHEL virtual machine before proceeding. Refer to `Red Hat Ansible Automation Platform system requirements <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.2/html/red_hat_ansible_automation_platform_installation_guide/planning-installation#red_hat_ansible_automation_platform_system_requirements>`_ for details."
+msgstr "在继续操作前，请确定您具有 RHEL 虚拟机的最低要求。详情请参阅 `Red Hat Ansible Automation Platform system requirements <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.2/html/red_hat_ansible_automation_platform_installation_guide/planning-installation#red_hat_ansible_automation_platform_system_requirements>`_。"
+
+#: ../../source/instances.rst:20
+msgid "RHEL nodes must properly be subscribed to:"
+msgstr "RHEL 节点需要被正确订阅："
+
+#: ../../source/instances.rst:22
+msgid "RHEL subscription and with **baseos** and **appstream** repositories enabled"
+msgstr "RHEL 订阅并启用了 **baseos** 和 **appstream** 软件仓库启"
+
+#: ../../source/instances.rst:23
+msgid "|AAP| subscription and the proper |AAP| channel enabled:"
+msgstr "|AAP| 订阅并启用了正确的 |AAP| 频道："
+
+#: ../../source/instances.rst:31
+msgid "If you are using the default |ee| (provided with the controller) to run on remote execution nodes, you must add a pull secret in the controller that contains the credential for pulling the |ee| image. To do this, create a pull secret on the |aa| Controller namespace and configure the ``ee_pull_credentials_secret`` parameter in the Operator:"
+msgstr "如果您使用默认 |ee| （由控制器提供）在远程执行节点上运行，您必须在包含拉取 |ee| 镜像的控制器中添加 pull secret。为此，在 |aa| Controller 命名空间中创建一个 pull secret，并在 Operator 中配置 ``ee_pull_credentials_secret`` 参数："
+
+#: ../../source/instances.rst:33
+msgid "1. Create a secret: ::"
+msgstr "1. 创建一个 secret: ::"
+
+#: ../../source/instances.rst:45
+msgid "2. Add ``ee_pull_credentials_secret ee-pull-secret`` to the spec: ::"
+msgstr "2. 将 ``ee_pull_credentials_secret ee-pull-secret`` 添加到 spec: ::"
+
+#: ../../source/instances.rst:52
+msgid "Manage instances"
+msgstr "管理实例"
+
+#: ../../source/instances.rst:54
+msgid "Click **Instances** from the left side navigation menu to access the Instances list."
+msgstr "在左侧的导航菜单中点 **Instances** 访问实例列表。"
+
+#: ../../source/instances.rst:58
+msgid "The Instances list displays all the current nodes in your topology, along with relevant details:"
+msgstr "实例列表显示拓扑中的所有当前节点，以及相关详情："
+
+#: ../../source/instances.rst:60
+msgid "**Host Name**"
+msgstr "**Host Name**"
+
+#: ../../source/instances.rst:64
+msgid "**Status** indicates the state of the node:"
+msgstr "**Status** 表示节点的状态："
+
+#: ../../source/instances.rst:66
+msgid "**Installed**: a node that has successfully installed and configured, but has not yet passed the periodic health check"
+msgstr "**Installed**：节点已被成功安装和配置，但还没有通过定期的健康检查"
+
+#: ../../source/instances.rst:67
+msgid "**Ready**: a node that is available to run jobs or route traffic between nodes on the mesh. This replaces the previously “Healthy” node state used in the mesh topology"
+msgstr "**Ready**：节点可以运行作业或在网格的节点间路由网络数据。这替代了以前在网格拓扑中使用的 \"Healthy\" 节点状态"
+
+#: ../../source/instances.rst:68
+msgid "**Provisioning**: a node that is in the process of being added to a current mesh, but is awaiting the job to install all of the packages (currently not yet supported and is subject to change in a future release)"
+msgstr "**Provisioning**：节点正处于加入到一个当前网格的过程中，它正在等待作业安装所有软件包（目前还不被支持，可能在以后的版本中有所变化）"
+
+#: ../../source/instances.rst:69
+msgid "**Deprovisioning**: a node that is in the process of being removed from a current mesh and is finishing up jobs currently running on it"
+msgstr "**Deprovisioning**：节点正处于从当前网格中删除的过程，并完成当前运行的作业"
+
+#: ../../source/instances.rst:70
+msgid "**Unavailable**: a node that did not pass the most recent health check, indicating connectivity or receptor problems"
+msgstr "**Unavailable**：节点没有通过最当前的健康检查，代表存在连接性或与 receptor 相关的问题"
+
+#: ../../source/instances.rst:71
+msgid "**Provisioning Failure**: a node that failed during provisioning (currently not yet supported and is subject to change in a future release)"
+msgstr "**Provisioning Failure**：节点在置备过程中失败（当前还不支持且可能在以后的版本中有所变化）"
+
+#: ../../source/instances.rst:72
+msgid "**De-provisioning Failure**: a node that failed during deprovisioning (currently not yet supported and is subject to change in a future release)"
+msgstr "**De-provisioning Failure**：节点在取消置备过程中失败（当前还不支持且可能在以后的版本中有所变化）"
+
+#: ../../source/instances.rst:74
+msgid "**Node Type** specifies whether the node is a control, hybrid, hop, or execution node. See :term:`node` for further detail."
+msgstr "**Node Type** 指定节点是控制节点、混合节点、跃点节点或执行节点。如需更多详情，请参阅 :term:`node`。"
+
+#: ../../source/instances.rst:75
+msgid "**Capacity Adjustment** allows you to adjust the number of forks in your nodes"
+msgstr "**Capacity Adjustment** 允许您调整节点中的 fork 数量"
+
+#: ../../source/instances.rst:76
+msgid "**Used Capacity** indicates how much capacity has been used"
+msgstr "**Used Capacity** 表示已使用的容量"
+
+#: ../../source/instances.rst:77
+msgid "**Actions** allow you to enable or disable the instance to control whether jobs can be assigned to it"
+msgstr "**Actions** 允许您启用或禁用实例来控制是否可以为其分配作业"
+
+#: ../../source/instances.rst:79
+msgid "From this page, you can add, remove or run health checks on your nodes. Use the check boxes next to an instance to select it to remove or run a health check against. When a button is grayed-out, you do not have permission for that particular action. Contact your Administrator to grant you the required level of access. If you are able to remove an instance, you will receive a prompt for confirmation, like the one below:"
+msgstr "通过这个页面，您可以在节点上添加、删除或运行健康检查。使用实例旁边的复选框来选择它以删除或运行健康检查。当按钮显示为灰掉时，代表您没有该特定操作的权限。请联系您的管理员以获取所需的访问级别。如果您可以删除一个实例，则会看到一个确认信息，如下所示："
+
+#: ../../source/instances.rst:85
+msgid "You can still remove an instance even if it is active and jobs are running on it. The controller will attempt to wait for any jobs running on this node to complete before actually removing it."
+msgstr "您仍然可以删除实例，即使它处于活动状态并且有作业正在其中运行。在实际删除之前，控制器将尝试等待该节点上运行的任何作业完成。"
+
+#: ../../source/instances.rst:87
+msgid "Click **Remove** to confirm."
+msgstr "点 **Remove** 进行确认。"
+
+#: ../../source/instances.rst:91
+msgid "If running a health check on an instance, at the top of the Details page, a message displays that the health check is in progress."
+msgstr "如果在一个实例上运行健康检查，Details 页面的顶部会显示健康检查正在进行的信息。"
+
+#: ../../source/instances.rst:95
+msgid "Click **Reload** to refresh the instance status."
+msgstr "点 **Reload** 刷新实例状态。"
+
+#: ../../source/instances.rst:99
+msgid "Health checks are ran asynchronously, and may take up to a minute for the instance status to update, even with a refresh. The status may or may not change after the health check. At the bottom of the Details page, a timer/clock icon displays next to the last known health check date and time stamp if the health check task is currently running."
+msgstr "健康检查异步运行，并且可能最多需要一分钟来更新实例的状态，即使进行了刷新。在健康检查后，状态可能会有变化也可能没有变化。在 Details 页面的底部，如果健康检查任务当前正在运行，在最后一次已知的健康检查日期和时间戳旁会显示一个计数器图标。"
+
+#: ../../source/instances.rst:103
+msgid "The example health check shows the status updates with an error on node 'one':"
+msgstr "示例健康检查显示节点\"one\"的状态被更新并存在一个错误："
+
+#: ../../source/instances.rst:109
+msgid "Add an instance"
+msgstr "添加一个实例"
+
+#: ../../source/instances.rst:111
+msgid "One of the ways to expand capacity is to create an instance, which serves as a node in your topology."
+msgstr "扩展容量的一种方法是，创建一个实例，它将充当拓扑中的一个节点。"
+
+#: ../../source/instances.rst:113
+msgid "Click **Instances** from the left side navigation menu."
+msgstr "从左侧导航菜单中点 **Instances**。"
+
+#: ../../source/instances.rst:115
+msgid "In the Instances list view, click the **Add** button and the Create new Instance window opens."
+msgstr "在 Instances 列表视图中，点 **Add** 按钮并打开 Create new Instance 窗口。"
+
+#: ../../source/instances.rst:119
+msgid "An instance has several attributes that may be configured:"
+msgstr "一个实例会包括多个可以进行配置的属性："
+
+#: ../../source/instances.rst:121
+msgid "Enter a fully qualified domain name or IP address for your instance in the **Host Name** field (required). This field is equivalent to ``hostname`` in the API."
+msgstr "在 **Host Name** 字段中输入完全限定域名或 IP 地址（必需）。此字段等同于 API 中的 ``hostname``。"
+
+#: ../../source/instances.rst:122
+msgid "Optionally enter a **Description** for the instance"
+msgstr "对实例输入 **Description** 信息（可选）"
+
+#: ../../source/instances.rst:123
+msgid "The **Instance State** field is auto-populated, indicating that it is being installed, and cannot be modified"
+msgstr "**Instance State** 字段已自动填充，表示它正在安装，且无法修改"
+
+#: ../../source/instances.rst:124
+msgid "The **Listener Port** is pre-populated with the most optimal port, however you can change the port to one that is more appropriate for your configuration. This field is equivalent to ``listener_port`` in the API."
+msgstr "**Listener Port** 是使用最佳端口预先填充的，但您可以将端口改为更适合您的配置的端口。此字段等同于 API 中的 ``listener_port``。"
+
+#: ../../source/instances.rst:125
+msgid "The **Instance Type** field is auto-populated and cannot be modified. Only execution nodes can be created at this time."
+msgstr "**Instance Type** 字段是自动填充的且无法修改。目前只能创建执行节点。"
+
+#: ../../source/instances.rst:126
+msgid "Check the **Enable Instance** box to make it available for jobs to run on it"
+msgstr "选中 **Enable Instance** 复选框，使作业可以在其中运行"
+
+#: ../../source/instances.rst:128
+msgid "Once the attributes are configured, click **Save** to proceed."
+msgstr "配置属性后，点 **Save** 继续操作。"
+
+#: ../../source/instances.rst:130
+msgid "Upon successful creation, the Details of the created instance opens."
+msgstr "创建成功后，创建的实例的 Details 将打开。"
+
+#: ../../source/instances.rst:136
+msgid "The proceeding steps 4-8 are intended to be ran from any computer that has SSH access to the newly created instance. It should not be ran from a machine that is part of the AAP deployment."
+msgstr "继续进行步骤 4-8 旨在从任何可以通过 SSH 访问新创建实例的计算机中运行。它不应该从属于 AAP 部署一部分的机器运行。"
+
+#: ../../source/instances.rst:138
+msgid "Click the download button next to the **Install Bundle** field to download the tarball that includes this new instance and the files relevant to install the node into the mesh."
+msgstr "点 **Install Bundle** 字段旁边的下载按钮下载包含这个新实例的 tarball，以及与将节点安装到网格相关的文件。"
+
+#: ../../source/instances.rst:142
+msgid "Extract the downloaded ``tar.gz`` file from the location you downloaded it. The install bundle contains yaml files, certificates, and keys that will be used in the installation process."
+msgstr "从您下载的位置中展开下载的 ``tar.gz`` 文件。安装捆绑包会包含要在安装过程中使用的 yaml 文件、证书和密钥。"
+
+#: ../../source/instances.rst:144
+msgid "Before running the ``ansible-playbook`` command, edit the following fields in the ``inventory.yml`` file:"
+msgstr "在运行 ``ansible-playbook`` 命令前，编辑 ``inventory.yml`` 文件中的以下字段："
+
+#: ../../source/instances.rst:146
+msgid "``ansible_user`` with the username running the installation"
+msgstr "``ansible_user``，运行安装的用户名"
+
+#: ../../source/instances.rst:147
+msgid "``ansible_ssh_private_key_file`` to contain the filename of the private key used to connect to the instance"
+msgstr "``ansible_ssh_private_key_file`` 包含用于连接实例的私钥的文件名"
+
+#: ../../source/instances.rst:151
+msgid "The content of the ``inventory.yml`` file serves as a template and contains variables for roles that are applied during the installation and configuration of a receptor node in a mesh topology. You may modify some of the other fields, or replace the file in its entirety for advanced scenarios. Refer to `Role Variables <https://github.com/ansible/receptor-collection/blob/main/README.md>`_ for more information on each variable."
+msgstr "``inventory.yml`` 文件的内容可作为一个模板，其中包含在网格拓扑中安装和配置 receptor 节点期间应用的角色的变量。您可以修改其中的一些字段，或使用整个文件。有关各个变量的更多信息，请参阅 `Role Variables <https://github.com/ansible/receptor-collection/blob/main/README.md>`_。"
+
+#: ../../source/instances.rst:153
+msgid "Save the file to continue."
+msgstr "保存文件以继续。"
+
+#: ../../source/instances.rst:155
+msgid "Run the following command on the machine you want to update your mesh:"
+msgstr "在您要更新网格的机器上运行以下命令："
+
+#: ../../source/instances.rst:162
+msgid "To view other instances within the same topology, click the **Peers** tab associated with the control node."
+msgstr "要查看同一拓扑中的其他实例，请点与控制节点关联的 **Peers** 标签页。"
+
+#: ../../source/instances.rst:166
+msgid "You will only be able to view peers of the control plane nodes at this time, which are the execution nodes. Since you are limited to creating execution nodes in this release, you will be unable to create or view peers of execution nodes."
+msgstr "此时，您只能查看 control plane 节点的对等点（即执行节点）。由于在这个发行版本中创建执行节点有限制，您将无法创建或查看执行节点的对等点。"
+
+#: ../../source/instances.rst:171
+msgid "You may run a health check by selecting the node and clicking the **Run health check** button from its Details page."
+msgstr "您可以在 Details 页中选择节点并点 **Run health check** 按钮来运行健康检查。"
+
+#: ../../source/instances.rst:173
+msgid "To view a graphical representation of your updated topology, refer to the :ref:`ag_topology_viewer` section of this guide."
+msgstr "要查看更新的拓扑的图形表示，请参阅本指南的 :ref:`ag_topology_viewer` 部分。"
+

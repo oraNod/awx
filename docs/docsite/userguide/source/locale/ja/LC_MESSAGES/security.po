@@ -1,0 +1,804 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/security.rst:4
+msgid "Security"
+msgstr "セキュリティー"
+
+#: ../../source/security.rst:9
+msgid "The following sections will help you gain an understanding of how |at| handles and lets you control file system security."
+msgstr "以下のセクションでは、|at| がファイルシステムのセキュリティーに対応し、これらを制御する方法について説明します。"
+
+#: ../../source/security.rst:11
+msgid "All playbooks are executed via the ``awx`` file system user. For running jobs, |at| offers job isolation via the use of Linux containers. This projection ensures jobs can only access playbooks, roles, and data from the Project directory for that job template."
+msgstr "すべての Playbook は、``awx`` ファイルシステムのユーザー経由で実行されます。実行中のジョブについては、|at| は、Linux コンテナーを使用してジョブの分離を行います。これにより、ジョブはそのジョブテンプレートの Project ディレクトリーにある Playbook、ロール、およびデータにのみアクセスできます。"
+
+#: ../../source/security.rst:13
+msgid "For credential security, users may choose to upload locked SSH keys and set the unlock password to \"ask\". You can also choose to have the system prompt them for SSH credentials or sudo passwords rather than having the system store them in the database."
+msgstr "認証情報のセキュリティーの場合、ユーザーはロックされた SSH キーをアップロードし、パスワードのロック解除を「ask」に設定する選択ができます。また、システムに SSH 認証情報をデータベースに保存させるのではなく、システムから SSH 認証情報や sudo パスワードのプロンプトを出させるよう選択することもできます。"
+
+#: ../../source/security.rst:17
+msgid "Playbook Access and Information Sharing"
+msgstr "Playbook のアクセスおよび情報共有"
+
+#: ../../source/security.rst:25
+msgid "|At|'s use of automation execution environments and Linux containers prevents playbooks from reading files outside of their project directory."
+msgstr "|At| は、自動化実行環境および Linux コンテナーを使用しているため、Playbook がプロジェクトディレクトリー外のファイルを読むことはできません。"
+
+#: ../../source/security.rst:27
+msgid "By default, the only data exposed to the ansible-playbook process inside the container is the current project being used."
+msgstr "デフォルトでは、コンテナー内の ansible-playbook プロセスに公開されるデータは、現在使用しているプロジェクトのみです。"
+
+#: ../../source/security.rst:29
+msgid "You can customize this in the Job Settings and expose additional directories from the host into the container. Refer the next section, :ref:`ug_isolation` for more information."
+msgstr "これは、ジョブ設定でカスタマイズし、ホストからコンテナーに追加のディレクトリーを公開することができます。詳細は、次のセクション (:ref:`ug_isolation`) を参照してください。"
+
+#: ../../source/security.rst:34
+msgid "Isolation functionality and variables"
+msgstr "分離機能および変数"
+
+#: ../../../common/source/isolation_variables.rst:2
+msgid "|At| uses container technology to isolate jobs from each other. By default, only the current project is exposed to the container running a job template."
+msgstr "|At| は、コンテナテクノロジーを使用して、ジョブを相互に分離します。デフォルトでは、現在のプロジェクトのみがジョブテンプレートを実行しているコンテナに公開されます。"
+
+#: ../../../common/source/isolation_variables.rst:4
+msgid "You may find that you need to customize your playbook runs to expose additional directories. To fine tune your usage of job isolation, there are certain variables that can be set."
+msgstr "追加のディレクトリーを公開するには、Playbook の実行をカスタマイズする必要がある場合があります。ジョブ分離の使用法を微調整するために、設定できる特定の変数があります。"
+
+#: ../../../common/source/isolation_variables.rst:6
+msgid "By default, |at| will use the system's ``tmp`` directory (``/tmp`` by default) as its staging area. This can be changed in the **Job Execution Path** field of the Jobs settings screen, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "デフォルトでは、|at| はシステムの ``tmp`` ディレクトリー (デフォルトは ``/tmp``) をステージング領域として使用します。これは、ジョブ設定画面の **Job Execution Path (ジョブの実行パス)** フィールドから、または ``/api/v2/settings/jobs`` の REST API で以下を変更できます。"
+
+#: ../../../common/source/isolation_variables.rst:8
+msgid "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+msgstr "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+
+#: ../../../common/source/isolation_variables.rst:10
+msgid "If there are any additional directories that should specifically be exposed from the host to the container that playbooks run in, you can specify those in the **Paths to Expose to Isolated Jobs** field of the Jobs setting scren, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "ホストから Playbook が実行するコンテナーに具体的に公開する必要のある追加のディレクトリーがある場合は、ジョブ設定画面の **Paths to Expose to Isolated Jobs (分離されたジョブに公開するパス)** フィールド、または ``/api/v2/settings/jobs`` のREST API で指定できます。"
+
+#: ../../../common/source/isolation_variables.rst:13
+msgid "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/isolation_variables.rst:16
+msgid "The primary file you may want to add to ``AWX_ISOLATION_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "Playbook が ``/var/lib/awx/.ssh`` で定義した鍵や設定を使用する必要がある場合には、このファイルを主要ファイルとして、``AWX_ISOLATION_SHOW_PATHS`` に追加してください。"
+
+#: ../../../common/source/isolation_variables.rst:18
+msgid "The above fields can be found in the Jobs Settings window:"
+msgstr "上記のフィールドは、ジョブ設定ウィンドウで確認できます。"
+
+#: ../../source/security.rst:46
+msgid "Role-Based Access Controls"
+msgstr "ロールベースのアクセス制御"
+
+#: ../../source/security.rst:52
+msgid "Role-Based Access Controls (RBAC) are built into |at| and allow administrators to delegate access to server inventories, organizations, and more. Administrators can also centralize the management of various credentials, allowing end users to leverage a needed secret without ever exposing that secret to the end user. RBAC controls allow the controller to help you increase security and streamline management."
+msgstr "ロールベースのアクセス制御 (RBAC) は |at| に組み込まれ、管理者はアクセスをサーバーインベントリー、組織などに委任できます。管理者は各種の認証情報の管理を一元化することもでき、シークレットをエンドユーザーに公開せずに、エンドユーザーが必要なシークレットを使用できるようにします。RBAC の制御により、コントローラーではセキュリティーを強化し、管理をスリム化することができます。"
+
+#: ../../source/security.rst:54
+msgid "RBACs are easiest to think of in terms of Roles which define precisely who or what can see, change, or delete an \"object\" for which a specific capability is being set. RBAC is the practice of granting roles to users or teams."
+msgstr "RBAC は、特定の機能が設定されている「オブジェクト」を誰がまたは何が確認、変更、または削除できるかを正確に定義するロールの観点から考えるのが最も簡単です。RBAC は、ロールをユーザーまたはチームに付与する方法です。"
+
+#: ../../source/security.rst:56
+msgid "There are a few main concepts that you should become familiar with regarding |at|'s RBAC design--roles, resources, and users. Users can be members of a role, which gives them certain access to any resources associated with that role, or any resources associated with \"descendant\" roles."
+msgstr "|at| における RBAC のデザインについては、ロール、リソースおよびユーザーなどの理解しておく必要のあるいくつかの主要な概念があります。ユーザーはロールのメンバーにすることができ、これにより、ロールに関連付けられたリソースや、「子孫」のロールに関連付けられるリソースへの特定のアクセスが付与されます。"
+
+#: ../../source/security.rst:58
+msgid "A role is essentially a collection of capabilities. Users are granted access to these capabilities and the controller's resources through the roles to which they are assigned or through roles inherited through the role hierarchy."
+msgstr "基本的に、ロールは各種機能のコレクションです。ユーザーには、ロールの階層を介して継承されたロールや、割り当てられたロールを使用して、これらのロールの機能やコントローラーのリソースへのアクセス権が付与されます。"
+
+#: ../../source/security.rst:60
+msgid "Roles associate a group of capabilities with a group of users. All capabilities are derived from membership within a role. Users receive capabilities only through the roles to which they are assigned or through roles they inherit through the role hierarchy. All members of a role have all capabilities granted to that role. Within an organization, roles are relatively stable, while users and capabilities are both numerous and may change rapidly. Users can have many roles."
+msgstr "ロールは機能のグループをユーザーのグループに関連付けます。すべての機能はロール内のメンバーシップから派生します。ユーザーには、割り当てられたロールやロールの階層から継承するロール経由でのみ、機能が割り当てられます。ロールの全メンバーは、そのロールに付与されたすべての機能が割り当てられます。組織内でユーザーや機能は数が多く、すぐに変更される可能性がありますが、ロールには比較的安定性があります。ユーザーには、数多くのロールを割り当てることができます。"
+
+#: ../../source/security.rst:64
+msgid "Role Hierarchy and Access Inheritance"
+msgstr "ロールの階層およびアクセスの継承"
+
+#: ../../source/security.rst:66
+msgid "Imagine that you have an organization named \"SomeCompany\" and want to allow two people, \"Josie\" and \"Carter\", access to manage all the settings associated with that organization. You should make both people members of the organization's ``admin_role``."
+msgstr "「SomeCompany」という名前の組織があり、「Josie」と「Carter」という 2 人の人に、その組織に関連付けられたすべての設定を管理できるアクセス権を付与する必要があるとします。これらの人々を組織の ``admin_role`` のメンバーにする必要があります。"
+
+#: ../../source/security.rst:68
+msgid "|user-role-relationship|"
+msgstr "|user-role-relationship|"
+
+#: ../../source/security.rst:72
+msgid "Often, you will have many Roles in a system and you will want some roles to include all of the capabilities of other roles. For example, you may want a System Administrator to have access to everything that an Organization Administrator has access to, who has everything that a Project Administrator has access to, and so on."
+msgstr "システムには多くのロールがありますが、一部のロールに他のロールのすべての機能を組み込む必要があることがよくあります。たとえば、システム管理者に対して、組織管理者がアクセスできるすべてに対するアクセスや、プロジェクト管理者がアクセスできるすべてにアクセスできるようにする必要があるかもしれません。"
+
+#: ../../source/security.rst:74
+msgid "This concept is referred to as the 'Role Hierarchy':"
+msgstr "この概念は「ロールの階層」と呼ばれています。"
+
+#: ../../source/security.rst:76
+msgid "Parent roles get all capabilities bestowed on any child roles"
+msgstr "親ロールは、子ロールに付与するすべての機能を取得します。"
+
+#: ../../source/security.rst:77
+msgid "Members of roles automatically get all capabilities for the role they are a member of, as well as any child roles."
+msgstr "ロールのメンバーは、それらがメンバーであるロールと子ロールのすべての機能を自動的に取得します。"
+
+#: ../../source/security.rst:79
+msgid "The Role Hierarchy is represented by allowing Roles to have \"Parent Roles\". Any capability that a Role has is implicitly granted to any parent roles (or parents of those parents, and so on)."
+msgstr "ロールの階層は、ロールに「親ロール」を持たせることによって表されます。ロールが持つすべての機能は親ロール (またはそれらの親の親など) に暗黙的に付与されます。"
+
+#: ../../source/security.rst:81
+msgid "|rbac-role-hierarchy|"
+msgstr "|rbac-role-hierarchy|"
+
+#: ../../source/security.rst:85
+msgid "Often, you will have many Roles in a system and you will want some roles to include all of the capabilities of other roles. For example, you may want a System Administrator to have access to everything that an Organization Administrator has access to, who has everything that a Project Administrator has access to, and so on. We refer to this concept as the 'Role Hierarchy' and it is represented by allowing Roles to have \"Parent Roles\". Any capability that a Role has is implicitly granted to any parent roles (or parents of those parents, and so on). Of course Roles can have more than one parent, and capabilities are implicitly granted to all parents."
+msgstr "システムには多くのロールがありますが、一部のロールに他のロールのすべての機能を組み込む必要のあることがよくあります。たとえば、システム管理者に対して、組織管理者がアクセスできるすべてに対するアクセスや、プロジェクト管理者がアクセスできるすべてにアクセスできるようにする必要があるかもしれません。この概念は「ロールの階層」と呼ばれており、これはロールに「親ロール」を持たせることによって表されます。ロールが持つすべての機能は親ロール (またはそれらの親の親など) に暗黙的に付与されます。当然のことながら、ロールには複数の親を持たせることができ、機能はすべての親に暗黙的に付与されます。"
+
+#: ../../source/security.rst:87
+msgid "|rbac-heirarchy-morecomplex|"
+msgstr "|rbac-heirarchy-morecomplex|"
+
+#: ../../source/security.rst:91
+msgid "RBAC controls also give you the capability to explicitly permit User and Teams of Users to run playbooks against certain sets of hosts. Users and teams are restricted to just the sets of playbooks and hosts to which they are granted capabilities. And, with |at|, you can create or import as many Users and Teams as you require--create users and teams manually or import them from LDAP or Active Directory."
+msgstr "RBAC の制御により、ユーザーおよびユーザーのチームに対して、特定のホストセットに対して Playbook を実行することを明示的に許可する機能も利用できます。ユーザーおよびチームは、機能が付与された Playbook のセットやホストにのみ制限されます。また |at| では、必要なだけユーザーやチームを作成したり、インポートしたりできます。ユーザーやチームは手動で作成したり、それらを LDAP または Active Directory からインポートしたりできます。"
+
+#: ../../source/security.rst:93
+msgid "RBACs are easiest to think of in terms of who or what can see, change, or delete an \"object\" for which a specific capability is being determined."
+msgstr "RBAC は、特定の機能が設定されている「オブジェクト」の表示、変更、または削除を実行するユーザーまたは機能という点から最も簡単に説明できる機能です。"
+
+#: ../../source/security.rst:96
+msgid "Applying RBAC"
+msgstr "RBAC の適用"
+
+#: ../../source/security.rst:98
+msgid "The following sections cover how to apply |at|'s RBAC system in your environment."
+msgstr "以下のセクションでは、|at| の RBAC システムを環境に適用する方法について説明します。"
+
+#: ../../source/security.rst:102
+msgid "Editing Users"
+msgstr "ユーザーの編集"
+
+#: ../../source/security.rst:104
+msgid "When editing a user, a |at| system administrator may specify the user as being either a *System Administrator* (also referred to as the Superuser) or a *System Auditor*."
+msgstr "ユーザーの編集時に、|at| システム管理者はユーザーを *システム管理者* (スーパーユーザーとも呼ばれる) または *システム監査者* として指定することができます。"
+
+#: ../../source/security.rst:106
+msgid "System administrators implicitly inherit all capabilities for all objects (read/write/execute) within the |at| environment."
+msgstr "システム管理者は、|at| 環境内のすべてのオブジェクトのすべての機能 (読み取り/書き込み/実行) を暗黙的に継承します。"
+
+#: ../../source/security.rst:107
+msgid "System Auditors implicitly inherit the read-only capability for all objects within the |at| environment."
+msgstr "システム監査者は、|at| 環境内のすべてのオブジェクトの読み取り専用機能を暗黙的に継承します。"
+
+#: ../../source/security.rst:110
+msgid "Editing Organizations"
+msgstr "組織の編集"
+
+#: ../../source/security.rst:112
+msgid "When editing an organization, system administrators may specify the following roles:"
+msgstr "組織の編集時に、システム管理者は以下のロールを指定することができます。"
+
+#: ../../source/security.rst:114
+msgid "One or more users as organization administrators"
+msgstr "組織管理者としての 1 ユーザー以上のユーザー"
+
+#: ../../source/security.rst:115
+msgid "One or more users as organization auditors"
+msgstr "組織監査者としての 1 ユーザー以上のユーザー"
+
+#: ../../source/security.rst:116
+msgid "And one or more users (or teams) as organization members"
+msgstr "組織メンバーとしての 1 ユーザー以上のユーザー (またはチーム)"
+
+#: ../../source/security.rst:119
+msgid "Users/teams that are members of an organization can view their organization administrator."
+msgstr "組織のメンバーであるユーザー/チームは組織管理者を表示することができます。"
+
+#: ../../source/security.rst:121
+msgid "Users who are organization administrators implicitly inherit all capabilities for all objects within that |at| organization."
+msgstr "組織管理者であるユーザーは、|at| 組織内のすべてのオブジェクトのすべての機能を暗黙的に継承します。"
+
+#: ../../source/security.rst:123
+msgid "Users who are organization auditors implicitly inherit the read-only capability for all objects within that |at| organization."
+msgstr "組織監査者であるユーザーは、|at| 組織内のすべてのオブジェクトの読み取り専用機能を暗黙的に継承します。"
+
+#: ../../source/security.rst:127
+msgid "Editing Projects in an Organization"
+msgstr "組織でのプロジェクトの編集"
+
+#: ../../source/security.rst:129
+msgid "When editing a project in an organization for which they are the administrator, system administrators and organization administrators may specify:"
+msgstr "管理者となっている組織のプロジェクトの編集時に、組織管理者および組織管理者は以下を指定できます。"
+
+#: ../../source/security.rst:131
+msgid "One or more users/teams that are project administrators"
+msgstr "プロジェクト管理者である 1 以上のユーザー/チーム"
+
+#: ../../source/security.rst:132
+msgid "One or more users/teams that are project members"
+msgstr "プロジェクトメンバーである 1 以上のユーザー/チーム"
+
+#: ../../source/security.rst:133
+msgid "And one or more users/teams that may update the project from SCM, from among the users/teams that are members of that organization."
+msgstr "組織のメンバーであるユーザー/チーム内の、SCM からプロジェクトを更新できる 1 以上のユーザー/チーム。"
+
+#: ../../source/security.rst:135
+msgid "Users who are members of a project can view their project administrators."
+msgstr "プロジェクトのメンバーであるユーザーはプロジェクト管理者を表示できます。"
+
+#: ../../source/security.rst:137
+msgid "Project administrators implicitly inherit the capability to update the project from SCM."
+msgstr "プロジェクト管理者は、SCM からプロジェクトを更新する機能を暗黙的に継承します。"
+
+#: ../../source/security.rst:139
+msgid "Administrators can also specify one or more users/teams (from those that are members of that project) that can use that project in a job template."
+msgstr "管理者は、ジョブテンプレートでプロジェクトを使用できる 1 以上のユーザー/チームを (プロジェクトのメンバーから) 指定することもできます。"
+
+#: ../../source/security.rst:143
+msgid "Creating Inventories and Credentials within an Organization"
+msgstr "組織内でのインベントリーおよび認証情報の作成"
+
+#: ../../source/security.rst:145
+msgid "All access that is granted to use, read, or write credentials is now handled through roles. You no longer set the “team” or “user” for a credential. Instead, you use |at|'s RBAC system to grant ownership, auditor, or usage roles."
+msgstr "認証情報を使用し、読み取り、書き込むために付与されるすべてのアクセス権はロールで処理されます。認証用に「チーム」または「ユーザー」を設定する必要はありません。代わりに、|at| の RBAC システムを使用して、所有権、監査者、用途別のロールなどを割り当てます。"
+
+#: ../../source/security.rst:147
+msgid "System administrators and organization administrators may create inventories and credentials within organizations under their administrative capabilities."
+msgstr "システム管理者および組織管理者は、管理機能に基づいて、組織内にインベントリーや認証情報を作成することができます。"
+
+#: ../../source/security.rst:149
+msgid "Whether editing an inventory or a credential, System administrators and organization administrators may specify one or more users/teams (from those that are members of that organization) to be granted the usage capability for that inventory or credential."
+msgstr "インベントリーまたは認証情報の編集のどちらの場合でも、システム管理者および組織管理者は、インベントリーまたは認証情報の使用機能を付与するために、(組織のメンバーから) 1 以上のユーザー/チームを指定することができます。"
+
+#: ../../source/security.rst:151
+msgid "System administrators and organization administrators may specify one or more users/teams (from those that are members of that organization) that have the capabilities to update (dynamic or manually) an inventory.  Administrators can also execute ad hoc commands for an inventory."
+msgstr "システム管理者および組織管理者は、インベントリーを (動的または手動で) 更新する機能を付与するために、(組織のメンバーから) 1 以上のユーザー/チームを指定することができます。"
+
+#: ../../source/security.rst:155
+msgid "Editing Job Templates"
+msgstr "ジョブテンプレートの編集"
+
+#: ../../source/security.rst:157
+msgid "System administrators, organization administrators, and project administrators, within a project under their administrative capabilities, may create and modify new job templates for that project."
+msgstr "システム管理者、組織管理者およびプロジェクト管理者は、管理機能に基づき、プロジェクト内でプロジェクトの新規ジョブテンプレートを作成したり、変更したりすることができます。"
+
+#: ../../source/security.rst:159
+msgid "When editing a job template, administrators (|at|, organization, and project) can select among the inventory and credentials in the organization for which they have usage capabilities or they may leave those fields blank so that they will be selected at runtime."
+msgstr "ジョブテンプレートの編集時に、管理者 (|at|、組織、およびプロジェクト) は使用機能を持つ組織内のインベントリーおよび認証情報を選択したり、実行時に選択されるようにそれらのフィールドを空白にしたりすることができます。"
+
+#: ../../source/security.rst:161
+msgid "Additionally, they may specify one or more users/teams (from those that are members of that project) that have execution capabilities for that job template. The execution capability is valid regardless of any explicit capabilities the user/team may have been granted against the inventory or credential specified in the job template."
+msgstr "さらに、それらジョブテンプレートの実行機能を持つ 1 つ以上のユーザー/チームを (プロジェクトのメンバーから) 指定することもできます。実行機能は、ジョブテンプレートに指定されるインベントリーまたは認証情報に基づいてユーザー/チームに付与される明示的な機能の有無にかかわらず有効になります。"
+
+#: ../../source/security.rst:164
+msgid "User View"
+msgstr "ユーザービュー"
+
+#: ../../source/security.rst:166
+msgid "A user can:"
+msgstr "ユーザーは以下を実行できます。"
+
+#: ../../source/security.rst:168
+msgid "See any organization or project for which they are a member"
+msgstr "それらのユーザーがメンバーとなっている組織またはプロジェクトの確認"
+
+#: ../../source/security.rst:169
+msgid "Create their own credential objects which only belong to them"
+msgstr "それらのユーザーに属する認証情報オブジェクトの作成"
+
+#: ../../source/security.rst:170
+msgid "See and execute any job template for which they have been granted execution capabilities"
+msgstr "実行機能が付与されたジョブテンプレートの表示および実行"
+
+#: ../../source/security.rst:172
+msgid "If a job template a user has been granted execution capabilities on does not specify an inventory or credential, the user will be prompted at run-time to select among the inventory and credentials in the organization they own or have been granted usage capabilities."
+msgstr "ユーザーに実行権限が与えられているジョブテンプレートにイベントリーまたは認証情報が指定されない場合は、そのユーザーが所有するか、または使用機能が付与されている組織内のインベントリーや認証情報を選択することを求めるプロンプトが実行時に出されます。"
+
+#: ../../source/security.rst:174
+msgid "Users that are job template administrators can make changes to job templates; however, to change to the inventory, project, playbook, or credentials used in the job template, the user must also have the \"Use\" role for the project and inventory currently being used or being set."
+msgstr "ジョブテンプレート管理者のユーザーはジョブテンプレートに変更を加えることができますが、ジョブテンプレートで使用するインベントリー、プロジェクト、Playbook、認証情報を変更するには、使用中または設定中のプロジェクトやインベントリーに対する「使用」ロールも必要になります。"
+
+#: ../../source/security.rst:179
+#: ../../source/security.rst:0
+msgid "Roles"
+msgstr "ロール"
+
+#: ../../source/security.rst:181
+msgid "As stated earlier in this documentation, all access that is granted to use, read, or write credentials is now handled through roles, and  roles are defined for a resource."
+msgstr "本書で前述したように、認証情報を使用し、読み取り、書き込むために付与されるすべてのアクセス権はロールで処理されるようになり、ロールはリソースについて定義されます。"
+
+#: ../../source/security.rst:185
+msgid "Built-in roles"
+msgstr "組み込みロール"
+
+#: ../../source/security.rst:187
+msgid "The following table lists the RBAC system roles and a brief description of the how that role is defined with regard to privileges in |at|."
+msgstr "以下の表では、RBAC システムのロールと、ロールが |at| の権限に関連して定義される方法についての簡単な説明を示しています。"
+
+#: ../../source/security.rst:190
+#: ../../source/security.rst:0
+msgid "System Role"
+msgstr "システムロール"
+
+#: ../../source/security.rst:190
+msgid "What it can do"
+msgstr "実行できる内容"
+
+#: ../../source/security.rst:192
+msgid "System Administrator - System wide singleton"
+msgstr "システム管理者: システム全体のシングルトンロール (単一の管理者)"
+
+#: ../../source/security.rst:192
+msgid "Manages all aspects of the system"
+msgstr "システムのすべての側面を管理します。"
+
+#: ../../source/security.rst:194
+msgid "System Auditor - System wide singleton"
+msgstr "システム監査者: システム全体のシングルトンロール (単一の監査者)"
+
+#: ../../source/security.rst:194
+msgid "Views all aspects of the system"
+msgstr "システムのすべての側面を閲覧できます。"
+
+#: ../../source/security.rst:196
+msgid "Ad Hoc Role - Inventory"
+msgstr "アドホックロール: インベントリー"
+
+#: ../../source/security.rst:196
+msgid "Runs ad hoc commands on an Inventory"
+msgstr "インベントリーでアドホックコマンドを実行します。"
+
+#: ../../source/security.rst:198
+msgid "Admin Role - Organizations, Teams, Inventory, Projects, Job Templates"
+msgstr "管理者ロール: 組織、チーム、インベントリー、プロジェクト、ジョブテンプレート"
+
+#: ../../source/security.rst:198
+msgid "Manages all aspects of a defined Organization, Team, Inventory, Project, or Job Template"
+msgstr "定義された組織、チーム、インベントリー、プロジェクトまたはジョブテンプレートのすべての側面を管理します。"
+
+#: ../../source/security.rst:200
+msgid "Auditor Role - All"
+msgstr "監査者ロール: すべて"
+
+#: ../../source/security.rst:200
+msgid "Views all aspects of a defined Organization, Project, Inventory, or Job Template"
+msgstr "定義された組織、プロジェクト、インベントリー、またはジョブテンプレートのすべての側面を表示します。"
+
+#: ../../source/security.rst:202
+msgid "Execute Role - Job Templates"
+msgstr "実行ロール: ジョブテンプレート"
+
+#: ../../source/security.rst:202
+msgid "Runs assigned Job Template"
+msgstr "割り当てられたジョブテンプレートを実行します。"
+
+#: ../../source/security.rst:204
+msgid "Member Role - Organization, Team"
+msgstr "メンバーロール: 組織、チーム"
+
+#: ../../source/security.rst:204
+msgid "Manages all of the settings associated with that Organization or Team"
+msgstr "その組織またはチームに関連付けられたすべての設定を管理します。"
+
+#: ../../source/security.rst:206
+msgid "Read Role - Organizations, Teams, Inventory, Projects, Job Templates"
+msgstr "読み取りロール: 組織、チーム、インベントリー、プロジェクト、ジョブテンプレート"
+
+#: ../../source/security.rst:206
+msgid "Views all aspects of a defined Organization, Team, Inventory, Project, or Job Template"
+msgstr "定義された組織、チーム、インベントリー、プロジェクトまたはジョブテンプレートのすべての側面を閲覧できます。"
+
+#: ../../source/security.rst:208
+msgid "Update Role - Project"
+msgstr "更新ロール: プロジェクト"
+
+#: ../../source/security.rst:208
+msgid "Updates the Project from the configured source control management system"
+msgstr "設定されたソースコントロール管理システムからプロジェクトを更新します。"
+
+#: ../../source/security.rst:210
+msgid "Update Role - Inventory"
+msgstr "更新ロール: インベントリー"
+
+#: ../../source/security.rst:210
+msgid "Updates the Inventory using the cloud source update system"
+msgstr "クラウドソース更新システムを使用してインベントリーを更新します。"
+
+#: ../../source/security.rst:212
+msgid "Owner Role - Credential"
+msgstr "所有者ロール: 認証情報"
+
+#: ../../source/security.rst:212
+msgid "Owns and manages all aspects of this Credential"
+msgstr "この認証情報のすべての側面を所有し、管理します。"
+
+#: ../../source/security.rst:214
+msgid "Use Role - Credential, Inventory, Project"
+msgstr "ユーザーロール: 認証情報、インベントリー、プロジェクト"
+
+#: ../../source/security.rst:214
+msgid "Uses the Credential, Inventory, or Project in a Job Template"
+msgstr "認証情報、インベントリー、またはプロジェクトをジョブテンプレートで使用します。"
+
+#: ../../source/security.rst:218
+msgid "A Singleton Role is a special role that grants system-wide permissions. |at| currently provides two built-in Singleton Roles but the ability to create or customize a Singleton Role is not supported at this time."
+msgstr "単一のロールは、システム全体でパーミッションを付与する特殊なロールです。現在、|at| は 2 つの組み込みシングルトンロール (単一ロール)を提供していますが、シングルトンロール (単一ロール) の作成またはカスタマイズ機能は現時点ではサポートされません。"
+
+#: ../../source/security.rst:221
+msgid "Common Team Roles - \"Personas\""
+msgstr "一般的なチームロール: \"役割\""
+
+#: ../../source/security.rst:223
+msgid "|At| support personnel typically works on ensuring that the controller is available and manages it a way to balance supportability and ease-of-use for users. Often, |at| support will assign “Organization Owner/Admin” to users in order to allow them to create a new Organization and add members from their team the respective access needed. This minimizes supporting individuals and focuses more on maintaining uptime of the service and assisting users who are using |at|."
+msgstr "|At| サポート担当者は、通常、コントローラーが利用でき、サポートの容易性とユーザーの使いやすさのバランスが取れるような管理を選択します。しばしば、|at| サポートは、ユーザーに「組織所有者/管理者」を割り当てて、新しい組織を作成し、チームのメンバーに必要なアクセスを追加します。これにより、個々の対応を最低限に抑え、代わりにサービスのアップタイムを維持し、|at| を使用するユーザーを支援することに時間をかけられます。"
+
+#: ../../source/security.rst:225
+msgid "Below are some common roles managed by the |at| Organization:"
+msgstr "以下は、|at| の組織が管理する一般的なロールの一部です。"
+
+#: ../../source/security.rst:0
+msgid "(for Organizations)"
+msgstr "(組織用)"
+
+#: ../../source/security.rst:0
+msgid "Common User"
+msgstr "一般ユーザー"
+
+#: ../../source/security.rst:0
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/security.rst:0
+msgid "Owner"
+msgstr "所有者"
+
+#: ../../source/security.rst:0
+msgid "Team Lead -"
+msgstr "チームリード -"
+
+#: ../../source/security.rst:0
+msgid "Technical Lead"
+msgstr "技術リード"
+
+#: ../../source/security.rst:0
+msgid "This user has the ability to control access for other users in their organization."
+msgstr "このユーザーは、組織内の他のユーザーのアクセスを制御できます。"
+
+#: ../../source/security.rst:0
+msgid "They can add/remove and grant users specific access to projects, inventories, and job templates."
+msgstr "プロジェクト、インベントリー、ジョブテンプレートに、ユーザー固有のアクセスを追加、削除、付与できます。"
+
+#: ../../source/security.rst:0
+msgid "This user also has the ability to create/remove/modify any aspect of an organization’s projects,"
+msgstr "このユーザーは、組織のプロジェクト、テンプレート、インベントリー、チーム、認証情報を"
+
+#: ../../source/security.rst:0
+msgid "templates, inventories, teams, and credentials."
+msgstr "作成、削除、変更できます。"
+
+#: ../../source/security.rst:0
+msgid "Auditor"
+msgstr "監査者"
+
+#: ../../source/security.rst:0
+msgid "Security Engineer -"
+msgstr "セキュリティーエンジニア -"
+
+#: ../../source/security.rst:0
+msgid "Project Manager"
+msgstr "プロジェクトマネージャー"
+
+#: ../../source/security.rst:0
+msgid "This account can view all aspects of the organization in read-only mode."
+msgstr "このアカウントは、組織のすべての側面を読み取り専用モードで表示できます。"
+
+#: ../../source/security.rst:0
+msgid "This may be good for a user who checks in and maintains compliance."
+msgstr "これは、コンプライアンスを確認し、維持するユーザーに割り当てるのが良いでしょう。"
+
+#: ../../source/security.rst:0
+msgid "This might also be a good role for a service account who manages or"
+msgstr "さらには、ジョブデーターを管理し、"
+
+#: ../../source/security.rst:0
+msgid "ships job data from |at| to some other data collector."
+msgstr "|at| から別のデータコレクターへ送るサービスアカウントのロールとしても良いでしょう。"
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Member -"
+msgstr "メンバー:"
+
+#: ../../source/security.rst:0
+msgid "Team"
+msgstr "チーム"
+
+#: ../../source/security.rst:0
+msgid "All other users"
+msgstr "その他のすべてのユーザー"
+
+#: ../../source/security.rst:0
+msgid "These users by default as an organization member do not receive any access to any aspect"
+msgstr "デフォルトで組織のメンバーとなるこれらのユーザーは、"
+
+#: ../../source/security.rst:0
+msgid "of the organization. In order to grant them access the respective organization owner needs"
+msgstr "組織の側面へのアクセスを受け取りません。アクセスを付与するには、"
+
+#: ../../source/security.rst:0
+msgid "to add them to their respective team and grant them Admin, Execute, Use, Update, Ad-hoc"
+msgstr "組織の各所有者が、各チームにユーザーを追加し、組織のプロジェクト、インベントリー、ジョブテンプレートの各コンポーネントへの"
+
+#: ../../source/security.rst:0
+msgid "permissions to each component of the organization’s projects, inventories, and job templates."
+msgstr "Admin、Execute、Use、Update、Ad-hoc パーミッションを付与します。"
+
+#: ../../source/security.rst:0
+msgid "Team “Owner”"
+msgstr "チーム “所有者”"
+
+#: ../../source/security.rst:0
+msgid "Power users -"
+msgstr "パワーユーザー -"
+
+#: ../../source/security.rst:0
+msgid "Lead Developer"
+msgstr "主な開発者"
+
+#: ../../source/security.rst:0
+msgid "Organization Owners can provide “admin” through the team interface, over any component"
+msgstr "組織の所有者は、プロジェクト、インベントリー、ジョブテンプレートなどの"
+
+#: ../../source/security.rst:0
+msgid "of their organization including projects, inventories, and job templates. These users are able"
+msgstr "組織のコンポーネントにあるチームインターフェースを介して “admin” を提供します。"
+
+#: ../../source/security.rst:0
+msgid "to modify and utilize the respective component given access."
+msgstr "このユーザーは、各コンポーネントが指定したアクセスを修正して使用できます。"
+
+#: ../../source/security.rst:0
+msgid "Team “Execute”"
+msgstr "チーム “管理者”"
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Developers -"
+msgstr "開発者 -"
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Engineers"
+msgstr "エンジニア"
+
+#: ../../source/security.rst:0
+msgid "This will be the most common and allows the organization member the ability to execute"
+msgstr "これは最も一般的で、組織のメンバーが、ジョブテンプレートを実行し、特定のコンポーネントへのパーミッションを読み込むことができます。"
+
+#: ../../source/security.rst:0
+msgid "job templates and read permission to the specific components. This is permission applies to templates."
+msgstr "これは、テンプレートに適用されるパーミッションです。"
+
+#: ../../source/security.rst:0
+msgid "Team “Use”"
+msgstr "チーム “使用”"
+
+#: ../../source/security.rst:0
+msgid "This permission applies to an organization’s credentials, inventories, and projects."
+msgstr "このパーミッションは、組織の信用情報、インベントリー、プロジェクトに適用されます。"
+
+#: ../../source/security.rst:0
+msgid "This permission allows the ability for a user to the respective component within their job template."
+msgstr "このパーミッションにより、ユーザーは、ジョブテンプレート内の各コンポーネントへの機能が許可されます。"
+
+#: ../../source/security.rst:0
+msgid "Team “Update”"
+msgstr "チーム “更新”"
+
+#: ../../source/security.rst:0
+msgid "This permission applies to projects. Allows the user to be able to run an SCM update on a project."
+msgstr "このパーミッションをプロジェクトに適用します。ユーザーが、プロジェクトで SCM の更新を実行できるようにします。"
+
+#: ../../source/security.rst:262
+msgid "Function of roles: editing and creating"
+msgstr "ロールの機能: 編集および作成"
+
+#: ../../source/security.rst:264
+msgid "A new organization “resource roles” functionality was introduced in |at| 3.3 that are specific to a certain resource type - such as workflows. Being a member of such a role usually provides two types of permissions, in the case of workflows, where a user is given a \"workflow admin role\" for the organization \"Default\":"
+msgstr "|at| 3.3 では、ワークフローなど、特定のリソースタイプに固有の、組織の “リソースロール” 機能が新たに 導入されました。このようなロールのメンバーになると、2 種類のパーミッションが通常割り当てられます。ワークフローの場合には、ユーザーは、組織 \"Default\" の \"ワークフロー管理者ロール\" が割り当てられます。"
+
+#: ../../source/security.rst:266
+msgid "this user can create new workflows in the organization \"Default\""
+msgstr "このユーザーは、組織 \"Default\" に新しいワークフローを作成できます。"
+
+#: ../../source/security.rst:267
+msgid "user can edit all workflows in the \"Default\" organization"
+msgstr "ユーザーは \"Default\" 組織の全ワークフローを編集できます。"
+
+#: ../../source/security.rst:269
+msgid "One exception is job templates, where having the role is irrelevant of creation permission (more details on its own section)."
+msgstr "例外は、ジョブテンプレートで、このロールがあっても、作成パーミッションが割り当てられるわけではありません (詳細は専用のセクションに記載)。"
+
+#: ../../source/security.rst:272
+msgid "Independence of resource roles and organization membership roles"
+msgstr "リソースロールおよび組織のメンバーシップロールの独立性"
+
+#: ../../source/security.rst:274
+msgid "Resource-specific organization roles are independent of the organization roles of admin and member. Having the \"workflow admin role\" for the \"Default\" organization will not allow a user to view all users in the organization, but having a \"member\" role in the \"Default\" organization will. The two types of roles are delegated independently of each other."
+msgstr "リソース固有の組織ロールは、管理者やメンバーの組織ロールからは独立しています。\"Default\" 組織の \"workflow admin role\" が割り当てられていても、対象組織の全ユーザーを表示できませんが、\"Default\" 組織の \"member\" ロールが割り当てられている場合には、表示可能です。この 2 種類のロールは、それぞれ個別に委譲されます。"
+
+#: ../../source/security.rst:278
+msgid "Necessary permissions to edit job templates"
+msgstr "ジョブテンプレートの編集に必要なパーミッション"
+
+#: ../../source/security.rst:280
+msgid "Users can edit fields not impacting job runs (non-sensitive fields) with a Job Template admin role alone. However, to edit fields that impact job runs in a job template, a user needs the following:"
+msgstr "ジョブテンプレートの管理者ロールだけが割り当てられているユーザーは、ジョブ実行に影響がないフィールド (機密フィールドではない) の編集は可能ですが、ジョブテンプレートのジョブ実行に影響があるフィールドを編集するには、ユーザーには以下のロールが必要です。"
+
+#: ../../source/security.rst:282
+msgid "**admin** role to the job template"
+msgstr "ジョブテンプレートに対する **管理者** ロール"
+
+#: ../../source/security.rst:283
+msgid "**use** role to related project"
+msgstr "関連のプロジェクトに対する **使用** ロール"
+
+#: ../../source/security.rst:284
+msgid "**use** role to related inventory"
+msgstr "関連のインベントリーに対する **使用** ロール"
+
+#: ../../source/security.rst:286
+msgid "An \"organization job template admin\" role was introduced, but having this role isn't sufficient by itself to edit a job template within the organization if the user does not have use role to the project / inventory a job template uses."
+msgstr "\"組織のジョブテンプレート管理者\" ロールが導入されましたが、ジョブテンプレートが使用するプロジェクト/インベントリーへの使用ロールがない場合に、このロールだけでは、組織内のジョブテンプレートを編集できません。"
+
+#: ../../source/security.rst:288
+msgid "In order to delegate *full* job template control (within an organization) to a user or team, you will need grant the team or user all 3 organization-level roles:"
+msgstr "ユーザーまたはチームに対する (組織内の) ジョブテンプレートの管理を *完全に* 委譲するには、チームまたはユーザーに組織レベルのロールを 3 つ付与する必要があります。"
+
+#: ../../source/security.rst:290
+msgid "job template admin"
+msgstr "ジョブテンプレートの管理者"
+
+#: ../../source/security.rst:291
+msgid "project admin"
+msgstr "プロジェクトの管理者"
+
+#: ../../source/security.rst:292
+msgid "inventory admin"
+msgstr "インベントリーの管理者"
+
+#: ../../source/security.rst:294
+msgid "This will ensure that the user (or all users who are members of the team with these roles) have full access to modify job templates in the organization. If a job template uses an inventory or project from another organization, the user with these organization roles may still not have permission to modify that job template. For clarity of managing permissions, it is best-practice to not mix projects / inventories from different organizations."
+msgstr "これにより、ユーザー (またはこれらのロールが割り当てられたチームに所属する全ユーザー) が組織内のジョブテンプレートを変更する全権限が割り当てられるようになります。ジョブテンプレートが別の組織からのインベントリーやプロジェクトを使用する場合には、これらの別の組織ロールを持つユーザーは、このジョブテンプレートを変更する権限がない可能性があります。パーミッションの管理を明確化するには、ベストプラクティスとして、異なる組織のプロジェクト/インベントリーを混同させないようにしてください。"
+
+#: ../../source/security.rst:297
+msgid "RBAC permissions"
+msgstr "RBAC パーミッション"
+
+#: ../../source/security.rst:299
+msgid "Each role should have a content object, for instance, the org admin role has a content object of the org. To delegate a role, you need admin permission to the content object, with some exceptions that would result in you being able to reset a user's password."
+msgstr "組織管理者ロールに組織のコンテンツオブジェクトを含めるなど、ロールごとに、コンテンツオブジェクトを含める必要があります。ロールを委譲するには、コンテンツオブジェクトへの管理者パーミッションが必要です (ユーザーのパスワードをリセットできてしまうパーミッションは例外)。"
+
+#: ../../source/security.rst:301
+msgid "**Parent** is the organization."
+msgstr "**親** は組織です。"
+
+#: ../../source/security.rst:303
+msgid "**Allow** is what this new permission will explicitly allow."
+msgstr "**許可** は新規パーミッションで明示的に許可される内容です。"
+
+#: ../../source/security.rst:305
+msgid "**Scope** is the parent resource that this new role will be created on. Example: ``Organization.project_create_role``."
+msgstr "**範囲** は新規ロールの作成先の親リソースです。例: ``Organization.project_create_role``"
+
+#: ../../source/security.rst:307
+msgid "An assumption is being made that the creator of the resource should be given the admin role for that resource. If there are any instances where resource creation does not also imply resource administration, they will be explicitly called out."
+msgstr "前提として、リソースの作成者には対象リソースの管理者ロールを指定する必要があります。リソースを作成するとことで暗黙的にリソースの管理者が割り当てられない場合には、明示的に呼び出します。"
+
+#: ../../source/security.rst:309
+msgid "Here are the rules associated with each admin type:"
+msgstr "各管理者タイプに付随するルールを以下に示します。"
+
+#: ../../source/security.rst:311
+msgid "**Project Admin**"
+msgstr "**プロジェクト管理者**"
+
+#: ../../source/security.rst:313
+msgid "Allow: Create, read, update, delete any project"
+msgstr "許可: プロジェクトの作成、読み取り、更新、削除"
+
+#: ../../source/security.rst:314
+#: ../../source/security.rst:321
+#: ../../source/security.rst:332
+#: ../../source/security.rst:339
+#: ../../source/security.rst:345
+#: ../../source/security.rst:351
+msgid "Scope: Organization"
+msgstr "範囲: 組織"
+
+#: ../../source/security.rst:315
+msgid "User Interface: *Project Add Screen - Organizations*"
+msgstr "ユーザーインターフェース: *プロジェクト追加画面 - 組織*"
+
+#: ../../source/security.rst:317
+msgid "**Inventory Admin**"
+msgstr "**インベントリー管理者**"
+
+#: ../../source/security.rst:319
+#: ../../source/security.rst:330
+#: ../../source/security.rst:337
+#: ../../source/security.rst:343
+#: ../../source/security.rst:349
+msgid "Parent: Org admin"
+msgstr "親: 組織管理者"
+
+#: ../../source/security.rst:320
+msgid "Allow: Create, read, update, delete any inventory"
+msgstr "許可: インベントリーの作成、読み取り、更新、削除"
+
+#: ../../source/security.rst:322
+msgid "User Interface: *Inventory Add Screen - Organizations*"
+msgstr "ユーザーインターフェース: *インベントリー追加画面 - 組織*"
+
+#: ../../source/security.rst:326
+msgid "As it is with the **Use** role, if you give a user Project Admin and Inventory Admin, it allows them to create Job Templates (not workflows) for your organization."
+msgstr "**使用** ロールが割り当てられているので、ユーザーにプロジェクト管理者およびインベントリー管理者が割り当てられている場合には、組織に対するジョブテンプレート (ワークフローではなく) を作成できます。"
+
+#: ../../source/security.rst:328
+msgid "**Credential Admin**"
+msgstr "**認証情報管理者**"
+
+#: ../../source/security.rst:331
+msgid "Allow: Create, read, update, delete shared credentials"
+msgstr "許可: 共有されている認証情報の作成、読み取り、更新、削除"
+
+#: ../../source/security.rst:333
+msgid "User Interface: *Credential Add Screen - Organizations*"
+msgstr "ユーザーインターフェース: *認証情報追加の画面 - 組織*"
+
+#: ../../source/security.rst:335
+msgid "**Notification Admin**"
+msgstr "**通知管理者**"
+
+#: ../../source/security.rst:338
+msgid "Allow: Assignment of notifications"
+msgstr "許可: 通知の割り当て"
+
+#: ../../source/security.rst:341
+msgid "**Workflow Admin**"
+msgstr "**ワークフロー管理者**"
+
+#: ../../source/security.rst:344
+msgid "Allow: Create a workflow"
+msgstr "許可: ワークフローの作成"
+
+#: ../../source/security.rst:347
+msgid "**Org Execute**"
+msgstr "**組織実行**"
+
+#: ../../source/security.rst:350
+msgid "Allow: Executing JTs and WFJTs"
+msgstr "許可: JT および WFJT の実行"
+
+#: ../../source/security.rst:354
+msgid "The following is a sample scenario showing an organization with its roles and which resource(s) each have access to:"
+msgstr "以下は、組織とそのロール、それぞれがアクセスできるリソースを示すシナリオ例です。"
+

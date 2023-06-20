@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/glossary.rst:2
+msgid "Glossary"
+msgstr "术语表"
+
+#: ../../source/glossary.rst:8
+msgid "Ad Hoc"
+msgstr "临时（Ad Hoc）"
+
+#: ../../source/glossary.rst:10
+msgid "Refers to running Ansible to perform some quick command, using /usr/bin/ansible, rather than the orchestration language, which is /usr/bin/ansible-playbook. An example of an ad hoc command might be rebooting 50 machines in your infrastructure. Anything you can do ad hoc can be accomplished by writing a Playbook, and Playbooks can also glue lots of other operations together."
+msgstr "运行 Ansible 来执行一些快速命令，它使用 /usr/bin/ansible，而不是编配语言 /usr/bin/ansible-playbook。例如，可以使用临时命令在您的基础架构中重新引导 50 台机器。通过临时命令实现的工作均可通过编写 Playbook 来完成，而且 Playbook 还可以将许多其他操作粘接在一起。"
+
+#: ../../source/glossary.rst:11
+msgid "Callback Plugin"
+msgstr "回调插件（Callback Plugin）"
+
+#: ../../source/glossary.rst:13
+msgid "Refers to some user-written code that can intercept results from Ansible and do something with them. Some supplied examples in the GitHub project perform custom logging, send email, or even play sound effects."
+msgstr "用户编写的代码，这些代码可以从 Ansible 截取结果，并使用它们。GitHub 项目中提供的一些示例，如执行自定义日志记录、发送电子邮件，甚至播放音效。"
+
+#: ../../source/glossary.rst:14
+msgid "Control Groups"
+msgstr "控制组"
+
+#: ../../source/glossary.rst:16
+msgid "Also known as '*cgroups*', a control group is a feature in the Linux kernel that allows resources to be grouped and allocated to run certain processes. In addition to assigning resources to processes, cgroups can also report actual resource usage by all processes running inside of the cgroup."
+msgstr "也称为 '*cgroups*'，控制组是 Linux 内核中的功能，允许分组和分配资源以运行某些进程。除了为进程分配资源外，cgroups 还能报告在 cgroup 中运行的所有进程的实际资源使用情况。"
+
+#: ../../source/glossary.rst:17
+msgid "Check Mode"
+msgstr "检查模式"
+
+#: ../../source/glossary.rst:19
+msgid "Refers to running Ansible with the ``--check`` option, which does not make any changes on the remote systems, but only outputs the changes that might occur if the command ran without this flag. This is analogous to so-called “dry run” modes in other systems, though the user should be warned that this does not take into account unexpected command failures or cascade effects (which is true of similar modes in other systems). Use this to get an idea of what might happen, but it is not a substitute for a good staging environment."
+msgstr "使用 ``--check`` 选项运行 Ansible。该选项不会对远程系统进行任何更改，只输出当命令不带此标志运行时可能发生的更改。这与其他系统中的所谓“干运行（dry run）”模式类似。用户应该注意，此模式不考虑意外的命令失败或级联效应（这与其他系统中的类似模式一样）。使用该模式可以了解可能发生的情况，但不能代替临时（stage）环境。"
+
+#: ../../source/glossary.rst:20
+msgid "Container Groups"
+msgstr "容器组"
+
+#: ../../source/glossary.rst:22
+msgid "Container Groups are a type of Instance Group that specify a configuration for provisioning a pod in a Kubernetes or OpenShift cluster where a job is run. These pods are provisioned on-demand and exist only for the duration of the playbook run."
+msgstr "容器组是实例组的一种类型，用于指定在运行任务的 Kubernetes 或 OpenShift 集群中置备 pod 的配置。这些 pod 是按需置备的，仅存在于 playbook 运行期间。"
+
+#: ../../source/glossary.rst:23
+msgid "Credentials"
+msgstr "凭证"
+
+#: ../../source/glossary.rst:25
+msgid "Authentication details that may be utilized by the controller to launch jobs against machines, to synchronize with inventory sources, and to import project content from a version control system."
+msgstr "身份验证详情，控制器使用它来针对机器启动任务、与清单源同步以及从版本控制系统中导入项目内容。"
+
+#: ../../source/glossary.rst:26
+msgid "Credential Plugin"
+msgstr "凭证插件"
+
+#: ../../source/glossary.rst:28
+msgid "Python code that contains definitions for an external credential type, its metadata fields, and the code needed for interacting with a secret management system."
+msgstr "Python 代码，包含外部凭证类型、其元数据字段以及与 secret 管理系统交互所需代码的定义。"
+
+#: ../../source/glossary.rst:29
+msgid "Distributed Job"
+msgstr "分布式作业"
+
+#: ../../source/glossary.rst:31
+msgid "A job that consists of a job template, an inventory, and slice size. When executed, a distributed job slices each inventory into a number of “slice size” chunks, which are then used to run smaller job slices."
+msgstr "由作业模板、清单和分片大小组成的作业（job）。当执行分布式作业时，该作业会将每个清单划分为多个“分片大小（slice size）”的区块，然后用于运行较小的作业分片。"
+
+#: ../../source/glossary.rst:32
+msgid "External Credential Type"
+msgstr "外部凭证类型"
+
+#: ../../source/glossary.rst:34
+msgid "A managed credential type for |at| used for authenticating with a secret management system."
+msgstr "|at| 的受管凭证类型，用于使用 secret 管理系统进行身份验证。"
+
+#: ../../source/glossary.rst:35
+msgid "Facts"
+msgstr "事实"
+
+#: ../../source/glossary.rst:37
+msgid "Facts are simply things that are discovered about remote nodes. While they can be used in playbooks and templates just like variables, facts are things that are inferred, rather than set. Facts are automatically discovered when running plays by executing the internal setup module on the remote nodes. You never have to call the setup module explicitly, it just runs, but it can be disabled to save time if it is not needed. For the convenience of users who are switching from other configuration management systems, the fact module also pulls in facts from the ‘ohai’ and ‘facter’ tools if they are installed, which are fact libraries from Chef and Puppet, respectively."
+msgstr "“事实（fact）”是发现的有关远程节点的情况。虽然可以在 playbook 和模板中像使用变量一样使用它们，但事实是推断的情况，而不是设置的情况。当通过在远程节点上执行内部设置模块来运行 play 时，会自动发现事实。您不必显式调用设置模块，它会运行，但是如果不需要该模块，也可以将其禁用以节省时间。为了方便从其他配置管理系统切换过来的用户，事实模块还从 ‘ohai’ 和 ‘facter’ 工具（如果已安装）拉取 (pull) 事实，这两种工具分别是来自 Chef 和 Puppet 的事实库。"
+
+#: ../../source/glossary.rst:38
+msgid "Forks"
+msgstr "Forks"
+
+#: ../../source/glossary.rst:40
+msgid "Ansible and |at| talk to remote nodes in parallel and the level of parallelism can be set serveral ways--during the creation or editing of a Job Template, by passing ``--forks``, or by editing the default in a configuration file. The default is a very conservative 5 forks, though if you have a lot of RAM, you can easily set this to a value like 50 for increased parallelism."
+msgstr "Ansible 和 |at| 以并行方式与远程节点对话，并可以多种方式设置并行级别：在创建或编辑任务模板时，通过传递 ``--forks``，或通过编辑配置文件中的默认值。默认值是非常保守的 5 个 fork，但是如果您有大量的 RAM，您可以轻松地将它设置为类似 50 的值来增加并行性。"
+
+#: ../../source/glossary.rst:41
+msgid "Group"
+msgstr "组"
+
+#: ../../source/glossary.rst:43
+msgid "A set of hosts in Ansible that can be addressed as a set, of which many may exist within a single Inventory."
+msgstr "Ansible 中的一组主机，其中多个主机可能存在于单个清单中。"
+
+#: ../../source/glossary.rst:44
+msgid "Group Vars"
+msgstr "组变量"
+
+#: ../../source/glossary.rst:46
+msgid "The ``group_vars/`` files are files that live in a directory alongside an inventory file, with an optional filename named after each group. This is a convenient place to put variables that will be provided to a given group, especially complex data structures, so that these variables do not have to be embedded in the inventory file or playbook."
+msgstr "``group_vars/`` 文件是与清单文件共存在目录中的文件，具有以每个组命名的可选文件名。这是放置为给定组提供的变量（特别是复杂的数据结构）的便利位置，因此这些变量不必嵌入到清单文件或 playbook 中。"
+
+#: ../../source/glossary.rst:47
+msgid "Handlers"
+msgstr "处理程序（handler）"
+
+#: ../../source/glossary.rst:49
+msgid "Handlers are just like regular tasks in an Ansible playbook (see Tasks), but are only run if the Task contains a “notify” directive and also indicates that it changed something. For example, if a config file is changed then the task referencing the config file templating operation may notify a service restart handler. This means services can be bounced only if they need to be restarted. Handlers can be used for things other than service restarts, but service restarts are the most common usage."
+msgstr "处理程序与 Ansible playbook 中的常规任务类似（请参阅“任务”），但只有在任务包含一个“notify”指令且表明该指令做出更改时才运行。例如，如果更改了配置文件，则引用配置文件模板操作的任务可能会通知服务重启处理程序。这意味着只有在需要重启服务时，服务才可以退回。处理程序可以用于服务重启以外的其他事务，但服务重启最为常见。"
+
+#: ../../source/glossary.rst:50
+msgid "Host"
+msgstr "主机"
+
+#: ../../source/glossary.rst:52
+msgid "A system managed by |at|, which may include a physical, virtual, cloud-based server, or other device. Typically an operating system instance. Hosts are contained in Inventory. Sometimes referred to as a \"node\"."
+msgstr "|at| 管理的系统。可能包含物理、虚拟、基于云的服务器或其他设备。操作系统实例就是一个典型的主机。主机包含在清单中，有时称为“节点（node）”。"
+
+#: ../../source/glossary.rst:53
+msgid "Host Specifier"
+msgstr "主机指定符"
+
+#: ../../source/glossary.rst:55
+msgid "Each Play in Ansible maps a series of tasks (which define the role, purpose, or orders of a system) to a set of systems. This “hosts:” directive in each play is often called the hosts specifier. It may select one system, many systems, one or more groups, or even some hosts that are in one group and explicitly not in another."
+msgstr "Ansible 中的每个 Play 会将一系列任务（定义系统的角色、目的或顺序）映射到一组系统。每个 play 中的这个“hosts:”指令通常称为主机指定符。它可以选择一个系统、多个系统、一个或多个组，甚至在一个组中且不在另一组中的一些主机。"
+
+#: ../../source/glossary.rst:56
+msgid "Instance Group"
+msgstr "实例组"
+
+#: ../../source/glossary.rst:58
+msgid "A group that contains instances for use in a clustered environment. An instance group provides the ability to group instances based on policy."
+msgstr "在集群环境中使用的实例的组。实例组提供根据策略对实例进行分组的能力。"
+
+#: ../../source/glossary.rst:59
+msgid "Inventory"
+msgstr "清单（inventory）"
+
+#: ../../source/glossary.rst:61
+msgid "A collection of hosts against which Jobs may be launched."
+msgstr "可对其启动任务的主机集合。"
+
+#: ../../source/glossary.rst:62
+msgid "Inventory Script"
+msgstr "清单脚本"
+
+#: ../../source/glossary.rst:64
+msgid "A very simple program (or a complicated one) that looks up hosts, group membership for hosts, and variable information from an external resource--whether that be a SQL database, a CMDB solution, or something like LDAP. This concept was adapted from Puppet (where it is called an “External Nodes Classifier”) and works more or less exactly the same way."
+msgstr "一个非常简单的程序（或复杂的程序），它查找主机、主机的组成员资格以及外部资源（SQL 数据库、CMDB 解决方案或者类似 LDAP 的协议）的变量信息 。这个概念来源于 Puppet（被称为“外部节点分类器”），工作方式差类似。"
+
+#: ../../source/glossary.rst:65
+msgid "Inventory Source"
+msgstr "清单源"
+
+#: ../../source/glossary.rst:67
+msgid "Information about a cloud or other script that should be merged into the current inventory group, resulting in the automatic population of Groups, Hosts, and variables about those groups and hosts."
+msgstr "有关应当合并到当前清单组中的云或其它脚本的信息，从而可自动填充组、主机以及有关这些组和主机的变量。"
+
+#: ../../source/glossary.rst:68
+msgid "Job"
+msgstr "作业（job）"
+
+#: ../../source/glossary.rst:70
+msgid "One of many background tasks launched by the controller, this is usually the instantiation of a Job Template; the launch of an Ansible playbook. Other types of jobs include inventory imports, project synchronizations from source control, or administrative cleanup actions."
+msgstr "控制器启动的许多后台任务之一，它通常是实例化作业模板来启动 Ansible playbook。其他类型的作业包括清单导入、使用源控制对项目进行同步或管理清理操作。"
+
+#: ../../source/glossary.rst:71
+msgid "Job Detail"
+msgstr "作业详情"
+
+#: ../../source/glossary.rst:73
+msgid "The history of running a particular job, including its output and success/failure status."
+msgstr "运行特定作业的历史记录，包括其输出和成功/失败状态。"
+
+#: ../../source/glossary.rst:74
+msgid "Job Slice"
+msgstr "作业分片"
+
+#: ../../source/glossary.rst:76
+#: ../../source/glossary.rst:145
+msgid "See :term:`Distributed Job`."
+msgstr "请查看 :term:`Distributed Job`。"
+
+#: ../../source/glossary.rst:77
+msgid "Job Template"
+msgstr "任务模板"
+
+#: ../../source/glossary.rst:79
+msgid "The combination of an Ansible playbook and the set of parameters required to launch it."
+msgstr "Ansible playbook 以及启动它所需的一组参数的组合。"
+
+#: ../../source/glossary.rst:80
+msgid "JSON"
+msgstr "JSON"
+
+#: ../../source/glossary.rst:82
+msgid "Ansible and |at| use JSON for return data from remote modules. This allows modules to be written in any language, not just Python."
+msgstr "|at| 和 Tower 使用 JSON 从远程模块返回数据。这允许使用任何语言编写的模块，而不只是 Python 编写的模块。"
+
+#: ../../source/glossary.rst:83
+msgid "Mesh"
+msgstr "Mesh（网格）"
+
+#: ../../source/glossary.rst:85
+msgid "Describes a network comprising of nodes. Communication between nodes is established at the transport layer by protocols such as TCP, UDP or Unix sockets. See also, :term:`node`."
+msgstr "描述由节点组成的网络。节点之间的通信通过 TCP、UDP 或 Unix 套接字等协议在传输层建立。请参阅 :term:`node`。"
+
+#: ../../source/glossary.rst:86
+msgid "Metadata"
+msgstr "元数据"
+
+#: ../../source/glossary.rst:88
+msgid "Information for locating a secret in the external system once authenticated. The uses provides this information when linking an external credential to a target credential field."
+msgstr "身份验证后，用于在外部系统中查找 secret 的信息。用户在将外部凭证链接到目标凭证字段时提供该信息。"
+
+#: ../../source/glossary.rst:89
+msgid "Node"
+msgstr "节点"
+
+#: ../../source/glossary.rst:91
+msgid "A node corresponds to entries in the instance database model, or the ``/api/v2/instances/`` endpoint, and is a machine participating in the cluster / mesh. The unified jobs API reports ``controller_node`` and ``execution_node`` fields. The execution node is where the job runs, and the controller node interfaces between the job and server functions."
+msgstr "节点与实例数据库模型或 ``/api/v2/instances/`` 端点中的条目对应，是一个机器参与集群/网格。统一作业 API 报告 ``controller_node`` 和 ``execution_node`` 字段。执行节点是作业运行的位置，以及作业和服务器功能之间的控制器节点接口。"
+
+#: ../../source/glossary.rst:94
+msgid "Node Type"
+msgstr "节点类型"
+
+#: ../../source/glossary.rst:94
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/glossary.rst:96
+msgid "Control"
+msgstr "Control（控制）"
+
+#: ../../source/glossary.rst:96
+msgid "Nodes that run persistent |aap| services, and delegate jobs to hybrid and execution nodes"
+msgstr "用于运行具有持久性的 |aap| 服务，并将作业委托给混合节点和执行节点"
+
+#: ../../source/glossary.rst:98
+msgid "Hybrid"
+msgstr "Hybrid（混合）"
+
+#: ../../source/glossary.rst:98
+msgid "Nodes that run persistent |aap| services and execute jobs"
+msgstr "运行具有持久性的 |aap| 服务和执行作业的节点"
+
+#: ../../source/glossary.rst:100
+msgid "Hop"
+msgstr "Hop（跃点）"
+
+#: ../../source/glossary.rst:100
+msgid "Used for relaying across the mesh only"
+msgstr "只用于跨网格转发"
+
+#: ../../source/glossary.rst:102
+msgid "Execution"
+msgstr "Execution（执行）"
+
+#: ../../source/glossary.rst:102
+msgid "Nodes that run jobs delivered from control nodes (jobs submitted from the user's Ansible automation)"
+msgstr "用于运行从控制节点交付的作业（从用户的 Ansible 自动化提交的作业）的节点"
+
+#: ../../source/glossary.rst:104
+msgid "Notification Template"
+msgstr "通知模板"
+
+#: ../../source/glossary.rst:106
+msgid "An instance of a notification type (Email, Slack, Webhook, etc.) with a name, description, and a defined configuration."
+msgstr "通知类型的实例（电子邮件、Slack 、Webhook 等），其名称、描述和定义的配置。"
+
+#: ../../source/glossary.rst:107
+msgid "Notification"
+msgstr "通知"
+
+#: ../../source/glossary.rst:109
+msgid "A manifestation of the notification template; for example, when a job fails a notification is sent using the configuration defined by the notification template."
+msgstr "通知模板的清单；例如，任务失败时使用通知模板定义的配置发送通知。"
+
+#: ../../source/glossary.rst:110
+msgid "Notify"
+msgstr "通知"
+
+#: ../../source/glossary.rst:112
+msgid "The act of a task registering a change event and informing a handler task that another action needs to be run at the end of the play. If a handler is notified by multiple tasks, it will still be run only once. Handlers are run in the order they are listed, not in the order that they are notified."
+msgstr "任务注册更改事件并通知处理器任务在 play 结束时需要运行另一个操作的动作。如果多个任务通知了同一个处理器，它仍将只运行一次。处理程序会按照列出顺序运行，而不是按照通知的顺序运行。"
+
+#: ../../source/glossary.rst:113
+msgid "Organization"
+msgstr "机构（Organization）"
+
+#: ../../source/glossary.rst:115
+msgid "A logical collection of Users, Teams, Projects, and Inventories. The highest level in the |at| object hierarchy is the Organization."
+msgstr "用户、团队、项目和清单的逻辑集合。|at| 对象层次结构的最高级别为机构。"
+
+#: ../../source/glossary.rst:116
+msgid "Organization Administrator"
+msgstr "Organization Administrator（机构管理员）"
+
+#: ../../source/glossary.rst:118
+msgid "An |at| user with the rights to modify the Organization's membership and settings, including making new users and projects within that organization. An organization admin can also grant permissions to other users within the organization."
+msgstr "拥有修改机构成员资格和设置权限的 |at| 用户，包括在该机构内创建新用户和项目。机构管理员也可以向该机构内的其他用户授予权限。"
+
+#: ../../source/glossary.rst:119
+msgid "Permissions"
+msgstr "权限"
+
+#: ../../source/glossary.rst:121
+msgid "The set of privileges assigned to Users and Teams that provide the ability to read, modify, and administer Projects, Inventories, and other |at| objects."
+msgstr "分配给用户和团队的权限集，它提供读取、修改和管理项目、清单和其他 |at| 对象的能力。"
+
+#: ../../source/glossary.rst:122
+msgid "Plays"
+msgstr "Play"
+
+#: ../../source/glossary.rst:124
+msgid "A playbook is a list of plays. A play is minimally a mapping between a set of hosts selected by a host specifier (usually chosen by groups, but sometimes by hostname globs) and the tasks which run on those hosts to define the role that those systems will perform. There can be one or many plays in a playbook."
+msgstr "Playbook 是 play 的列表。一个 play 至少是一组由主机指定符选择的（通常由组选择，但有时由主机名 glob 选择）主机和那些主机上运行的任务之间的映射，用来定义那些系统要执行的角色。playbook 中可以有一个或多个 play。"
+
+#: ../../source/glossary.rst:125
+msgid "Playbook"
+msgstr "Playbook"
+
+#: ../../source/glossary.rst:127
+msgid "An Ansible playbook. Refer to http://docs.ansible.com/ for more information."
+msgstr "一个 Ansible playbook。如需更多信息，请参阅 http://docs.ansible.com/。"
+
+#: ../../source/glossary.rst:128
+msgid "Policy"
+msgstr "策略"
+
+#: ../../source/glossary.rst:130
+msgid "Policies dictate how instance groups behave and how jobs are executed."
+msgstr "策略指定实例组的行为方式以及任务的执行方式。"
+
+#: ../../source/glossary.rst:131
+msgid "Project"
+msgstr "项目"
+
+#: ../../source/glossary.rst:133
+msgid "A logical collection of Ansible playbooks, represented in |at|."
+msgstr "|at| 中的 Ansible playbook 的逻辑集合。"
+
+#: ../../source/glossary.rst:134
+msgid "Roles"
+msgstr "角色"
+
+#: ../../source/glossary.rst:136
+msgid "Roles are units of organization in Ansible and |at|. Assigning a role to a group of hosts (or a set of groups, or host patterns, etc.) implies that they should implement a specific behavior. A role may include applying certain variable values, certain tasks, and certain handlers--or just one or more of these things. Because of the file structure associated with a role, roles become redistributable units that allow you to share behavior among playbooks--or even with other users."
+msgstr "角色是 Ansible 和 |at| 中的机构单元。将角色分配给一组主机（或一系列组或主机模式等）意味着它们应当实现特定的行为。角色可能包括应用某些变量值、某些任务以及某些处理程序或者只是一个或多个这些事项。因为与角色关联的文件结构，角色会成为可重新分配的单元，以便您可以在 playbook 中或与其他用户共享行为。"
+
+#: ../../source/glossary.rst:137
+msgid "Secret Management System"
+msgstr "Secret 管理系统"
+
+#: ../../source/glossary.rst:139
+msgid "A server or service for securely storing and controlling access to tokens, passwords, certificates, encryption keys, and other sensitive data."
+msgstr "用于安全存储并控制对令牌、密码、证书、加密密钥和其他敏感数据的访问的服务器或服务。"
+
+#: ../../source/glossary.rst:140
+msgid "Schedule"
+msgstr "调度"
+
+#: ../../source/glossary.rst:142
+msgid "The calendar of dates and times for which a job should run automatically."
+msgstr "作业应自动运行的日期和时间日历。"
+
+#: ../../source/glossary.rst:143
+msgid "Sliced Job"
+msgstr "分片作业"
+
+#: ../../source/glossary.rst:146
+msgid "Source Credential"
+msgstr "源凭证"
+
+#: ../../source/glossary.rst:148
+msgid "An external credential that is linked to the field of a target credential."
+msgstr "链接到目标凭证字段的外部凭证。"
+
+#: ../../source/glossary.rst:149
+msgid "Sudo"
+msgstr "Sudo"
+
+#: ../../source/glossary.rst:151
+msgid "Ansible does not require root logins and, since it is daemonless, does not require root level daemons (which can be a security concern in sensitive environments). Ansible can log in and perform many operations wrapped in a ``sudo`` command, and can work with both password-less and password-based sudo. Some operations that do not normally work with ``sudo`` (like ``scp`` file transfer) can be achieved with Ansible’s *copy*, *template*, and *fetch* modules while running in ``sudo`` mode."
+msgstr "Ansible 不需要使用 root 进行登陆，因为它没有守护进程，也就不需要 root 级守护的进程（在一个敏感的环境中，root 一级的守护进程可能会造成安全问题）。Ansible 可以登录并使用 ``sudo`` 命令执行多个操作，并可同时使用无密码和基于密码的 sudo。在以 ``sudo`` 模式运行时，某些通常无法使用 ``sudo``（如 ``scp`` 文件传输）的操作可以通过 Ansible 的 *copy*、*template* 和 *fetch* 模块实现。"
+
+#: ../../source/glossary.rst:152
+msgid "Superuser"
+msgstr "超级用户（Superuser）"
+
+#: ../../source/glossary.rst:154
+msgid "An admin of the |at| server who has permission to edit any object in the system, whether associated to any organization. Superusers can create organizations and other superusers."
+msgstr "|at| 服务器的管理员，无论其是否与任何机构相关联，都有权限编辑系统中的任何对象。超级用户可以创建机构和其他超级用户。"
+
+#: ../../source/glossary.rst:155
+msgid "Survey"
+msgstr "问卷调查"
+
+#: ../../source/glossary.rst:157
+msgid "Questions asked by a job template at job launch time, configurable on the job template."
+msgstr "在作业启动时由作业模板询问的问题，可在作业模板上配置。"
+
+#: ../../source/glossary.rst:158
+msgid "Target Credential"
+msgstr "目标凭证"
+
+#: ../../source/glossary.rst:160
+msgid "A non-external credential with an input field that is linked to an external credential."
+msgstr "一个非外部的凭证，它带有一个输入字段，用来链接到外部凭证。"
+
+#: ../../source/glossary.rst:161
+msgid "Team"
+msgstr "团队（team）"
+
+#: ../../source/glossary.rst:163
+msgid "A sub-division of an Organization with associated Users, Projects, Credentials, and Permissions. Teams provide a means to implement role-based access control schemes and delegate responsibilities across Organizations."
+msgstr "具有关联用户、项目、凭证和权限的机构子部门。团队提供了一种方法来实现基于角色的访问控制方案，并跨机构委派责任。"
+
+#: ../../source/glossary.rst:164
+msgid "User"
+msgstr "用户"
+
+#: ../../source/glossary.rst:166
+msgid "An |at| operator with associated permissions and credentials."
+msgstr "具有相关权限和凭证的 |at| 操作员。"
+
+#: ../../source/glossary.rst:167
+msgid "Webhook"
+msgstr "Webhook"
+
+#: ../../source/glossary.rst:169
+msgid "Webhooks allow communication and information sharing between apps. They are used to respond to commits pushed to SCMs and launch job templates or workflow templates."
+msgstr "Webhook 允许应用程序间的通信和信息共享。它们用于响应推送到 SCM 的提交以及启动作业模板或工作流模板。"
+
+#: ../../source/glossary.rst:170
+msgid "Workflow Job Template"
+msgstr "工作流作业模板"
+
+#: ../../source/glossary.rst:172
+msgid "A set consisting of any combination of job templates, project syncs, and inventory syncs, linked together in order to execute them as a single unit."
+msgstr "由任何作业模板组合、项目同步和清单同步组成的集合，将它们链接在一起，以便以单个单元的形式执行。"
+
+#: ../../source/glossary.rst:173
+msgid "YAML"
+msgstr "YAML"
+
+#: ../../source/glossary.rst:175
+msgid "Ansible and |at| use YAML to define playbook configuration languages and also variable files. YAML has a minimum of syntax, is very clean, and is easy for people to skim. It is a good data format for configuration files and humans, but is also machine readable. YAML is fairly popular in the dynamic language community and the format has libraries available for serialization in many languages (Python, Perl, Ruby, etc.)."
+msgstr "Ansible 和 |at| 使用 YAML 来定义 playbook 配置语言和变量文件。YAML 的语法简单、非常清洁且方便用户浏览。它适用于配置文件及用户使用，但也可被机器读取。YAML 在动态语言社区中很受欢迎，格式具有可用于多种语言（Python、Perl、Ruby 等）序列化的库。"
+

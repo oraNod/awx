@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Upgrade and Migration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-23 21:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/virtualenv.rst:4
+msgid "Upgrading to Execution Environments"
+msgstr "実行環境へのアップグレード"
+
+#: ../../../common/source/virtualenv.rst:1
+msgid "The ability to build and deploy Python virtual environments for automation has been replaced by Ansible execution environments. Unlike legacy virtual environments, execution environments are container images that make it possible to incorporate system-level dependencies and collection-based content. Each execution environment allows you to have a customized image to run jobs, and each of them contain only what you need when running the job, nothing more."
+msgstr "自動化用に Python 仮想環境をビルドおよびデプロイできる機能は、Ansible 実行環境に置き換えられました。レガシーの仮想環境とは異なり、システムレベルの依存関係やコレクションベースのコンテンツを組み込むことができるコンテナーイメージがあります。各実行環境では、ジョブを実行するためのカスタマイズされたイメージを使用できます。また、各実行環境には、ジョブの実行時に必要なものだけが含まれ、それ以上のものは含まれていません。"
+
+#: ../../../common/source/virtualenv.rst:3
+msgid "If upgrading from older versions of |at| to 4.0 or later, the controller has the ability to detect previous versions of virtual environments associated with Organizations, Inventory, and Job Templates; and inform you that you will need to migrate to the new execution environment model. A brand new installation of |at| creates two virtualenvs during installation--one is used to run the controller itself, while the other is used to run Ansible. Like legacy virtual environments, execution environments allow the controller to run in a stable environment, while allowing you to add or update modules to your execution environment as necessary to run your playbooks. For more information on execution environments, see |ab| documentation (TBD)."
+msgstr "古いバージョンの |at| から 4.0 以降にアップグレードする場合、コントローラーは組織、インベントリー、およびジョブテンプレートに関連付けられた以前のバージョンの仮想環境を検出して、新規実行環境モデルに移行する必要があります。|at| の新規インストールは、インストール時に 2 つの virtualenv を作成します。その 1 つはコントローラー自身の実行に使用され、もう 1 つは Ansible の実行に使用されます。従来の仮想環境と同様、実行環境を使用すると、コントローラーが安定した環境で実行でき、Playbook の実行に必要な実行環境にモジュールを追加または更新できます。実行環境の詳細は、|ab| ドキュメント (TBD) を参照してください。"
+
+#: ../../../common/source/virtualenv.rst:11
+msgid "Migrate legacy venvs to execution environments"
+msgstr "従来の venvs を実行環境に移行"
+
+#: ../../../common/source/virtualenv.rst:13
+msgid "You can have the exact same setup in a execution environment that you had in a prior custom virtual environment by migrating them to the new execution environment using an ``awx-manage`` command. The ``awx-manage`` command allows for two options:"
+msgstr "``awx-manage`` コマンドを使用して、以前のカスタム仮想環境を新しい実行環境に移行することで、以前のカスタム仮想環境と同じセットアップを行うことができます。``awx-manage`` コマンドでは、以下の 2 つのオプションを指定できます。"
+
+#: ../../../common/source/virtualenv.rst:15
+msgid "without a path, it will generate a list of all the paths to custom execution environments"
+msgstr "パスがないと、カスタム実行環境へのパスの一覧が生成されます。"
+
+#: ../../../common/source/virtualenv.rst:16
+msgid "with a path, it will run a pip freeze within your environment and display all the custom virtual environments on the command line output"
+msgstr "パスを使用すると、環境内で pip freeze を実行し、コマンドライン出力にカスタムの仮想環境をすべて表示します。"
+
+#: ../../../common/source/virtualenv.rst:18
+msgid "Be sure you are inside of your container environment prior to proceeding with this migration procedure."
+msgstr "この移行手順に進む前に、必ずコンテナー環境内にいることを確認してください。"
+
+#: ../../../common/source/virtualenv.rst:20
+msgid "Before you migrate, it is recommended that you view all the custom virtual environments you currently have running by using the ``awx-manage list`` command:"
+msgstr "移行前に、``awx-manage list`` コマンドを使用して、現在実行しているカスタムの仮想環境をすべて表示することが推奨されます。"
+
+#: ../../../common/source/virtualenv.rst:26
+msgid "Below is an example output when running this command:"
+msgstr "以下は、このコマンドの出力例です。"
+
+#: ../../../common/source/virtualenv.rst:30
+msgid "The output shows a list of paths for each of your custom virtual environments. If you have a custom virtual environment that is not located within the default ``/var/lib/awx/venv/`` directory path, it will not be included here."
+msgstr "この出力には、カスタム仮想環境ごとのパス一覧が表示されます。デフォルトの ``/var/lib/awx/venv/`` ディレクトリーパス内にないカスタムの仮想環境がある場合は、ここには含まれません。"
+
+#: ../../../common/source/virtualenv.rst:33
+msgid "Select a path for the virtual environment that you want to migrate and specify it in the ``awx-manage export`` command:"
+msgstr "移行する仮想環境のパスを選択し、``awx-manage export`` コマンドで指定します。"
+
+#: ../../../common/source/virtualenv.rst:39
+msgid "The resulting output is essentially the results of executing a ``pip freeze`` command. The example shows the contents of the selected custom virtual environment:"
+msgstr "その結果の出力は基本的に ``pip freeze`` コマンドの実行の結果になります。以下の例では、選択したカスタム仮想環境のコンテンツが表示されます。"
+
+#: ../../../common/source/virtualenv.rst:44
+msgid "Now that you have the output from this ``pip freeze`` data, you can use that to spin up your new execution environment using |ab|. See TBD for more detail about execution environments."
+msgstr "これで、この ``pip freeze`` データからの出力が表示され、その出力と |ab| を使用して新しい実行環境を起動することができます。実行環境の詳細は、TBD を参照してください。"
+
+#~ msgid "|at| 3.0 uses *virtualenv*. Virtualenv creates isolated Python environments to avoid problems caused by conflicting dependencies and differing versions. Virtualenv works by simply creating a folder which contains all of the necessary executables and dependencies for a specific version of Python. |at| creates two virtualenvs during installation--one is used to run Tower, while the other is used to run Ansible. This allows Tower to run in a stable environment, while allowing you to add or update modules to your Ansible Python environment as necessary to run your playbooks."
+#~ msgstr ""
+
+#~ msgid "For more information on virtualenv, see `Virtual Environments <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_"
+#~ msgstr ""
+
+#~ msgid "Modifying the virtualenv"
+#~ msgstr ""
+
+#~ msgid "**Modifying the virtualenv used by Tower is unsupported and not recommended**. Instead, you can add modules to the virtualenv that Tower uses to run Ansible."
+#~ msgstr ""
+
+#~ msgid "To do so, activate the Ansible virtualenv::"
+#~ msgstr ""
+
+#~ msgid "...and then install whatever you need using ``pip``::"
+#~ msgstr ""
+
+#~ msgid "By default, the virtualenv is located at ``/var/lib/awx/venv/ansible`` on the file system but starting with |at| 3.5, you can create your own custom directories and use them in inventory imports. This allows you to choose how you run your inventory imports, as inventory sources use custom virtual environments."
+#~ msgstr "デフォルトでは、virtualenv はファイルシステムの ``/var/lib/awx/venv/ansible`` に配置されていますが、|at| 3.5 以降はカスタムのディレクトリーを作成して、インベントリーインポートで使用できます。これにより、インベントリーソースがカスタムの仮想環境を使用するので、インベントリーインポートの実行方法を選択できるようになります。"
+
+#~ msgid "Once you have created a custom virtualenv, you can assign it at the Organization, Project, or Job Template level to use it in job runs. You can set the custom venv on an inventory source to run inventory updates in that venv. However, starting in |at| 3.5, Ansible 2.4 or later is required to run inventory updates. Jobs using that inventory follow their own rules and will not use this venv. If an SCM inventory source does not have a venv selected, it can use the venv of its linked project. You can assign a custom venv on the organization, but if you do, it will not be used by inventory updates in the organization, as it is only used in job runs."
+#~ msgstr "カスタムの virtualenv を作成したら、組織、プロジェクト、ジョブテンプレートのレベル別に割り当ててジョブ実行に使用できます。インベントリーソースにカスタムの virtualenv でインベントリーの更新を実行できるように、このカスタムの virtualenv を設定できます。ただし、|at| 3.5 以降では、インベントリーの更新を実行するには、Ansible 2.4 以降が必要です。そのインベントリーを使用したジョブでは、独自のルールに準拠し、この venv は使用しません。SCM インベントリーソースで venv が選択されていない場合には、リンクしたプロジェクトの venv を使用できます。組織にカスタムの venv を割り当てることができます。ただし、組織にカスタムの venvを割り当てる場合には、ジョブ実行にだけ使用されるので、この組織のインベントリー更新では使用されません。"
+
+#~ msgid "Using virtualenv with |at|"
+#~ msgstr "|at| での virtualenv の使用"
+
+#~ msgid "Virtualenv creates isolated Python environments to avoid problems caused by conflicting dependencies and differing versions. Virtualenv works by simply creating a folder which contains all of the necessary executables and dependencies for a specific version of Python. |at| creates two virtualenvs during installation--one is used to run Tower, while the other is used to run Ansible. This allows Tower to run in a stable environment, while allowing you to add or update modules to your Ansible Python environment as necessary to run your playbooks. For more information on virtualenv, see the Python Guide to `Virtual Environments`_ and the `Python virtualenv` project itself."
+#~ msgstr "Virtualenv は、分離された Python 環境を構築して依存関係での競合やバージョンの相違による問題を回避します。Virtualenv は、特定のバージョンの Python に必要な実行ファイルや依存関係をすべて含むディレクトリーを作成するだけで機能します。|at| は、インストール時に 2 つの virtualenv を作成します。1 つは、Tower の実行に、もう 1 つは Ansible の実行に使用します。これにより、Tower は安定した環境で実行でき、Playbook の実行に必要なモジュールを Ansible Python 環境に追加または更新できるようになります。virtualenv の詳細は、Python Guide の「`Virtual Environments`_」および「`Python virtualenv`」プロジェクト自体を参照してください。"
+
+#~ msgid "By default, the virtualenv is located at ``/var/lib/awx/venv/ansible`` on the file system but you can create your own custom directories and use them in inventory imports. This allows you to choose how you run your inventory imports, as inventory sources use custom virtual environments."
+#~ msgstr "デフォルトでは、virtualenv はファイルシステムの ``/var/lib/awx/venv/ansible`` に配置されていますが、カスタムのディレクトリーを作成して、インベントリーインポートで使用できます。これにより、インベントリーソースがカスタムの仮想環境を使用するため、インベントリーインポートの実行方法を選択できるようになります。"
+
+#~ msgid "Tower also pre-installs a variety of third-party library/SDK support into this virtualenv for its integration points with a variety of cloud providers (such as EC2, OpenStack, Azure, etc.) Periodically, you may want to add additional SDK support into this virtualenv, which is described in further detail below."
+#~ msgstr "さらに Tower は、(EC2、OpenStack、Azure など) 各種クラウドプロバイダーとの統合ポイントとなるように、さまざまなサードパーティーのライブラリー/SDK サポートをこの virtualenv に事前インストールします。以下に詳しく説明されているように、この virtualenv に、定期的に別の SDK サポートを追加することもできます。"
+
+#~ msgid "It is highly recommended that you run ``umask`` 0022 before installing any packages to the virtual environment. Failure to properly configure permissions can result in Tower service failures. An example follows:"
+#~ msgstr "仮想環境にパッケージをインストールする前に ``umask`` 0022 を実行することを強く推奨します。パーミッションを適切に設定しておかないと、Tower サービスに失敗します。以下は例となります。"
+
+#~ msgid "In addition to adding modules to the virtualenv that Tower uses to run Ansible, you can create new virtualenvs as described below."
+#~ msgstr "以下の説明にあるように、Ansible の実行に Tower が使用する virtualenv にモジュールを追加するだけでなく、virtualenvs を新たに作成することができます。"
+
+#~ msgid "Preparing a new custom virtualenv"
+#~ msgstr "新しいカスタムの virtualenv の準備"
+
+#~ msgid "You can specify a different virtualenv for running Job Templates in Tower. In order to do so, you must specify which directories those venvs reside. You could choose to keep custom venvs inside ``/var/lib/awx/venv/``, but it is highly recommended that a custom directory be created. The following examples use a placeholder directory ``/opt/my-envs/``, but you can replace this with a directory path of your choice anywhere this is specified."
+#~ msgstr "Tower でジョブテンプレートを実行する場合に、異なる virtualenv を指定できます。これには、 virtualenv が配置されているディレクトリーを指定する必要があります。``/var/lib/awx/venv/`` 内にカスタムの virtualenv を保持することもできますが、カスタムのディレクトリーを作成することを強く推奨します。以下の例では、プレースホルダーのディレクトリー ``/opt/my-envs/`` を使用していますが、任意で指定したディレクトリーパスに置き換えることができます。"
+
+#~ msgid "Preparing a new custom virtualenv requires the virtualenv package to be pre-installed:"
+#~ msgstr "新しいカスタム virtualenv を準備するには、virtualenv パッケージがプリインストールされている必要があります。"
+
+#~ msgid "Create a directory for your custom venvs:"
+#~ msgstr "カスタムの virtualenv 向けのディレクトリーを作成します。"
+
+#~ msgid "Make sure to give your directory the appropriate write and execution permissions:"
+#~ msgstr "ディレクトリーに適切な書き込み権限と実行権限を指定するようにしてください。"
+
+#~ msgid "Optionally, you can specify in Tower which directory to look for custom venvs by adding this directory to the ``CUSTOM_VENV_PATHS`` setting as follows:"
+#~ msgstr "任意で、作成したディレクトリーを以下のように ``CUSTOM_VENV_PATHS`` 設定に追加して、カスタムの﻿ virtualenv 用のどのディレクトリーを検索するか、Tower で指定できます。"
+
+#~ msgid "If you have venvs spanned over multiple directories, add all the paths and Tower will aggregate venvs from them:"
+#~ msgstr "複数のディレクトリーに virtualenv がまたがる場合には、全パスを追加してください。Tower が指定した全パスから virtualenv を累積します。"
+
+#~ msgid "Now that a venv directory has been set up, create a virtual environment in that location:"
+#~ msgstr "virtualenv のディレクトリーが設定されたので、その場所に仮想環境を作成します。"
+
+#~ msgid "Multiple versions of Python are supported, but the syntax for creating virtualenvs in Python 3 has changed slightly: ``$ sudo python3 -m venv /opt/my-envs/custom-venv``"
+#~ msgstr "複数の Python バージョンがサポートされていますが、Python 3 で virtualenv を作成する構文は若干変更されています: ``$ sudo python3 -m venv /opt/my-envs/custom-venv``"
+
+#~ msgid "Next, install gcc so that ``psutil`` can be compiled:"
+#~ msgstr "次に、gcc をインストールして、``psutil`` をコンパイルできるようにします。"
+
+#~ msgid "Your newly created virtualenv needs a few base dependencies to properly run playbooks (eg., fact gathering):"
+#~ msgstr "新規作成した virtualenv は、Playbook を正しく実行するには、基本的な依存関係が必要です (例: ファクトの収集):"
+
+#~ msgid "From here, you can install *additional* Python dependencies that you care about, such as a per-virtualenv version of Ansible itself:"
+#~ msgstr "ここから、Ansible 自体に適した各 virtualenv バージョンなど、*追加で* Python の依存関係をインストールできます。"
+
+#~ msgid "Or you can add an additional third-party SDK that is not included with the base Tower installation:"
+#~ msgstr "または、Tower のベースインストールに含まれていない、サードパーティーの SDK を別途追加することができます。"
+
+#~ msgid "If you want to copy them, the libraries included in Tower's default virtualenv can be found using ``pip freeze``:"
+#~ msgstr "コピーする場合は、``pip freeze`` を使用してTower のデフォルトの virtualenv に含まれるライブラリーを見つけ出すことができます。"
+
+#~ msgid "In a clustered Tower installation, you need to ensure that the same custom virtualenv exists on **every** local file system at ``/opt/my-envs/``. Custom virtualenvs are supported on isolated instances. If you are using a custom virtual environment, it needs to also be copied or replicated on any isolated node you would be using, not just on the Tower node. For setting up custom virtual environments in containers, refer to the :ref:`Build custom virtual environments <administration:ag_os_custom_venv>` section of the |ata|."
+#~ msgstr "Tower のクラスターインストールでは、同じ virtualenv が全ローカルファイルシステムの ``/opt/my-envs/`` に存在することを確認する必要があります。カスタムの virtualenv は、分離インスタンスでサポートされます。カスタムの仮想環境を使用する場合は、Tower ノードだけでなく、使用する分離ノードでコピーまたは複製する必要があります。コンテナーにカスタムの仮想環境を設定する方法は、『|ata|』の「:ref:`Build custom virtual environments <administration:ag_os_custom_venv>`」を参照してください。"
+
+#~ msgid "Assigning custom virtualenvs"
+#~ msgstr "カスタムの virtualenv の割り当て"
+
+#~ msgid "Once you have created a custom virtualenv, you can assign it at the Organization, Project, or Job Template level to use it in job runs. You can set the custom venv on an inventory source to run inventory updates in that venv. Jobs using that inventory follow their own rules and will not use this venv. If an SCM inventory source does not have a venv selected, it can use the venv of its linked project. You can assign a custom venv on the organization, but if you do, it will not be used by inventory updates in the organization, as it is only used in job runs."
+#~ msgstr "カスタムの virtualenv を作成したら、組織、プロジェクト、ジョブテンプレートのレベル別に割り当ててジョブ実行に使用できます。インベントリーソースにカスタムの virv でインベントリーの更新を実行できるように、このカスタムの virv を設定できます。そのインベントリーを使用したジョブでは、独自のルールに準拠し、この venv は使用しません。SCM インベントリーソースで venv が選択されていない場合は、リンクしたプロジェクトの venv を使用できます。組織にカスタムの venv を割り当てることができます。ただし、組織にカスタムの venvを割り当てる場合には、ジョブ実行にだけ使用されるため、この組織のインベントリー更新では使用されません。"
+
+#~ msgid "The following shows the proper way to assign a custom venv at the desired level."
+#~ msgstr "以下では、任意のレベルでカスタムの venv を正しく割り当てる方法を説明します。"
+
+#~ msgid "An HTTP GET request to ``/api/v2/config/`` provides a list of detected installed virtualenvs:"
+#~ msgstr "``/api/v2/config/`` への HTTP GET 要求では、インストール済みの virtualenvs の検出一覧が返されます。"
+
+#~ msgid "You can also specify the virtual environment to assign to an Organization, Project, and Job Template from their respective edit screens in the |at| User Interface. Select the virtualenv from the **Ansible Environment** drop-down menu, as shown in the example below:"
+#~ msgstr "|at| ユーザーインターフェースの対象の編集画面から、組織、プロジェクトおよびジョブテンプレートに割り当てる仮想環境を指定することも可能です。以下の例で示されるように、**Ansible 環境** ドロップダウンメニューから virtualenv を選択してください。"
+
+#~ msgid "When you launch a job template, you will also see the virtualenv specified in the Job Details pane:"
+#~ msgstr "ジョブテンプレートの起動時に、ジョブの詳細ペーで指定した virtualenv も表示されます。"
+

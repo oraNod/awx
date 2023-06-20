@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/auth_token.rst:3
+msgid "Auth Token API Endpoint"
+msgstr "Auth Token API 端点"
+
+#: ../../source/auth_token.rst:8
+msgid "Make a POST request to this resource with ``username`` and ``password`` fields to obtain an authentication token to use for subsequent request."
+msgstr "使用 ``username`` 和 ``password`` 字段向此资源发布 POST 请求，以获取用于后续请求的身份验证令牌。"
+
+#: ../../source/auth_token.rst:25
+msgid "Example JSON to POST (content type is ``application/json``):"
+msgstr "要 POST（发布）的 JSON 的示例（内容类型为 ``application/json``）："
+
+#: ../../source/auth_token.rst:31
+msgid "Example form data to post (content type is ``application/x-www-form-urlencoded``):"
+msgstr "要发布的表格数据示例（内容类型为 ``application/x-www-form-urlencoded``）："
+
+#: ../../source/auth_token.rst:37
+msgid "If the username and password provided are valid, the response will contain a ``token`` field with the authentication token to use and an ``expires`` field with the timestamp when the token will expire:"
+msgstr "如果提供的用户名和密码有效，响应将包含含有要使用的验证令牌的 ``token`` 字段，以及在令牌过期时具有时间戳的 ``expires`` 字段："
+
+#: ../../source/auth_token.rst:46
+msgid "Otherwise, the response will indicate the error that occurred and return a 4xx status code."
+msgstr "否则，响应会显示出现的错误并返回一个 4xx 状态代码。"
+
+#: ../../source/auth_token.rst:48
+msgid "For subsequent requests, pass the token via the HTTP ``Authorization`` request header:"
+msgstr "对于后续的请求，通过 HTTP ``Authorization`` 请求标头传递令牌："
+
+#: ../../source/auth_token.rst:54
+msgid "The auth token is only valid when used from the same remote address and user agent that originally obtained it."
+msgstr "身份验证令牌仅在使用同一远程地址和最初获得该令牌的用户代理时才有效。"
+
+#: ../../source/auth_token.rst:56
+msgid "Each request that uses the token for authentication will refresh its expiration timestamp and keep it from expiring. A token only expires when it is not used for the configured timeout interval (default 1800 seconds)."
+msgstr "每个使用令牌进行身份验证的请求都会刷新其过期时间戳，并避免过期。令牌只有在没有用于配置的超时间隔时才会过期（默认值为 1800 秒）。"
+
+#: ../../source/auth_token.rst:59
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/auth_token.rst:64
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

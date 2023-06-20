@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/applications_auth.rst:4
+msgid "Applications"
+msgstr "应用程序"
+
+#: ../../source/applications_auth.rst:13
+msgid "Creating and configuring token-based authentication for external applications is available starting in |at| 3.3. This makes it easier for external applications such as ServiceNow and Jenkins to integrate with |at|. OAuth 2 allows you to use tokens to share certain data with an application without disclosing login information, and furthermore, these tokens can be scoped as \"read-only\".  You create an application that is representative of the external application you are integrating with, then use it to create tokens for that application to use on behalf of the users of the external application."
+msgstr "从 |at| 3.3 开始，提供了为外部应用程序创建和配置基于令牌的身份验证的功能。这使得 ServiceNow 和 Jenkins 等外部应用程序可以更容易地与 |at| 集成。OAuth 2 可让您在不公开登录信息的情况下使用令牌与应用程序共享某些数据。另外，这些令牌可以被限定为“只读”。您可以创建一个应用程序来代表要集成的外部应用程序，然后使用它为外部应用程序的用户创建需要使用的令牌。"
+
+#: ../../source/applications_auth.rst:15
+msgid "Having these tokens associated to an application resource gives you the ability to manage all tokens issued for a particular application more easily. By separating token issuance under Applications, you can revoke all tokens based on the Application without having to revoke all tokens in the system."
+msgstr "通过把这些令牌与一个应用程序资源相关联，您可以更轻松地管理针对特定应用程序发布的所有令牌。通过对应用程序的令牌进行分离，您可以取消特定应用程序的令牌，而无需撤销系统中的所有令牌。"
+
+#: ../../source/applications_auth.rst:17
+msgid "When integrating an external web app with |at| that web app may need to create OAuth2 Tokens on behalf of users in that other web app. Creating an application with the Authorization Code grant type is the preferred way to do this because:"
+msgstr "当把一个外部 web 应用程序与 |at| 集成时，那个 web 应用程序可能需要为该应用程序上的用户创建 OAuth2 令牌。实现这个目的的首选做法是创建一个带有授权代码（Authorization Code）准许类型的应用程序。这是因为："
+
+#: ../../source/applications_auth.rst:19
+msgid "external applications can obtain a token for users, using their credentials"
+msgstr "外部应用可以使用用户的凭证来获取令牌"
+
+#: ../../source/applications_auth.rst:20
+msgid "compartmentalized tokens issued for a particular application, allows those tokens to be easily managed (revoke all tokens associated with that application, for example)"
+msgstr "对为特定应用程序发布的令牌进行分离，可轻松管理这些令牌（例如，可以删除所有与该应用程序关联的令牌）"
+
+#: ../../source/applications_auth.rst:24
+msgid "Getting Started with Applications"
+msgstr "应用程序入门"
+
+#: ../../source/applications_auth.rst:29
+msgid "Access the Applications page by clicking **Applications** from the left navigation bar. The Applications page displays a search-able list of all available Applications currently managed by the controller and can be sorted by **Name**."
+msgstr "点左面导航栏中的 **Applications** 进入 Applications 页。Applications 页包括了一个可以对其进行搜索的、当前由控制器管理的所有可用应用程序的列表，并可以根据 **Name** 进行排序。"
+
+#: ../../source/applications_auth.rst:31
+msgid "|Applications - home with example apps|"
+msgstr "|Applications - home with example apps|"
+
+#: ../../source/applications_auth.rst:35
+msgid "If no other applications exist, only a gray box with a message to add applications displays."
+msgstr "如果没有其它应用程序，则只会显示一个添加应用程序信息的灰色框。"
+
+#: ../../source/applications_auth.rst:43
+msgid "Create a new application"
+msgstr "创建新应用程序"
+
+#: ../../source/applications_auth.rst:49
+msgid "Token-based authentication for users can be configured in the Applications window."
+msgstr "用户的基于令牌的验证可以在 Applications 窗口中进行配置。"
+
+#: ../../source/applications_auth.rst:51
+msgid "In the |at| User Interface, click **Applications** from the left navigation bar."
+msgstr "在 |at| 用户界面中，从左侧导航栏中点 **Applications**。"
+
+#: ../../source/applications_auth.rst:53
+msgid "The Applications window opens."
+msgstr "Applications 窗口将打开。"
+
+#: ../../source/applications_auth.rst:55
+msgid "Click the **Add** button located in the upper right corner of the Applications window."
+msgstr "点 Applications 窗口右上角的 **Add** 按钮。"
+
+#: ../../source/applications_auth.rst:57
+msgid "The New Application window opens."
+msgstr "New Application 窗口将打开。"
+
+#: ../../source/applications_auth.rst:59
+msgid "|Create application|"
+msgstr "|Create application|"
+
+#: ../../source/applications_auth.rst:63
+msgid "Enter the following details in **Create New Application** window:"
+msgstr "在 **Create New Application** 窗口中输入以下信息："
+
+#: ../../source/applications_auth.rst:65
+msgid "**Name** (required): provide a name for the application you want to create"
+msgstr "**Name**（必需）：为要创建的应用程序提供名称"
+
+#: ../../source/applications_auth.rst:66
+msgid "**Description**: optionally provide a short description for your application"
+msgstr "**Description**（可选）：为您的应用程序提供简短描述"
+
+#: ../../source/applications_auth.rst:67
+msgid "**Organization** (required): provide an organization for which this application is associated"
+msgstr "**Organization**（必需）：提供一个与这个应用程序关联的机构"
+
+#: ../../source/applications_auth.rst:68
+msgid "**Authorization Grant Type** (required): Select from one of the grant types to use in order for the user to acquire tokens for this application. Refer to :ref:`grant types <administration:ag_oauth2_token_auth_grant_types>` in the Applications section of the |ata|."
+msgstr "**Authorization Grant Type**（必需）：从一个准许类型中选择以便用户获取这个应用程序的令牌。请参考 |ata| 的 Applications 部分中的 :ref:`grant types <administration:ag_oauth2_token_auth_grant_types>`。"
+
+#: ../../source/applications_auth.rst:69
+msgid "**Redirect URIS**: Provide a list of allowed URIs, separated by spaces. This is required if you specified the grant type to be **Authorization code**."
+msgstr "**Redirect URIS**：提供一组允许的 URI，使用空格分开。如果您指定的准许类型为 **Authorization code**，则此项是必需的。"
+
+#: ../../source/applications_auth.rst:70
+msgid "**Client Type** (required): Select the level of security of the client device"
+msgstr "**Client Type**（必需）：选择客户端设备的安全性级别"
+
+#: ../../source/applications_auth.rst:72
+msgid "When done, click **Save** or **Cancel** to abandon your changes. Upon saving, the client ID displays in a pop-up window."
+msgstr "完成后，点 **Save** 或 **Cancel** 取消更改。保存后，客户端 ID 会显示在弹出窗口中。"
+
+#: ../../source/applications_auth.rst:78
+msgid "Applications - Tokens"
+msgstr "Applications - Tokens"
+
+#: ../../source/applications_auth.rst:84
+msgid "Selecting the **Tokens** view displays a list of the users that have tokens to access the application."
+msgstr "选择 **Tokens** 查看有令牌来访问应用程序的用户列表。"
+
+#: ../../source/applications_auth.rst:86
+msgid "|Applications - tokens list|"
+msgstr "|Applications - tokens list|"
+
+#: ../../source/applications_auth.rst:90
+msgid "Tokens can only access resources that its associated user can access, and can be limited further by specifying the scope of the token."
+msgstr "令牌只能访问与其关联的用户有权访问的资源，并可通过指定令牌范围来做进一步限制。"
+
+#: ../../source/applications_auth.rst:96
+msgid "Add Tokens"
+msgstr "添加令牌"
+
+#: ../../source/applications_auth.rst:98
+msgid "Tokens are added through the Users screen and can be associated with an application at that time. Specifying an application can be performed directly in the User's token settings. You can create a token for *your* user in the Tokens configuration tab, meaning only you can create and see your tokens in your own user screen. To add a token:"
+msgstr "令牌可以通过 Users 屏幕添加，并与一个应用程序关联。指定应用程序可以在用户的令牌设置中直接执行。您可以为 Tokens 配置标签中为*您的*用户创建一个令牌，这意味着只能在您自己的用户屏幕中创建并查看您的令牌。要添加令牌："
+
+#: ../../source/applications_auth.rst:100
+msgid "Access the Users list view by clicking **Users** from the left navigation bar then click on your user to configure your OAuth 2 tokens."
+msgstr "点左侧导航栏中的 **Users** 显示用户列表，然后点击您的用户来配置 OAuth 2 令牌。"
+
+#: ../../source/applications_auth.rst:104
+msgid "You can only create OAuth 2 Tokens for your user via the API or UI, which means you can only access your own user profile in order to configure or view your tokens. If you are an admin and need to create or remove tokens for other users, see the revoke and create commands in the :ref:`Token and session management <administration:ag_token_utility>` section of the |ata|."
+msgstr "使用 API 或 UI 只能为您自己的用户创建 OAuth 2 Tokens，这意味着您只能访问自己的用户配置集来配置或查看您的令牌。如果您是一个 admin，需要为其他用户创建或删除令牌，请参阅 |ata| 的 :ref:`Token and session management <administration:ag_token_utility>` 部分中关于 revoke 和 create 命令的内容。"
+
+#: ../../../common/source/add-token.rst:3
+msgid "Click the **Tokens** tab from your user's profile."
+msgstr "在用户档案中点 **Tokens** 标签页。"
+
+#: ../../../common/source/add-token.rst:5
+msgid "When no tokens are present, the Tokens screen prompts you to add them:"
+msgstr "当没有令牌时，Tokens 屏幕会提示您添加它们："
+
+#: ../../../common/source/add-token.rst:9
+msgid "Click the **Add** button, which opens the Create Token window."
+msgstr "点 **Add** 按钮，打开 Create Token 窗口。"
+
+#: ../../../common/source/add-token.rst:11
+msgid "Enter the following details in Create Token window:"
+msgstr "在 Create Token 窗口中输入以下信息："
+
+#: ../../../common/source/add-token.rst:13
+msgid "**Application**: enter the name of the application with which you want to associate your token. Alternatively, you can search for it by clicking the |search| button. This opens a separate window that allows you to choose from the available options. Use the Search bar to filter by name if the list is extensive. Leave this field blank if you want to create a Personal Access Token (PAT) that is not linked to any application."
+msgstr "**Application**：输入要与您的令牌关联的应用程序名称，或通过点击 |search| 按钮进行搜索。这会打开一个单独的窗口，允许您从可用选项中选择。如果列表太长，则可以使用搜索栏按名称过滤。如果您想创建一个不和任何应用程序相关联的 Personal Access Token (PAT)，请保留此字段为空白。"
+
+#: ../../../common/source/add-token.rst:15
+msgid "**Description**: optionally provide a short description for your token."
+msgstr "**Description**（可选）：为您的令牌提供简短描述。"
+
+#: ../../../common/source/add-token.rst:17
+msgid "**Scope** (required): specify the level of access you want this token to have."
+msgstr "**Scope**（必需）：指定此令牌具有的访问级别。"
+
+#: ../../../common/source/add-token.rst:21
+msgid "When done, click **Save** or **Cancel** to abandon your changes."
+msgstr "完成后，点击 **Save**，或者点 **Cancel** 取消更改。"
+
+#: ../../../common/source/add-token.rst:23
+msgid "After the token is saved, the newly created token for the user displays with the token information and when it expires."
+msgstr "保存令牌后，新生成的令牌会显示令牌信息及其过期的时间。"
+
+#: ../../../common/source/add-token.rst:27
+msgid "This is the only time the token value and associated refresh token value will ever be shown."
+msgstr "这是唯一显示令牌值和关联刷新令牌值的时间。"
+
+#: ../../../common/source/add-token.rst:29
+msgid "In the user's profile, the application for which it is assigned to and its expiration displays in the token list view."
+msgstr "在用户的档案中，分配给它的应用程序及其过期时间显示在令牌列表视图中。"
+
+#: ../../source/applications_auth.rst:108
+msgid "To verify the application in the example above now shows the user with the appropriate token, go to the **Tokens** tab of the Applications window:"
+msgstr "通过 Applications 窗口的 **Tokens** 标签页可以验证上例中的应用程序的用户带有适当的令牌："
+

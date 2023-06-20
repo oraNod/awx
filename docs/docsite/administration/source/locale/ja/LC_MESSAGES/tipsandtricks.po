@@ -1,0 +1,317 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tipsandtricks.rst:7
+msgid "Controller Tips and Tricks"
+msgstr "コントローラーのヒントと裏技"
+
+#: ../../source/tipsandtricks.rst:18
+msgid "Using the Controller CLI Tool"
+msgstr "コントローラー CLI ツールの使用"
+
+#: ../../source/tipsandtricks.rst:25
+msgid "|At| has a full-featured command line interface. Refer to `AWX Command Line Interface`_  documentation for configuration and usage instructions."
+msgstr "|At| には、フル機能のコマンドラインインターフェースがあります。設定および使用手順については、`AWX Command Line Interface`_ を参照してください。"
+
+#: ../../source/tipsandtricks.rst:33
+msgid "Changing the Controller Admin Password"
+msgstr "コントローラー管理者パスワードの変更"
+
+#: ../../source/tipsandtricks.rst:41
+msgid "During the installation process, you are prompted to enter an administrator password which is used for the ``admin`` superuser/first user created in the controller. If you log into the instance via SSH, it will tell you the default admin password in the prompt. If you need to change this password at any point, run the following command as root on the controller server:"
+msgstr "インストールのプロセス中に、管理者パスワードの入力を求められます。これは、コントローラーで作成される ``admin`` スーパーユーザー/最初のユーザーに使用されます。SSH でインスタンスにログインする場合には、プロンプトでデフォルトの管理者パスワードが通知されます。どのタイミングであっても、このパスワードを変更する必要がある場合には、コントローラーサーバーで root として以下のコマンドを実行します。"
+
+#: ../../source/tipsandtricks.rst:47
+msgid "Next, enter a new password. After that, the password you have entered will work as the admin password in the web UI."
+msgstr "次に新規パスワードを入力します。その後は入力したパスワードが Web UI の管理者パスワードとして機能します。"
+
+#: ../../source/tipsandtricks.rst:50
+msgid "To set policies at creation time for password validation using Django, see :ref:`ag_security_django_password` for detail."
+msgstr "Djangoを使用して作成時にパスワード検証のポリシーを設定する方法は :ref:`ag_security_django_password` を参照してください。"
+
+#: ../../source/tipsandtricks.rst:54
+msgid "Creating a controller Admin from the commandline"
+msgstr "コマンドラインからのコントローラー管理者の作成"
+
+#: ../../source/tipsandtricks.rst:61
+msgid "Once in a while you may find it helpful to create an admin (superuser) account from the commandline. To create an admin, run the following command as root on the controller server and enter in the admin information as prompted:"
+msgstr "コマンドラインから管理者 (スーパーユーザー) アカウントを作成すると便利な場合があります。管理者を作成するには、コントローラーサーバーで root として以下のコマンドを実行し、プロンプトに従い管理者の情報を入力します。"
+
+#: ../../source/tipsandtricks.rst:69
+msgid "Setting up a jump host to use with the controller"
+msgstr "ジャンプホストがコントローラーを使用するように設定する手順"
+
+#: ../../source/tipsandtricks.rst:77
+msgid "Credentials supplied by the controller will not flow to the jump host via ProxyCommand. They are only used for the end-node once the tunneled connection is set up."
+msgstr "コントローラーが提供する認証情報は、ProxyCommand ではジャンプホストに渡らず、トンネル接続が設定されてからしか、エンドノードには使用されません。"
+
+#: ../../source/tipsandtricks.rst:79
+msgid "To make this work, configure a fixed user/keyfile in the AWX user's SSH config in the ProxyCommand definition that sets up the connection through the jump host. For example:"
+msgstr "これを機能させるには、ジャンプホスト経由での接続を設定する ProxyCommand 定義に含まれる AWX ユーザーの SSH config で、固定のユーザー/キーファイルを設定します。"
+
+#: ../../source/tipsandtricks.rst:90
+msgid "You can also add a jump host to your controller instance through Inventory variables. These variables can be set at either the inventory, group, or host level. To add this, navigate to your inventory and in the ``variables`` field of whichever level you choose, add the following variables:"
+msgstr "インベントリー変数を介して、ジャンプホストをコントローラーインスタンスに追加することもできます。この変数はインベントリー、グループ、またはホストレベルに設定できます。これをインベントリーに追加するには、選択したレベルの ``variables`` フィールドに、以下の変数を追加します。"
+
+#: ../../source/tipsandtricks.rst:100
+msgid "View Ansible outputs for JSON commands when using the controller"
+msgstr "コントローラーの使用時に JSON コマンドの Ansible の出力を表示する方法"
+
+#: ../../source/tipsandtricks.rst:105
+msgid "When working with |at|, you can use the API to obtain the Ansible outputs for commands in JSON format."
+msgstr "|at| の使用時には、API を使用して JSON 形式のコマンドを Ansible の出力として取得できます。"
+
+#: ../../source/tipsandtricks.rst:107
+msgid "To view the Ansible outputs, browse to:"
+msgstr "Ansible の出力を表示するには、以下に移動します。"
+
+#: ../../source/tipsandtricks.rst:115
+msgid "Locate and configure the Ansible configuration file"
+msgstr "Ansbile 設定ファイルの場所特定および設定"
+
+#: ../../source/tipsandtricks.rst:123
+msgid "While Ansible does not require a configuration file, OS packages often include a default one in ``/etc/ansible/ansible.cfg`` for possible customization. In order to use a custom ``ansible.cfg`` file, place it at the root of your project. |At| runs ``ansible-playbook`` from the root of the project directory, where it will then find the custom ``ansible.cfg`` file. An ``ansible.cfg`` anywhere else in the project will be ignored."
+msgstr "Ansible は設定ファイルを必要としませんが、OS パッケージにはカスタマイズできるように ``/etc/ansible/ansible.cfg`` がデフォルトで含まれています。カスタムの ``ansible.cfg`` ファイルを使用するには、プロジェクトの root にそのファイルを配置します。|At| は、プロジェクトの root ディレクトリーからカスタムの ``ansible.cfg`` ファイルを検索して ``ansible-playbook`` を実行します。それ以外の場所に配置されている ``ansible.cfg`` は無視されます。"
+
+#: ../../source/tipsandtricks.rst:125
+msgid "To learn which values you can use in this file, refer to the `configuration file on github`_."
+msgstr "このファイルで使用可能な値については、`configuration file on github`_ を参照してください。"
+
+#: ../../source/tipsandtricks.rst:129
+msgid "Using the defaults are acceptable for starting out, but know that you can configure the default module path or connection type here, as well as other things."
+msgstr "最初はデフォルトを使用することもできますが、デフォルトのモジュールパスや接続タイプなどをここで設定できる点を念頭に置いておいてください。"
+
+#: ../../source/tipsandtricks.rst:131
+msgid "The controller overrides some ansible.cfg options. For example, the controller stores the SSH ControlMaster sockets, the SSH agent socket, and any other per-job run items in a per-job temporary directory that is passed to the container used for job execution."
+msgstr "コントローラーは ansible.cfg オプションを上書きする場合があります。たとえば、コントローラーは、SSH ControlMaster ソケット、SSH エージェントソケット、その他ジョブごとの実行アイテムを、ジョブの実行に使用されるコンテナーに渡されるジョブごとの一時ディレクトリーに格納します。"
+
+#: ../../source/tipsandtricks.rst:135
+msgid "View a listing of all ansible\\_ variables"
+msgstr "全 ansible\\_ 変数リストの確認"
+
+#: ../../source/tipsandtricks.rst:139
+msgid "Ansible by default gathers “facts” about the machines under its management, accessible in Playbooks and in templates. To view all facts available about a machine, run the ``setup`` module as an ad hoc action:"
+msgstr "Ansible はデフォルトで、Ansible が管理するマシンに関する「ファクト」を収集し、Playbook やテンプレートでアクセスできるようになっています。マシンに関する利用可能なファクトすべてを表示するには、``setup`` モジュールをアドホックアクションとして実行します。"
+
+#: ../../source/tipsandtricks.rst:145
+msgid "This prints out a dictionary of all facts available for that particular host. For more information, refer to: https://docs.ansible.com/ansible/playbooks_variables.html#information-discovered-from-systems-facts"
+msgstr "これにより、その特定のホストで使用可能なすべてのファクトの辞書が出力されます。詳細は、https://docs.ansible.com/ansible/playbooks_variables.html#information-discovered-from-systems-facts を参照してください。"
+
+#: ../../source/tipsandtricks.rst:151
+msgid "The ALLOW_JINJA_IN_EXTRA_VARS variable"
+msgstr "ALLOW_JINJA_IN_EXTRA_VARS 変数"
+
+#: ../../source/tipsandtricks.rst:153
+msgid "Setting ``ALLOW_JINJA_IN_EXTRA_VARS = template`` only works for saved job template extra variables. Prompted variables and survey variables are excluded from the 'template'. This parameter has three values: ``template`` to allow usage of Jinja saved directly on a job template definition (the default), ``never`` to disable all Jinja usage (recommended), and ``always`` to always allow Jinja (strongly discouraged, but an option for prior compatibility)."
+msgstr "``ALLOW_JINJA_IN_EXTRA_VARS = template`` の設定は、保存されたジョブテンプレートの追加変数に対してのみ機能します。プロンプト変数と調査変数は「テンプレート」から除外されます。このパラメーターには 3 つの値があります。ジョブテンプレート定義に直接保存された Jinja の使用を許可する ``template`` (デフォルト)、Jinja の使用をすべて無効にする ``never`` (推奨)、および常に Jinja を許可する ``always`` (極力避けてください。以前の互換性のためのオプションになります)。"
+
+#: ../../source/tipsandtricks.rst:155
+msgid "This parameter is configurable in the Jobs Settings screen of the controller UI:"
+msgstr "このパラメーターは、コントローラー UI のジョブ設定画面で設定可能です。"
+
+#: ../../source/tipsandtricks.rst:161
+msgid "Using execution environments"
+msgstr "実行環境の使用"
+
+#: ../../source/tipsandtricks.rst:169
+msgid "See :ref:`ug_execution_environments` in the |atu|."
+msgstr "|atu| の:ref:`ug_execution_environments` を参照してください。"
+
+#: ../../source/tipsandtricks.rst:173
+msgid "Configuring the ``controllerhost`` hostname for notifications"
+msgstr "通知用の ``controllerhost`` のホスト名設定"
+
+#: ../../source/tipsandtricks.rst:178
+msgid "In the :ref:`System Settings <configure_tower_system>`, you can replace ``https://controller.example.com`` in the **Base URL of The Controller Host** field with your preferred hostname to change the notification hostname."
+msgstr ":ref:`System Settings <configure_tower_system>` で、**コントローラーホストのベース URL** フィールドの ``https://controller.example.com`` を、希望のホスト名に置き換えることで、通知ホスト名を変更できます。"
+
+#: ../../source/tipsandtricks.rst:182
+msgid "Refreshing your controller license also changes the notification hostname. New installations of |at| should not have to set the hostname for notifications."
+msgstr "コントローラーライセンスを更新すると、通知のホスト名も更新します。|at| の新規インストールでは、通知用にホストを設定する必要はありません。"
+
+#: ../../source/tipsandtricks.rst:188
+msgid "Launching Jobs with curl"
+msgstr "curl でのジョブの起動"
+
+#: ../../source/tipsandtricks.rst:192
+msgid "Launching jobs with the controller API is simple. Here are some easy to follow examples using the ``curl`` tool."
+msgstr "コントローラー API でのジョブの起動は簡単です。以下に、活用しやすい ``curl`` ツールの使用例を紹介します。"
+
+#: ../../source/tipsandtricks.rst:194
+msgid "Assuming that your Job Template ID is '1', your controller IP is 192.168.42.100, and that ``admin`` and ``awxsecret`` are valid login credentials, you can create a new job this way:"
+msgstr "ジョブテンプレート ID が「1」、コントローラー の IP が 192.168.42.100、有効な認証情報が ``admin`` および ``awxsecret`` とします。これをベースに新規ジョブを作成することができます。"
+
+#: ../../source/tipsandtricks.rst:202
+msgid "This returns a JSON object that you can parse and use to extract the 'id' field, which is the ID of the newly created job."
+msgstr "これにより、JSON オブジェクトが返されるので分析して、新規作成したジョブの ID を「id」フィールドから抽出するのに使用してください。"
+
+#: ../../source/tipsandtricks.rst:204
+msgid "You can also pass extra variables to the Job Template call, such as is shown in the following example:"
+msgstr "以下の例に示されているように、ジョブテンプレートの呼び出しに追加の変数を渡します。"
+
+#: ../../source/tipsandtricks.rst:213
+msgid "You can view the live API documentation by logging into http://192.168.42.100/api/ and browsing around to the various objects available."
+msgstr "ライブの API ドキュメントを表示するには、http://192.168.42.100/api/ にログインして、利用可能な各種オブジェクトを参照してください。"
+
+#: ../../source/tipsandtricks.rst:217
+msgid "The ``extra_vars`` parameter needs to be a string which contains JSON, not just a JSON dictionary, as you might expect. Use caution when escaping the quotes, etc."
+msgstr "``extra_vars`` パラメーターは、JSON ディクショナリーだけが必要と思われるかもしれませんが、JSON を含む文字列でなければなりません。引用をエスケープする場合などは注意してください。"
+
+#: ../../source/tipsandtricks.rst:221
+msgid "Dynamic Inventory and private IP addresses"
+msgstr "動的なインベントリーおよびプライベート IP アドレス"
+
+#: ../../source/tipsandtricks.rst:227
+msgid "By default, the controller only shows instances in a VPC that have an Elastic IP (EIP) address associated with them. To view all of your VPC instances, perform the following steps:"
+msgstr "デフォルトでは、コントローラーは Elastic IP (EIP) アドレスが関連付けられた VPC にだけインスタンスを表示します。VPC インスタンスをすべて表示するには、以下の手順を実行してください。"
+
+#: ../../source/tipsandtricks.rst:229
+msgid "In the controller interface, select your inventory."
+msgstr "コントローラーのインターフェースでインベントリーを選択します。"
+
+#: ../../source/tipsandtricks.rst:230
+msgid "Click on the group that has the Source set to AWS, and click on the Source tab."
+msgstr "ソースが AWS に設定されたグループをクリックして、ソースタブをクリックします。"
+
+#: ../../source/tipsandtricks.rst:231
+msgid "In the \"Source Variables\" box, enter: ``vpc_destination_variable: private_ip_address``"
+msgstr "「ソース変数」ボックスで ``vpc_destination_variable: private_ip_address`` を入力します。"
+
+#: ../../source/tipsandtricks.rst:233
+msgid "Save and trigger an update of the group. You should now be able to see all of your VPC instances."
+msgstr "保存して、グループの更新をトリガーします。VPC インスタンスすべてを表示できるはずです。"
+
+#: ../../source/tipsandtricks.rst:237
+msgid "The controller must be running inside the VPC with access to those instances in order to usefully configure them."
+msgstr "有効なインスタンスを設定する場合には、コントローラーは、インスタンスへのアクセス権がある VPC 内で実行している必要があります。"
+
+#: ../../source/tipsandtricks.rst:241
+msgid "Filtering instances returned by the dynamic inventory sources in the controller"
+msgstr "コントローラーの動的なインベントリーソースによるインスタンスの絞り込み"
+
+#: ../../source/tipsandtricks.rst:248
+msgid "By default, the dynamic inventory sources in the controller (AWS, Google, etc) return all instances available to the cloud credentials being used. They are automatically joined into groups based on various attributes. For example, AWS instances are grouped by region, by tag name and value, by security groups, etc. To target specific instances in your environment, write your playbooks so that they target the generated group names. For example:"
+msgstr "デフォルトでは、コントローラーの動的インベントリーソース (AWS、Google など) は、使用するクラウド認証情報で利用できるインスタンスをすべて返します。また、各インスタンスはさまざまな属性をもとに、自動的にグループに参加します。たとえば、AWS インスタンスは地域、タグ名および値別、セキュリティーグループ別にグループ化されます。お使いの環境で特定のインスタンスを対象にするには、生成されたグループ名が対象となるように Playbook を記述します。以下に例を示します。"
+
+#: ../../source/tipsandtricks.rst:257
+msgid "You can also use the ``Limit`` field in the Job Template settings to limit a playbook run to a certain group, groups, hosts, or a combination thereof. The syntax is the same as the ``--limit parameter`` on the ansible-playbook command line."
+msgstr "ジョブテンプレート設定の ``Limit`` フィールドを使用して、特定のグループ、ホスト、グループとホストそれぞれを対象に Playbook を実行するように制限することも可能です。構文は、ansible-playbook コマンドラインの ``--limit parameter`` と同じです。"
+
+#: ../../source/tipsandtricks.rst:260
+msgid "You may also create your own groups by copying the auto-generated groups into your custom groups. Make sure that the ``Overwrite`` option is disabled on your dynamic inventory source, otherwise subsequent synchronization operations will delete and replace your custom groups."
+msgstr "自動生成されたグループをカスタムのグループにコピーして、独自のグループを作成することも可能です。動的インベントリーソースで ``Overwrite`` オプションを無効にしておくようにしてください。無効化されていない場合には、これ以降に同期操作を行うとカスタムグループが削除され、置き換えられてしまいます。"
+
+#: ../../source/tipsandtricks.rst:264
+msgid "Using an unreleased module from Ansible source with the controller"
+msgstr "Ansible ソースから提供されるリリース前のモジュールをコントローラーで使用する方法"
+
+#: ../../source/tipsandtricks.rst:270
+msgid "If there is a feature that is available in the latest Ansible core branch that you would like to leverage with your controller system, making use of it in the controller is fairly simple."
+msgstr "最新の Ansible コアブランチで利用可能な機能をお使いのコントローラーシステムに活用するのは非常に簡単です。"
+
+#: ../../source/tipsandtricks.rst:272
+msgid "First, determine which is the updated module you want to use from the available Ansible Core Modules or Ansible Extra Modules GitHub repositories."
+msgstr "はじめに、利用可能な Ansible Core Module または Ansible Extra Modules GitHub リポジトリーから更新済みのモジュールで使用するものを決定します。"
+
+#: ../../source/tipsandtricks.rst:274
+msgid "Next, create a new directory, at the same directory level of your Ansible source playbooks, named ``/library``."
+msgstr "次に、Ansible のソース Playbook (``/library``) と同じディレクトリーレベルに新しいディレクトリーを作成します。"
+
+#: ../../source/tipsandtricks.rst:276
+msgid "Once this is created, copy the module you want to use and drop it into the ``/library`` directory--it will be consumed first over your system modules and can be removed once you have updated the the stable version via your normal package manager."
+msgstr "このディレクトリーの作成後に、使用するモジュールをコピーして、``/library`` ディレクトリーにドロップします。すると、最初にこのモジュールは、お使いのシステムモジュールで使用されます。安定版の更新が済んだら、通常のパッケージマネージャーで削除できます。"
+
+#: ../../source/tipsandtricks.rst:280
+msgid "Using callback plugins with the controller"
+msgstr "コントローラーでのコールバックプラグインの使用"
+
+#: ../../source/tipsandtricks.rst:286
+msgid "Ansible has a flexible method of handling actions during playbook runs, called callback plugins. You can use these plugins with the controller to do things like notify services upon playbook runs or failures, send emails after every playbook run, etc. For official documentation on the callback plugin architecture, refer to: http://docs.ansible.com/developing_plugins.html#callbacks"
+msgstr "Ansible は、コールバックプラグインと呼ばれる方法で、Playbook の実行中にアクションを柔軟に処理できます。コントローラーでこれらのプラグインを使用して、Playbook の実行または失敗時、Playbook の実行後のメール送信時にサービス通知などを行うことができます。コールバックプラグインのアーキテクチャーに関する公式のドキュメントは、http://docs.ansible.com/developing_plugins.html#callbacks を参照してください。"
+
+#: ../../source/tipsandtricks.rst:290
+msgid "|at| does not support the ``stdout`` callback plugin because Ansible only allows one, and it is already being used by |at| for streaming event data."
+msgstr "|at| は ``stdout`` コールバックプラグインをサポートしません。Ansible では 1 つしか許可されず、ストリーミングイベントデータ関連で |at| が 1 つ使用しているためです。"
+
+#: ../../source/tipsandtricks.rst:292
+msgid "You may also want to review some example plugins, which should be modified for site-specific purposes, such as those available at: https://github.com/ansible/ansible/tree/devel/lib/ansible/plugins/callback"
+msgstr "https://github.com/ansible/ansible/tree/devel/lib/ansible/plugins/callback でサンプルのプラグインも確認してみてください。これらは、各サイトの目的に合わせて変更する必要があります。"
+
+#: ../../source/tipsandtricks.rst:295
+msgid "To use these plugins, put the callback plugin ``.py`` file into a directory called ``/callback_plugins`` alongside your playbook in your controller Project. Then, specify their paths (one path per line) in the **Ansible Callback Plugins** field of the Job settings, located towards the bottom of the screen:"
+msgstr "これらのプラグインを使用するには、コントローラープロジェクトの Playbook と一緒に、コールバックプラグインの ``.py`` ファイルを ``/callback_plugins`` と呼ばれるディレクトリーに保存します。次に、画面下部にあるジョブ設定の **Ansible コールバックプラグイン** フィールドにパス (1 行に 1 つのパス) を指定します。"
+
+#: ../../source/tipsandtricks.rst:301
+msgid "To have most callbacks shipped with Ansible applied globally, you must add them to the ``callback_whitelist`` section of your ``ansible.cfg``. If you have a custom callbacks, refer to the Ansible documentation for `Enabling callback plugins <https://docs.ansible.com/ansible/latest/plugins/callback.html#enabling-callback-plugins>`_."
+msgstr "Ansible に同梱されているコールバックの大半をグローバルには適用するには、``ansible.cfg`` の ``callback_whitelist`` セクションに追加します。カスタムコールバックがある場合は、`Enabling callback plugins <https://docs.ansible.com/ansible/latest/plugins/callback.html#enabling-callback-plugins>`_ を参照してください。"
+
+#: ../../source/tipsandtricks.rst:305
+msgid "Connecting to Windows with winrm"
+msgstr "winrm での Windows への接続"
+
+#: ../../source/tipsandtricks.rst:311
+msgid "By default controller attempts to ``ssh`` to hosts. You must add the ``winrm`` connection info to the group variables to which the Windows hosts belong.  To get started, edit the Windows group in which the hosts reside and place the variables in the source/edit screen for the group."
+msgstr "デフォルトでは、コントローラーはホストに ``ssh`` 接続します。Windows ホストが属するグループ変数に ``winrm`` の接続情報を追加する必要があります。最初に、ホストが属する Windows グループを編集して、そのグループの source/edit ページで、変数を配置します。"
+
+#: ../../source/tipsandtricks.rst:313
+msgid "To add ``winrm`` connection info:"
+msgstr "``winrm`` の接続情報の追加手順:"
+
+#: ../../source/tipsandtricks.rst:315
+msgid "Edit the properties for the selected group by clicking on the |edit| button to the right of the group name that contains the Windows servers.  In the \"variables\" section, add your connection information as such: ``ansible_connection: winrm``"
+msgstr "Windows サーバーが含まれるグループ名の右側にある |edit| ボタンをクリックして、選択したグループのプロパティーを編集します。\"変数\" セクションで、接続情報 ``ansible_connection: winrm`` を追加します。"
+
+#: ../../source/tipsandtricks.rst:317
+msgid "Once done, save your edits. If Ansible was previously attempting an SSH connection and failed, you should re-run the job template."
+msgstr "完了したら編集を保存します。Ansible が以前に SSH 接続を試行して失敗した場合には、ジョブテンプレートをもう一度実行しなおす必要があります。"
+
+#: ../../source/tipsandtricks.rst:323
+msgid "Importing existing inventory files and host/group vars into the controller"
+msgstr "既存のインベントリーファイルおよびホスト/グループ変数のコントローラーへのインポート"
+
+#: ../../source/tipsandtricks.rst:332
+msgid "To import an existing static inventory and the accompanying host and group vars into the controller, your inventory should be in a structure that looks similar to the following:"
+msgstr "既存の静的インベントリーと付属のホストおよびグループ変数をコントローラーにインポートするには、インベントリーを以下と同様の構成に設定する必要があります。"
+
+#: ../../source/tipsandtricks.rst:343
+msgid "To import these hosts and vars, run the ``awx-manage`` command:"
+msgstr "これらのホストおよび変数をインポートするには ``awx-manage`` コマンドを実行します。"
+
+#: ../../source/tipsandtricks.rst:350
+msgid "If you only have a single flat file of inventory, a file called ansible-hosts, for example, import it like the following:"
+msgstr "たとえば、ansible-hosts という名前のインベントリーのファイルがフラットファイルで 1 つしかない場合には、以下のようにインポートします。"
+
+#: ../../source/tipsandtricks.rst:357
+msgid "In case of conflicts or to overwrite an inventory named \"My Controller Inventory\", run:"
+msgstr "競合がある場合や、「My Controller Inventory」という名前のインベントリーを上書きする場合には、以下を実行します。"
+
+#: ../../source/tipsandtricks.rst:365
+msgid "If you receive an error, such as:"
+msgstr "以下のようなエラーを受信した場合:"
+
+#: ../../source/tipsandtricks.rst:371
+msgid "Create a directory to hold the hosts file, as well as the group_vars:"
+msgstr "ホストファイルおよび group_vars を保持するディレクトリーを作成します。"
+
+#: ../../source/tipsandtricks.rst:378
+msgid "Then, for each of the groups that have :vars listed, create a file called ``inventory-directory/group_vars/<groupname>`` and format the variables in YAML format."
+msgstr "次に、 :vars のリストが含まれるグループごとに、``inventory-directory/group_vars/<groupname>`` という名前のファイルを作成して、変数を YAML 形式にフォーマットします。"
+
+#: ../../source/tipsandtricks.rst:380
+msgid "Once broken out, the importer will handle the conversion correctly."
+msgstr "準備が完了したら、インポーターは正しく変換を処理します。"
+

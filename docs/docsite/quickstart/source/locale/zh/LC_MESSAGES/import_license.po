@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/import_license.rst:2
+msgid "Import a Subscription"
+msgstr "导入订阅"
+
+#: ../../../common/source/import_license.rst:3
+msgid "Available subscriptions or a subscription manifest authorize the use of the automation controller. To obtain your automation controller subscription, you can either:"
+msgstr "使用自动化控制器需要有效的订阅或一个订阅清单。要获取您的自动化控制器订阅，您可以："
+
+#: ../../../common/source/import_license.rst:5
+msgid "Provide your Red Hat or Satellite username and password on the license page."
+msgstr "在许可证页面中提供您的红帽或者 Satellite 用户名和密码。"
+
+#: ../../../common/source/import_license.rst:6
+msgid "Obtain a subscriptions manifest from your Subscription Allocations page on the customer portal. See :ref:`obtain_sub_manifest` in the |atu| for more detail."
+msgstr "从客户门户网站的订阅分配页面中获取订阅清单。详情请参阅 |atu| 中的 :ref:`obtain_sub_manifest`。"
+
+#: ../../../common/source/import_license.rst:8
+msgid "If you **have** a |rhaap| subscription, use your Red Hat customer credentials when you launch the controller to access your subscription information (see instructions below)."
+msgstr "如果您**有**一个 |rhaap| 订阅，在启动控制器时使用您的红帽客户凭证访问您的订阅信息（请参阅以下说明）。"
+
+#: ../../../common/source/import_license.rst:10
+msgid "If you **do not** have a |rhaap| subscription, you can request a trial subscription `here <https://www.redhat.com/en/technologies/management/ansible/try-it>`_ or click **Request Subscription** and follow the instructions to request one."
+msgstr "如果您还**没有** |rhaap| 订阅，您可以请求一个试用订阅 `here <https://www.redhat.com/en/technologies/management/ansible/try-it>`_或点击 **Request Subscription** 并按照说明请求订阅。"
+
+#: ../../../common/source/import_license.rst:12
+msgid "**Disconnected environments with Satellite** will be able to use the login flow on vm-based installations if they have configured subscription manager on the controller instance to connect to their Satellite instance. Recommended workarounds for disconnected environments **without Satellite** include [1] downloading a manifest from access.redhat.com in a connected environment, then uploading it to the disconnected controller instance, or [2] connecting to the Internet through a proxy server."
+msgstr "**带有 Satellite 的断开连接的环境**在配置了控制器实例的订阅管理器以连接到其 Satellite 实例的情况下，可以使用基于虚拟机安装上的登录流。对于**没有 Satellite**的断开连接的环境，推荐的临时解决方案包括 [1] 从 access.redhat.com 下载清单，然后将其上传到断开连接的 Tower 实例，或者 [2] 通过一个代理服务器连接到互联网。"
+
+#: ../../../common/source/import_license.rst:14
+msgid "In order to use a disconnected environment, it is necessary to have a valid |at| entitlement attached to your Satellite organization's manifest. This can be confirmed by using ``hammer subscription list \\--organization <org_name>``."
+msgstr "要使用断开连接的环境，需要在您的 Satellite 机构清单中附加有效的 |at| 授权。这可以使用 ``hammer subscription list \\--organization <org_name>`` 进行确认。"
+
+#: ../../../common/source/import_license.rst:16
+msgid "If you have issues with the subscription you have received, please contact your Sales Account Manager or Red Hat Customer Service at https://access.redhat.com/support/contact/customerService/."
+msgstr "如果您收到的订阅有问题，请联络您销售账户经理或红帽客户服务 https://access.redhat.com/support/contact/customerService/."
+
+#: ../../../common/source/import_license.rst:18
+msgid "When the controller launches for the first time, the Subscription screen automatically displays."
+msgstr "当控制器第一次启动时，Subscription 窗口会自动显示。"
+
+#: ../../../common/source/import_license.rst:20
+msgid "|no license|"
+msgstr "|no license|"
+
+#: ../../../common/source/import_license.rst:26
+msgid "By default, the option to retrieve and import your subscription is to upload a subscription manifest you generate from https://access.redhat.com/management/subscription_allocations. See :ref:`obtain_sub_manifest` for more detail. Once you have a subscription manifest, you can upload it by browsing to the location where the file is saved (the subscription manifest is the complete .zip file, not its component parts)."
+msgstr "默认情况下，检索和导入订阅的选项是上传您从 https://access.redhat.com/management/subscription_allocations. 生成的订阅清单。如需更多详情，请参阅 :ref:`obtain_sub_manifest`。您可以浏览到保存该文件的位置（订阅清单是完整的 .zip 文件，而不是其组件部分）。"
+
+#: ../../../common/source/import_license.rst:28
+msgid "If the **Browse** button in the subscription manifest option is grayed-out, clear the username and password fields to enable the **Browse** button."
+msgstr "如果 **Browse** 按钮是灰掉的，请清除用户名和密码字段以启用 **Browse** 按钮。"
+
+#: ../../../common/source/import_license.rst:30
+msgid "Alternatively, you can choose the option to enter your Red Hat customer credentials using your username and password. Use your Satellite username/password if your controller cluster nodes are registered to Satellite via Subscription Manager. Once you entered your credentials, click **Get Subscriptions**."
+msgstr "或者，您还可以使用您的用户名和密码作为您的红帽客户凭证。如果您的控制器集群节点通过 Subscription Manager 注册到 Satellite，请使用您的 Satellite 用户名和密码。在输入您的凭证信息后，点 **Get Subscriptions**。"
+
+#: ../../../common/source/import_license.rst:33
+msgid "The subscription metadata is then retrieved from the RHSM/Satellite API, or from the manifest provided."
+msgstr "然后，订阅元数据从 RHSM/Satellite API 或提供的清单中检索。"
+
+#: ../../../common/source/import_license.rst:35
+msgid "If it is a subscription manifest, and multiple subscription counts were applied in a single installation, the controller will combine the counts but use the earliest expiration date as the expiry (at which point you will need to refresh your subscription)."
+msgstr "如果使用一个订阅清单，且在单一安装中应用了多个订阅计数，控制器将合并计数，但会使用最早的过期日期作为过期日期（此时，您需要刷新您的订阅）。"
+
+#: ../../../common/source/import_license.rst:37
+msgid "If you entered your credential information (username/password), the controller retrieves your configured subscription service. Then it prompts you to choose the subscription you want to run (the example below shows multiple subscriptions) and entitles the controller with that metadata. You can log in over time and retrieve new subscriptions if you have renewed."
+msgstr "如果您输入了凭证信息（用户名/密码），控制器会检索您配置的订阅服务。然后，它会提示您选择要运行的订阅（以下示例显示了多个订阅），并赋予使用这个元数据的控制器。如果您续订了您的服务，可以过一段时间登录并检索新的订阅。"
+
+#: ../../../common/source/import_license.rst:39
+msgid "When your subscription expires (you can check this in the Subscription details of the Subscription settings window), you will need to renew it in the controller by one of these two methods."
+msgstr "当您的订阅过期时（您可以在订阅设置窗口的订阅详情中查看过期情况），需要使用这两种方法之一在控制器中更新它。"
+
+#: ../../../common/source/import_license.rst:43
+msgid "If you encounter the following error message, you will need the proper permissions required for the Satellite user with which the controller admin uses to apply a subscription."
+msgstr "如果您遇到以下出错信息，则需要 Satellite 用户的适当权限，以供控制器管理员应用订阅。"
+
+#: ../../../common/source/import_license.rst:47
+msgid "The Satellite username/password is used to query the Satellite API for existing subscriptions. From the Satellite API, the automation controller gets back some metadata about those subscriptions, then filter through to find valid subscriptions that you could apply, which are then displayed as valid subscription options in the UI."
+msgstr "Satellite 用户名/密码用于查询 Satellite API 现有订阅。在 Satellite API 中，自动化控制器会重新找到有关这些订阅的一些元数据，然后进行过滤以查找可应用的有效订阅选项，然后在 UI 中显示为有效订阅选项。"
+
+#: ../../../common/source/import_license.rst:49
+msgid "The following Satellite roles grant proper access:"
+msgstr "以下 Satellite 角色授予适当的访问权限："
+
+#: ../../../common/source/import_license.rst:51
+msgid "Custom with ``view_subscriptions`` and ``view_organizations`` filter"
+msgstr "Custom，带有 ``view_subscriptions`` 和 ``view_organizations`` 过滤"
+
+#: ../../../common/source/import_license.rst:52
+msgid "Viewer"
+msgstr "Viewer"
+
+#: ../../../common/source/import_license.rst:53
+msgid "Administrator"
+msgstr "Administrator"
+
+#: ../../../common/source/import_license.rst:54
+msgid "Organization Admin"
+msgstr "Organization Admin"
+
+#: ../../../common/source/import_license.rst:55
+msgid "Manager"
+msgstr "Manager"
+
+#: ../../../common/source/import_license.rst:57
+msgid "As the *Custom* role is the most restrictive of these, this is the recommend role to use for your controller integration. Refer to the `Satellite documentation <https://access.redhat.com/documentation/en-us/red_hat_satellite/6.8/html/administering_red_hat_satellite/chap-Red_Hat_Satellite-Administering_Red_Hat_Satellite-Users_and_Roles#sect-Red_Hat_Satellite-Administering_Red_Hat_Satellite-Users_and_Roles-Creating_and_Managing_Roles>`_ on managing users and roles for more detail."
+msgstr "因为 *Custom* 角色是最严格的，所以这是用于控制器集成的推荐角色。如需更多详情，请参阅管理用户和角色的 `Satellite documentation <https://access.redhat.com/documentation/en-us/red_hat_satellite/6.8/html/administering_red_hat_satellite/chap-Red_Hat_Satellite-Administering_Red_Hat_Satellite-Users_and_Roles#sect-Red_Hat_Satellite-Administering_Red_Hat_Satellite-Users_and_Roles-Creating_and_Managing_Roles>`_。"
+
+#: ../../../common/source/import_license.rst:59
+msgid "The System Administrator role is not equivalent to the Administrator user checkbox, and will not provide sufficient permissions to access the subscriptions API page."
+msgstr "System Administrator 并不等于选择了 Administrator 用户复选框，它并没有提供访问订阅 API 页面的足够权限。"
+
+#: ../../../common/source/import_license.rst:61
+msgid "Click **Next** to proceed to **Tracking and Insights**. Tracking and insights collect data to help Red Hat improve the product by delivering you a much better user experience. For more information about data collection, refer to :ref:`usability_data_collection`. This option is checked by default, but you may opt out of any of the following:"
+msgstr "点 **Next** 进入 **Tracking and Insights**。Tracking and insights 用来收集数据来帮助红帽改进产品来提供更好的用户体验。如需了解与数据收集相关的更多信息，请参阅 :ref:`usability_data_collection`。数据收集功能会被默认启用，但您可以取消相关的功能："
+
+#: ../../../common/source/import_license.rst:63
+msgid "**User analytics** collects data from the controller User Interface."
+msgstr "**User analytics** 从控制器用户界面收集数据。"
+
+#: ../../../common/source/import_license.rst:64
+msgid "**Insights Analytics** provides a high level analysis of your automation with |at|, which is used to help you identify trends and anomalous use of the controller. For opt-in of |AA| to have any effect, your instance of |at| **must** be running on |rhel|. See instructions described in the :ref:`user_data_insights` section. If you select to opt-in for this option, the screen expands and prompts for a username and password to enable Insights, if applicable."
+msgstr "**Insights Analytics** 提供对您使用的 |at| 的自动化的高级分析，该分析可用来帮助您辨别控制器使用的倾向。为了使 |AA| 起作用，您的 |at| 实例**必须**运行在 |rhel| 上。详情请参阅 :ref:`user_data_insights` 部分。如果您选择使用这个选项，该界面会被扩展并提示输入一个用户名和密码来启用 Insights（如果适用）。"
+
+#: ../../../common/source/import_license.rst:68
+msgid "You may change your analytics data collection preferences at any time, as described in the :ref:`usability_data_collection` section."
+msgstr "您可以随时更改您的分析数据收集设置，如 :ref:`usability_data_collection` 部分所述。"
+
+#: ../../../common/source/import_license.rst:70
+msgid "After you have specified your tracking and insights preferences, click **Next** to proceed to the End User Agreement."
+msgstr "在设置了您的 tracking and insights 设置后，点 **Next** 进入 End User Agreement 步骤。"
+
+#: ../../../common/source/import_license.rst:72
+msgid "Review and check the **I agree to the End User License Agreement** checkbox and click **Submit**."
+msgstr "检查后选中 **I agree to the End User License Agreement** 选项，点 **Submit**。"
+
+#: ../../../common/source/import_license.rst:74
+msgid "Once your subscription has been accepted, the controller briefly displays the subscription details and navigates you to the Dashboard of the |at| interface. For later reference, you can return to this screen by clicking **Settings** from the left navigation bar and select **Subscription settings** from the Subscription option."
+msgstr "在您的订阅被接受后，控制器会短暂显示订阅详情信息并进入 |at| 界面的仪表板。以后如果需要，可以通过点击左侧导航栏中的 **Settings** 并从 Subscription 选择中选择 **Subscription settings**"
+
+#: ../../../common/source/import_license.rst:77
+msgid "|license accepted|"
+msgstr "|license accepted|"
+
+#: ../../../common/source/import_license.rst:81
+msgid "A status of *Compliant* indicates your subscription is in compliance with the number of hosts you have automated within your subscription count. Otherwise, your status will show an *Out of Compliance* status, indicating you have exceeded the number of hosts in your subscription."
+msgstr "*Compliant* 状态代表您已进行自动化的主机数量符合您的订阅中规定的数量。否则，状态会显示为 *Out of Compliance*，表明您已超过订阅中规定的主机数量。"
+

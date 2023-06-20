@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.7.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-23 21:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../../common/source/proot_func_variables.rst:2
+msgid "Bubblewrap functionality and variables"
+msgstr "Bubblewrap 機能および変数"
+
+#: ../../../common/source/proot_func_variables.rst:9
+msgid "The bubblewrap functionality in |at| limits which directories on the Tower file system are available for playbooks to see and use during playbook runs. You may find that you need to customize your bubblewrap settings in some cases. To fine tune your usage of bubblewrap, there are certain variables that can be set."
+msgstr "|at| の bubblewrap 機能により、Tower ファイルシステムのどのディレクトリーが Playbook に表示され、また Playbook の実行時に使用できるかを制限します。場合によっては bubblewrap 設定をカスタマイズする必要がある場合もあります。bubblewrap の使用を微調整するために、いくつかの変数を設定することができます。"
+
+#: ../../../common/source/proot_func_variables.rst:11
+msgid "To disable or enable bubblewrap support for running jobs (playbook runs only), ensure you are logged in as the Admin user:"
+msgstr "bubblewrap がジョブの実行をサポートしないように無効化または有効化するには (Playbook の実行のみ)、管理ユーザーとしてログインしていることを確認してください。"
+
+#: ../../../common/source/proot_func_variables.rst:13
+msgid "Click **Settings** from the left navigation bar then click to select **Jobs settings** from the Jobs option."
+msgstr "左のナビゲーションバーで **設定** をクリックし、ジョブオプションから **ジョブ設定** を選択します。"
+
+#: ../../../common/source/proot_func_variables.rst:14
+msgid "At the bottom of the Jobs settings screen, click **Edit**."
+msgstr "ジョブ設定画面下部で、**編集** をクリックします。"
+
+#: ../../../common/source/proot_func_variables.rst:15
+msgid "In the **Enable Job Isolation**, change the toggle button selection to **OFF** to disable bubblewrap support or select **ON** to enable it."
+msgstr "「ジョブの分離の有効化」で、トグルボタンの選択を **OFF** に変更すると、bubblewrap サポートを無効にするか、**ON** を選択して有効にします。"
+
+#: ../../../common/source/proot_func_variables.rst:21
+msgid "By default, the Tower will use the system's ``tmp`` directory (``/tmp`` by default) as its staging area. This can be changed in the **Job Execution Path** field of the Configure tower screen, or by updating the following entry in the settings file:"
+msgstr "デフォルトでは、Tower はシステムの ``tmp`` ディレクトリー (デフォルトは ``/tmp``) をステージング領域として使用します。これは、「Configure Tower (Tower の設定)」画面の **Job Execution Path (ジョブの実行パス)** フィールドからか、または設定ファイルで以下のエントリーを更新して変更できます。"
+
+#: ../../../common/source/proot_func_variables.rst:23
+msgid "``AWX_PROOT_BASE_PATH = \"/opt/tmp\"``"
+msgstr "``AWX_PROOT_BASE_PATH = \"/opt/tmp\"``"
+
+#: ../../../common/source/proot_func_variables.rst:25
+msgid "If there is other information on the system that is sensitive and should be hidden, you can specify those in the Configure Tower screen in the **Paths to Hide From Isolated Jobs** or by updating the following entry in the settings file:"
+msgstr "システム上に機密で非表示にすべきその他の情報がある場合には、「Configure Tower (Tower の設定)」画面の **分離されたジョブから非表示にするパス** で指定するか、または設定ファイルで以下のエントリーを更新して指定することができます。"
+
+#: ../../../common/source/proot_func_variables.rst:27
+msgid "``AWX_PROOT_HIDE_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_PROOT_HIDE_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/proot_func_variables.rst:31
+msgid "If there are any directories that should specifically be exposed, you can specify those in the Configure Tower screen in the **Paths to Expose to Isolated Jobs** or by updating the following entry in the settings file:"
+msgstr "とくに公開する必要のあるディレクトリーがある場合には、「Configure Tower (Tower の設定)」画面の **分離されたジョブの公開するパス** に指定するか、または設定ファイルで以下のエントリーを更新して指定することができます。"
+
+#: ../../../common/source/proot_func_variables.rst:33
+msgid "``AWX_PROOT_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_PROOT_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/proot_func_variables.rst:36
+msgid "The primary file you may want to add to ``AWX_PROOT_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "Playbook が ``/var/lib/awx/.ssh`` で定義した鍵や設定を使用する必要がある場合には、このファイルを主要ファイルとして、``AWX_PROOT_SHOW_PATHS`` に追加してください。"
+
+#: ../../../common/source/proot_func_variables.rst:38
+msgid "The above fields can be found in the Jobs Settings window:"
+msgstr "上記のフィールドは、ジョブ設定ウィンドウで確認できます。"
+
+#: ../../../common/source/proot_func_variables.rst:42
+msgid "If you made changes in the settings file, be sure to restart services with the ``automation-controller-service restart`` command after your changes have been saved."
+msgstr "設定ファイルに変更を加えた場合には、変更の保存後に ``automation-controller-service restart`` コマンドを使用してサービスを再起動するようにしてください。"
+
+#~ msgid "Click the Settings (|settings|) icon from the left navigation bar."
+#~ msgstr "左のナビゲーションバーから設定 (|settings|) アイコンをクリックします。"
+
+#~ msgid "Click the **Jobs** tab."
+#~ msgstr "**ジョブ** タブをクリックします。"
+

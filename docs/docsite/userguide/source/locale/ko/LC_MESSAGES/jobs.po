@@ -1,0 +1,672 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/jobs.rst:4
+msgid "Jobs"
+msgstr "작업"
+
+#: ../../source/jobs.rst:9
+msgid "A :term:`job` is an instance of |at| launching an Ansible playbook against an inventory of hosts."
+msgstr ":term:`job`은 호스트 인벤토리에 대해 Ansible 플레이북을 시작하는 |at|의 인스턴스입니다."
+
+#: ../../source/jobs.rst:11
+msgid "The **Jobs** link displays a list of jobs and their statuses--shown as completed successfully or failed, or as an active (running) job. The default view is collapsed (**Compact**) with the job name, status, job type, and start/finish times, but you can expand to see more information. You can sort this list by various criteria, and perform a search to filter the jobs of interest."
+msgstr "**작업** 링크에는 작업 목록과 해당 상태가 표시되며, 상태는 완료, 실패 또는 활성(실행 중인) 작업으로 표시됩니다. 기본 보기는 작업 이름, 상태, 작업 유형 및 시작/종료 시간으로 축소(**압축**)되지만 확장하여 자세한 정보를 볼 수 있습니다. 이 목록을 다양한 기준에 따라 정렬하고 검색을 수행하여 관심 있는 작업을 필터링할 수 있습니다."
+
+#: ../../source/jobs.rst:14
+msgid "|Jobs - home with example job|"
+msgstr "|Jobs - home with example job|"
+
+#: ../../source/jobs.rst:20
+msgid "Actions you can take from this screen include viewing the details and standard output of a particular job, relaunching (|launch|) jobs, or removing selected jobs. The relaunch operation only applies to relaunches of playbook runs and does not apply to project/inventory updates, system jobs, workflow jobs, etc."
+msgstr "이 화면에서 수행할 수 있는 작업에는 특정 작업의 세부 정보 및 표준 출력 보기, (|launch|) 작업 다시 시작하기 또는 선택한 작업 제거가 포함됩니다. 다시 시작 작업은 플레이북 실행 다시 시작에만 적용되며 프로젝트/인벤토리 업데이트, 시스템 작업, 워크플로우 작업 등에는 적용되지 않습니다."
+
+#: ../../source/jobs.rst:28
+msgid "When a job relaunches, you are directed the Jobs Output screen as the job runs. Clicking on any type of job also takes you to the Job Output View for that job, where you can filter jobs by various criteria:"
+msgstr "작업이 다시 시작되면 작업이 실행될 때 작업 출력 화면이 표시됩니다. 또한 작업 유형을 누르면 해당 작업에 대한 작업 출력 보기로 이동하여 다양한 기준으로 작업을 필터링할 수 있습니다."
+
+#: ../../source/jobs.rst:34
+msgid "The **Stdout** option is the default display that shows the job processes and output"
+msgstr "**표준 출력** 옵션은 작업 프로세스 및 출력을 표시하는 기본 디스플레이입니다."
+
+#: ../../source/jobs.rst:35
+msgid "The **Event** option allows you to filter by the event(s) of interest, such as errors, host failures, host retries, items skipped, etc. You can include as many events in the filter as necessary."
+msgstr "**이벤트** 옵션을 사용하면 오류, 호스트 실패, 호스트 재시도, 건너뛰기된 항목 등 관심 이벤트로 필터링할 수 있습니다. 필요에 따라 이벤트를 필터에 포함할 수 있습니다."
+
+#: ../../source/jobs.rst:39
+msgid "The **Advanced** option is a refined search that allows you a combination of including or excluding criteria, searching by key, or by lookup type. For details about using Search, refer to the :ref:`ug_search` chapter."
+msgstr "**고급** 옵션은 기준을 포함하거나 제외하거나, 키로 검색하거나 조회 유형으로 조합할 수 있는 세분화된 검색입니다. 검색 사용법에 대한 자세한 내용은 :ref:`ug_search` 장을 참조하십시오."
+
+#: ../../source/jobs.rst:43
+msgid "Inventory Sync Jobs"
+msgstr "인벤토리 동기화 작업"
+
+#: ../../source/jobs.rst:50
+msgid "When an inventory sync is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging. The ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` is set to ``False`` by default for all playbook runs. This matches Ansible's default behavior. This does not display task arguments in task headers in the Job Detail interface to avoid leaking certain sensitive module parameters to stdout.  If you wish to restore the prior behavior (despite the security implications), you can set ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` to ``True`` via the ``AWX_TASK_ENV`` configuration setting. For more details, refer to the `ANSIBLE_DISPLAY_ARGS_TO_STDOUT`_."
+msgstr "인벤토리 동기화가 실행되면 전체 결과가 출력 탭에 자동으로 표시됩니다. 해당 결과는 Ansible 명령행을 통해 실행하는 경우 볼 수 있는 것과 동일한 정보이며, 디버깅에 유용할 수 있습니다. ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT``은 기본적으로 모든 플레이북 실행에 대해 ``False``로 설정되어 있습니다. 이러한 설정은 Ansible의 기본 동작과 일치합니다. 이렇게 하면 작업 세부 정보 인터페이스의 작업 헤더에 작업 인수가 표시되지 않으므로 표준 출력에 민감한 특정 모듈 매개변수가 유출되지 않습니다.  (보안에 미치는 영향에도 불구하고) 이전 동작을 복원하려면 ``AWX_TASK_ENV`` 구성 설정을 통해 ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT``을 ``True``로 설정할 수 있습니다. 자세한 내용은 `ANSIBLE_DISPLAY_ARGS_TO_STDOUT`_를 참조하십시오."
+
+#: ../../source/jobs.rst:55
+msgid "The icons at the top right corner of the Output tab allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "출력 탭의 오른쪽 상단에 있는 아이콘을 사용하여 작업을 다시 시작 (|launch|)하거나, 작업 출력을 다운로드하거나(|download|) 작업을 삭제 (|delete|)할 수 있습니다."
+
+#: ../../source/jobs.rst:63
+msgid "|job details example of inventory sync|"
+msgstr "|job details example of inventory sync|"
+
+#: ../../source/jobs.rst:68
+msgid "An inventory update can be performed while a related job is running. In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "관련 작업이 실행되는 동안 인벤토리 업데이트를 수행할 수 있습니다. 큰 프로젝트(약 10GB)가 있는 경우 ``/tmp``의 디스크 공간이 문제가 될 수 있습니다."
+
+#: ../../source/jobs.rst:72
+msgid "Inventory sync details"
+msgstr "인벤토리 동기화 세부 정보"
+
+#: ../../source/jobs.rst:74
+#: ../../source/jobs.rst:262
+msgid "Access the **Details** tab to provide details about the job execution."
+msgstr "**세부 정보** 탭에 액세스하여 작업 실행에 대한 세부 정보를 제공합니다."
+
+#: ../../source/jobs.rst:78
+#: ../../source/jobs.rst:120
+#: ../../source/jobs.rst:267
+msgid "Notable details of the job executed are:"
+msgstr "실행된 작업의 주요 세부 사항은 다음과 같습니다."
+
+#: ../../source/jobs.rst:80
+#: ../../source/jobs.rst:122
+#: ../../source/jobs.rst:269
+msgid "**Status**: Can be any of the following:"
+msgstr "**상태**: 다음 중 하나일 수 있습니다."
+
+#: ../../source/jobs.rst:82
+msgid "**Pending** - The inventory sync has been created, but not queued or started yet. Any job, not just inventory source syncs, will stay in pending until it’s actually ready to be run by the system.  Reasons for inventory source syncs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**보류 중** - 인벤토리 동기화가 생성되었지만 아직 대기열에 추가되거나 시작되지 않았습니다. 인벤토리 소스 동기화뿐만 아니라 모든 작업은 시스템에서 실제로 실행할 준비가 될 때까지 보류 중 상태로 유지됩니다.  인벤토리 소스 동기화가 준비되지 않은 이유는 현재 실행 중인 종속 항목이 있거나(다음 단계를 실행하려면 모든 종속 항목을 완료해야 함) 구성된 위치에서 실행하는 데 필요한 용량이 충분하지 않기 때문입니다."
+
+#: ../../source/jobs.rst:83
+msgid "**Waiting** - The inventory sync is in the queue waiting to be executed."
+msgstr "**대기 중** - 인벤토리 동기화가 대기열에 있으며 실행 대기 중입니다."
+
+#: ../../source/jobs.rst:84
+msgid "**Running** - The inventory sync is currently in progress."
+msgstr "**실행 중** - 인벤토리 동기화가 현재 진행 중입니다."
+
+#: ../../source/jobs.rst:85
+msgid "**Successful** - The inventory sync job succeeded."
+msgstr "**성공** - 인벤토리 동기화 작업이 성공했습니다."
+
+#: ../../source/jobs.rst:86
+msgid "**Failed** - The inventory sync job failed."
+msgstr "**실패** - 인벤토리 동기화 작업에 실패했습니다."
+
+#: ../../source/jobs.rst:88
+msgid "**Inventory**: The name of the associated inventory group."
+msgstr "**인벤토리**: 연결된 인벤토리 그룹의 이름입니다."
+
+#: ../../source/jobs.rst:90
+msgid "**Source**: The type of cloud inventory."
+msgstr "**소스**: 클라우드 인벤토리의 유형입니다."
+
+#: ../../source/jobs.rst:92
+msgid "**Inventory Source Project**: The project used as the source of this inventory sync job."
+msgstr "**인벤토리 프로젝트**: 이 인벤토리 동기화 작업의 소스로 사용되는 프로젝트입니다."
+
+#: ../../source/jobs.rst:94
+msgid "**Execution Environment**: The |ee| used."
+msgstr "**실행 환경**: |ee| 사용"
+
+#: ../../source/jobs.rst:96
+msgid "**Execution node**: The node used to execute the job."
+msgstr "**실행 노드**: 작업을 실행하는 데 사용하는 노드입니다."
+
+#: ../../source/jobs.rst:98
+msgid "**Instance Group**: The name of the instance group used with this job (controller is the default instance group)."
+msgstr "**인스턴스 그룹**: 이 작업에 사용되는 인스턴스 그룹의 이름입니다(컨트롤러는 기본 인스턴스 그룹임)."
+
+#: ../../source/jobs.rst:100
+#: ../../source/jobs.rst:148
+#: ../../source/jobs.rst:296
+msgid "By clicking on these items, where appropriate, you can view the corresponding job templates, projects, and other objects."
+msgstr "이러한 항목을 클릭하면(해당되는 경우) 해당 작업 템플릿, 프로젝트 및 기타 오브젝트를 볼 수 있습니다."
+
+#: ../../source/jobs.rst:104
+msgid "SCM Inventory Jobs"
+msgstr "SCM 인벤토리 작업"
+
+#: ../../source/jobs.rst:109
+msgid "When an inventory sourced from an SCM is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging. The icons at the top right corner of the Output tab allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "SCM에서 소싱된 인벤토리가 실행되면 전체 결과가 출력 탭에 자동으로 표시됩니다. 해당 결과는 Ansible 명령행을 통해 실행하는 경우 볼 수 있는 것과 동일한 정보이며, 디버깅에 유용할 수 있습니다. 출력 탭의 오른쪽 상단에 있는 아이콘을 사용하여 작업을 다시 시작 (|launch|)하거나, 작업 출력을 다운로드하거나(|download|) 작업을 삭제 (|delete|)할 수 있습니다."
+
+#: ../../source/jobs.rst:114
+msgid "SCM inventory details"
+msgstr "SCM 인벤토리 세부 정보"
+
+#: ../../source/jobs.rst:116
+msgid "Access the **Details** tab to provide details about the job execution and its associated project."
+msgstr "**세부 정보** 탭에 액세스하여 작업 실행 및 관련 프로젝트에 대한 세부 정보를 제공합니다."
+
+#: ../../source/jobs.rst:124
+msgid "**Pending** - The SCM job has been created, but not queued or started yet. Any job, not just SCM jobs, will stay in pending until it’s actually ready to be run by the system. Reasons for SCM jobs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**보류 중** - SCM 작업이 생성되었지만 아직 대기열에 추가되거나 시작되지 않았습니다. SCM 작업뿐만 아니라 모든 작업은 시스템에서 실제로 실행할 준비가 될 때까지 보류 중 상태로 유지됩니다. SCM 작업이 준비되지 않은 이유는 현재 실행 중인 종속 항목이 있거나(다음 단계를 실행하려면 모든 종속 항목을 완료해야 함) 구성된 위치에서 실행하는 데 필요한 용량이 충분하지 않기 때문입니다."
+
+#: ../../source/jobs.rst:125
+msgid "**Waiting** - The SCM job is in the queue waiting to be executed."
+msgstr "**대기 중** - SCM 작업이 대기열에 있으며 실행 대기 중입니다."
+
+#: ../../source/jobs.rst:126
+msgid "**Running** - The SCM job is currently in progress."
+msgstr "**실행 중** - SCM 작업이 현재 진행 중입니다."
+
+#: ../../source/jobs.rst:127
+msgid "**Successful** - The last SCM job succeeded."
+msgstr "**성공** - 마지막 SCM 작업에 성공했습니다."
+
+#: ../../source/jobs.rst:128
+msgid "**Failed** - The last SCM job failed."
+msgstr "**실패** - 마지막 SCM 작업에 실패했습니다."
+
+#: ../../source/jobs.rst:131
+msgid "**Job Type**: SCM jobs display Source Control Update."
+msgstr "**작업 유형**: SCM 작업에 소스 제어 업데이트가 표시됩니다."
+
+#: ../../source/jobs.rst:133
+msgid "**Project**: The name of the project."
+msgstr "**프로젝트**: 프로젝트의 이름입니다."
+
+#: ../../source/jobs.rst:135
+msgid "**Project Status**: Indicates whether the associated project was successfully updated."
+msgstr "**프로젝트 상태**: 연결된 프로젝트가 성공적으로 업데이트되었는지가 표시됩니다."
+
+#: ../../source/jobs.rst:137
+msgid "**Revision**: Indicates the revision number of the sourced project that was used in this job."
+msgstr "**수정 사항**: 이 작업에서 사용된 원본 프로젝트의 수정 사항 번호를 나타냅니다."
+
+#: ../../source/jobs.rst:139
+msgid "**Execution Environment**: Specifies the |ee| used to run this job."
+msgstr "**실행 환경**: 이 작업을 실행하는 데 사용되는 |ee|을/를 지정합니다."
+
+#: ../../source/jobs.rst:141
+msgid "**Execution Node**: Indicates the node on which the job ran."
+msgstr "**실행 노드**: 작업이 실행된 노드를 나타냅니다."
+
+#: ../../source/jobs.rst:143
+msgid "**Instance Group**: Indicates the instance group on which the job ran, if specified."
+msgstr "**인스턴스 그룹**: 지정된 경우 작업이 실행된 인스턴스 그룹을 나타냅니다."
+
+#: ../../source/jobs.rst:145
+msgid "**Job Tags**: Tags show the various job operations executed."
+msgstr "**작업 태그**: 태그는 실행된 다양한 작업 실행 상태를 보여줍니다."
+
+#: ../../source/jobs.rst:152
+msgid "Playbook Run Jobs"
+msgstr "플레이북 실행 작업"
+
+#: ../../source/jobs.rst:157
+msgid "When a playbook is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging."
+msgstr "플레이북이 실행되면 전체 결과가 출력 탭에 자동으로 표시됩니다. 해당 결과는 Ansible 명령행을 통해 실행하는 경우 볼 수 있는 것과 동일한 정보이며, 디버깅에 유용할 수 있습니다."
+
+#: ../../source/jobs.rst:161
+msgid "The events summary captures a tally of events that were run as part of this playbook:"
+msgstr "이벤트 요약에는 이 플레이북의 일부로 실행된 이벤트의 총계가 포함됩니다."
+
+#: ../../source/jobs.rst:163
+msgid "the number of times this playbook has ran in the **Plays** field"
+msgstr "이 플레이북이 **Plays** 필드에서 실행된 횟수"
+
+#: ../../source/jobs.rst:165
+msgid "the number of tasks associated with this playbook in the **Tasks** field"
+msgstr "**작업** 필드에서 이 플레이북과 관련된 작업 수"
+
+#: ../../source/jobs.rst:167
+msgid "the number of hosts associated with this playbook in the **Hosts** field"
+msgstr "**호스트** 필드에서 이 플레이북과 관련된 호스트 수"
+
+#: ../../source/jobs.rst:169
+msgid "the amount of time it took to complete the playbook run in the **Elapsed** field"
+msgstr "**경과 시간** 필드에서 플레이북 실행을 완료하는 데 걸리는 시간"
+
+#: ../../source/jobs.rst:174
+msgid "The icons next to the events summary allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "이벤트 요약 옆에 있는 아이콘을 사용하면 작업을 다시 시작 (|launch|)하거나, 작업 출력을 다운로드(|download|)하거나 작업을 삭제(|delete|)할 수 있습니다."
+
+#: ../../source/jobs.rst:176
+msgid "The host status bar runs across the top of the Output view. Hover over a section of the host status bar and the number of hosts associated with that particular status displays."
+msgstr "호스트 상태 표시줄은 출력 보기의 맨 위에서 실행됩니다. 호스트 상태 표시줄의 섹션 위로 마우스를 가져가면 해당 특정 상태와 연결된 호스트 수가 표시됩니다."
+
+#: ../../source/jobs.rst:178
+msgid "|Job - All Host Events|"
+msgstr "|Job - All Host Events|"
+
+#: ../../source/jobs.rst:183
+msgid "The output for a Playbook job is also accessible after launching a job from the **Jobs** tab of its Job Templates page."
+msgstr "Playbook 작업의 출력은 작업 템플릿 페이지의 **작업** 탭에서 작업을 시작한 후에도 액세스할 수 있습니다."
+
+#: ../../source/jobs.rst:185
+msgid "Clicking on the various line item tasks in the output, you can view its host details."
+msgstr "출력에서 다양한 행 항목 작업을 클릭하면 호스트 세부 정보를 볼 수 있습니다."
+
+#: ../../source/jobs.rst:188
+msgid "Search"
+msgstr "검색"
+
+#: ../../source/jobs.rst:190
+msgid "Use Search to look up specific events, hostnames, and their statuses. To filter only certain hosts with a particular status, specify one of the following valid statuses:"
+msgstr "검색을 사용하여 특정 이벤트, 호스트 이름 및 해당 상태를 조회합니다. 특정 상태의 특정 호스트만 필터링하려면 다음의 유효한 상태 중 하나를 지정합니다."
+
+#: ../../source/jobs.rst:192
+msgid "**OK**: the playbook task returned \"Ok\"."
+msgstr "**OK**: 플레이북 작업에서 \"Ok\"를 반환했습니다."
+
+#: ../../source/jobs.rst:193
+msgid "**Changed**: the playbook task actually executed. Since Ansible tasks should be written to be idempotent, tasks may exit successfully without executing anything on the host. In these cases, the task would return Ok, but not Changed."
+msgstr "**변경됨**: 플레이북 작업이 실제로 실행되었습니다. Ansible 작업은 멱등이 되도록 작성되어야 하므로 작업이 호스트에서 아무것도 실행하지 않고도 성공적으로 종료될 수 있습니다. 이 경우 작업에서 OK를 반환하지만 변경됨은 반환하지 않습니다."
+
+#: ../../source/jobs.rst:194
+msgid "**Failed**: the task failed. Further playbook execution was stopped for this host."
+msgstr "**실패**: 작업에 실패했습니다. 이 호스트에 대한 추가 플레이북 실행이 중지되었습니다."
+
+#: ../../source/jobs.rst:195
+msgid "**Unreachable**: the host was unreachable from the network or had another fatal error associated with it."
+msgstr "**연결할 수 없음**: 호스트에서 네트워크에 연결할 수 없거나 호스트와 연결된 다른 치명적인 오류가 있습니다."
+
+#: ../../source/jobs.rst:196
+msgid "**Skipped**: the playbook task was skipped because no change was necessary for the host to reach the target state."
+msgstr "**건너뜀**: 호스트가 대상 상태에 도달하는 데 필요한 변경 사항이 없기 때문에 플레이북 작업을 건너뛰었습니다."
+
+#: ../../source/jobs.rst:197
+msgid "**Rescued**: introduced in Ansible 2.8, this shows the tasks that failed and then executes a rescue section."
+msgstr "**복구됨**: Ansible 2.8에 도입된 것으로, 실패한 작업을 표시한 다음 복구 섹션을 실행합니다."
+
+#: ../../source/jobs.rst:198
+msgid "**Ignored**: introduced in Ansible 2.8, this shows the tasks that failed and have ``ignore_errors: yes`` configured."
+msgstr "**무시됨**: Ansible 2.8에 도입된 것으로, 실패하고 ``ignore_errors: yes``로 구성된 작업을 표시합니다."
+
+#: ../../source/jobs.rst:200
+msgid "These statuses also display at bottom of each Stdout pane, in a group of \"stats\" called the Host Summary fields."
+msgstr "이러한 상태는 각 표준 출력 창의 맨 아래에 호스트 요약 필드라는 \"통계\" 그룹에 표시됩니다."
+
+#: ../../source/jobs.rst:205
+msgid "The example below shows a search with only unreachable hosts."
+msgstr "아래 예제는 연결할 수 없는 호스트만 포함하는 검색을 보여 줍니다."
+
+#: ../../source/jobs.rst:209
+msgid "For more details about using the Search, refer to the :ref:`ug_search` chapter."
+msgstr "검색 사용법에 대한 자세한 내용은 :ref:`ug_search` 장을 참조하십시오."
+
+#: ../../source/jobs.rst:211
+msgid "The standard output view displays all the events that occur on a particular job. By default, all rows are expanded so that all the details are displayed. Use the collapse-all button (|collapse-all|) to switch to a view that only contains the headers for plays and tasks. Click the (|expand-all|) button to view all lines of the standard output."
+msgstr "표준 출력 뷰에는 특정 작업에서 발생하는 모든 이벤트가 표시됩니다. 기본적으로 모든 세부 정보가 표시되도록 모든 행이 펼쳐져 있습니다. 플레이 및 작업의 헤더만 포함된 뷰로 전환하려면 모두 접기 버튼(|collapse-all|)을 사용합니다. 표준 출력의 모든 행을 보려면 |expand-all| 버튼을 클릭합니다."
+
+#: ../../source/jobs.rst:216
+msgid "Alternatively, you can display all the details of a specific play or task by clicking on the arrow icons next to them. Click an arrow from sideways to downward to expand the lines associated with that play or task. Click the arrow back to the sideways position to collapse and hide the lines."
+msgstr "또는 특정 플레이나 작업 옆에 있는 화살표 아이콘을 클릭하여 모든 세부 정보를 표시할 수 있습니다. 화살표를 클릭하여 옆쪽 화살표가 아래쪽을 향하면 해당 플레이 또는 작업과 연결된 행이 펼쳐집니다. 화살표를 다시 클릭하여 옆쪽을 향하면 해당 행이 접히고 숨겨집니다."
+
+#: ../../source/jobs.rst:222
+msgid "Things to note when viewing details in the expand/collapse mode:"
+msgstr "펼치기/접기 모드에서 세부 정보를 볼 때 유의해야 할 사항은 다음과 같습니다."
+
+#: ../../source/jobs.rst:225
+msgid "Each displayed line that is not collapsed has a corresponding line number and start time."
+msgstr "접히지 않고 표시되는 각 행에는 해당 행 번호와 시작 시간이 있습니다."
+
+#: ../../source/jobs.rst:227
+msgid "An expand/collapse icon is at the start of any play or task after the play or task has completed."
+msgstr "펼치기/접기 아이콘은 플레이 또는 작업이 완료된 후 플레이 또는 작업 시작 부분에 있습니다."
+
+#: ../../source/jobs.rst:229
+msgid "If querying for a particular play or task, it will appear collapsed at the end of its completed process."
+msgstr "특정 플레이 또는 작업을 쿼리하는 경우에는 완료된 프로세스의 끝부분에 접힌 상태로 표시됩니다."
+
+#: ../../source/jobs.rst:231
+msgid "In some cases, an error message will appear, stating that the output may be too large to display. This occurs when there are more than 4000 events. Use the search and filter for specific events to bypass the error."
+msgstr "경우에 따라 출력이 너무 커서 표시할 수 없다는 오류 메시지가 표시됩니다. 이러한 오류는 이벤트가 4000개를 초과할 때 발생합니다. 특정 이벤트에서 오류를 바이패스하려면 검색 및 필터링을 사용합니다."
+
+#: ../../source/jobs.rst:233
+msgid "Click on a line of an event from the **Standard Out** pane and a **Host Events** dialog displays in a separate window. This window shows the host that was affected by that particular event."
+msgstr "**표준 아웃** 창에서 이벤트 행을 클릭하면 **호스트 이벤트** 대화 상자가 별도의 창에 표시됩니다. 이 창에는 특정 이벤트의 영향을 받는 호스트가 표시됩니다."
+
+#: ../../source/jobs.rst:235
+msgid "Upgrading to the latest versions of |aap| involves progressively migrating all historical playbook output and events. This migration process is gradual, and happens automatically in the background after installation is complete. Installations with very large amounts of historical job output (tens, or hundreds of GB of output) may notice missing job output until migration is complete. Most recent data will show up at the top of the output, followed by older events. Migrating jobs with a large amount of events may take longer than jobs with a smaller amount."
+msgstr "최신 버전의 |aap|으로 업그레이드하려면 모든 기록 플레이북 출력 및 이벤트를 점진적으로 마이그레이션해야 합니다. 이 마이그레이션 프로세스는 점진적이며 설치가 완료된 후 백그라운드에서 자동으로 수행됩니다. 기록 작업 출력 양이 매우 많은(수십 또는 수백 GB의 출력) 설치에서는 마이그레이션이 완료될 때까지 작업 출력이 누락되었을 수 있습니다. 최근 데이터가 출력 맨 위에 표시되고 오래된 이벤트가 아래에 표시됩니다. 많은 양의 이벤트가 포함된 작업을 마이그레이션하는 것은 적은 양의 작업보다 더 오래 걸릴 수 있습니다."
+
+#: ../../source/jobs.rst:239
+msgid "Host Details"
+msgstr "호스트 세부 정보"
+
+#: ../../source/jobs.rst:244
+msgid "The **Host Details** dialog shows information about the host affected by the selected event and its associated play and task:"
+msgstr "**호스트 세부 정보** 대화 상자에는 선택한 이벤트 및 연결된 플레이와 작업의 영향을 받는 호스트에 대한 정보가 표시됩니다."
+
+#: ../../source/jobs.rst:246
+msgid "the **Host**"
+msgstr "**호스트**"
+
+#: ../../source/jobs.rst:247
+msgid "the **Status**"
+msgstr "**상태**"
+
+#: ../../source/jobs.rst:248
+msgid "the type of run in the **Play** field"
+msgstr "**플레이** 필드에서 실행 유형"
+
+#: ../../source/jobs.rst:249
+msgid "the type of **Task**"
+msgstr "**작업** 유형"
+
+#: ../../source/jobs.rst:250
+msgid "if applicable, the Ansible **Module** for the task, and any *arguments* for that module"
+msgstr "해당하는 경우 작업의 Ansible **모듈** 및 해당 모듈의 모든 *인수*"
+
+#: ../../source/jobs.rst:255
+msgid "To view the results in JSON format, click on the **JSON** tab. To view the output of the task, click the **Standard Out**. To view errors from the output, click **Standard Error**."
+msgstr "결과를 JSON 형식으로 보려면 **JSON** 탭을 클릭합니다. 작업 출력을 보려면 **표준 출력**을 클릭합니다. 출력에서 오류를 보려면 **표준 오류**를 클릭합니다."
+
+#: ../../source/jobs.rst:260
+msgid "Playbook run details"
+msgstr "플레이북 실행 세부 정보"
+
+#: ../../source/jobs.rst:271
+msgid "**Pending** - The playbook run has been created, but not queued or started yet. Any job, not just playbook runs, will stay in pending until it is actually ready to be run by the system. Reasons for playbook runs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**보류 중** - 플레이북 실행이 생성되었지만 아직 대기열에 추가되거나 시작되지 않았습니다. 플레이북 실행뿐만 아니라 모든 작업은 시스템에서 실제로 실행할 준비가 될 때까지 보류 중 상태로 유지됩니다. 플레이북 실행이 준비되지 않은 이유는 현재 실행 중인 종속 항목이 있거나(다음 단계를 실행하려면 모든 종속 항목을 완료해야 함) 구성된 위치에서 실행하는 데 필요한 용량이 충분하지 않기 때문입니다."
+
+#: ../../source/jobs.rst:272
+msgid "**Waiting** - The playbook run is in the queue waiting to be executed."
+msgstr "**대기 중** - 플레이북 실행이 대기열에 있으며 실행 대기 중입니다."
+
+#: ../../source/jobs.rst:273
+msgid "**Running** - The playbook run is currently in progress."
+msgstr "**실행 중** - 플레이북 실행이 현재 진행 중입니다."
+
+#: ../../source/jobs.rst:274
+msgid "**Successful** - The last playbook run succeeded."
+msgstr "**성공** - 마지막 플레이북 실행에 성공했습니다."
+
+#: ../../source/jobs.rst:275
+msgid "**Failed** - The last playbook run failed."
+msgstr "**실패** - 마지막 플레이북 실행에 실패했습니다."
+
+#: ../../source/jobs.rst:277
+msgid "**Job Template**: The name of the job template from which this job was launched."
+msgstr "**작업 템플릿**: 이 작업이 시작된 작업 템플릿의 이름입니다."
+
+#: ../../source/jobs.rst:279
+msgid "**Inventory**: The inventory selected to run this job against."
+msgstr "**인벤토리**: 이 작업을 실행하도록 선택한 대상 인벤토리입니다."
+
+#: ../../source/jobs.rst:281
+msgid "**Project**: The name of the project associated with the launched job."
+msgstr "**프로젝트**: 시작된 작업과 관련된 프로젝트의 이름입니다."
+
+#: ../../source/jobs.rst:283
+msgid "**Project Status**: The status of the project associated with the launched job."
+msgstr "**프로젝트 상태**: 시작된 작업과 관련된 프로젝트의 상태입니다."
+
+#: ../../source/jobs.rst:285
+msgid "**Playbook**: The playbook used to launch this job."
+msgstr "**플레이북**: 이 작업을 시작하는 데 사용되는 플레이북입니다."
+
+#: ../../source/jobs.rst:287
+msgid "**Execution Environment**: The name of the |ee| used in this job."
+msgstr "**실행 환경**: 이 작업에서 사용되는 |ee| 의 이름입니다."
+
+#: ../../source/jobs.rst:289
+msgid "**Container Group**: The name of the container group used in this job."
+msgstr "**컨테이너 그룹**: 이 작업에 사용된 컨테이너 그룹의 이름입니다."
+
+#: ../../source/jobs.rst:291
+msgid "**Credentials**: The credential(s) used in this job."
+msgstr "**인증 정보**: 이 작업에서 사용되는 인증 정보입니다."
+
+#: ../../source/jobs.rst:293
+msgid "**Extra Variables**: Any extra variables passed when creating the job template are displayed here."
+msgstr "**추가 변수**: 작업 템플릿을 생성할 때 전달된 모든 추가 변수가 여기에 표시됩니다."
+
+#: ../../source/jobs.rst:303
+msgid "Automation Controller Capacity Determination and Job Impact"
+msgstr "자동화 컨트롤러 용량 결정 및 작업에 미치는 영향"
+
+#: ../../source/job_capacity.rst:2
+msgid "This section describes how to determine capacity for instance groups and its impact to your jobs. For container groups, see :ref:`ag_container_capacity` in the |ata|."
+msgstr "이 섹션에서는 인스턴스 그룹의 용량과 해당 용량이 작업에 미치는 영향에 대해 설명합니다. 컨테이너 그룹의 경우 |ata|의 :ref:`ag_container_capacity`를 참조하십시오."
+
+#: ../../source/job_capacity.rst:4
+msgid "The |at| capacity system determines how many jobs can run on an instance given the amount of resources available to the instance and the size of the jobs that are running (referred to as *Impact*). The algorithm used to determine this is based entirely on two things:"
+msgstr "|at| 용량 시스템은 인스턴스에 사용할 수 있는 리소스 양과 실행 중인 작업의 크기(*영향*이라고 함)를 기준으로 인스턴스에서 실행할 수 있는 작업 수를 결정합니다. 이를 결정하는 데 사용되는 알고리즘은 전적으로 다음 두 가지를 기반으로 합니다."
+
+#: ../../source/job_capacity.rst:6
+msgid "How much memory is available to the system (``mem_capacity``)"
+msgstr "시스템에 사용할 수 있는 메모리의 양(``mem_capacity``)"
+
+#: ../../source/job_capacity.rst:7
+msgid "How much CPU is available to the system (``cpu_capacity``)"
+msgstr "시스템에 사용할 수 있는 CPU의 양(``cpu_capacity``)"
+
+#: ../../source/job_capacity.rst:9
+msgid "Capacity also impacts Instance Groups. Since Groups are made up of instances, likewise, instances can be assigned to multiple groups. This means that impact to one instance can potentially affect the overall capacity of other Groups."
+msgstr "용량은 인스턴스 그룹에도 영향을 미칩니다. 그룹은 인스턴스로 구성되므로 인스턴스를 여러 그룹에 할당할 수도 있습니다. 즉, 한 인스턴스에 대한 영향이 다른 그룹의 전체 용량에 잠재적으로 영향을 미칠 수 있습니다."
+
+#: ../../source/job_capacity.rst:11
+msgid "Instance Groups (not instances themselves) can be assigned to be used by jobs at various levels (see :ref:`ag_clustering`). When the Task Manager is preparing its graph to determine which group a job will run on, it will commit the capacity of an Instance Group to a job that hasn’t or isn’t ready to start yet."
+msgstr "인스턴스 그룹(인스턴스 자체가 아님)은 다양한 수준의 작업에서 사용하도록 할당할 수 있습니다(:ref:`ag_clustering` 참조). 작업 관리자에서 작업을 실행할 그룹을 결정하기 위해 그래프를 준비할 때 인스턴스 그룹의 용량을 아직 시작할 준비가 되지 않은 작업으로 커밋합니다."
+
+#: ../../source/job_capacity.rst:13
+msgid "Finally, in smaller configurations, if only one instance is available for a job to run, the Task Manager will allow that job to run on the instance even if it pushes the instance over capacity. This guarantees that jobs themselves won't get stuck as a result of an under-provisioned system."
+msgstr "마지막으로 더 작은 구성에서 작업을 실행할 수 있는 인스턴스가 하나만 있는 경우, 작업 관리자는 해당 작업이 인스턴스를 용량 이상으로 푸시하더라도 인스턴스에서 실행되도록 허용합니다. 이렇게 하면 시스템이 프로비저닝되지 않아 작업 자체가 중단되지 않습니다."
+
+#: ../../source/job_capacity.rst:15
+msgid "Therefore, Capacity and Impact is not a zero-sum system relative to jobs and instances/Instance Groups."
+msgstr "따라서 용량과 영향은 작업과 인스턴스/인스턴스 그룹에 대한 제로섬 시스템이 아닙니다."
+
+#: ../../source/job_capacity.rst:17
+msgid "For information on sliced jobs and their impact to capacity, see :ref:`ug_job_slice_execution`."
+msgstr "분할된 작업 및 용량에 미치는 영향에 대한 자세한 내용은 :ref:`ug_job_slice_execution`을 참조하십시오."
+
+#: ../../source/job_capacity.rst:22
+msgid "Resource determination for capacity algorithm"
+msgstr "용량 알고리즘의 리소스 결정"
+
+#: ../../source/job_capacity.rst:24
+msgid "The capacity algorithms are defined in order to determine how many forks a system is capable of running simultaneously. This controls how many systems Ansible itself will communicate with simultaneously. Increasing the number of forks a |at| system is running will, in general, allow jobs to run faster by performing more work in parallel. The trade-off is that this will increase the load on the system, which could cause work to slow down overall."
+msgstr "용량 알고리즘은 시스템에서 동시에 실행할 수 있는 포크 수를 결정하기 위해 정의합니다. 이 알고리즘은 Ansible 자체에서 동시에 통신할 시스템 수를 제어합니다. 일반적으로 |at| 시스템이 실행 중인 포크 수를 늘리면 더 많은 작업을 병렬로 수행하여 작업을 더 빠르게 실행할 수 있습니다. 단점은 이로 인해 시스템 부하가 증가하여 작업 속도가 전반적으로 느려질 수 있다는 것입니다."
+
+#: ../../source/job_capacity.rst:26
+msgid "|At| can operate in two modes when determining capacity. ``mem_capacity`` (the default) will allow you to over-commit CPU resources while protecting the system from running out of memory. If most of your work is not CPU-bound, then selecting this mode will maximize the number of forks."
+msgstr "|At|는 용량을 결정할 때 두 가지 모드로 작동할 수 있습니다. ``mem_capacity``(기본값)를 사용하면 시스템의 메모리 부족을 방지하면서 CPU 리소스를 오버 커밋할 수 있습니다. 대부분의 작업이 CPU 종속이 아닌 경우 이 모드를 선택하면 포크 수가 최대화됩니다."
+
+#: ../../source/job_capacity.rst:30
+msgid "Memory relative capacity"
+msgstr "메모리 상대 용량"
+
+#: ../../source/job_capacity.rst:32
+msgid "``mem_capacity`` is calculated relative to the amount of memory needed per fork. Taking into account the overhead for internal components, this comes out to be about 100MB per fork. When considering the amount of memory available to Ansible jobs, the capacity algorithm will reserve 2GB of memory to account for the presence of other services. The algorithm formula for this is:"
+msgstr "``mem_capacity``는 포크당 필요한 메모리 양을 기준으로 계산됩니다. 내부 구성 요소의 오버헤드를 고려하면 포크당 약 100MB가 됩니다. 용량 알고리즘에서는 Ansible 작업에 사용할 수 있는 메모리의 양을 검토할 때 다른 서비스의 존재를 고려하여 2GB의 메모리를 예약합니다. 이에 대한 알고리즘 공식은 다음과 같습니다."
+
+#: ../../source/job_capacity.rst:38
+msgid "As an example:"
+msgstr "예를 들면 다음과 같습니다."
+
+#: ../../source/job_capacity.rst:44
+msgid "Therefore, a system with 4GB of memory would be capable of running 20 forks. The value ``mem_per_fork`` can be controlled by setting the settings value (or environment variable) ``SYSTEM_TASK_FORKS_MEM``, which defaults to 100."
+msgstr "따라서 메모리가 4GB인 시스템은 20개의 포크를 실행할 수 있습니다. 값 ``mem_per_fork``는 설정 값(또는 환경 변수) ``SYSTEM_TASK_FORKS_MEM``을 설정하여 제어할 수 있으며, 기본값은 100입니다."
+
+#: ../../source/job_capacity.rst:49
+msgid "CPU relative capacity"
+msgstr "CPU 상대 용량"
+
+#: ../../source/job_capacity.rst:51
+msgid "Often, Ansible workloads can be fairly CPU-bound. In these cases, sometimes reducing the simultaneous workload allows more tasks to run faster and reduces the average time-to-completion of those jobs."
+msgstr "Ansible 워크로드는 상당히 CPU 종속적인 경우가 많습니다. 이러한 경우 동시 워크로드를 줄이면 더 많은 작업을 더 빠르게 실행하고 해당 작업의 평균 완료 시간을 줄일 수 있습니다."
+
+#: ../../source/job_capacity.rst:53
+msgid "Just as the ``mem_capacity`` algorithm uses the amount of memory need per fork, the ``cpu_capacity`` algorithm looks at the amount of CPU resources is needed per fork. The baseline value for this is 4 forks per core. The algorithm formula for this is:"
+msgstr "``mem_capacity`` 알고리즘이 포크당 필요한 메모리 양을 사용하는 것처럼 ``cpu_capacity`` 알고리즘은 포크당 필요한 CPU 리소스의 양을 확인합니다. 기준 값은 코어당 포크 4개입니다. 이에 대한 알고리즘 공식은 다음과 같습니다."
+
+#: ../../source/job_capacity.rst:59
+msgid "For example, a 4-core system:"
+msgstr "예를 들어 4코어 시스템은 다음과 같습니다."
+
+#: ../../source/job_capacity.rst:65
+msgid "The value ``fork_per_cpu`` can be controlled by setting the settings value (or environment variable) ``SYSTEM_TASK_FORKS_CPU`` which defaults to 4."
+msgstr "값 ``fork_per_cpu``는 설정 값(또는 환경 변수) ``SYSTEM_TASK_FORKS_CPU``를 설정하여 제어할 수 있으며, 기본값은 4입니다."
+
+#: ../../source/job_capacity.rst:69
+msgid "Capacity job impacts"
+msgstr "작업이 용량에 미치는 영향"
+
+#: ../../source/job_capacity.rst:71
+msgid "When selecting the capacity, it's important to understand how each job type affects capacity."
+msgstr "용량을 선택할 때는 각 작업 유형이 용량에 미치는 영향을 이해하는 것이 중요합니다."
+
+#: ../../source/job_capacity.rst:73
+msgid "It's helpful to understand what forks mean to Ansible: https://www.ansible.com/blog/ansible-performance-tuning (see the section on \"Know Your Forks\")."
+msgstr "그러면 https://www.ansible.com/blog/ansible-performance-tuning에서 포크가 Ansible에 의미하는 바를 이해하는 데 도움이 됩니다(\"포크 알아보기\" 섹션 참조)."
+
+#: ../../source/job_capacity.rst:75
+msgid "The default forks value for Ansible is 5. However, if |at| knows that you're running against fewer systems than that, then the actual concurrency value will be lower."
+msgstr "Ansible의 기본 포크 값은 5입니다. 그러나 |at|에서 그보다 적은 수의 시스템에 대해 실행 중임을 확인하는 경우 실제 동시성 값은 더 낮아집니다."
+
+#: ../../source/job_capacity.rst:77
+msgid "When a job is run, |at| will add 1 to the number of forks selected to compensate for the Ansible parent process. So if you are running a playbook against 5 systems with a forks value of 5, then the actual forks value from the perspective of Job Impact will be 6."
+msgstr "작업이 실행되면 |at|에서 Ansible 상위 프로세스를 보완하기 위해 선택된 포크 수에 1을 추가합니다. 따라서 포크 값이 5인 시스템 5개에 대해 플레이북을 실행하는 경우, 작업이 미치는 영향의 관점에서의 실제 포크 값은 6이 됩니다."
+
+#: ../../source/job_capacity.rst:81
+msgid "Impact of job types in automation controller"
+msgstr "자동화 컨트롤러에서 작업 유형이 미치는 영향"
+
+#: ../../source/job_capacity.rst:83
+msgid "Jobs and Ad-hoc jobs follow the above model, forks + 1. If you set a fork value on your job template, your job capacity value will be the minimum of the forks value supplied, and the number of hosts that you have, plus one. The plus one is to account for the parent Ansible process."
+msgstr "jobs 및 임시 작업은 위 모델인 포크 수 + 1을 따릅니다. 작업 템플릿에 포크 값을 설정하면 작업 용량 값은 제공한 포크 값의 최솟값과 보유한 호스트 수에 1을 더한 값이 됩니다. 추가된 하나는 상위 Ansible 프로세스를 고려한 것입니다."
+
+#: ../../source/job_capacity.rst:85
+msgid "Instance capacity determines which jobs get assigned to any specific instance. Jobs and ad hoc commands use more capacity if they have a higher forks value."
+msgstr "인스턴스 용량에 따라 특정 인스턴스에 할당되는 작업이 결정됩니다. 작업 및 임시 명령은 해당 포크 값이 높을수록 용량을 더 많이 사용합니다."
+
+#: ../../source/job_capacity.rst:87
+msgid "Other job types have a fixed impact:"
+msgstr "기타 작업 유형의 영향은 다음과 같이 정해져 있습니다."
+
+#: ../../source/job_capacity.rst:89
+msgid "Inventory Updates: 1"
+msgstr "인벤토리 업데이트: 1"
+
+#: ../../source/job_capacity.rst:90
+msgid "Project Updates: 1"
+msgstr "프로젝트 업데이트: 1"
+
+#: ../../source/job_capacity.rst:91
+msgid "System Jobs: 5"
+msgstr "시스템 작업: 5"
+
+#: ../../source/job_capacity.rst:93
+msgid "If you don’t set a forks value on your job template, your job will use Ansible’s default forks value of five. Even though Ansible defaults to five forks, it will use fewer if your job has fewer than five hosts. In general, setting a forks value higher than what the system is capable of could cause trouble by running out of memory or over-committing CPU. So, the job template fork values that you use should fit on the system. If you have playbooks using 1000 forks but none of your systems individually has that much capacity, then your systems are undersized and at risk of performance or resource issues."
+msgstr "작업 템플릿에 포크 값을 설정하지 않으면 작업에서 Ansible의 기본 포크 값인 5를 사용합니다. Ansible은 기본적으로 포크 5개로 기본 설정되지만 작업의 호스트가 5개 미만인 경우 더 적게 사용됩니다. 일반적으로 포크 값을 시스템에서 사용할 수 있는 것보다 높게 설정하면 메모리가 부족하거나 CPU를 오버 커밋하여 문제가 발생할 수 있습니다. 따라서 사용하는 작업 템플릿 포크 값이 시스템에 적합해야 합니다. 포크를 1000개 사용하는 플레이북이 있지만 개별적으로 이렇게 많은 용량이 있는 시스템이 없는 경우, 시스템 크기가 부족하여 성능 또는 리소스 문제가 발생할 위험이 있습니다."
+
+#: ../../source/job_capacity.rst:97
+msgid "Selecting the right capacity"
+msgstr "적절한 용량 선택"
+
+#: ../../source/job_capacity.rst:99
+msgid "Selecting a capacity out of the CPU-bound or the memory-bound capacity limits is, in essence, selecting between the minimum or maximum number of forks. In the above examples, the CPU capacity would allow a maximum of 16 forks while the memory capacity would allow 20. For some systems, the disparity between these can be large and often times you may want to have a balance between these two."
+msgstr "CPU 종속 또는 메모리 종속 용량 제한 중에서 용량을 선택하는 일은 본질적으로 최소 또는 최대 포크 수 중에서 선택하는 것과 같습니다. 위 예에서 CPU 용량은 최대 16개의 포크를 허용하는 반면 메모리 용량은 20개를 허용합니다. 일부 시스템의 경우 이러한 용량 차이가 클 수 있으며 종종 이 둘 사이의 균형을 유지해야 할 수도 있습니다."
+
+#: ../../source/job_capacity.rst:101
+msgid "The instance field ``capacity_adjustment`` allows you to select how much of one or the other you want to consider. It is represented as a value between 0.0 and 1.0. If set to a value of 1.0, then the largest value will be used. The above example involves memory capacity, so a value of 20 forks would be selected. If set to a value of 0.0 then the smallest value will be used. A value of 0.5 would be a 50/50 balance between the two algorithms which would be 18:"
+msgstr "인스턴스 필드 ``capacity_adjustment``를 사용하면 어느 쪽의 용량을 고려할지 선택할 수 있습니다. 이 필드는 0.0에서 1.0 사이의 값으로 표시됩니다. 값을 1.0으로 설정하면 가장 큰 값이 사용됩니다. 위 예제에서는 메모리 용량을 사용하므로 포크 값 20개가 선택됩니다. 값을 0.0으로 설정하면 가장 작은 값이 사용됩니다. 값 0.5는 두 알고리즘을 50/50 비율로 적용하여 18개가 됩니다."
+
+#: ../../source/job_capacity.rst:107
+msgid "To view or edit the capacity in the user interface, select the **Instances** tab of the Instance Group."
+msgstr "사용자 인터페이스에서 용량을 보거나 편집하려면 인스턴스 그룹의 **인스턴스** 탭을 선택합니다."
+
+#: ../../source/jobs.rst:313
+msgid "Job branch overriding"
+msgstr "작업 분기 덮어쓰기"
+
+#: ../../source/job_branching.rst:3
+msgid "Projects specify the branch, tag, or reference to use from source control in the ``scm_branch`` field. These are represented by the values specified in the Project Details fields as shown."
+msgstr "프로젝트는 ``scm_branch`` 필드의 소스 제어에서 사용할 분기, 태그 또는 참조를 지정합니다. 해당 항목은 표시된 것처럼 프로젝트 세부 정보 필드에 지정된 값으로 표시됩니다."
+
+#: ../../source/job_branching.rst:7
+msgid "Projects have the option to \"Allow Branch Override\". When checked, project admins can delegate branch selection to the job templates that use that project (requiring only project ``use_role``)."
+msgstr "프로젝트에는 ‘분기 덮어쓰기 허용’ 옵션이 있습니다. 이를 선택하면 프로젝트 관리자가 분기 선택을 해당 프로젝트를 사용하는 작업 템플릿에 위임할 수 있습니다(``use_role`` 프로젝트만 필요)."
+
+#: ../../source/job_branching.rst:14
+msgid "Source tree copy behavior"
+msgstr "소스 트리 복사 동작"
+
+#: ../../source/job_branching.rst:16
+msgid "Every job run has its own private data directory. This directory contains a copy of the project source tree for the given ``scm_branch`` the job is running. Jobs are free to make changes to the project folder and make use of those changes while it is still running. This folder is temporary and is cleaned up at the end of the job run."
+msgstr "모든 작업 실행에는 자체 개인 데이터 디렉터리가 있습니다. 이 디렉터리에는 작업이 실행되고 있는 지정된 ``scm_branch``의 프로젝트 소스 트리 사본이 포함되어 있습니다. 작업에서는 프로젝트 폴더를 변경하고 실행이 계속되는 동안 이러한 변경 사항을 활용할 수 있습니다. 이 폴더는 임시이며 작업 실행이 끝날 때 정리됩니다."
+
+#: ../../source/job_branching.rst:19
+msgid "If **Clean** is checked, |at| discards modified files in its local copy of the repository through use of the ``force`` parameter in its respective Ansible modules pertaining to `git`_ or `Subversion`_."
+msgstr "**정리**를 선택하면 |at|에서 `git`_ 또는 `Subversion`_과 관련된 각 Ansible 모듈에서 ``force`` 매개변수를 사용하여 리포지터리의 로컬 사본에 있는 수정된 파일을 삭제합니다."
+
+#: ../../source/job_branching.rst:28
+msgid "Project revision behavior"
+msgstr "프로젝트 버전 동작"
+
+#: ../../source/job_branching.rst:30
+msgid "Typically, during a project update, the revision of the default branch (specified in the **SCM Branch** field of the project) is stored when updated, and jobs using that project will employ this revision. Providing a non-default **SCM Branch** (not a commit hash or tag) in a job, the newest revision is pulled from the source control remote immediately before the job starts. This revision is shown in the **Source Control Revision** field of the job and its respective project update."
+msgstr "일반적으로 프로젝트를 업데이트하는 동안 기본 분기의 버전(프로젝트의 **SCM 분기** 필드에 지정되어 있음)이 업데이트되면 해당 버전이 저장되고 해당 프로젝트를 사용하는 작업에 이 버전이 사용됩니다. 작업에 기본이 아닌 **SCM 분기** (커밋 해시 또는 태그가 아님)를 제공하면 작업이 시작되기 직전 소스 제어 원격에서 최신 버전을 가져옵니다. 이 버전은 작업의 **소스 컨트롤 버전** 및 각각의 해당 프로젝트 업데이트에 표시됩니다."
+
+#: ../../source/job_branching.rst:36
+msgid "Consequently, offline job runs are impossible for non-default branches. To be sure that a job is running a static version from source control, use tags or commit hashes. Project updates do not save the revision of all branches, only the project default branch."
+msgstr "결과적으로 기본이 아닌 분기에는 오프라인 작업을 실행할 수 없습니다. 작업이 소스 제어에서 정적 버전을 실행 중인지 확인하려면 태그 또는 커밋 해시를 사용합니다. 프로젝트 업데이트에서는모든 분기의 버전을 저장하지 않고 프로젝트 기본 분기만 저장합니다."
+
+#: ../../source/job_branching.rst:38
+msgid "The **SCM Branch** field is not validated, so the project must update to assure it is valid. If this field is provided or prompted for, the **Playbook** field of job templates will not be validated, and you will have to launch the job template in order to verify presence of the expected playbook."
+msgstr "**SCM 분기** 필드가 검증되지 않았으므로 유효성 확인을 위해 프로젝트를 업데이트해야 합니다. 이 필드가 제공되거나 메시지가 표시되면 작업 템플릿의 **플레이북** 필드가 검증되지 않으며 필요한 플레이북이 있는지 확인하려면 작업 템플릿을 시작해야 합니다."
+
+#: ../../source/job_branching.rst:41
+msgid "Git Refspec"
+msgstr "Git 참조 사양"
+
+#: ../../source/job_branching.rst:46
+msgid "The **SCM Refspec** field specifies which extra references the update should download from the remote. Examples are:"
+msgstr "**SCM 참조 사양** 필드는 업데이트 중 원격에서 다운로드해야 하는 추가 참조를 지정합니다. 예를 들면 다음과 같습니다."
+
+#: ../../source/job_branching.rst:48
+msgid "``refs/*:refs/remotes/origin/*``: fetches all references, including remotes of the remote"
+msgstr "``refs/*:refs/remotes/origin/*``: 원격의 원격을 포함하여 모든 참조를 가져옵니다."
+
+#: ../../source/job_branching.rst:49
+msgid "``refs/pull/*:refs/remotes/origin/pull/*`` (GitHub-specific): fetches all refs for all pull requests"
+msgstr "``refs/pull/*:refs/remotes/origin/pull/*``(GitHub 관련): 모든 가져오기 요청에 대해 모든 참조를 가져옵니다."
+
+#: ../../source/job_branching.rst:50
+msgid "``refs/pull/62/head:refs/remotes/origin/pull/62/head``: fetches the ref for that one GitHub pull request"
+msgstr "``refs/pull/62/head:refs/remotes/origin/pull/62/head``: 하나의 GitHub 가져오기 요청에 대한 참조를 가져옵니다."
+
+#: ../../source/job_branching.rst:52
+msgid "For large projects, you should consider performance impact when using the 1st or 2nd examples here."
+msgstr "대규모 프로젝트의 경우 첫 번째 또는 두 번째 예제를 사용할 때 성능에 미치는 영향을 고려해야 합니다."
+
+#: ../../source/job_branching.rst:54
+msgid "The **SCM Refspec** parameter affects the availability of the project branch, and can allow access to references not otherwise available. The examples above allow the user to supply a pull request from the **SCM Branch**, which would not be possible without the **SCM Refspec** field."
+msgstr "**SCM 참조 사양** 매개변수는 프로젝트 분기의 가용성에 영향을 미치며, 이 매개변수가 없으면 사용할 수 없는 참조에 대한 액세스를 허용할 수 있습니다. 위 예제에서는 사용자가 **SCM 분기**에서 가져오기 요청을 제공할 수 있도록 허용하는데, **SCM 참조 사양** 필드 없이는 수행할 수 없습니다."
+
+#: ../../source/job_branching.rst:57
+msgid "The Ansible git module fetches ``refs/heads/*`` by default. This means that a project's branches and tags (and commit hashes therein) can be used as the SCM Branch if **SCM Refspec** is blank. The value specified in the **SCM Refspec** field affects which **SCM Branch** fields can be used as overrides. Project updates (of any type) will perform an extra ``git fetch`` command to pull that refspec from the remote."
+msgstr "Ansible Git 모듈은 기본적으로 ``refs/heads/*``를 가져옵니다. 즉, **SCM 참조 사양**이 비어 있는 경우 프로젝트의 분기 및 태그(그 안의 커밋 해시 포함)를 SCM 분기로 사용할 수 있습니다. **SCM 참조 사양** 필드에 지정된 값은 덮어쓰기로 사용할 수 있는 *SCM 분기** 필드에 영향을 미칩니다. 프로젝트 업데이트(모든 유형)는 추가 ``git fetch`` 명령을 수행하여 원격에서 해당 참조 사양을 가져옵니다."
+
+#: ../../source/job_branching.rst:59
+msgid "For example: You could set up a project that allows branch override with the 1st or 2nd refspec example --> Use this in a job template that prompts for the **SCM Branch** --> A client could launch the job template when a new pull request is created, providing the branch ``pull/N/head`` --> The job template would run against the provided GitGub pull request reference."
+msgstr "예: 첫 번째 또는 두 번째 참조 사양 예에서 분기 덮어쓰기를 허용하는 프로젝트를 설정할 수 있습니다. --> **SCM 분기**를 묻는 작업 템플릿에 이 프로젝트를 사용합니다. --> 새 가져오기 요청이 생성되면 클라이언트가 작업 템플릿을 시작하여 분기 ``pull/N/head``를 제공할 수 있습니다. --> 작업 템플릿이 제공된 GitHub 가져오기 요청 참조에 대해 실행됩니다."
+
+#: ../../source/job_branching.rst:61
+msgid "For more information on the Ansible git module, see https://docs.ansible.com/ansible/latest/modules/git_module.html."
+msgstr "Ansible Git 모듈에 대한 자세한 내용은 https://docs.ansible.com/ansible/latest/modules/git_module.html을 참조하십시오."
+

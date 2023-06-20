@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/insights.rst:4
+msgid "Setting up Insights Remediations"
+msgstr "Insights の修正の設定"
+
+#: ../../source/insights.rst:10
+msgid "|At| supports integration with Red Hat Insights. Once a host is registered with Insights, it will be continually scanned for vulnerabilities and known configuration conflicts. Each of the found problems may have an associated fix in the form of an Ansible playbook. Insights users create a maintenance plan to group the fixes and, ultimately, create a playbook to mitigate the problems. |At| tracks the maintenance plan playbooks via an Insights project. Authentication to Insights via Basic Auth is backed by a special Insights Credential, which must first be established in |at|. To ultimately run an Insights Maintenance Plan, you need an Insights project, and an Insights inventory."
+msgstr "|At| は Red Hat Insights との統合をサポートします。ホストが Insights に登録されると、脆弱性や既知の設定上の競合の有無を確認するためにホストのスキャンが継続的に実行されます。検出された問題にはそれぞれ Ansible Playbook の形式で関連付けられた修正が提供されます。Insights ユーザーはメンテナンス計画を作成して修正を分類したり、最終的には問題を軽減したりするために Playbook を作成します。|At| は Insights プロジェクトでメンテナンス計画 Playbook を追跡します。Basic 認証を使った Insights に対する認証は、特殊な Insights 認証情報によってサポートされ、これは最初に |at| で設定する必要があります。Insights メンテナンス計画を最終的に実行するには、Insights プロジェクト、および Insights インベントリーが必要です。"
+
+#: ../../source/insights.rst:14
+msgid "Create Insights Credential"
+msgstr "Insights 認証情報の作成"
+
+#: ../../source/insights.rst:19
+msgid "To create a new credential for use with Insights:"
+msgstr "Insights で使用する新規の認証情報を作成するには、以下を実行します。"
+
+#: ../../source/insights.rst:21
+msgid "Click **Credentials** from the left navigation bar to access the Credentials page."
+msgstr "左のナビゲーションバーから **認証情報** をクリックして、認証情報ページにアクセスします。"
+
+#: ../../source/insights.rst:23
+msgid "Click the **Add** button located in the upper right corner of the Credentials screen."
+msgstr "認証情報画面の右上にある **追加** ボタンをクリックします。"
+
+#: ../../source/insights.rst:25
+msgid "Enter the name of the credential to be used in the **Name** field."
+msgstr "**名前** フィールドで使用される認証情報の名前を入力します。"
+
+#: ../../source/insights.rst:27
+msgid "Optionally enter a description for this credential in the **Description** field."
+msgstr "オプションで、**詳細** フィールドに、認証情報の情報を入力します。"
+
+#: ../../source/insights.rst:29
+msgid "In the **Organization** field, optionally enter the name of the organization with which the credential is associated, or click the |search| button and select it from the pop-up window."
+msgstr "**組織** フィールドに、認証情報が関連付けられた組織の名前をオプションで入力するか、または |search| ボタンをクリックしてポップアップウィンドウからこれを選択します。"
+
+#: ../../source/insights.rst:33
+msgid "In the **Credential Type** field, enter **Insights** or select it from the drop-down list."
+msgstr "**認証情報のタイプ** フィールドに、**Insights** を入力するか、ドロップダウンリストからこれを選択します。"
+
+#: ../../source/insights.rst:37
+msgid "Enter a valid Insights credential in the **Username** and **Password** fields. The Insights credential is the user's `Red Hat Customer Portal`_ account username and password."
+msgstr "**ユーザー名** および **パスワード** フィールドに有効な Insights 認証情報を入力します。Insights 認証情報はユーザーの `Red Hat Customer Portal`_ アカウントのユーザー名およびパスワードです。"
+
+#: ../../source/insights.rst:41
+msgid "|Credentials - create with demo insights credentials|"
+msgstr "|Credentials - create with demo insights credentials|"
+
+#: ../../source/insights.rst:45
+#: ../../source/insights.rst:77
+#: ../../source/insights.rst:124
+msgid "Click **Save** when done."
+msgstr "完了したら **保存** をクリックします。"
+
+#: ../../source/insights.rst:49
+msgid "Create an Insights Project"
+msgstr "Insights プロジェクトの作成"
+
+#: ../../source/insights.rst:54
+msgid "To create a new Insights project:"
+msgstr "新規 Insights プロジェクトを作成するには、以下を実行します。"
+
+#: ../../source/insights.rst:56
+msgid "Click **Projects** from the left navigation bar to access the Projects page."
+msgstr "左のナビゲーションバーから **プロジェクト** をクリックして、プロジェクトページにアクセスします。"
+
+#: ../../source/insights.rst:58
+msgid "Click the **Add** button located in the upper right corner of the Projects screen."
+msgstr "プロジェクトの画面の右上にある **追加** ボタンをクリックします。"
+
+#: ../../source/insights.rst:60
+msgid "Enter the appropriate details into the required fields, at minimum. Note the following fields requiring specific Insights-related entries:"
+msgstr "該当する詳細情報を必須フィールドに入力します (最小限のレベル)。特定の Insights 関連のエントリーが必要な以下のフィールドに留意してください。"
+
+#: ../../source/insights.rst:62
+msgid "**Name**: Enter the name for your Insights project."
+msgstr "**名前**: Insights プロジェクトの名前を入力します。"
+
+#: ../../source/insights.rst:63
+msgid "**Organization**: Enter the name of the organization associated with this project, or click the |search| button and select it from the pop-up window."
+msgstr "**組織**: このプロジェクトに関連付けられた組織の名前を入力するか、または |search| ボタンをクリックしてポップアップウィンドウからこれを選択します。"
+
+#: ../../source/insights.rst:64
+msgid "**SCM Type**: Select **Red Hat Insights**."
+msgstr "**SCM タイプ**: **Red Hat Insights** を選択します。"
+
+#: ../../source/insights.rst:65
+msgid "Upon selecting the SCM type, the **Source Details** field expands."
+msgstr "SCM タイプの選択時に、**ソース詳細** フィールドが展開されます。"
+
+#: ../../source/insights.rst:67
+msgid "The **Credential** field is pre-populated with the Insights credential you previously created. If not, enter the credential, or click the |search| button and select it from the pop-up window."
+msgstr "**認証情報** フィールドには事前に作成した Insights 認証情報が設定されます。設定されていない場合は、認証情報を入力するか、または |search| ボタンをクリックしてポップアップウィンドウからこれを選択します。"
+
+#: ../../source/insights.rst:69
+msgid "Click to select the update option(s) for this project from the **Options** field, and provide any additional values, if applicable. For information about each option, click the tooltip |tooltip| next to the options."
+msgstr "クリックして **オプション** フィールドからこのプロジェクトの更新オプションを選択し、適切な場合は、追加の値を指定します。各オプションの詳細については、オプションの横にあるヒント |tooltip| ボタンをクリックします。"
+
+#: ../../source/insights.rst:73
+msgid "|Insights - create demo insights project form|"
+msgstr "|Insights - create demo insights project form|"
+
+#: ../../source/insights.rst:79
+msgid "All SCM/Project syncs occur automatically the first time you save a new project. However, if you want them to be updated to what is current in Insights, manually update the SCM-based project by clicking the |update| button under the project's available Actions."
+msgstr "すべての SCM/プロジェクトの同期は新規プロジェクトの初回保存時に自動的に実行されます。ただし、それらを最新の Insights の内容で更新するには、プロジェクトのアクションの下にある |update| ボタンをクリックして SCM ベースのプロジェクトを手動で更新します。"
+
+#: ../../source/insights.rst:83
+msgid "This process syncs your Insights project with your Insights account solution. Notice that the status dot beside the name of the project updates once the sync has run."
+msgstr "このプロセスでは、Insights プロジェクトを Insights アカウントのソリューションと同期します。同期の実行時にプロジェクト更新の名前の横にあるステータスのドットに留意してください。"
+
+#: ../../source/insights.rst:85
+msgid "|Insights - demo insights project success|"
+msgstr "|Insights - demo insights project success|"
+
+#: ../../source/insights.rst:91
+msgid "Create Insights Inventory"
+msgstr "Insights インベントリーの作成"
+
+#: ../../source/insights.rst:96
+msgid "The Insights playbook contains a `hosts:` line where the value is the hostname that Insights itself knows about,  which may be different than the hostname that Tower knows about. To use an Insights playbook, you will need an Insights inventory."
+msgstr "Insights Playbook には `hosts:` の 行が含まれます。ここでは、値は Insights 自体が認識するホスト名で、この値は Tower が認識するホスト名とは異なる場合があります。Insights Playbook を使用するには、Insights インベントリーが必要になります。"
+
+#: ../../source/insights.rst:98
+msgid "To create a new inventory for use with Insights, see :ref:`ug_source_insights`."
+msgstr "Insights で使用する新規インベントリーを作成するには、:ref:`ug_source_insights` を参照してください。"
+
+#: ../../source/insights.rst:101
+msgid "Remediate Insights Inventory"
+msgstr "Insights インベントリーの修復"
+
+#: ../../source/insights.rst:106
+msgid "Remediation of an Insights inventory allows Tower to run Insights playbooks with a single click. This is done by creating a Job Template to run the Insights remediation."
+msgstr "Insights インベントリーの修復により、1 回のクリックで Tower は Insights Playbook を実行することができます。これは、Insights の修復を実行するジョブテンプレートを作成することで実現します。"
+
+#: ../../source/insights.rst:108
+msgid "Click **Job Templates** from the left navigation bar to access the Job Templates page."
+msgstr "左のナビゲーションバーから **ジョブテンプレート** をクリックして、ジョブテンプレートページにアクセスします。"
+
+#: ../../source/insights.rst:110
+msgid "Create a new Job Template, with the appropriate details into the required fields, at minimum.  Note the following fields requiring specific Insights-related entries:"
+msgstr "該当する詳細情報を必須フィールド (最小限のレベル) に入力して、ジョブテンプレートを新規作成します。特定の Insights 関連のエントリーが必要な以下のフィールドに留意してください。"
+
+#: ../../source/insights.rst:112
+msgid "**Name**: Enter the name of your Maintenance Plan."
+msgstr "**名前**: メンテナンス計画の名前を入力します。"
+
+#: ../../source/insights.rst:113
+msgid "**Job Type**: If not already populated, select **Run** from the drop-down menu list."
+msgstr "**ジョブタイプ**: 事前に設定されていない場合、ドロップダウンメニュー一覧から **実行** を選択します。"
+
+#: ../../source/insights.rst:114
+msgid "**Inventory**: Select the Insights Inventory you previously created."
+msgstr "**インベントリー**: 以前に作成した Insights インベントリーを選択します。"
+
+#: ../../source/insights.rst:115
+msgid "**Project**: Select the Insights project you previously created."
+msgstr "**プロジェクト**: 以前に作成した Insights プロジェクトを選択します。"
+
+#: ../../source/insights.rst:116
+msgid "**Playbook**: Select a playbook associated with the Maintenance Plan you want to run from the drop-down menu list."
+msgstr "**Playbook**: ドロップダウンメニュー一覧から実行する、メンテナンス計画に関連付けられた Playbook を選択します。"
+
+#: ../../source/insights.rst:117
+msgid "**Credential**: Enter the credential to use for this project or click the |search| button and select it from the pop-up window. The credential does not have to be an Insights credential."
+msgstr "**認証情報**: このプロジェクトに使用する認証情報を入力するか、または |search| ボタンをクリックしてポップアップウィンドウからこれを選択します。認証情報は Insights 認証情報である必要はありません。"
+
+#: ../../source/insights.rst:118
+msgid "**Verbosity**: Keep the default setting, or select the desired verbosity from the drop-down menu list."
+msgstr "**詳細**: デフォルト設定を保持するか、またはドロップダウンメニュー一覧から必要な詳細レベルを選択します。"
+
+#: ../../source/insights.rst:120
+msgid "|Insights - maintenance plan template filled|"
+msgstr "|Insights - maintenance plan template filled|"
+
+#: ../../source/insights.rst:126
+msgid "Click the |launch| icon to launch the job template."
+msgstr "|launch| アイコンをクリックしてジョブテンプレートを起動します。"
+
+#: ../../source/insights.rst:130
+msgid "Once complete, the job results display in the Job Details page."
+msgstr "完了すると、ジョブの結果がジョブ詳細ページに表示されます。"
+

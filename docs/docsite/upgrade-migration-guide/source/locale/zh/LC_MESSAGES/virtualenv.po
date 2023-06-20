@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Upgrade and Migration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-23 21:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/virtualenv.rst:4
+msgid "Upgrading to Execution Environments"
+msgstr "升级至执行环境"
+
+#: ../../../common/source/virtualenv.rst:1
+msgid "The ability to build and deploy Python virtual environments for automation has been replaced by Ansible execution environments. Unlike legacy virtual environments, execution environments are container images that make it possible to incorporate system-level dependencies and collection-based content. Each execution environment allows you to have a customized image to run jobs, and each of them contain only what you need when running the job, nothing more."
+msgstr "为自动化构建和部署 Python 虚拟环境的功能已被 Ansible 执行环境替代。与旧的虚拟环境不同，执行环境是容器镜像，从而可以包含系统级别的依赖项和基于集合的内容。每个执行环境都允许您具有自定义镜像来运行作业，每个环境都只包含运行作业时所需的内容。"
+
+#: ../../../common/source/virtualenv.rst:3
+msgid "If upgrading from older versions of |at| to 4.0 or later, the controller has the ability to detect previous versions of virtual environments associated with Organizations, Inventory, and Job Templates; and inform you that you will need to migrate to the new execution environment model. A brand new installation of |at| creates two virtualenvs during installation--one is used to run the controller itself, while the other is used to run Ansible. Like legacy virtual environments, execution environments allow the controller to run in a stable environment, while allowing you to add or update modules to your execution environment as necessary to run your playbooks. For more information on execution environments, see |ab| documentation (TBD)."
+msgstr "如果从旧版本 |at| 升级到 4.0 或更高版本，控制器可以检测到与机构、清单和作业模板关联的虚拟环境的早期版本，并告知您需要迁移到新的执行环境模型。全新的 |at| 安装会在安装过程中创建两个 virtualenvs，一个用于运行控制器本身，另一个用于运行 Ansible。与旧的虚拟环境一样，执行环境允许控制器在一个稳定的环境中运行，同时允许您根据需要将模块添加到执行环境中以运行 playbook。 有关执行环境的更多信息，请参阅 |ab| 文档(TBD)。"
+
+#: ../../../common/source/virtualenv.rst:11
+msgid "Migrate legacy venvs to execution environments"
+msgstr "将旧的 venvs 迁移到执行环境"
+
+#: ../../../common/source/virtualenv.rst:13
+msgid "You can have the exact same setup in a execution environment that you had in a prior custom virtual environment by migrating them to the new execution environment using an ``awx-manage`` command. The ``awx-manage`` command allows for two options:"
+msgstr "如果您在一个包括有一个以前的自定义虚拟环境的执行环境中有相同的设置，则可以使用 ``awx-manage`` 命令将其迁移到新的执行环境中。``awx-manage`` 命令允许两个选项："
+
+#: ../../../common/source/virtualenv.rst:15
+msgid "without a path, it will generate a list of all the paths to custom execution environments"
+msgstr "如果没有路径，它会生成一个到自定义执行环境的所有路径的列表"
+
+#: ../../../common/source/virtualenv.rst:16
+msgid "with a path, it will run a pip freeze within your environment and display all the custom virtual environments on the command line output"
+msgstr "如果有一个路径，它会在您的环境中运行 pip freeze，并在命令行输出中显示所有自定义虚拟环境"
+
+#: ../../../common/source/virtualenv.rst:18
+msgid "Be sure you are inside of your container environment prior to proceeding with this migration procedure."
+msgstr "在继续执行此迁移过程前，请确保您已在容器环境中。"
+
+#: ../../../common/source/virtualenv.rst:20
+msgid "Before you migrate, it is recommended that you view all the custom virtual environments you currently have running by using the ``awx-manage list`` command:"
+msgstr "在迁移前，建议您使用 ``awx-manage list`` 命令查看所有当前运行的自定义虚拟环境："
+
+#: ../../../common/source/virtualenv.rst:26
+msgid "Below is an example output when running this command:"
+msgstr "以下是运行这个命令时的输出示例："
+
+#: ../../../common/source/virtualenv.rst:30
+msgid "The output shows a list of paths for each of your custom virtual environments. If you have a custom virtual environment that is not located within the default ``/var/lib/awx/venv/`` directory path, it will not be included here."
+msgstr "输出显示了包括每个自定义虚拟环境的路径列表。如果您有一个不在默认 ``/var/lib/awx/venv/`` 目录路径中的自定义虚拟环境，则它不会在此处包括。"
+
+#: ../../../common/source/virtualenv.rst:33
+msgid "Select a path for the virtual environment that you want to migrate and specify it in the ``awx-manage export`` command:"
+msgstr "为您要迁移的虚拟环境选择一个路径，并在 ``awx-manage export`` 命令中指定："
+
+#: ../../../common/source/virtualenv.rst:39
+msgid "The resulting output is essentially the results of executing a ``pip freeze`` command. The example shows the contents of the selected custom virtual environment:"
+msgstr "生成的输出实际上就是执行 ``pip freeze`` 命令的结果。示例显示了所选自定义虚拟环境的内容："
+
+#: ../../../common/source/virtualenv.rst:44
+msgid "Now that you have the output from this ``pip freeze`` data, you can use that to spin up your new execution environment using |ab|. See TBD for more detail about execution environments."
+msgstr "现在，您已有来自此 ``pip freeze`` 数据的输出，您可以使用它来设置使用 |ab| 的新执行环境。如需了解更多有关执行环境的详细信息，请参阅 TBD。"
+
+#~ msgid "|at| 3.0 uses *virtualenv*. Virtualenv creates isolated Python environments to avoid problems caused by conflicting dependencies and differing versions. Virtualenv works by simply creating a folder which contains all of the necessary executables and dependencies for a specific version of Python. |at| creates two virtualenvs during installation--one is used to run Tower, while the other is used to run Ansible. This allows Tower to run in a stable environment, while allowing you to add or update modules to your Ansible Python environment as necessary to run your playbooks."
+#~ msgstr ""
+
+#~ msgid "For more information on virtualenv, see `Virtual Environments <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_"
+#~ msgstr ""
+
+#~ msgid "Modifying the virtualenv"
+#~ msgstr ""
+
+#~ msgid "**Modifying the virtualenv used by Tower is unsupported and not recommended**. Instead, you can add modules to the virtualenv that Tower uses to run Ansible."
+#~ msgstr ""
+
+#~ msgid "To do so, activate the Ansible virtualenv::"
+#~ msgstr ""
+
+#~ msgid "...and then install whatever you need using ``pip``::"
+#~ msgstr ""
+
+#~ msgid "By default, the virtualenv is located at ``/var/lib/awx/venv/ansible`` on the file system but starting with |at| 3.5, you can create your own custom directories and use them in inventory imports. This allows you to choose how you run your inventory imports, as inventory sources use custom virtual environments."
+#~ msgstr "默认情况下，virtualenv 位于文件系统的 ``/var/lib/awx/venv/ansible`` 中，但从 |at| 3.5 开始，您可以创建自己的自定义目录并在清单导入中使用它们。这将允许您选择如何运行清单导入，因为清单源使用自定义的虚拟环境。"
+
+#~ msgid "Once you have created a custom virtualenv, you can assign it at the Organization, Project, or Job Template level to use it in job runs. You can set the custom venv on an inventory source to run inventory updates in that venv. However, starting in |at| 3.5, Ansible 2.4 or later is required to run inventory updates. Jobs using that inventory follow their own rules and will not use this venv. If an SCM inventory source does not have a venv selected, it can use the venv of its linked project. You can assign a custom venv on the organization, but if you do, it will not be used by inventory updates in the organization, as it is only used in job runs."
+#~ msgstr "在创建了自定义 virtualenv 后，您可以在 Organization 、Project 或 Job Template 级别上分配它以在作业运行时使用它。您可以在清单（inventory）源中设置自定义 venv 以在这个 venv 中运行清单更新。但是，从 |at| 3.5 开始，需要 Ansible 2.4 或之后的版本才可以运行清单更新。使用该清单的作业遵循自己的规则，且不会使用这个 venv。如果 SCM 清单源没有选择一个 venv，它可以使用与之连接的目录的 venv。您可以在机构（organization）中分配一个自定义 venv，但是如果这样做，它将不会在机构的清单更新中使用，它只会用于作业运行。"
+
+#~ msgid "Using virtualenv with |at|"
+#~ msgstr "使用 |at| 的 virtualenv"
+
+#~ msgid "Virtualenv creates isolated Python environments to avoid problems caused by conflicting dependencies and differing versions. Virtualenv works by simply creating a folder which contains all of the necessary executables and dependencies for a specific version of Python. |at| creates two virtualenvs during installation--one is used to run Tower, while the other is used to run Ansible. This allows Tower to run in a stable environment, while allowing you to add or update modules to your Ansible Python environment as necessary to run your playbooks. For more information on virtualenv, see the Python Guide to `Virtual Environments`_ and the `Python virtualenv` project itself."
+#~ msgstr "Virtualenv 会创建相互隔离的 Python 环境以避免因为冲突的依赖软件包和不同版本造成的问题。Virtualenv 会被每个特定的 Python 版本创建一个单独的目录来包括所有需要的可执行代码和依赖软件包。|at| 在安装时创建两个 virtualenvs，一个用于运行 Tower，另外一个用于运行 Ansible。这样，Tower 就可以在一个稳定的环境中运行，而您可以根据运行 playbook 的需要在 Ansible Python 环境中增加或更新模块。如需了解更新信息，请参阅 Python 指南中的 `Virtual Environments`_ 和 `Python virtualenv` 项目。"
+
+#~ msgid "By default, the virtualenv is located at ``/var/lib/awx/venv/ansible`` on the file system but you can create your own custom directories and use them in inventory imports. This allows you to choose how you run your inventory imports, as inventory sources use custom virtual environments."
+#~ msgstr "默认情况下，virtualenv 位于文件系统的 ``/var/lib/awx/venv/ansible`` 中，但您可以创建自己的自定义目录并在清单导入中使用它们。这将允许您选择如何运行清单导入，因为清单源使用自定义的虚拟环境。"
+
+#~ msgid "Tower also pre-installs a variety of third-party library/SDK support into this virtualenv for its integration points with a variety of cloud providers (such as EC2, OpenStack, Azure, etc.) Periodically, you may want to add additional SDK support into this virtualenv, which is described in further detail below."
+#~ msgstr "Tower 还预安装了各种第三方库/SDK 支持，用于与各种云供应商（如 EC2 、OpenStack 、Azure 等）集成。另外，您也可以在此 virtualenv 中添加额外的 SDK 支持，详情如下。"
+
+#~ msgid "It is highly recommended that you run ``umask`` 0022 before installing any packages to the virtual environment. Failure to properly configure permissions can result in Tower service failures. An example follows:"
+#~ msgstr "在将任何软件包安装到虚拟环境前，强烈建议先运行 ``umask`` 0022。不正确配置权限可能会导致 Tower 服务失败。示例如下："
+
+#~ msgid "In addition to adding modules to the virtualenv that Tower uses to run Ansible, you can create new virtualenvs as described below."
+#~ msgstr "除了在 Tower 用来运行 Ansible 的 virtualenv 中添加模块外，您还可以创建新的 virtualenv，如下所述。"
+
+#~ msgid "Preparing a new custom virtualenv"
+#~ msgstr "准备新的自定义 virtualenv"
+
+#~ msgid "You can specify a different virtualenv for running Job Templates in Tower. In order to do so, you must specify which directories those venvs reside. You could choose to keep custom venvs inside ``/var/lib/awx/venv/``, but it is highly recommended that a custom directory be created. The following examples use a placeholder directory ``/opt/my-envs/``, but you can replace this with a directory path of your choice anywhere this is specified."
+#~ msgstr "您可以指定一个不同的 virtualenv 用于在 Tower 中运行作业（Job）模板。您需要指定该这些 venv 所在的目录。您可以选择把自定义 venv 存放在``/var/lib/awx/venv/`` 中，但强烈建议您创建一个自定义目录。以下示例使用 ``/opt/my-envs/`` 做为目录的示例，但可以使用您需要的目录路径替换它。"
+
+#~ msgid "Preparing a new custom virtualenv requires the virtualenv package to be pre-installed:"
+#~ msgstr "准备一个新的自定义 virtualenv 需要预安装 virtualenv 软件包："
+
+#~ msgid "Create a directory for your custom venvs:"
+#~ msgstr "为您的自定义 venvs 创建一个目录："
+
+#~ msgid "Make sure to give your directory the appropriate write and execution permissions:"
+#~ msgstr "为您的目录设置正确的写入和执行权限："
+
+#~ msgid "Optionally, you can specify in Tower which directory to look for custom venvs by adding this directory to the ``CUSTOM_VENV_PATHS`` setting as follows:"
+#~ msgstr "另外，您还可以在 Tower 中指定要查找自定义 venvs 的目录，方法是将这个目录添加到 ``CUSTOM_VENV_PATHS`` 设置中，如下："
+
+#~ msgid "If you have venvs spanned over multiple directories, add all the paths and Tower will aggregate venvs from them:"
+#~ msgstr "如果您的 venvs 包括多个目录，请添加所有路径，Tower 将聚合来自它们的 venv："
+
+#~ msgid "Now that a venv directory has been set up, create a virtual environment in that location:"
+#~ msgstr "现在，设置了 venv 目录，在那个位置中创建一个虚拟环境："
+
+#~ msgid "Multiple versions of Python are supported, but the syntax for creating virtualenvs in Python 3 has changed slightly: ``$ sudo python3 -m venv /opt/my-envs/custom-venv``"
+#~ msgstr "支持 Python 的多个版本，但是在 Python 3 中创建 virtualenv 的语法稍有变化： ``$ sudo python3 -m venv /opt/my-envs/custom-venv``"
+
+#~ msgid "Next, install gcc so that ``psutil`` can be compiled:"
+#~ msgstr "下一步，安装 gcc 以便 ``psutil`` 可以被编译："
+
+#~ msgid "Your newly created virtualenv needs a few base dependencies to properly run playbooks (eg., fact gathering):"
+#~ msgstr "您新创建的 virtualenv 需要一些基本的依赖项来正确运行 playbook（例如，事实 (fact) 收集）："
+
+#~ msgid "From here, you can install *additional* Python dependencies that you care about, such as a per-virtualenv version of Ansible itself:"
+#~ msgstr "在这里，您可以安装 *additional* Python 依赖项，如针对每个 virtualenv 版本的 Ansible 本身："
+
+#~ msgid "Or you can add an additional third-party SDK that is not included with the base Tower installation:"
+#~ msgstr "或者您可以添加未包含在基本 Tower 安装中的额外的第三方 SDK："
+
+#~ msgid "If you want to copy them, the libraries included in Tower's default virtualenv can be found using ``pip freeze``:"
+#~ msgstr "如果要复制它们，使用 ``pip freeze`` 可以找到包括在 Tower 的默认 virtualenv 中的库："
+
+#~ msgid "In a clustered Tower installation, you need to ensure that the same custom virtualenv exists on **every** local file system at ``/opt/my-envs/``. Custom virtualenvs are supported on isolated instances. If you are using a custom virtual environment, it needs to also be copied or replicated on any isolated node you would be using, not just on the Tower node. For setting up custom virtual environments in containers, refer to the :ref:`Build custom virtual environments <administration:ag_os_custom_venv>` section of the |ata|."
+#~ msgstr "在集群的 Tower 安装中，您需要确保相同的自定义 virtualenv 存在于 ``/opt/my-envs/``中的**每个**本地文件系统上。自定义 virtualenvs 在隔离的实例上被支持。如果您使用的是自定义的虚拟环境，则需要在您要使用的任何独立节点中复制或复制它，而不仅仅在 Tower 节点上。如需了解在容器中设置自定义虚拟环境的信息，请参考|ata| 中的 :ref:`Build custom virtual environments <administration:ag_os_custom_venv>` 部分。"
+
+#~ msgid "Assigning custom virtualenvs"
+#~ msgstr "分配自定义 virtualenv"
+
+#~ msgid "Once you have created a custom virtualenv, you can assign it at the Organization, Project, or Job Template level to use it in job runs. You can set the custom venv on an inventory source to run inventory updates in that venv. Jobs using that inventory follow their own rules and will not use this venv. If an SCM inventory source does not have a venv selected, it can use the venv of its linked project. You can assign a custom venv on the organization, but if you do, it will not be used by inventory updates in the organization, as it is only used in job runs."
+#~ msgstr "在创建了自定义 virtualenv 后，您可以在 Organization 、Project 或 Job Template 级别上分配它以在作业运行时使用它。您可以在清单（inventory）源中设置自定义 venv 以在这个 venv 中运行清单更新。使用该清单的作业遵循自己的规则，且不会使用这个 venv。如果 SCM 清单源没有选择一个 venv，它可以使用与之连接的目录的 venv。您可以在机构（organization）中分配一个自定义 venv，但是如果这样做，它将不会在机构的清单更新中使用，它只会用于作业运行。"
+
+#~ msgid "The following shows the proper way to assign a custom venv at the desired level."
+#~ msgstr "下面显示了在所需级别分配自定义 venv 的正确方法。"
+
+#~ msgid "An HTTP GET request to ``/api/v2/config/`` provides a list of detected installed virtualenvs:"
+#~ msgstr "一个到 ``/api/v2/config/`` 的 HTTP GET 请求提供了所检测到的 virtualenvs 列表："
+
+#~ msgid "You can also specify the virtual environment to assign to an Organization, Project, and Job Template from their respective edit screens in the |at| User Interface. Select the virtualenv from the **Ansible Environment** drop-down menu, as shown in the example below:"
+#~ msgstr "您还可以通过编辑 |at| 用户界面中的相应页，为 Organization、Project 和 Job Template 指定分配的虚拟环境。从 **Ansible Environment** 下拉菜单中选择 virtualenv，如以下示例所示："
+
+#~ msgid "When you launch a job template, you will also see the virtualenv specified in the Job Details pane:"
+#~ msgstr "启动作业模板时，您还会看到在作业详情框中指定的 virtualenv："
+

@@ -1,0 +1,744 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/notifications.rst:4
+msgid "Notifications"
+msgstr "通知"
+
+#: ../../source/notifications.rst:13
+msgid "A :term:`Notification Template` is an instance of a :term:`Notification` type (Email, Slack, Webhook, etc.) with a name, description, and a defined configuration."
+msgstr ":term:`Notification Template` 是 :term:`Notification` 类型的实例（电子邮件、Slack、Webhook 等），带有名称、描述和定义的配置。"
+
+#: ../../source/notifications.rst:15
+msgid "For example:"
+msgstr "例如："
+
+#: ../../source/notifications.rst:17
+msgid "A username, password, server, and recipients are needed for an Email notification template"
+msgstr "电子邮件通知模板需要用户名、密码、服务器和收件人"
+
+#: ../../source/notifications.rst:18
+msgid "The token and a list of channels are needed for a Slack notification template"
+msgstr "Slack 通知模板需要令牌和频道列表"
+
+#: ../../source/notifications.rst:19
+msgid "The URL and Headers are needed for a Webhook notification template"
+msgstr "Webhook 通知模板需要 URL 和标头"
+
+#: ../../source/notifications.rst:21
+msgid "A Notification is a manifestation of the notification template; for example, when a job fails, a notification is sent using the configuration defined by the notification template."
+msgstr "通知是一个通知模板的清单；例如，作业失败时使用通知模板定义的配置发送通知。"
+
+#: ../../source/notifications.rst:23
+msgid "At a high level, the typical flow for the notification system works as follows:"
+msgstr "在高级别上，通知系统的典型流程按如下方式运作："
+
+#: ../../source/notifications.rst:25
+msgid "A user creates a notification template to the REST API at the ``/api/v2/notification_templates`` endpoint (either through the API or through the UI)."
+msgstr "用户在 ``/api/v2/notification_templates`` 端点创建 REST API 的通知模板（通过 API 或 UI）。"
+
+#: ../../source/notifications.rst:26
+msgid "A user assigns the notification template to any of the various objects that support it (all variants of job templates as well as organizations and projects) and at the appropriate trigger level for which they want the notification (started, success, or error). For example a user may wish to assign a particular notification template to trigger when Job Template 1 fails. In which case, they will associate the notification template with the job template at ``/api/v2/job_templates/n/notification_templates_error`` API endpoint."
+msgstr "用户在需要通知（已启动、成功或错误）的适当触发器级别将通知模板分配给支持它（作业模板的所有变体，以及机构和项目）的各种对象。例如，用户可能希望分配特定的通知模板以在作业模板 1 失败时触发。在这种情况下，用户会在 ``/api/v2/job_templates/n/notification_templates_error`` API 端点中将通知模板与作业模板相关联。"
+
+#: ../../source/notifications.rst:27
+msgid "You can set notifications on job start, not just job end. Users and teams are also able to define their own notifications that can be attached to arbitrary jobs."
+msgstr "您可以在作业启动时设置通知，而不只是在作业结束时。用户和团队也可以定义他们自己的通知，这些通知可以附加到任意作业。"
+
+#: ../../source/notifications.rst:31
+msgid "Notification Hierarchy"
+msgstr "通知层次结构"
+
+#: ../../source/notifications.rst:36
+msgid "Notification templates assigned at certain levels will inherit templates defined on parent objects as such:"
+msgstr "在某些级别分配的通知模板将继承在父对象上定义的模板，如下所述："
+
+#: ../../source/notifications.rst:38
+msgid "Job Templates will use notification templates defined on it as well as inheriting notification templates from the Project used by the Job Template and from the Organization that it is listed under (via the Project)."
+msgstr "作业模板将使用在其上定义的通知模板，以及从作业模板使用的项目中和列出了该作业模板的机构中继承通知模板（通过项目）。"
+
+#: ../../source/notifications.rst:39
+msgid "Project Updates will use notification templates defined on the project and will inherit notification templates from the Organization associated with it"
+msgstr "项目更新将使用项目上定义的通知模板，并将继承与其关联的机构中的通知模板"
+
+#: ../../source/notifications.rst:40
+msgid "Inventory Updates will use notification templates defined on the Organization that it is listed under"
+msgstr "清单更新将使用列出了该清单的机构上定义的通知模板"
+
+#: ../../source/notifications.rst:41
+msgid "Ad-hoc commands will use notification templates defined on the Organization that the inventory is associated with"
+msgstr "临时命令将使用与清单关联的机构上定义的通知模板"
+
+#: ../../source/notifications.rst:44
+msgid "Workflow"
+msgstr "工作流"
+
+#: ../../source/notifications.rst:49
+msgid "When a job succeeds or fails, the error or success handler will pull a list of relevant notification templates using the procedure defined above. It will then create a Notification object for each one containing relevant details about the job and then sends it to the destination (email addresses, slack channel(s), sms numbers, etc). These Notification objects are available as related resources on job types (jobs, inventory updates, project updates), and also at ``/api/v2/notifications``. You may also see what notifications have been sent from a notification templates by examining its related resources."
+msgstr "当作业成功或失败时，错误或成功处理程序将按照以上定义的流程拉取相关的通知模板列表。然后，它会为每个包含作业相关详情的通知模板创建一个通知对象，然后将其发送到目的地（电子邮件地址、slack 频道、sms 号码等）。这些通知对象可作为作业类型（作业、库存更新、项目更新）的相关资源提供，也位于 ``/api/v2/notifications``。您还可以通过检查通知模板的相关资源来查看由其发送的通知。"
+
+#: ../../source/notifications.rst:51
+msgid "If a notification fails, it will not impact the job associated to it or cause it to fail. The status of the notification can be viewed at its detail endpoint (``/api/v2/notifications/<n>``)."
+msgstr "如果通知失败，它将不影响与其关联的作业，或导致作业失败。通知的状态可以在详情端点 (``/api/v2/notifications/<n>``) 中查看。"
+
+#: ../../source/notifications.rst:57
+msgid "Create a Notification Template"
+msgstr "创建通知模板"
+
+#: ../../source/notifications.rst:64
+msgid "To create a Notification Template:"
+msgstr "要创建通知模板，请执行以下操作："
+
+#: ../../source/notifications.rst:66
+msgid "Click **Notifications** from the left navigation bar."
+msgstr "从左侧导航栏中点击 **Notifications**。"
+
+#: ../../source/notifications.rst:68
+msgid "Click the **Add** button."
+msgstr "点 **Add** 按钮。"
+
+#: ../../source/notifications.rst:72
+msgid "Enter the name of the notification and a description in their respective fields, and specify the organization (required) it belongs to."
+msgstr "在相应字段中输入通知名称和描述，并指定其所属机构（必需）。"
+
+#: ../../source/notifications.rst:74
+msgid "Choose a type of notification from the **Type** drop-down menu. Refer to the subsequent sections for additional information."
+msgstr "从 **Type** 下拉菜单中选择一种通知类型。如需了解更多信息，请参阅后续部分。"
+
+#: ../../source/notifications.rst:76
+msgid "Once all required information is complete, click **Save** to add the notification."
+msgstr "完成所有所需信息后，点击 **Save** 添加通知。"
+
+#: ../../source/notifications.rst:82
+msgid "Notification Types"
+msgstr "通知类型"
+
+#: ../../source/notifications.rst:96
+msgid "Notification types supported with |at|:"
+msgstr "|at| 支持的通知类型："
+
+#: ../../source/notifications.rst:101
+msgid "Each of these have their own configuration and behavioral semantics and testing them may need to be approached in different ways. Additionally, you can customize each type of notification down to a specific detail, or a set of criteria to trigger a notification. See :ref:`ug_custom_notifications` for more detail on configuring custom notifications. The following sections will give as much detail as possible on each type of notification."
+msgstr "以上每一种通知都有自己的配置和行为性语义，并需要以不同的方式对其进行测试。此外，您可以自定义每种通知类型的具体细节，或一组触发通知的条件。如需了解更多有关配置自定义通知的详情，请参阅 :ref:`ug_custom_notifications`。以下几个部分将尽量详细介绍每种通知类型。"
+
+#: ../../source/notifications.rst:105
+msgid "Email"
+msgstr "电子邮件"
+
+#: ../../source/notifications.rst:107
+msgid "The email notification type supports a wide variety of SMTP servers and has support for TLS/SSL connections."
+msgstr "电子邮件通知类型支持各种 SMTP 服务器，并支持 TLS/SSL 连接。"
+
+#: ../../source/notifications.rst:109
+msgid "You must provide the following details to setup an email notification:"
+msgstr "您必须提供以下详情来设置电子邮件通知："
+
+#: ../../source/notifications.rst:111
+msgid "Host"
+msgstr "主机"
+
+#: ../../source/notifications.rst:112
+msgid "Recipient list"
+msgstr "接收者列表"
+
+#: ../../source/notifications.rst:113
+msgid "Sender email"
+msgstr "发件人电子邮件"
+
+#: ../../source/notifications.rst:114
+msgid "Port"
+msgstr "端口"
+
+#: ../../source/notifications.rst:115
+msgid "Timeout (in seconds): allows you to specify up to 120 seconds, the length of time |at| may attempt connecting to the email server before giving up."
+msgstr "Timeout（以秒为单位）：允许您指定 |at| 在放弃前可以尝试连接电子邮件服务器的时间限度，最多 120 秒。"
+
+#: ../../source/notifications.rst:120
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../source/notifications.rst:122
+msgid "Grafana is a fairly straightforward integration. First, create an API Key in the `Grafana system`_ (this is the token that is given to |at|)."
+msgstr "Grafana 是一个简单直接的集成。首先，在 `Grafana system`_ 中创建一个 API 密钥（这是提供给 |at| 的令牌）。"
+
+#: ../../source/notifications.rst:126
+msgid "You must provide the following details to setup a Grafana notification:"
+msgstr "您必须提供以下详情来设置 Grafana 通知："
+
+#: ../../source/notifications.rst:128
+msgid "Grafana URL: The URL of the Grafana API service, generally ``http://yourcompany.grafana.com``."
+msgstr "Grafana URL：Grafana API 服务的 URL，通常为 ``http://yourcompany.grafana.com``。"
+
+#: ../../source/notifications.rst:129
+msgid "Grafana API Key: The user must first create an API Key in the Grafana system (this is the token that is given to |at|)."
+msgstr "Grafana API Key：用户必须首先在 Grafana 系统中创建一个 API 密钥（这是提供给 |at| 的令牌）。"
+
+#: ../../source/notifications.rst:131
+msgid "The other options of note are:"
+msgstr "其他值得注意的选项有："
+
+#: ../../source/notifications.rst:133
+msgid "ID of the Dashboard: When you created an API Key for the Grafana account, you can set up a dashboard with its own unique ID."
+msgstr "ID of the Dashboard：当您为 Grafana 帐户创建 API 密钥时，您可以设置具有其自身唯一 ID 的仪表板。"
+
+#: ../../source/notifications.rst:134
+msgid "ID of the Panel: If you added panels and graphs to your Grafana interface, you can specify its ID here."
+msgstr "ID of the Panel：如果您在 Grafana 界面中添加了面板和图形，您可以在这里指定其 ID。"
+
+#: ../../source/notifications.rst:135
+msgid "Tags for the Annotation: Enter keywords that help identify the type(s) of events(s) of the notification you are configuring."
+msgstr "Annotation：输入关键字，以帮助识别您要配置的事件的类型。"
+
+#: ../../source/notifications.rst:136
+msgid "Disable SSL Verification: SSL verification is on by default, but you can choose to turn off verification the authenticity of the target's certificate. Environments that use internal or private CA's should select this option to disable verification."
+msgstr "Disable SSL Verification：默认情况下 SSL 验证是开启的，但您可以选择关闭验证目标证书真实性的功能。使用内部或私有 CA 的环境应该选择此选项来禁用验证。"
+
+#: ../../source/notifications.rst:142
+msgid "IRC"
+msgstr "IRC"
+
+#: ../../source/notifications.rst:144
+msgid "The IRC notification takes the form of an IRC bot that will connect, deliver its messages to channel(s) or individual user(s), and then disconnect. The notification bot also supports SSL authentication. The bot does not currently support Nickserv identification. If a channel or user does not exist or is not on-line then the Notification will not fail; the failure scenario is reserved specifically for connectivity."
+msgstr "IRC 通知采用 IRC bot 的形式，它将进行连接，将消息传送到频道或单独的用户，然后断开连接。通知 bot 还支持 SSL 身份验证。bot 目前不支持 Nickserv 身份识别。如果某个频道或用户不存在或者没有在线，则通知不会失败。通知失败仅用于代表连接失败。"
+
+#: ../../source/notifications.rst:146
+msgid "Connectivity information is straightforward:"
+msgstr "连接信息很简单："
+
+#: ../../source/notifications.rst:148
+msgid "IRC Server Password (optional): IRC servers can require a password to connect. If the server does not require one, leave blank"
+msgstr "IRC Server Password（可选）：IRC 服务器可以要求提供密码才能连接。如果服务器不需要密码，请保留空白"
+
+#: ../../source/notifications.rst:149
+msgid "IRC Server Port: The IRC server Port"
+msgstr "IRC Server Port：IRC 服务器端口"
+
+#: ../../source/notifications.rst:150
+msgid "IRC Server Address: The host name or address of the IRC server"
+msgstr "IRC Server Address：IRC 服务器的主机名或地址"
+
+#: ../../source/notifications.rst:151
+msgid "IRC Nick: The bot's nickname once it connects to the server"
+msgstr "IRC Nick：bot 连接到服务器显示的昵称"
+
+#: ../../source/notifications.rst:152
+msgid "Destination Channels or Users: A list of users and/or channels to which to send the notification."
+msgstr "Destination Channels or Users：要将通知发送到的用户和/或频道列表。"
+
+#: ../../source/notifications.rst:153
+msgid "SSL Connection (optional): Should the bot use SSL when connecting"
+msgstr "SSL Connection（可选）：bot 是否应使用 SSL 进行连接"
+
+#: ../../source/notifications.rst:159
+msgid "Mattermost"
+msgstr "Mattermost"
+
+#: ../../source/notifications.rst:161
+msgid "The Mattermost notification type provides a simple interface to Mattermost's messaging and collaboration workspace. The parameters that can be specified are:"
+msgstr "Mattermost 通知类型为 Mattermost 的消息和协作工作区提供了一个简单的接口。可以指定的参数有："
+
+#: ../../source/notifications.rst:163
+#: ../../source/notifications.rst:191
+msgid "Target URL (required): The full URL that will be POSTed to"
+msgstr "Target URL（必需）：将 POST 到的完整 URL"
+
+#: ../../source/notifications.rst:164
+#: ../../source/notifications.rst:192
+#: ../../source/notifications.rst:247
+msgid "Username"
+msgstr "用户名"
+
+#: ../../source/notifications.rst:165
+msgid "Channel"
+msgstr "频道"
+
+#: ../../source/notifications.rst:166
+#: ../../source/notifications.rst:193
+msgid "Icon URL: specifies the icon to display for this notification"
+msgstr "Icon URL：指定要为此通知显示的图标"
+
+#: ../../source/notifications.rst:167
+#: ../../source/notifications.rst:194
+msgid "Disable SSL Verification: Turns off verification of the authenticity of the target's certificate. Environments that use internal or private CA's should select this option to disable verification."
+msgstr "Disable SSL Verification：关闭验证目标证书真实性的功能。使用内部或私有 CA 的环境应该选择此选项来禁用验证。"
+
+#: ../../source/notifications.rst:173
+msgid "PagerDuty"
+msgstr "PagerDuty"
+
+#: ../../source/notifications.rst:175
+msgid "PagerDuty is a fairly straightforward integration. First, create an API Key in the `PagerDuty system`_ (this is the token that is given to |at|) and then create a \"Service\" which provides an \"Integration Key\" that will also be given to |at|. The other required options are:"
+msgstr "PagerDuty 是一个简单直接的集成。首先，在 `PagerDuty system`_ 中创建一个 API 密钥（这是提供给 |at| 的令牌），然后创建一个“Service”，它提供的“Integration Key”也会提供给 |at|。其他必需的选项为："
+
+#: ../../source/notifications.rst:179
+msgid "API Token: The user must first create an API Key in the PagerDuty system (this is the token that is given to |at|)."
+msgstr "API Token：用户必须首先在 PagerDuty 系统中创建一个 API 密钥（这是提供给 |at| 的令牌）。"
+
+#: ../../source/notifications.rst:180
+msgid "PagerDuty Subdomain: When you sign up for the PagerDuty account, you receive a unique subdomain to communicate with. For instance, if you signed up as \"testuser\", the web dashboard will be at ``testuser.pagerduty.com`` and you will give the API ``testuser`` as the subdomain (not the full domain)."
+msgstr "PagerDuty Subdomain：当您注册 PagerDuty 帐户时，您会收到一个用来进行通信的唯一子域。例如，如果您以“testuser”身份注册，Web 仪表板将位于 ``testuser.pagerduty.com``，并且您将提供 API ``testuser`` 作为子域（而非完整的域）。"
+
+#: ../../source/notifications.rst:181
+msgid "API Service/Integration Key"
+msgstr "API 服务/集成密钥"
+
+#: ../../source/notifications.rst:182
+msgid "Client Identifier: This will be sent along with the alert content to the pagerduty service to help identify the service that is using the api key/service. This is helpful if multiple integrations are using the same API key and service."
+msgstr "Client Identifier：这将与警报内容一同发送到 pagerduty 服务，以帮助识别使用 api 密钥/服务的服务。这在多个集成使用相同的 API 密钥和服务时很有用。"
+
+#: ../../source/notifications.rst:187
+msgid "Rocket.Chat"
+msgstr "Rocket.Chat"
+
+#: ../../source/notifications.rst:189
+msgid "The Rocket.Chat notification type provides an interface to Rocket.Chat's collaboration and communication platform. The parameters that can be specified are:"
+msgstr "Rocket.Chat 通知类型为 Rocket.Chat 的协作和通信平台提供了一个接口。可以指定的参数有："
+
+#: ../../source/notifications.rst:200
+msgid "Slack"
+msgstr "Slack"
+
+#: ../../source/notifications.rst:202
+msgid "Slack, a collaborative team communication and messaging tool, is pretty easy to configure."
+msgstr "Slack 是一个协作团队通讯和消息传输工具，可以轻松进行配置。"
+
+#: ../../source/notifications.rst:204
+msgid "You must supply the following to setup Slack notifications:"
+msgstr "您必须提供以下内容来设置 Slack 通知："
+
+#: ../../source/notifications.rst:206
+msgid "A Slack app (refer to the `Basic App Setup <https://api.slack.com/authentication/basics>`_ page of the Slack documentation for information on how to create one)"
+msgstr "Slack app（请参考 Slack `Basic App Setup <https://api.slack.com/authentication/basics>`文档的_ 页来获得如何创建）"
+
+#: ../../source/notifications.rst:208
+msgid "A token (refer to `Enabling Interactions with Bots <https://api.slack.com/bot-users>`_ and specific details on bot tokens on the `Token Types <https://api.slack.com/authentication/token-types#bot>`_ documentation page)"
+msgstr "令牌（请参考 `Enabling Interactions with Bots <https://api.slack.com/bot-users>` `Token Types <https://api.slack.com/authentication/token-types#bot>`_ 文档页面中的 bot 令牌的详情）"
+
+#: ../../source/notifications.rst:210
+msgid "Once you have a bot/app set up, you must navigate to \"Your Apps\", click on the newly-created app and then go to **Add features and functionality**, which allows you to configure incoming webhooks, bots, and permissions; as well as **Install your app to your workspace**."
+msgstr "在设置了 bot/app 后，导航到\"Your Apps\"，点新创建的应用，进入 **Add features and functionality** 来配置传入的 webhook、bot 和权限，并 **在工作空间中按照应用**。"
+
+#: ../../source/notifications.rst:212
+msgid "You must also invite the notification bot to join the channel(s) in question in Slack. Note that private messages are not supported."
+msgstr "您还必须邀请通知 bot 加入与 Slack 相关的频道。请注意，不支持私人消息。"
+
+#: ../../source/notifications.rst:218
+msgid "Twilio"
+msgstr "Twilio"
+
+#: ../../source/notifications.rst:220
+msgid "Twilio service is an Voice and SMS automation service. Once you are signed in, you must create a phone number from which the message will be sent. You can then define a \"Messaging Service\" under Programmable SMS and associate the number you created before with it."
+msgstr "Twilio 服务是一个语音和 SMS 自动化服务。在您登录后，必须创建一个用来发送消息的电话号码。然后您以在 Programmable SMS 下定义一个“Messaging Service”并将您之前创建的号码与之关联。"
+
+#: ../../source/notifications.rst:222
+msgid "Note that you may need to verify this number or some other information before you are allowed to use it to send to any numbers. The Messaging Service does not need a status callback URL nor does it need the ability to Process inbound messages."
+msgstr "请注意，在被允许使用此号码发送到任意号码前，您可能需要先验证它或一些其他信息。消息服务不需要状态回调 URL，它也不需要具备处理入站消息的功能。"
+
+#: ../../source/notifications.rst:224
+msgid "Under your individual (or sub) account settings, you will have API credentials. Twilio uses two credentials to determine which account an API request is coming from. The “Account SID”, which acts as a username, and the “Auth Token” which acts as a password."
+msgstr "在您的单独（或子）帐户设置中，您将有 API 凭证。Twilio 使用两个凭证来确定 API 请求来自哪个帐户：用作用户名的“Account SID”，以及用作密码的“Auth Token”。"
+
+#: ../../source/notifications.rst:226
+msgid "To setup Twilio, provide the following details:"
+msgstr "要设置 Twilio，请提供以下详情："
+
+#: ../../source/notifications.rst:228
+msgid "Account Token"
+msgstr "帐户令牌"
+
+#: ../../source/notifications.rst:229
+msgid "Source Phone Number (this is the number associated with the messaging service above and must be given in the form of \"+15556667777\")"
+msgstr "Source Phone Number（这是与上述消息服务关联的号码，必须采用“+15556667777”的格式）"
+
+#: ../../source/notifications.rst:230
+msgid "Destination SMS number (this will be the list of numbers to receive the SMS and should be the 10-digit phone number)"
+msgstr "Destination SMS number（这是接收 SMS 的号码列表，应该是 10 位电话号码）"
+
+#: ../../source/notifications.rst:231
+msgid "Account SID"
+msgstr "帐户 SID"
+
+#: ../../source/notifications.rst:237
+msgid "Webhook"
+msgstr "Webhook"
+
+#: ../../source/notifications.rst:239
+msgid "The webhook notification type provides a simple interface to sending POSTs to a predefined web service. |at| will POST to this address using application/json content type with the data payload containing all relevant details in json format. Some web service APIs expect HTTP requests to be in a certain format with certain fields. You can configure more of the webhook notification in the following ways:"
+msgstr "webhook 通知类型提供了一个用于将 POST 发送到预定义的 Web 服务的简单接口。|at| 将使用应用程序/json 内容类型向这个地址 POST 数据有效负载，其中包含 json 格式的所有相关详情。一些 Web 服务 API 预期 HTTP 请求采用特定格式并包含特定字段。您可以使用以下方法配置更多 webhook 通知设置："
+
+#: ../../source/notifications.rst:241
+msgid "configure the HTTP method (using **POST** or **PUT**)"
+msgstr "配置 HTTP 方法（使用 **POST** 或 **PUT**）"
+
+#: ../../source/notifications.rst:242
+msgid "body of the outgoing request"
+msgstr "传出请求的正文"
+
+#: ../../source/notifications.rst:243
+msgid "configure authentication (using basic auth)"
+msgstr "配置身份验证（使用基本身份验证）"
+
+#: ../../source/notifications.rst:245
+msgid "The parameters for configuring webhooks are:"
+msgstr "用于配置 Webhook 的参数有："
+
+#: ../../source/notifications.rst:248
+msgid "Basic Auth Password"
+msgstr "基本验证密码"
+
+#: ../../source/notifications.rst:249
+msgid "Target URL (required): The full URL to which the webhook notification will be PUT or POSTed."
+msgstr "Target URL（必需）：Webhook 通知将 PUT 或 POST 到的完整 URL。"
+
+#: ../../source/notifications.rst:250
+msgid "Disable SSL Verification: SSL verification is on by default, but you can choose to turn off verification of the authenticity of the target’s certificate. Environments that use internal or private CA’s should select this option to disable verification."
+msgstr "Disable SSL Verification：默认情况下 SSL 验证是开启的，但您可以选择关闭验证目标证书真实性的功能。使用内部或私有 CA 的环境应该选择此选项来禁用验证。"
+
+#: ../../source/notifications.rst:251
+msgid "HTTP Headers (required): Headers in JSON form where the keys and values are strings. For example, ``{\"Authentication\": \"988881adc9fc3655077dc2d4d757d480b5ea0e11\", \"MessageType\": \"Test\"}``"
+msgstr "HTTP Headers（必需）：JSON 格式的标头，其中键和值是字符串。例如，``{\"Authentication\": \"988881adc9fc3655077dc2d4d757d480b5ea0e11\", \"MessageType\": \"Test\"}``"
+
+#: ../../source/notifications.rst:253
+msgid "HTTP Method (required). Select the method for your webhook:"
+msgstr "HTTP Method（必需）。选择 Webhook 的方法："
+
+#: ../../source/notifications.rst:255
+msgid "POST: Creates a new resource. Also acts as a catch-all for operations that do not fit into the other categories. It is likely you need to POST unless you know your webhook service expects a PUT."
+msgstr "POST：创建新资源。也用作不适合于其他类别的操作的总括。除非您知道 Webhook 服务需要 PUT，否则很可能需要 POST。"
+
+#: ../../source/notifications.rst:256
+msgid "PUT: Updates a specific resource (by an identifier) or a collection of resources. PUT can also be used to create a specific resource if the resource identifier is known beforehand."
+msgstr "PUT：更新特定资源（按标识符）或资源集合。如果事先知道资源标识符，PUT 也可以用于创建特定资源。"
+
+#: ../../source/notifications.rst:263
+msgid "Webhook payloads"
+msgstr "Webhook 有效负载"
+
+#: ../../source/notifications.rst:265
+msgid "|At| sends by default the following data at the webhook endpoint:"
+msgstr "|At| 默认情况下，在 Webhook 端点发送以下数据："
+
+#: ../../source/notifications.rst:286
+msgid "An example of a ``started`` notifications via webhook message as it is returned by |at|:"
+msgstr "|at| 返回的通过 Webhook 消息的 ``started`` 通知示例："
+
+#: ../../source/notifications.rst:296
+msgid "|At| returns by default the following data at the webhook endpoint for a ``success``/``fail`` status:"
+msgstr "默认情况下，对于 ``success``/``fail`` 状态的 Webhook 端点，|At| 返回以下数据："
+
+#: ../../source/notifications.rst:317
+msgid "An example of a ``success``/``fail`` notifications via webhook message as it is returned by |at|:"
+msgstr "由 |at| 返回的、通过 webhook 消息的 ``success``/``fail`` 通知示例："
+
+#: ../../source/notifications.rst:331
+msgid "Create custom notifications"
+msgstr "创建自定义通知"
+
+#: ../../source/notifications.rst:333
+msgid "You can :ref:`customize the text content <ir_notifications_reference>` of each of the :ref:`ug_notifications_types` by enabling the **Customize Messages** portion at the bottom of the notifications form using the toggle button."
+msgstr "您可以通过使用切换按钮在通知表单的底部启用 **Customize Messages** 部分来为每个 :ref:`ug_notifications_types` :ref:`customize the text content <ir_notifications_reference>`。"
+
+#: ../../source/notifications.rst:337
+msgid "You can provide a custom message for various job events:"
+msgstr "您可以为各种作业事件提供自定义消息："
+
+#: ../../source/notifications.rst:339
+msgid "Start"
+msgstr "开始"
+
+#: ../../source/notifications.rst:340
+msgid "Success"
+msgstr "成功"
+
+#: ../../source/notifications.rst:341
+msgid "Error"
+msgstr "错误"
+
+#: ../../source/notifications.rst:342
+msgid "Workflow approved"
+msgstr "工作流已批准"
+
+#: ../../source/notifications.rst:343
+msgid "Workflow denied"
+msgstr "工作流已拒绝"
+
+#: ../../source/notifications.rst:344
+msgid "Workflow running"
+msgstr "工作流正在运行"
+
+#: ../../source/notifications.rst:345
+msgid "Workflow timed out"
+msgstr "工作流超时"
+
+#: ../../source/notifications.rst:347
+msgid "The message forms vary depending on the type of notification you are configuring. For example, messages for email and PagerDuty notifications have the appearance of a typical email form with a subject and body, in which case, |at| displays the fields as **Message** and **Message Body**. Other notification types only expect a **Message** for each type of event:"
+msgstr "消息表单会根据您所配置的通知类型而有所不同。例如，电子邮件和 PagerDuty 通知的消息会显示一个带有主题和正文的典型电子邮件表单，在这种情况下，|at| 会将这些字段显示为 **Message** 和 **Message Body**。其他通知类型对每种事件类型只预期 **Message**："
+
+#: ../../source/notifications.rst:351
+msgid "The **Message** fields are pre-populated with a template containing a top-level variable, ``job`` coupled with an attribute, such as ``id`` or ``name``, for example. Templates are enclosed in curly braces and may draw from a fixed set of fields provided by |at|, as shown in the pre-populated **Messages** fields."
+msgstr "**Message** 字段已预先填充一个模板，其中包含顶层变量 ``job`` 以及一个属性，如 ``id`` 或 ``name``。模板用大括号括起，且可以从 |at| 提供的固定字段集合中提取，如预填充的 **Messages** 字段所示。"
+
+#: ../../source/notifications.rst:355
+msgid "This pre-populated field suggests commonly displayed messages to a recipient who is notified of an event. You can, however, customize these messages with different criteria by adding your own attribute(s) for the job as needed. Custom notification messages are rendered using Jinja - the same templating engine used by Ansible playbooks."
+msgstr "这个预先填充的字段会建议通常向事件通知的接收者显示的消息。但是，您可以根据需要为作业添加您自己的属性，以使用不同的条件自定义这些消息。自定义通知消息使用 Jinja 呈现，这是 Ansible playbook 使用的同一模板引擎。"
+
+#: ../../source/notifications.rst:357
+msgid "Messages and message bodies have different types of content:"
+msgstr "消息和消息正文具有不同的内容类型："
+
+#: ../../source/notifications.rst:359
+msgid "messages will always just be strings (one-liners only; new lines are not allowed)"
+msgstr "信息总是字符串（只能是一行；不允许使用新行）"
+
+#: ../../source/notifications.rst:361
+msgid "message bodies will be either a dictionary or block of text:"
+msgstr "消息正文可以是字典或者是文本块："
+
+#: ../../source/notifications.rst:363
+msgid "the message body for *Webhooks* and *PagerDuty* uses dictionary definitions. The default message body for these is ``{{ job_metadata }}``, you can either leave that as is or provide your own dictionary"
+msgstr "*Webhooks* 和 *PagerDuty* 的消息正文使用字典定义。它们的默认消息正文为 ``{{ job_metadata }}``，您可以保留原样或者提供自己的字典"
+
+#: ../../source/notifications.rst:365
+msgid "the message body for email uses a block of text or a multi-line string. The default message body is:"
+msgstr "电子邮件的消息正文使用文本块或多行字符串。默认的消息正文为："
+
+#: ../../source/notifications.rst:371
+msgid "You can tweak this text (leaving ``{{ job_metadata }}`` in, or drop ``{{ job_metadata }}`` altogether). Since the body is a block of text, it can really be any string you want."
+msgstr "您可以调整此文本（保留 ``{{ job_metadata }}`` 或将 ``{{ job_metadata }}`` 全盘丢弃）。由于正文是一个文本块，它实际上可以是您需要的任何字符串。"
+
+#: ../../source/notifications.rst:373
+msgid "``{{ job_metadata }}`` gets rendered as a dictionary containing fields that describe the job being executed. In all cases, ``{{ job_metadata }}`` will include the following fields:"
+msgstr "``{{ job_metadata }}`` 呈现为一个字典，其中包含描述待执行作业的字段。在所有情况下，``{{ job_metadata }}`` 都将包括以下字段："
+
+#: ../../source/notifications.rst:375
+msgid "``id``"
+msgstr "``id``"
+
+#: ../../source/notifications.rst:376
+msgid "``name``"
+msgstr "``name``"
+
+#: ../../source/notifications.rst:377
+msgid "``url``"
+msgstr "``url``"
+
+#: ../../source/notifications.rst:378
+msgid "``created_by``"
+msgstr "``created_by``"
+
+#: ../../source/notifications.rst:379
+msgid "``started``"
+msgstr "``started``"
+
+#: ../../source/notifications.rst:380
+msgid "``finished``"
+msgstr "``finished``"
+
+#: ../../source/notifications.rst:381
+msgid "``status``"
+msgstr "``status``"
+
+#: ../../source/notifications.rst:382
+msgid "``traceback``"
+msgstr "``traceback``"
+
+#: ../../source/notifications.rst:386
+msgid "At the present time, you cannot query individual fields within ``{{ job_metadata }}``. When using ``{{ job_metadata }}`` in a notification template, all data will be returned."
+msgstr "目前，您无法查询 ``{{ job_metadata }}`` 中的各个字段。在通知模板中使用 ``{{ job_metadata }}`` 时，所有数据都会被返回。"
+
+#: ../../source/notifications.rst:389
+#: ../../source/notifications.rst:442
+msgid "The resulting dictionary will look something like this:"
+msgstr "生成的字典将类似如下："
+
+#: ../../source/notifications.rst:403
+msgid "If ``{{ job_metadata }}`` is rendered in a job, it will include the following additional fields:"
+msgstr "如果 ``{{ job_metadata }}`` 在作业中呈现，它将包括以下附加字段："
+
+#: ../../source/notifications.rst:405
+msgid "``inventory``"
+msgstr "``inventory``"
+
+#: ../../source/notifications.rst:406
+msgid "``project``"
+msgstr "``project``"
+
+#: ../../source/notifications.rst:407
+msgid "``playbook``"
+msgstr "``playbook``"
+
+#: ../../source/notifications.rst:408
+msgid "``credential``"
+msgstr "``credential``"
+
+#: ../../source/notifications.rst:409
+msgid "``limit``"
+msgstr "``limit``"
+
+#: ../../source/notifications.rst:410
+msgid "``extra_vars``"
+msgstr "``extra_vars``"
+
+#: ../../source/notifications.rst:411
+msgid "``hosts``"
+msgstr "``hosts``"
+
+#: ../../source/notifications.rst:415
+msgid "The resulting dictionary will look something like:"
+msgstr "生成的字典将类似如下："
+
+#: ../../source/notifications.rst:436
+msgid "If ``{{ job_metadata }}`` is rendered in a workflow job, it will include the following additional field:"
+msgstr "如果 ``{{ job_metadata }}`` 在工作流作业中呈现，它将包括以下附加字段："
+
+#: ../../source/notifications.rst:438
+msgid "``body`` (this will enumerate all the nodes in the workflow job and includes a description of the job associated with each node)"
+msgstr "``body``（这将枚举工作流作业中的所有节点，并包含与每个节点关联的作业描述）"
+
+#: ../../source/notifications.rst:462
+msgid "For more detail, refer to `Using variables with Jinja2`_."
+msgstr "如需更多详情，请参阅 `Using variables with Jinja2`_。"
+
+#: ../../source/notifications.rst:467
+msgid "|At| requires valid syntax in order to retrieve the correct data to display the messages. For a list of supported attributes and the proper syntax construction, refer to the :ref:`ir_notifications_reference` section of this guide."
+msgstr "|At| 需要有效的语法来检索用于显示消息的正确数据。对于支持的属性列表和正确的语法构建，请参阅本指南的 :ref:`ir_notifications_reference` 部分。"
+
+#: ../../source/notifications.rst:470
+msgid "If you create a notification template that uses invalid syntax or references unusable fields, an error message displays indicating the nature of the error. If you delete a notification’s custom message, the default message is shown in its place."
+msgstr "如果您创建的通知模板使用无效语法或者引用不可使用的字段，则会显示一条错误消息，指出错误的性质。如果删除通知的自定义消息，则会在相应位置显示默认消息。"
+
+#: ../../source/notifications.rst:475
+msgid "If you save the notifications template without editing the custom message (or edit and revert back to the default values), the **Details** screen assumes the defaults and will not display the custom message tables. If you edit and save any of the values, the entire table displays in the **Details** screen."
+msgstr "如果您在没有编辑自定义消息（或编辑过且从没有恢复到默认值）的情况下保存通知模板，**Details** 屏幕会假定默认值，且不会显示自定义消息表。如果您编辑并保存任何值，则整个表会显示在 **Details** 屏幕中。"
+
+#: ../../source/notifications.rst:483
+msgid "Enable and Disable Notifications"
+msgstr "启用和禁用通知"
+
+#: ../../source/notifications.rst:485
+msgid "You can select which notifications to notify you when a specific job starts, in addition to notifying you on success or failure at the end of the job run. Some behaviors to keep in mind:"
+msgstr "除了在作业运行结束时通知您成功或失败以外，您可以选择在某个特定作业启动时要通知的通知。需要记住以下一些行为："
+
+#: ../../source/notifications.rst:487
+msgid "if a workflow template (WFJT) has notification on start enabled, and a job template (JT) within that workflow also has notification on start enabled, you will receive notifications for both"
+msgstr "如果工作流模板 (WFJT) 启用了启动时通知，且该工作流中的作业模板 (JT) 也启用了启动时通知，您将收到这两者的通知"
+
+#: ../../source/notifications.rst:488
+msgid "you can enable notifications to run on many JTs within a WFJT"
+msgstr "您可以启用在 WFJT 中的很多 JT 上运行通知"
+
+#: ../../source/notifications.rst:489
+msgid "you can enable notifications to run on a sliced job template (SJT) start and each slice will generate a notification"
+msgstr "您可以启用在分片作业模板 (SJT) 启动时运行通知，并且每个分片都会生成通知"
+
+#: ../../source/notifications.rst:490
+msgid "when you enable a notification to run on job start, and that notification gets deleted, the JT continues to run, but will result in an error message"
+msgstr "如果您启用在作业启动时运行通知，且该通知被删除，则 JT 会继续运行，但会生成错误消息"
+
+#: ../../source/notifications.rst:492
+msgid "You can enable notifications on job start, job success, and job failure, or any combination thereof, from the **Notifications** tab of the following resources:"
+msgstr "您可以从以下资源中的 **Notifications** 标签页中启用作业启动、作业成功和作业失败时通知，或者它们中的任何组合："
+
+#: ../../source/notifications.rst:494
+msgid "Job Template"
+msgstr "任务模板"
+
+#: ../../source/notifications.rst:495
+msgid "Workflow Template"
+msgstr "工作流模板"
+
+#: ../../source/notifications.rst:496
+msgid "Projects (shown in the example below)"
+msgstr "项目（如下例所示）"
+
+#: ../../source/notifications.rst:497
+msgid "Inventory Source"
+msgstr "清单源"
+
+#: ../../source/notifications.rst:498
+#: ../../source/notifications.rst:554
+msgid "Organizations"
+msgstr "机构"
+
+#: ../../source/notifications.rst:503
+msgid "For workflow templates that have approval nodes, in addition to *Start*, *Success*, and *Failure*, you can enable or disable certain approval-related events:"
+msgstr "对于具有批准节点的工作流模板，除了 *Start*、*Success* 和 *Failure* 以外，您还可启用或禁用某些与批准相关的事件："
+
+#: ../../source/notifications.rst:507
+msgid "Refer to :ref:`ug_wf_approval_nodes` for additional detail on working with these types of nodes."
+msgstr "有关使用这些节点类型的详情，请参阅 :ref:`ug_wf_approval_nodes`。"
+
+#: ../../source/notifications.rst:511
+msgid "Configure the ``host`` hostname for notifications"
+msgstr "为通知配置 ``host`` 主机名"
+
+#: ../../source/notifications.rst:516
+msgid "In the :ref:`System Settings <configure_tower_system>`, you can replace the default value in the **Base URL of the service** field with your preferred hostname to change the notification hostname."
+msgstr "在 :ref:`System Settings <configure_tower_system>` 中，您可以将 **Base URL of The Service** 字段中的默认值替换为您首选的主机名，以更改通知主机名。"
+
+#: ../../source/notifications.rst:520
+msgid "Refreshing your license also changes the notification hostname. New installations of |at| should not have to set the hostname for notifications."
+msgstr "刷新您的许可证也会更改通知主机名。|at| 的新安装不必设置通知主机名。"
+
+#: ../../source/notifications.rst:523
+msgid "Reset the ``TOWER_URL_BASE``"
+msgstr "重置 ``TOWER_URL_BASE``"
+
+#: ../../source/notifications.rst:530
+msgid "The primary way that |at| determines how the base URL (``TOWER_URL_BASE``) is defined is by looking at an incoming request and setting the server address based on that incoming request."
+msgstr "|at| 用来确定如何定义基本 URL（``TOWER_URL_BASE``）的主要方法是通过查看传入请求并根据该传入请求设置服务器地址。"
+
+#: ../../source/notifications.rst:532
+msgid "|At| takes settings values from the database first. If no settings values are found, it falls back to using the values from the settings files.  If a user posts a license by navigating to the |at| host's IP adddress, the posted license is written to the settings entry in the database."
+msgstr "|At| 会首先从数据库中获取设置值。如果没有找到任何设置值，Tower 会返回使用设置文件中的值。如果用户通过导航到 |at| 主机的 IP 地址来发布许可证，则会将发布的许可证写入数据库中的设置条目。"
+
+#: ../../source/notifications.rst:534
+msgid "To change the ``TOWER_URL_BASE`` if the wrong address has been picked up, navigate to **Miscellaneous System settings** from the Settings menu using the DNS entry you wish to appear in notifications, and re-add your license."
+msgstr "如果选择了错误的地址，要更改 ``TOWER_URL_BASE``，使用您想要在通知中出现的 DNS 条目从 Settings 菜单中进入到 **Miscellaneous System settings**，并重新添加您的许可证。"
+
+#: ../../source/notifications.rst:539
+msgid "Notifications API"
+msgstr "通知 API"
+
+#: ../../source/notifications.rst:544
+msgid "Use the ``started``, ``success``, or ``error`` endpoints:"
+msgstr "使用 ``started``、``success`` 或 ``error`` 端点："
+
+#: ../../source/notifications.rst:552
+msgid "Additionally, the ``../../../N/notification_templates_started`` endpoints have **GET** and **POST** actions for:"
+msgstr "此外，``../../../N/notification_templates_started`` 端点具有适用于以下各项的 **GET** 和 **POST** 操作："
+
+#: ../../source/notifications.rst:555
+msgid "Projects"
+msgstr "项目"
+
+#: ../../source/notifications.rst:556
+msgid "Inventory Sources"
+msgstr "清单源"
+
+#: ../../source/notifications.rst:557
+msgid "Job Templates"
+msgstr "作业模板"
+
+#: ../../source/notifications.rst:558
+msgid "System Job Templates"
+msgstr "系统作业模板"
+
+#: ../../source/notifications.rst:559
+msgid "Workflow Job Templates"
+msgstr "工作流任务模板"
+

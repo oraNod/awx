@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/execution_environments.rst:4
+msgid "Execution Environments"
+msgstr "执行环境"
+
+#: ../../../common/source/execution_environs.rst:2
+msgid "The ability to build and deploy Python virtual environments for automation has been replaced by Ansible execution environments. Unlike legacy virtual environments, execution environments are container images that make it possible to incorporate system-level dependencies and collection-based content. Each execution environment allows you to have a customized image to run jobs, and each of them contain only what you need when running the job, nothing more."
+msgstr "为自动化构建和部署 Python 虚拟环境的功能已被 Ansible 执行环境替代。与旧的虚拟环境不同，执行环境是容器镜像，从而可以包含系统级别的依赖项和基于集合的内容。每个执行环境都允许您具有自定义镜像来运行作业，每个环境都只包含运行作业时所需的内容。"
+
+#: ../../source/execution_environments.rst:17
+msgid "Building an Execution Environment"
+msgstr "构建一个执行环境"
+
+#: ../../source/execution_environments.rst:24
+msgid "Using Ansible content that depends on non-default dependencies (custom virtual environments) can be tricky. Packages must be installed on each node, play nicely with other software installed on the host system, and be kept in sync. Previously, jobs ran inside of a virtual environment at ``/var/lib/awx/venv/ansible`` by default, which was pre-loaded with dependencies for ansible-runner and certain types of Ansible content used by the Ansible control machine."
+msgstr "使用依赖于非默认依赖项（自定义虚拟环境）的 Ansible 内容可能会比较棘手。软件包必须在每个节点上安装，并需要可以与主机系统上安装的其他软件一同正常操作，并保持同步。以前，在默认情况下，作业会在 ``/var/lib/awx/venv/ansible`` 的一个虚拟环境中运行，它会预加载 ansible-runner 的依赖项，以及 Ansible 控制机器使用的某些 Ansible 内容类型。"
+
+#: ../../source/execution_environments.rst:26
+msgid "To help simplify this process, container images can be built that serve as Ansible `control nodes <https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#control-node>`_. These container images are referred to as automation |ees|, which you can create with ansible-builder and then ansible-runner can make use of those images."
+msgstr "为了简化这个过程，容器镜像可以通过 Ansible 构建 `control nodes <https://docs.ansible.com/ansible/latest/network/getting_started/basic_concepts.html#control-node>`_。这些容器镜像称为自动化 |ees|，您可以使用 ansible-builder 创建，然后 ansible-runner 可以利用这些镜像。"
+
+#: ../../source/execution_environments.rst:29
+msgid "Install ansible-builder"
+msgstr "安装 ansible-builder"
+
+#: ../../source/execution_environments.rst:31
+msgid "In order to build images, either installations of podman or docker is required along with the ansible-builder Python package. The ``--container-runtime`` option needs to correspond to the Podman/Docker executable you intend to use."
+msgstr "要构建镜像，需要安装 podman 或 docker，以及 ansible-builder Python 软件包。``--container-runtime`` 选项需要与您要使用的 Podman/Docker 可执行文件对应。"
+
+#: ../../source/execution_environments.rst:33
+msgid "To install from PyPi:"
+msgstr "从 PyPi 安装："
+
+#: ../../source/execution_environments.rst:39
+msgid "To install from the mainline development branch:"
+msgstr "从主线的开发分支中安装："
+
+#: ../../source/execution_environments.rst:45
+msgid "To install from a specific tag or branch, replace ``<ref>`` in the following example:"
+msgstr "要从特定的标签或分支安装，请替换以下示例中的 ``<ref>``："
+
+#: ../../source/execution_environments.rst:56
+msgid "Build an execution environment"
+msgstr "构建一个执行环境"
+
+#: ../../source/execution_environments.rst:58
+msgid "Ansible-builder is used to create an |ee|."
+msgstr "ansible-builder 用于创建 |ee|。"
+
+#: ../../source/execution_environments.rst:60
+msgid "An |ee| is expected to contain:"
+msgstr "|ee| 应该包含："
+
+#: ../../source/execution_environments.rst:62
+msgid "Ansible"
+msgstr "Ansible"
+
+#: ../../source/execution_environments.rst:63
+msgid "Ansible Runner"
+msgstr "Ansible Runner"
+
+#: ../../source/execution_environments.rst:64
+msgid "Ansible Collections"
+msgstr "Ansible Collections"
+
+#: ../../source/execution_environments.rst:65
+msgid "Python and/or system dependencies of:"
+msgstr "Python 和/或系统依赖项："
+
+#: ../../source/execution_environments.rst:67
+msgid "modules/plugins in collections"
+msgstr "集合中的模块/插件"
+
+#: ../../source/execution_environments.rst:68
+msgid "content in ansible-base"
+msgstr "ansible-base 中的内容"
+
+#: ../../source/execution_environments.rst:69
+msgid "custom user needs"
+msgstr "自定义用户需要"
+
+#: ../../source/execution_environments.rst:71
+msgid "Building a new |ee| involves a definition (a ``.yml`` file) that specifies which content you would like to include in your |ee|, such as collections, Python requirements, and system-level packages. The content from the output generated from migrating to |ees| has some of the required data that can be piped to a file or pasted into this definition file. See :ref:`migrate_new_venv` for more detail. If you did not migrate from a virtual environment, you can create a definition file with the required data outlined in :ref:`ref_ee_definition`."
+msgstr "构建新的 |ee| 涉及定义（一个 ``.yml`` 文件），用于指定您要包含在 |ee| 中的内容，如集合、Python 要求和系统级软件包。在迁移到 |ees| 时生成的输出中包括一些所需的数据，这些数据可以传送到一个文件中或粘贴到定义文件中。相关详情请参阅 :ref:`migrate_new_venv`。如果您不是通过虚拟环境进行迁移，您可以参照 :ref:`ref_ee_definition` 使用所需数据创建一个定义文件。"
+
+#: ../../source/execution_environments.rst:73
+msgid "Collection developers can declare requirements for their content by providing the appropriate metadata. For more information, refer to :ref:`ref_collections_metadata`."
+msgstr "集合开发人员可以通过提供适当的元数据来声明其内容要求。如需更多信息，请参阅 :ref:`ref_collections_metadata`。"
+
+#: ../../source/execution_environments.rst:77
+msgid "Run the builder"
+msgstr "运行构建器"
+
+#: ../../source/execution_environments.rst:79
+msgid "Once you created a definition, use this procedure to build your |ee|."
+msgstr "创建定义后，使用此流程构建 |ee|。"
+
+#: ../../source/execution_environments.rst:81
+msgid "The ``ansible-builder build`` command takes an |ee| definition as an input. It outputs the build context necessary for building an |ee| image, and proceeds with building that image. The image can be re-built with the build context elsewhere, and produces the same result. By default, it looks for a file named ``execution-environment.yml`` in the current directory."
+msgstr "``ansible-builder build`` 命令将 |ee| 定义用作输入。它输出构建 |ee| 镜像所需的构建上下文，并继续进行构建该镜像。镜像可以使用其他构建上下文重新构建，并生成相同的结果。默认情况下，它会在当前目录中查找名为 ``execution-environment.yml`` 的文件。"
+
+#: ../../source/execution_environments.rst:83
+msgid "For the illustration purposes, the following example ``execution-environment.yml`` file is used as a starting point:"
+msgstr "为了说明这一点，可以使用以下示例 ``execution-environment.yml`` 文件作为一个起点："
+
+#: ../../source/execution_environments.rst:92
+msgid "The content of ``requirements.yml``:"
+msgstr "``requirements.yml`` 的内容："
+
+#: ../../source/execution_environments.rst:100
+msgid "To build an |ee| using the files above, run:"
+msgstr "要使用上述文件构建 |ee|，请运行："
+
+#: ../../source/execution_environments.rst:111
+msgid "In addition to producing a ready-to-use container image, the build context is preserved, which can be rebuilt at a different time and/or location with the tooling of your choice, such as ``docker build`` or ``podman build``."
+msgstr "除了生成随时可用的容器镜像外，构建上下文也会保留，它可以通过您选择的工具在不同的时间和/或位置进行重建，如 ``docker build`` 或 ``podman build``。"
+
+#: ../../source/execution_environments.rst:115
+msgid "Use an execution environment in jobs"
+msgstr "在作业中使用执行环境"
+
+#: ../../source/execution_environments.rst:117
+msgid "In order to use an |ee| in a job, a few components are required:"
+msgstr "要在作业中使用 |ee|，需要几个组件："
+
+#: ../../source/execution_environments.rst:119
+msgid "An |ee| must have been created using |ab|. See :ref:`build_ee` for detail. Once an |ee| is created, you can use it to run jobs. Use the |at| user interface to specify the |ee| to use in your job templates."
+msgstr "已使用 |ab| 创建了一个 |ee|。详情请查看 :ref:`build_ee`。当一个 |ee| 被创建后，您可以使用它来运行作业。使用 |at| 用户界面指定作业模板中使用的 |ee|。"
+
+#: ../../source/execution_environments.rst:121
+msgid "Depending on whether an |ee| is made available for global use or tied to an organization, you must have the appropriate level of administrator privileges in order to use an |ee| in a job. |Ees| tied to an organization require Organization administrators to be able to run jobs with those |ees|."
+msgstr "根据 |ee| 已被设置为全局使用，还是只与某个机构关联，您需要具有适当的管理员权限级别才能在作业中使用 |ee|。与机构相关联的 |Ees| 需要机构管理员权限才可以使用这些 |ees| 运行作业。"
+
+#: ../../source/execution_environments.rst:123
+msgid "Before running a job or job template that uses an |ee| that has a credential assigned to it, be sure that the credential contains a username, host, and password."
+msgstr "在运行使用已分配了一个凭证的 |ee| 的作业或作业模板前，请确定凭证包含用户名、主机和密码。"
+
+#: ../../source/execution_environments.rst:125
+msgid "Click **Execution Environments** from the left navigation bar of the controller user interface."
+msgstr "从控制器用户界面的左侧导航栏中点 **Execution Environments**。"
+
+#: ../../source/execution_environments.rst:127
+msgid "Add an |ee| by selecting the **Add** button."
+msgstr "选择 **Add** 按钮来添加 |ee|。"
+
+#: ../../source/execution_environments.rst:129
+msgid "Enter the appropriate details into the following fields:"
+msgstr "在以下字段中输入相关信息："
+
+#: ../../source/execution_environments.rst:131
+msgid "**Name**: Enter a name for the |ee| (required)."
+msgstr "**Name**：为 |ee| 输入一个名称（必需）。"
+
+#: ../../source/execution_environments.rst:132
+msgid "**Image**: Enter the image name (required). The image name requires its full location (repo), the registry, image name, and version tag in the example format of ``quay.io/ansible/awx-ee:latestrepo/project/image-name:tag``."
+msgstr "**Image**：输入镜像名称（必需）。镜像名称需要其完整位置（存储库）、registry、镜像名称和版本标签，其示例格式为 ``quay.io/ansible/awx-ee:latestrepo/project/image-name:tag``。"
+
+#: ../../source/execution_environments.rst:133
+msgid "**Pull**: optionally choose the type of pull when running jobs:"
+msgstr "**Pull**：（可选）在运行作业时选择拉取类型："
+
+#: ../../source/execution_environments.rst:135
+msgid "**Always pull container before running**: Pulls the latest image file for the container."
+msgstr "**Always pull container before running**：为容器拉取最新的镜像文件。"
+
+#: ../../source/execution_environments.rst:136
+msgid "**Only pull the image if not present before running**: Only pulls latest image if none specified."
+msgstr "**仅在运行前不存在时才拉取镜像**：如果没有指定，则只拉取最新的镜像。"
+
+#: ../../source/execution_environments.rst:137
+msgid "**Never pull container before running**: Never pull the latest version of the container image."
+msgstr "**Never pull container before running**：永不拉取容器镜像的最新版本。"
+
+#: ../../source/execution_environments.rst:139
+msgid "**Description**: optional."
+msgstr "**Description**：可选。"
+
+#: ../../source/execution_environments.rst:140
+msgid "**Organization**: optionally assign the organization to specifically use this |ee|. To make the |ee| available for use across multiple organizations, leave this field blank."
+msgstr "**Organization**：可选地分配机构来特定地使用这个 |ee|。要使 |ee| 可用于多个机构，请将此字段留空。"
+
+#: ../../source/execution_environments.rst:141
+msgid "**Registry credential**: If the image has a protected container registry, provide the credential to access it."
+msgstr "**Registry credential**：如果镜像有一个受保护的容器 registry，提供访问它的凭证。"
+
+#: ../../source/execution_environments.rst:145
+msgid "Click **Save**."
+msgstr "点 **Save**。"
+
+#: ../../source/execution_environments.rst:147
+msgid "Now your newly added |ee| is ready to be used in a job template. To add an |ee| to a job template, specify it in the **Execution Environment** field of the job template, as shown in the example below. For more information on setting up a job template, see :ref:`ug_JobTemplates` in the |atu|."
+msgstr "现在，您新添加的 |ee| 已准备好在作业模板中使用。 要将 |ee| 添加到作业模板中，在作业模板的 **Execution Environment** 字段中指定它，如下例所示。 有关设置作业模板的详情，请参考 |atu| 中的 :ref:`ug_JobTemplates`。"
+
+#: ../../source/execution_environments.rst:151
+msgid "Once you added an |ee| to a job template, you can see those templates listed in the **Templates** tab of the |ee|:"
+msgstr "将 |ee| 添加到作业模板后，您可以看到在 |ee| 的 **Templates** 标签页中列出的模板："
+
+#: ../../source/execution_environments.rst:157
+msgid "Execution environment mount options"
+msgstr "执行环境挂载选项"
+
+#: ../../source/execution_environments.rst:165
+msgid "Rebuilding an |ee| is one way to add certs, but inheriting certs from the host provides a more convenient solution. For VM-based installs, the controller automatically mounts the system trust store in the |ee| when jobs run."
+msgstr "重建 |ee| 是添加证书的一个的方法，但从主机继承证书提供了一种更加方便的解决方案。对于基于虚拟机的安装，控制器会在作业运行时自动将系统信任存储挂载到 |ee| 中。"
+
+#: ../../source/execution_environments.rst:169
+msgid "Additionally, you may customize |ee| mount options and mount paths in the **Paths to expose to isolated jobs** field of the Job Settings page, where it supports podman-style volume mount syntax. Refer to the `Podman documentation <https://docs.podman.io/en/latest/markdown/podman-run.1.html#volume-v-source-volume-host-dir-container-dir-options>`_ for detail."
+msgstr "另外，您可以在作业设置页面的 **Paths 中自定义 |ee| 挂载选项和挂载路径，以公开给隔离的 jobs** 字段，其中支持 podman 风格的卷挂载语法。详情请参阅 `Podman documentation <https://docs.podman.io/en/latest/markdown/podman-run.1.html#volume-v-source-volume-host-dir-container-dir-options>`_。"
+
+#: ../../source/execution_environments.rst:171
+msgid "In some cases where the ``/etc/ssh/*`` files were added to the |ee| image due to customization of an |ee|, an SSH error may occur. For example, exposing the ``/etc/ssh/ssh_config.d:/etc/ssh/ssh_config.d:O`` path allows the container to be mounted, but the ownership permissions are not mapped correctly."
+msgstr "在某些情况下，如果因为自定义了一个 |ee| 而导致 ``/etc/ssh/*`` 文件添加到 |ee| 镜像，则可能会出现 SSH 错误。例如，公开 ``/etc/ssh/ssh_config.d:/etc/ssh/ssh_config.d:O`` 路径允许挂载容器，但所有权权限无法正确映射。"
+
+#: ../../source/execution_environments.rst:173
+msgid "If you encounter this error, or have upgraded from an older version of the controller (e.g. 3.8.x), perform the following steps:"
+msgstr "如果您遇到这个错误，或者已从旧版本控制器（如 3.8.x）升级，请执行以下步骤："
+
+#: ../../source/execution_environments.rst:175
+msgid "Change the container ownership on the mounted volume  to ``root``."
+msgstr "将挂载卷上的容器所有权改为 ``root``。"
+
+#: ../../source/execution_environments.rst:177
+msgid "In the **Paths to expose to isolated jobs** field of the Job Settings page, using the current example, expose the path as such:"
+msgstr "使用当前示例，在 **Paths to expose to isolated jobs** 字段中，使用当前示例公开路径，如下所示："
+
+#: ../../source/execution_environments.rst:183
+msgid "The ``:O`` option is only supported for directories. It is highly recommended that you be as specific as possible, especially when specifying system paths. Mounting ``/etc`` or ``/usr`` directly have impact that make it difficult to troubleshoot."
+msgstr "``:O`` 选项只支持目录。强烈建议您尽可能具体，特别是在指定系统路径时。直接挂载 ``/etc`` 或 ``/usr`` 会使难以进行排除故障。"
+
+#: ../../source/execution_environments.rst:185
+msgid "This informs podman to run a command similar to the example below, where the configuration is mounted and the ``ssh`` command works as expected."
+msgstr "这代表 podman 运行类似以下示例的命令，其中挂载了配置，``ssh`` 命令可以正常工作。"
+
+#: ../../source/execution_environments.rst:194
+msgid "To expose isolated paths in OpenShift or Kubernetes containers as HostPath, assume the following configuration:"
+msgstr "要在 OpenShift 或 Kubernetes 容器中公开隔离路径为 HostPath，请假定以下配置："
+
+#: ../../source/execution_environments.rst:198
+msgid "Use the **Expose host paths for Container Groups** toggle to enable it."
+msgstr "使用 **Expose host paths for Container Groups** 切换来启用它。"
+
+#: ../../source/execution_environments.rst:200
+msgid "Once the playbook runs, the resulting Pod spec will display similar to the example below. Note the details of the ``volumeMounts`` and ``volumes`` sections."
+msgstr "当 playbook 运行时，生成的 Pod 规格将显示类似以下示例。请注意 ``volumeMounts`` 和 ``volumes`` 部分的详细信息。"
+

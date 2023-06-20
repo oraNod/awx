@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/inventory_source.rst:3
+msgid "Inventory Source List API Endpoint"
+msgstr "清单源列表 API 端点"
+
+#: ../../source/inventory_source.rst:8
+msgid "Make a GET request to this resource to retrieve the list of inventory sources."
+msgstr "向此资源发出 GET 请求，以检索清单源列表。"
+
+#: ../../source/inventory_source.rst:20
+msgid "The resulting data structure contains:"
+msgstr "得到的数据结构包括："
+
+#: ../../source/inventory_source.rst:31
+msgid "The ``count`` field indicates the total number of inventory sources found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more inventory source records."
+msgstr "``count`` 字段显示为给定查询找到的清单源总数。如果单个页面没有包括所有项，使用 ``next`` 和 ``previous`` 字段可以查看其他结果。``results`` 列表包含零或更多个清单源记录。"
+
+#: ../../source/inventory_source.rst:34
+msgid "Results"
+msgstr "结果"
+
+#: ../../source/inventory_source.rst:39
+msgid "Each inventory source data structure includes the following fields:"
+msgstr "每个清单源数据结构包括以下字段："
+
+#: ../../source/inventory_source.rst:41
+msgid "``id``: Database ID for this inventory source. (integer)"
+msgstr "``id``：此清单源的数据库 ID。（整数）"
+
+#: ../../source/inventory_source.rst:42
+msgid "``type``: Data type for this inventory source. (multiple choice)"
+msgstr "``type``：此清单来源的数据类型。（多选项）"
+
+#: ../../source/inventory_source.rst:43
+msgid "``inventory_source``: Inventory Source"
+msgstr "``inventory_source``：清单源列表"
+
+#: ../../source/inventory_source.rst:44
+msgid "``url``: URL for this inventory source. (string)"
+msgstr "``url``：此清单源的 URL。（字符串）"
+
+#: ../../source/inventory_source.rst:45
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``：包含相关资源的 URL 的数据结构。（对象）"
+
+#: ../../source/inventory_source.rst:46
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``：包含相关资源的名称/描述的数据结构。（对象）"
+
+#: ../../source/inventory_source.rst:47
+msgid "``created``: Timestamp when this inventory source was created. (datetime)"
+msgstr "``created``：创建此清单源时的时间戳。（日期时间）"
+
+#: ../../source/inventory_source.rst:48
+msgid "``modified``: Timestamp when this inventory source was last modified. (datetime)"
+msgstr "``modified``：最后一次修改此清单源时的时间戳。（日期时间）"
+
+#: ../../source/inventory_source.rst:49
+msgid "``name``: (string)"
+msgstr "``name``：（字符串）"
+
+#: ../../source/inventory_source.rst:50
+msgid "``description``: (string)"
+msgstr "``description``：（字符串）"
+
+#: ../../source/inventory_source.rst:59
+msgid "``source``: (multiple choice)"
+msgstr "``source``：（多选项）"
+
+#: ../../source/inventory_source.rst:52
+msgid "``\"\"``: Manual"
+msgstr "``\"\"``：手动"
+
+#: ../../source/inventory_source.rst:53
+msgid "``file``: Local File, Directory or Script"
+msgstr "``file``：本地文件、目录或脚本"
+
+#: ../../source/inventory_source.rst:54
+msgid "``rax``: Rackspace Cloud Servers"
+msgstr "``rax``：RAckspace Cloud Servers"
+
+#: ../../source/inventory_source.rst:55
+msgid "``ec2``: Amazon EC2"
+msgstr "``ec2``：Amazon EC2"
+
+#: ../../source/inventory_source.rst:56
+msgid "``gce``: Google Compute Engine"
+msgstr "``gce``：Google Compute Engine"
+
+#: ../../source/inventory_source.rst:57
+msgid "``azure``: Microsoft Azure"
+msgstr "``azure``：Microsoft Azure"
+
+#: ../../source/inventory_source.rst:58
+msgid "``vmware``: VMware vCenter"
+msgstr "``vmware``：VMware vCenter"
+
+#: ../../source/inventory_source.rst:59
+msgid "``openstack``: OpenStack"
+msgstr "``openstack``：OpenStack"
+
+#: ../../source/inventory_source.rst:60
+msgid "``custom``: Custom Script"
+msgstr "``custom``：自定义脚本"
+
+#: ../../source/inventory_source.rst:61
+msgid "``source_path``: (string)"
+msgstr "``source_path``：（字符串）"
+
+#: ../../source/inventory_source.rst:62
+msgid "``source_script``: (field)"
+msgstr "``source_script``：（字段）"
+
+#: ../../source/inventory_source.rst:63
+msgid "``source_vars``: Inventory source variables in YAML or JSON format. (string)"
+msgstr "``source_vars``：YAML 或 JSON 格式的清单源变量。（字符串）"
+
+#: ../../source/inventory_source.rst:64
+msgid "``credential``: (field)"
+msgstr "``credential``：（字段）"
+
+#: ../../source/inventory_source.rst:65
+msgid "``source_regions``: (string)"
+msgstr "``source_regions``：（字符串）"
+
+#: ../../source/inventory_source.rst:66
+msgid "``instance_filters``: Comma-separated list of filter expressions (EC2 only). Hosts are imported when ANY of the filters match. (string)"
+msgstr "``instance_filters``：以逗号分隔的过滤器表达式列表（仅限 EC2）。当任何过滤器匹配时会导入主机。（字符串）"
+
+#: ../../source/inventory_source.rst:67
+msgid "``group_by``: Limit groups automatically created from inventory source (EC2 only). (string)"
+msgstr "``group_by``：限制从清单源自动创建的组（仅限 EC2）。（字符串）"
+
+#: ../../source/inventory_source.rst:68
+msgid "``overwrite``: Overwrite local groups and hosts from remote inventory source. (boolean)"
+msgstr "``overwrite``：从远程清单源覆盖本地组和主机。（布尔值）"
+
+#: ../../source/inventory_source.rst:69
+msgid "``overwrite_vars``: Overwrite local variables from remote inventory source. (boolean)"
+msgstr "``overwrite_vars``：从远程清单源覆盖本地变量。（布尔值）"
+
+#: ../../source/inventory_source.rst:70
+msgid "``last_job_run``: (datetime)"
+msgstr "``last_job_run``：（日期时间）"
+
+#: ../../source/inventory_source.rst:71
+msgid "``last_job_failed``: (boolean)"
+msgstr "``last_job_failed``：（布尔值）"
+
+#: ../../source/inventory_source.rst:72
+msgid "``has_schedules``: (boolean)"
+msgstr "``has_schedules``：（布尔值）"
+
+#: ../../source/inventory_source.rst:73
+msgid "``next_job_run``: (datetime)"
+msgstr "``next_job_run``：（日期时间）"
+
+#: ../../source/inventory_source.rst:83
+msgid "``status``: (multiple choice)"
+msgstr "``status``：（多选项）"
+
+#: ../../source/inventory_source.rst:75
+msgid "``new``: New"
+msgstr "``new``：新"
+
+#: ../../source/inventory_source.rst:76
+msgid "``pending``: Pending"
+msgstr "``pending``：待处理"
+
+#: ../../source/inventory_source.rst:77
+msgid "``waiting``: Waiting"
+msgstr "``waiting``：等待"
+
+#: ../../source/inventory_source.rst:78
+msgid "``running``: Running"
+msgstr "``running``：运行中"
+
+#: ../../source/inventory_source.rst:79
+msgid "``successful``: Successful"
+msgstr "``successful``：成功"
+
+#: ../../source/inventory_source.rst:80
+msgid "``failed``: Failed"
+msgstr "``failed``：失败"
+
+#: ../../source/inventory_source.rst:81
+msgid "``error``: Error"
+msgstr "``error``：错误"
+
+#: ../../source/inventory_source.rst:82
+msgid "``canceled``: Canceled"
+msgstr "``canceled``：已取消"
+
+#: ../../source/inventory_source.rst:83
+msgid "``never updated``: Never Updated"
+msgstr "``never updated``：永不更新"
+
+#: ../../source/inventory_source.rst:84
+msgid "``none``: No External Source"
+msgstr "``none``：没有外部源"
+
+#: ../../source/inventory_source.rst:85
+msgid "``inventory``: (field)"
+msgstr "``inventory``：（字段）"
+
+#: ../../source/inventory_source.rst:86
+msgid "``group``: (field)"
+msgstr "``group``：（字段）"
+
+#: ../../source/inventory_source.rst:87
+msgid "``update_on_launch``: (boolean)"
+msgstr "``update_on_launch``：（布尔值）"
+
+#: ../../source/inventory_source.rst:88
+msgid "``update_cache_timeout``: (integer)"
+msgstr "``update_cache_timeout``：（整数）"
+
+#: ../../source/inventory_source.rst:89
+msgid "``last_update_failed``: (boolean)"
+msgstr "``last_update_failed``：（布尔值）"
+
+#: ../../source/inventory_source.rst:90
+msgid "``last_updated``: (datetime)"
+msgstr "``last_updated``：（日期时间）"
+
+#: ../../source/inventory_source.rst:94
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/inventory_source.rst:99
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

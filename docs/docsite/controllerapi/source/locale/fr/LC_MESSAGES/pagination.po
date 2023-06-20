@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/pagination.rst:3
+msgid "Pagination"
+msgstr ""
+
+#: ../../source/pagination.rst:10
+msgid ""
+"Responses for collections in the API are paginated. This means that while"
+" a collection may contain tens or hundreds of thousands of objects, in "
+"each web request, only a limited number of results are returned for API "
+"performance reasons."
+msgstr ""
+
+#: ../../source/pagination.rst:12
+msgid ""
+"When you get back the result for a collection you will see something "
+"similar to the following:"
+msgstr ""
+
+#: ../../source/pagination.rst:18
+msgid ""
+"To get the next page, simply request the page given by the 'next'  "
+"sequential URL."
+msgstr ""
+
+#: ../../source/pagination.rst:21
+msgid ""
+"Use the ``page_size=XX`` query string parameter to change the number of "
+"results returned for each request."
+msgstr ""
+
+#: ../../source/pagination.rst:23
+msgid ""
+"Use the ``page`` query string parameter to retrieve a particular page of "
+"results."
+msgstr ""
+
+#: ../../source/pagination.rst:30
+msgid ""
+"The previous and next links returned with the results will set these "
+"query string parameters automatically."
+msgstr ""
+
+#: ../../source/pagination.rst:32
+msgid ""
+"The serializer is quite efficient, but you should probably not request "
+"page sizes beyond a couple of hundred."
+msgstr ""
+
+#: ../../source/pagination.rst:34
+msgid ""
+"The user interface uses smaller values to avoid the user having to do a "
+"lot of scrolling."
+msgstr ""
+

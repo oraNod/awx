@@ -1,0 +1,548 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/projects.rst:4
+msgid "Projects"
+msgstr ""
+
+#: ../../source/projects.rst:9
+msgid ""
+"A :term:`Project` is a logical collection of Ansible playbooks, "
+"represented in Tower."
+msgstr ""
+
+#: ../../source/projects.rst:11
+msgid ""
+"You can manage playbooks and playbook directories by either placing them "
+"manually under the Project Base Path on your Tower server, or by placing "
+"your playbooks into a source code management (SCM) system supported by "
+"Tower, including Git, Subversion, and Mercurial."
+msgstr ""
+
+#: ../../source/projects.rst:15
+msgid ""
+"By default, the Project Base Path is ``/var/lib/awx/projects``, but this "
+"may have been modified by the Tower administrator. It is configured in "
+"``/etc/tower/settings.py``. Use caution when editing this file, as "
+"incorrect settings can disable your installation."
+msgstr ""
+
+#: ../../source/projects.rst:17
+msgid ""
+"This menu displays a list of the projects that are currently available. "
+"The list of projects may be sorted and searched by **Status**, **Name**, "
+"or **Type**. For each project listed, you can edit project properties and"
+" delete the project, using the edit and delete icons."
+msgstr ""
+
+#: ../../source/projects.rst:19
+msgid "|Projects - home with example project|"
+msgstr ""
+
+#: ../../source/projects.rst:24
+msgid ""
+"**Status** indicates the state of the project and may be one of the "
+"following (note that you can also filter your view by specific status "
+"types):"
+msgstr ""
+
+#: ../../source/projects.rst:26
+msgid ""
+"New: The source control update has been created, but not queued or "
+"started yet. (To be deprecated.)"
+msgstr ""
+
+#: ../../source/projects.rst:27
+msgid ""
+"Pending: The source control update has been queued, but has not run yet. "
+"(To be deprecated.)"
+msgstr ""
+
+#: ../../source/projects.rst:28
+msgid "Waiting: The source control update is waiting on an update/dependency."
+msgstr ""
+
+#: ../../source/projects.rst:29
+msgid "Running: The source control update is currently in progress."
+msgstr ""
+
+#: ../../source/projects.rst:30
+msgid ""
+"Successful: The last source control update for this project succeeded "
+"succeeded."
+msgstr ""
+
+#: ../../source/projects.rst:31
+msgid "Failed: The last source control update for this project failed."
+msgstr ""
+
+#: ../../source/projects.rst:32
+msgid ""
+"Error: The last source control update job failed to run at all. (To be "
+"deprecated.)"
+msgstr ""
+
+#: ../../source/projects.rst:33
+msgid "Canceled: The last source control update for the project was canceled."
+msgstr ""
+
+#: ../../source/projects.rst:34
+msgid ""
+"Never updated: The project is configured for source control, but has "
+"never been updated."
+msgstr ""
+
+#: ../../source/projects.rst:35
+msgid ""
+"OK: The project is not configured for source control, and is correctly in"
+" place. (To be deprecated.)"
+msgstr ""
+
+#: ../../source/projects.rst:36
+msgid ""
+"Missing: Projects are absent from the project base path of "
+"``/var/lib/awx/projects`` (applicable for manual or source control "
+"managed projects)."
+msgstr ""
+
+#: ../../source/projects.rst:38
+msgid "Under **Actions**, the following actions are available:"
+msgstr ""
+
+#: ../../source/projects.rst:40
+msgid ""
+"Update: Invoke an immediate update from source control, if configured for"
+" this project"
+msgstr ""
+
+#: ../../source/projects.rst:41
+msgid ""
+"Schedule: Schedule an update from source control, if configured for this "
+"project"
+msgstr ""
+
+#: ../../source/projects.rst:42
+msgid "Edit: Edit the project"
+msgstr ""
+
+#: ../../source/projects.rst:43
+msgid "Delete: Delete the project"
+msgstr ""
+
+#: ../../source/projects.rst:50
+msgid ""
+"Projects of credential type Manual cannot update or schedule source "
+"control-based actions without being reconfigured as an SCM type "
+"credential."
+msgstr ""
+
+#: ../../source/projects.rst:54
+msgid "Add a new project"
+msgstr ""
+
+#: ../../source/projects.rst:59
+msgid "To create a new project:"
+msgstr ""
+
+#: ../../source/projects.rst:61
+msgid "Click the |add| button, which launches the **Create Project** dialog."
+msgstr ""
+
+#: ../../source/projects.rst:65
+msgid "|Projects - create new project|"
+msgstr ""
+
+#: ../../source/projects.rst:69 ../../source/projects.rst:123
+#: ../../source/projects.rst:210
+msgid "Enter the appropriate details into the following fields:"
+msgstr ""
+
+#: ../../source/projects.rst:71
+msgid "**Name**"
+msgstr ""
+
+#: ../../source/projects.rst:72
+msgid "**Description** (optional)"
+msgstr ""
+
+#: ../../source/projects.rst:73
+msgid ""
+"**Organization** (A project must have at least one organization. Pick one"
+" organization now to create the project, and then after the project is "
+"created you can add additional organizations.)"
+msgstr ""
+
+#: ../../source/projects.rst:74
+msgid ""
+"**SCM Type** (Select one of Manual, Git, Subversion, or Mercurial. Refer "
+"to :ref:`ug_manual` and :ref:`ug_sourcecontrol` in this guide for more "
+"detail.)"
+msgstr ""
+
+#: ../../source/projects.rst:79
+msgid ""
+"Each project path can only be assigned to one project. If you receive the"
+" following message, ensure that you have not already assigned the project"
+" path to an existing project:"
+msgstr ""
+
+#: ../../source/projects.rst:81
+msgid ""
+"``All of the project paths have been assigned to existing projects, or "
+"there are no directories found in the base path. You will need to add a "
+"project path before creating a new project.``"
+msgstr ""
+
+#: ../../source/projects.rst:83
+msgid "Click **Save** when done."
+msgstr ""
+
+#: ../../source/projects.rst:89
+msgid "Manage playbooks manually"
+msgstr ""
+
+#: ../../source/projects.rst:95
+msgid ""
+"Create one or more directories to store playbooks under the Project Base "
+"Path (for example, /var/lib/awx/projects/)"
+msgstr ""
+
+#: ../../source/projects.rst:96
+msgid "Create or copy playbook files into the playbook directory."
+msgstr ""
+
+#: ../../source/projects.rst:97
+msgid ""
+"Ensure that the playbook directory and files are owned by the same UNIX "
+"user and group that the Tower service runs as."
+msgstr ""
+
+#: ../../source/projects.rst:98
+msgid ""
+"Ensure that the permissions are appropriate for the playbook directories "
+"and files."
+msgstr ""
+
+#: ../../source/projects.rst:100
+msgid ""
+"If you have trouble adding a project path, check the permissions and "
+"SELinux context settings for the project directory and files."
+msgstr ""
+
+#: ../../source/projects.rst:103
+msgid ""
+"If you have not added any Ansible playbook directories to the base "
+"project path, you will receive the following message from Tower:"
+msgstr ""
+
+#: ../../source/projects.rst:105
+msgid "|Projects - create new warning|"
+msgstr ""
+
+#: ../../source/projects.rst:107
+msgid ""
+"Correct this issue by creating the appropriate playbook directories and "
+"checking out playbooks from your SCM or otherwise copying playbooks into "
+"the appropriate playbook directories."
+msgstr ""
+
+#: ../../source/projects.rst:115
+msgid "Manage playbooks using Source Control"
+msgstr ""
+
+#: ../../source/projects.rst:121
+msgid "Select the appropriate **SCM Type**."
+msgstr ""
+
+#: ../../source/projects.rst:125
+msgid "SCM URL"
+msgstr ""
+
+#: ../../source/projects.rst:126
+msgid "SCM Branch (Optionally enter the SCM branch for Git or Mercurial.)"
+msgstr ""
+
+#: ../../source/projects.rst:127
+msgid "Revision # (Optionally enter the Revision # for Subversion.)"
+msgstr ""
+
+#: ../../source/projects.rst:128
+msgid ""
+"SCM Credential (If authentication is required, select the appropriate SCM"
+" credential.)"
+msgstr ""
+
+#: ../../source/projects.rst:129
+msgid "SCM Update Options"
+msgstr ""
+
+#: ../../source/projects.rst:131
+msgid "Clean (Remove any local modifications prior to performing an update.)"
+msgstr ""
+
+#: ../../source/projects.rst:132
+msgid ""
+"Delete on Update (Delete the local repository in its entirety prior to "
+"performing an update. Depending on the size of the repository this may "
+"significantly increase the amount of time required to complete an update."
+msgstr ""
+
+#: ../../source/projects.rst:133
+msgid ""
+"Update on Launch (Each time a job runs using this project, perform an "
+"update to the local repository prior to starting the job. To avoid job "
+"overflows if jobs are spawned faster than the project can sync, selecting"
+" this allows you to configure a Cache Timeout to cache prior project "
+"syncs for a certain number of seconds.)"
+msgstr ""
+
+#: ../../source/projects.rst:135
+msgid "|Projects - create SCM project|"
+msgstr ""
+
+#: ../../source/projects.rst:139
+msgid "Click **Save** to save your project."
+msgstr ""
+
+#: ../../source/projects.rst:142
+msgid ""
+"Using a Github link offers an easy way to use a playbook. To help get you"
+" started, use the ``helloworld.yml`` file available at: "
+"https://github.com/ansible/tower-example.git"
+msgstr ""
+
+#: ../../source/projects.rst:144
+msgid ""
+"This link offers a very similar playbook to the one created manually in "
+"the instructions found in the :ref:`Ansible Tower Quick Start Guide "
+"<qs_start>`. Using it will not alter or harm your system in anyway."
+msgstr ""
+
+#: ../../source/projects.rst:148
+msgid "Updating projects from source control"
+msgstr ""
+
+#: ../../source/projects.rst:153
+msgid "Update an existing SCM-based project by clicking the |update| button."
+msgstr ""
+
+#: ../../source/projects.rst:157
+msgid ""
+"Please note that immediately after adding a project setup to use source "
+"control, a \"Sync\" starts that fetches the project details from the "
+"configured source control."
+msgstr ""
+
+#: ../../source/projects.rst:161
+msgid "|projects - list all|"
+msgstr ""
+
+#: ../../source/projects.rst:165
+msgid ""
+"Click on the dot under **Status** (far left, beside the name of the "
+"Project) to get further details about the update process."
+msgstr ""
+
+#: ../../source/projects.rst:167
+msgid "|Project - update status|"
+msgstr ""
+
+#: ../../source/projects.rst:171
+msgid ""
+"3. To set a schedule for updating the project from SCM, click the "
+"|schedule| button. This will navigate to the **Schedules** screen."
+msgstr ""
+
+#: ../../source/projects.rst:176
+msgid "|Project - update started|"
+msgstr ""
+
+#: ../../source/projects.rst:180
+msgid ""
+"This screen displays a list of the schedules that are currently available"
+" for the selected **Project**. The schedule list may be sorted and "
+"searched by **Name**."
+msgstr ""
+
+#: ../../source/projects.rst:182
+msgid "The list of schedules includes:"
+msgstr ""
+
+#: ../../source/projects.rst:184
+msgid "**Name**: Clicking the schedule name opens the **Edit Schedule** dialog"
+msgstr ""
+
+#: ../../source/projects.rst:185
+msgid "**First Run**: The first scheduled run of this task"
+msgstr ""
+
+#: ../../source/projects.rst:186
+msgid "**Next Run**: The next scheduled run of this task"
+msgstr ""
+
+#: ../../source/projects.rst:187
+msgid ""
+"**Final Run**: If the task has an end date, this is the last scheduled "
+"run of the task."
+msgstr ""
+
+#: ../../source/projects.rst:189
+msgid ""
+"Buttons located in the upper right corner of the **Schedules** screen "
+"provide the following actions:"
+msgstr ""
+
+#: ../../source/projects.rst:191
+msgid "Create a new schedule"
+msgstr ""
+
+#: ../../source/projects.rst:192
+msgid "Refresh this view"
+msgstr ""
+
+#: ../../source/projects.rst:193
+msgid "View Activity Stream"
+msgstr ""
+
+#: ../../source/projects.rst:197
+msgid "Add a new schedule"
+msgstr ""
+
+#: ../../source/projects.rst:202
+msgid "To create a new schedule:"
+msgstr ""
+
+#: ../../source/projects.rst:204
+msgid "Click the |add| button, which opens the **Add Schedule** dialog."
+msgstr ""
+
+#: ../../source/projects.rst:206
+msgid "|Projects - create new schedule|"
+msgstr ""
+
+#: ../../source/projects.rst:212
+msgid "Name (required)"
+msgstr ""
+
+#: ../../source/projects.rst:213
+msgid "Start Date (required)"
+msgstr ""
+
+#: ../../source/projects.rst:214
+msgid "Start Time (required)"
+msgstr ""
+
+#: ../../source/projects.rst:215
+msgid "Local Time Zone (the entered Start Time should be in this timezone)"
+msgstr ""
+
+#: ../../source/projects.rst:216
+msgid "UTC Start Time (calculated from Start Time + Local Time Zone)"
+msgstr ""
+
+#: ../../source/projects.rst:217
+msgid ""
+"Repeat Frequency (appropriate scheduling options are displayed depending "
+"on the frequency you select)"
+msgstr ""
+
+#: ../../source/projects.rst:219
+msgid ""
+"The **SCHEDULE DESCRIPTION** allows you to review the set schedule and a "
+"list of the scheduled occurrences in the selected Local Time Zone."
+msgstr ""
+
+#: ../../source/projects.rst:223
+msgid ""
+"Jobs are scheduled in UTC. Repeating jobs that run at a specific time of "
+"day may move relative to a local timezone when Daylight Savings Time "
+"shifts occur.  Essentially, Tower resolves the local time zone based time"
+" to UTC when the schedule is saved.  To ensure your schedules are "
+"correctly set, you should set your schedules in UTC time."
+msgstr ""
+
+#: ../../source/projects.rst:226
+msgid "Once done, click **Save**."
+msgstr ""
+
+#: ../../source/projects.rst:229
+msgid ""
+"You can use the **ON/OFF** toggle button to stop an active schedule or "
+"activate a stopped schedule."
+msgstr ""
+
+#: ../../source/projects.rst:231
+msgid ""
+"The schedules overview screen for the project also shows you when the "
+"first, next, and final runs are scheduled."
+msgstr ""
+
+#: ../../source/projects.rst:233
+msgid ""
+"There are several actions available for schedules, under the **Actions** "
+"column:"
+msgstr ""
+
+#: ../../source/projects.rst:235
+msgid "Edit Schedule"
+msgstr ""
+
+#: ../../source/projects.rst:236
+msgid "Delete schedule"
+msgstr ""
+
+#: ../../source/projects.rst:238
+msgid "|Projects - newly created schedule|"
+msgstr ""
+
+#: ../../source/projects.rst:247
+msgid "Ansible Galaxy Support"
+msgstr ""
+
+#: ../../source/projects.rst:254
+msgid ""
+"At the end of a Project update, Tower searches for a file called "
+"requirements.yml in the roles directory, '<project-top-level-"
+"directory>/roles/requirements.yml'"
+msgstr ""
+
+#: ../../source/projects.rst:256
+msgid ""
+"At the end of a Project update, Tower searches for a file called "
+"``requirements.yml`` in the ``roles`` directory, located at``<project-"
+"top-level-directory>/roles/requirements.yml``. If this file is found, the"
+" following command automatically runs:"
+msgstr ""
+
+#: ../../source/projects.rst:263
+msgid ""
+"This file allows you to reference Galaxy roles or roles within other "
+"repositories which can be checked out in conjunction with your own "
+"project. The addition of this Ansible Galaxy support eliminates the need "
+"to create git submodules for achieving this result."
+msgstr ""
+
+#: ../../source/projects.rst:265
+msgid ""
+"For more information and examples on the syntax of the "
+"``requirements.yml`` file, refer to `Advanced Control Over Role "
+"Requirements`_ in the Ansible documentation."
+msgstr ""
+

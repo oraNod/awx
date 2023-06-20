@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/searching.rst:4
+msgid "Searching"
+msgstr "검색"
+
+#: ../../source/searching.rst:9
+msgid "Use the search query string parameter to perform a case-insensitive search within all designated text fields of a model (added in AWX 1.4):"
+msgstr "모델의 지정된 모든 텍스트 필드 내에서 대소문자를 구분하지 않는 검색을 수행하려면 검색 쿼리 문자열 매개변수를 사용합니다(AWX 1.4에서 추가됨)."
+
+#: ../../source/searching.rst:17
+msgid "Search across related fields (added in AWX 1.4 / |at| 3.1):"
+msgstr "다수의 관련 필드에 걸쳐 검색합니다(AWX 1.4/|at| 3.1에서 추가됨)."
+

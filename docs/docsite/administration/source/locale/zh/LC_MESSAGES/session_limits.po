@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/session_limits.rst:4
+msgid "Working with Session Limits"
+msgstr "使用会话限制"
+
+#: ../../source/session_limits.rst:11
+msgid "Setting a session limit allows administrators to limit the number of simultaneous sessions per user or per IP address."
+msgstr "设置会话限制可允许管理员限制每个用户或每个 IP 地址可以同时具有的并发会话数。"
+
+#: ../../source/session_limits.rst:13
+msgid "In |at|, a session is created for each browser that a user uses to log in, which forces the user to log out any extra sessions after they exceed the administrator-defined maximum."
+msgstr "在 |at| 中，可为用户用来登录的每个浏览器创建一个会话，它会强制用户在超过管理员定义的最大值后注销任何额外的会话。"
+
+#: ../../source/session_limits.rst:15
+msgid "Session limits may be important, depending on your particular setup. For example, perhaps you only want a single user on your system with a single login per device (where the user could log in on his work laptop, phone, or home computer). In such a case, you would want to create a session limit equal to 1 (one). If the user logs in on his laptop, for example, then logs in using his phone, his laptop session expires (times out) and only the login on the phone persists."
+msgstr "会话限制可能很重要，具体取决于您的具体设置。例如，您可能只希望系统中的单个用户在每台设备中有一个登录（其中用户可在其笔记本电脑、手机或家用计算机上登录），在这种情况下，您可以把会话限制设置为 1。如果用户在笔记本电脑上登录，然后又使用其手机登录，则通过笔记本进行的会话会过期（超时），仅在手机上保持登录。"
+
+#: ../../source/session_limits.rst:17
+msgid "While session counts can be very limited, they can also be expanded to cover as many session logins as are needed by your organization."
+msgstr "会话限制的数量可以设置为一个比较小的值，但也可以根据机构的要求将其扩展为允许大量并发会话登录。"
+
+#: ../../source/session_limits.rst:19
+msgid "When a user logs in and their login results in other users being logged out, the session limit has been reached and those users who are logged out are notified as to why the logout occurred."
+msgstr "当用户进行登录，且其登录行为导致其他用户的登陆被注销时，则代表已达到会话限制，那些被注销的用户将会收到包括注销原因的信息。"
+
+#: ../../source/session_limits.rst:21
+msgid "To make changes to your session limits, navigate to the **Miscellaneous System settings** of the Settings menu and edit the **Maximum Number Of Simultaneous Logged In Sessions** setting or use the :ref:`Browsable API <controllerapi:api_browsable_api>` if you are comfortable with making REST requests."
+msgstr "要更改会话限制，请进入 Settings 菜单的 **Miber System settings**，编辑 **Maximum Number Of Simultaneous Logged In Sessions** 设置。或者，如果您熟悉 REST 请求，则使用 :ref:`Browsable API <controllerapi:api_browsable_api>`。"
+
+#: ../../source/session_limits.rst:24
+msgid "To make the best use of session limits, disable ``AUTH_BASIC_ENABLED`` by changing the value to ``False``, as it falls outside of the scope of session limit enforcement. Alternatively, in the System Settings of the controller UI, toggle the **Enable HTTP Basic Auth** to off."
+msgstr "为了更好地使用会话限制，将``AUTH_BASIC_ENABLED`` 的值设为 ``False`` 来禁用它，因为它不在会话限制强制范围之内。或者，在控制器 UI 的系统设置中，将 **Enable HTTP Basic Auth** 切换为 off。"
+
+#: ../../source/session_limits.rst:30
+msgid "Proactive session limits will kick the user out when the session is idle. It is strongly recommended that you do not set the session limit to anything less than 1 minute, as doing so will break your |at| instance."
+msgstr "主动的会话限制会在会话闲置时让用户退出。强烈建议您不要将会话限制设置为小于 1 分钟，因为这样做会破坏您的 |at| 实例。"
+

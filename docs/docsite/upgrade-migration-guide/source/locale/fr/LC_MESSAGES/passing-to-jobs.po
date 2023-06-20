@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Upgrade and Migration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/passing-to-jobs.rst:2
+msgid "Job Template Changes"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:7
+msgid ""
+"Job templates have been updated in Tower to allow you more flexibility "
+"when creating and working with them."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:10
+msgid "Prompt on Launch"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:12
+msgid ""
+"In prior versions of |at|, you could set \"Prompt on Launch\" against "
+"Extra Varaibles that you want to potentially pass through the job "
+"template. Starting with version 3.0, |at| allows you to prompt for an "
+"inventory selection, job type, and more."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:14
+msgid ""
+"Selecting \"Prompt on Launch\" means that even if a value is supplied at "
+"the time of the job template creation, the user launching the job will be"
+" prompted to supply new information or confirm what was entered in the "
+"job template originally."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:16
+msgid ""
+"The following job template settings allow for prompting at the time of "
+"launch:"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:18
+msgid ""
+"Job Type (run or check type jobs only, as scan jobs cannot be changed at "
+"the time of launch)"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:19
+msgid "Inventory"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:20
+msgid "Machine credential"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:21
+msgid "Limit"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:22
+msgid "Job Tags"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:23
+msgid "Extra variables"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:27
+msgid ""
+"As you work with migrating your Tower 2.4.5 job templates to 3.x, please "
+"keep in mind the following:"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:29
+msgid ""
+"All \"Prompt on Launch\" fields are set to *False* by default after "
+"migrating to 3.x (new job templates created also have all \"Prompt on "
+"Launch\" fields set to *False* by default)."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:31
+msgid ""
+"With one exception for those upgrading from 2.4.5 to 3.x: if a credential"
+" used in Tower 2.4.5 was null, the credential will be prompted for in "
+"3.x."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:33
+msgid ""
+"If you have Job Templates with a null credential, in the migration from "
+"2.4.5 to 3.x, \"ask_credential_on_launch\" is set to *True*."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:35
+msgid ""
+"Note that there was no way to set a default credential in 2.4.5. However,"
+" in 3.x, you can set a default credential and select to prompt the user "
+"at launch time to confirm the default credential or change it to "
+"something new."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:37
+msgid "All other \"ask_xx_on_launch\" prompts are set to *False*."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:38
+msgid ""
+"Starting with Tower 3.x, if \"ask_variables_on_launch\" is set to "
+"*False*, extra variables passed at launch time (via UI or API) that are "
+"not part of an enabled survey are ignored."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:39
+msgid ""
+"While there are no changes to how \"ask_variables_on_launch\" behaves, "
+"keep in mind that these variables combine with survey answers."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:43
+msgid "Permissions/RBAC Notes"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:45
+msgid ""
+"Job template visibility is no longer configured via a combination of "
+"permissions on inventory, projects, and credentials. Admins who want to "
+"give any user or team permissions to use a job template can quickly "
+"assign permissions directly on the job template.  Similarly, credentials "
+"are now full objects in Tower’s RBAC system, and can be assigned to "
+"multiple users and/or teams for use."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:47
+msgid ""
+"If a job template a user has been granted execution capabilities on does "
+"not specify an inventory or credential, the user will be prompted at run-"
+"time to select among the inventory and credentials in the organization "
+"they own or have been granted usage capabilities."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:49
+msgid ""
+"Users that are job template administrators can make changes to job "
+"templates; however, to make changes to the inventory, project, playbook, "
+"or credentials used in the job template, the user must also have the "
+"“Use” role for the project, inventory, and all credentials currently "
+"being used or being set."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:54
+msgid "Surveys"
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:56
+msgid ""
+"In prior versions of |at|, you had to select a checkbox to \"Enable "
+"Survey\" on the Job Template before a button appeared allowing you to "
+"\"Create Survey\"."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:58
+msgid "Enabling and creating surveys is much simplier in |at|."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:60
+msgid ""
+"At the bottom of each job template is a button (|add-survey|) which opens"
+" a new dialog where you can enter your survey questions and reposnses."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:68
+msgid ""
+"Use the **ON/OFF** toggle button to quickly activate or deactivate this "
+"survey prompt."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:71
+msgid ""
+"Once you have entered the question information, click **Add** to add the "
+"survey prompt."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:73
+msgid ""
+"A stylized preview of the survey is presented, along with a **New "
+"Question** button. Click this button to add additional questions."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:75
+msgid ""
+"For any question, you can click on the **Edit** button to edit the "
+"question, the **Delete** button to delete the question, and click on the "
+"Up and Down arrow buttons to rearrange the order of the questions. Click "
+"**Save** to save the survey."
+msgstr ""
+
+#: ../../source/passing-to-jobs.rst:77
+msgid "|job-template-completed-survey|"
+msgstr ""
+

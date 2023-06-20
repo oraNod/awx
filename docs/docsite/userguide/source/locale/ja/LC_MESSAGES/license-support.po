@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../common/source/lic-feat-support.rst:2
+msgid "Red Hat Ansible Automation Platform Controller Licensing, Updates, and Support"
+msgstr "Red Hat Ansible Automation Platform Controller のライセンス、更新、およびサポート"
+
+#: ../../../common/source/lic-feat-support.rst:7
+msgid "|RHAT| (\"**Automation Controller**\") is a software product provided as part of an annual |rhaap| subscription entered into between you and Red Hat, Inc. (\"**Red Hat**\")."
+msgstr "|RHAT| (\"**Automation Controller**\") は、お客様と Red Hat, Inc. (\"**Red Hat**\") の間で結ばれる年間 |rhaap| サブスクリプション契約で提供されるソフトウェア製品です。"
+
+#: ../../../common/source/lic-feat-support.rst:9
+msgid "Ansible is an open source software project and is licensed under the GNU General Public License version 3, as detailed in the Ansible source code: https://github.com/ansible/ansible/blob/devel/COPYING"
+msgstr "Ansible はオープンソースのソフトウェアプロジェクトで GNU 一般公衆利用許諾契約書バージョン 3 に基づいたライセンスです。これについては https://github.com/ansible/ansible/blob/devel/COPYING の Ansible のソースコードに詳しく記載されています。"
+
+#: ../../../common/source/lic-feat-support.rst:11
+msgid "You **must** have valid subscriptions attached before installing the |aap|. See :ref:`attach_subscriptions` for detail."
+msgstr "|aap| をインストールする前に有効なサブスクリプションを割り当てる **必要があります**。詳細は :ref:`attach_subscriptions` を参照してください。"
+
+#: ../../../common/source/lic-feat-support.rst:14
+msgid "Support"
+msgstr "サポート"
+
+#: ../../../common/source/lic-feat-support.rst:19
+msgid "Red Hat offers support to paid |rhaap| customers."
+msgstr "Red Hat では、有償の |rhaap| をご利用のお客様にサポートを提供します。"
+
+#: ../../../common/source/lic-feat-support.rst:21
+msgid "If you or your company has purchased a subscription for |aap|, you can contact the support team at https://access.redhat.com. To better understand the levels of support which match your |aap| subscription, refer to :ref:`subscription-types`. For details of what is covered under an |aap| subscription, please see the Scopes of Support at: https://access.redhat.com/support/policy/updates/ansible-tower#scope-of-coverage-4 and https://access.redhat.com/support/policy/updates/ansible-engine."
+msgstr "|aap| のサブスクリプションを購入している場合は、https://access.redhat.com からサポートチームにお問い合わせできます。|aap| サブスクリプションに一致するサポートレベルの詳細は、「:ref:`subscription-types`」を参照してください。|aap| サブスクリプションで利用できるサポートの対象範囲は、https://access.redhat.com/support/policy/updates/ansible-tower#scope-of-coverage-4 および https://access.redhat.com/support/policy/updates/ansible-engine を参照してください。"
+
+#: ../../../common/source/lic-feat-support.rst:27
+msgid "Trial / Evaluation"
+msgstr "試用/評価"
+
+#: ../../../common/source/lic-feat-support.rst:35
+msgid "While a license is required for |at| to run, there is no fee for a trial license."
+msgstr "|at| を実行するにはライセンスが必要ですが、試用版のライセンスにはコストがかかりません。"
+
+#: ../../../common/source/lic-feat-support.rst:37
+msgid "Trial licenses for |rhaa| are available at: http://ansible.com/license"
+msgstr "|rhaa| のトライアルライセンスは http://ansible.com/license で入手できます。"
+
+#: ../../../common/source/lic-feat-support.rst:38
+msgid "Support is not included in a trial license or during an evaluation of the |at| software."
+msgstr "試用版ライセンスや |at| ソフトウェアの評価時には、サポートはありません。"
+
+#: ../../../common/source/lic-feat-support.rst:44
+msgid "Subscription Types"
+msgstr "サブスクリプションタイプ"
+
+#: ../../../common/source/lic-feat-support.rst:52
+msgid "|rhaap| is provided at various levels of support and number of machines as an annual Subscription."
+msgstr "年間サブスクリプション契約をベースにさまざまなサポートレベルおよびマシン数で、|rhaap| は提供されます。"
+
+#: ../../../common/source/lic-feat-support.rst:59
+msgid "Standard"
+msgstr "Standard"
+
+#: ../../../common/source/lic-feat-support.rst:55
+msgid "Manage any size environment"
+msgstr "あらゆる規模の環境の管理"
+
+#: ../../../common/source/lic-feat-support.rst:56
+msgid "Enterprise 8x5 support and SLA"
+msgstr "エンタープライズサポート (週 5、1 日 8 時間) および SLA"
+
+#: ../../../common/source/lic-feat-support.rst:57
+#: ../../../common/source/lic-feat-support.rst:64
+msgid "Maintenance and upgrades included"
+msgstr "メンテナンスおよびアップグレード込み"
+
+#: ../../../common/source/lic-feat-support.rst:58
+#: ../../../common/source/lic-feat-support.rst:65
+msgid "Review the SLA at: https://access.redhat.com/support/offerings/production/sla"
+msgstr "https://access.redhat.com/support/offerings/production/sla で SLA を確認します。"
+
+#: ../../../common/source/lic-feat-support.rst:59
+#: ../../../common/source/lic-feat-support.rst:66
+msgid "Review the Red Hat Support Severity Level Definitions at: https://access.redhat.com/support/policy/severity"
+msgstr "https://access.redhat.com/support/policy/severity で、Red Hat サポートの重大度レベルの定義を確認してください。"
+
+#: ../../../common/source/lic-feat-support.rst:66
+msgid "Premium"
+msgstr "Premium"
+
+#: ../../../common/source/lic-feat-support.rst:62
+msgid "Manage any size environment, including mission-critical environments"
+msgstr "ミッションクリティカルな環境を含むあらゆる規模の環境の管理"
+
+#: ../../../common/source/lic-feat-support.rst:63
+msgid "Premium 24x7 support and SLA"
+msgstr "プレミアムサポート (年中無休) および SLA"
+
+#: ../../../common/source/lic-feat-support.rst:68
+msgid "All Subscription levels include regular updates and releases of |at|, Ansible, and any other components of the Platform."
+msgstr "すべてのサブスクリプションレベルには、|at|、Ansible、このプラットフォームの他のコンポーネントの定期的な更新とリリースが含まれます。"
+
+#: ../../../common/source/lic-feat-support.rst:70
+msgid "For more information, contact Ansible via the Red Hat Customer portal at https://access.redhat.com/ or at http://www.ansible.com/contact-us/."
+msgstr "詳細は、Red Hat カスタマーポータル https://access.redhat.com/ または http://www.ansible.com/contact-us/. から、Ansible チームにご連絡ください。"
+
+#: ../../../common/source/lic-feat-support.rst:74
+msgid "Node Counting in Licenses"
+msgstr "ライセンスでのノードの数え方"
+
+#: ../../../common/source/lic-feat-support.rst:78
+msgid "The |RHAT| license defines the number of Managed Nodes that can be managed as part of a |rhaap| subscription. A typical license will say ‘License Count: 500’, which sets the maximum number of Managed Nodes at 500."
+msgstr "|RHAT| ライセンスは |rhaap| サブスクリプションの一部として管理可能なノード数を定義します。通常のライセンスで「ライセンス数: 500」となっている場合は、最大管理ノード数が 500 に設定されます。"
+
+#: ../../../common/source/lic-feat-support.rst:80
+msgid "For more information on managed node requirements for licensing, please see https://access.redhat.com/articles/3331481."
+msgstr "管理ノードのライセンス要件に関する詳細は、https://access.redhat.com/articles/3331481. を参照してください。"
+
+#: ../../../common/source/lic-feat-support.rst:86
+msgid "Attaching Subscriptions"
+msgstr "サブスクリプションの割り当て"
+
+#: ../../../common/source/lic-feat-support.rst:91
+msgid "You **must** have valid subscriptions attached before installing the |aap|. Attaching an |aap| subscription enables |ah| repositories. A valid subscription needs to be attached to the |ah| node only. Other nodes do not need to have a valid subscription/pool attached, even if the **[automationhub]** group is blank, given this is done at the ``repos_el`` role level and that this role is run on both **[default]** and **[automationhub]** hosts."
+msgstr "|aap| をインストールする前に、有効なサブスクリプションを割り当てる **必要があります**。|aap| サブスクリプションを割り当てると、|ah| リポジトリーが有効になります。有効なサブスクリプションは、|ah| ノードにのみ割り当てる必要があります。**[automationhub]** グループが空白の場合や、これが ``repos_el`` ロールレベルで実行され、そのロールが **[default]** ホストおよび **[automationhub]** ホストの両方で実行される場合は、他のノードに有効なサブスクリプション/プールを割り当てる必要がありません。"
+
+#: ../../../common/source/lic-feat-support.rst:95
+msgid "Attaching subscriptions is unnecessary if your Red Hat account enabled `Simple Content Access Mode <https://access.redhat.com/articles/simple-content-access>`_. But you still need to register to RHSM or Satellite before installing the |aap|."
+msgstr "Red Hat アカウントで `Simple Content Access Mode <https://access.redhat.com/articles/simple-content-access>`_ を有効にしている場合、サブスクリプションを割り当てる必要ありません。ただし、|aap| をインストールする前に RHSM または Satellite に登録する必要があります。"
+
+#: ../../../common/source/lic-feat-support.rst:97
+msgid "To find out the ``pool_id`` of your |aap| subscription:"
+msgstr "|aap| サブスクリプションの ``pool_id`` を確認するには、以下のコマンドを実行します。"
+
+#: ../../../common/source/lic-feat-support.rst:103
+msgid "The command returns the following:"
+msgstr "コマンドは以下を返します。"
+
+#: ../../../common/source/lic-feat-support.rst:118
+msgid "To attach this subscription:"
+msgstr "このサブスクリプションを割り当てるには、以下を実行します。"
+
+#: ../../../common/source/lic-feat-support.rst:124
+msgid "If this is properly done, and all nodes have |rhaap| attached, then it will find the |ah| repositories correctly."
+msgstr "これが適切に行われ、すべてのノードが |rhaap| に割り当てられている場合は、|ah| リポジトリーが正しく検出されます。"
+
+#: ../../../common/source/lic-feat-support.rst:126
+msgid "To check whether the subscription was successfully attached:"
+msgstr "サブスクリプションが正常に割り当てられているかどうかを確認するには、以下のコマンドを実行します。"
+
+#: ../../../common/source/lic-feat-support.rst:133
+msgid "To remove this subscription:"
+msgstr "このサブスクリプションを削除するには、以下のコマンドを実行します。"
+
+#: ../../../common/source/lic-feat-support.rst:141
+msgid "|AAP| Component Licenses"
+msgstr "|AAP| コンポーネントライセンス"
+
+#: ../../../common/source/lic-feat-support.rst:149
+msgid "To view the license information for the components included within |at|, refer to ``/usr/share/doc/automation-controller-<version>/README`` where ``<version>`` refers to the version of |at| you have installed."
+msgstr "|at| に同梱のコンポーネントに関するライセンス情報については、``/usr/share/doc/automation-controller-<version>/README`` を参照してください。``<version>`` は、インストールした |at| のバージョンを指します。"
+
+#: ../../../common/source/lic-feat-support.rst:151
+msgid "To view a specific license, refer to ``/usr/share/doc/automation-controller-<version>/*.txt``, where ``*`` is replaced by the license file name to which you are referring."
+msgstr "固有のライセンスを表示するには ``/usr/share/doc/automation-controller-<version>/*.txt`` を参照してください。``*`` は、参照するライセンスファイル名に置き換えます。"
+

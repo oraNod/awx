@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/scheduling.rst:4
+msgid "Schedules"
+msgstr "スケジュール"
+
+#: ../../source/scheduling.rst:13
+msgid "You can access all your configured schedules by clicking **Schedules** from the left navigation bar. The schedules list may be sorted by any of the attributes from each column using the directional arrows. You can also search by name, date, or the name of the month in which a schedule runs."
+msgstr "左のナビゲーションバーから **スケジュール** アイコンをクリックすると、設定したすべてのスケジュールにアクセスできます。スケジュール一覧は、矢印を使用して各コラムから属性別にソートできます。また、スケジュールの実行名、日付、月別に検索することもできます。"
+
+#: ../../source/scheduling.rst:15
+msgid "Each schedule has a corresponding **Actions** column that has options to enable/disable that schedule using the **ON/OFF** toggle next to the schedule name and to allow editing (|edit|) of that schedule."
+msgstr "各スケジュールには、それに対応する **アクション** 列があり、スケジュール名の横にある **ON/OFF** トグルを使用してそのスケジュール名を有効/無効にしたり、そのスケジュールを編集 (|edit|) したりするオプションがあります。"
+
+#: ../../source/scheduling.rst:21
+msgid "If you are setting up a template, a project, or an inventory source, clicking on the **Schedules** tab allows you to configure schedules for these resources. Once schedules are created, they are listed by:"
+msgstr "テンプレート、プロジェクト、またはインベントリーソースを設定する場合は、**スケジュール** タブをクリックするとこのようなリソースのスケジュールを設定できます。スケジュールが作成されると、以下の方法で一覧表示されます。"
+
+#: ../../source/scheduling.rst:23
+msgid "**Name**: Clicking the schedule name opens its details"
+msgstr "**名前**: スケジュール名をクリックすると、詳細が開きます。"
+
+#: ../../source/scheduling.rst:24
+msgid "**Type**: Identifies whether the schedule is associated with a source control update or a system-managed job schedule"
+msgstr "*タイプ**: スケジュールがソースコントロールの更新に関連しているのか、システム管理されたジョブスケジュールに関連しているのかを識別します。"
+
+#: ../../source/scheduling.rst:25
+msgid "**Next Run**: The next scheduled run of this task"
+msgstr "**次回実行日時**: このタスクの次回にスケジュールされる実行"
+
+#: ../../source/scheduling.rst:31
+msgid "Add a new schedule"
+msgstr "新規スケジュールの追加"
+
+#: ../../source/scheduling.rst:33
+msgid "Schedules can only be created from a template, project, or inventory source, and not directly on the main **Schedules** screen itself. To create a new schedule:"
+msgstr "スケジュールは、主要な **スケジュール** の画面自体からではなく、テンプレート、プロジェクト、またはインベントリーソースからのみ作成できます。新しいスケジュールを作成するには以下を実行します。"
+
+#: ../../source/scheduling.rst:35
+msgid "Click the **Schedules** tab of the resource you are configuring (template, project, or inventory source)."
+msgstr "設定するリソース (テンプレート、プロジェクトまたはインベントリーソース) の **スケジュール** タブをクリックします。"
+
+#: ../../source/scheduling.rst:37
+msgid "Click the **Add** button, which opens the **Create Schedule** window."
+msgstr "**追加** ボタンをクリックすると、**スケジュールの作成** ウィンドウが開きます。"
+
+#: ../../source/scheduling.rst:41
+msgid "Enter the appropriate details into the following fields:"
+msgstr "以下のフィールドに該当する詳細を入力します。"
+
+#: ../../source/scheduling.rst:43
+msgid "**Name** (required)"
+msgstr "**名前** (必須)"
+
+#: ../../source/scheduling.rst:44
+msgid "**Start Date** (required)"
+msgstr "**開始日** (必須)"
+
+#: ../../source/scheduling.rst:45
+msgid "**Start Time** (required)"
+msgstr "**開始時間** (必須)"
+
+#: ../../source/scheduling.rst:46
+msgid "**Local Time Zone** - The entered Start Time should be in this timezone"
+msgstr "**ローカルタイムゾーン**: 入力した開始時間はこのタイムゾーンの時間になります。"
+
+#: ../../source/scheduling.rst:47
+msgid "**Repeat Frequency** - Appropriate scheduling options display depending on the frequency you select"
+msgstr "**繰り返しの頻度**: 選択する頻度に応じて適切なスケジュールオプションが表示されます。"
+
+#: ../../source/scheduling.rst:49
+msgid "The **Schedule Details** displays when you established a schedule, allowing you to review the schedule settings and a list of the scheduled occurrences in the selected Local Time Zone."
+msgstr "スケジュールを設定すると **スケジュールの詳細** が表示され、スケジュールの設定や、選択したローカルタイムゾーンでのスケジュールの発生状況を確認することができます。"
+
+#: ../../source/scheduling.rst:55
+msgid "Jobs are scheduled in UTC. Repeating jobs that run at a specific time of day may move relative to a local timezone when Daylight Savings Time shifts occur. The system resolves the local time zone based time to UTC when the schedule is saved.  To ensure your schedules are correctly set, you should set your schedules in UTC time."
+msgstr "ジョブは UTC でスケジュールされます。夏時間 (DST) への切り替え、または夏時間からの切り替えが起こると、特定の時刻に実行される繰り返しジョブが、ローカルタイムゾーンを基準にして移動する場合があります。システムは、スケジュールの保存時に UTC に対してローカルタイムゾーンベースの時間を解決します。スケジュールを正確に設定するには、スケジュールを UTC 時間で設定する必要があります。"
+
+#: ../../source/scheduling.rst:58
+msgid "Once done, click **Save**."
+msgstr "終了したら、**保存** をクリックします。"
+
+#: ../../source/scheduling.rst:61
+msgid "You can use the **ON/OFF** toggle button to stop an active schedule or activate a stopped schedule."
+msgstr "**ON/OFF** の切り替えボタンを使用して、有効なスケジュールを無効にしたり、無効なスケジュールを有効にしたりできます。"
+

@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_organization.rst:2
+msgid "Review the Organization"
+msgstr "查看机构"
+
+#: ../../source/create_organization.rst:7
+msgid "An organization is a logical collection of users, teams, projects, and inventories. It is the highest level object in the controller object hierarchy."
+msgstr "一个机构是用户、团队、项目和清单的逻辑集合，它是控制器对象层级架构中最高级别的对象。"
+
+#: ../../source/create_organization.rst:9
+msgid "From the left navigation bar, click **Organizations**."
+msgstr "在左侧导航栏中，点 **Organizations**。"
+
+#: ../../source/create_organization.rst:12
+msgid "The automation controller creates a default organization automatically. Users of Tower with a Self-support level license only have the default organization available and should **not** delete it."
+msgstr "自动化控制器会自动创建一个默认机构。只有自助支持级别许可证的 Tower 用户有一个默认的机构，**不要**删除它。"
+
+#: ../../source/create_organization.rst:14
+msgid "|Organizations - default view|"
+msgstr "|Organizations - default view|"
+
+#: ../../source/create_organization.rst:22
+msgid "A default organization has been automatically created and is available to all users of the automation controller. It can be used as is or edited later as needed."
+msgstr "我们已自动创建了默认机构，并可供自动化控制器的所有用户使用。您可以原样使用或根据需要对其进行编辑。"
+
+#: ../../source/create_organization.rst:24
+msgid "For the purpose of this Quick Start Guide, leave the default organization as is."
+msgstr "在本快速入门指南中，不要修改默认机构。"
+
+#: ../../source/create_organization.rst:27
+msgid "If you are using the controller with a Basic subscription, you must use the default organization. Only Enterprise or Premium licenses have the ability to add new organizations beyond the default."
+msgstr "如果您使用的是具有基本订阅的控制器，则必须使用默认机构。只有企业（Enterprise）或高级（Premium）许可证才可在默认机构外添加新机构。"
+
+#: ../../source/create_organization.rst:29
+msgid "To edit the default organization later, expand its properties by clicking the Edit (|edit|) button and entering the appropriate details, then save your changes."
+msgstr "要稍后编辑默认机构，请点击 Edit (|edit|) 按钮，并输入正确的详情，然后保存您的更改，以此展开其“Properties”。"
+
+#: ../../source/create_organization.rst:35
+msgid "|Organizations - default expanded|"
+msgstr "|Organizations - default expanded|"
+
+#: ../../source/create_organization.rst:39
+msgid "Enterprise and Premium license users who want to add a new organization should refer to the :ref:`Organizations <userguide:ug_organizations>` section in the |atu|."
+msgstr "希望添加新机构的企业和高级许可证的用户应该参考 |atu| 中的 :ref:`Organizations <userguide:ug_organizations>` 部分。"
+

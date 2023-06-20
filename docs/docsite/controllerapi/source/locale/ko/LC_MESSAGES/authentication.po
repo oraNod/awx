@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/authentication.rst:3
+msgid "Authentication Methods Using the API"
+msgstr "API를 사용한 인증 방법"
+
+#: ../../source/authentication.rst:11
+msgid "This chapter describes the numerous enterprise authentication methods, the best use case for each, and examples:"
+msgstr "이 장에서는 다양한 엔터프라이즈 인증 방법, 각 방법에 대한 최상의 사용 사례 및 예를 설명합니다."
+
+#: ../../source/authentication.rst:16
+msgid "|At| is designed for organizations to centralize and control their automation with a visual dashboard for out-of-the box control while providing a REST API to integrate with your other tooling on a deeper level. |At| supports a number of authentication methods to make it easy to embed the controller into existing tools and processes to help ensure the right people can access controller resources."
+msgstr "|At| 조직은 외부 제어 기능을 위한 시각적 대시보드를 사용하여 자동화를 중앙 집중화하고 제어하는 동시에 보다 심층적인 수준에서 다른 툴링과 통합할 수 있는 REST API를 제공하도록 설계되었습니다. |At| 컨트롤러를 기존 툴 및 프로세스에 쉽게 삽입할 수 있도록 다양한 인증 방법을 지원하여 적절한 사용자가 컨트롤러 리소스에 액세스할 수 있도록 합니다."
+
+#: ../../source/authentication.rst:21
+msgid "Session Authentication"
+msgstr "세션 인증"
+
+#: ../../source/authentication.rst:23
+msgid "Session authentication is used when logging in directly to |at|’s API or UI to manually create resources (inventory, project, job template) and launch jobs in the browser. With this method, you can remain logged in for a prolonged period of time, not just for that HTTP request, but for instance, when browsing the UI or API in a browser like Chrome or Firefox. When a user logs in, a session cookie is created, which enables the user to remain logged in when navigating to different pages within the |at|. Below represents the communication that occurs between the client and server in a session."
+msgstr "세션 인증은 |at|의 API 또는 UI에 직접 로그인하여 리소스(인벤토리, 프로젝트, 작업 템플릿)를 수동으로 생성하고 브라우저에서 작업을 시작하는 데 사용됩니다. 이 방법을 사용하면 해당 HTTP 요청뿐만 아니라 Chrome 또는 Firefox와 같은 브라우저에서 UI 또는 API를 탐색할 때 장기간 로그인 상태를 유지할 수 있습니다. 사용자가 로그인하면 세션 쿠키가 생성되어 사용자가 |at| 내의 다른 페이지로 이동할 때 로그인 상태를 유지할 수 있습니다. 다음은 세션에서 클라이언트와 서버 간에 발생하는 통신을 나타냅니다."
+
+#: ../../source/authentication.rst:27
+msgid "Using the curl tool, you can see the activity that occurs when you log into the controller."
+msgstr "curl 툴을 사용하면 컨트롤러에 로그인할 때 발생하는 활동을 확인할 수 있습니다."
+
+#: ../../source/authentication.rst:29
+msgid "GET to the ``/api/login/`` endpoint to grab the ``csrftoken`` cookie."
+msgstr "``/api/login/`` 끝점으로 이동하여 ``csrftoken`` 쿠키를 가져옵니다."
+
+#: ../../source/authentication.rst:38
+msgid "POST to the ``/api/login/`` endpoint with username, password, and X-CSRFToken=<token-value>."
+msgstr "사용자 이름, 암호 및 X-CSRFToken=<token-value> 을 사용하여 ``/api/login/`` 끝점에 POST합니다."
+
+#: ../../source/authentication.rst:49
+msgid "All of this is done by the |at| when you log in to the UI or API in the browser, and should only be used when authenticating in the browser. For programmatic integration with |at|, see :ref:`api_oauth2_auth`."
+msgstr "이 모든 작업은 브라우저에서 UI 또는 API에 로그인할 때 |at| 에서 수행되며 브라우저에서 인증하는 경우에만 사용해야 합니다. |at| 과 프로그래밍 방식의 통합은 :ref:`api_oauth2_auth` 를 참조하십시오."
+
+#: ../../source/authentication.rst:51
+msgid "A typical response might look like:"
+msgstr "일반적인 응답은 다음과 같습니다."
+
+#: ../../source/authentication.rst:77
+msgid "When a user is successfully authenticated with this method, the server will respond with a header called ``X-API-Session-Cookie-Name``, indicating the configured name of the session cookie. The default value is ``awx_session_id`` which you can see later in the ``Set-Cookie`` headers."
+msgstr "사용자가 이 방법으로 성공적으로 인증되면 서버는 세션 쿠키 구성 이름을 나타내는 ``X-API-Session-Cookie-Name`` 라는 헤더로 응답합니다. 기본값은 ``awx_session_id`` 이며 나중에 ``Set-Cookie`` 헤더에서 볼 수 있습니다."
+
+#: ../../source/authentication.rst:81
+msgid "The session expiration time can be changed by specifying it in the ``SESSION_COOKIE_AGE`` parameter. Refer to :ref:`ag_session_limits` for further detail."
+msgstr "세션 만료 시간은 ``SESSION_COOKIE_AGE`` 매개변수에 지정하여 변경할 수 있습니다. 자세한 내용은 :ref:`ag_session_limits`_을 참조하십시오."
+
+#: ../../source/authentication.rst:86
+msgid "Basic Authentication"
+msgstr "기본 인증"
+
+#: ../../source/authentication.rst:88
+msgid "Basic Authentication (Basic Auth) is stateless, thus the base64-encoded ``username`` and ``password`` must be sent along with each request via the Authorization header. This can be used for API calls from curl requests, python scripts, or individual requests to the API. :ref:`api_oauth2_auth` is recommended for accessing the API when at all possible."
+msgstr "기본 인증(Basic Auth)은 상태 비저장이므로 base64로 인코딩된 ``username`` 및 ``password`` 은 인증 헤더를 통해 각 요청과 함께 보내야 합니다. 이는 curl 요청, python 스크립트 또는 API에 대한 개별 요청의 API 호출에 사용할 수 있습니다. :ref:`api_oauth2_auth` 가능한 경우 API에 액세스하는 것이 좋습니다."
+
+#: ../../source/authentication.rst:90
+msgid "Example with curl:"
+msgstr "curl의 예:"
+
+#: ../../source/authentication.rst:99
+msgid "For more information about the Basic HTTP Authentication scheme, see `RFC 7617 <https://datatracker.ietf.org/doc/html/rfc7617>`_."
+msgstr "기본 HTTP 인증 방식에 대한 자세한 내용은 `RFC 7617 <https://datatracker.ietf.org/doc/html/rfc7617>`_을 참조하십시오."
+
+#: ../../source/authentication.rst:103
+msgid "You can disable the Basic Auth for security purposes from the Miscellaneous Authentication settings of the controller UI Settings menu:"
+msgstr "컨트롤러 UI 설정 메뉴의 기타 인증 설정에서 보안 목적으로 Basic Auth를 비활성화할 수 있습니다."
+
+#: ../../source/authentication.rst:110
+msgid "OAuth 2 Token Authentication"
+msgstr "OAuth 2 토큰 인증"
+
+#: ../../source/authentication.rst:112
+msgid "OAuth (Open Authorization) is an open standard for token-based authentication and authorization. OAuth 2 authentication is commonly used when interacting with the controller API programmatically. Like Basic Auth, an OAuth 2 token is supplied with each API request via the Authorization header. Unlike Basic Auth, OAuth 2 tokens have a configurable timeout and are scopable. Tokens have a configurable expiration time and can be easily revoked for one user or for the entire |at| system by an admin if needed. This can be done with the :ref:`ag_manage_utility_revoke_tokens` management command, which is covered in more detail in |ata| or by using the API as explained in :ref:`ag_oauth2_token_revoke`."
+msgstr "OAuth(Open Authorization)는 토큰 기반 인증 및 권한 부여를 위한 오픈 표준입니다. OAuth 2 인증은 일반적으로 컨트롤러 API와 프로그래밍 방식으로 상호 작용할 때 사용됩니다. 기본 인증과 마찬가지로 OAuth 2 토큰은 인증 헤더를 통해 각 API 요청과 함께 제공됩니다. 기본 인증과 달리 OAuth 2 토큰에는 구성 가능한 시간 제한이 있으며 범위를 지정할 수 있습니다. 토큰은 구성 가능한 만료 시간이 있으며 한 사용자 또는 필요한 경우 관리자가 전체 |at| 시스템에 대해 쉽게 취소할 수 있습니다. 이 작업은 :ref:에서 자세히 설명하거나`ag_manage_utility_revoke_tokens` |ata| 에 설명된 대로 API를 사용하여 다루는 :ref:`ag_oauth2_token_revoke` 관리 명령을 사용하여 수행할 수 있습니다."
+
+#: ../../source/authentication.rst:116
+msgid "By default, external users such as those created by SSO are not allowed to generate OAuth tokens for security purposes. This can be changed from the Miscellaneous Authentication settings of the controller UI Settings menu:"
+msgstr "기본적으로 SSO에서 생성한 사용자와 같은 외부 사용자는 보안을 위해 OAuth 토큰을 생성할 수 없습니다. 컨트롤러 UI 설정 메뉴의 기타 인증 설정에서 이 설정을 변경할 수 있습니다."
+
+#: ../../source/authentication.rst:120
+msgid "The different methods for obtaining OAuth 2 Access Tokens in |at| are:"
+msgstr "|at| 에서 OAuth 2 액세스 토큰을 가져오는 다양한 방법은 다음과 같습니다."
+
+#: ../../source/authentication.rst:122
+msgid "Personal access tokens (PAT)"
+msgstr "개인 액세스 토큰 (PAT)"
+
+#: ../../source/authentication.rst:123
+msgid "Application Token: Password grant type"
+msgstr "애플리케이션 토큰: 암호 부여 유형"
+
+#: ../../source/authentication.rst:124
+msgid "Application Token: Implicit grant type"
+msgstr "애플리케이션 토큰: Implicit 권한 부여 유형"
+
+#: ../../source/authentication.rst:125
+msgid "Application Token: Authorization Code grant type"
+msgstr "애플리케이션 토큰: 인증 코드 권한 부여 유형"
+
+#: ../../source/authentication.rst:127
+msgid "For more information on the above methods, see :ref:`ag_oauth2_token_auth` in the |ata|."
+msgstr "위의 방법에 대한 자세한 내용은 |ata|의 :ref:`ag_oauth2_token_auth`을 참조하십시오."
+
+#: ../../source/authentication.rst:130
+msgid "First, a user needs to create an OAuth 2 Access Token in the API or in their User’s **Tokens** tab in the UI. For further detail on creating them through the UI, see :ref:`ug_users_tokens`. For the purposes of this example, use the PAT method for creating a token in the API. Upon token creation, the user can set the scope."
+msgstr "먼저 사용자가 API에 OAuth 2 액세스 토큰을 생성하거나 UI의 사용자 **토큰** 탭에서 생성해야 합니다. UI를 통한 생성에 대한 자세한 내용은 :ref:`ug_users_tokens`에서 참조하십시오. 이 예에서는 API에서 토큰을 생성하려면 PAT 메서드를 사용합니다. 토큰 생성 시 사용자는 범위를 설정할 수 있습니다."
+
+#: ../../source/authentication.rst:134
+msgid "The expiration time of the token can be configured system-wide. See :ref:`ag_use_oauth_pat` for more detail."
+msgstr "토큰 만료 시간은 시스템 전체에서 구성할 수 있습니다. 자세한 내용은 :ref:`ag_use_oauth_pat`에서 참조하십시오."
+
+#: ../../source/authentication.rst:136
+msgid "Token authentication is best used for any programmatic use of the |at| API, such as Python scripts or tools like curl, as in the example for creating a PAT (without an associated application) below."
+msgstr "토큰 인증은 아래의 PAT(관련 애플리케이션 제외)를 생성하는 경우와 같이 Python 스크립트 또는 curl과 같은 |at| API의 프로그래밍 방식으로 사용하는 데 가장 적합합니다."
+
+#: ../../source/authentication.rst:138
+msgid "**Curl Example**"
+msgstr "**Curl 예**"
+
+#: ../../source/authentication.rst:145
+msgid "This call will return JSON data like:"
+msgstr "이 호출은 다음과 같은 JSON 데이터를 반환합니다."
+
+#: ../../source/authentication.rst:149
+msgid "The value of the ``token`` property is what you can now use to perform a GET request for an |at| resource, e.g., Hosts."
+msgstr "``token`` 속성 값은 |at| 리소스에 대한 GET 요청을 수행하는 데 사용할 수 있는 호스트입니다."
+
+#: ../../source/authentication.rst:158
+msgid "Similarly, you can launch a job by making a POST to the job template that you want to launch."
+msgstr "마찬가지로 시작하려는 작업 템플릿에 대한 POST를 수행하여 작업을 시작할 수 있습니다."
+
+#: ../../source/authentication.rst:169
+msgid "**Python Example**"
+msgstr "**Python 예**"
+
+#: ../../source/authentication.rst:171
+msgid "`awxkit <https://pypi.org/project/awxkit/>`_ is an open source tool that makes it easy to use HTTP requests to access the |at| API. You can have awxkit acquire a PAT on your behalf by using the ``awxkit login`` command. Refer to the `AWX Command Line Interface <https://docs.ansible.com/automation-controller/latest/html/controllercli/index.html>`_ for more detail."
+msgstr "`awxkit <https://pypi.org/project/awxkit/>`_은 HTTP 요청을 사용하여 |at| API에 쉽게 액세스할 수 있는 오픈 소스 툴입니다. awxkit은 ``awxkit login`` 명령을 사용하여 사용자를 대신하여 PAT를 얻을 수 있습니다. 자세한 내용은 `AWX Command Line Interface <https://docs.ansible.com/automation-controller/latest/html/controllercli/index.html>`_에서 참조하십시오."
+
+#: ../../source/authentication.rst:174
+msgid "For more information on how to use OAuth 2 in the |at| in the context of integrating external applications, see :ref:`ag_oauth2_token_auth` in the |ata|."
+msgstr "외부 애플리케이션 통합 컨텍스트에서 |at| 에서 OAuth 2를 사용하는 방법에 대한 자세한 내용은 |ata| 의 :ref:`ag_oauth2_token_auth` 를 참조하십시오."
+
+#: ../../source/authentication.rst:176
+msgid "If you need to write custom requests, you can write a Python script using `Python library requests <https://pypi.org/project/requests/>`_, like in this example:"
+msgstr "사용자 정의 요청을 작성해야 하는 경우 다음 예제와 같이 `Python library requests <https://pypi.org/project/requests/>`_를 사용하여 Python 스크립트를 작성할 수 있습니다."
+
+#: ../../source/authentication.rst:197
+msgid "SSO Authentication"
+msgstr "SSO 인증"
+
+#: ../../source/authentication.rst:199
+msgid "Single sign-on (SSO) authentication methods are fundamentally different from other methods because the authentication of the user happens external to the |at|, like Google SSO, Azure SSO, SAML, or GitHub. For example, with GitHub SSO, GitHub is the single source of truth, which verifies your identity based on the username and password you gave the controller."
+msgstr "SSO(Single Sign-On) 인증 방법은 사용자의 인증이 Google SSO, Azure SSO, SAML 또는 GitHub와 같이 |at| 외부에 수행되므로 다른 방법과 근본적으로 다릅니다. 예를 들어 GitHub SSO를 사용하여 GitHub는 컨트롤러에 제공한 사용자 이름과 암호를 기반으로 ID를 확인하는 단일 정보 소스입니다."
+
+#: ../../source/authentication.rst:201
+msgid "You can configure SSO authentication using the |at| inside a large organization with a central Identity Provider. Once you have configured an SSO method in the controller, a button for that SSO will be present on the login screen. If you click that button, it will redirect you to the Identity Provider, in this case GitHub, where you will present your credentials. If the Identity Provider verifies you successfully, then the controller will make a user linked to your GitHub user (if this is your first time logging in via this SSO method), and log you in."
+msgstr "중앙 ID 공급자가 있는 대규모 조직 내에서 |at|를 사용하여 SSO 인증을 구성할 수 있습니다. 컨트롤러에서 SSO 메서드를 구성하면 해당 SSO의 버튼이 로그인 화면에 표시됩니다. 해당 버튼을 클릭하면 ID 공급자(이 경우 GitHub)로 리디렉션됩니다. ID 공급자가 사용자를 성공적으로 확인하는 경우 컨트롤러는 GitHub 사용자에 연결된 사용자를 만들고(이 SSO 메서드를 통해 처음 로그인하는 경우) 로그인합니다."
+
+#: ../../source/authentication.rst:203
+msgid "For the various types of supported SSO authentication methods, see :ref:`ag_social_auth` and :ref:`ag_ent_auth` in the |ata|."
+msgstr "지원되는 다양한 유형의 SSO 인증 방법에 대해서는 :ref:에서`ag_social_auth` :ref:및`ag_ent_auth` |ata| 를 참조하십시오."
+

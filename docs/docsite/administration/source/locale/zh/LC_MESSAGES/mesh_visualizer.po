@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-10 17:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/mesh_visualizer.rst:5
+msgid "Mesh Visualizer"
+msgstr "网格可视化"
+
+#: ../../source/mesh_visualizer.rst:12
+msgid "The mesh visualizer is in tech preview and is subject to change in a future release."
+msgstr "mesh visualizer 是一个技术预览，可能会在以后的版本中有所变化。"
+
+#: ../../source/mesh_visualizer.rst:14
+msgid "The mesh visualizer allows you to view node type, node health, and specific details about each node if you already have a mesh topology deployed. To learn more about automation mesh, refer to the `Red Hat Ansible Automation Mesh Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh>`_ on `access.redhat.com <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform>`_."
+msgstr "如果您已经部署了网格拓扑，可以通过 mesh visualizer 查看节点类型、节点健康状况和具体详情。如需了解更多有关自动化网格的信息，请参阅 `access.redhat.com <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform>`_ 中的 `Red Hat Ansible Automation Mesh Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh>`_。"
+
+#: ../../source/mesh_visualizer.rst:17
+msgid "To access the mesh visualizer from the controller user interface:"
+msgstr "从控制器用户界面访问 mesh visualizer 工具："
+
+#: ../../source/mesh_visualizer.rst:19
+msgid "In the Administration menu from left navigation bar, click **Topology View**."
+msgstr "在左侧导航栏中的 Administration 菜单中，点 **Topology View**。"
+
+#: ../../source/mesh_visualizer.rst:21
+msgid "The Topology View opens and displays a graphic representation of how each receptor node links together."
+msgstr "Topology 视图会打开并显示每个 receptor 节点如何连接在一起的图形表示。"
+
+#: ../../source/mesh_visualizer.rst:25
+msgid "To adjust the zoom levels, or manipulate the graphic views, use the control buttons on the upper right-hand corner of the window."
+msgstr "要调整缩放级别或操作图形视图，请使用窗口右上角的控制按钮。"
+
+#: ../../source/mesh_visualizer.rst:29
+msgid "You can also click and drag to pan around; and use the scroll wheel on your mouse or trackpad to zoom. The fit-to-screen feature automatically scales the graphic to fit on the screen and repositions it in the center. It is particularly useful when you want to see a large mesh in its entirety."
+msgstr "您还可以通过单击并拖动进行挪动，并使用鼠标上的滚轮进行缩放。适当的屏幕功能会自动扩展图形以适应屏幕并重新定位到该位置。当您希望看到大型网格的全部内容时，它特别有用。"
+
+#: ../../source/mesh_visualizer.rst:33
+msgid "To reset the view to its default view, click **Reset zoom**."
+msgstr "要将视图重置为默认视图，请点 **Reset zoom**。"
+
+#: ../../source/mesh_visualizer.rst:36
+msgid "Refer to the Legend to the left of the graphic to identify the type of nodes that are represented. See `Control and execution planes <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh#con-automation-mesh-node-types>`_ for more information on each type of node."
+msgstr "请参阅图形左侧的图例来识别所代表的节点类型。有关每种节点的更多信息，请参阅 `Control and execution planes <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh#con-automation-mesh-node-types>`_。"
+
+#: ../../source/mesh_visualizer.rst:41
+msgid "If the Legend is not present, use the toggle on the upper right part of the window to enable it."
+msgstr "如果没有显示图例，请在窗口右上角的切换功能来启用它。"
+
+#: ../../source/mesh_visualizer.rst:43
+msgid "Also in the Legend, you can see how the color corresponds to its status, which is indicative of the health of the node. Node health is currently being statically rendered at certain points in time dictated by the API, and therefore, live polling of the node status is not available at this time. The status updates provided by the API is also not configurable."
+msgstr "在图例中，您可以看到颜色如何与相关状态对应，这些状态代表了节点的健康状况。当前，节点健康状况只会静态显示由 API 指定的时间的状态，实时轮询到的节点状态目前还不可用。API 所提供的状态更新也不可配置。"
+
+#: ../../source/mesh_visualizer.rst:45
+msgid "Hover over a node and the connectors highlight to show its immediate connected nodes or click on the node to retrieve details about it, such as its hostname, node type, and status."
+msgstr "将鼠标悬停在节点和连接器上会突出显示直接连接的节点，或点节点来获得节点详情，如主机名、节点类型和状态。"
+
+#: ../../source/mesh_visualizer.rst:49
+msgid "Click on the link for instance hostname from the details displayed, and you will be redirected to its Details page to provide more information about that node, most notably the reason for an ``Error`` status."
+msgstr "在显示的详情中点实例主机名链接，您将会被重定向到其详情页面，以提供有关该节点的更多信息，特别是处于 ``Error`` 状态的原因。"
+
+#: ../../source/mesh_visualizer.rst:54
+msgid "At the bottom of the Details view, you can run a health check on the instance on an as-needed basis, or unassign jobs from the instance. By default, jobs can be assigned to each node. However, you can disable it to exclude the node from having any jobs running on it."
+msgstr "在详情视图的底部，您可以根据需要在实例上运行健康检查，或者从实例取消分配作业。默认情况下，可以为每个节点分配作业。但是，您可以禁止它排除其上运行的任何作业。"

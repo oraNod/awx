@@ -1,0 +1,1085 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../common/source/user-data-tracking.rst:2
+msgid "Usability Analytics and Data Collection"
+msgstr "使用情况分析和数据收集"
+
+#: ../../../common/source/user-data-tracking.rst:12
+msgid "Usability data collection is included with Tower to collect data to better understand how Tower users specifically interact with Tower, to help enhance future releases, and to continue streamlining your user experience."
+msgstr "在Tower 包括了一个数据可用性信息的收集工具程序。使用这个软件的目的是为了更好地理解 Tower 用户如何与 Tower 进行交互，以便帮助更好地开发以后的版本，为用户提供更好的使用体验。"
+
+#: ../../../common/source/user-data-tracking.rst:14
+msgid "Only users installing a trial of Tower or a fresh installation of Tower are opted-in for this data collection."
+msgstr "只有安装 Tower 测试版或全新安装 Tower 的用户才能选择进行这个数据收集。"
+
+#: ../../../common/source/user-data-tracking.rst:16
+msgid "If you want to change how you participate in this analytics collection, you can opt out or change your settings in the **User Interface settings**, by clicking **Settings** from the left navigation bar."
+msgstr "如果想改变如何参与这个分析的行为，可以改变 **User Interface settings** 中的设置（在左面浏览栏中点 **Settings**）。"
+
+#: ../../../common/source/user-data-tracking.rst:19
+msgid "Ansible Tower collects user data automatically to help improve the Tower product. You can control the way Tower collects data by setting your participation level in the **User Interface settings** in the Settings menu."
+msgstr "Ansible Tower 会自动收集用户数据以帮助改进 Tower 产品。您可以通过在设置菜单中的 **User Interface settings** 中设置您的参与级别来控制 Tower 收集数据的方法。"
+
+#: ../../../common/source/user-data-tracking.rst:23
+msgid "Select the desired level of data collection from the User Analytics Tracking State drop-down list:"
+msgstr "从 User Tracking State 下拉列表中选择所需的数据收集级别："
+
+#: ../../../common/source/user-data-tracking.rst:25
+msgid "**Off**: Prevents any data collection."
+msgstr "**Off**: 禁用数据收集。"
+
+#: ../../../common/source/user-data-tracking.rst:27
+msgid "**Anonymous**: Enables data collection without your specific user data."
+msgstr "**Anonymous**: 启用数据收集功能，但不会收集您的特定用户数据。"
+
+#: ../../../common/source/user-data-tracking.rst:29
+msgid "**Detailed**: Enables data collection including your specific user data."
+msgstr "**Detailed**: 启用数据收集功能，其中包括您的特定用户数据。"
+
+#: ../../../common/source/user-data-tracking.rst:31
+msgid "Click **Save** to apply the settings or **Cancel** to abandon the changes."
+msgstr "点击 **Save** 应用设置，或者点 **Cancel** 取消更改。"
+
+#: ../../../common/source/user-data-tracking.rst:34
+msgid "For more information, see the Red Hat privacy policy at https://www.redhat.com/en/about/privacy-policy."
+msgstr "如需更多信息，请参阅红帽隐私政策 https://www.redhat.com/en/about/privacy-policy."
+
+#: ../../source/usability_data_collection.rst:9
+msgid "Automation Analytics"
+msgstr "自动化分析"
+
+#: ../../source/usability_data_collection.rst:16
+msgid "When you imported your license for the first time, you were given options related to the collection of data that powers |AA|, a cloud service that is part of the |aap| subscription. For opt-in of |AA| to have any effect, your instance of |at| **must** be running on |rhel|."
+msgstr "当您首次导入许可证时，会为您提供与收集 |AA| （|aap| 订阅中的一个云服务）数据相关的选项。为了使 |AA| 起作用，您的 |at| 实例**必须**在 |rhel| 上运行。"
+
+#: ../../source/usability_data_collection.rst:18
+msgid "Much like Red Hat Insights, |AA| is built to only collect the minimum amount of data needed. No credential secrets, personal data, automation variables, or task output is gathered. For more information, see :ref:`Details of data collection<usability_data_collection_details>` below."
+msgstr "类似于 Red Hat Insights，|AA| 只收集所需最小数据，它不会收集凭证 secret、个人数据、自动化变量或任务输出。如需更多信息，请参阅 :ref:`Details of data collection<usability_data_collection_details>`。"
+
+#: ../../source/usability_data_collection.rst:20
+msgid "In order to enable this feature, turn on data collection for |AA| and enter your Red Hat customer credentials in the **Miscellaneous System settings** of the System configuration list of options located in the **Settings** menu."
+msgstr "要启用这个功能，为 |AA| 打开数据收集功能，在 **Settings** 菜单中的系统配置选项列表的 **Miscellaneous System settings** 中输入您的红帽客户凭证。"
+
+#: ../../source/usability_data_collection.rst:24
+msgid "Note that the **Automation Analytics Upload URL** field is pre-populated with the location to which the collection of insights data will be uploaded."
+msgstr "请注意：**Automation Analytics Upload URL** 字段预先填充位置，收集的洞察数据将上传到该位置。"
+
+#: ../../source/usability_data_collection.rst:26
+msgid "By default, the |AA| data is collected every 4 hours and upon enabling the feature, data will be collected up to a month back (or until the previous collection). You may turn off this data collection at any time in the **Miscellaneous System settings** of the System configuration window."
+msgstr "默认情况下，|AA| 数据会在每 4 小时收集一次，并在启用该功能时，会收集前一个月内的数据（或者直到上次收集）。您可以随时使用 **System** 配置窗口中的 **Miscellaneous System settings** 中关闭这个数据收集功能。"
+
+#: ../../source/usability_data_collection.rst:28
+msgid "This setting can also be enabled via the API by specifying ``INSIGHTS_TRACKING_STATE = True`` in either of these endpoints:"
+msgstr "此设置也可以通过 API 在其中任何一个端点中指定 ``INSIGHTS_TRACKING_STATE = True`` 来启用："
+
+#: ../../source/usability_data_collection.rst:30
+msgid "``api/v2/settings/all``"
+msgstr "``api/v2/settings/all``"
+
+#: ../../source/usability_data_collection.rst:31
+msgid "``api/v2/settings/system``"
+msgstr "``api/v2/settings/system``"
+
+#: ../../source/usability_data_collection.rst:33
+msgid "The |AA| generated from this data collection will be found on the `Red Hat Cloud Services`_ portal."
+msgstr "这个数据收集所生成的 |AA| 可以在`Red Hat Cloud Services`_ 门户中找到。"
+
+#: ../../source/usability_data_collection.rst:40
+msgid "The **Clusters** data is the default view. This graph represents the number of job runs across all controller clusters over a period of time. The example above shows a span of a week in a stacked bar-style chart that is organized by the number of jobs that ran successfully (in green) and jobs that failed (in red)."
+msgstr "**Clusters** 数据是默认视图。此图表示一段时间内在所有控制器主机上运行的作业的数量。上例以堆叠的条形图样式显示一周时间跨度，图表由成功运行（绿色）和运行失败（红色）的作业数量组成。"
+
+#: ../../source/usability_data_collection.rst:42
+msgid "Alternatively, you can select a single cluster to view its job status information."
+msgstr "或者，您可以选择单个集群来查看其作业状态信息。"
+
+#: ../../source/usability_data_collection.rst:46
+msgid "This multi-line chart represents the number of job runs for a single controller cluster for a specified period of time. The example here shows a span of a week, organized by the number of successfully running jobs (in green) and jobs that failed (in red). You can specify the number of successful and failed job runs for a selected cluster over a span of one week, two weeks, and monthly increments."
+msgstr "这个多行图表代表在指定时间内为单个控制器集群运行的作业数量。这里的示例显示了一个星期跨度，由成功运行的作业（绿色）和运行失败的作业（红色）组成。您可以指定在一个周、两周以及每月递增的时间跨度内，为所选集群成功运行和运行失败的作业数量。"
+
+#: ../../source/usability_data_collection.rst:48
+msgid "Click **Organization Statistics** from the left navigation pane to view information for the following:"
+msgstr "从在左侧导航窗格中，点击 **Organization Statistics**，查看以下信息："
+
+#: ../../source/usability_data_collection.rst:54
+msgid "Usage by organization"
+msgstr "机构的使用量"
+
+#: ../../source/usability_data_collection.rst:56
+msgid "This pie chart represents the number of tasks ran inside all jobs by a particular organization."
+msgstr "这个饼图代表特定机构在所有作业中运行的任务数量。"
+
+#: ../../source/usability_data_collection.rst:62
+msgid "Job runs by organization"
+msgstr "机构运行的作业"
+
+#: ../../source/usability_data_collection.rst:64
+msgid "This pie chart represents the controller usage across *all* controller clusters by organization, which is calculated by the number of jobs run by that organization."
+msgstr "这个饼图代表按机构划分的*所有*控制器集群的控制器使用情况，这根据该机构运行的作业数量计算。"
+
+#: ../../source/usability_data_collection.rst:70
+msgid "Organization status"
+msgstr "机构状态"
+
+#: ../../source/usability_data_collection.rst:72
+msgid "This bar chart represents the controller usage by organization and date, which is calculated by the number of jobs run by that organization on a particular date. Alternatively, you can specify to show the number of job runs per organization in one week, two weeks, and monthly increments."
+msgstr "此条形图代表按机构及日期划分的控制器使用量，根据该机构在特定日期运行的作业数量计算。另外，您可以指定每个机构在一个星期、两个星期和每月增加的时间内运行的作业数量。"
+
+#: ../../source/usability_data_collection.rst:77
+msgid "Details of data collection"
+msgstr "数据收集细节"
+
+#: ../../source/usability_data_collection.rst:79
+msgid "|AA| collects certain classes of data from |at|:"
+msgstr "|AA| 从 |at| 收集特定的数据 :"
+
+#: ../../source/usability_data_collection.rst:81
+msgid "Basic configuration, like which features are enabled, and what operating system is being used"
+msgstr "基本配置，比如启用了哪些功能，以及使用什么操作系统"
+
+#: ../../source/usability_data_collection.rst:82
+msgid "Topology and status of the controller environment and hosts, including capacity and health"
+msgstr "控制器环境和主机的拓扑和状态，包括容量和健康状况"
+
+#: ../../source/usability_data_collection.rst:83
+msgid "Counts of automation resources:"
+msgstr "自动化资源的计数："
+
+#: ../../source/usability_data_collection.rst:85
+msgid "organizations, teams, and users"
+msgstr "机构、团队和用户"
+
+#: ../../source/usability_data_collection.rst:86
+msgid "inventories and hosts"
+msgstr "清单和主机"
+
+#: ../../source/usability_data_collection.rst:87
+msgid "credentials (indexed by type)"
+msgstr "凭证（按类型索引）"
+
+#: ../../source/usability_data_collection.rst:88
+msgid "projects (indexed by type)"
+msgstr "项目（按类型索引）"
+
+#: ../../source/usability_data_collection.rst:89
+msgid "templates"
+msgstr "模板"
+
+#: ../../source/usability_data_collection.rst:90
+msgid "schedules"
+msgstr "调度"
+
+#: ../../source/usability_data_collection.rst:91
+msgid "active sessions"
+msgstr "活跃会话"
+
+#: ../../source/usability_data_collection.rst:92
+msgid "running and pending jobs"
+msgstr "运行中和待处理的作业"
+
+#: ../../source/usability_data_collection.rst:94
+msgid "Job execution details (start time, finish time, launch type, and success)"
+msgstr "作业执行详情（启动时间、完成时间、启动类型和成功）"
+
+#: ../../source/usability_data_collection.rst:95
+msgid "Automation task details (success, host id, playbook/role, task name, and module used)"
+msgstr "自动化任务详情（成功、主机 id、playbook/role、任务名称以及所使用的模块）"
+
+#: ../../source/usability_data_collection.rst:97
+msgid "You can use ``awx-manage gather_analytics`` (without ``--ship``) to inspect the data that the controller sends so you can satisfy your data collection concerns. This will create a tarball that contains the analytics data that would be sent to Red Hat."
+msgstr "您可以使用 ``awx-manage gather_analytics`` （没有 ``--ship``）检查控制器发送的数据，从而消除对数据收集问题的担心。这将创建一个 tarball，其中包含发送到红帽的分析数据。"
+
+#: ../../source/usability_data_collection.rst:99
+msgid "This file contains a number of JSON and CSV files. Each file contains a different set of analytics data."
+msgstr "此文件包含多个 JSON 和 CSV 文件，每个文件都包含一组不同的分析数据。"
+
+#: ../../source/usability_data_collection.rst:105
+msgid "manifest.json"
+msgstr "manifest.json"
+
+#: ../../source/usability_data_collection.rst:107
+msgid "manifest.json is the manifest of the analytics data. It describes each file included in the collection, and what version of the schema for that file is included. An example manifest is:"
+msgstr "manifest.json 是分析数据的清单。它描述了集合中包含的每个文件，以及该文件的 schema 版本。例如："
+
+#: ../../source/usability_data_collection.rst:132
+msgid "config.json"
+msgstr "config.json"
+
+#: ../../source/usability_data_collection.rst:134
+msgid "The config.json file contains a subset of the configuration endpoint ``/api/v2/config`` from the cluster. An example config.json is:"
+msgstr "config.json 文件包含来自集群的配置端点 ``/api/v2/config`` 的子集。以下是一个 config.json 示例："
+
+#: ../../source/usability_data_collection.rst:174
+#: ../../source/usability_data_collection.rst:241
+msgid "A reference of fields collected:"
+msgstr "到收集字段的参考："
+
+#: ../../source/usability_data_collection.rst:176
+msgid "ansible_version"
+msgstr "ansible_version"
+
+#: ../../source/usability_data_collection.rst:177
+msgid "The system Ansible version on the host"
+msgstr "主机上的系统 Ansible 版本"
+
+#: ../../source/usability_data_collection.rst:180
+msgid "authentication_backends"
+msgstr "authentication_backends"
+
+#: ../../source/usability_data_collection.rst:179
+msgid "What user authentication backends are available. For more information, refer to :ref:`ag_social_auth` or see :ref:`ag_auth_ldap`."
+msgstr "可用的用户身份验证后端是什么。如需更多信息，请参阅 :ref:`ag_social_auth` 或 :ref:`ag_auth_ldap`。"
+
+#: ../../source/usability_data_collection.rst:182
+msgid "external_logger_enabled"
+msgstr "external_logger_enabled"
+
+#: ../../source/usability_data_collection.rst:183
+msgid "Whether external logging is enaled"
+msgstr "是否启用外部日志"
+
+#: ../../source/usability_data_collection.rst:184
+msgid "external_logger_type"
+msgstr "external_logger_type"
+
+#: ../../source/usability_data_collection.rst:185
+msgid "What logging backend is in use if enabled. See :ref:`ag_logging` for details"
+msgstr "如果启用，使用什么日志后端。如需了解详细信息，请参阅 :ref:`ag_logging`"
+
+#: ../../source/usability_data_collection.rst:186
+msgid "logging_aggregators"
+msgstr "logging_aggregators"
+
+#: ../../source/usability_data_collection.rst:187
+msgid "What logging categories are sent to external logging. See :ref:`ag_logging` for details"
+msgstr "将哪些日志类别发送到外部日志记录。如需了解详细信息，请参阅 :ref:`ag_logging`"
+
+#: ../../source/usability_data_collection.rst:188
+msgid "free_instances"
+msgstr "free_instances"
+
+#: ../../source/usability_data_collection.rst:189
+msgid "How many hosts are available in the license. A value of zero means the cluster is fully consuming its license."
+msgstr "许可证中包括多少个可用的主机。如果为零，则表示集群已完全消耗了它的许可证。"
+
+#: ../../source/usability_data_collection.rst:190
+msgid "install_uuid"
+msgstr "install_uuid"
+
+#: ../../source/usability_data_collection.rst:191
+msgid "A UUID for the installation (identical for all cluster nodes)"
+msgstr "安装的 UUID（在所有集群节点中是相同的）"
+
+#: ../../source/usability_data_collection.rst:192
+msgid "instance_uuid"
+msgstr "instance_uuid"
+
+#: ../../source/usability_data_collection.rst:193
+msgid "A UUID for the instance (different for each cluster node)"
+msgstr "实例的 UUID（每个集群节点是不同的）"
+
+#: ../../source/usability_data_collection.rst:194
+msgid "license_expiry"
+msgstr "license_expiry"
+
+#: ../../source/usability_data_collection.rst:195
+msgid "Time to expiry of the license, in seconds"
+msgstr "许可证过期的时间，以秒为单位"
+
+#: ../../source/usability_data_collection.rst:196
+msgid "license_type"
+msgstr "license_type"
+
+#: ../../source/usability_data_collection.rst:197
+msgid "Type of the license (should be 'enterprise' for most cases)"
+msgstr "许可证类型（在大多数情况下都应为 'enterprise'）"
+
+#: ../../source/usability_data_collection.rst:198
+msgid "pendo_tracking"
+msgstr "pendo_tracking"
+
+#: ../../source/usability_data_collection.rst:199
+msgid "State of :ref:`usability_data_collection`"
+msgstr ":ref:`usability_data_collection` 的状态"
+
+#: ../../source/usability_data_collection.rst:200
+msgid "platform"
+msgstr "platform"
+
+#: ../../source/usability_data_collection.rst:201
+msgid "The operating system the cluster is running on"
+msgstr "集群正在运行的操作系统"
+
+#: ../../source/usability_data_collection.rst:202
+msgid "total_licensed_instances"
+msgstr "total_licensed_instances"
+
+#: ../../source/usability_data_collection.rst:203
+msgid "The total number of hosts in the license"
+msgstr "许可证中的主机总数"
+
+#: ../../source/usability_data_collection.rst:204
+msgid "controller_url_base"
+msgstr "controller_url_base"
+
+#: ../../source/usability_data_collection.rst:205
+msgid "The base URL for the cluster used by clients (shown in |AA|)"
+msgstr "客户端使用的集群基本 URL（在 |AA| 中显示）"
+
+#: ../../source/usability_data_collection.rst:207
+msgid "controller_version"
+msgstr "controller_version"
+
+#: ../../source/usability_data_collection.rst:207
+msgid "Version of the software on the cluster"
+msgstr "集群中的软件版本"
+
+#: ../../source/usability_data_collection.rst:210
+msgid "instance_info.json"
+msgstr "instance_info.json"
+
+#: ../../source/usability_data_collection.rst:212
+msgid "The instance_info.json file contains detailed information on the instances that make up the cluster, organized by instance UUID. An example instance_info.json is:"
+msgstr "instance_info.json 文件包含组成集群的实例的详细信息，由实例 UUID 进行组织。以下是一个 instance_info.json 示例："
+
+#: ../../source/usability_data_collection.rst:243
+msgid "capacity"
+msgstr "capacity"
+
+#: ../../source/usability_data_collection.rst:244
+msgid "The capacity of the instance for executing tasks. See <link> for details on how this is calculated."
+msgstr "实例执行任务的能力。如需了解如何计算这个值，请参阅 <link>。"
+
+#: ../../source/usability_data_collection.rst:245
+msgid "cpu"
+msgstr "CPU"
+
+#: ../../source/usability_data_collection.rst:246
+msgid "CPU cores for the instance"
+msgstr "实例的 CPU 内核"
+
+#: ../../source/usability_data_collection.rst:247
+msgid "memory"
+msgstr "memory"
+
+#: ../../source/usability_data_collection.rst:248
+msgid "Memory for the instance"
+msgstr "实例的内存"
+
+#: ../../source/usability_data_collection.rst:249
+msgid "enabled"
+msgstr "enabled"
+
+#: ../../source/usability_data_collection.rst:250
+msgid "Whether the instance is enabled and accepting tasks"
+msgstr "该实例是否已启用并在接受任务"
+
+#: ../../source/usability_data_collection.rst:251
+msgid "managed_by_policy"
+msgstr "managed_by_policy"
+
+#: ../../source/usability_data_collection.rst:252
+msgid "Whether the instance's membership in instance groups is managed by policy, or manually managed"
+msgstr "实例在实例组中的成员资格是否由策略管理，还是手动管理"
+
+#: ../../source/usability_data_collection.rst:254
+msgid "version"
+msgstr "version"
+
+#: ../../source/usability_data_collection.rst:254
+msgid "Version of the software on the instance"
+msgstr "实例中软件的版本"
+
+#: ../../source/usability_data_collection.rst:257
+msgid "counts.json"
+msgstr "counts.json"
+
+#: ../../source/usability_data_collection.rst:259
+msgid "The counts.json file contains the total number of objects for each relevant category in a cluster. An example counts.json is: ::"
+msgstr "counts.json 文件包含集群中每个相关类别的对象总数。一个示例 counts.json 是： ::"
+
+#: ../../source/usability_data_collection.rst:291
+msgid "Each entry in this file is for the corresponding API objects in ``/api/v2``, with the exception of the active session counts."
+msgstr "此文件的每个条目都用于 ``/api/v2`` 中的对应 API 对象，但活跃会话计数除外。"
+
+#: ../../source/usability_data_collection.rst:294
+msgid "org_counts.json"
+msgstr "org_counts.json"
+
+#: ../../source/usability_data_collection.rst:296
+msgid "The org_counts.json file contains information on each organization in the cluster, and the number of users and teams associated with that organization. An example org_counts.json is: ::"
+msgstr "org_counts.json 文件包含集群中每个机构的信息，以及与该机构关联的用户和团队的数量。一个 org_counts.json 示例： ::"
+
+#: ../../source/usability_data_collection.rst:320
+msgid "cred_type_counts.json"
+msgstr "cred_type_counts.json"
+
+#: ../../source/usability_data_collection.rst:322
+msgid "The cred_type_counts.json file contains information on the different credential types in the cluster, and how many credentials exist for each type. An example cred_type_counts.json is: ::"
+msgstr "cred_type_counts.json 文件包含集群中不同凭据类型的信息，以及每种类型的凭据数量。一个 cred_type_counts.json 示例： ::"
+
+#: ../../source/usability_data_collection.rst:361
+msgid "inventory_counts.json"
+msgstr "inventory_counts.json"
+
+#: ../../source/usability_data_collection.rst:363
+msgid "The inventory_counts.json file contains information on the different inventories in the cluster. An example inventory_counts.json is: ::"
+msgstr "iventory_counts.json 文件包含集群中不同清单的信息。一个 inventory_counts.json 示例： ::"
+
+#: ../../source/usability_data_collection.rst:412
+msgid "projects_by_scm_type.json"
+msgstr "projects_by_scm_type.json"
+
+#: ../../source/usability_data_collection.rst:414
+msgid "The projects_by_scm_type.json file provides a breakdown of all projects in the cluster, by source control type. An example projects_by_scm_type.json is: ::"
+msgstr "pojects_by_scm_type.json 文件根据源控制类型提供集群中的所有项目。一个 projects_by_scm_type.json 示例： ::"
+
+#: ../../source/usability_data_collection.rst:428
+msgid "query_info.json"
+msgstr "query_info.json"
+
+#: ../../source/usability_data_collection.rst:430
+msgid "The query_info.json file provides details on when and how the data collection happened. An example query_info.json is:"
+msgstr "query_info.json 文件详细介绍了数据收集何时及如何发生。一个 query_info.json 示例："
+
+#: ../../source/usability_data_collection.rst:442
+msgid "collection_type is one of \"manual\" or \"automatic\"."
+msgstr "collection_type 是 “manual” 或 “automatic” 中的一个。"
+
+#: ../../source/usability_data_collection.rst:445
+msgid "job_counts.json"
+msgstr "job_counts.json"
+
+#: ../../source/usability_data_collection.rst:447
+msgid "The job_counts.json file provides details on the job history of the cluster, describing both how jobs were launched, and what their finishing status is. An example job_counts.json is: ::"
+msgstr "job_counts.json 文件提供集群作业历史记录的详细信息，描述如何启动作业及其完成状态。一个 job_counts.json 示例： ::"
+
+#: ../../source/usability_data_collection.rst:470
+msgid "job_instance_counts.json"
+msgstr "job_instance_counts.json"
+
+#: ../../source/usability_data_collection.rst:472
+msgid "The job_instance_counts.json file provides the same detail as job_counts.json, broken down by instance. An example job_instance_counts.json is: ::"
+msgstr "job_instance_counts.json 文件提供与 job_counts.json 相同的详细信息，按照实例划分。一个 job_instance_counts.json 示例： ::"
+
+#: ../../source/usability_data_collection.rst:495
+msgid "Note that instances in this file are by hostname, not by UUID as they are in instance_info."
+msgstr "请注意，这个文件中的实例是主机名，而在 instance_info 中是 UUID。"
+
+#: ../../source/usability_data_collection.rst:498
+msgid "unified_job_template_table.csv"
+msgstr "unified_job_template_table.csv"
+
+#: ../../source/usability_data_collection.rst:500
+msgid "The unified_job_template_table.csv file provides information on job templates in the system. Each line contains the following fields for the job template:"
+msgstr "unified_job_template_table.csv 文件提供系统中作业模板的信息。每行都包含作业模板的以下字段："
+
+#: ../../source/usability_data_collection.rst:503
+#: ../../source/usability_data_collection.rst:540
+#: ../../source/usability_data_collection.rst:592
+#: ../../source/usability_data_collection.rst:621
+#: ../../source/usability_data_collection.rst:652
+msgid "id"
+msgstr "id"
+
+#: ../../source/usability_data_collection.rst:504
+msgid "Job template id"
+msgstr "作业模板的 ID"
+
+#: ../../source/usability_data_collection.rst:505
+#: ../../source/usability_data_collection.rst:542
+msgid "name"
+msgstr "名称"
+
+#: ../../source/usability_data_collection.rst:506
+msgid "Job template name"
+msgstr "作业模板名称"
+
+#: ../../source/usability_data_collection.rst:507
+#: ../../source/usability_data_collection.rst:544
+msgid "polymorphic_ctype_id"
+msgstr "polymorphic_ctype_id"
+
+#: ../../source/usability_data_collection.rst:508
+msgid "The id of the type of template it is"
+msgstr "模板类型的 id"
+
+#: ../../source/usability_data_collection.rst:509
+#: ../../source/usability_data_collection.rst:546
+msgid "model"
+msgstr "model"
+
+#: ../../source/usability_data_collection.rst:510
+msgid "The name of the polymorphic_ctype_id for the template. Examples include 'project', 'systemjobtemplate', 'jobtemplate', 'inventorysource', and 'workflowjobtemplate'"
+msgstr "模板的 polymorphic_ctype_id。示例包括 'project', 'systemjobtemplate', 'jobtemplate', 'inventorysource' 和 'workflowjobtemplate'"
+
+#: ../../source/usability_data_collection.rst:511
+#: ../../source/usability_data_collection.rst:552
+#: ../../source/usability_data_collection.rst:594
+#: ../../source/usability_data_collection.rst:623
+#: ../../source/usability_data_collection.rst:656
+msgid "created"
+msgstr "created"
+
+#: ../../source/usability_data_collection.rst:512
+msgid "When the template was created"
+msgstr "模板创建的时间"
+
+#: ../../source/usability_data_collection.rst:513
+#: ../../source/usability_data_collection.rst:596
+#: ../../source/usability_data_collection.rst:625
+msgid "modified"
+msgstr "modified"
+
+#: ../../source/usability_data_collection.rst:514
+msgid "When the template was last updated"
+msgstr "模板最后一次更新的时间"
+
+#: ../../source/usability_data_collection.rst:515
+msgid "created_by_id"
+msgstr "created_by_id"
+
+#: ../../source/usability_data_collection.rst:516
+msgid "The userid that created the template. Blank if done by the system."
+msgstr "创建模板的 userid。如果由系统创建，则为空。"
+
+#: ../../source/usability_data_collection.rst:517
+msgid "modified_by_id"
+msgstr "modified_by_id"
+
+#: ../../source/usability_data_collection.rst:518
+msgid "The userid that last modified the template. Blank if done by the system."
+msgstr "上一次修改模板的 userid。如果由系统修改，则为空。"
+
+#: ../../source/usability_data_collection.rst:519
+msgid "current_job_id"
+msgstr "current_job_id"
+
+#: ../../source/usability_data_collection.rst:520
+msgid "Currently executing job id for the template, if any"
+msgstr "目前为模板执行的作业 id（如果存在）"
+
+#: ../../source/usability_data_collection.rst:521
+msgid "last_job_id"
+msgstr "last_job_id"
+
+#: ../../source/usability_data_collection.rst:522
+msgid "Last execution of the job"
+msgstr "作业最后一次执行"
+
+#: ../../source/usability_data_collection.rst:523
+msgid "last_job_run"
+msgstr "last_job_run"
+
+#: ../../source/usability_data_collection.rst:524
+msgid "Time of last execution of the job"
+msgstr "作业最后一次执行的时间"
+
+#: ../../source/usability_data_collection.rst:525
+msgid "last_job_failed"
+msgstr "last_job_failed"
+
+#: ../../source/usability_data_collection.rst:526
+msgid "Whether the last_job_id failed"
+msgstr "last_job_id 是否失败"
+
+#: ../../source/usability_data_collection.rst:527
+#: ../../source/usability_data_collection.rst:574
+msgid "status"
+msgstr "status"
+
+#: ../../source/usability_data_collection.rst:528
+msgid "Status of last_job_id"
+msgstr "last_job_id 的状态"
+
+#: ../../source/usability_data_collection.rst:529
+msgid "next_job_run"
+msgstr "next_job_run"
+
+#: ../../source/usability_data_collection.rst:530
+msgid "Next scheduled execution of the template, if any"
+msgstr "模板的下一次调度执行（若有）"
+
+#: ../../source/usability_data_collection.rst:532
+msgid "next_schedule_id"
+msgstr "next_schedule_id"
+
+#: ../../source/usability_data_collection.rst:532
+msgid "Schedule id for next_job_run, if any"
+msgstr "next_job_run 的调度 ID，如果存在"
+
+#: ../../source/usability_data_collection.rst:535
+msgid "unified_jobs_table.csv"
+msgstr "unified_jobs_table.csv"
+
+#: ../../source/usability_data_collection.rst:537
+msgid "The unified_jobs_table.csv file provides information on jobs run by the system. Each line contains the following fields for a job:"
+msgstr "unified_jobs_table.csv 文件提供了有关系统运行的作业的信息，每行包含作业的以下字段："
+
+#: ../../source/usability_data_collection.rst:541
+msgid "Job id"
+msgstr "Job id"
+
+#: ../../source/usability_data_collection.rst:543
+msgid "Job name (from the template)"
+msgstr "作业名称（从模板中）"
+
+#: ../../source/usability_data_collection.rst:545
+msgid "The id of the type of job it is"
+msgstr "作业类型的 id"
+
+#: ../../source/usability_data_collection.rst:547
+msgid "The name of the polymorphic_ctype_id for the job. Examples include 'job', 'worfklow', and more."
+msgstr "作业的 polymorphic_ctype_id 的名称。示例包括 'job'、'worfklow' 等等。"
+
+#: ../../source/usability_data_collection.rst:548
+msgid "organization_id"
+msgstr "organization_id"
+
+#: ../../source/usability_data_collection.rst:549
+msgid "The organization ID for the job"
+msgstr "作业的机构 ID"
+
+#: ../../source/usability_data_collection.rst:550
+msgid "organization_name"
+msgstr "organization_name"
+
+#: ../../source/usability_data_collection.rst:551
+msgid "Name for the organization_id"
+msgstr "organization_id 的名称"
+
+#: ../../source/usability_data_collection.rst:553
+msgid "When the job record was created"
+msgstr "作业记录创建的时间"
+
+#: ../../source/usability_data_collection.rst:554
+msgid "started"
+msgstr "started"
+
+#: ../../source/usability_data_collection.rst:555
+msgid "When the job started executing"
+msgstr "作业开始执行的时间"
+
+#: ../../source/usability_data_collection.rst:556
+msgid "finished"
+msgstr "finished"
+
+#: ../../source/usability_data_collection.rst:557
+msgid "When the job finished"
+msgstr "作业完成的时间"
+
+#: ../../source/usability_data_collection.rst:558
+msgid "elapsed"
+msgstr "elapsed"
+
+#: ../../source/usability_data_collection.rst:559
+msgid "Elapsed time for the job in seconds"
+msgstr "作业已经过的时间（以秒为单位）"
+
+#: ../../source/usability_data_collection.rst:560
+#: ../../source/usability_data_collection.rst:598
+msgid "unified_job_template_id"
+msgstr "unified_job_template_id"
+
+#: ../../source/usability_data_collection.rst:561
+msgid "The template for this job"
+msgstr "此任务的模板"
+
+#: ../../source/usability_data_collection.rst:562
+msgid "launch_type"
+msgstr "launch_type"
+
+#: ../../source/usability_data_collection.rst:563
+msgid "One of \"manual\", \"scheduled\", \"relaunched\", \"scm\", \"workflow\", or \"dependnecy\""
+msgstr "\"manual\", \"scheduled\", \"relaunched\", \"scm\", \"workflow\", 或 \"dependnecy\" 中的一个"
+
+#: ../../source/usability_data_collection.rst:564
+msgid "schedule_id"
+msgstr "schedule_id"
+
+#: ../../source/usability_data_collection.rst:565
+msgid "The id of the schedule that launched the job, if any"
+msgstr "启动了此作业的调度的 ID（如果存在）"
+
+#: ../../source/usability_data_collection.rst:566
+msgid "instance_group_id"
+msgstr "instance_group_id"
+
+#: ../../source/usability_data_collection.rst:567
+msgid "The instance group that executed the job"
+msgstr "执行作业的实例组"
+
+#: ../../source/usability_data_collection.rst:568
+msgid "execution_node"
+msgstr "execution_node"
+
+#: ../../source/usability_data_collection.rst:569
+msgid "The node that executed the job (hostname, not UUID)"
+msgstr "执行作业的节点（主机名，而不是 UUID)"
+
+#: ../../source/usability_data_collection.rst:570
+msgid "controller_node"
+msgstr "controller_node"
+
+#: ../../source/usability_data_collection.rst:571
+msgid "The controller node for the job, if run as an isolated job, or in a container group"
+msgstr "作业的控制器节点，如果作为隔离作业运行，或者在容器组中"
+
+#: ../../source/usability_data_collection.rst:572
+msgid "cancel_flag"
+msgstr "cancel_flag"
+
+#: ../../source/usability_data_collection.rst:573
+msgid "Whether the job was cancelled"
+msgstr "该作业是否被取消"
+
+#: ../../source/usability_data_collection.rst:575
+msgid "Status of the job"
+msgstr "作业状态"
+
+#: ../../source/usability_data_collection.rst:576
+#: ../../source/usability_data_collection.rst:664
+msgid "failed"
+msgstr "失败"
+
+#: ../../source/usability_data_collection.rst:577
+msgid "Whether the job failed"
+msgstr "作业是否失败"
+
+#: ../../source/usability_data_collection.rst:578
+msgid "job_explanation"
+msgstr "job_explanation"
+
+#: ../../source/usability_data_collection.rst:579
+msgid "Any additional detail for jobs that failed to execute properly"
+msgstr "无法正确执行作业的附加详情"
+
+#: ../../source/usability_data_collection.rst:582
+msgid "forks"
+msgstr "forks"
+
+#: ../../source/usability_data_collection.rst:581
+msgid "Number of forks executed for this job"
+msgstr "为此作业执行的 fork 数量"
+
+#: ../../source/usability_data_collection.rst:585
+msgid "workflow_job_template_node_table.csv"
+msgstr "workflow_job_template_node_table.csv"
+
+#: ../../source/usability_data_collection.rst:587
+msgid "The workflow_job_template_node_table.csv provides information on the nodes defined in workflow job templates on the system."
+msgstr "workflow_job_template_node_table.csv 提供系统工作流作业模板中定义的节点的信息。"
+
+#: ../../source/usability_data_collection.rst:590
+msgid "Each line contains the following fields for a worfklow job template node:"
+msgstr "每行包含 一 个 worfklow 作业模板节点的以下字段："
+
+#: ../../source/usability_data_collection.rst:593
+#: ../../source/usability_data_collection.rst:622
+msgid "Node id"
+msgstr "节点 ID"
+
+#: ../../source/usability_data_collection.rst:595
+msgid "When the node was created"
+msgstr "节点创建的时间"
+
+#: ../../source/usability_data_collection.rst:597
+msgid "When the node was last updated"
+msgstr "节点最后一次更新的时间"
+
+#: ../../source/usability_data_collection.rst:599
+msgid "The id of the job template, project, inventory, or other parent resource for this node"
+msgstr "此节点的作业模板、项目、清单或其他父资源的 id"
+
+#: ../../source/usability_data_collection.rst:600
+msgid "workflow_job_template_id"
+msgstr "workflow_job_template_id"
+
+#: ../../source/usability_data_collection.rst:601
+msgid "The workflow job template that contains this node"
+msgstr "包含此节点的工作流任务模板"
+
+#: ../../source/usability_data_collection.rst:602
+#: ../../source/usability_data_collection.rst:633
+msgid "inventory_id"
+msgstr "inventory_id"
+
+#: ../../source/usability_data_collection.rst:603
+msgid "The inventory used by this node"
+msgstr "此节点使用的清单"
+
+#: ../../source/usability_data_collection.rst:604
+#: ../../source/usability_data_collection.rst:635
+msgid "success_nodes"
+msgstr "success_nodes"
+
+#: ../../source/usability_data_collection.rst:605
+msgid "Nodes that are triggered after this node succeeds"
+msgstr "此节点成功后触发的节点"
+
+#: ../../source/usability_data_collection.rst:606
+#: ../../source/usability_data_collection.rst:637
+msgid "failure_nodes"
+msgstr "failure_nodes"
+
+#: ../../source/usability_data_collection.rst:607
+msgid "Nodes that are triggered after this node fails"
+msgstr "此节点失败后触发的节点"
+
+#: ../../source/usability_data_collection.rst:608
+#: ../../source/usability_data_collection.rst:639
+msgid "always_nodes"
+msgstr "always_nodes"
+
+#: ../../source/usability_data_collection.rst:609
+msgid "Nodes that always are triggered after this node finishes"
+msgstr "此节点完成后始终触发的节点"
+
+#: ../../source/usability_data_collection.rst:611
+#: ../../source/usability_data_collection.rst:644
+msgid "all_parents_must_converge"
+msgstr "all_parents_must_converge"
+
+#: ../../source/usability_data_collection.rst:611
+msgid "Whether this node requires all its parent conditions satisfied to start"
+msgstr "此节点是否需要满足其所有父条件才能启动"
+
+#: ../../source/usability_data_collection.rst:614
+msgid "workflow_job_node_table.csv"
+msgstr "workflow_job_node_table.csv"
+
+#: ../../source/usability_data_collection.rst:616
+msgid "The workflow_job_node_table.csv provides information on the jobs that have been executed as part of a workflow on the system."
+msgstr "workflow_job_node_table.csv 提供了作为系统工作流一部分执行的作业的信息。"
+
+#: ../../source/usability_data_collection.rst:619
+msgid "Each line contains the following fields for a job run as part of a workflow:"
+msgstr "每行包含作为工作流一部分运行的作业的以下字段："
+
+#: ../../source/usability_data_collection.rst:624
+msgid "When the node record was created"
+msgstr "作业记录创建的时间"
+
+#: ../../source/usability_data_collection.rst:626
+msgid "When the node record was last updated"
+msgstr "最后更新节点记录的时间"
+
+#: ../../source/usability_data_collection.rst:627
+#: ../../source/usability_data_collection.rst:676
+msgid "job_id"
+msgstr "job_id"
+
+#: ../../source/usability_data_collection.rst:628
+msgid "The job id for the job run for this node"
+msgstr "此节点的作业运行的作业 id"
+
+#: ../../source/usability_data_collection.rst:629
+msgid "unified_job_tempalte_id"
+msgstr "unified_job_tempalte_id"
+
+#: ../../source/usability_data_collection.rst:630
+msgid "The id of the job template, project, inventory, or other parent resource for this job run"
+msgstr "此作业运行的作业模板、项目、清单或其他父资源的 ID"
+
+#: ../../source/usability_data_collection.rst:631
+msgid "workflow_job_id"
+msgstr "workflow_job_id"
+
+#: ../../source/usability_data_collection.rst:632
+msgid "The parent workflow job for this job run"
+msgstr "此作业运行的父工作流任务"
+
+#: ../../source/usability_data_collection.rst:634
+msgid "The inventory used by this job"
+msgstr "此作业使用的清单"
+
+#: ../../source/usability_data_collection.rst:636
+msgid "Nodes that were/would be triggered after this node succeded"
+msgstr "此节点成功后被触发的节点"
+
+#: ../../source/usability_data_collection.rst:638
+msgid "Nodes that were/would be triggered after this node failed"
+msgstr "此节点失败后被触发的节点"
+
+#: ../../source/usability_data_collection.rst:640
+msgid "Nodes that were/would be triggered after this node finished"
+msgstr "此节点完成后被触发的节点"
+
+#: ../../source/usability_data_collection.rst:641
+msgid "do_not_run"
+msgstr "do_not_run"
+
+#: ../../source/usability_data_collection.rst:642
+msgid "Nodes that were not run in the workflow due to their start conditions not being triggered"
+msgstr "因启动条件没有被触发而无法在工作流中运行的节点"
+
+#: ../../source/usability_data_collection.rst:644
+msgid "Whether this node required all its parent conditions satisfied to start"
+msgstr "此节点是否需要满足其所有父条件才能启动"
+
+#: ../../source/usability_data_collection.rst:647
+msgid "events_table.csv"
+msgstr "events_table.csv"
+
+#: ../../source/usability_data_collection.rst:649
+msgid "The events_table.csv file provides information on all job events from all job runs in the system. Each line contains the following fields for a job event:"
+msgstr "events_table.csv 文件提供了系统中运行的所有作业事件的信息。每行包括一个作业事件的以下字段："
+
+#: ../../source/usability_data_collection.rst:653
+msgid "Event id"
+msgstr "事件 ID"
+
+#: ../../source/usability_data_collection.rst:654
+msgid "uuid"
+msgstr "uuid"
+
+#: ../../source/usability_data_collection.rst:655
+msgid "Event UUID"
+msgstr "事件 UUID"
+
+#: ../../source/usability_data_collection.rst:657
+msgid "When the event was created"
+msgstr "事件创建的时间"
+
+#: ../../source/usability_data_collection.rst:658
+msgid "parent_uuid"
+msgstr "parent_uuid"
+
+#: ../../source/usability_data_collection.rst:659
+msgid "The parent UUID for this event, if any"
+msgstr "此事件的父 UUID，如果存在"
+
+#: ../../source/usability_data_collection.rst:660
+msgid "event"
+msgstr "event"
+
+#: ../../source/usability_data_collection.rst:661
+msgid "The Ansible event type (such as runner_on_failed"
+msgstr "Ansible 事件类型（如 runner_on_failed)"
+
+#: ../../source/usability_data_collection.rst:662
+msgid "task_action"
+msgstr "task_action"
+
+#: ../../source/usability_data_collection.rst:663
+msgid "The module associated with this event, if any (such as 'command' or 'yum')"
+msgstr "与这个事件关联的模块（如果有的话）（比如 'command' 或 'yum')"
+
+#: ../../source/usability_data_collection.rst:665
+msgid "Whether the event returned \"failed\""
+msgstr "事件是否返回 \"failed\""
+
+#: ../../source/usability_data_collection.rst:666
+msgid "changed"
+msgstr "changed"
+
+#: ../../source/usability_data_collection.rst:667
+msgid "Whether the event returned \"changed\""
+msgstr "事件是否返回 \"changed\""
+
+#: ../../source/usability_data_collection.rst:668
+msgid "playbook"
+msgstr "playbook"
+
+#: ../../source/usability_data_collection.rst:669
+msgid "Playbook associated with the event"
+msgstr "与事件关联的 playbook"
+
+#: ../../source/usability_data_collection.rst:670
+msgid "play"
+msgstr "play"
+
+#: ../../source/usability_data_collection.rst:671
+msgid "Play name from playbook"
+msgstr "来自 playbook 的 play 名称"
+
+#: ../../source/usability_data_collection.rst:672
+msgid "task"
+msgstr "task"
+
+#: ../../source/usability_data_collection.rst:673
+msgid "Task name from playbook"
+msgstr "playbook 的任务名称"
+
+#: ../../source/usability_data_collection.rst:674
+msgid "role"
+msgstr "role"
+
+#: ../../source/usability_data_collection.rst:675
+msgid "Role name from playbook"
+msgstr "来自 playbook 的角色名称"
+
+#: ../../source/usability_data_collection.rst:677
+msgid "Id of the job this event is from"
+msgstr "此事件来自于的作业 ID"
+
+#: ../../source/usability_data_collection.rst:678
+msgid "host_id"
+msgstr "host_id"
+
+#: ../../source/usability_data_collection.rst:679
+msgid "Id of the host this event is associated with, if any"
+msgstr "此事件相关联的主机 ID （若有）"
+
+#: ../../source/usability_data_collection.rst:680
+msgid "host_name"
+msgstr "host_name"
+
+#: ../../source/usability_data_collection.rst:681
+msgid "Name of the host this event is associated with, if any"
+msgstr "此事件相关联的主机名称（若有）"
+
+#: ../../source/usability_data_collection.rst:682
+msgid "start"
+msgstr "start"
+
+#: ../../source/usability_data_collection.rst:683
+msgid "Start time of the task"
+msgstr "任务开始的时间"
+
+#: ../../source/usability_data_collection.rst:684
+msgid "end"
+msgstr "end"
+
+#: ../../source/usability_data_collection.rst:685
+msgid "End time of the task"
+msgstr "任务结束的时间"
+
+#: ../../source/usability_data_collection.rst:686
+msgid "duration"
+msgstr "duration"
+
+#: ../../source/usability_data_collection.rst:687
+msgid "Duration of the task"
+msgstr "任务持续的时间"
+
+#: ../../source/usability_data_collection.rst:688
+msgid "warnings"
+msgstr "warnings"
+
+#: ../../source/usability_data_collection.rst:689
+msgid "Any warnings from the task/module"
+msgstr "任务/模块中的任何警告"
+
+#: ../../<generated>:1
+msgid "deprecations"
+msgstr "deprecations"
+
+#: ../../source/usability_data_collection.rst:691
+msgid "Any deprecation warnings from the task/module"
+msgstr "任务/模块中的任何弃用警告"
+

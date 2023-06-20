@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/troubleshooting.rst:5
+msgid "Troubleshooting the controller"
+msgstr "コントローラーのトラブルシューティング"
+
+#: ../../source/troubleshooting.rst:13
+msgid "Error logs"
+msgstr "エラーログ"
+
+#: ../../source/troubleshooting.rst:18
+msgid "The controller server errors are logged in ``/var/log/tower``. Supervisors logs can be found in ``/var/log/supervisor/``. Nginx web server errors are logged in the httpd error log. Configure other controller logging needs in ``/etc/tower/conf.d/``."
+msgstr "コントローラーサーバーのエラーは ``/var/log/tower`` にロギングされます。supervisor ログは ``/var/log/supervisor/`` に、Nginx web サーバーのエラーは httpd エラーログに記録されます。その他のコントローラーロギングの設定は ``/etc/tower/conf.d/`` で行うようにしてください。"
+
+#: ../../source/troubleshooting.rst:20
+msgid "Explore client-side issues using the JavaScript console built into most browsers and report any errors to Ansible via the Red Hat Customer portal at https://access.redhat.com/."
+msgstr "大半のブラウザーに組み込まれている JavaScript コンソールを使用してクライアント側の問題をチェックし、Red Hat カスタマーポータル (https://access.redhat.com/) 経由で Ansible にエラーを報告してください。"
+
+#: ../../source/troubleshooting.rst:26
+msgid "sosreport"
+msgstr "sosreport"
+
+#: ../../source/troubleshooting.rst:30
+msgid "The ``sosreport`` is a utility that collects diagnostic information for Support to be able to use to analyze and investigate the issues you report. To properly provide Technical Support this information, refer to the `Knowledgebase article for sosreport <https://access.redhat.com/solutions/3592>`_ from the Red Hat Customer portal to perform the following procedures:"
+msgstr "``sosreport`` は、サポートの診断情報を収集して、報告する問題の分析と調査に使用できるようにするユーティリティーです。この情報をテクニカルサポートに適切に提供するには、Red Hat カスタマーポータルの `Knowledgebase article for sosreport <https://access.redhat.com/solutions/3592>`_ から、次の手順を実行します。"
+
+#: ../../source/troubleshooting.rst:32
+msgid "`Install the sosreport <https://access.redhat.com/solutions/3592#install>`_ utility."
+msgstr "`Install the sosreport <https://access.redhat.com/solutions/3592#install>`_ ユーティリティーのインストール。"
+
+#: ../../source/troubleshooting.rst:33
+msgid "`Generate an sosreport <https://access.redhat.com/solutions/3592#command>`_."
+msgstr "`Generate an sosreport <https://access.redhat.com/solutions/3592#command>`_。"
+
+#: ../../source/troubleshooting.rst:34
+msgid "Provide the sosreport to Red Hat Support."
+msgstr "sosreport を RedHat サポートに提供します。"
+
+#: ../../source/troubleshooting.rst:38
+msgid "Problems connecting to your host"
+msgstr "ホストへの接続に関する問題"
+
+#: ../../source/troubleshooting.rst:43
+msgid "If you are unable to run the ``helloworld.yml`` example playbook from the Quick Start Guide or other playbooks due to host connection errors, try the following:"
+msgstr "ホストの接続エラーが原因で、クイックスタートガイドからの ``helloworld.yml`` のサンプルの Playbook やその他の Playbook を実行できない場合は、以下をお試しください。"
+
+#: ../../source/troubleshooting.rst:45
+msgid "Can you ``ssh`` to your host? Ansible depends on SSH access to the servers you are managing."
+msgstr "ホストに ``ssh`` 接続できますか? Ansible では、管理するサーバーに SSH でアクセスできる必要があります。"
+
+#: ../../source/troubleshooting.rst:46
+msgid "Are your hostnames and IPs correctly added in your inventory file? (Check for typos.)"
+msgstr "ホスト名と IP がインベントリーファイルに正しく追加されていますか? (タイプミスがないか確認してください)"
+
+#: ../../source/troubleshooting.rst:49
+msgid "Unable to login to the controller via HTTP"
+msgstr "HTTP 経由でコントローラーにログインできない"
+
+#: ../../source/troubleshooting.rst:51
+msgid "Access to the controller is intentionally restricted through a secure protocol (HTTPS). In cases where your configuration is set up to run a controller node behind a load balancer or proxy as \"HTTP only\", and you only want to access it without SSL (for troubleshooting, for example), you must add the following settings in the ``custom.py`` file located at ``/etc/tower/conf.d`` of your controller instance:"
+msgstr "コントローラーへのアクセスはセキュアなプロトコル (HTTPS) を使用して、意図的に制限しています。ロードバランサーやプロキシーの背後にコントローラーノードの実行が「HTTP のみ」として設定されている場合や、SSL (トラブルシューティングのためなど) なしにアクセスする場合に、コントローラーインスタンスの ``/etc/tower/conf.d`` にある ``custom.py`` ファイルで以下の設定を調整する必要があります。"
+
+#: ../../source/troubleshooting.rst:58
+msgid "Changing these settings to ``False`` will allow the controller to manage cookies and login sessions when using the HTTP protocol. This must be done on every node of a cluster installation to properly take effect."
+msgstr "これらの設定を ``False`` に変更すると、HTTP プロトコルの使用時にコントローラーが Cookie とログインセッションを管理します。変更を正しく適用するには、この設定は、クラスターインストールの全ノードで行う必要があります。"
+
+#: ../../source/troubleshooting.rst:60
+msgid "To apply the changes, run:"
+msgstr "変更を適用するには以下を実行します。"
+
+#: ../../source/troubleshooting.rst:68
+msgid "WebSockets port for live events not working"
+msgstr "ライブイベント用の WebSockets ポートが機能しない"
+
+#: ../../source/troubleshooting.rst:76
+msgid "|at| uses port 80/443 on the controller server to stream live updates of playbook activity and other events to the client browser. These ports are configured for 80/443 by default, but if they are blocked by firewalls, close any firewall rules that opened up or added for the previous websocket ports, this will ensure your firewall allows traffic through this port."
+msgstr "|at| はコントローラーサーバー上のポート 80/443 を使用して Playbook アクティビティーやその他のライブ更新をクライアントのブラウザーにストリーミングします。これらのポートは、デフォルトで 80/443 に設定されていますが、これらのポートがファイアウォールでブロックされている場合には、以前の Websocket ポート用に開放または追加するファイアウォールルールを削除してください。削除することで、ファイアウォールでこのポートへのトラフィックが許可されます。"
+
+#: ../../source/troubleshooting.rst:80
+msgid "Problems running a playbook"
+msgstr "Playbook の実行に関する問題"
+
+#: ../../source/troubleshooting.rst:85
+msgid "If you are unable to run the ``helloworld.yml`` example playbook from the Quick Start Guide or other playbooks due to playbook errors, try the following:"
+msgstr "Playbook のエラーが原因で、クイックスタートガイドからの ``helloworld.yml`` のサンプルの Playbook やその他の Playbook を実行できない場合は、以下をお試しください。"
+
+#: ../../source/troubleshooting.rst:87
+msgid "Are you authenticating with the user currently running the commands? If not, check how the username has been setup or pass the ``--user=username`` or ``-u username`` commands to specify a user."
+msgstr "現在コマンドを実行しているユーザーを認証していますか? そうでない場合には、ユーザー名の設定方法を確認して、``--user=username`` または ``-u username`` コマンドを指定してユーザーを指定してください。"
+
+#: ../../source/troubleshooting.rst:88
+msgid "Is your YAML file correctly indented? You may need to line up your whitespace correctly. Indentation level is significant in YAML. You can use ``yamlint`` to check your playbook. For more information, refer to the YAML primer at: http://docs.ansible.com/YAMLSyntax.html"
+msgstr "YAML ファイルで正しくインデントされていますか? 正しくホワイトスペースを揃える必要がある場合があります。YAML ではインデントのレベルは重要です。``yamlint`` を使用して Playbook を確認してください。詳しい情報は、http://docs.ansible.com/YAMLSyntax.html で YAML 入門を参照してください。"
+
+#: ../../source/troubleshooting.rst:89
+msgid "Items beginning with a ``-`` are considered list items or plays. Items with the format of ``key: value`` operate as hashes or dictionaries. Ensure you don't have extra or missing ``-`` plays."
+msgstr "``-`` で始まるアイテムは、リストアイテムまたはプレイとみなされます。``key: value`` 形式のアイテムは、ハッシュまたはディクショナリーとして機能します。``-`` プレイが多すぎたり、抜けていたりしないように確認してください。"
+
+#: ../../source/troubleshooting.rst:93
+msgid "Problems when running a job"
+msgstr "ジョブ実行時に関する問題"
+
+#: ../../source/troubleshooting.rst:98
+msgid "If you are having trouble running a job from a playbook, you should review the playbook YAML file. When importing a playbook, either manually or via a source control mechanism, keep in mind that the host definition is controlled by the controller and should be set to ``hosts: all``."
+msgstr "Playbook からのジョブの実行で問題がある場合は、Playbook の YAML ファイルを確認するようにしてください。ソース管理メカニズムを使用するか手動で Playbook をインポートする際に、コントローラーがホストの定義を管理しており、ホスト定義が ``hosts: all`` に設定されている必要があります。"
+
+#: ../../source/troubleshooting.rst:102
+msgid "Playbooks aren't showing up in the \"Job Template\" drop-down"
+msgstr "Playbook が「ジョブテンプレート」のドロップダウンリストに表示されない"
+
+#: ../../source/troubleshooting.rst:108
+msgid "If your playbooks are not showing up in the Job Template drop-down list, here are a few things you can check:"
+msgstr "Playbook がジョブテンプレートのドロップダウンリストに表示されない場合は、以下に記載の内容を複数確認してください。"
+
+#: ../../source/troubleshooting.rst:110
+msgid "Make sure that the playbook is valid YML and can be parsed by Ansible."
+msgstr "Playbook が有効な YML で、Ansible で解析できることを確認してください。"
+
+#: ../../source/troubleshooting.rst:111
+msgid "Make sure the permissions and ownership of the project path (/var/lib/awx/projects) is set up so that the \"awx\" system user can view the files. You can run this command to change the ownership:"
+msgstr "\"awx\" ユーザーにファイルが表示されるように、プロジェクトパス (/var/lib/awx/projects) が設定されていることを確認してください。以下のコマンドを実行して所有者を変更できます。"
+
+#: ../../source/troubleshooting.rst:119
+msgid "Playbook stays in pending"
+msgstr "Playbook が保留状態で止まる"
+
+#: ../../source/troubleshooting.rst:123
+msgid "If you are attempting to run a playbook Job and it stays in the \"Pending\" state indefinitely, try the following:"
+msgstr "Playbook のジョブの実行を試行して、「保留中で」止まる場合、以下を試行してください。"
+
+#: ../../source/troubleshooting.rst:125
+msgid "Ensure all supervisor services are running via ``supervisorctl status``."
+msgstr "すべてのスパーバイザーサービスが ``supervisorctl status`` 経由で実行されていることを確認します。"
+
+#: ../../source/troubleshooting.rst:126
+msgid "Check to ensure that the ``/var/`` partition has more than 1 GB of space available. Jobs will not complete with insufficient space on the ``/var/`` partition."
+msgstr "``/var/`` のパーティションに 1 GB 以上の空き容量があることを確認します。``/var/`` パーティションに十分な容量がない場合にはジョブは完了しません。"
+
+#: ../../source/troubleshooting.rst:127
+msgid "Run ``automation-controller-service restart`` on the controller server."
+msgstr "コントローラーサーバーで ``automation-controller-service restart`` を実行します。"
+
+#: ../../source/troubleshooting.rst:130
+msgid "If you continue to have problems, run ``sosreport`` as root on the controller server, then file a `support request`_ with the result."
+msgstr "問題が継続する場合には、コントローラーサーバーで root として ``sosreport`` を実行してから、その結果を添付して `support request`_ をしてください。"
+
+#: ../../source/troubleshooting.rst:136
+msgid "Cancel a controller job"
+msgstr "コントローラージョブをキャンセルします。"
+
+#: ../../source/troubleshooting.rst:140
+msgid "When issuing a ``cancel`` request on a currently running controller job, the controller issues a ``SIGINT`` to the ``ansible-playbook`` process. While this causes Ansible to stop dispatching new tasks and exit, in many cases, module tasks that were already dispatched to remote hosts will run to completion. This behavior is similar to pressing ``Ctrl-C`` during a command-line Ansible run."
+msgstr "実行中のコントローラージョブに ``cancel`` 要求を発行すると、コントローラーは ``ansible-playbook`` プロセスに ``SIGINT`` を発行します。多くの場合にはこの要求で Ansible は新規タスクのディスパッチを停止して終了しますが、すでにディスパッチされたモジュールタスクは完了するまで実行されます。この動作は、Ansible のコマンドラインを実行中に ``Ctrl-C`` を押す操作とよく似ています。"
+
+#: ../../source/troubleshooting.rst:142
+msgid "With respect to software dependencies, if a running job is canceled, the job is essentially removed but the dependencies will remain."
+msgstr "ソフトウェアの依存関係に関しては、実行中のジョブがキャンセルされた場合、そのジョブは基本的には削除されますが、依存関係は残ります。"
+
+#: ../../source/troubleshooting.rst:147
+msgid "Reusing an external database causes installations to fail"
+msgstr "外部のデータベースを再利用するとインストールに失敗する"
+
+#: ../../source/troubleshooting.rst:151
+msgid "Instances have been reported where reusing the external DB during subsequent installation of nodes causes installation failures."
+msgstr "2 回目以降のノードのインストール中に外部 DB を再利用するとインストールが失敗してしまう件がインスタンスで報告されています。"
+
+#: ../../source/troubleshooting.rst:153
+msgid "For example, say that you performed a clustered installation. Next, say that you needed to do this again and performed a second clustered installation reusing the same external database, only this subsequent installation failed."
+msgstr "たとえば、クラスターインストールを実行して、もう一度インストールし直し、同じ外部データベースを再利用して 2 つ目の HA インストールを実行したとします。その場合に、この 2 回目のインストールのみが失敗します。"
+
+#: ../../source/troubleshooting.rst:155
+msgid "When setting up an external database which has been used in a prior installation, the database used for the clustered node must be manually cleared before any additional installations can succeed."
+msgstr "以前のインストールで使用した外部データベースを設定する場合は、追加のインストールを正常に完了できるように、クラスターノードで使用するデータベースを手動で消去する必要があります。"
+
+#: ../../../common/source/isolation_variables.rst:2
+msgid "|At| uses container technology to isolate jobs from each other. By default, only the current project is exposed to the container running a job template."
+msgstr "|At| は、コンテナテクノロジーを使用して、ジョブを相互に分離します。デフォルトでは、現在のプロジェクトのみがジョブテンプレートを実行しているコンテナに公開されます。"
+
+#: ../../../common/source/isolation_variables.rst:4
+msgid "You may find that you need to customize your playbook runs to expose additional directories. To fine tune your usage of job isolation, there are certain variables that can be set."
+msgstr "追加のディレクトリーを公開するには、Playbook の実行をカスタマイズする必要がある場合があります。ジョブ分離の使用法を微調整するために、設定できる特定の変数があります。"
+
+#: ../../../common/source/isolation_variables.rst:6
+msgid "By default, |at| will use the system's ``tmp`` directory (``/tmp`` by default) as its staging area. This can be changed in the **Job Execution Path** field of the Jobs settings screen, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "デフォルトでは、|at| はシステムの ``tmp`` ディレクトリー (デフォルトは ``/tmp``) をステージング領域として使用します。これは、ジョブ設定画面の **Job Execution Path (ジョブの実行パス)** フィールドから、または ``/api/v2/settings/jobs`` の REST API で以下を変更できます。"
+
+#: ../../../common/source/isolation_variables.rst:8
+msgid "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+msgstr "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+
+#: ../../../common/source/isolation_variables.rst:10
+msgid "If there are any additional directories that should specifically be exposed from the host to the container that playbooks run in, you can specify those in the **Paths to Expose to Isolated Jobs** field of the Jobs setting scren, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "ホストから Playbook が実行するコンテナーに具体的に公開する必要のある追加のディレクトリーがある場合は、ジョブ設定画面の **Paths to Expose to Isolated Jobs (分離されたジョブに公開するパス)** フィールド、または ``/api/v2/settings/jobs`` のREST API で指定できます。"
+
+#: ../../../common/source/isolation_variables.rst:13
+msgid "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/isolation_variables.rst:16
+msgid "The primary file you may want to add to ``AWX_ISOLATION_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "Playbook が ``/var/lib/awx/.ssh`` で定義した鍵や設定を使用する必要がある場合には、このファイルを主要ファイルとして、``AWX_ISOLATION_SHOW_PATHS`` に追加してください。"
+
+#: ../../../common/source/isolation_variables.rst:18
+msgid "The above fields can be found in the Jobs Settings window:"
+msgstr "上記のフィールドは、ジョブ設定ウィンドウで確認できます。"
+
+#: ../../source/troubleshooting.rst:161
+msgid "Private EC2 VPC Instances in the controller Inventory"
+msgstr "コントローラーインベントリーのプライベート EC2 VPC インスタンス"
+
+#: ../../source/troubleshooting.rst:168
+msgid "By default, the controller only shows instances in a VPC that have an Elastic IP (EIP) associated with them. To see all of your VPC instances, perform the following steps:"
+msgstr "デフォルトでは、コントローラーは Elastic IP (EIP) が関連付けられた VPC にだけインスタンスを表示します。VPC インスタンスをすべて表示するには、以下の手順を実行してください。"
+
+#: ../../source/troubleshooting.rst:170
+msgid "In the controller interface, select your inventory."
+msgstr "コントローラーのインターフェースでインベントリーを選択します。"
+
+#: ../../source/troubleshooting.rst:171
+msgid "Click on the group that has the Source set to AWS, and click on the Source tab."
+msgstr "ソースが AWS に設定されたグループをクリックして、ソースタブをクリックします。"
+
+#: ../../source/troubleshooting.rst:172
+msgid "In the ``Source Variables`` box, enter:"
+msgstr "``Source Variables`` ボックスに以下を入力します。"
+
+#: ../../source/troubleshooting.rst:178
+msgid "Next, save and then trigger an update of the group. Once this is done, you should be able to see all of your VPC instances."
+msgstr "次に、保存して、グループの更新をトリガーします。これが完了したら、すべての VPC インスタンスを表示できるはずです。"
+
+#: ../../source/troubleshooting.rst:182
+msgid "The controller must be running inside the VPC with access to those instances if you want to configure them."
+msgstr "インスタンスを設定する場合には、コントローラーが、インスタンスへのアクセス権がある VPC 内で実行している必要があります。"
+
+#: ../../source/troubleshooting.rst:187
+msgid "Troubleshooting \"Error: provided hosts list is empty\""
+msgstr "\"Error: provided hosts list is empty\" のトラブルシューティング"
+
+#: ../../source/troubleshooting.rst:193
+msgid "If you receive the message \"Skipping: No Hosts Matched\" when you are trying to run a playbook through the controller, here are a few things to check:"
+msgstr "コントローラーで Playbook を実行しようとしたときに「Skipping: No Hosts Matched」のメッセージが表示された場合は、以下のように確認する点が複数あります。"
+
+#: ../../source/troubleshooting.rst:195
+msgid "Make sure that your hosts declaration line in your playbook matches the name of your group/host in inventory exactly (these are case sensitive)."
+msgstr "Playbook のホスト宣言の行がインベントリーのグループ/ホストと完全に一致しているようにしてください (大文字、小文字の区別があります)。"
+
+#: ../../source/troubleshooting.rst:196
+msgid "If it does match and you are using Ansible Core 2.0 or later, check your group names for spaces and modify them to use underscores or no spaces to ensure that the groups can be recognized."
+msgstr "これらが一致しておらず、Ansible Core 2.0 以降を使用している場合には、グループ名にスペースが含まれていないかを確認し、アンダースコアに変更するか、スペースを消して、グループが認識されるようにします。"
+
+#: ../../source/troubleshooting.rst:197
+msgid "Make sure that if you have specified a Limit in the Job Template that it is a valid limit value and still matches something in your inventory. The Limit field takes a pattern argument, described here: http://docs.ansible.com/intro_patterns.html"
+msgstr "ジョブテンプレートに制限を指定している場合に有効な制限値であるかを確認し、インベントリーに含まれるものと一致するかをチェックします。http://docs.ansible.com/intro_patterns.html で説明されているように、制限フィールドには、パターン引数を使用できます。"
+
+#: ../../source/troubleshooting.rst:199
+msgid "Please file a support ticket if you still run into issues after checking these options."
+msgstr "これらのオプションを確認した後にも問題が継続する場合には、サポートチケットを起票してください。"
+

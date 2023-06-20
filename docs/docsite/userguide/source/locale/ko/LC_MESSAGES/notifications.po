@@ -1,0 +1,744 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/notifications.rst:4
+msgid "Notifications"
+msgstr "알림"
+
+#: ../../source/notifications.rst:13
+msgid "A :term:`Notification Template` is an instance of a :term:`Notification` type (Email, Slack, Webhook, etc.) with a name, description, and a defined configuration."
+msgstr ":term:`Notification Template`은 이름, 설명, 정의된 구성이 포함된 :term:`Notification` 유형(이메일, Slack, Webhook 등) 인스턴스입니다."
+
+#: ../../source/notifications.rst:15
+msgid "For example:"
+msgstr "예를 들어 다음과 같습니다."
+
+#: ../../source/notifications.rst:17
+msgid "A username, password, server, and recipients are needed for an Email notification template"
+msgstr "이메일 알림 템플릿에는 사용자 이름, 암호, 서버, 수신자가 필요합니다."
+
+#: ../../source/notifications.rst:18
+msgid "The token and a list of channels are needed for a Slack notification template"
+msgstr "Slack 알림 템플릿에 토큰 및 채널 목록이 필요합니다."
+
+#: ../../source/notifications.rst:19
+msgid "The URL and Headers are needed for a Webhook notification template"
+msgstr "Webhook 알림 템플릿에 URL 및 헤더가 필요합니다."
+
+#: ../../source/notifications.rst:21
+msgid "A Notification is a manifestation of the notification template; for example, when a job fails, a notification is sent using the configuration defined by the notification template."
+msgstr "알림은 알림 템플릿을 나타냅니다(예: 작업 실패 시 알림 템플릿에서 정의한 구성을 사용하여 알림이 전송됨)."
+
+#: ../../source/notifications.rst:23
+msgid "At a high level, the typical flow for the notification system works as follows:"
+msgstr "알림 시스템의 일반적인 흐름은 대략 다음과 같이 작동합니다."
+
+#: ../../source/notifications.rst:25
+msgid "A user creates a notification template to the REST API at the ``/api/v2/notification_templates`` endpoint (either through the API or through the UI)."
+msgstr "사용자가 (API 또는 UI를 통해) ``/api/v2/notification_templates`` 끝점에서 REST API에 대한 알림 템플릿을 생성합니다."
+
+#: ../../source/notifications.rst:26
+msgid "A user assigns the notification template to any of the various objects that support it (all variants of job templates as well as organizations and projects) and at the appropriate trigger level for which they want the notification (started, success, or error). For example a user may wish to assign a particular notification template to trigger when Job Template 1 fails. In which case, they will associate the notification template with the job template at ``/api/v2/job_templates/n/notification_templates_error`` API endpoint."
+msgstr "사용자가 알림 템플릿을 지원하는 다양한 오브젝트(조직 및 프로젝트뿐만 아니라 모든 작업 템플릿 변형)와 알림을 원하는 적절한 트리거 수준(시작됨, 성공 또는 오류)에 알림 템플릿을 할당합니다. 예를 들어, 사용자가 작업 템플릿 1이 실패할 때 트리거할 특정 알림 템플릿을 할당하려고 할 수 있습니다. 이 경우 알림 템플릿을 ``/api/v2/job_templates/n/notification_templates_error`` API 끝점의 작업 템플릿과 연결합니다."
+
+#: ../../source/notifications.rst:27
+msgid "You can set notifications on job start, not just job end. Users and teams are also able to define their own notifications that can be attached to arbitrary jobs."
+msgstr "작업 종료뿐만 아니라 작업 시작에 대한 알림도 설정할 수 있습니다. 또한 사용자와 팀은 임의의 작업에 연결할 수 있는 자체 알림을 정의할 수 있습니다."
+
+#: ../../source/notifications.rst:31
+msgid "Notification Hierarchy"
+msgstr "알림 계층 구조"
+
+#: ../../source/notifications.rst:36
+msgid "Notification templates assigned at certain levels will inherit templates defined on parent objects as such:"
+msgstr "특정 수준에 할당된 알림 템플릿은 다음과 같이 상위 오브젝트에 정의된 템플릿을 상속합니다."
+
+#: ../../source/notifications.rst:38
+msgid "Job Templates will use notification templates defined on it as well as inheriting notification templates from the Project used by the Job Template and from the Organization that it is listed under (via the Project)."
+msgstr "작업 템플릿은 작업 템플릿에 정의된 알림 템플릿을 사용하고, 작업 템플릿에서 사용하는 프로젝트 및 해당 템플릿이 속한 조직에서 (프로젝트를 통해) 알림 템플릿을 상속합니다."
+
+#: ../../source/notifications.rst:39
+msgid "Project Updates will use notification templates defined on the project and will inherit notification templates from the Organization associated with it"
+msgstr "프로젝트 업데이트에서는 프로젝트에 정의된 알림 템플릿을 사용하고, 연결된 조직에서 알림 템플릿을 상속합니다."
+
+#: ../../source/notifications.rst:40
+msgid "Inventory Updates will use notification templates defined on the Organization that it is listed under"
+msgstr "인벤토리 업데이트에서는 인벤토리가 속한 조직에 정의된 알림 템플릿을 사용합니다."
+
+#: ../../source/notifications.rst:41
+msgid "Ad-hoc commands will use notification templates defined on the Organization that the inventory is associated with"
+msgstr "임시 명령에서는 인벤토리가 연결된 조직에 정의된 알림 템플릿을 사용합니다."
+
+#: ../../source/notifications.rst:44
+msgid "Workflow"
+msgstr "워크플로우"
+
+#: ../../source/notifications.rst:49
+msgid "When a job succeeds or fails, the error or success handler will pull a list of relevant notification templates using the procedure defined above. It will then create a Notification object for each one containing relevant details about the job and then sends it to the destination (email addresses, slack channel(s), sms numbers, etc). These Notification objects are available as related resources on job types (jobs, inventory updates, project updates), and also at ``/api/v2/notifications``. You may also see what notifications have been sent from a notification templates by examining its related resources."
+msgstr "작업이 성공 또는 실패하면 오류 또는 성공 처리기에서 위에 정의된 절차를 통해 관련 알림 템플릿 목록을 가져옵니다. 그런 다음 각각 작업에 대한 관련 세부 정보가 포함된 알림 오브젝트를 생성하여 대상(이메일 주소, Slack 채널, SMS 번호 등)으로 보냅니다. 이러한 알림 오브젝트는 작업 유형(작업, 인벤토리 업데이트, 프로젝트 업데이트)에서 관련 리소스로 사용할 수 있으며 ``/api/v2/notifications``에서도 사용할 수 있습니다. 관련 리소스를 검사하여 알림 템플릿에서 보낸 알림을 확인할 수도 있습니다."
+
+#: ../../source/notifications.rst:51
+msgid "If a notification fails, it will not impact the job associated to it or cause it to fail. The status of the notification can be viewed at its detail endpoint (``/api/v2/notifications/<n>``)."
+msgstr "알림이 실패하면 연결된 작업에 영향을 미치지 않거나 실패합니다. 알림 상태는 세부 정보 끝점(``/api/v2/notifications/<n>``)에서 확인할 수 있습니다."
+
+#: ../../source/notifications.rst:57
+msgid "Create a Notification Template"
+msgstr "알림 템플릿 생성"
+
+#: ../../source/notifications.rst:64
+msgid "To create a Notification Template:"
+msgstr "알림 템플릿을 생성하려면 다음을 수행합니다."
+
+#: ../../source/notifications.rst:66
+msgid "Click **Notifications** from the left navigation bar."
+msgstr "왼쪽 탐색 모음에서 **알림**을 클릭합니다."
+
+#: ../../source/notifications.rst:68
+msgid "Click the **Add** button."
+msgstr "**추가** 버튼을 클릭합니다."
+
+#: ../../source/notifications.rst:72
+msgid "Enter the name of the notification and a description in their respective fields, and specify the organization (required) it belongs to."
+msgstr "해당 필드에 알림 이름과 설명을 입력하고 알림이 속하는 조직(필수)을 지정합니다."
+
+#: ../../source/notifications.rst:74
+msgid "Choose a type of notification from the **Type** drop-down menu. Refer to the subsequent sections for additional information."
+msgstr "**유형** 드롭다운 메뉴에서 알림 유형을 선택합니다. 자세한 내용은 다음 섹션을 참조하십시오."
+
+#: ../../source/notifications.rst:76
+msgid "Once all required information is complete, click **Save** to add the notification."
+msgstr "필요한 모든 정보가 완료되면 **저장**을 클릭하여 알림을 추가합니다."
+
+#: ../../source/notifications.rst:82
+msgid "Notification Types"
+msgstr "알림 유형"
+
+#: ../../source/notifications.rst:96
+msgid "Notification types supported with |at|:"
+msgstr "|at|에서 지원되는 알림 유형은 다음과 같습니다."
+
+#: ../../source/notifications.rst:101
+msgid "Each of these have their own configuration and behavioral semantics and testing them may need to be approached in different ways. Additionally, you can customize each type of notification down to a specific detail, or a set of criteria to trigger a notification. See :ref:`ug_custom_notifications` for more detail on configuring custom notifications. The following sections will give as much detail as possible on each type of notification."
+msgstr "이들 각각에는 고유한 구성과 동작 의미 체계가 있으며, 테스트하는 데 서로 다른 접근 방식이 필요할 수 있습니다. 또한 각 유형의 알림을 특정 세부 정보 또는 알림을 트리거하는 일련의 기준으로 사용자 지정할 수 있습니다. 사용자 정의 알림을 구성하는 방법에 대한 자세한 내용은 :ref:`ug_custom_notifications`을 참조하십시오. 다음 섹션에서는 각 알림 유형에 대해 가능한 한 자세히 설명합니다."
+
+#: ../../source/notifications.rst:105
+msgid "Email"
+msgstr "이메일"
+
+#: ../../source/notifications.rst:107
+msgid "The email notification type supports a wide variety of SMTP servers and has support for TLS/SSL connections."
+msgstr "이메일 알림 유형은 다양한 SMTP 서버를 지원하며 TLS/SSL 연결을 지원합니다."
+
+#: ../../source/notifications.rst:109
+msgid "You must provide the following details to setup an email notification:"
+msgstr "이메일 알림을 설정하려면 다음 세부 정보를 제공해야 합니다."
+
+#: ../../source/notifications.rst:111
+msgid "Host"
+msgstr "호스트"
+
+#: ../../source/notifications.rst:112
+msgid "Recipient list"
+msgstr "수신자 목록"
+
+#: ../../source/notifications.rst:113
+msgid "Sender email"
+msgstr "보낸 사람 이메일"
+
+#: ../../source/notifications.rst:114
+msgid "Port"
+msgstr "포트"
+
+#: ../../source/notifications.rst:115
+msgid "Timeout (in seconds): allows you to specify up to 120 seconds, the length of time |at| may attempt connecting to the email server before giving up."
+msgstr "시간 초과(초): |at|에서 포기하기 전에 이메일 서버에 연결을 시도할 수 있는 시간으로, 최대 120초까지 지정할 수 있습니다."
+
+#: ../../source/notifications.rst:120
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../source/notifications.rst:122
+msgid "Grafana is a fairly straightforward integration. First, create an API Key in the `Grafana system`_ (this is the token that is given to |at|)."
+msgstr "Grafana는 매우 간단한 통합입니다. 먼저 `Grafana system`_에 API 키를 생성합니다. 이는 |at|에 제공된 토큰입니다."
+
+#: ../../source/notifications.rst:126
+msgid "You must provide the following details to setup a Grafana notification:"
+msgstr "Grafana 알림을 설정하려면 다음 세부 정보를 제공해야 합니다."
+
+#: ../../source/notifications.rst:128
+msgid "Grafana URL: The URL of the Grafana API service, generally ``http://yourcompany.grafana.com``."
+msgstr "Grafana URL: Grafana API 서비스의 URL, 일반적으로 ``http://yourcompany.grafana.com``입니다."
+
+#: ../../source/notifications.rst:129
+msgid "Grafana API Key: The user must first create an API Key in the Grafana system (this is the token that is given to |at|)."
+msgstr "Grafana API 키: 사용자가 Grafana 시스템에서 먼저 API 키를 생성해야 합니다. 이는 |at|에 제공된 토큰입니다."
+
+#: ../../source/notifications.rst:131
+msgid "The other options of note are:"
+msgstr "참고할 다른 옵션은 다음과 같습니다."
+
+#: ../../source/notifications.rst:133
+msgid "ID of the Dashboard: When you created an API Key for the Grafana account, you can set up a dashboard with its own unique ID."
+msgstr "대시보드 ID: Grafana 계정의 API 키를 생성한 경우 고유 ID를 사용하여 대시보드를 설정할 수 있습니다."
+
+#: ../../source/notifications.rst:134
+msgid "ID of the Panel: If you added panels and graphs to your Grafana interface, you can specify its ID here."
+msgstr "패널 ID: Grafana 인터페이스에 패널과 그래프를 추가한 경우 여기에서 ID를 지정할 수 있습니다."
+
+#: ../../source/notifications.rst:135
+msgid "Tags for the Annotation: Enter keywords that help identify the type(s) of events(s) of the notification you are configuring."
+msgstr "주석 태그: 구성 중인 알림의 이벤트 유형을 식별하는 데 도움이 되는 키워드를 입력합니다."
+
+#: ../../source/notifications.rst:136
+msgid "Disable SSL Verification: SSL verification is on by default, but you can choose to turn off verification the authenticity of the target's certificate. Environments that use internal or private CA's should select this option to disable verification."
+msgstr "SSL 확인 비활성화: SSL 확인은 기본적으로 켜져 있지만 대상 인증서의 진위 확인 기능을 끄도록 선택할 수 있습니다. 내부 또는 개인 CA를 사용하는 환경에서는 확인을 비활성화도록 이 옵션을 선택해야 합니다."
+
+#: ../../source/notifications.rst:142
+msgid "IRC"
+msgstr "IRC"
+
+#: ../../source/notifications.rst:144
+msgid "The IRC notification takes the form of an IRC bot that will connect, deliver its messages to channel(s) or individual user(s), and then disconnect. The notification bot also supports SSL authentication. The bot does not currently support Nickserv identification. If a channel or user does not exist or is not on-line then the Notification will not fail; the failure scenario is reserved specifically for connectivity."
+msgstr "IRC 알림은 채널 또는 개별 사용자를 연결하고 이들에게 메시지를 전달한 다음 연결을 끊는 IRC 봇의 형태를 취합니다. 알림 봇은 SSL 인증도 지원합니다. 봇은 현재 닉네임 식별 기능을 지원하지 않습니다. 채널 또는 사용자가 존재하지 않거나 온라인에 없는 경우에도 알림은 실패하지 않습니다. 연결을 위한 실패 시나리오가 특별히 예약되어 있습니다."
+
+#: ../../source/notifications.rst:146
+msgid "Connectivity information is straightforward:"
+msgstr "연결 정보는 간단합니다."
+
+#: ../../source/notifications.rst:148
+msgid "IRC Server Password (optional): IRC servers can require a password to connect. If the server does not require one, leave blank"
+msgstr "IRC 서버 암호(선택 사항): IRC 서버에 연결하려면 암호가 필요할 수 있습니다. 서버에 필요하지 않는 경우 공백으로 둡니다."
+
+#: ../../source/notifications.rst:149
+msgid "IRC Server Port: The IRC server Port"
+msgstr "IRC 서버 포트: IRC 서버 포트입니다."
+
+#: ../../source/notifications.rst:150
+msgid "IRC Server Address: The host name or address of the IRC server"
+msgstr "IRC 서버 주소: IRC 서버의 호스트 이름 또는 주소입니다."
+
+#: ../../source/notifications.rst:151
+msgid "IRC Nick: The bot's nickname once it connects to the server"
+msgstr "IRC 닉네임: 서버에 연결된 봇의 닉네임입니다."
+
+#: ../../source/notifications.rst:152
+msgid "Destination Channels or Users: A list of users and/or channels to which to send the notification."
+msgstr "대상 채널 또는 사용자: 알림을 보낼 사용자 및/또는 채널 목록입니다."
+
+#: ../../source/notifications.rst:153
+msgid "SSL Connection (optional): Should the bot use SSL when connecting"
+msgstr "SSL 연결(선택 사항): 연결할 때 봇에서 SSL을 사용해야 합니다."
+
+#: ../../source/notifications.rst:159
+msgid "Mattermost"
+msgstr "가장 중요"
+
+#: ../../source/notifications.rst:161
+msgid "The Mattermost notification type provides a simple interface to Mattermost's messaging and collaboration workspace. The parameters that can be specified are:"
+msgstr "Mattermost 알림 유형은 Mattermost의 메시징 및 협업 작업 공간에 간단한 인터페이스를 제공합니다. 지정할 수 있는 매개변수는 다음과 같습니다."
+
+#: ../../source/notifications.rst:163
+#: ../../source/notifications.rst:191
+msgid "Target URL (required): The full URL that will be POSTed to"
+msgstr "대상 URL(필수): 게시할 대상의 전체 URL입니다."
+
+#: ../../source/notifications.rst:164
+#: ../../source/notifications.rst:192
+#: ../../source/notifications.rst:247
+msgid "Username"
+msgstr "사용자 이름"
+
+#: ../../source/notifications.rst:165
+msgid "Channel"
+msgstr "채널"
+
+#: ../../source/notifications.rst:166
+#: ../../source/notifications.rst:193
+msgid "Icon URL: specifies the icon to display for this notification"
+msgstr "아이콘 URL: 이 알림에 표시할 아이콘을 지정합니다."
+
+#: ../../source/notifications.rst:167
+#: ../../source/notifications.rst:194
+msgid "Disable SSL Verification: Turns off verification of the authenticity of the target's certificate. Environments that use internal or private CA's should select this option to disable verification."
+msgstr "SSL 확인 비활성화: 대상 인증서의 진위 확인 기능을 끕니다. 내부 또는 개인 CA를 사용하는 환경에서는 확인을 비활성화도록 이 옵션을 선택해야 합니다."
+
+#: ../../source/notifications.rst:173
+msgid "PagerDuty"
+msgstr "PagerDuty"
+
+#: ../../source/notifications.rst:175
+msgid "PagerDuty is a fairly straightforward integration. First, create an API Key in the `PagerDuty system`_ (this is the token that is given to |at|) and then create a \"Service\" which provides an \"Integration Key\" that will also be given to |at|. The other required options are:"
+msgstr "PagerDuty는 매우 간단한 통합입니다. 먼저 `PagerDuty system`_에서 API 키(|at|에 제공되는 토큰)를 생성한 다음 |at|에도 제공될 \"통합 키\"를 제공하는 \"서비스\"를 생성합니다. 기타 필수 옵션은 다음과 같습니다."
+
+#: ../../source/notifications.rst:179
+msgid "API Token: The user must first create an API Key in the PagerDuty system (this is the token that is given to |at|)."
+msgstr "API 토큰: 사용자가 PagerDuty 시스템에서 먼저 API 키를 생성해야 합니다. 이는 |at|에 제공된 토큰입니다."
+
+#: ../../source/notifications.rst:180
+msgid "PagerDuty Subdomain: When you sign up for the PagerDuty account, you receive a unique subdomain to communicate with. For instance, if you signed up as \"testuser\", the web dashboard will be at ``testuser.pagerduty.com`` and you will give the API ``testuser`` as the subdomain (not the full domain)."
+msgstr "PagerDuty 하위 도메인: PagerDuty 계정에 등록하면 통신에 사용할 고유한 하위 도메인이 제공됩니다. 예를 들어, \"testuser\"로 등록한 경우 웹 대시보드는 ``testuser.pagerduty.com``에 있으며 하위 도메인으로 API ``testuser``가 제공됩니다(전체 도메인 아님)."
+
+#: ../../source/notifications.rst:181
+msgid "API Service/Integration Key"
+msgstr "API 서비스/통합 키"
+
+#: ../../source/notifications.rst:182
+msgid "Client Identifier: This will be sent along with the alert content to the pagerduty service to help identify the service that is using the api key/service. This is helpful if multiple integrations are using the same API key and service."
+msgstr "클라이언트 ID: API 키/서비스를 사용 중인 서비스를 확인할 수 있도록 PagerDuty 서비스에 경고 내용과 함께 전송됩니다. 여러 통합에서 동일한 API 키 및 서비스를 사용하는 경우 유용합니다."
+
+#: ../../source/notifications.rst:187
+msgid "Rocket.Chat"
+msgstr "Rocket.Chat"
+
+#: ../../source/notifications.rst:189
+msgid "The Rocket.Chat notification type provides an interface to Rocket.Chat's collaboration and communication platform. The parameters that can be specified are:"
+msgstr "Rocket.Chat 알림 유형은 Ramet.Chat의 협업 및 통신 플랫폼에 대한 인터페이스를 제공합니다. 지정할 수 있는 매개변수는 다음과 같습니다."
+
+#: ../../source/notifications.rst:200
+msgid "Slack"
+msgstr "Slack"
+
+#: ../../source/notifications.rst:202
+msgid "Slack, a collaborative team communication and messaging tool, is pretty easy to configure."
+msgstr "Slack, 협업 팀 통신, 메시징 툴은 매우 쉽게 구성할 수 있습니다."
+
+#: ../../source/notifications.rst:204
+msgid "You must supply the following to setup Slack notifications:"
+msgstr "Slack 알림을 설정하려면 다음을 제공해야 합니다."
+
+#: ../../source/notifications.rst:206
+msgid "A Slack app (refer to the `Basic App Setup <https://api.slack.com/authentication/basics>`_ page of the Slack documentation for information on how to create one)"
+msgstr "Slack 앱(생성 방법에 대한 정보는 Slack 문서의 `Basic App Setup <https://api.slack.com/authentication/basics>`_ 페이지 참조)"
+
+#: ../../source/notifications.rst:208
+msgid "A token (refer to `Enabling Interactions with Bots <https://api.slack.com/bot-users>`_ and specific details on bot tokens on the `Token Types <https://api.slack.com/authentication/token-types#bot>`_ documentation page)"
+msgstr "토큰(`Token Types <https://api.slack.com/authentication/token-types#bot>`_ 문서 페이지에서 `Enabling Interactions with Bots <https://api.slack.com/bot-users>` 및 봇 토큰에 대한 특정 세부 정보 참조)"
+
+#: ../../source/notifications.rst:210
+msgid "Once you have a bot/app set up, you must navigate to \"Your Apps\", click on the newly-created app and then go to **Add features and functionality**, which allows you to configure incoming webhooks, bots, and permissions; as well as **Install your app to your workspace**."
+msgstr "봇/앱을 설정한 후에는 \"내 앱\"으로 이동하여 새로 생성된 앱을 클릭하고 들어오는 Webhook, 봇, 권한을 구성할 수 있는 **기능 추가**로 이동해야 합니다. 그리고 **작업 공간에 앱을 설치**합니다."
+
+#: ../../source/notifications.rst:212
+msgid "You must also invite the notification bot to join the channel(s) in question in Slack. Note that private messages are not supported."
+msgstr "또한 Slack에서 해당 채널에 가입하려면 알림 봇을 초대해야 합니다. 개인 메시지는 지원되지 않습니다."
+
+#: ../../source/notifications.rst:218
+msgid "Twilio"
+msgstr "Twilio"
+
+#: ../../source/notifications.rst:220
+msgid "Twilio service is an Voice and SMS automation service. Once you are signed in, you must create a phone number from which the message will be sent. You can then define a \"Messaging Service\" under Programmable SMS and associate the number you created before with it."
+msgstr "Twilio 서비스는 음성 및 SMS 자동화 서비스입니다. 로그인하면 메시지를 전송할 전화번호를 생성해야 합니다. 그러면 프로그램 가능한 SMS에 \"메시징 서비스\"를 정의하고 이전에 생성한 번호와 연결할 수 있습니다."
+
+#: ../../source/notifications.rst:222
+msgid "Note that you may need to verify this number or some other information before you are allowed to use it to send to any numbers. The Messaging Service does not need a status callback URL nor does it need the ability to Process inbound messages."
+msgstr "이 번호를 사용하여 임의의 번호로 전송하려면 먼저 이 번호 또는 몇 가지 기타 정보를 확인해야 할 수 있습니다. 메시징 서비스에는 상태 콜백 URL이 필요하지 않으며 인바운드 메시지를 처리하는 기능도 필요하지 않습니다."
+
+#: ../../source/notifications.rst:224
+msgid "Under your individual (or sub) account settings, you will have API credentials. Twilio uses two credentials to determine which account an API request is coming from. The “Account SID”, which acts as a username, and the “Auth Token” which acts as a password."
+msgstr "개별 (또는 하위) 계정 설정에 API 인증 정보가 있습니다. Twilio는 두 가지 인증 정보를 사용하여 API 요청을 보내는 계정을 확인합니다. 즉, 사용자 이름 역할을 하는 ‘계정 SID’와 암호 역할을 하는 ‘인증 토큰’입니다."
+
+#: ../../source/notifications.rst:226
+msgid "To setup Twilio, provide the following details:"
+msgstr "Twilio를 설정하려면 다음 세부 정보를 제공합니다."
+
+#: ../../source/notifications.rst:228
+msgid "Account Token"
+msgstr "계정 토큰"
+
+#: ../../source/notifications.rst:229
+msgid "Source Phone Number (this is the number associated with the messaging service above and must be given in the form of \"+15556667777\")"
+msgstr "원본 전화번호(위 메시징 서비스와 연결된 번호이며 \"+15556667777\" 형식으로 제공되어야 함)"
+
+#: ../../source/notifications.rst:230
+msgid "Destination SMS number (this will be the list of numbers to receive the SMS and should be the 10-digit phone number)"
+msgstr "대상 SMS 번호(SMS를 수신할 번호 목록이며 10자리 전화번호여야 함)"
+
+#: ../../source/notifications.rst:231
+msgid "Account SID"
+msgstr "계정 SID"
+
+#: ../../source/notifications.rst:237
+msgid "Webhook"
+msgstr "Webhook"
+
+#: ../../source/notifications.rst:239
+msgid "The webhook notification type provides a simple interface to sending POSTs to a predefined web service. |at| will POST to this address using application/json content type with the data payload containing all relevant details in json format. Some web service APIs expect HTTP requests to be in a certain format with certain fields. You can configure more of the webhook notification in the following ways:"
+msgstr "Webhook 알림 유형은 사전 정의된 웹 서비스에 POST를 보내는 간단한 인터페이스를 제공합니다. |at|는 json 형식의 모든 관련 세부 정보가 포함된 데이터 페이로드와 함께 애플리케이션/json 콘텐츠 유형을 사용하여 이 주소에 POST합니다. 일부 웹 서비스 API에서는 HTTP 요청이 특정 필드가 포함된 특정 형식이어야 합니다. 다음과 같은 방법으로 Webhook 알림을 추가로 구성할 수 있습니다."
+
+#: ../../source/notifications.rst:241
+msgid "configure the HTTP method (using **POST** or **PUT**)"
+msgstr "HTTP 메서드 구성(**POST** 또는 **PUT** 사용)"
+
+#: ../../source/notifications.rst:242
+msgid "body of the outgoing request"
+msgstr "발신 요청 본문"
+
+#: ../../source/notifications.rst:243
+msgid "configure authentication (using basic auth)"
+msgstr "인증 구성(기본 인증 사용)"
+
+#: ../../source/notifications.rst:245
+msgid "The parameters for configuring webhooks are:"
+msgstr "Webhook 구성에 사용되는 매개변수는 다음과 같습니다."
+
+#: ../../source/notifications.rst:248
+msgid "Basic Auth Password"
+msgstr "기본 인증 암호"
+
+#: ../../source/notifications.rst:249
+msgid "Target URL (required): The full URL to which the webhook notification will be PUT or POSTed."
+msgstr "대상 URL(필수): Webhook 알림이 PUT 또는 POST될 전체 URL입니다."
+
+#: ../../source/notifications.rst:250
+msgid "Disable SSL Verification: SSL verification is on by default, but you can choose to turn off verification of the authenticity of the target’s certificate. Environments that use internal or private CA’s should select this option to disable verification."
+msgstr "SSL 확인 비활성화: SSL 확인은 기본적으로 켜져 있지만 대상 인증서의 진위 확인 기능을 끄도록 선택할 수 있습니다. 내부 또는 개인 CA를 사용하는 환경에서는 확인을 비활성화도록 이 옵션을 선택해야 합니다."
+
+#: ../../source/notifications.rst:251
+msgid "HTTP Headers (required): Headers in JSON form where the keys and values are strings. For example, ``{\"Authentication\": \"988881adc9fc3655077dc2d4d757d480b5ea0e11\", \"MessageType\": \"Test\"}``"
+msgstr "HTTP 헤더(필수): 키와 값이 문자열인 JSON 형식의 헤더입니다. 예를 들면 ``{\"Authentication\": \"988881adc9fc3655077dc2d4d757d480b5ea0e11\", \"MessageType\": \"Test\"}``입니다."
+
+#: ../../source/notifications.rst:253
+msgid "HTTP Method (required). Select the method for your webhook:"
+msgstr "HTTP 메서드(필수). Webhook의 메서드를 선택합니다."
+
+#: ../../source/notifications.rst:255
+msgid "POST: Creates a new resource. Also acts as a catch-all for operations that do not fit into the other categories. It is likely you need to POST unless you know your webhook service expects a PUT."
+msgstr "POST: 새 리소스를 생성합니다. 또한 다른 카테고리에 맞지 않는 작업에 대해 다양한 역할을 합니다. Webhook 서비스에 PUT이 필요하지 않은 경우 POST를 수행해야 할 수 있습니다."
+
+#: ../../source/notifications.rst:256
+msgid "PUT: Updates a specific resource (by an identifier) or a collection of resources. PUT can also be used to create a specific resource if the resource identifier is known beforehand."
+msgstr "PUT: 특정 리소스(ID별) 또는 리소스 컬렉션을 업데이트합니다. 리소스 ID를 미리 알고 있는 경우 PUT을 사용하여 특정 리소스를 생성할 수도 있습니다."
+
+#: ../../source/notifications.rst:263
+msgid "Webhook payloads"
+msgstr "Webhook 페이로드"
+
+#: ../../source/notifications.rst:265
+msgid "|At| sends by default the following data at the webhook endpoint:"
+msgstr "|At|는 기본적으로 Webhook 끝점에서 다음 데이터를 보냅니다."
+
+#: ../../source/notifications.rst:286
+msgid "An example of a ``started`` notifications via webhook message as it is returned by |at|:"
+msgstr "다음은 Webhook 메시지를 통해 |at|에서 반환하는 ``started`` 알림의 예입니다."
+
+#: ../../source/notifications.rst:296
+msgid "|At| returns by default the following data at the webhook endpoint for a ``success``/``fail`` status:"
+msgstr "|At|는 기본적으로 ``success``/``fail`` 상태에 대해 Webhook 끝점에서 다음 데이터를 반환합니다."
+
+#: ../../source/notifications.rst:317
+msgid "An example of a ``success``/``fail`` notifications via webhook message as it is returned by |at|:"
+msgstr "다음은 Webhook 메시지를 통해 |at|에서 반환하는 ``success``/``fail`` 알림의 예입니다."
+
+#: ../../source/notifications.rst:331
+msgid "Create custom notifications"
+msgstr "사용자 정의 알림 생성"
+
+#: ../../source/notifications.rst:333
+msgid "You can :ref:`customize the text content <ir_notifications_reference>` of each of the :ref:`ug_notifications_types` by enabling the **Customize Messages** portion at the bottom of the notifications form using the toggle button."
+msgstr "토글 버튼을 사용하여 알림 양식 하단의 **메시지 사용자 정의** 부분을 활성화하면 각 :ref:`ug_notifications_types`의 :ref:`customize the text content <ir_notifications_reference>`를 수행할 수 있습니다."
+
+#: ../../source/notifications.rst:337
+msgid "You can provide a custom message for various job events:"
+msgstr "다양한 작업 이벤트에 대해 사용자 정의 메시지를 제공할 수 있습니다."
+
+#: ../../source/notifications.rst:339
+msgid "Start"
+msgstr "시작"
+
+#: ../../source/notifications.rst:340
+msgid "Success"
+msgstr "성공"
+
+#: ../../source/notifications.rst:341
+msgid "Error"
+msgstr "오류"
+
+#: ../../source/notifications.rst:342
+msgid "Workflow approved"
+msgstr "워크플로우 승인됨"
+
+#: ../../source/notifications.rst:343
+msgid "Workflow denied"
+msgstr "워크플로우 거부됨"
+
+#: ../../source/notifications.rst:344
+msgid "Workflow running"
+msgstr "워크플로우 실행 중"
+
+#: ../../source/notifications.rst:345
+msgid "Workflow timed out"
+msgstr "워크플로우 시간 초과"
+
+#: ../../source/notifications.rst:347
+msgid "The message forms vary depending on the type of notification you are configuring. For example, messages for email and PagerDuty notifications have the appearance of a typical email form with a subject and body, in which case, |at| displays the fields as **Message** and **Message Body**. Other notification types only expect a **Message** for each type of event:"
+msgstr "메시지 양식은 구성 중인 알림 유형에 따라 다릅니다. 예를 들어, 이메일 및 PagerDuty 알림에 대한 메시지에는 제목과 본문이 있는 일반적인 이메일 양식으로 표시됩니다. 이 경우 |at|에 해당 필드가 **메시지** 및 **메시지 본문**으로 표시됩니다. 기타 알림 유형에는 각 이벤트 유형에 대한 **메시지**만 있으면 됩니다."
+
+#: ../../source/notifications.rst:351
+msgid "The **Message** fields are pre-populated with a template containing a top-level variable, ``job`` coupled with an attribute, such as ``id`` or ``name``, for example. Templates are enclosed in curly braces and may draw from a fixed set of fields provided by |at|, as shown in the pre-populated **Messages** fields."
+msgstr "**메시지** 필드는 ``id`` 또는 ``name``과 같은 특성과 함께 최상위 변수 ``job``이 포함된 템플릿으로 미리 채워집니다. 템플릿은 중괄호로 묶여 있으며 미리 채워진 **메시지** 필드에 표시된 것처럼 |at|에서 제공하는 고정 필드 세트에서 가져올 수 있습니다."
+
+#: ../../source/notifications.rst:355
+msgid "This pre-populated field suggests commonly displayed messages to a recipient who is notified of an event. You can, however, customize these messages with different criteria by adding your own attribute(s) for the job as needed. Custom notification messages are rendered using Jinja - the same templating engine used by Ansible playbooks."
+msgstr "미리 채워진 이 필드에서는 이벤트 알림을 받는 수신자에게 일반적으로 표시되는 메시지를 제안합니다. 그러나 필요에 따라 작업에 대한 고유한 특성을 추가하여 다른 기준으로 이러한 메시지를 사용자 정의할 수 있습니다. 사용자 정의 알림 메시지는 Ansible 플레이북에서 사용하는 것과 동일한 템플릿 작성 엔진인 Jinja를 사용하여 렌더링됩니다."
+
+#: ../../source/notifications.rst:357
+msgid "Messages and message bodies have different types of content:"
+msgstr "메시지 및 메시지 본문에는 다음과 같이 다양한 유형의 콘텐츠가 있습니다."
+
+#: ../../source/notifications.rst:359
+msgid "messages will always just be strings (one-liners only; new lines are not allowed)"
+msgstr "메시지는 항상 문자열입니다(단일 행 사용, 새 줄은 허용되지 않음)"
+
+#: ../../source/notifications.rst:361
+msgid "message bodies will be either a dictionary or block of text:"
+msgstr "메시지 본문은 사전 또는 텍스트 블록입니다."
+
+#: ../../source/notifications.rst:363
+msgid "the message body for *Webhooks* and *PagerDuty* uses dictionary definitions. The default message body for these is ``{{ job_metadata }}``, you can either leave that as is or provide your own dictionary"
+msgstr "*Webhooks* 및 *PagerDuty*의 메시지 본문에서는 사전 정의를 사용합니다. 이들에 대한 기본 메시지 본문은 ``{{ job_metadata }}``이며 그대로 유지하거나 고유한 사전을 제공할 수 있습니다."
+
+#: ../../source/notifications.rst:365
+msgid "the message body for email uses a block of text or a multi-line string. The default message body is:"
+msgstr "이메일의 메시지 본문에는 텍스트 블록이나 여러 행의 문자열이 사용됩니다. 기본 메시지 본문은 다음과 같습니다."
+
+#: ../../source/notifications.rst:371
+msgid "You can tweak this text (leaving ``{{ job_metadata }}`` in, or drop ``{{ job_metadata }}`` altogether). Since the body is a block of text, it can really be any string you want."
+msgstr "이 텍스트는 조정할 수 있습니다(``{{ job_metadata }}``를 그대로 두거나 ``{{ job_metadata }}``를 모두 삭제). 본문이 텍스트 블록이므로 실제로 원하는 모든 문자열이 가능합니다."
+
+#: ../../source/notifications.rst:373
+msgid "``{{ job_metadata }}`` gets rendered as a dictionary containing fields that describe the job being executed. In all cases, ``{{ job_metadata }}`` will include the following fields:"
+msgstr "``{{ job_metadata }}``는 실행 중인 작업을 설명하는 필드를 포함하는 사전으로 렌더링됩니다. 모든 경우 ``{{ job_metadata }}``에 다음 필드가 포함됩니다."
+
+#: ../../source/notifications.rst:375
+msgid "``id``"
+msgstr "``id``"
+
+#: ../../source/notifications.rst:376
+msgid "``name``"
+msgstr "``name``"
+
+#: ../../source/notifications.rst:377
+msgid "``url``"
+msgstr "``url``"
+
+#: ../../source/notifications.rst:378
+msgid "``created_by``"
+msgstr "``created_by``"
+
+#: ../../source/notifications.rst:379
+msgid "``started``"
+msgstr "``started``"
+
+#: ../../source/notifications.rst:380
+msgid "``finished``"
+msgstr "``finished``"
+
+#: ../../source/notifications.rst:381
+msgid "``status``"
+msgstr "``status``"
+
+#: ../../source/notifications.rst:382
+msgid "``traceback``"
+msgstr "``traceback``"
+
+#: ../../source/notifications.rst:386
+msgid "At the present time, you cannot query individual fields within ``{{ job_metadata }}``. When using ``{{ job_metadata }}`` in a notification template, all data will be returned."
+msgstr "현재는 ``{{ job_metadata }}`` 내의 개별 필드를 쿼리할 수 없습니다. 알림 템플릿에서 ``{{ job_metadata }}``을 사용하면 모든 데이터가 반환됩니다."
+
+#: ../../source/notifications.rst:389
+#: ../../source/notifications.rst:442
+msgid "The resulting dictionary will look something like this:"
+msgstr "생성된 사전은 다음과 같습니다."
+
+#: ../../source/notifications.rst:403
+msgid "If ``{{ job_metadata }}`` is rendered in a job, it will include the following additional fields:"
+msgstr "작업에서 ``{{ job_metadata }}``가 렌더링되면 다음과 같은 추가 필드가 포함됩니다."
+
+#: ../../source/notifications.rst:405
+msgid "``inventory``"
+msgstr "``inventory``"
+
+#: ../../source/notifications.rst:406
+msgid "``project``"
+msgstr "``project``"
+
+#: ../../source/notifications.rst:407
+msgid "``playbook``"
+msgstr "``playbook``"
+
+#: ../../source/notifications.rst:408
+msgid "``credential``"
+msgstr "``credential``"
+
+#: ../../source/notifications.rst:409
+msgid "``limit``"
+msgstr "``limit``"
+
+#: ../../source/notifications.rst:410
+msgid "``extra_vars``"
+msgstr "``extra_vars``"
+
+#: ../../source/notifications.rst:411
+msgid "``hosts``"
+msgstr "``hosts``"
+
+#: ../../source/notifications.rst:415
+msgid "The resulting dictionary will look something like:"
+msgstr "생성된 사전은 다음과 같습니다."
+
+#: ../../source/notifications.rst:436
+msgid "If ``{{ job_metadata }}`` is rendered in a workflow job, it will include the following additional field:"
+msgstr "워크플로우 작업에서 ``{{ job_metadata }}``가 렌더링되면 다음과 같은 추가 필드가 포함됩니다."
+
+#: ../../source/notifications.rst:438
+msgid "``body`` (this will enumerate all the nodes in the workflow job and includes a description of the job associated with each node)"
+msgstr "``body``(워크플로우 작업의 모든 노드가 나열되고 각 노드와 연결된 작업에 대한 설명이 포함됨)"
+
+#: ../../source/notifications.rst:462
+msgid "For more detail, refer to `Using variables with Jinja2`_."
+msgstr "자세한 내용은 `Using variables with Jinja2`_을 참조하십시오."
+
+#: ../../source/notifications.rst:467
+msgid "|At| requires valid syntax in order to retrieve the correct data to display the messages. For a list of supported attributes and the proper syntax construction, refer to the :ref:`ir_notifications_reference` section of this guide."
+msgstr "|At|에서 메시지를 표시하기 위해 올바른 데이터를 검색하려면 유효한 구문이 필요합니다. 지원되는 특성 목록과 적절한 구문 구성은 이 가이드의 :ref:`ir_notifications_reference` 섹션을 참조하십시오."
+
+#: ../../source/notifications.rst:470
+msgid "If you create a notification template that uses invalid syntax or references unusable fields, an error message displays indicating the nature of the error. If you delete a notification’s custom message, the default message is shown in its place."
+msgstr "잘못된 구문을 사용하거나 사용할 수 없는 필드를 참조하는 알림 템플릿을 생성하면 오류의 종류를 나타내는 오류 메시지가 표시됩니다. 알림의 사용자 정의 메시지를 삭제하면 기본 메시지가 해당 위치에 표시됩니다."
+
+#: ../../source/notifications.rst:475
+msgid "If you save the notifications template without editing the custom message (or edit and revert back to the default values), the **Details** screen assumes the defaults and will not display the custom message tables. If you edit and save any of the values, the entire table displays in the **Details** screen."
+msgstr "사용자 정의 메시지를 편집하지 않고 알림 템플릿을 저장하면(또는 편집한 후 기본값으로 되돌리기) **세부 정보** 화면에서 기본값을 가정하고 사용자 정의 메시지 테이블을 표시하지 않습니다. 값을 편집하고 저장하면 전체 테이블이 **세부 정보** 화면에 표시됩니다."
+
+#: ../../source/notifications.rst:483
+msgid "Enable and Disable Notifications"
+msgstr "알림 활성화 및 비활성화"
+
+#: ../../source/notifications.rst:485
+msgid "You can select which notifications to notify you when a specific job starts, in addition to notifying you on success or failure at the end of the job run. Some behaviors to keep in mind:"
+msgstr "작업 실행이 끝날 때 성공 또는 실패를 알리는 것 외에도 특정 작업이 시작될 때 알리는 알림을 선택할 수 있습니다. 다음은 고려해야 할 몇 가지 동작입니다."
+
+#: ../../source/notifications.rst:487
+msgid "if a workflow template (WFJT) has notification on start enabled, and a job template (JT) within that workflow also has notification on start enabled, you will receive notifications for both"
+msgstr "워크플로우 템플릿(WFJT)에 시작 시 알림이 활성화되어 있고 해당 워크플로우 내의 작업 템플릿(JT)에도 시작 시 알림이 활성화되어 있는 경우 두 가지 모두에 대한 알림을 받게 됩니다."
+
+#: ../../source/notifications.rst:488
+msgid "you can enable notifications to run on many JTs within a WFJT"
+msgstr "WFJT 내의 여러 JT에서 실행되도록 알림을 활성화할 수 있습니다."
+
+#: ../../source/notifications.rst:489
+msgid "you can enable notifications to run on a sliced job template (SJT) start and each slice will generate a notification"
+msgstr "분할된 작업 템플릿(SJT) 시작 시 실행되도록 알림을 활성화할 수 있으며 각 슬라이스에서 알림을 생성합니다."
+
+#: ../../source/notifications.rst:490
+msgid "when you enable a notification to run on job start, and that notification gets deleted, the JT continues to run, but will result in an error message"
+msgstr "작업 시작 시 실행되도록 알림을 활성화한 후 해당 알림이 삭제되면 JT는 계속 실행되지만 오류 메시지가 표시됩니다."
+
+#: ../../source/notifications.rst:492
+msgid "You can enable notifications on job start, job success, and job failure, or any combination thereof, from the **Notifications** tab of the following resources:"
+msgstr "다음 리소스의 **알림** 탭에서 작업 시작, 작업 성공, 작업 실패 또는 이들의 조합에 대한 알림을 활성화할 수 있습니다."
+
+#: ../../source/notifications.rst:494
+msgid "Job Template"
+msgstr "작업 템플릿"
+
+#: ../../source/notifications.rst:495
+msgid "Workflow Template"
+msgstr "워크플로우 템플릿"
+
+#: ../../source/notifications.rst:496
+msgid "Projects (shown in the example below)"
+msgstr "프로젝트(아래 예 참조)"
+
+#: ../../source/notifications.rst:497
+msgid "Inventory Source"
+msgstr "인벤토리 소스"
+
+#: ../../source/notifications.rst:498
+#: ../../source/notifications.rst:554
+msgid "Organizations"
+msgstr "조직"
+
+#: ../../source/notifications.rst:503
+msgid "For workflow templates that have approval nodes, in addition to *Start*, *Success*, and *Failure*, you can enable or disable certain approval-related events:"
+msgstr "승인 노드가 있는 워크플로우 템플릿의 경우 *시작*, *성공*, *실패* 외에도 특정 승인 관련 이벤트를 활성화하거나 비활성화할 수 있습니다."
+
+#: ../../source/notifications.rst:507
+msgid "Refer to :ref:`ug_wf_approval_nodes` for additional detail on working with these types of nodes."
+msgstr "이러한 유형의 노드 작업에 대한 자세한 내용은 :ref:`ug_wf_approval_nodes`를 참조하십시오."
+
+#: ../../source/notifications.rst:511
+msgid "Configure the ``host`` hostname for notifications"
+msgstr "알림을 위한 ``host`` 호스트 이름 구성"
+
+#: ../../source/notifications.rst:516
+msgid "In the :ref:`System Settings <configure_tower_system>`, you can replace the default value in the **Base URL of the service** field with your preferred hostname to change the notification hostname."
+msgstr ":ref:`System Settings <configure_tower_system>`에서 **서비스의 기본 URL** 필드에 있는 선호하는 호스트 이름으로 교체하여 알림 호스트 이름을 변경할 수 있습니다."
+
+#: ../../source/notifications.rst:520
+msgid "Refreshing your license also changes the notification hostname. New installations of |at| should not have to set the hostname for notifications."
+msgstr "라이센스를 새로 고치면 알림 호스트 이름도 변경됩니다. |at|를 새로 설치할 때는 알림 호스트 이름을 설정할 필요가 없습니다."
+
+#: ../../source/notifications.rst:523
+msgid "Reset the ``TOWER_URL_BASE``"
+msgstr "``TOWER_URL_BASE`` 재설정"
+
+#: ../../source/notifications.rst:530
+msgid "The primary way that |at| determines how the base URL (``TOWER_URL_BASE``) is defined is by looking at an incoming request and setting the server address based on that incoming request."
+msgstr "|at|에서 기본 URL(``TOWER_URL_BASE``)을 정의하는 방식을 결정하는 기본 방법은 들어오는 요청을 보고 이 요청을 기반으로 서버 주소를 설정하는 것입니다."
+
+#: ../../source/notifications.rst:532
+msgid "|At| takes settings values from the database first. If no settings values are found, it falls back to using the values from the settings files.  If a user posts a license by navigating to the |at| host's IP adddress, the posted license is written to the settings entry in the database."
+msgstr "|At|는 먼저 데이터베이스에서 설정 값을 가져옵니다. 설정 값이 없는 경우 대신 설정 파일의 값을 사용합니다.  |at| 호스트의 IP 주소로 이동하여 라이센스를 게시하면 게시된 라이센스가 데이터베이스의 설정 항목에 작성됩니다."
+
+#: ../../source/notifications.rst:534
+msgid "To change the ``TOWER_URL_BASE`` if the wrong address has been picked up, navigate to **Miscellaneous System settings** from the Settings menu using the DNS entry you wish to appear in notifications, and re-add your license."
+msgstr "잘못된 주소를 선택한 경우 ``TOWER_URL_BASE``를 변경하려면 알림에 표시할 DNS 항목을 사용하여 설정 메뉴에서 **기타 시스템 설정**으로 이동한 후 라이센스를 다시 추가합니다."
+
+#: ../../source/notifications.rst:539
+msgid "Notifications API"
+msgstr "알림 API"
+
+#: ../../source/notifications.rst:544
+msgid "Use the ``started``, ``success``, or ``error`` endpoints:"
+msgstr "``started``, ``success`` 또는 ``error`` 끝점을 사용합니다."
+
+#: ../../source/notifications.rst:552
+msgid "Additionally, the ``../../../N/notification_templates_started`` endpoints have **GET** and **POST** actions for:"
+msgstr "또한 ``../../../N/notification_templates_started`` 끝점에는 다음에 대한 **GET** 및 **POST** 동작이 있습니다."
+
+#: ../../source/notifications.rst:555
+msgid "Projects"
+msgstr "프로젝트"
+
+#: ../../source/notifications.rst:556
+msgid "Inventory Sources"
+msgstr "인벤토리 소스"
+
+#: ../../source/notifications.rst:557
+msgid "Job Templates"
+msgstr "작업 템플릿"
+
+#: ../../source/notifications.rst:558
+msgid "System Job Templates"
+msgstr "시스템 작업 템플릿"
+
+#: ../../source/notifications.rst:559
+msgid "Workflow Job Templates"
+msgstr "워크플로우 작업 템플릿"
+

@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/postface.rst:3
+msgid "Postface"
+msgstr "후기"
+
+#: ../../source/postface.rst:10
+msgid "Through community efforts, rigorous testing, dedicated engineers, enterprising sales teams, imaginative marketing, and outstanding professional services and support teams, the growing but always impressive group of individuals that make the Ansible-branded products can feel proud in saying:"
+msgstr "커뮤니티 활동, 엄격한 테스트, 전용 엔지니어, 엔터프라이즈 영업 팀, 독창적인 마케팅, 뛰어난 전문 서비스 및 지원 팀을 통해 Ansible 브랜드 제품을 만드는, 성장 중이지만 항상 인상적인 개인 그룹은 자랑스럽게 다음과 같이 말할 수 있습니다."
+
+#: ../../source/postface.rst:12
+msgid "Ansible, |At|, controller CLI, and Ansible Galaxy are all, as Doge would say, \"much approved.\"[1]_"
+msgstr "Doge가 말한 것처럼 Ansible, |At|, 컨트롤러 CLI, Ansible Galaxy는 모두 \"승인\"[1]_되었습니다."
+
+#: ../../source/postface.rst:14
+msgid "|Josie Tested - Doge Approved|"
+msgstr "|Josie Tested - Doge Approved|"
+
+#: ../../source/postface.rst:16
+msgid "Josie Tested - Doge Approved."
+msgstr "Josie 테스트 - Doge 승인"
+
+#: ../../source/postface.rst:22
+msgid "http://knowyourmeme.com/memes/doge"
+msgstr "http://knowyourmeme.com/memes/doge"
+

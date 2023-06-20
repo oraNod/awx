@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/topology_viewer.rst:5
+msgid "Topology Viewer"
+msgstr "토폴로지 뷰어"
+
+#: ../../source/topology_viewer.rst:12
+msgid "The topology viewer is in tech preview and is subject to change in a future release."
+msgstr "토폴로지 뷰어는 기술 프리뷰에 있으며 향후 릴리스에서 변경될 수 있습니다."
+
+#: ../../source/topology_viewer.rst:14
+msgid "The topology viewer allows you to view node type, node health, and specific details about each node if you already have a mesh topology deployed. To learn more about automation mesh, refer to the `Red Hat Ansible Automation Mesh Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh>`_ on `access.redhat.com <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform>`_."
+msgstr "토폴로지 뷰어를 사용하면 메시 토폴로지가 이미 배포된 경우 노드 유형, 노드 상태 및 각 노드에 대한 특정 세부 정보를 볼 수 있습니다. 자동화 메시에 대한 자세한 내용은 `access.redhat.com <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform>`_의 `Red Hat Ansible Automation Mesh Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh>`_를 참조하십시오."
+
+#: ../../source/topology_viewer.rst:17
+msgid "To access the topology viewer from the controller user interface:"
+msgstr "컨트롤러 사용자 인터페이스에서 토폴로지 뷰어에 액세스하려면 다음을 수행합니다."
+
+#: ../../source/topology_viewer.rst:19
+msgid "In the Administration menu from left navigation bar, click **Topology View**."
+msgstr "왼쪽 탐색 모음의 관리 메뉴에서 **토폴로지 보기**를 클릭합니다."
+
+#: ../../source/topology_viewer.rst:21
+msgid "The Topology View opens and displays a graphic representation of how each receptor node links together."
+msgstr "토폴로지 보기가 열리고 각 수신기 노드가 서로 연결되는 방식에 대한 그래픽 보기가 표시됩니다."
+
+#: ../../source/topology_viewer.rst:26
+msgid "To adjust the zoom levels, or manipulate the graphic views, use the control buttons on the upper right-hand corner of the window."
+msgstr "확대/축소 수준을 조정하거나 그래픽 보기를 조작하려면 창의 오른쪽 상단에 있는 컨트롤 버튼을 사용합니다."
+
+#: ../../source/topology_viewer.rst:30
+msgid "You can also click and drag to pan around; and use the scroll wheel on your mouse or trackpad to zoom. The fit-to-screen feature automatically scales the graphic to fit on the screen and repositions it in the center. It is particularly useful when you want to see a large mesh in its entirety."
+msgstr "또한 클릭하여 드래그하여 이동할 수 도 있습니다. 마우스나 트랙패드의 스크롤 휠을 사용하여 확대/축소합니다. 화면 맞춤 기능은 화면에 맞게 그래픽의 크기를 자동으로 조정하고 중앙에 배치합니다. 이는 전체 메시를 보고 싶은 경우 특히 유용합니다."
+
+#: ../../source/topology_viewer.rst:34
+msgid "To reset the view to its default view, click **Reset zoom**."
+msgstr "뷰를 기본 보기로 재설정하려면 **확대/축소 재설정**을 클릭합니다."
+
+#: ../../source/topology_viewer.rst:37
+msgid "Refer to the Legend to the left of the graphic to identify the type of nodes that are represented. See `Control and execution planes <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh#con-automation-mesh-node-types>`_ for more information on each type of node."
+msgstr "표시되는 노드 유형을 확인하려면 그래픽의 왼쪽에 있는 범례를 참조하십시오. 각 노드 유형에 대한 자세한 내용은 `Control and execution planes <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh#con-automation-mesh-node-types>`_을 참조하십시오."
+
+#: ../../source/topology_viewer.rst:42
+msgid "If the Legend is not present, use the toggle on the upper right corner of the window to enable it."
+msgstr "범례가 없으면 창의 오른쪽 상단에 있는 토글을 사용하여 활성화합니다."
+
+#: ../../source/topology_viewer.rst:44
+msgid "The Legend shows the :ref:`node status <node_statuses>` by color, which is indicative of the health of the node. The status of **Error** in the legend encompasses the **Unavailable** state (as displayed in the Instances list view) plus any future error conditions encountered in later versions of the controller. Also depicted in the legend are the link statuses:"
+msgstr "범례에는 노드 상태를 나타내는 색상으로 :ref:`node status <node_statuses>`를 표시합니다. 실현할 수 있는 **오류**의 상태는 **사용할 수 없음** 상태(인스턴스 목록 보기에 표시됨)와 이후 버전의 컨트롤러에서 발생하는 모든 향후 오류 조건을 포함합니다. 범례에는 링크 상태도 표시되어 있습니다."
+
+#: ../../source/topology_viewer.rst:46
+msgid "**Established**: this is a link state that indicates a peer connection between nodes that are either ready, unavailable, or disabled"
+msgstr "**설정됨**: 준비, 사용 불가능 또는 비활성화된 노드 간의 피어 연결을 나타내는 링크 상태입니다."
+
+#: ../../source/topology_viewer.rst:47
+msgid "**Adding**: this is a link state indicating a peer connection between nodes that was selected to be added to the mesh topology"
+msgstr "**추가**: 메시 토폴로지에 선택한 노드 간 피어 연결을 나타내는 링크 상태입니다."
+
+#: ../../source/topology_viewer.rst:48
+msgid "**Removing**: this is a link state indicating a peer connection between nodes that was selected to be removed from the topology"
+msgstr "**제거**: 토폴로지에서 제거하도록 선택한 노드 간 피어 연결을 나타내는 링크 상태입니다."
+
+#: ../../source/topology_viewer.rst:50
+msgid "Hover over a node and the connectors highlight to show its immediate connected nodes (peers) or click on a node to retrieve details about it, such as its hostname, node type, and status."
+msgstr "노드 위로 마우스를 가져가면 즉시 연결된 노드(피어)를 표시하거나 노드를 클릭하여 호스트 이름, 노드 유형 및 상태와 같은 세부 정보를 검색합니다."
+
+#: ../../source/topology_viewer.rst:54
+msgid "Click on the link for instance hostname from the details displayed, and you will be redirected to its Details page that provides more information about that node, most notably for information about an ``Error`` status, as in the example below."
+msgstr "표시된 세부 사항에서 인스턴스 호스트 이름에 대한 링크를 클릭하면 해당 노드에 대한 자세한 정보를 제공하는 세부 정보 페이지로 리디렉션됩니다. 아래 예제와 같이 ``Error`` 상태에 대한 자세한 정보를 제공합니다."
+
+#: ../../source/topology_viewer.rst:62
+msgid "At the bottom of the Details view, you can remove the instance, run a health check on the instance on an as-needed basis, or unassign jobs from the instance. By default, jobs can be assigned to each node. However, you can disable it to exclude the node from having any jobs running on it."
+msgstr "세부 정보 보기 하단에서 인스턴스를 제거하거나 필요에 따라 인스턴스에서 상태 점검을 실행하거나 인스턴스에서 작업을 할당 해제할 수 있습니다. 기본적으로 작업을 각 노드에 할당할 수 있습니다. 그러나 노드에서 실행 중인 작업이 없는 경우 해당 노드를 비활성화하여 제외할 수 있습니다."
+
+#: ../../source/topology_viewer.rst:64
+msgid "For more information on creating new nodes and scaling the mesh, refer to :ref:`ag_instances` in this guide for more detail."
+msgstr "새 노드 생성 및 메시 스케일링에 대한 자세한 내용은 :ref:`ag_instances`을/를 참조하십시오."
+

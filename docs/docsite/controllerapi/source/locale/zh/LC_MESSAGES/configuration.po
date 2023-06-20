@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/configuration.rst:3
+msgid "Configuration API Endpoint"
+msgstr "配置 API 端点"
+
+#: ../../source/configuration.rst:8
+msgid "Site configuration settings and general information."
+msgstr "站点配置设置和常规信息。"
+
+#: ../../source/configuration.rst:41
+msgid "Make a GET request to this resource to retrieve the configuration containing the following fields (some fields may not be visible to all users):"
+msgstr "向此资源发出 GET 请求，以检索包含以下字段的配置（某些字段可能不对所有用户可见）："
+
+#: ../../source/configuration.rst:43
+msgid "``project_base_dir``: Path on the server where projects and playbooks are \\ stored."
+msgstr "``project_base_dir``：项目和 playbook 存储在服务器上的路径。"
+
+#: ../../source/configuration.rst:44
+msgid "``project_local_paths``: List of directories beneath ``project_base_dir`` to use when creating/editing a project."
+msgstr "``project_local_paths``：创建/编辑项目时要使用 ``project_base_dir`` 下的目录列表。"
+
+#: ../../source/configuration.rst:45
+msgid "``time_zone``: The configured time zone for the server."
+msgstr "``time_zone``：配置的服务器时区。"
+
+#: ../../source/configuration.rst:46
+msgid "``license_info``: Information about the current license."
+msgstr "``license_info``：有关当前许可证的信息。"
+
+#: ../../source/configuration.rst:47
+msgid "``version``: Version of Ansible Tower package installed."
+msgstr "``version``：已安装 Ansible Tower 软件包的版本。"
+
+#: ../../source/configuration.rst:48
+msgid "``eula``: The current End-User License Agreement"
+msgstr "``eula``：当前最终用户许可证协议"
+
+#: ../../source/configuration.rst:50
+msgid "(New in Ansible Tower 2.0.0) Make a POST request to this resource as a super user to install or update the existing license. The license data itself can be POSTed as a normal json data structure."
+msgstr "（Ansible Tower 2.0.0 中的新功能）以超级用户的身份向此资源发布 POST 请求，以安装或更新现有的许可证。许可证数据本身可以作为常规 json 数据结构发布。"
+
+#: ../../source/configuration.rst:52
+msgid "(New in Ansible Tower 2.1.1) The POST must include a eula_accepted boolean element indicating acceptance of the End-User License Agreement."
+msgstr "（Ansible Tower 2.1.1 中的新功能）POST 必须包含 eula_accepted 布尔项，表示接受最终用户许可证协议。"
+
+#: ../../source/configuration.rst:55
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/configuration.rst:60
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

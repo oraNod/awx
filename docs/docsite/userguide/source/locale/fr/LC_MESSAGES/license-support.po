@@ -1,0 +1,335 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../../common/source/lic-feat-support.rst:2
+msgid "Tower Licensing, Updates, and Support"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:7
+msgid ""
+"Ansible Tower by Red Hat (\"**Ansible Tower**\") is a proprietary "
+"software product provided via an annual subscription entered into between"
+" you and Red Hat, Inc. (\"**Red Hat**\")."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:9
+msgid ""
+"Ansible is an open source software project and is licensed under the GNU "
+"General Public License version 3, as detailed in the Ansible source code:"
+" https://github.com/ansible/ansible/blob/devel/COPYING"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:12
+msgid "Support"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:17
+msgid ""
+"Red Hat offers support for paid **Enterprise: Standard** and "
+"**Enterprise: Premium** Subscription customers seeking help with the "
+"Ansible Tower product."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:19
+msgid ""
+"If you or your company has paid for Ansible Tower, you can contact the "
+"support team at https://access.redhat.com. To better understand the "
+"levels of support which match your Ansible Tower Subscription, refer to "
+":ref:`subscription-types`."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:21
+msgid ""
+"If you are experiencing Ansible software issues, you should reach out to "
+"the \"ansible-devel\" mailing list or file an issue on the Github project"
+" page at https://github.com/ansible/ansible/issues/."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:23
+msgid ""
+"All of Ansible’s community and OSS info can be found here: "
+"https://docs.ansible.com/ansible/community.html"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:27
+msgid "Ansible Playbook Support"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:29
+msgid ""
+"For customers with a paid Enterprise: Standard or Enterprise: Premium "
+"Ansible Tower Subscription, Red Hat offers Ansible Playbook support "
+"[#f1]_. Playbook support consists of support for:"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:31
+msgid "Runtime execution problems for Playbooks run via Tower"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:32
+msgid "Assistance with Playbook errors and tracebacks"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:33
+msgid "Limited best practice guidance in Ansible use from the Ansible Experts"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:35
+msgid "Playbook support does not consist of:"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:37
+msgid "Enhancements and fixes for Ansible modules and the Ansible engine"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:38
+msgid "Assistance with the creation of Playbooks from anew"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:39
+msgid "Long-term maintenance of a specific Ansible or Ansible Tower version"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:42
+msgid "Notes:"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:43
+msgid ""
+"Playbook support is available for customers using the current or previous"
+" minor release of Ansible. For example, if the current version of Ansible"
+" is 2.2, Red Hat provides Ansible Playbook support for versions 2.2 and "
+"2.1. In the event an Ansible Playbook workaround is not available, and an"
+" Ansible software correction is required, a version update will be "
+"required."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:50
+msgid "Trial / Evaluation"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:58
+msgid ""
+"While a license is required for Ansible Tower to run, there is no fee for"
+" managing up to 10 hosts. Additionally, trial licenses are available for "
+"exploring Ansible Tower with a larger number of hosts."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:60
+msgid ""
+"Trial licenses for Ansible Tower are available at: "
+"http://ansible.com/license"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:61
+msgid ""
+"To acquire a license for additional Managed Nodes, visit: "
+"http://www.ansible.com/pricing/"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:62
+msgid ""
+"Ansible Playbook Support is not included in a trial license or during an "
+"evaluation of the Tower Software."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:68
+msgid "Subscription Types"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:76
+msgid ""
+"Ansible Tower is provided at various levels of support and number of "
+"machines as an annual Subscription."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:82
+msgid "Self-Support"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:79
+msgid "Manage smaller environments (up to 250 Managed Nodes)"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:80
+#: ../../../common/source/lic-feat-support.rst:87
+#: ../../../common/source/lic-feat-support.rst:95
+msgid "Maintenance and upgrades included"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:81
+msgid "No support or SLA included"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:90
+msgid "Enterprise: Standard (F.K.A. “Enterprise”)"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:85
+msgid "Manage any size environment"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:86
+msgid "Enterprise 8x5 support and SLA"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:88
+#: ../../../common/source/lic-feat-support.rst:96
+msgid ""
+"Review the SLA at: "
+"https://access.redhat.com/support/offerings/production/sla"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:89
+#: ../../../common/source/lic-feat-support.rst:97
+msgid ""
+"Review the Red Hat Support Severity Level Definitions at: "
+"https://access.redhat.com/support/policy/severity"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:98
+msgid "Enterprise: Premium (F.K.A. “Premium Enterprise”)"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:93
+msgid "Manage any size environment, including mission-critical environments"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:94
+msgid "Premium 24x7 support and SLA"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:100
+msgid ""
+"All Subscription levels include regular updates and releases of Ansible "
+"Tower."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:102
+msgid ""
+"For more information, contact Ansible via the Red Hat Customer portal at "
+"https://access.redhat.com/ or at http://www.ansible.com/pricing/."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:106
+msgid "Node Counting in Licenses"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:110
+msgid ""
+"The Tower license defines the number of Managed Nodes that can be managed"
+" by Ansible Tower. A typical license will say ‘License Count: 500’, which"
+" sets the maximum number of Managed Nodes at 500."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:112
+msgid ""
+"Ansible Tower counts Managed Nodes by the number of hosts in inventory. "
+"If more Managed Nodes are in the Ansible Tower inventory than are "
+"supported by the license, you will be unable to start any Jobs in Ansible"
+" Tower. If a dynamic inventory sync causes Ansible Tower to exceed the "
+"Managed Node count specified in the license, the dynamic inventory sync "
+"will fail."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:114
+msgid ""
+"If you have multiple hosts in inventory that have the same name, such as "
+"\"webserver1\", they will be counted for licensing purposes as a single "
+"node. Note that this differs from the ‘Hosts’ count in Tower’s dashboard,"
+" which counts hosts in separate inventories separately."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:118
+msgid "License Features"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:123
+msgid ""
+"The following list of features are available for all new Enterprise: "
+"Standard or Enterprise: Premium Subscriptions:"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:125
+msgid "Workflows (*added in |at| 3.1.0*)"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:126
+msgid "Clustering in Tower (*added in |at| 3.1.0*)"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:127
+msgid "Custom re-branding for login (*added in Ansible Tower 2.4.0*)"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:128
+msgid "SAML and RADIUS Authentication Support (*added in Ansible Tower 2.4.0*)"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:129
+msgid "Multi-Organization Support"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:130
+msgid "Activity Streams"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:131
+msgid "Surveys"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:132
+msgid "LDAP Support"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:133
+msgid "Active/Passive Redundancy"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:134
+msgid "System Tracking (*added in Ansible Tower 2.2.0*)"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:137
+msgid ""
+"Enterprise: Standard or Enterprise: Premium license users with versions "
+"of |at| prior to 2.2 must import a new license file to enable System "
+"Tracking."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:141
+msgid "Tower Component Licenses"
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:149
+msgid ""
+"To view the license information for the components included within "
+"Ansible Tower, refer to ``/usr/share/doc/ansible-tower-<version>/README``"
+" where ``<version>`` refers to the version of Ansible Tower you have "
+"installed."
+msgstr ""
+
+#: ../../../common/source/lic-feat-support.rst:151
+msgid ""
+"To view a specific license, refer to ``/usr/share/doc/ansible-"
+"tower-<version>/*.txt``, where ``*`` is replaced by the license file name"
+" to which you are referring."
+msgstr ""
+

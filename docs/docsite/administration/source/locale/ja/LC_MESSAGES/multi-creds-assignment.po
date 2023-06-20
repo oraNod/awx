@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/multi-creds-assignment.rst:4
+msgid "Multi-Credential Assignment"
+msgstr "複数の認証情報の割り当て"
+
+#: ../../source/multi-creds-assignment.rst:11
+msgid "|at| provides support for assigning zero or more credentials to a job template."
+msgstr "|at| は、ジョブテンプレートに対して 0 個以上の認証情報の割り当てをサポートするようになりました。"
+
+#: ../../source/multi-creds-assignment.rst:14
+msgid "Background"
+msgstr "背景"
+
+#: ../../source/multi-creds-assignment.rst:16
+msgid "Prior to |at| 3.3, job templates had a certain set of requirements with respect to credentials:"
+msgstr "|at| 3.3 以前のバージョンでは、ジョブテンプレートには認証情報に関して特定の要件がありました。"
+
+#: ../../source/multi-creds-assignment.rst:18
+msgid "All job templates (and jobs) were required to have exactly *one* Machine/SSH or Vault credential (or one of both)."
+msgstr "ジョブテンプレート (およびジョブ) は、マシン/SSH または Vault 認証情報 (またはいずれか) *1 つ* だけ指定する必要がありました。"
+
+#: ../../source/multi-creds-assignment.rst:19
+msgid "All job templates (and jobs) could have zero or more \"extra\" credentials."
+msgstr "全ジョブテンプレート (およびジョブ) は、0 以上の \"extra\" 認証情報を指定できていました。"
+
+#: ../../source/multi-creds-assignment.rst:20
+msgid "Extra credentials represented \"Cloud\" and \"Network\" credentials that could be used to provide authentication to external services via environment variables (e.g., ``AWS_ACCESS_KEY_ID``)."
+msgstr "Extra 認証情報は、環境変数経由で外部サービスへの認証に使用可能な \"Cloud\" および \"Network\" の認証情報を表していました (例: ``AWS_ACCESS_KEY_ID``)。"
+
+#: ../../source/multi-creds-assignment.rst:22
+msgid "This model required a variety of disjoint interfaces for specifying credentials on a job template and it lacked the ability associate multiple Vault credentials with a playbook run, a use case supported by Ansible core from Ansible 2.4 onwards."
+msgstr "このモデルは、ジョブテンプレートで認証情報を指定するために、さまざまなインターフェース要素が必要で、Playbook 事項で複数の Vault 認証情報を関連付ける機能にかけていました。また、ユースケースは、Ansible 2.4 以降の Ansible コアでサポートされていました。"
+
+#: ../../source/multi-creds-assignment.rst:24
+msgid "This model also poses a stumbling block for certain playbook execution workflows, such as having to attach a \"dummy\" Machine/SSH credential to the job template simply to satisfy the requirement."
+msgstr "また、このモデルは、要件を満たすためだけに「ダミー」のマシン/SSH 認証情報をジョブテンプレートにアタッチする必要があるなど、特定の Playbook 実行のワークフローに対する障害となっていました。"
+
+#: ../../source/multi-creds-assignment.rst:27
+msgid "Important Changes"
+msgstr "重要な変更点"
+
+#: ../../source/multi-creds-assignment.rst:29
+msgid "Job templates now have a single interface for credential assignment. From the API endpoint:"
+msgstr "ジョブテンプレートには、認証情報の割り当て用にインターフェースが 1 つ用意されています。API エンドポイントから以下を行います。"
+
+#: ../../source/multi-creds-assignment.rst:31
+msgid "``GET /api/v2/job_templates/N/credentials/``"
+msgstr "``GET /api/v2/job_templates/N/credentials/``"
+
+#: ../../source/multi-creds-assignment.rst:33
+msgid "You can associate and disassociate credentials using ``POST`` requests, similar to the behavior in the deprecated ``extra_credentials`` endpoint:"
+msgstr "``POST`` 要求を使用して認証情報の関連付けや関連付け解除ができます。これは非推奨になった ``extra_credentials`` エンドポイントの動作に似ています。"
+
+#: ../../source/multi-creds-assignment.rst:41
+msgid "Under this model, a job template is considered valid even when there are *no* credentials assigned to it. This model also provides users the ability to assign multiple Vault credentials to a job template."
+msgstr "このモデルでは、認証情報が割り当てられて *いない* 場合でも、ジョブテンプレートは有効とみなされていました。このモデルは、ジョブテンプレートに複数の Vault 認証情報を割り当てることができます。"
+
+#: ../../source/multi-creds-assignment.rst:45
+msgid "Launch Time Considerations"
+msgstr "起動時の考慮事項"
+
+#: ../../source/multi-creds-assignment.rst:47
+msgid "Prior to |at| 3.3, job templates had a configurable attribute, ``ask_credential_on_launch``. This value was used at launch time to determine which missing credential values were necessary for launch - this was primarily used as a way to specify a Machine/SSH credential to satisfy the minimum credential requirement."
+msgstr "|at| 3.3 以前では、ジョブテンプレートは ``ask_credential_on_launch`` の設定可能な属性がありました。起動時にこの値を使用して、起動時に、認証情報の中で不足している値はどれかを判断するために使用します。これは、マシン/SSH の認証情報を指定して認証情報の最小要件を満たす手段として主に使用されていました。"
+
+#: ../../source/multi-creds-assignment.rst:50
+msgid "Under the new unified credential list model, this attribute still exists, but it is no longer \"requiring\" a credential.  Now when ``ask_credential_on_launch`` is ``True``, it signifies that if desired, you may specify a list of credentials at launch time to override those defined on the job template. For example:"
+msgstr "新しい統合型の認証情報リストモデルでは、この属性は存在しますが、認証情報は \"必要なくなりました\"。``ask_credential_on_launch`` が ``True`` の場合は、起動時に認証情報一覧を指定して、ジョブテンプレートに定義している内容を上書きできるという意味です。以下に例を示します。"
+
+#: ../../source/multi-creds-assignment.rst:56
+msgid "If ``ask_credential_on_launch`` is ``False``, it signifies that custom credentials provided in the ``POST /api/v2/job_templates/N/launch/`` will be ignored."
+msgstr "``ask_credential_on_launch`` が ``False`` の場合には、``POST /api/v2/job_templates/N/launch/`` で指定のカスタムの認証情報は無視されます。"
+
+#: ../../source/multi-creds-assignment.rst:58
+msgid "Under this model, the only purpose for ``ask_credential_on_launch`` is to signal API clients to prompt the user for (optional) changes at launch time."
+msgstr "このモデルでは、``ask_credential_on_launch`` は、起動時にユーザーに (任意で) 変更があるかどうかをプロンプトを表示して、API クライアントにシグナルを送るためだけのものです。"
+
+#: ../../source/multi-creds-assignment.rst:64
+msgid "Multi-Vault Credentials"
+msgstr "複数の Vault 認証情報"
+
+#: ../../source/multi-creds-assignment.rst:66
+msgid "As it possible to assign multiple credentials to a job, you can specify multiple Vault credentials to decrypt when your job template runs. This functionality mirrors the support for `multiple vault passwords for a playbook run <http://docs.ansible.com/ansible/latest/vault.html#vault-ids-and-multiple-vault-passwords>`_ in Ansible 2.4 and later."
+msgstr "複数の認証情報を 1 つのジョブに割り当てることができるようになり、複数の Vault 認証情報を指定して、ジョブテンプレートの実行時に復号化できます。この機能は、Ansible 2.4 以降の「`multiple vault passwords for a playbook run <http://docs.ansible.com/ansible/latest/vault.html#vault-ids-and-multiple-vault-passwords>`_」のサポートをミラーリングしています。"
+
+#: ../../source/multi-creds-assignment.rst:68
+msgid "Vault credentials now have an optional field, ``vault_id``, which is analogous to the ``--vault-id`` argument to ``ansible-playbook``. To run a playbook which makes use of multiple vault passwords:"
+msgstr "Vault の認証情報には ``vault_id`` の任意のフィールドが追加されました。これは、``ansible-playbook`` に対する ``--vault-id`` の引数と同じです。複数の Vault パスワードを使用する Playbook を実行するには以下を実行します。"
+
+#: ../../source/multi-creds-assignment.rst:70
+msgid "Create a Vault credential in the controller for each vault password; specify the Vault ID as a field on the credential and input the password (which will be encrypted and stored)."
+msgstr "Vault パスワードごとにコントローラーで Vault の認証情報を作成します。認証情報のフィールドとして Vault ID を指定して、パスワードを入力します (パスワードは暗号化され保存されます)。"
+
+#: ../../source/multi-creds-assignment.rst:72
+msgid "Assign multiple vault credentials to the job template via the new credentials endpoint:"
+msgstr "新しい認証情報のエンドポイントを使用してジョブテンプレートに複数の Vault 認証情報を割り当てます。"
+
+#: ../../source/multi-creds-assignment.rst:83
+msgid "Alternatively, you can perform the same assignment in the controller User Interface in the *Create Credential* page:"
+msgstr "または、コントローラーのユーザーインターフェースの *認証情報の作成* 画面で同じ割り当てを行うことができます。"
+
+#: ../../source/multi-creds-assignment.rst:87
+msgid "In the above example, the credential created specifies the secret to be used by its Vault Identifier (\"first\") and password pair. When this credential is used in a Job Template, as in the example below, it will only decrypt the secret associated with the \"first\" Vault ID:"
+msgstr "上記の例では、作成した認証情報は、Vault Identifier (「最初」) とパスワードのペアが使用するシークレットを指定します。この認証情報が以下の例のように、ジョブテンプレートで使用される場合には、「最初の」Vault ID に関連付けられたシークレットのみを復号化します。"
+
+#: ../../source/multi-creds-assignment.rst:91
+msgid "If you have a playbook that is setup the traditional way with all the secrets in one big file without distinction, then leave the **Vault Identifier** field blank when setting up the Vault credential:"
+msgstr "従来の方法で、1 つの大きいファイルに区別なく、すべてのシークレットを指定して Playbook を設定した場合には、Vault 認証情報の設定時には、**Vault Identifier** フィールドは空白のままにしてください。"
+
+#: ../../source/multi-creds-assignment.rst:97
+msgid "Prompted Vault Credentials"
+msgstr "プロンプト付きの Vault 認証情報"
+
+#: ../../source/multi-creds-assignment.rst:99
+msgid "Passwords for Vault credentials that are marked with \"Prompt on launch\", the launch endpoint of any related Job Templates will communicate necessary Vault passwords via the ``passwords_needed_to_start`` key:"
+msgstr "Vault 認証情報のパスワードに \"起動プロンプト\" とマークが付けられている場合には、関連のジョブテンプレートの起動エンドポイントが ``passwords_needed_to_start`` キーを使用して必要な Vault パスワードと通信します。"
+
+#: ../../source/multi-creds-assignment.rst:111
+msgid "``X`` and ``Y`` in the above example are primary keys of the associated Vault credentials."
+msgstr "上記の例の ``X`` と ``Y`` は、関連の Vault 認証情報の主要キーです。"
+
+#: ../../source/multi-creds-assignment.rst:125
+msgid "Linked credentials"
+msgstr "認証情報のリンク"
+
+#: ../../source/multi-creds-assignment.rst:127
+msgid "Instead of uploading sensitive credential information into the controller, you can link credential fields to external systems and using them to run your playbooks. Refer to the :ref:`Secret Management System <userguide:ug_credential_plugins>` section of the |atu|."
+msgstr "コントローラーに機密な認証情報をアップロードする代わりに、認証情報フィールドを外部システムにリンクして、これを使用して Playbook を実行できます。詳細は、|atu| の「:ref:`Secret Management System <userguide:ug_credential_plugins>`」のセクションを参照してください。"
+

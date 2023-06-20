@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/session_limits.rst:4
+msgid "Working with Session Limits"
+msgstr "セッション制限の使用"
+
+#: ../../source/session_limits.rst:11
+msgid "Setting a session limit allows administrators to limit the number of simultaneous sessions per user or per IP address."
+msgstr "セッション制限を設定すると、管理者はユーザーまたは IP アドレス毎に同時に使用することのできるセッション数を制限できます。"
+
+#: ../../source/session_limits.rst:13
+msgid "In |at|, a session is created for each browser that a user uses to log in, which forces the user to log out any extra sessions after they exceed the administrator-defined maximum."
+msgstr "|at| では、ユーザーがログインに使用するブラウザーごとにセッションが作成され、管理者が定義した最大数を超えると、セッションから強制的にログアウトされます。"
+
+#: ../../source/session_limits.rst:15
+msgid "Session limits may be important, depending on your particular setup. For example, perhaps you only want a single user on your system with a single login per device (where the user could log in on his work laptop, phone, or home computer). In such a case, you would want to create a session limit equal to 1 (one). If the user logs in on his laptop, for example, then logs in using his phone, his laptop session expires (times out) and only the login on the phone persists."
+msgstr "特定の設定では、セッション制限が重要となる場合があります。たとえば、(職場のラップトップ、電話、または自宅のコンピューターなどからログインできる場合など) デバイスに拘らず 1 回のログインで、システムにログインできるユーザーは 1 名のみに設定する必要がある場合があります。このような場合には、セッション制限を 1 に設定します。ユーザーが自分のラップトップでログインしてから、携帯からログインした場合には、ラップトップのセッションは有効期限が切れ (タイムアウトして)、携帯でのログインが保持されます。"
+
+#: ../../source/session_limits.rst:17
+msgid "While session counts can be very limited, they can also be expanded to cover as many session logins as are needed by your organization."
+msgstr "セッション数を非常に少なく設定することも可能ですが、組織が必要とするセッションログイン数に対応するように、セッション数を増やすことも可能です。"
+
+#: ../../source/session_limits.rst:19
+msgid "When a user logs in and their login results in other users being logged out, the session limit has been reached and those users who are logged out are notified as to why the logout occurred."
+msgstr "ユーザーがログインしたことが原因で他のユーザーがログアウトされてしまった場合に、セッションの制限に達し、ログアウトされてしまったユーザーには、ログアウトされた理由が通知されます。"
+
+#: ../../source/session_limits.rst:21
+msgid "To make changes to your session limits, navigate to the **Miscellaneous System settings** of the Settings menu and edit the **Maximum Number Of Simultaneous Logged In Sessions** setting or use the :ref:`Browsable API <controllerapi:api_browsable_api>` if you are comfortable with making REST requests."
+msgstr "セッション制限を変更するには、設定メニューの **その他のシステム設定** に移動し、**同時ログインセッションの最大数** 設定を編集するか、REST リクエストを行う場合は :ref:`Browsable API <controllerapi:api_browsable_api>` を使用します。"
+
+#: ../../source/session_limits.rst:24
+msgid "To make the best use of session limits, disable ``AUTH_BASIC_ENABLED`` by changing the value to ``False``, as it falls outside of the scope of session limit enforcement. Alternatively, in the System Settings of the controller UI, toggle the **Enable HTTP Basic Auth** to off."
+msgstr "セッション制限を最大限に使用できるようにするには、値を ``False`` に変更して ``AUTH_BASIC_ENABLED`` を無効にします。これにより、セッション制限の適用範囲外になります。または、コントローラー UI のシステム設定で、**HHTP Basic 認証の有効化** をオフにします。"
+
+#: ../../source/session_limits.rst:30
+msgid "Proactive session limits will kick the user out when the session is idle. It is strongly recommended that you do not set the session limit to anything less than 1 minute, as doing so will break your |at| instance."
+msgstr "プロアクティブなセッション制限により、セッションがアイドルになるとユーザーがキックアウトされます。セッション制限を 1 分以下に設定すると |at| インスタンスが中断するのでこの設定を避けることを強く推奨します。"
+

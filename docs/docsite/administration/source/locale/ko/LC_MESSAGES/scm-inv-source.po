@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/scm-inv-source.rst:4
+msgid "Inventory File Importing"
+msgstr "인벤토리 파일 가져오기"
+
+#: ../../source/scm-inv-source.rst:10
+msgid "The controller allows you to choose an inventory file from source control, rather than creating one from scratch. This function is the same as custom inventory scripts, except that the contents are obtained from source control instead of editing their contents browser. This means, the files are non-editable and as inventories are updated at the source, the inventories within the projects are also updated accordingly, including the ``group_vars`` and ``host_vars`` files or directory associated with them. SCM types can consume both inventory files and scripts, the overlap between inventory files and custom types in that both do scripts."
+msgstr "컨트롤러를 사용하면 처음부터 인벤토리 파일을 생성하는 대신 소스 제어에서 선택할 수 있습니다. 이 기능은 콘텐츠 브라우저를 편집하지 않고 소스 제어에서 콘텐츠를 가져온다는 점을 제외하고 사용자 지정 인벤토리 스크립트와 동일합니다. 즉, 파일은 편집할 수 없으며 인벤토리가 소스에서 업데이트되므로 연결된 ``group_vars`` 및 ``host_vars`` 파일 또는 디렉터리를 포함하여 프로젝트 내의 인벤토리도 적절하게 업데이트됩니다. SCM 유형은 인벤토리 파일과 스크립트를 모두 사용할 수 있으며, 인벤토리 파일과 사용자 지정 유형은 둘 다 스크립트를 수행한다는 점에서 겹칩니다."
+
+#: ../../source/scm-inv-source.rst:12
+msgid "Any imported hosts will have a description of \"imported\" by default. This can be overridden by setting the ``_awx_description`` variable on a given host. For example, if importing from a sourced .ini file, you could add the following host variables:"
+msgstr "가져온 모든 호스트에는 기본적으로 \"가져오기\"에 대한 설명이 있습니다. 이는 지정된 호스트에서 ``_awx_description`` 변수를 설정하여 재정의할 수 있습니다. 예를 들어 소스가 지정된 .ini 파일에서 가져오는 경우 다음 호스트 변수를 추가할 수 있습니다."
+
+#: ../../source/scm-inv-source.rst:20
+msgid "Similarly, group descriptions also default to \"imported\", but can be overridden by the ``_awx_description`` as well."
+msgstr "마찬가지로 그룹 설명도 기본적으로 \"가져오기\"로 설정되지만 ``_awx_description`` 에서도 재정의할 수 있습니다."
+
+#: ../../source/scm-inv-source.rst:22
+msgid "In order to use old inventory scripts in source control, see :ref:`ug_customscripts` in the |atu| for detail."
+msgstr "소스 제어에서 이전 인벤토리 스크립트를 사용하려면 |atu|에서 :ref:`ug_customscripts`를 참조하십시오."
+
+#: ../../source/scm-inv-source.rst:26
+msgid "Custom Dynamic Inventory Scripts"
+msgstr "사용자 지정 동적 인벤토리 스크립트"
+
+#: ../../source/scm-inv-source.rst:28
+msgid "A custom dynamic inventory script stored in version control can be imported and run. This makes it much easier to make changes to an inventory script — rather than having to copy and paste one into the controller, it is pulled directly from source control and then executed. The script must be written to handle any credentials needed for doing its work and you are responsible for installing any Python libraries needed by the script (which is the same requirement for custom dynamic inventory scripts). And this applies to both user-defined inventory source scripts and SCM sources as they are both exposed to Ansible *virtualenv* requirements related to playbooks."
+msgstr "버전 제어에 저장된 사용자 지정 동적 인벤토리 스크립트를 가져와서 실행할 수 있습니다. 이렇게 하면 인벤토리 스크립트를 훨씬 쉽게 변경할 수 있습니다. 즉, 인벤토리 스크립트를 복사하여 컨트롤러에 붙여넣을 필요 없이 소스 제어에서 직접 가져온 다음 실행합니다. 작업을 수행하는 데 필요한 인증 정보를 처리하도록 스크립트를 작성해야 하며, 스크립트에 필요한 Python 라이브러리(사용자 지정 동적 인벤토리 스크립트와 동일한 요구 사항)를 설치해야 합니다. 이 요구 사항은 플레이북과 관련된 Ansible *virtualenv* 요구 사항에 노출되는 사용자 정의 인벤토리 소스 스크립트와 SCM 소스에 둘 다 적용됩니다."
+
+#: ../../source/scm-inv-source.rst:30
+msgid "You can specify environment variables when you edit the SCM inventory source itself. For some scripts, this will be sufficient, however, this is not a secure way to store secret information that gives access to cloud providers or inventory."
+msgstr "SCM 인벤토리 소스 자체를 편집할 때 환경 변수를 지정할 수 있습니다. 일부 스크립트의 경우 이 작업만으로도 충분하지만, 클라우드 공급자 또는 인벤토리에 대한 액세스를 제공하는 시크릿 정보를 저장하는 안전한 방법은 아닙니다."
+
+#: ../../source/scm-inv-source.rst:32
+msgid "The better way is to create a new credential type for the inventory script you are going to use. The credential type will need to specify all the necessary types of inputs. Then, when you create a credential of this type, the secrets will be stored in an encrypted form. If you apply that credential to the inventory source, the script will have access to those inputs like environment variables or files."
+msgstr "더 나은 방법은 사용할 인벤토리 스크립트에 대한 새 인증 정보 유형을 생성하는 것입니다. 인증 정보 유형은 필요한 모든 입력 유형을 지정해야 합니다. 그런 다음, 이 유형의 인증 정보를 생성하면 시크릿이 암호화된 형식으로 저장됩니다. 인벤토리 소스에 해당 인증 정보를 적용하면 스크립트가 환경 변수 또는 파일과 같은 입력에 액세스할 수 있습니다."
+
+#: ../../source/scm-inv-source.rst:34
+msgid "For more detail, refer to :ref:`Credential types <userguide:ug_credential_types>`."
+msgstr "자세한 내용은 :ref:`Credential types <userguide:ug_credential_types>`를 참조하십시오."
+
+#: ../../source/scm-inv-source.rst:38
+msgid "SCM Inventory Source Fields"
+msgstr "SCM 인벤토리 소스 필드"
+
+#: ../../source/scm-inv-source.rst:40
+msgid "The source fields used are:"
+msgstr "사용되는 소스 필드는 다음과 같습니다."
+
+#: ../../source/scm-inv-source.rst:42
+msgid "``source_project``: project to use"
+msgstr "``source_project``: 사용할 프로젝트입니다."
+
+#: ../../source/scm-inv-source.rst:44
+msgid "``source_path``: relative path inside the project indicating a directory or a file. If left blank, \"\" is still a relative path indicating the root directory of the project"
+msgstr "``source_path``: 디렉터리 또는 파일을 나타내는 프로젝트 내부 상대 경로입니다. 비어 있는 경우 \"\"도 프로젝트의 루트 디렉터리를 나타내는 상대 경로입니다."
+
+#: ../../source/scm-inv-source.rst:46
+msgid "``source_vars``: if set on a \"file\" type inventory source then they will be passed to the environment vars when running"
+msgstr "``source_vars``: \"파일\" 유형 인벤토리 소스에 설정된 경우 실행 시 환경 변수에 전달됩니다."
+
+#: ../../source/scm-inv-source.rst:48
+msgid "An update of the project automatically triggers an inventory update where it is used. An update of the project is scheduled immediately after creation of the inventory source. Neither inventory nor project updates are blocked while a related job is running. In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "프로젝트 업데이트 시 사용된 위치에서 인벤토리 업데이트가 자동으로 트리거됩니다. 인벤토리 소스가 생성된 후 즉시 실행되도록 프로젝트 업데이트가 스케줄링됩니다. 관련 작업이 실행되는 동안 인벤토리 또는 프로젝트 업데이트가 차단되지 않습니다. 큰 프로젝트(약 10GB)가 있는 경우 ``/tmp``의 디스크 공간이 문제가 될 수 있습니다."
+
+#: ../../source/scm-inv-source.rst:50
+msgid "You can specify a location manually in the controller User Interface from the Create Inventory Source page. Refer to the :ref:`ug_inventories` section of the |atu| for instructions on creating an inventory source."
+msgstr "컨트롤러 사용자 인터페이스의 인벤토리 소스 생성 페이지에서 수동으로 위치를 지정할 수 있습니다. 인벤토리 소스 생성 방법에 대한 지침은 |atu|의 :ref:`ug_inventories` 섹션을 참조하십시오."
+
+#: ../../source/scm-inv-source.rst:52
+msgid "This listing should be refreshed to latest SCM info on a project update. If no inventory sources use a project as an SCM inventory source, then the inventory listing may not be refreshed on update."
+msgstr "이 목록을 프로젝트 업데이트에 대한 최신 SCM 정보로 새로 고쳐야 합니다. 프로젝트를 SCM 인벤토리 소스로 사용하는 인벤토리 소스가 없는 경우에는 인벤토리 목록이 업데이트 시 새로 고쳐지지 않을 수 있습니다."
+
+#: ../../source/scm-inv-source.rst:54
+msgid "For inventories with SCM sources, the Job Details page for inventory updates show a status indicator for the project update as well as the name of the project. The status indicator links to the project update job. The project name links to the project."
+msgstr "SCM 소스를 사용하는 인벤토리의 경우 인벤토리 업데이트의 작업 세부 정보 페이지에 프로젝트 업데이트 상태 표시와 프로젝트 이름이 표시됩니다. 상태 표시는 프로젝트 업데이트 작업에 연결됩니다. 프로젝트 이름은 프로젝트에 연결됩니다."
+
+#: ../../source/scm-inv-source.rst:58
+msgid "An inventory update can be performed while a related job is running."
+msgstr "관련 작업이 실행되는 동안 인벤토리 업데이트를 수행할 수 있습니다."
+
+#: ../../source/scm-inv-source.rst:62
+msgid "Supported File Syntax"
+msgstr "지원되는 파일 구문"
+
+#: ../../source/scm-inv-source.rst:64
+msgid "|at| uses the ``ansible-inventory`` module from Ansible to process inventory files, and supports all valid inventory syntax that the controller requires."
+msgstr "|at|에서는 Ansible의 ``ansible-inventory`` 모듈을 사용하여 인벤토리 파일을 처리하고, 컨트롤러에 필요한 모든 유효한 인벤토리 구문을 지원합니다."
+

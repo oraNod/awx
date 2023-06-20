@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/job_branching.rst:3
+msgid "Projects specify the branch, tag, or reference to use from source control in the ``scm_branch`` field. These are represented by the values specified in the Project Details fields as shown."
+msgstr "项目在 ``scm_branch`` 字段中指定要从源控制使用的分支、标签或引用。这些信息由 Project Details 字段中指定的值表示，如下所示。"
+
+#: ../../source/job_branching.rst:7
+msgid "Projects have the option to \"Allow Branch Override\". When checked, project admins can delegate branch selection to the job templates that use that project (requiring only project ``use_role``)."
+msgstr "具有“Allow Branch Override”选项的项目。选中此选项时，项目管理员可以将分支选择委托给使用该项目的作业模板（只需要项目 ``use_role``）。"
+
+#: ../../source/job_branching.rst:14
+msgid "Source tree copy behavior"
+msgstr "源树复制行为"
+
+#: ../../source/job_branching.rst:16
+msgid "Every job run has its own private data directory. This directory contains a copy of the project source tree for the given ``scm_branch`` the job is running. Jobs are free to make changes to the project folder and make use of those changes while it is still running. This folder is temporary and is cleaned up at the end of the job run."
+msgstr "每个作业运行都有自己的专用数据目录。这个目录包含作业运行的给定 ``scm_branch`` 的项目源树副本。作业可以自由地更改项目文件夹，即使仍在运行也能利用这些更改。这个文件夹是临时的，会在作业运行结束时被清理。"
+
+#: ../../source/job_branching.rst:19
+msgid "If **Clean** is checked, |at| discards modified files in its local copy of the repository through use of the ``force`` parameter in its respective Ansible modules pertaining to `git`_ or `Subversion`_."
+msgstr "如果选中 **Clean**，|at| 会通过在与 `git`_ 或`Subversion` 相关的相应 Ansible 模块中使用 ``force`` 参数，将存储库的本地副本中的修改文件丢弃。"
+
+#: ../../source/job_branching.rst:28
+msgid "Project revision behavior"
+msgstr "项目修订行为"
+
+#: ../../source/job_branching.rst:30
+msgid "Typically, during a project update, the revision of the default branch (specified in the **SCM Branch** field of the project) is stored when updated, and jobs using that project will employ this revision. Providing a non-default **SCM Branch** (not a commit hash or tag) in a job, the newest revision is pulled from the source control remote immediately before the job starts. This revision is shown in the **Source Control Revision** field of the job and its respective project update."
+msgstr "通常，在项目更新过程中，默认分支的修订（在项目的 **SCM Branch** 字段中指定）会在更新时进行存储，并且使用该项目的作业会利用这一修订。若在作业中提供非默认 **SCM Branch**（并非提交散列或标签），则会在作业即将开始前从远程源控制拉取最新的修订。这一修订显示在作业及其相应的项目更新的 **Source Control Revision** 字段中。"
+
+#: ../../source/job_branching.rst:36
+msgid "Consequently, offline job runs are impossible for non-default branches. To be sure that a job is running a static version from source control, use tags or commit hashes. Project updates do not save the revision of all branches, only the project default branch."
+msgstr "因此，非默认分支不支持离线作业运行。若要确保某个作业从源控制运行静态版本，请使用标签或提交散列。项目更新不会保存所有分支的修订，仅保存项目默认分支。"
+
+#: ../../source/job_branching.rst:38
+msgid "The **SCM Branch** field is not validated, so the project must update to assure it is valid. If this field is provided or prompted for, the **Playbook** field of job templates will not be validated, and you will have to launch the job template in order to verify presence of the expected playbook."
+msgstr "**SCM Branch** 字段没有经过验证，因此项目必须更新以确保其有效。如果提供或提示了此字段，则不会验证作业模板的 **Playbook** 字段，您必须启动作业模板以验证所需的 playbook 是否存在。"
+
+#: ../../source/job_branching.rst:41
+msgid "Git Refspec"
+msgstr "Git Refspec"
+
+#: ../../source/job_branching.rst:46
+msgid "The **SCM Refspec** field specifies which extra references the update should download from the remote. Examples are:"
+msgstr "**SCM Refspec** 字段指定更新应该从远程下载的额外引用。例如："
+
+#: ../../source/job_branching.rst:48
+msgid "``refs/*:refs/remotes/origin/*``: fetches all references, including remotes of the remote"
+msgstr "``refs/*:refs/remotes/origin/*``：获取所有引用，包括远程的 remotes"
+
+#: ../../source/job_branching.rst:49
+msgid "``refs/pull/*:refs/remotes/origin/pull/*`` (GitHub-specific): fetches all refs for all pull requests"
+msgstr "``refs/pull/*:refs/remotes/origin/pull/*`` (GitHub-specific)：获取所有拉取请求的所有引用"
+
+#: ../../source/job_branching.rst:50
+msgid "``refs/pull/62/head:refs/remotes/origin/pull/62/head``: fetches the ref for that one GitHub pull request"
+msgstr "``refs/pull/62/head:refs/remotes/origin/pull/62/head``：获取那一个 GitHub 拉取请求的引用"
+
+#: ../../source/job_branching.rst:52
+msgid "For large projects, you should consider performance impact when using the 1st or 2nd examples here."
+msgstr "对于大型项目，在使用此处的第 1 个或 2 个示例时，您应该考虑对性能的影响。"
+
+#: ../../source/job_branching.rst:54
+msgid "The **SCM Refspec** parameter affects the availability of the project branch, and can allow access to references not otherwise available. The examples above allow the user to supply a pull request from the **SCM Branch**, which would not be possible without the **SCM Refspec** field."
+msgstr "**SCM Refspec** 参数会影响项目分支的可用性，并且可以允许访问原本不可用的引用。上面的示例允许用户提供来自 **SCM Branch** 的拉取请求，如果没有 **SCM Refspec** 字段，这是不可能实现的。"
+
+#: ../../source/job_branching.rst:57
+msgid "The Ansible git module fetches ``refs/heads/*`` by default. This means that a project's branches and tags (and commit hashes therein) can be used as the SCM Branch if **SCM Refspec** is blank. The value specified in the **SCM Refspec** field affects which **SCM Branch** fields can be used as overrides. Project updates (of any type) will perform an extra ``git fetch`` command to pull that refspec from the remote."
+msgstr "Ansible git 模块默认获取 ``refs/heads/*``。这意味着，如果 **SCM Refspec** 为空白，项目的分支和标签（以及其中的提交散列）可以用作 SCM 分支。**SCM Refspec** 字段中指定的值会影响哪些 **SCM Branch** 字段可用作覆盖。（任何类型的）项目更新会执行额外的 ``git fetch`` 命令从远程拉取该 refspec。"
+
+#: ../../source/job_branching.rst:59
+msgid "For example: You could set up a project that allows branch override with the 1st or 2nd refspec example --> Use this in a job template that prompts for the **SCM Branch** --> A client could launch the job template when a new pull request is created, providing the branch ``pull/N/head`` --> The job template would run against the provided GitGub pull request reference."
+msgstr "例如：您可以通过第 1 个或第 2 个 refspec 示例设置允许分支覆盖的项目 --> 在提示 **SCM Branch** 的作业模板中使用此项目 --> 客户端可在创建新拉取请求时启动作业模板，提供分支 ``pull/N/head`` --> 作业模板将针对提供的 GitGub 拉取请求引用运行。"
+
+#: ../../source/job_branching.rst:61
+msgid "For more information on the Ansible git module, see https://docs.ansible.com/ansible/latest/modules/git_module.html."
+msgstr "如需有关 Ansible git 模块的更多信息，请参阅 https://docs.ansible.com/ansible/latest/modules/git_module.html."
+

@@ -1,0 +1,557 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/containers_instance_groups.rst:4
+msgid "Container and Instance Groups"
+msgstr "컨테이너 및 인스턴스 그룹"
+
+#: ../../source/containers_instance_groups.rst:10
+msgid "The controller allows you to execute jobs via ansible playbook runs directly on a member of the cluster or in a namespace of an Openshift cluster with the necessary service account provisioned called a Container Group. You can execute jobs in a container group only as-needed per playbook. For more information, see :ref:`ag_container_groups` towards the end of this section."
+msgstr "컨트롤러를 사용하면 컨테이너 그룹이라는 필수 서비스 계정이 프로비저닝된 Openshift 클러스터의 네임스페이스 또는 클러스터의 멤버에서 ansible 플레이북 실행을 통해 직접 작업을 실행할 수 있습니다. 컨테이너 그룹에서 플레이북당 필요한 만큼만 작업을 실행할 수 있습니다. 자세한 내용은 이 섹션의 끝에 있는 :ref:`ag_container_groups`을 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:12
+msgid "For |ees|, see :ref:`ug_execution_environments` in the |atu|."
+msgstr "|ees|의 경우 |atu|에서 :ref:`ug_execution_environments`을 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:17
+msgid "Instance Groups"
+msgstr "인스턴스 그룹"
+
+#: ../../source/containers_instance_groups.rst:19
+msgid "Instances can be grouped into one or more Instance Groups. Instance groups can be assigned to one or more of the resources listed below."
+msgstr "인스턴스를 하나 이상의 인스턴스 그룹으로 그룹화할 수 있습니다. 아래에 있는 하나 이상의 리소스에 인스턴스 그룹을 할당할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:21
+msgid "Organizations"
+msgstr "조직"
+
+#: ../../source/containers_instance_groups.rst:22
+msgid "Inventories"
+msgstr "인벤토리"
+
+#: ../../source/containers_instance_groups.rst:23
+msgid "Job Templates"
+msgstr "작업 템플릿"
+
+#: ../../source/containers_instance_groups.rst:25
+msgid "When a job associated with one of the resources executes, it will be assigned to the instance group associated with the resource. During the execution process, instance groups associated with Job Templates are checked before those associated with Inventories. Similarly, instance groups associated with Inventories are checked before those associated with Organizations. Thus, Instance Group assignments for the three resources form a hierarchy: Job Template **>** Inventory **>** Organization."
+msgstr "리소스 중 하나와 연결된 작업이 실행되면 해당 리소스와 연결된 인스턴스 그룹에 작업이 할당됩니다. 실행 프로세스 중 작업 템플릿과 연결된 인스턴스 그룹이 인벤토리와 연결된 인스턴스 그룹보다 먼저 확인됩니다. 마찬가지로, 인벤토리와 연결된 인스턴스 그룹이 조직과 연결된 인스턴스 그룹보다 먼저 확인됩니다. 따라서 3개 리소스에 대한 인스턴스 그룹 할당은 작업 템플릿 **>** 인벤토리 **>** 조직 계층을 형성합니다."
+
+#: ../../source/containers_instance_groups.rst:27
+msgid "Here are some of the things to consider when working with instance groups:"
+msgstr "인스턴스 그룹으로 작업할 때 고려해야 할 몇 가지 사항은 다음과 같습니다."
+
+#: ../../source/containers_instance_groups.rst:29
+msgid "You may optionally define other groups and group instances in those groups. These groups should be prefixed with ``instance_group_``. Instances are required to be in the ``automationcontroller`` or ``execution_nodes`` group alongside other ``instance_group_`` groups. In a clustered setup, at least one instance **must** be present in the ``automationcontroller`` group, which will appear as ``controlplane`` in the API instance groups. See :ref:`ag_automationcontroller_group_policies` for example scenarios."
+msgstr "인스턴스 그룹에서 다른 그룹 및 그룹 인스턴스를 선택적으로 정의할 수 있습니다. 이러한 그룹의 앞에는 ``instance_group_`` 접두사가 붙어야 합니다. 다른 ``instance_group_`` 그룹과 함께 ``automationcontroller`` 또는 ``execution_nodes`` 그룹에 인스턴스가 있어야 합니다. 클러스터형 설정에서는 ``automationcontroller`` 그룹에 하나 이상의 인스턴스가 **반드시** 있어야 합니다. 해당 인스턴스는 API 인스턴스 그룹에서 ``controlplane``으로 표시됩니다. 예제 시나리오 :ref:`ag_automationcontroller_group_policies`를 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:31
+msgid "A ``default`` API instance group is automatically created with all nodes capable of running jobs. Technically, it is like any other instance group but if a specific instance group is not associated with a specific resource, then job execution will always fall back to the ``default`` instance group. The ``default`` instance group always exists (it cannot be deleted nor renamed)."
+msgstr "``default`` API 인스턴스 그룹은 작업을 실행할 수 있는 모든 노드를 사용하여 자동으로 생성됩니다. 기술적으로는 다른 인스턴스 그룹과 유사하지만, 특정 인스턴스 그룹이 특정 리소스와 연결되지 않은 경우 작업 실행이 항상 ``default`` 인스턴스 그룹으로 대체됩니다. ``default`` 인스턴스 그룹은 항상 있으며 삭제하거나 이름을 변경할 수 없습니다."
+
+#: ../../source/containers_instance_groups.rst:33
+msgid "Do not create a group named ``instance_group_default``."
+msgstr "``instance_group_default``라는 그룹을 생성하지 마십시오."
+
+#: ../../source/containers_instance_groups.rst:35
+msgid "Do not name any instance the same as a group name."
+msgstr "그룹 이름과 동일한 인스턴스 이름을 지정하지 마십시오."
+
+#: ../../source/containers_instance_groups.rst:41
+msgid "``automationcontroller`` group policies"
+msgstr "``automationcontroller`` 그룹 정책"
+
+#: ../../source/containers_instance_groups.rst:46
+msgid "Use the following criteria when defining nodes:"
+msgstr "노드를 정의할 때는 다음 기준을 사용합니다."
+
+#: ../../source/containers_instance_groups.rst:48
+msgid "nodes in the ``automationcontroller`` group can define ``node_type`` hostvar to be ``hybrid`` (default) or ``control``"
+msgstr "``automationcontroller`` 그룹의 노드는 ``node_type`` hostvar을 ``hybrid``(기본값) 또는 ``control``로 정의할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:49
+msgid "nodes in the ``execution_nodes`` group can define ``node_type`` hostvar to be ``execution`` (default) or ``hop``"
+msgstr "``execution_nodes`` 그룹의 노드는 ``node_type`` hostvar을 ``execution``(기본값) 또는 ``hop``으로 정의할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:51
+msgid "You can define custom groups in the inventory file by naming groups with ``instance_group_*`` where ``*`` becomes the name of the group in the API. Or, you can create custom instance groups in the API after the install has finished."
+msgstr "``instance_group_*``로 그룹 이름을 지정하여 인벤토리 파일에서 사용자 지정 그룹을 정의할 수 있습니다. 여기서 ``*``는 API의 그룹 이름이 됩니다. 또는 설치가 완료된 후 API에서 사용자 지정 인스턴스 그룹을 생성할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:53
+msgid "The current behavior expects a member of an ``instance_group_*`` be part of ``automationcontroller`` or ``execution_nodes`` group. Consider this example scenario:"
+msgstr "현재 동작에서는 ``instance_group_*``의 멤버가 ``automationcontroller`` 또는 ``execution_nodes`` 그룹에 속해야 합니다. 다음 예제 시나리오를 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:69
+msgid "As a result of running the installer, you will get the error below:"
+msgstr "설치 프로그램을 실행하면 다음과 같은 오류가 발생합니다."
+
+#: ../../source/containers_instance_groups.rst:77
+msgid "To fix this, you could move the box ``110-addr.tatu.home`` to an ``execution_node`` group."
+msgstr "이 오류를 해결하려면 ``110-addr.tatu.home`` 박스를 ``execution_node`` 그룹으로 이동하면 됩니다."
+
+#: ../../source/containers_instance_groups.rst:94
+msgid "This results in:"
+msgstr "결과는 다음과 같습니다."
+
+#: ../../source/containers_instance_groups.rst:101
+msgid "Upon upgrading from controller 4.0 or earlier, the legacy ``instance_group_`` member will most likely have the awx code installed, which would cause that node to be placed in the ``automationcontroller`` group."
+msgstr "컨트롤러 4.0 이하에서 업그레이드 시 레거시 ``instance_group_`` 멤버에 awx 코드가 설치되어 해당 노드가 ``automationcontroller`` 그룹에 배치될 가능성이 큽니다."
+
+#: ../../source/containers_instance_groups.rst:105
+msgid "Configuring Instance Groups from the API"
+msgstr "API에서 인스턴스 그룹 구성"
+
+#: ../../source/containers_instance_groups.rst:110
+msgid "Instance groups can be created by POSTing to ``/api/v2/instance_groups`` as a system administrator."
+msgstr "시스템 관리자로 ``/api/v2/instance_groups``에 POST를 수행하면 인스턴스 그룹을 생성할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:112
+msgid "Once created, instances can be associated with an instance group with:"
+msgstr "생성된 인스턴스는 다음을 사용하여 인스턴스 그룹과 연결할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:118
+msgid "An instance that is added to an instance group will automatically reconfigure itself to listen on the group's work queue. See the following section, :ref:`ag_instance_group_policies`, for more details."
+msgstr "인스턴스 그룹에 추가된 인스턴스는 그룹의 작업 큐에서 수신 대기하도록 자동으로 재구성됩니다. 자세한 내용은 :ref:`ag_instance_group_policies` 섹션을 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:124
+msgid "Instance group policies"
+msgstr "인스턴스 그룹 정책"
+
+#: ../../source/containers_instance_groups.rst:130
+msgid "You can configure controller instances to automatically join Instance Groups when they come online by defining a :term:`policy`. These policies are evaluated for every new instance that comes online."
+msgstr ":term:`policy`를 정의하여 온라인 상태의 인스턴스 그룹에 자동으로 참여하도록 컨트롤러 인스턴스를 구성할 수 있습니다. 이러한 정책은 온라인 상태의 모든 새 인스턴스를 대상으로 평가됩니다."
+
+#: ../../source/containers_instance_groups.rst:132
+msgid "Instance Group Policies are controlled by three optional fields on an ``Instance Group``:"
+msgstr "인스턴스 그룹 정책은 ``Instance Group``의 세 가지 선택 필드로 제어됩니다."
+
+#: ../../source/containers_instance_groups.rst:134
+msgid "``policy_instance_percentage``: This is a number between 0 - 100. It guarantees that this percentage of active controller instances will be added to this Instance Group. As new instances come online, if the number of Instances in this group relative to the total number of instances is less than the given percentage, then new ones will be added until the percentage condition is satisfied."
+msgstr "``policy_instance_percentage``: 0에서 100 사이의 숫자입니다. 이 백분율의 활성 컨트롤러 인스턴스가 이 인스턴스 그룹에 추가됩니다. 새 인스턴스가 온라인 상태가 될 때 총 인스턴스 수와 비교해 이 그룹의 인스턴스 수가 지정된 백분율보다 작으면 백분율 조건이 충족될 때까지 새 인스턴스가 추가됩니다."
+
+#: ../../source/containers_instance_groups.rst:135
+msgid "``policy_instance_minimum``: This policy attempts to keep at least this many instances in the Instance Group. If the number of available instances is lower than this minimum, then all instances will be placed in this Instance Group."
+msgstr "``policy_instance_minimum``: 이 정책은 인스턴스 그룹의 인스턴스 수를 이 값 이상으로 유지하려고 합니다. 사용 가능한 인스턴스 수가 이 최소값보다 작으면 모든 인스턴스가 이 인스턴스 그룹에 배치됩니다."
+
+#: ../../source/containers_instance_groups.rst:136
+msgid "``policy_instance_list``: This is a fixed list of instance names to always include in this Instance Group."
+msgstr "``policy_instance_list``: 이 인스턴스 그룹에 항상 포함할 인스턴스 이름의 고정 목록입니다."
+
+#: ../../source/containers_instance_groups.rst:138
+msgid "The Instance Groups list view from the |at| User Interface provides a summary of the capacity levels for each instance group according to instance group policies:"
+msgstr "|at| 사용자 인터페이스의 인스턴스 그룹 목록 뷰는 인스턴스 그룹 정책에 따른 각 인스턴스 그룹의 용량 수준을 요약해서 보여 줍니다."
+
+#: ../../source/containers_instance_groups.rst:140
+msgid "|Instance Group policy example|"
+msgstr "|Instance Group policy example|"
+
+#: ../../source/containers_instance_groups.rst:146
+msgid "Notable policy considerations"
+msgstr "주요 정책 고려 사항"
+
+#: ../../source/containers_instance_groups.rst:148
+msgid "``policy_instance_percentage`` and ``policy_instance_minimum`` both set minimum allocations. The rule that results in more instances assigned to the group will take effect. For example, if you have a ``policy_instance_percentage`` of 50% and a ``policy_instance_minimum`` of 2 and you start 6 instances, 3 of them would be assigned to the Instance Group. If you reduce the number of total instances in the cluster to 2, then both of them would be assigned to the Instance Group to satisfy ``policy_instance_minimum``. This way, you can set a lower bound on the amount of available resources."
+msgstr "``policy_instance_percentage``와 ``policy_instance_minimum``은 둘 다 최소 할당 값을 설정합니다. 그룹에 더 많은 인스턴스가 할당되게 하는 규칙이 적용됩니다. 예를 들어 ``policy_instance_percentage``가 50%이고 ``policy_instance_minimum``이 2인 경우 6개 인스턴스를 시작하면 3개 인스턴스가 인스턴스 그룹에 할당됩니다. 클러스터의 총 인스턴스 수를 2개로 줄이면 ``policy_instance_minimum``을 충족하기 위해 둘 다 인스턴스 그룹에 할당됩니다. 이렇게 하면 사용 가능한 리소스 양에 하한을 설정할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:150
+msgid "Policies do not actively prevent instances from being associated with multiple Instance Groups, but this can effectively be achieved by making the percentages add up to 100. If you have 4 instance groups, assign each a percentage value of 25 and the instances will be distributed among them with no overlap."
+msgstr "정책을 적용하더라도 인스턴스가 여러 인스턴스 그룹과 연결되는 것을 적극적으로 차단하지는 않지만 백분율 합계를 100으로 만들면 효과적으로 차단할 수 있습니다. 4개의 인스턴스 그룹이 있는 경우 각 그룹에 백분율 값 25를 할당하면 인스턴스가 겹치지 않고 그룹 간에 배포됩니다."
+
+#: ../../source/containers_instance_groups.rst:154
+msgid "Manually pinning instances to specific groups"
+msgstr "인스턴스를 특정 그룹에 수동으로 고정"
+
+#: ../../source/containers_instance_groups.rst:161
+msgid "If you have a special instance which needs to be exclusively assigned to a specific Instance Group but don't want it to automatically join other groups via \"percentage\" or \"minimum\" policies:"
+msgstr "특정 인스턴스 그룹에 배타적으로 할당되어야 하는 특수 인스턴스가 있지만 \"백분율\" 또는 \"최소값\" 정책을 통해 다른 그룹에 자동으로 참여하지 않도록 하려면 다음을 수행합니다."
+
+#: ../../source/containers_instance_groups.rst:163
+msgid "Add the instance to one or more Instance Groups' ``policy_instance_list``"
+msgstr "하나 이상 인스턴스 그룹의 ``policy_instance_list``에 인스턴스를 추가합니다."
+
+#: ../../source/containers_instance_groups.rst:165
+msgid "Update the instance's ``managed_by_policy`` property to be ``False``."
+msgstr "인스턴스의 ``managed_by_policy`` 속성을 ``False``로 업데이트합니다."
+
+#: ../../source/containers_instance_groups.rst:167
+msgid "This will prevent the Instance from being automatically added to other groups based on percentage and minimum policy; it will only belong to the groups you've manually assigned it to:"
+msgstr "이렇게 하면 인스턴스가 백분율 및 최소값 정책에 따라 다른 그룹에 자동으로 추가되지 않고 수동으로 할당한 그룹에만 속하게 됩니다."
+
+#: ../../source/containers_instance_groups.rst:183
+msgid "Job Runtime Behavior"
+msgstr "작업 런타임 동작"
+
+#: ../../source/containers_instance_groups.rst:185
+msgid "When you run a job associated with a instance group, some behaviors worth noting are:"
+msgstr "인스턴스 그룹과 연결된 작업을 실행할 때 주목할 만한 몇 가지 동작은 다음과 같습니다."
+
+#: ../../source/containers_instance_groups.rst:187
+msgid "If a cluster is divided into separate instance groups, then the behavior is similar to the cluster as a whole. If two instances are assigned to a group then either one is just as likely to receive a job as any other in the same group."
+msgstr "클러스터가 개별 인스턴스 그룹으로 나누어져 있는 경우 클러스터 전체와 비슷하게 작동합니다. 두 인스턴스가 하나의 그룹에 할당된 경우 둘 중 하나는 동일한 그룹의 다른 인스턴스만큼 작업을 받을 가능성이 큽니다."
+
+#: ../../source/containers_instance_groups.rst:188
+msgid "As controller instances are brought online, it effectively expands the work capacity of the system. If those instances are also placed into instance groups, then they also expand that group's capacity. If an instance is performing work and it is a member of multiple groups, then capacity will be reduced from all groups for which it is a member. De-provisioning an instance will remove capacity from the cluster wherever that instance was assigned. See the :ref:`ag_cluster_deprovision` section for more detail."
+msgstr "컨트롤러 인스턴스가 온라인 상태가 되면 시스템의 작업 용량이 효과적으로 확장됩니다. 이러한 인스턴스가 인스턴스 그룹에도 배치되는 경우 해당 그룹의 용량도 확장됩니다. 인스턴스가 작업을 수행하고 여러 그룹의 멤버인 경우 인스턴스가 속한 모든 그룹에서 용량이 줄어듭니다. 인스턴스를 프로비저닝 해제하면 인스턴스가 어디에서 할당되었든 클러스터 용량이 제거됩니다. 자세한 내용은 :ref:`ag_cluster_deprovision` 섹션을 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:191
+msgid "Not all instances are required to be provisioned with an equal capacity."
+msgstr "모든 인스턴스를 동일한 용량으로 프로비저닝해야 하는 것은 아닙니다."
+
+#: ../../source/containers_instance_groups.rst:195
+msgid "Control Where a Job Runs"
+msgstr "작업이 실행되는 위치 제어"
+
+#: ../../source/containers_instance_groups.rst:197
+msgid "If any of the job template, inventory, or organization has instance groups associated with them, a job ran from that job template will not be eligible for the default behavior. That means that if all of the instances inside of the instance groups associated with these 3 resources are out of capacity, the job will remain in the pending state until capacity becomes available."
+msgstr "작업 템플릿, 인벤토리 또는 조직에 인스턴스 그룹이 연결된 경우 해당 작업 템플릿에서 실행된 작업은 기본 동작을 수행할 수 없습니다. 즉, 이 3개 리소스와 연결된 인스턴스 그룹 내의 모든 인스턴스에 용량이 부족하면 용량을 사용할 수 있을 때까지 작업이 보류 상태로 유지됩니다."
+
+#: ../../source/containers_instance_groups.rst:199
+msgid "The order of preference in determining which instance group to submit the job to is as follows:"
+msgstr "작업을 제출할 인스턴스 그룹을 결정하는 기본 설정 순서는 다음과 같습니다."
+
+#: ../../source/containers_instance_groups.rst:201
+msgid "job template"
+msgstr "작업 템플릿"
+
+#: ../../source/containers_instance_groups.rst:202
+msgid "inventory"
+msgstr "인벤토리"
+
+#: ../../source/containers_instance_groups.rst:203
+msgid "organization (by way of project)"
+msgstr "조직(프로젝트를 통해)"
+
+#: ../../source/containers_instance_groups.rst:205
+msgid "If instance groups are associated with the job template, and all of these are at capacity, then the job will be submitted to instance groups specified on inventory, and then organization. Jobs should execute in those groups in preferential order as resources are available."
+msgstr "인스턴스 그룹이 작업 템플릿과 연결되어 있고 모든 그룹이 한도에 도달하면 인벤토리, 조직에서 차례로 지정된 인스턴스 그룹에 작업이 제출됩니다. 해당 그룹에서는 리소스를 사용할 수 있으므로 작업이 기본 설정 순서대로 실행됩니다."
+
+#: ../../source/containers_instance_groups.rst:207
+msgid "The global ``default`` group can still be associated with a resource, just like any of the custom instance groups defined in the playbook. This can be used to specify a preferred instance group on the job template or inventory, but still allow the job to be submitted to any instance if those are out of capacity."
+msgstr "글로벌 ``default`` 그룹은 플레이북에 정의된 사용자 지정 인스턴스 그룹과 마찬가지로 계속 리소스와 연결될 수 있습니다. 이 그룹을 사용하여 작업 템플릿 또는 인벤토리의 기본 설정 인스턴스 그룹을 지정할 수 있지만, 이 경우에도 용량이 부족하면 작업이 아무 인스턴스에나 제출될 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:209
+msgid "As an example, by associating ``group_a`` with a Job Template and also associating the ``default`` group with its inventory, you allow the ``default`` group to be used as a fallback in case ``group_a`` gets out of capacity."
+msgstr "예를 들어 ``group_a``를 작업 템플릿과 연결하고 ``default`` 그룹도 해당 인벤토리와 연결하면 ``group_a``의 용량이 부족할 경우 ``default`` 그룹이 대체로 사용될 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:211
+msgid "In addition, it is possible to not associate an instance group with one resource but designate another resource as the fallback. For example, not associating an instance group with a job template and have it fall back to the inventory and/or the organization's instance group."
+msgstr "또한 인스턴스 그룹을 하나의 리소스와 연결하지 않고 다른 리소스를 대체로 지정할 수 있습니다. 예를 들어 인스턴스 그룹을 작업 템플릿과 연결하지 않고 인벤토리 및/또는 조직의 인스턴스 그룹으로 대체되도록 합니다."
+
+#: ../../source/containers_instance_groups.rst:213
+msgid "This presents two other great use cases:"
+msgstr "이런 방식의 다른 두 가지 주요 사용 사례는 다음과 같습니다."
+
+#: ../../source/containers_instance_groups.rst:215
+msgid "Associating instance groups with an inventory (omitting assigning the job template to an instance group) will allow the user to ensure that any playbook run against a specific inventory will run only on the group associated with it. This can be super useful in the situation where only those instances have a direct link to the managed nodes."
+msgstr "인스턴스 그룹에 작업 템플릿을 할당하지 않고 인스턴스 그룹을 인벤토리와 연결하면 사용자는 특정 인벤토리에 실행되는 플레이북이 해당 인벤토리와 연결된 그룹에서만 실행되도록 할 수 있습니다. 이 기능은 관리형 노드에 연결된 직접 링크가 해당 인스턴스에만 있는 경우 매우 유용할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:217
+msgid "An administrator can assign instance groups to organizations. This effectively allows the administrator to segment out the entire infrastructure and guarantee that each organization has capacity to run jobs without interfering with any other organization's ability to run jobs."
+msgstr "관리자는 조직에 인스턴스 그룹을 할당할 수 있습니다. 이렇게 하면 관리자가 효과적으로 전체 인프라를 분할하여 작업 실행 용량이 각 조직에 확보되도록 할 수 있습니다. 이때 다른 조직의 작업 실행 능력은 저해되지 않습니다."
+
+#: ../../source/containers_instance_groups.rst:219
+msgid "Likewise, an administrator could assign multiple groups to each organization as desired, as in the following scenario:"
+msgstr "마찬가지로, 관리자는 다음 시나리오에서처럼 각 조직에 여러 그룹을 원하는 대로 할당할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:221
+msgid "There are three instance groups: A, B, and C. There are two organizations: Org1 and Org2."
+msgstr "인스턴스 그룹 3개(A, B, C)와 조직 2개(Org1, Org2)가 있습니다."
+
+#: ../../source/containers_instance_groups.rst:222
+msgid "The administrator assigns group A to Org1, group B to Org2 and then assign group C to both Org1 and Org2 as an overflow for any extra capacity that may be needed."
+msgstr "관리자가 Org1에 그룹 A, Org2에 그룹 B를 할당한 다음, 필요할 수 있는 추가 용량을 위한 오버플로로 Org1과 Org2 둘 다에 그룹 C를 할당합니다."
+
+#: ../../source/containers_instance_groups.rst:223
+msgid "The organization administrators are then free to assign inventory or job templates to whichever group they want (or just let them inherit the default order from the organization)."
+msgstr "그러면 조직 관리자가 원하는 그룹에 인벤토리 또는 작업 템플릿을 자유롭게 할당하거나 조직에서 기본 순서를 가져오도록 할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:225
+msgid "|Instance Group example|"
+msgstr "|Instance Group example|"
+
+#: ../../source/containers_instance_groups.rst:229
+msgid "Arranging resources in this way offers a lot of flexibility. Also, you can create instance groups with only one instance, thus allowing you to direct work towards a very specific Host in the controller cluster."
+msgstr "이런 방식으로 리소스를 배치하면 상당히 유연하게 작업할 수 있습니다. 또한 하나의 인스턴스만으로 인스턴스 그룹을 생성할 수 있으므로 컨트롤러 클러스터의 매우 구체적인 호스트로 작업을 보낼 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:235
+msgid "Deprovision Instance Groups"
+msgstr "인스턴스 그룹 프로비저닝 해제"
+
+#: ../../source/containers_instance_groups.rst:240
+msgid "Re-running the setup playbook does not automatically deprovision instances since clusters do not currently distinguish between an instance that was taken offline intentionally or due to failure. Instead, shut down all services on the controller instance and then run the deprovisioning tool from any other instance:"
+msgstr "현재 클러스터는 의도적으로 또는 오류로 인해 오프라인 상태로 전환된 인스턴스를 구분하지 않으므로 설정 플레이북을 다시 실행해도 인스턴스가 자동으로 프로비저닝 해제되지는 않습니다. 대신 컨트롤러 인스턴스에서 모든 서비스를 종료한 다음, 다른 인스턴스에서 프로비저닝 해제 툴을 실행합니다."
+
+#: ../../source/containers_instance_groups.rst:242
+msgid "Shut down the instance or stop the service with the command, ``automation-controller-service stop``."
+msgstr "``automation-controller-service stop`` 명령을 사용하여 인스턴스를 종료하거나 서비스를 중지합니다."
+
+#: ../../source/containers_instance_groups.rst:244
+msgid "Run the deprovision command ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>`` from another instance to remove it from the controller cluster registry."
+msgstr "다른 인스턴스에서 프로비저닝 해제 명령 ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>``을 실행하여 컨트롤러 클러스터 레지스트리에서 제거합니다."
+
+#: ../../source/containers_instance_groups.rst:246
+msgid "Example: ``awx-manage deprovision_instance --hostname=hostB``"
+msgstr "예: ``awx-manage deprovision_instance --hostname=hostB``"
+
+#: ../../source/containers_instance_groups.rst:249
+msgid "Similarly, deprovisioning instance groups in the controller does not automatically deprovision or remove instance groups, even though re-provisioning will often cause these to be unused. They may still show up in API endpoints and stats monitoring. These groups can be removed with the following command:"
+msgstr "마찬가지로, 컨트롤러에서 인스턴스 그룹을 프로비저닝 해제해도 인스턴스 그룹이 자동으로 프로비저닝 해제되거나 제거되지는 않지만 다시 프로비저닝할 때 해당 인스턴스 그룹이 사용되지 않는 경우가 많습니다. API 끝점 및 통계 모니터링에는 인스턴스 그룹이 계속 표시될 수도 있습니다. 다음 명령을 사용하면 이러한 그룹을 제거할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:251
+msgid "Example: ``awx-manage unregister_queue --queuename=<name>``"
+msgstr "예: ``awx-manage unregister_queue --queuename=<name>``"
+
+#: ../../source/containers_instance_groups.rst:253
+msgid "Removing an instance's membership from an instance group in the inventory file and re-running the setup playbook does not ensure the instance won't be added back to a group. To be sure that an instance will not be added back to a group, remove via the API and also remove it in your inventory file, or you can stop defining instance groups in the inventory file altogether. You can also manage instance group topology through the |at| User Interface. For more information on managing instance groups in the UI, refer to :ref:`Instance Groups <userguide:ug_instance_groups>` in the |atu|."
+msgstr "인벤토리 파일의 인스턴스 그룹에서 인스턴스 멤버십을 제거하고 설정 플레이북을 다시 실행하면 인스턴스가 그룹에 다시 추가될 수도 있습니다. 인스턴스가 그룹에 다시 추가되지 않도록 하려면 API를 통해 제거하고 인벤토리 파일에서도 제거하면 됩니다. 또는 인벤토리 파일에서 인스턴스 그룹 정의를 완전히 중지해도 됩니다. |at| 사용자 인터페이스를 통해 인스턴스 그룹 토폴로지를 관리할 수도 있습니다. UI에서 인스턴스 그룹을 관리하는 방법에 대한 자세한 내용은 |atu|에서 :ref:`Instance Groups <userguide:ug_instance_groups>`을 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:257
+msgid "If you have isolated instance groups created in older versions of the controller (3.8.x and earlier) and want to migrate them to execution nodes to make them compatible for use with the automation mesh architecture, see :ref:`migrate_iso_to_exe` in the |atumg|."
+msgstr "이전 버전의 컨트롤러(3.8.x 이하)에서 생성된 격리 인스턴스 그룹이 있고 이 그룹을 실행 노드로 마이그레이션하여 자동화 메시 아키텍처에서 사용할 수 있게 하려면 |atumg|에서 :ref:`migrate_iso_to_exe`을 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:263
+msgid "Container Groups"
+msgstr "컨테이너 그룹"
+
+#: ../../source/containers_instance_groups.rst:269
+msgid "|aap| supports :term:`Container Groups`, which allow you to execute jobs in the controller regardless of whether the controller is installed as a standalone, in  a virtual environment, or in a container. Container groups act as a pool of resources within a virtual environment. You can create instance groups to point to an OpenShift container, which are job environments that are provisioned on-demand as a Pod that exists only for the duration of the playbook run. This is known as the ephemeral execution model and ensures a clean environment for every job run."
+msgstr "|aap|에서는 컨트롤러가 독립 실행형으로 설치되었는지, 가상 환경 또는 컨테이너에 설치되었는지와 관계없이 컨트롤러에서 작업을 실행할 수 있도록 :term:`Container Groups`을 지원합니다. 컨테이너 그룹은 가상 환경 내에서 리소스 풀 역할을 합니다. 플레이북을 실행하는 동안에만 존재하는 Pod로 요구에 따라 프로비저닝되는 작업 환경인 OpenShift 컨테이너를 가리키는 인스턴스 그룹을 생성할 수 있습니다. 이를 임시 실행 모델이라고 하며, 모든 작업이 새 환경에서 실행되도록 합니다."
+
+#: ../../source/containers_instance_groups.rst:271
+msgid "In some cases, it is desirable to have container groups be \"always-on\", which is configured through the creation of an instance."
+msgstr "경우에 따라 컨테이너 그룹을 \"상시\"로 설정하는 것이 좋으며, 이 상태는 인스턴스를 생성하여 구성합니다."
+
+#: ../../source/containers_instance_groups.rst:275
+msgid "Container Groups upgraded from versions prior to |at| 4.0 will revert back to default and completely remove the old pod definition, clearing out all custom pod definitions in the migration."
+msgstr "|at| 4.0 이전 버전에서 업그레이드된 컨테이너 그룹은 다시 기본값으로 복원되고 이전 Pod 정의를 완전히 제거하므로 마이그레이션에 포함된 모든 사용자 지정 Pod 정의가 지워집니다."
+
+#: ../../source/containers_instance_groups.rst:278
+msgid "Container groups are different from |ees| in that |ees| are container images and do not use a virtual environment. See :ref:`ug_execution_environments` in the |atu| for further detail."
+msgstr "컨테이너 그룹은 |ees|과 다릅니다. |ees|은 컨테이너 이미지이며 가상 환경을 사용하지 않기 때문입니다. 자세한 내용은 |atu|에서 :ref:`ug_execution_environments`을 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:282
+msgid "Create a container group"
+msgstr "컨테이너 그룹 생성"
+
+#: ../../../common/source/get-creds-from-service-account.rst:2
+msgid "A ``ContainerGroup`` is a type of ``InstanceGroup`` that has an associated Credential that allows for connecting to an OpenShift cluster. To set up a container group, you must first have the following:"
+msgstr "``ContainerGroup``은 OpenShift 클러스터에 연결할 수 있는 관련 인증 정보가 있는 ``InstanceGroup`` 유형입니다. 컨테이너 그룹을 설정하려면 먼저 다음이 있어야 합니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:4
+msgid "A namespace you can launch into (every cluster has a “default” namespace, but you may want to use a specific namespace)"
+msgstr "시작할 수 있는 네임스페이스(클러스터마다 \"기본\" 네임스페이스가 있지만 특정 네임스페이스를 사용할 수 있습니다.)"
+
+#: ../../../common/source/get-creds-from-service-account.rst:5
+msgid "A service account that has the roles that allow it to launch and manage Pods in this namespace"
+msgstr "이 네임스페이스의 Pod를 시작하고 관리할 수 있는 역할이 있는 서비스 계정"
+
+#: ../../../common/source/get-creds-from-service-account.rst:6
+msgid "If you will be using |ees| in a private registry, and have a Container Registry credential associated to them in the automation controller, the service account also needs the roles to get, create, and delete secrets in the namespace. If you do not want to give these roles to the service account, you can pre-create the ``ImagePullSecrets`` and specify them on the pod spec for the ContainerGroup. In this case, the |ee| should NOT have a Container Registry credential associated, or the controller will attempt to create the secret for you in the namespace."
+msgstr "프라이빗 레지스트리에서 |ees|을 사용하고 이 환경에 연결된 컨테이너 레지스트리 인증 정보가 자동화 컨트롤러에 있는 경우 네임스페이스에서 비밀을 가져오고, 생성하고, 삭제하는 역할도 서비스 계정에 필요합니다. 이러한 역할을 서비스 계정에 부여하지 않으려면 ``ImagePullSecrets``를 사전 생성하여 ContainerGroup의 Pod 사양에 지정할 수 있습니다. 이 경우 |ee|에는 연결된 컨테이너 레지스트리 인증 정보가 없어야 합니다. 그렇지 않으면 컨트롤러가 네임스페이스에 비밀을 생성하려고 합니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:7
+msgid "A token associated with that service account (OpenShift or Kubernetes Bearer Token)"
+msgstr "서비스 계정과 연결된 토큰(OpenShift 또는 Kubernetes Bearer 토큰)"
+
+#: ../../../common/source/get-creds-from-service-account.rst:8
+msgid "A CA certificate associated with the cluster"
+msgstr "클러스터와 연결된 CA 인증서"
+
+#: ../../../common/source/get-creds-from-service-account.rst:10
+msgid "This section describes creating a Service Account in an Openshift cluster (or K8s) in order to be used to run jobs in a container group via |at|. After the Service Account is created, its credentials are provided to the controller in the form of an Openshift or Kubernetes API bearer token credential. Below describes how to create a service account and collect the needed information for configuring |at|."
+msgstr "이 섹션에서는 |at|를 통해 컨테이너 그룹에서 작업을 실행하는 데 사용할 Openshift 클러스터(또는 K8s)에서 서비스 계정을 생성하는 방법을 설명합니다. 서비스 계정이 생성되면 해당 인증 정보가 Openshift 또는 Kubernetes API 전달자 토큰 인증 정보의 형태로 컨트롤러에 제공됩니다. 아래에서는 서비스 계정을 생성하고 |at| 구성에 필요한 정보를 수집하는 방법을 설명합니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:12
+msgid "To configure the controller:"
+msgstr "컨트롤러를 구성하려면 다음을 수행합니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:14
+msgid "To create a service account, you may download and use this sample service account, :download:`containergroup sa <../../common/source/containergroup-sa.yml>` and modify it as needed to obtain the above credentials."
+msgstr "서비스 계정을 생성하려면 이 샘플 서비스 계정을 다운로드하여 사용할 수 있습니다. :다운로드:`containergroup sa <../../common/source/containergroup-sa.yml>` 는 위의 인증 정보를 얻기 위해 필요에 따라 수정할 수 있습니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:16
+msgid "Apply the configuration from ``containergroup-sa.yml``::"
+msgstr "``containergroup-sa.yml``::의 구성을 적용합니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:21
+msgid "Get the secret name associated with the service account::"
+msgstr "서비스 계정과 연결된 시크릿 이름을 가져옵니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:25
+msgid "Get the token from the secret::"
+msgstr "시크릿에서 토큰을 가져옵니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:29
+msgid "Get the CA cert::"
+msgstr "CA 인증서를 가져옵니다."
+
+#: ../../../common/source/get-creds-from-service-account.rst:33
+msgid "Use the contents of ``containergroup-sa.token`` and ``containergroup-ca.crt`` to provide the information for the :ref:`ug_credentials_ocp_k8s` required for the container group."
+msgstr "``containergroup-sa.token`` 및 ``containergroup-ca.crt`` 콘텐츠를 사용하여 컨테이너 그룹에 필요한 :ref:`ug_credentials_ocp_k8s` 에 대한 정보를 제공합니다."
+
+#: ../../source/containers_instance_groups.rst:287
+msgid "To create a container group:"
+msgstr "컨테이너 그룹을 생성하려면 다음을 수행합니다."
+
+#: ../../source/containers_instance_groups.rst:289
+msgid "Use the controller user interface to create an :ref:`ug_credentials_ocp_k8s` credential that will be used with your container group, see :ref:`ug_credentials_add` in the |atu| for detail."
+msgstr "컨트롤러 사용자 인터페이스를 사용하여 컨테이너 그룹과 함께 사용할 :ref:`ug_credentials_ocp_k8s` 인증 정보를 생성합니다. 자세한 내용은 |atu|에서 :ref:`ug_credentials_add`를 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:291
+msgid "Create a new container group by navigating to the Instance Groups configuration window by clicking **Instance Groups** from the left navigation bar."
+msgstr "왼쪽 탐색 모음에서 **인스턴스 그룹**을 클릭해 인스턴스 그룹 구성 창으로 이동하여 새 컨테이너 그룹을 생성합니다."
+
+#: ../../source/containers_instance_groups.rst:293
+msgid "Click the **Add** button and select **Create Container Group**."
+msgstr "**추가** 버튼을 클릭하고 **컨테이너 그룹 생성**을 선택합니다."
+
+#: ../../source/containers_instance_groups.rst:295
+msgid "|IG - create new CG|"
+msgstr "|IG - create new CG|"
+
+#: ../../source/containers_instance_groups.rst:299
+msgid "Enter a name for your new container group and select the credential previously created to associate it to the container group."
+msgstr "새 컨테이너 그룹의 이름을 입력하고 이전에 생성된 인증 정보를 선택하여 컨테이너 그룹에 연결합니다."
+
+#: ../../source/containers_instance_groups.rst:304
+msgid "Customize the Pod spec"
+msgstr "Pod 사양 사용자 지정"
+
+#: ../../source/containers_instance_groups.rst:306
+msgid "|aap| provides a simple default Pod specification, however, you can provide a custom YAML (or JSON) document that overrides the default Pod spec. This field uses any custom fields (i.e. ``ImagePullSecrets``) that can be \"serialized\" as valid Pod JSON or YAML. A full list of options can be found in the `OpenShift documentation <https://docs.openshift.com/online/pro/architecture/core_concepts/pods_and_services.html>`_."
+msgstr "|aap|에서 간단한 기본 Pod 사양을 제공하지만 기본 Pod 사양을 덮어쓰는 사용자 지정 YAML(또는 JSON) 문서를 제공할 수 있습니다. 이 필드는 유효한 Pod JSON 또는 YAML로 \"직렬화\"할 수 있는 모든 사용자 지정 필드(즉, ``ImagePullSecrets``)를 사용합니다. 전체 옵션 목록은 `OpenShift documentation <https://docs.openshift.com/online/pro/architecture/core_concepts/pods_and_services.html>`_에서 확인할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:308
+msgid "To customize the Pod spec, specify the namespace in the **Pod Spec Override** field by using the toggle to enable and expand the **Pod Spec Override** field and click **Save** when done."
+msgstr "Pod 사양을 사용자 지정하려면 토글을 사용하여 **Pod 사양 덮어쓰기** 필드를 활성화하고 확장하여 **Pod 사양 덮어쓰기** 필드에 네임스페이스를 지정한 다음, 완료되면 **저장**을 클릭합니다."
+
+#: ../../source/containers_instance_groups.rst:310
+msgid "|IG - CG customize pod|"
+msgstr "|IG - CG customize pod|"
+
+#: ../../source/containers_instance_groups.rst:314
+msgid "You may provide additional customizations, if needed. Click **Expand** to view the entire customization window."
+msgstr "필요한 경우 추가 사용자 지정을 제공할 수 있습니다. **확장**을 클릭하여 전체 사용자 지정 창을 봅니다."
+
+#: ../../source/containers_instance_groups.rst:320
+msgid "The image used at job launch time is determined by which |ee| is associated with the job. If a Container Registry credential is associated with the |ee|, then the controller will attempt to make a ``ImagePullSecret`` to pull the image. If you prefer not to give the service account permission to manage secrets, you must pre-create the ``ImagePullSecret`` and specify it on the pod spec, and omit any credential from the |ee| used."
+msgstr "작업 시작 시 사용되는 이미지는 작업과 연결된 |ee|에 따라 결정됩니다. 컨테이너 레지스트리 인증 정보가 |ee|과 연결되어 있는 경우 컨트롤러는 ``ImagePullSecret``을 생성하여 이미지를 가져오려고 합니다. 서비스 계정에 비밀 관리 권한을 부여하지 않으려면 ``ImagePullSecret``을 사전 생성하여 Pod 사양에 지정하고 사용되는 |ee|에서 모든 인증 정보를 생략해야 합니다."
+
+#: ../../source/containers_instance_groups.rst:322
+msgid "Refer to the *Allowing Pods to Reference Images from Other Secured Registries* section of the `Red Hat Container Registry Authentication article <https://access.redhat.com/RegistryAuthentication>`_ for more information on how to create image pull secrets."
+msgstr "이미지 가져오기 비밀을 생성하는 방법에 대한 자세한 내용은 `Red Hat Container Registry Authentication article <https://access.redhat.com/RegistryAuthentication>`_의 *Pod에서 다른 보안 레지스트리의 이미지를 참조하도록 허용* 섹션을 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:324
+msgid "Once the container group is successfully created, the **Details** tab of the newly created container group remains, which allows you to review and edit your container group information. This is the same menu that is opened if the Edit (|edit-button|) button is clicked from the **Instance Group** link. You can also edit **Instances** and review **Jobs** associated with this instance group."
+msgstr "컨테이너 그룹이 성공적으로 생성되면 새로 생성된 컨테이너 그룹의 **세부 정보** 탭이 유지되므로 컨테이너 그룹 정보를 검토하고 편집할 수 있습니다. **인스턴스 그룹** 링크에서 편집(|edit-button|) 버튼을 클릭했을 때 열리는 메뉴와 같습니다. **인스턴스**를 편집하고 이 인스턴스 그룹과 연결된 **작업**을 검토할 수도 있습니다."
+
+#: ../../source/containers_instance_groups.rst:328
+msgid "|IG - example CG successfully created|"
+msgstr "|IG - example CG successfully created|"
+
+#: ../../source/containers_instance_groups.rst:332
+msgid "Container groups and instance groups are labeled accordingly."
+msgstr "그에 따라 컨테이너 그룹과 인스턴스 그룹의 레이블이 지정됩니다."
+
+#: ../../source/containers_instance_groups.rst:336
+msgid "Despite the fact that customers have custom Pod specs, upgrades may be difficult if the default ``pod_spec`` changes. Most any manifest can be applied to any namespace, with the namespace specified separately, most likely you will only need to override the namespace. Similarly, pinning a default image for different releases of the platform to different versions of the default job runner container is tricky. If the default image is specified in the Pod spec, then upgrades do not pick up the new default changes are made to the default Pod spec."
+msgstr "고객에게 사용자 지정 Pod 사양이 있지만 기본 ``pod_spec``이 변경되면 업그레이드가 어려울 수 있습니다. 대부분의 매니페스트는 아무 네임스페이스에나 적용할 수 있으며, 네임스페이스가 별도로 지정된 경우 대체로 네임스페이스를 덮어쓰기만 하면 됩니다. 마찬가지로, 여러 플랫폼 릴리스의 기본 이미지를 다양한 버전의 기본 작업 러너 컨테이너에 고정하는 것은 까다로운 작업입니다. 기본 이미지가 Pod 사양에 지정된 경우 업그레이드하더라도 기본 Pod 사양에 새롭게 적용된 기본 변경 사항이 선택되지 않습니다."
+
+#: ../../source/containers_instance_groups.rst:340
+msgid "Verify container group functions"
+msgstr "컨테이너 그룹 기능 확인"
+
+#: ../../source/containers_instance_groups.rst:341
+msgid "To verify the deployment and termination of your container:"
+msgstr "컨테이너 배포 및 종료를 확인하려면 다음을 수행합니다."
+
+#: ../../source/containers_instance_groups.rst:343
+msgid "Create a mock inventory and associate the container group to it by populating the name of the container group in the **Instance Group** field. See :ref:`ug_inventories_add` in the |atu| for detail."
+msgstr "mock 인벤토리를 생성하고 **인스턴스 그룹** 필드에 컨테이너 그룹 이름을 채워 컨테이너 그룹을 인벤토리에 연결합니다. 자세한 내용은 |atu|에서 :ref:`ug_inventories_add`를 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:345
+msgid "|Dummy inventory|"
+msgstr "|Dummy inventory|"
+
+#: ../../source/containers_instance_groups.rst:349
+msgid "Create \"localhost\" host in inventory with variables:"
+msgstr "변수를 사용하여 인벤토리에 \"localhost\" 호스트를 생성합니다."
+
+#: ../../source/containers_instance_groups.rst:355
+msgid "|Inventory with localhost|"
+msgstr "|Inventory with localhost|"
+
+#: ../../source/containers_instance_groups.rst:359
+msgid "Launch an ad hoc job against the localhost using the *ping* or *setup* module. Even though the **Machine Credential** field is required, it does not matter which one is selected for this simple test."
+msgstr "*ping* 또는 *setup* 모듈을 사용하여 localhost에 애드혹 작업을 시작합니다. **머신 인증 정보** 필드는 필수지만 이 간단한 테스트에서는 어떤 것을 선택하든 상관없습니다."
+
+#: ../../source/containers_instance_groups.rst:361
+msgid "|Launch inventory with localhost|"
+msgstr "|Launch inventory with localhost|"
+
+#: ../../source/containers_instance_groups.rst:367
+msgid "You can see in the jobs detail view the container was reached successfully using one of ad hoc jobs."
+msgstr "작업 세부 정보 뷰에서는 애드혹 작업 하나를 사용하여 컨테이너에 성공적으로 도달한 것을 확인할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:369
+msgid "|Inventory with localhost ping success|"
+msgstr "|Inventory with localhost ping success|"
+
+#: ../../source/containers_instance_groups.rst:374
+msgid "If you have an OpenShift UI, you can see Pods appear and disappear as they deploy and terminate. Alternatively, you can use the CLI to perform a ``get pod`` operation on your namespace to watch these same events occurring in real-time."
+msgstr "OpenShift UI가 있는 경우 Pod가 배포되고 종료될 때 표시되고 사라지는 것을 확인할 수 있습니다. 또는 CLI를 사용해 네임스페이스에서 ``get pod`` 작업을 수행하여 동일한 이벤트가 발생하는 것을 실시간으로 확인할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:378
+msgid "View container group jobs"
+msgstr "컨테이너 그룹 작업 보기"
+
+#: ../../source/containers_instance_groups.rst:380
+msgid "When you run a job associated with a container group, you can see the details of that job in the **Details** view and its associated container group and the execution environment that spun up."
+msgstr "컨테이너 그룹과 연결된 작업을 실행하는 경우 **세부 정보** 뷰와 이 뷰의 연결된 인스턴스 그룹 및 실행 노드에서 해당 작업의 세부 정보를 확인할 수 있습니다."
+
+#: ../../source/containers_instance_groups.rst:382
+msgid "|IG - instances jobs|"
+msgstr "|IG - instances jobs|"
+
+#: ../../source/containers_instance_groups.rst:388
+msgid "Kubernetes API failure conditions"
+msgstr "Kubernetes API 실패 상태"
+
+#: ../../source/containers_instance_groups.rst:390
+msgid "When running a container group and the Kubernetes API responds that the resource quota has been exceeded, the controller keeps the job in pending state. Other failures result in the traceback of the **Error Details** field showing the failure reason, similar to the example here:"
+msgstr "컨테이너 그룹을 실행할 때 Kubernetes API가 리소스 할당량을 초과했다고 응답하는 경우 컨트롤러는 작업을 보류 상태로 유지합니다. 다른 실패가 발생하는 경우 다음 예제와 같이 실패 이유를 표시하는 **오류 세부 정보** 필드가 역추적됩니다."
+
+#: ../../source/containers_instance_groups.rst:397
+msgid "Container capacity limits"
+msgstr "컨테이너 용량 제한"
+
+#: ../../source/containers_instance_groups.rst:402
+msgid "Capacity limits and quotas for containers are defined via objects in the Kubernetes API:"
+msgstr "컨테이너의 용량 제한 및 할당량은 Kubernetes API에서 오브젝트를 통해 정의됩니다."
+
+#: ../../source/containers_instance_groups.rst:404
+msgid "To set limits on all pods within a given namespace, use the ``LimitRange`` object. Refer to the OpenShift documentation for `Quotas and Limit Ranges <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#overview>`_."
+msgstr "지정된 네임스페이스 내의 모든 Pod에 제한을 설정하려면 ``LimitRange`` 오브젝트를 사용합니다. `Quotas and Limit Ranges <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#overview>`_에 대한 OpenShift 문서를 참조하십시오."
+
+#: ../../source/containers_instance_groups.rst:406
+msgid "To set limits directly on the pod definition launched by the controller, see :ref:`ag_customize_pod_spec` and refer to the OpenShift documentation to set the options to `compute resources <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#dev-compute-resources>`_."
+msgstr "컨트롤러에서 시작한 Pod 정의에 대한 제한을 직접 설정하려면 :ref:`ag_customize_pod_spec` 를 참조하십시오. OpenShift 설명서를 참조하여 옵션을 `compute resources <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#dev-compute-resources>`_로 설정합니다."
+
+#: ../../source/containers_instance_groups.rst:410
+msgid "Container groups do not use the capacity algorithm that normal nodes use. You would need to explicitly set the number of forks at the job template level, for instance. If forks are configured in the controller, that setting will be passed along to the container."
+msgstr "컨테이너 그룹은 일반 노드가 사용하는 용량 알고리즘을 사용하지 않습니다. 예를 들어 작업 템플릿 수준에서 포크 수를 명시적으로 설정해야 합니다. 포크가 컨트롤러에서 구성된 경우 해당 설정이 컨테이너로 전달됩니다."
+

@@ -1,0 +1,81 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_inventory.rst:2
+msgid "Create a new Inventory"
+msgstr "新規インベントリーの作成"
+
+#: ../../source/create_inventory.rst:8
+msgid "An inventory is a collection of hosts managed by the controller. Organizations are assigned to inventories, while permissions to launch playbooks against inventories are controlled at the user and/or team level. For more information, refer to :ref:`Inventories <userguide:ug_inventories>`, :ref:`Users - Permissions <userguide:ug_users_permissions>`, and :ref:`Teams - Permissions <userguide:ug_teams_permissions>` in the |atu|."
+msgstr "インベントリーは、コントローラーが管理するホストのコレクションです。組織は、インベントリーに割り当てられますが、インベントリーに対して Playbook を起動するパーミッションは、ユーザーやチームレベルで制御されます。詳細は、『|atu|』の「:ref:`Inventories <userguide:ug_inventories>`」、「:ref:`Users - Permissions <userguide:ug_users_permissions>`」、および「:ref:`Teams - Permissions <userguide:ug_teams_permissions>`」を参照してください。"
+
+#: ../../source/create_inventory.rst:10
+msgid "To view existing inventories, click **Inventories** from the left navigation bar."
+msgstr "既存のインベントリーを表示するには、左側のナビゲーションバーで **インベントリー** をクリックします。"
+
+#: ../../source/create_inventory.rst:14
+msgid "|at| provides a demo inventory for you to use as you learn how the controller works. It can be used as is or edited later as needed. You may create another inventory if necessary. Refer to :ref:`ug_inventories_add` in the |atu| for detail."
+msgstr "|at| は、コントローラーがどのように機能するかを学習するときに使用するデモ用インベントリーを提供します。そのまま使用することも、必要に応じて後で編集することもできます。必要に応じて、別のインベントリーを作成することもできます。詳細は、『|atu|』で「:ref:`ug_inventories_add`」を参照してください。"
+
+#: ../../source/create_inventory.rst:16
+msgid "For the purpose of this Quick Start Guide, leave the default inventory as is."
+msgstr "このクイックスタートガイドの目的上、デフォルトのインベントリーをそのままにしておきます。"
+
+#: ../../source/create_inventory.rst:18
+msgid "Click **Demo Inventory** to view its details."
+msgstr "**デモインベントリー** をクリックして、その詳細を表示します。"
+
+#: ../../source/create_inventory.rst:20
+msgid "|Inventories - Demo inventory details|"
+msgstr "|Inventories - Demo inventory details|"
+
+#: ../../source/create_inventory.rst:24
+msgid "As with organizations, inventories also have associated users and teams that you can view through the **Access** tab."
+msgstr "組織と同様、インベントリーには、**アクセス** タブで確認できる関連ユーザーおよびチームもあります。"
+
+#: ../../source/create_inventory.rst:28
+msgid "A default admin user with the role of System Administrator has been automatically populated for this demo inventory."
+msgstr "このデモ用インベントリーには、システム管理者のロールを持つデフォルトの管理者ユーザーが自動的に入力されています。"
+
+#: ../../source/create_inventory.rst:32
+msgid "Groups and Hosts"
+msgstr "グループおよびホスト"
+
+#: ../../source/create_inventory.rst:34
+msgid "Note that inventories are divided into groups and hosts. A group might represent a particular environment (e.g. \"Datacenter 1\" or \"Stage Testing\"), a server type (e.g. \"Application Servers\" or \"DB Servers\"), or any other representation of your environment. The groups and hosts that belong to the Demo inventory are shown in the **Groups** and **Hosts** tabs, respectively."
+msgstr "インベントリーはグループとホストに分類される点に注意してください。グループは、特定の環境 (例: 「データセンター1」または「ステージテスト」)、サーバータイプ (例: 「アプリケーションサーバー」または「DB サーバー」)、その他の環境などを表します。Demo インベントリーに所属するグループおよびホストは、**グループ** および **ホスト** タブにそれぞれ表示されます。"
+
+#: ../../source/create_inventory.rst:36
+msgid "To add new groups, click the **Add** button in the Groups screen."
+msgstr "新規グループを追加するには、グループ画面で **追加** ボタンをクリックします。"
+
+#: ../../source/create_inventory.rst:38
+msgid "Similarly, in the **Hosts** tab, click the **Add** button to add hosts to groups."
+msgstr "同様に **ホスト** タブで **追加** ボタンをクリックして、グループにホストを追加します。"
+
+#: ../../source/create_inventory.rst:40
+msgid "For the purposes of this Quick Start and to test that the controller is setup properly, a local host has been added for your use."
+msgstr "このクイックスタートで使用し、コントローラーの設定を正しくテストする目的で、ローカルホストを利用できるように追加しています。"
+
+#: ../../source/create_inventory.rst:44
+msgid "Suppose that the organization you created earlier has a group of web server hosts supporting a particular application. To add these hosts to the inventory, create a group and add the web server hosts."
+msgstr "すでに作成した組織に、特定のアプリケーションに対応する Web サーバーホストのグループがあるとします。これらのホストをインベントリーに追加するには、グループを作成し、Web サーバーホストを追加します。"
+
+#: ../../source/create_inventory.rst:46
+msgid "Click **Cancel** (if no changes were made) or use the breadcrumb navigational links at the top of the |at| browser to return to the Inventories list view. Clicking **Save** does not exit the Details dialog."
+msgstr "**キャンセル** (変更がない場合) をクリックするか、|at| ブラウザーの上部にあるブレッドクラムのナビゲーションリンクを使用して、インベントリーの一覧表示に戻ります。**保存** をクリックしても詳細ダイアログは終了しません。"
+

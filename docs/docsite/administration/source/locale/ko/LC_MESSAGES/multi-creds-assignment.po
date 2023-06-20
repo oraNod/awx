@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/multi-creds-assignment.rst:4
+msgid "Multi-Credential Assignment"
+msgstr "다중 인증 정보 할당"
+
+#: ../../source/multi-creds-assignment.rst:11
+msgid "|at| provides support for assigning zero or more credentials to a job template."
+msgstr "|at|에서는 작업 템플릿에 0개 이상의 인증 정보를 할당할 수 있도록 지원합니다."
+
+#: ../../source/multi-creds-assignment.rst:14
+msgid "Background"
+msgstr "배경 정보"
+
+#: ../../source/multi-creds-assignment.rst:16
+msgid "Prior to |at| 3.3, job templates had a certain set of requirements with respect to credentials:"
+msgstr "|at| 3.3 이전에는 작업 템플릿에 인증 정보와 관련된 일련의 특정 요구 사항이 있었습니다."
+
+#: ../../source/multi-creds-assignment.rst:18
+msgid "All job templates (and jobs) were required to have exactly *one* Machine/SSH or Vault credential (or one of both)."
+msgstr "모든 작업 템플릿(및 작업)에 정확히 *1개*의 머신/SSH 또는 자격 증명 모음 인증 정보(또는 둘 중 하나)가 있어야 했습니다."
+
+#: ../../source/multi-creds-assignment.rst:19
+msgid "All job templates (and jobs) could have zero or more \"extra\" credentials."
+msgstr "모든 작업 템플릿(및 작업)에 0개 이상의 \"추가\" 인증 정보가 포함될 수 있었습니다."
+
+#: ../../source/multi-creds-assignment.rst:20
+msgid "Extra credentials represented \"Cloud\" and \"Network\" credentials that could be used to provide authentication to external services via environment variables (e.g., ``AWS_ACCESS_KEY_ID``)."
+msgstr "추가 인증 정보는 환경 변수(예: ``AWS_ACCESS_KEY_ID``)를 통해 외부 서비스에 인증을 제공하는 데 사용할 수 있는 \"Cloud\" 및 \"Network\" 인증 정보를 나타냈습니다."
+
+#: ../../source/multi-creds-assignment.rst:22
+msgid "This model required a variety of disjoint interfaces for specifying credentials on a job template and it lacked the ability associate multiple Vault credentials with a playbook run, a use case supported by Ansible core from Ansible 2.4 onwards."
+msgstr "이 모델에는 작업 템플릿에 인증 정보를 지정하기 위한 분리된 다양한 인터페이스가 필요했으며, 여러 자격 증명 모음 인증 정보를 플레이북 실행에 연결하는 기능(Ansible 2.4 이후 Ansible 코어에서 지원하는 사용 사례)이 없었습니다."
+
+#: ../../source/multi-creds-assignment.rst:24
+msgid "This model also poses a stumbling block for certain playbook execution workflows, such as having to attach a \"dummy\" Machine/SSH credential to the job template simply to satisfy the requirement."
+msgstr "또한 이 모델은 단순히 요구 사항을 충족하기 위해 \"더미\" 머신/SSH 인증 정보를 작업 템플릿에 연결해야 하는 것과 같은 장애물을 특정 플레이북 실행 워크플로에 제기합니다."
+
+#: ../../source/multi-creds-assignment.rst:27
+msgid "Important Changes"
+msgstr "중요한 변경 사항"
+
+#: ../../source/multi-creds-assignment.rst:29
+msgid "Job templates now have a single interface for credential assignment. From the API endpoint:"
+msgstr "이제 작업 템플릿에 인증 정보 할당을 위한 단일 인터페이스가 있습니다. API 끝점에서 다음을 수행합니다."
+
+#: ../../source/multi-creds-assignment.rst:31
+msgid "``GET /api/v2/job_templates/N/credentials/``"
+msgstr "``GET /api/v2/job_templates/N/credentials/``"
+
+#: ../../source/multi-creds-assignment.rst:33
+msgid "You can associate and disassociate credentials using ``POST`` requests, similar to the behavior in the deprecated ``extra_credentials`` endpoint:"
+msgstr "더 이상 사용되지 않는 ``extra_credentials`` 끝점에서의 동작과 유사하게 ``POST`` 요청을 사용하여 인증 정보를 연결 및 연결 해제할 수 있습니다."
+
+#: ../../source/multi-creds-assignment.rst:41
+msgid "Under this model, a job template is considered valid even when there are *no* credentials assigned to it. This model also provides users the ability to assign multiple Vault credentials to a job template."
+msgstr "이 모델에서는 할당된 인증 정보가 *없는* 경우에도 작업 템플릿이 유효한 것으로 간주됩니다. 또한 이 모델에서는 사용자가 작업 템플릿에 여러 자격 증명 모음 인증 정보를 할당할 수 있습니다."
+
+#: ../../source/multi-creds-assignment.rst:45
+msgid "Launch Time Considerations"
+msgstr "시작 시간 고려 사항"
+
+#: ../../source/multi-creds-assignment.rst:47
+msgid "Prior to |at| 3.3, job templates had a configurable attribute, ``ask_credential_on_launch``. This value was used at launch time to determine which missing credential values were necessary for launch - this was primarily used as a way to specify a Machine/SSH credential to satisfy the minimum credential requirement."
+msgstr "|at| 3.3 이전에는 작업 템플릿에 구성 가능한 ``ask_credential_on_launch`` 속성이 있었습니다. 이 값은 시작 시 필요한, 누락된 인증 정보 값을 확인하는 데 사용되었으며, 주로 최소 인증 정보 요구 사항을 충족하기 위해 머신/SSH 인증 정보를 지정하는 방법 중 하나로 사용되었습니다."
+
+#: ../../source/multi-creds-assignment.rst:50
+msgid "Under the new unified credential list model, this attribute still exists, but it is no longer \"requiring\" a credential.  Now when ``ask_credential_on_launch`` is ``True``, it signifies that if desired, you may specify a list of credentials at launch time to override those defined on the job template. For example:"
+msgstr "새로운 통합 인증 정보 목록 모델에서도 이 속성은 여전히 존재하지만 더 이상 인증 정보를 \"요청\"하지 않습니다.  이제 ``ask_credential_on_launch``가 ``True``이면, 필요한 경우 작업 템플릿에 정의된 인증 정보를 덮어쓸 인증 정보 목록을 시작 시 지정할 수 있음을 나타냅니다. 예:"
+
+#: ../../source/multi-creds-assignment.rst:56
+msgid "If ``ask_credential_on_launch`` is ``False``, it signifies that custom credentials provided in the ``POST /api/v2/job_templates/N/launch/`` will be ignored."
+msgstr "``ask_credential_on_launch``가 ``False``이면, ``POST /api/v2/job_templates/N/launch/``에 제공된 사용자 지정 인증 정보가 무시됨을 나타냅니다."
+
+#: ../../source/multi-creds-assignment.rst:58
+msgid "Under this model, the only purpose for ``ask_credential_on_launch`` is to signal API clients to prompt the user for (optional) changes at launch time."
+msgstr "이 모델에서 ``ask_credential_on_launch``는 시작 시 사용자에게 변경 사항(선택 사항)을 확인하도록 API 클라이언트에 알리는 용도로만 사용됩니다."
+
+#: ../../source/multi-creds-assignment.rst:64
+msgid "Multi-Vault Credentials"
+msgstr "다중 자격 증명 모음 인증 정보"
+
+#: ../../source/multi-creds-assignment.rst:66
+msgid "As it possible to assign multiple credentials to a job, you can specify multiple Vault credentials to decrypt when your job template runs. This functionality mirrors the support for `multiple vault passwords for a playbook run <http://docs.ansible.com/ansible/latest/vault.html#vault-ids-and-multiple-vault-passwords>`_ in Ansible 2.4 and later."
+msgstr "작업에 여러 인증 정보를 할당할 수 있으므로 작업 템플릿이 실행될 때 암호를 해독하기 위해 여러 자격 증명 모음 인증 정보를 지정할 수 있습니다. 이 기능은 Ansible 2.4 이상의 `multiple vault passwords for a playbook run <http://docs.ansible.com/ansible/latest/vault.html#vault-ids-and-multiple-vault-passwords>`_ 지원을 미러링합니다."
+
+#: ../../source/multi-creds-assignment.rst:68
+msgid "Vault credentials now have an optional field, ``vault_id``, which is analogous to the ``--vault-id`` argument to ``ansible-playbook``. To run a playbook which makes use of multiple vault passwords:"
+msgstr "이제 자격 증명 모음 인증 정보에 ``ansible-playbook``에 대한 ``--vault-id`` 인수와 유사한, 선택적 ``vault_id`` 필드가 있습니다. 여러 자격 증명 모음 암호를 사용하는 플레이북을 실행하려면 다음을 수행합니다."
+
+#: ../../source/multi-creds-assignment.rst:70
+msgid "Create a Vault credential in the controller for each vault password; specify the Vault ID as a field on the credential and input the password (which will be encrypted and stored)."
+msgstr "컨트롤러에서 각 자격 증명 모음 암호에 대한 자격 증명 모음 인증 정보를 생성합니다. 자격 증명 모음 ID를 인증 정보의 필드로 지정하고 암호를 입력합니다(암호화되어 저장됨)."
+
+#: ../../source/multi-creds-assignment.rst:72
+msgid "Assign multiple vault credentials to the job template via the new credentials endpoint:"
+msgstr "새 인증 정보 끝점을 통해 작업 템플릿에 여러 자격 증명 모음 인증 정보를 할당합니다."
+
+#: ../../source/multi-creds-assignment.rst:83
+msgid "Alternatively, you can perform the same assignment in the controller User Interface in the *Create Credential* page:"
+msgstr "또는 컨트롤러 사용자 인터페이스의 *인증 정보 생성* 페이지에서 동일한 할당을 수행할 수 있습니다."
+
+#: ../../source/multi-creds-assignment.rst:87
+msgid "In the above example, the credential created specifies the secret to be used by its Vault Identifier (\"first\") and password pair. When this credential is used in a Job Template, as in the example below, it will only decrypt the secret associated with the \"first\" Vault ID:"
+msgstr "위의 예제에서 생성된 인증 정보는 사용할 시크릿을 해당 자격 증명 모음 식별자(\"first\")와 암호 쌍으로 지정합니다. 이 인증 정보가 작업 템플릿에서 사용되는 경우, 아래 예제에서와 같이 \"first\" 자격 증명 모음 ID와 연결된 시크릿의 암호만 해독합니다."
+
+#: ../../source/multi-creds-assignment.rst:91
+msgid "If you have a playbook that is setup the traditional way with all the secrets in one big file without distinction, then leave the **Vault Identifier** field blank when setting up the Vault credential:"
+msgstr "하나의 큰 파일에 모든 시크릿을 구분 없이 포함하는 기존 방식으로 설정된 플레이북이 있는 경우, 자격 증명 모음 인증 정보를 설정할 때 **자격 증명 모음 식별자** 필드를 비워 둡니다."
+
+#: ../../source/multi-creds-assignment.rst:97
+msgid "Prompted Vault Credentials"
+msgstr "프롬프트 자격 증명 모음 인증 정보"
+
+#: ../../source/multi-creds-assignment.rst:99
+msgid "Passwords for Vault credentials that are marked with \"Prompt on launch\", the launch endpoint of any related Job Templates will communicate necessary Vault passwords via the ``passwords_needed_to_start`` key:"
+msgstr "\"시작 시 프롬프트\"로 표시된 자격 증명 모음 인증 정보의 암호를 위해 관련 작업 템플릿의 시작 끝점은 ``passwords_needed_to_start`` 키를 통해 필요한 자격 증명 모음 암호를 전달합니다."
+
+#: ../../source/multi-creds-assignment.rst:111
+msgid "``X`` and ``Y`` in the above example are primary keys of the associated Vault credentials."
+msgstr "위 예제의 ``X``와 ``Y``는 관련 자격 증명 모음 인증 정보의 기본 키입니다."
+
+#: ../../source/multi-creds-assignment.rst:125
+msgid "Linked credentials"
+msgstr "연결된 인증 정보"
+
+#: ../../source/multi-creds-assignment.rst:127
+msgid "Instead of uploading sensitive credential information into the controller, you can link credential fields to external systems and using them to run your playbooks. Refer to the :ref:`Secret Management System <userguide:ug_credential_plugins>` section of the |atu|."
+msgstr "중요한 인증 정보를 컨트롤러에 업로드하는 대신, 인증 정보 필드를 외부 시스템에 연결하고 외부 시스템을 사용하여 플레이북을 실행할 수 있습니다. |atu|의 :ref:`Secret Management System <userguide:ug_credential_plugins>` 섹션을 참조하십시오."
+

@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/index.rst:10
+msgid "Automation Controller Quick Setup Guide |versionshortest|"
+msgstr "自动化控制器快速设置指南 |versionshortest|"
+
+#: ../../source/index.rst:12
+msgid "Thank you for your interest in |RHAT|. |At| is a commercial offering that helps teams manage complex multi-tier deployments by adding control, knowledge, and delegation to Ansible-powered environments."
+msgstr "感谢您对 |RHAT| 的兴趣。|At| 是一个商业产品，它可以帮助团队通过增加控制、知识、协调基于 Ansible 的环境来更好地管理多阶的复杂部署环境。"
+
+#: ../../source/index.rst:14
+msgid "The |atqs| covers basic steps for using |at| and running your first playbook. This document has been updated to include information for the latest release of |atversionshort|."
+msgstr "|atqs| 涵盖了使用 |at| 并运行第一个 playbook 的基本步骤。此文档已更新，以包含 |atversionshort| 最新发行版本的信息。"
+
+#: ../../source/index.rst:16
+msgid "**We Need Feedback!**"
+msgstr "**我们需要您的反馈意见！**"
+
+#: ../../source/index.rst:18
+msgid "If you spot a typo in this documentation, or if you have thought of a way to make this manual better, we would love to hear from you! Please send an email to: docs@ansible.com"
+msgstr "如果您发现本文档中有拼写错误，或者您有改进本手册的建议，我们非常希望听到您的意见！请将电子邮件发送到：docs@ansible.com"
+
+#: ../../source/index.rst:20
+msgid "If you have a suggestion, try to be as specific as possible when describing it. If you have found an error, please include the manual's title, chapter number/section number, and some of the surrounding text so we can find it easily. We may not be able to respond to every message sent to us, but you can be sure that we will be reading them all!"
+msgstr "如果您有建议，请尽量具体描述它。如果您发现了错误，请提供文档的名称、章节号以及一些原文以便我们可以快速找到您所报告的问题。我们可能无法对用户发给我们的每一条信息进行回复，但我们会仔细阅用户发给我们的所有信息。"
+
+#: ../../source/index.rst:26
+msgid "|atversion|; |pubdate|; https://access.redhat.com/"
+msgstr "|atversion|; |pubdate|; https://access.redhat.com/"
+
+#: ../../source/index.rst:54
+msgid "Index"
+msgstr "索引"
+
+#: ../../source/index.rst:56
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../../common/source/copyright.rst:2
+msgid "Copyright © Red Hat, Inc."
+msgstr "Copyright © Red Hat, Inc."
+
+#: ../../../common/source/copyright.rst:4
+msgid "Ansible, |aap|, Red Hat, and |rhel| are trademarks of Red Hat, Inc., registered in the United States and other countries."
+msgstr "Ansible、|aap|、Red Hat 和 |rhel| 是 Red Hat, Inc. 的商标，在美国和其它国家的注册。"
+
+#: ../../../common/source/copyright.rst:6
+msgid "If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original version."
+msgstr "如果您发布本文档，或者修改本文档，您必须为 Red Hat, Inc. 提供相关功能，并提供到原始版本的链接。"
+
+#: ../../../common/source/copyright.rst:8
+msgid "**Third Party Rights**"
+msgstr "**第三方权利**"
+
+#: ../../../common/source/copyright.rst:10
+msgid "Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+msgstr "Ubuntu 和 Canonical 是 Canonical Inc 的注册商标。"
+
+#: ../../../common/source/copyright.rst:12
+msgid "The CentOS Project is copyright protected. The CentOS Marks are trademarks of Red Hat, Inc. (“Red Hat”)."
+msgstr "CentOS 项目受版权保护，CentOS Marks 是 Red Hat, Inc.（“Red Hat”）商标。"
+
+#: ../../../common/source/copyright.rst:14
+msgid "Microsoft, Windows, Windows Azure, and Internet Explore are trademarks of Microsoft, Inc."
+msgstr "Microsoft 、Windows 、Windows Azure 和 Internet Explore 是 Microsoft, Inc. 的商标。"
+
+#: ../../../common/source/copyright.rst:16
+msgid "VMware is a registered trademark or trademark of VMware, Inc."
+msgstr "VMware 是 VMware, Inc. 的注册商标或商标。"
+
+#: ../../../common/source/copyright.rst:18
+msgid "Amazon Web Services\", \"AWS\", \"Amazon EC2\", and \"EC2”, are trademarks of Amazon Web Services, Inc. or its affiliates."
+msgstr "Amazon Web Services\", \"AWS\", \"Amazon EC2\", 和 \"EC2\" 是 Amazon Web Services, Inc. 及其子公司的商标。"
+
+#: ../../../common/source/copyright.rst:20
+msgid "OpenStack™ and OpenStack logo are trademarks of OpenStack, LLC."
+msgstr "OpenStack (R) 和 OpenStack 徽标 (OpenStack) 是 OpenStack (LLC) 的商标。"
+
+#: ../../../common/source/copyright.rst:22
+msgid "Chrome™ and Google Compute Engine™ service registered trademarks of Google Inc."
+msgstr "Chrome™ 和 Google Compute Engine™ 服务注册商标 Google Inc。"
+
+#: ../../../common/source/copyright.rst:24
+msgid "Safari® is a registered trademark of Apple, Inc."
+msgstr "Safari® 是 Apple, Inc 的注册商标。"
+
+#: ../../../common/source/copyright.rst:26
+msgid "Firefox® is a registered trademark of the Mozilla Foundation."
+msgstr "Firefox® 是 Mozilla Foundation 的注册商标。"
+
+#: ../../../common/source/copyright.rst:28
+msgid "All other trademarks are the property of their respective owners."
+msgstr "所有其他商标都是其各自拥有者。"
+

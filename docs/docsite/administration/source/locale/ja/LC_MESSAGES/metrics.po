@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/metrics.rst:4
+msgid "Metrics"
+msgstr "メトリックス"
+
+#: ../../source/metrics.rst:9
+msgid "A metrics endpoint is available in the API: ``/api/v2/metrics/`` that surfaces instantaneous metrics about the controller, which can be consumed by system monitoring software like the open source project Prometheus."
+msgstr "API ではメトリクスエンドポイントが利用できます。``/api/v2/metrics/`` は、オープンソースプロジェクトの Prometheus などのシステム監視ソフトウェアで使用できるように、コントローラーのメトリクスを瞬時に公開します。"
+
+#: ../../source/metrics.rst:11
+msgid "The type of data shown at the ``metrics/`` endpoint is ``Content-type: text/plain`` and ``application/json`` as well. This endpoint contains useful information, such as counts of how many active user sessions there are, or how many jobs are actively running on each controller node. Prometheus can be configured to scrape these metrics from the controller by hitting the controller metrics endpoint and storing this data in a time-series database. Clients can later use Prometheus in conjunction with other software like Grafana or Metricsbeat to visualize that data and set up alerts."
+msgstr "``metrics/`` エンドポイントで表示されるデータタイプは ``Content-type: text/plain`` と ``application/json`` で、アクティブなユーザーセッション数または各コントローラーノードで実行中のジョブ数などの便利な情報が含まれます。Prometheus は、コントローラーメトリクスエンドポイントに到達し、時系列データベースにこのデータを保存することで、コントローラーからこれらのメトリクスを収集するように設定できます。クライアントは後ほど、Grafana または Metricsbeat などの他のソフトウェアと Prometheus を連携して使用し、データを視覚化してアラートを設定できます。"
+
+#: ../../source/metrics.rst:14
+msgid "Set up Prometheus"
+msgstr "Prometheus の設定"
+
+#: ../../source/metrics.rst:16
+msgid "To set up and use Prometheus, you will need to install Prometheus on a virtual machine or container. Refer to the `Prometheus documentation`_ for further detail."
+msgstr "Prometheus の設定および使用には、仮想マシンまたはコンテナーに Prometheus をインストールする必要があります。詳細は、`Prometheus documentation`_ を参照してください。"
+
+#: ../../source/metrics.rst:20
+msgid "In the Prometheus config file (typically ``prometheus.yml``), specify a ``<token_value>``, a valid user/password for a controller user you have created, and a ``<controller_host>``."
+msgstr "Prometheus の設定ファイル (通常 ``prometheus.yml``) で ``<token_value>``、作成したコントローラーユーザーの有効なユーザー/パスワードおよび ``<controller_host>`` を指定します。"
+
+#: ../../source/metrics.rst:22
+msgid "Alternatively, you can provide an OAuth2 token (which can be generated at ``/api/v2/users/N/personal_tokens/``). By default, the config assumes a user with username=admin and password=password."
+msgstr "または、OAuth2 トークン (``/api/v2/users/N/personal_tokens/`` で生成可能) を指定することもできます。デフォルトでは、この設定は、username=admin および password=password のユーザーを想定します。"
+
+#: ../../source/metrics.rst:24
+msgid "Using an OAuth2 Token, created at the ``/api/v2/tokens`` endpoint to authenticate prometheus with the controller, the following example provides a valid scrape config if the URL for your controller's metrics endpoint was ``https://controller_host:443/metrics``."
+msgstr "コントローラーで Prometheus を認証するために ``/api/v2/tokens`` エンドポイントで作成した OAuth2 トークンを使用した以下の例では、コントローラーのメトリクスエンドポイントが ``https://controller_host:443/metrics`` の場合の有効な収集設定を紹介しています。"
+
+#: ../../source/metrics.rst:44
+msgid "For help configuring other aspects of Prometheus, such as alerts and service discovery configurations, refer to the `Prometheus configuration docs`_."
+msgstr "アラートやサービス検出設定などの他の面の Prometheus 設定に関するヘルプは、「`Prometheus configuration docs`_」を参照してください。"
+
+#: ../../source/metrics.rst:48
+msgid "If Prometheus is already running, you must restart it in order to apply the configuration changes by making a **POST** to the reload endpoint, or by killing the Prometheus process or service."
+msgstr "Prometheus がすでに実行中の場合には、再読み込みしたエンドポイントに **POST** 要求を送信するか、Prometheus プロセスまたはサービスを終了して、設定の変更を適用するために、再起動する必要があります。"
+
+#: ../../source/metrics.rst:50
+msgid "Use a browser to navigate to your graph in the Prometheus UI at ``http://your_prometheus:9090/graph`` and test out some queries. For example, you can query the current number of active controller user sessions by executing: ``awx_sessions_total{type=\"user\"}``."
+msgstr "ブラウザーを使用して、``http://your_prometheus:9090/graph`` の Prometheus UI のグラフに移動し、クエリーをテストします。たとえば、``awx_sessions_total{type=\"user\"}`` を実行して、現在アクティブなコントローラーのユーザーセッション数をクエリーすることができます。"
+
+#: ../../source/metrics.rst:54
+msgid "Refer to the metrics endpoint in the controller API for your instance (``api/v2/metrics``) for more ways to query."
+msgstr "他のクエリー方法については、インスタンスのコントローラー API (``api/v2/metrics``) のメトリクスエンドポイントを参照してください。"
+

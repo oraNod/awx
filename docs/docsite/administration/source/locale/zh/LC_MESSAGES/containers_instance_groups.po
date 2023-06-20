@@ -1,0 +1,557 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/containers_instance_groups.rst:4
+msgid "Container and Instance Groups"
+msgstr "容器和实例组"
+
+#: ../../source/containers_instance_groups.rst:10
+msgid "The controller allows you to execute jobs via ansible playbook runs directly on a member of the cluster or in a namespace of an Openshift cluster with the necessary service account provisioned called a Container Group. You can execute jobs in a container group only as-needed per playbook. For more information, see :ref:`ag_container_groups` towards the end of this section."
+msgstr "控制器允许您通过 ansible playbook 直接在集群成员或具有必要服务帐户的 Openshift 集群的命名空间中执行作业。您可以在每个 playbook 中根据需要在容器组中执行作业。如需更多信息，请参阅本节末尾的 :ref:`ag_container_groups`。"
+
+#: ../../source/containers_instance_groups.rst:12
+msgid "For |ees|, see :ref:`ug_execution_environments` in the |atu|."
+msgstr "对于 |ees|，请参阅 |atu| 中的 :ref:`ug_execution_environments`。"
+
+#: ../../source/containers_instance_groups.rst:17
+msgid "Instance Groups"
+msgstr "实例组"
+
+#: ../../source/containers_instance_groups.rst:19
+msgid "Instances can be grouped into one or more Instance Groups. Instance groups can be assigned to one or more of the resources listed below."
+msgstr "实例可以被分为一个或多个不同的实例组。实例组可以分配给下面列出的一个或多个资源。"
+
+#: ../../source/containers_instance_groups.rst:21
+msgid "Organizations"
+msgstr "机构（Organization）"
+
+#: ../../source/containers_instance_groups.rst:22
+msgid "Inventories"
+msgstr "清单（Inventory）"
+
+#: ../../source/containers_instance_groups.rst:23
+msgid "Job Templates"
+msgstr "作业模板（Job Template）"
+
+#: ../../source/containers_instance_groups.rst:25
+msgid "When a job associated with one of the resources executes, it will be assigned to the instance group associated with the resource. During the execution process, instance groups associated with Job Templates are checked before those associated with Inventories. Similarly, instance groups associated with Inventories are checked before those associated with Organizations. Thus, Instance Group assignments for the three resources form a hierarchy: Job Template **>** Inventory **>** Organization."
+msgstr "当与其中一个资源关联的作业执行时，它将被分配给与该资源关联的实例组。在执行过程中，会先检查与作业模板关联的实例组，然后检查与清单关联的实例组。类似地，先检查与清单关联的实例组，然后检查与机构关联的实例组。因此，三种资源的实例组分配形成一个层级结构：作业模板 **>** 清单 **>** 机构。"
+
+#: ../../source/containers_instance_groups.rst:27
+msgid "Here are some of the things to consider when working with instance groups:"
+msgstr "在处理实例组时需要考虑以下几个问题："
+
+#: ../../source/containers_instance_groups.rst:29
+msgid "You may optionally define other groups and group instances in those groups. These groups should be prefixed with ``instance_group_``. Instances are required to be in the ``automationcontroller`` or ``execution_nodes`` group alongside other ``instance_group_`` groups. In a clustered setup, at least one instance **must** be present in the ``automationcontroller`` group, which will appear as ``controlplane`` in the API instance groups. See :ref:`ag_automationcontroller_group_policies` for example scenarios."
+msgstr "您也可以在这些组中定义其他组和组实例。这些组需要带有前缀 ``instance_group_``。实例需要在 ``instance_group_`` 组以及 ``automationcontroller`` 或 ``execution_nodes`` 组中。在一个集群设置中，至少有一个实例 **必须**存在于 ``automationcontroller`` 组中，该组会在 API 实例组中显示为 ``controlplane``。示例情景请参阅 :ref:`ag_automationcontroller_group_policies`。"
+
+#: ../../source/containers_instance_groups.rst:31
+msgid "A ``default`` API instance group is automatically created with all nodes capable of running jobs. Technically, it is like any other instance group but if a specific instance group is not associated with a specific resource, then job execution will always fall back to the ``default`` instance group. The ``default`` instance group always exists (it cannot be deleted nor renamed)."
+msgstr "``default`` API 实例组会自动创建用于运行作业的所有节点。从技术上讲，它和任何其他实例组一样，但如果一个特定的实例组没有与一个特定资源相关联，则作业执行始终回退到 ``default`` 实例组。``default`` 实例组始终存在（它不能被删除或重命名）。"
+
+#: ../../source/containers_instance_groups.rst:33
+msgid "Do not create a group named ``instance_group_default``."
+msgstr "请勿创建名为 ``instance_group_default`` 的组。"
+
+#: ../../source/containers_instance_groups.rst:35
+msgid "Do not name any instance the same as a group name."
+msgstr "请勿将任何实例命名为与组名相同。"
+
+#: ../../source/containers_instance_groups.rst:41
+msgid "``automationcontroller`` group policies"
+msgstr "``automationcontroller`` 组策略"
+
+#: ../../source/containers_instance_groups.rst:46
+msgid "Use the following criteria when defining nodes:"
+msgstr "在定义节点时使用以下条件："
+
+#: ../../source/containers_instance_groups.rst:48
+msgid "nodes in the ``automationcontroller`` group can define ``node_type`` hostvar to be ``hybrid`` (default) or ``control``"
+msgstr "``automationcontroller`` 组中的节点可以定义 ``node_type`` hostvar 为 ``hybrid`` （默认）或 ``control``"
+
+#: ../../source/containers_instance_groups.rst:49
+msgid "nodes in the ``execution_nodes`` group can define ``node_type`` hostvar to be ``execution`` (default) or ``hop``"
+msgstr "``execution_nodes`` 组中的节点可以定义 ``node_type`` hostvar 为 ``execution`` （默认）或 ``hop``"
+
+#: ../../source/containers_instance_groups.rst:51
+msgid "You can define custom groups in the inventory file by naming groups with ``instance_group_*`` where ``*`` becomes the name of the group in the API. Or, you can create custom instance groups in the API after the install has finished."
+msgstr "您可以在清单文件中定义自定义组，将组命名为 ``instance_group_*``，其中 ``*`` 成为 API 中的组名称。或者，您可以在安装完成后在 API 中创建自定义实例组。"
+
+#: ../../source/containers_instance_groups.rst:53
+msgid "The current behavior expects a member of an ``instance_group_*`` be part of ``automationcontroller`` or ``execution_nodes`` group. Consider this example scenario:"
+msgstr "当前的行为预期 ``instance_group_*`` 的成员需要是 ``automationcontroller`` 或 ``execution_nodes`` 组的成员。请考虑这个示例场景："
+
+#: ../../source/containers_instance_groups.rst:69
+msgid "As a result of running the installer, you will get the error below:"
+msgstr "运行安装程序后，您会看到以下错误："
+
+#: ../../source/containers_instance_groups.rst:77
+msgid "To fix this, you could move the box ``110-addr.tatu.home`` to an ``execution_node`` group."
+msgstr "要修复这个问题，您可以将 ``110-addr.tatu.home`` 移到 ``execution_node`` 组。"
+
+#: ../../source/containers_instance_groups.rst:94
+msgid "This results in:"
+msgstr "这会导致："
+
+#: ../../source/containers_instance_groups.rst:101
+msgid "Upon upgrading from controller 4.0 or earlier, the legacy ``instance_group_`` member will most likely have the awx code installed, which would cause that node to be placed in the ``automationcontroller`` group."
+msgstr "当从控制器 4.0 或更早版本升级时，旧的 ``instance_group_`` 成员最有非常可能会安装 awx 代码，这会导致该节点放置在 ``automationcontroller`` 组中。"
+
+#: ../../source/containers_instance_groups.rst:105
+msgid "Configuring Instance Groups from the API"
+msgstr "使用 API 配置实例组"
+
+#: ../../source/containers_instance_groups.rst:110
+msgid "Instance groups can be created by POSTing to ``/api/v2/instance_groups`` as a system administrator."
+msgstr "做为一个系统管理员，可以通过向 ``/api/v2/instance_groups`` 发送 POST 来创建示实例组。"
+
+#: ../../source/containers_instance_groups.rst:112
+msgid "Once created, instances can be associated with an instance group with:"
+msgstr "创建后，就可以把实例与实例组进行关联："
+
+#: ../../source/containers_instance_groups.rst:118
+msgid "An instance that is added to an instance group will automatically reconfigure itself to listen on the group's work queue. See the following section, :ref:`ag_instance_group_policies`, for more details."
+msgstr "添加到实例组中的实例将自动重新配置自身，以侦听组的工作队列。如需更多详情，请参阅以下部分 :ref:`ag_instance_group_policies`。"
+
+#: ../../source/containers_instance_groups.rst:124
+msgid "Instance group policies"
+msgstr "实例组策略"
+
+#: ../../source/containers_instance_groups.rst:130
+msgid "You can configure controller instances to automatically join Instance Groups when they come online by defining a :term:`policy`. These policies are evaluated for every new instance that comes online."
+msgstr "您可以通过定义 :term:`policy`，将控制器实例配置为在其上线时自动加入实例组。这些策略会针对上线的每个新实例进行评估。"
+
+#: ../../source/containers_instance_groups.rst:132
+msgid "Instance Group Policies are controlled by three optional fields on an ``Instance Group``:"
+msgstr "实例组策略由 ``Instance Group`` 的三个可选字段控制："
+
+#: ../../source/containers_instance_groups.rst:134
+msgid "``policy_instance_percentage``: This is a number between 0 - 100. It guarantees that this percentage of active controller instances will be added to this Instance Group. As new instances come online, if the number of Instances in this group relative to the total number of instances is less than the given percentage, then new ones will be added until the percentage condition is satisfied."
+msgstr "``policy_instance_percentage``：一个从 0 到 100 之间的数字。它保证这个百分比的活跃控制器实例会添加到此实例组。随着新实例上线，如果组中实例的数量相对于实例的总数量小于给定的百分比，则将添加新实例，直到满足百分比条件为止。"
+
+#: ../../source/containers_instance_groups.rst:135
+msgid "``policy_instance_minimum``: This policy attempts to keep at least this many instances in the Instance Group. If the number of available instances is lower than this minimum, then all instances will be placed in this Instance Group."
+msgstr "``policy_instance_minimum``：此策略用于将至少这么多的实例保留在实例组中。如果可用实例的数量低于这个最小值，则所有实例都会放置在这个实例组中。"
+
+#: ../../source/containers_instance_groups.rst:136
+msgid "``policy_instance_list``: This is a fixed list of instance names to always include in this Instance Group."
+msgstr "``policy_instance_list``：这是需要始终包括在此实例组中的实例名称列表。"
+
+#: ../../source/containers_instance_groups.rst:138
+msgid "The Instance Groups list view from the |at| User Interface provides a summary of the capacity levels for each instance group according to instance group policies:"
+msgstr "|at| 用户界面中的实例组列表视图根据实例组策略为每个实例组提供容量级别的汇总："
+
+#: ../../source/containers_instance_groups.rst:140
+msgid "|Instance Group policy example|"
+msgstr "|Instance Group policy example|"
+
+#: ../../source/containers_instance_groups.rst:146
+msgid "Notable policy considerations"
+msgstr "重要策略注意事项"
+
+#: ../../source/containers_instance_groups.rst:148
+msgid "``policy_instance_percentage`` and ``policy_instance_minimum`` both set minimum allocations. The rule that results in more instances assigned to the group will take effect. For example, if you have a ``policy_instance_percentage`` of 50% and a ``policy_instance_minimum`` of 2 and you start 6 instances, 3 of them would be assigned to the Instance Group. If you reduce the number of total instances in the cluster to 2, then both of them would be assigned to the Instance Group to satisfy ``policy_instance_minimum``. This way, you can set a lower bound on the amount of available resources."
+msgstr "``policy_instance_percentage`` 和 ``policy_instance_minimum`` 均设置最小分配。其中会为组分配更多实例的设置将生效。例如，``policy_instance_percentage`` 为 50％，``policy_instance_minimum`` 的设置为 2，如果您启动了 6 个实例，则其中 3 个将被分配给实例组。如果将集群中的实例总数减到 2 个，则这两个实例都将分配给实例组（满足 ``policy_instance_minimum`` 的要求）。这样，您可以对可用资源的数量设置下限。"
+
+#: ../../source/containers_instance_groups.rst:150
+msgid "Policies do not actively prevent instances from being associated with multiple Instance Groups, but this can effectively be achieved by making the percentages add up to 100. If you have 4 instance groups, assign each a percentage value of 25 and the instances will be distributed among them with no overlap."
+msgstr "策略不会主动阻止实例与多个实例组关联，但可通过设置百分比使其总和为 100 来实现。例如，有 4 个实例组，为每个实例组分配一个百分比值 25，则实例在实例组中的分布就不会相互重叠。"
+
+#: ../../source/containers_instance_groups.rst:154
+msgid "Manually pinning instances to specific groups"
+msgstr "手动将实例固定到特定的组中"
+
+#: ../../source/containers_instance_groups.rst:161
+msgid "If you have a special instance which needs to be exclusively assigned to a specific Instance Group but don't want it to automatically join other groups via \"percentage\" or \"minimum\" policies:"
+msgstr "如果您有一个特殊的实例，需要把它专门分配给特定的实例组，但不想让它通过“百分比”或“最小”策略自动加入其他组："
+
+#: ../../source/containers_instance_groups.rst:163
+msgid "Add the instance to one or more Instance Groups' ``policy_instance_list``"
+msgstr "将实例添加到一个或多个实例组的 ``policy_instance_list`` 中"
+
+#: ../../source/containers_instance_groups.rst:165
+msgid "Update the instance's ``managed_by_policy`` property to be ``False``."
+msgstr "将实例的 ``managed_by_policy`` 属性更新为 ``False``。"
+
+#: ../../source/containers_instance_groups.rst:167
+msgid "This will prevent the Instance from being automatically added to other groups based on percentage and minimum policy; it will only belong to the groups you've manually assigned it to:"
+msgstr "这可防止实例根据百分比和最低策略被自动添加到其他组中；它只属于您手动将其分配到的组："
+
+#: ../../source/containers_instance_groups.rst:183
+msgid "Job Runtime Behavior"
+msgstr "作业运行时行为"
+
+#: ../../source/containers_instance_groups.rst:185
+msgid "When you run a job associated with a instance group, some behaviors worth noting are:"
+msgstr "当您运行与实例组关联的作业时，需要注意的一些行为有："
+
+#: ../../source/containers_instance_groups.rst:187
+msgid "If a cluster is divided into separate instance groups, then the behavior is similar to the cluster as a whole. If two instances are assigned to a group then either one is just as likely to receive a job as any other in the same group."
+msgstr "如果将集群划分为不同的实例组，则行为与整个集群类似。如果将两个实例分配给一个组，则其中任何一个实例都会像同一组中的另一个实例一样接收作业。"
+
+#: ../../source/containers_instance_groups.rst:188
+msgid "As controller instances are brought online, it effectively expands the work capacity of the system. If those instances are also placed into instance groups, then they also expand that group's capacity. If an instance is performing work and it is a member of multiple groups, then capacity will be reduced from all groups for which it is a member. De-provisioning an instance will remove capacity from the cluster wherever that instance was assigned. See the :ref:`ag_cluster_deprovision` section for more detail."
+msgstr "随着更多控制器实例上线，它可以有效地扩展系统的工作容量。如果这些实例也被放入实例组中，则它们也会扩展该组的容量。如果某个实例正在执行工作，且它是多个组的成员，则它的容量就会从它所属的所有组中减少。取消置备实例将从实例分配到的集群中删除容量。如需更多详情，请参阅:ref:`ag_cluster_deprovision`。"
+
+#: ../../source/containers_instance_groups.rst:191
+msgid "Not all instances are required to be provisioned with an equal capacity."
+msgstr "不是所有实例都需要置备相同的容量。"
+
+#: ../../source/containers_instance_groups.rst:195
+msgid "Control Where a Job Runs"
+msgstr "控制作业运行位置"
+
+#: ../../source/containers_instance_groups.rst:197
+msgid "If any of the job template, inventory, or organization has instance groups associated with them, a job ran from that job template will not be eligible for the default behavior. That means that if all of the instances inside of the instance groups associated with these 3 resources are out of capacity, the job will remain in the pending state until capacity becomes available."
+msgstr "如果任何作业模板、清单或机构都有与其关联的实例组，则从该作业模板运行的作业将无法满足默认行为的要求。这意味着，如果与这 3 个资源关联的实例组中的所有实例都容量用尽，则该作业将保持待处理状态，直到有可用容量为止。"
+
+#: ../../source/containers_instance_groups.rst:199
+msgid "The order of preference in determining which instance group to submit the job to is as follows:"
+msgstr "决定哪个实例组提交该作业的优先顺序如下："
+
+#: ../../source/containers_instance_groups.rst:201
+msgid "job template"
+msgstr "作业模板"
+
+#: ../../source/containers_instance_groups.rst:202
+msgid "inventory"
+msgstr "清单"
+
+#: ../../source/containers_instance_groups.rst:203
+msgid "organization (by way of project)"
+msgstr "机构（通过项目）"
+
+#: ../../source/containers_instance_groups.rst:205
+msgid "If instance groups are associated with the job template, and all of these are at capacity, then the job will be submitted to instance groups specified on inventory, and then organization. Jobs should execute in those groups in preferential order as resources are available."
+msgstr "如果实例组与作业模板关联，并且所有这些实例组都满负荷，则该作业将提交到清单上指定的实例组，然后提交到组织。在资源可用时，作业应当在这些组中按优先顺序执行。"
+
+#: ../../source/containers_instance_groups.rst:207
+msgid "The global ``default`` group can still be associated with a resource, just like any of the custom instance groups defined in the playbook. This can be used to specify a preferred instance group on the job template or inventory, but still allow the job to be submitted to any instance if those are out of capacity."
+msgstr "全局 ``default`` 组仍然可以与资源关联，就像 playbook 中定义的任何自定义实例组一样。这可用于指定作业模板或清单上的首选实例组，但仍然允许在用尽容量时将作业提交到任何实例。"
+
+#: ../../source/containers_instance_groups.rst:209
+msgid "As an example, by associating ``group_a`` with a Job Template and also associating the ``default`` group with its inventory, you allow the ``default`` group to be used as a fallback in case ``group_a`` gets out of capacity."
+msgstr "例如，通过将 ``group_a`` 与作业模板关联并将 ``default`` 组与其清单关联，您可以在 ``group_a`` 用尽容量时将 ``default`` 组用作回退 (fallback)。"
+
+#: ../../source/containers_instance_groups.rst:211
+msgid "In addition, it is possible to not associate an instance group with one resource but designate another resource as the fallback. For example, not associating an instance group with a job template and have it fall back to the inventory and/or the organization's instance group."
+msgstr "另外，可以不将实例组与一个资源关联，而是将另一个资源指定为回退。例如，不将实例组与作业模板关联，并把它回退到清单和/或机构的实例组。"
+
+#: ../../source/containers_instance_groups.rst:213
+msgid "This presents two other great use cases:"
+msgstr "这里提供了两个其他的经典用例："
+
+#: ../../source/containers_instance_groups.rst:215
+msgid "Associating instance groups with an inventory (omitting assigning the job template to an instance group) will allow the user to ensure that any playbook run against a specific inventory will run only on the group associated with it. This can be super useful in the situation where only those instances have a direct link to the managed nodes."
+msgstr "将实例组与清单关联（忽略将作业模板分配给实例组）可确保针对一个特定清单运行的 playbook 只在与其关联的组上运行。这对于只有实例组中的实例才可以与受管节点直接连接的情况来说很有用。"
+
+#: ../../source/containers_instance_groups.rst:217
+msgid "An administrator can assign instance groups to organizations. This effectively allows the administrator to segment out the entire infrastructure and guarantee that each organization has capacity to run jobs without interfering with any other organization's ability to run jobs."
+msgstr "管理员可为机构分配实例组。这样，管理员就可以有效地对整个基础架构进行分段，从而确保每个机构都具备运行作业的容量，而不会影响到其它机构运行作业的能力。"
+
+#: ../../source/containers_instance_groups.rst:219
+msgid "Likewise, an administrator could assign multiple groups to each organization as desired, as in the following scenario:"
+msgstr "同样，管理员也可以根据需要为每个机构分配多个组，如以下情境中所示："
+
+#: ../../source/containers_instance_groups.rst:221
+msgid "There are three instance groups: A, B, and C. There are two organizations: Org1 and Org2."
+msgstr "有三个实例组：A、B 和 C。有两个机构：Org1 和 Org2。"
+
+#: ../../source/containers_instance_groups.rst:222
+msgid "The administrator assigns group A to Org1, group B to Org2 and then assign group C to both Org1 and Org2 as an overflow for any extra capacity that may be needed."
+msgstr "管理员将 A 组分配给 Org1，B 组分配给 Org2，然后将 C 组分配给 Org1 和 Org2，作为可能需要的额外容量。"
+
+#: ../../source/containers_instance_groups.rst:223
+msgid "The organization administrators are then free to assign inventory or job templates to whichever group they want (or just let them inherit the default order from the organization)."
+msgstr "然后，机构管理员可以自由地为他们想要的组分配清单或作业模板（或者只是允许它们从机构继承默认顺序）。"
+
+#: ../../source/containers_instance_groups.rst:225
+msgid "|Instance Group example|"
+msgstr "|Instance Group example|"
+
+#: ../../source/containers_instance_groups.rst:229
+msgid "Arranging resources in this way offers a lot of flexibility. Also, you can create instance groups with only one instance, thus allowing you to direct work towards a very specific Host in the controller cluster."
+msgstr "以这种方式安排资源非常灵活。另外，您还可以创建只有一个实例的实例组，从而允许您将工作直接指向控制器集群中的特定主机。"
+
+#: ../../source/containers_instance_groups.rst:235
+msgid "Deprovision Instance Groups"
+msgstr "取消置备实例组"
+
+#: ../../source/containers_instance_groups.rst:240
+msgid "Re-running the setup playbook does not automatically deprovision instances since clusters do not currently distinguish between an instance that was taken offline intentionally or due to failure. Instead, shut down all services on the controller instance and then run the deprovisioning tool from any other instance:"
+msgstr "重新运行设置 (setup) playbook 不会自动取消置备实例，因为集群目前不会区分有意关闭的实例与因故障而关闭的实例。而是，关闭控制器实例上的所有服务，然后从任何其他实例运行取消置备工具："
+
+#: ../../source/containers_instance_groups.rst:242
+msgid "Shut down the instance or stop the service with the command, ``automation-controller-service stop``."
+msgstr "使用命令 ``automation-controller-service stop`` 关闭实例或停止服务。"
+
+#: ../../source/containers_instance_groups.rst:244
+msgid "Run the deprovision command ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>`` from another instance to remove it from the controller cluster registry."
+msgstr "从另一个实例运行取消置备命令 ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>``，将其从控制器集群 registry 中删除。"
+
+#: ../../source/containers_instance_groups.rst:246
+msgid "Example: ``awx-manage deprovision_instance --hostname=hostB``"
+msgstr "示例：``awx-manage deprovision_instance --hostname=hostB``"
+
+#: ../../source/containers_instance_groups.rst:249
+msgid "Similarly, deprovisioning instance groups in the controller does not automatically deprovision or remove instance groups, even though re-provisioning will often cause these to be unused. They may still show up in API endpoints and stats monitoring. These groups can be removed with the following command:"
+msgstr "同样，取消置备控制器中的实例组不会自动取消置备或删除实例组，尽管重新置备通常会导致这些实例组没有被使用。它们可能仍然会出现在 API 端点和静态监控中。这些组可以通过以下命令删除："
+
+#: ../../source/containers_instance_groups.rst:251
+msgid "Example: ``awx-manage unregister_queue --queuename=<name>``"
+msgstr "示例：``awx-manage unregister_queue --queuename=<name>``"
+
+#: ../../source/containers_instance_groups.rst:253
+msgid "Removing an instance's membership from an instance group in the inventory file and re-running the setup playbook does not ensure the instance won't be added back to a group. To be sure that an instance will not be added back to a group, remove via the API and also remove it in your inventory file, or you can stop defining instance groups in the inventory file altogether. You can also manage instance group topology through the |at| User Interface. For more information on managing instance groups in the UI, refer to :ref:`Instance Groups <userguide:ug_instance_groups>` in the |atu|."
+msgstr "从清单文件中的实例组删除实例的成员资格不能确保，在重新运行设置 (setup) playbook 时实例不会被添加回组中。要实现这一点，请通过 API 将不需要的实例删除，同时也从清单文件中将其删除。或者，您可以完全停止定义清单文件中的实例组。您还可以通过 |at| 用户界面来管理实例组拓扑。如需有关在 UI 中管理实例组的更多信息，请参阅 |atu| 中的 :ref:`Instance Groups <userguide:ug_instance_groups>`。"
+
+#: ../../source/containers_instance_groups.rst:257
+msgid "If you have isolated instance groups created in older versions of the controller (3.8.x and earlier) and want to migrate them to execution nodes to make them compatible for use with the automation mesh architecture, see :ref:`migrate_iso_to_exe` in the |atumg|."
+msgstr "如果您在旧版本控制器（3.8.x 及更早版本）中创建隔离实例组，并希望将它们迁移到执行节点，以使其与自动化网格架构兼容，请参阅 :ref: 中的 `migrate_iso_to_exe` |atumg|。"
+
+#: ../../source/containers_instance_groups.rst:263
+msgid "Container Groups"
+msgstr "容器组"
+
+#: ../../source/containers_instance_groups.rst:269
+msgid "|aap| supports :term:`Container Groups`, which allow you to execute jobs in the controller regardless of whether the controller is installed as a standalone, in  a virtual environment, or in a container. Container groups act as a pool of resources within a virtual environment. You can create instance groups to point to an OpenShift container, which are job environments that are provisioned on-demand as a Pod that exists only for the duration of the playbook run. This is known as the ephemeral execution model and ensures a clean environment for every job run."
+msgstr "|aap| 支持 :term:`Container Groups`，它可用于在控制器中执行作业，不管控制器作为单机安装、安装在虚拟环境中或安装在容器中均可。容器组作为虚拟环境中的资源池使用。您可以创建实例组来指向 OpenShift 容器，这是按需置备为 Pod 的作业环境，Pod 仅在 playbook 运行期间存在。这称为瞬时执行模式，可确保每个运行的作业都有一个清洁的环境。"
+
+#: ../../source/containers_instance_groups.rst:271
+msgid "In some cases, it is desirable to have container groups be \"always-on\", which is configured through the creation of an instance."
+msgstr "在某些情况下，需要容器组为\"始终开启\"，这通过创建实例来配置。"
+
+#: ../../source/containers_instance_groups.rst:275
+msgid "Container Groups upgraded from versions prior to |at| 4.0 will revert back to default and completely remove the old pod definition, clearing out all custom pod definitions in the migration."
+msgstr "从 |at| 4.0 之前的版本升级的容器组将恢复到默认状态并完全删除旧的 pod 定义，清除迁移中的所有自定义 pod 定义。"
+
+#: ../../source/containers_instance_groups.rst:278
+msgid "Container groups are different from |ees| in that |ees| are container images and do not use a virtual environment. See :ref:`ug_execution_environments` in the |atu| for further detail."
+msgstr "容器镜像与 |ees| 的不同之处在于 |ees| 是容器镜像，且不使用虚拟环境。如需更多详情，请参阅 |atu| 中的 :ref:`ug_execution_environments`。"
+
+#: ../../source/containers_instance_groups.rst:282
+msgid "Create a container group"
+msgstr "创建容器组"
+
+#: ../../../common/source/get-creds-from-service-account.rst:2
+msgid "A ``ContainerGroup`` is a type of ``InstanceGroup`` that has an associated Credential that allows for connecting to an OpenShift cluster. To set up a container group, you must first have the following:"
+msgstr "``ContainerGroup`` 是 ``InstanceGroup`` 的一个类型，它具有一个可以连接到 OpenShift 集群的关联凭证。要设置容器组，您必须首先有以下几项："
+
+#: ../../../common/source/get-creds-from-service-account.rst:4
+msgid "A namespace you can launch into (every cluster has a “default” namespace, but you may want to use a specific namespace)"
+msgstr "您可以在其中启动的命名空间（每个集群有一个 “default”命名空间，但您可能希望使用特定命名空间）"
+
+#: ../../../common/source/get-creds-from-service-account.rst:5
+msgid "A service account that has the roles that allow it to launch and manage Pods in this namespace"
+msgstr "具有允许在该命名空间中启动和管理 Pod 的角色的服务帐户"
+
+#: ../../../common/source/get-creds-from-service-account.rst:6
+msgid "If you will be using |ees| in a private registry, and have a Container Registry credential associated to them in the automation controller, the service account also needs the roles to get, create, and delete secrets in the namespace. If you do not want to give these roles to the service account, you can pre-create the ``ImagePullSecrets`` and specify them on the pod spec for the ContainerGroup. In this case, the |ee| should NOT have a Container Registry credential associated, or the controller will attempt to create the secret for you in the namespace."
+msgstr "如果您要在私有 registry 中使用 |ees|，并在自动化控制器中关联了与其关联的 Container Registry 凭证，则服务帐户还需要这些角色来获取、创建和删除命名空间中的 secret。如果您不想将这些角色赋予服务帐户，可以预先创建 ``ImagePullSecrets`` 并在 ContainerGroup 的 pod 规格中指定它们。在这种情况下，|ee| 不能关联 Container Registry 凭证，或者控制器会尝试为您在命名空间中创建 secret。"
+
+#: ../../../common/source/get-creds-from-service-account.rst:7
+msgid "A token associated with that service account (OpenShift or Kubernetes Bearer Token)"
+msgstr "与该服务帐户关联的令牌（OpenShift 或 Kubernetes Bearer Token）"
+
+#: ../../../common/source/get-creds-from-service-account.rst:8
+msgid "A CA certificate associated with the cluster"
+msgstr "与集群关联的 CA 证书"
+
+#: ../../../common/source/get-creds-from-service-account.rst:10
+msgid "This section describes creating a Service Account in an Openshift cluster (or K8s) in order to be used to run jobs in a container group via |at|. After the Service Account is created, its credentials are provided to the controller in the form of an Openshift or Kubernetes API bearer token credential. Below describes how to create a service account and collect the needed information for configuring |at|."
+msgstr "本节论述了在 Openshift 集群（或 K8s）中创建服务帐户，以便用来通过 |at| 在容器组中运行作业。创建服务帐户后，会以 Openshift 或 Kubernetes API bearer 令牌凭证的形式向控制器提供其凭证。以下描述了如何创建服务帐户并收集配置 |at| 所需的信息。"
+
+#: ../../../common/source/get-creds-from-service-account.rst:12
+msgid "To configure the controller:"
+msgstr "配置控制器："
+
+#: ../../../common/source/get-creds-from-service-account.rst:14
+msgid "To create a service account, you may download and use this sample service account, :download:`containergroup sa <../../common/source/containergroup-sa.yml>` and modify it as needed to obtain the above credentials."
+msgstr "要创建一个服务帐户，您可以下载并使用此示例服务帐户 :download:`containergroup sa <../../common/source/containergroup-sa.yml>` 并根据需要进行修改，以获取上述凭证。"
+
+#: ../../../common/source/get-creds-from-service-account.rst:16
+msgid "Apply the configuration from ``containergroup-sa.yml``::"
+msgstr "应用来自 ``containergroup-sa.yml`` 的配置::"
+
+#: ../../../common/source/get-creds-from-service-account.rst:21
+msgid "Get the secret name associated with the service account::"
+msgstr "获取与服务帐户关联的 secret 名称："
+
+#: ../../../common/source/get-creds-from-service-account.rst:25
+msgid "Get the token from the secret::"
+msgstr "从 secret 获取令牌："
+
+#: ../../../common/source/get-creds-from-service-account.rst:29
+msgid "Get the CA cert::"
+msgstr "获取 CA 证书："
+
+#: ../../../common/source/get-creds-from-service-account.rst:33
+msgid "Use the contents of ``containergroup-sa.token`` and ``containergroup-ca.crt`` to provide the information for the :ref:`ug_credentials_ocp_k8s` required for the container group."
+msgstr "使用 ``containergroup-sa.token`` 和 ``containergroup-ca.crt`` 的内容，为容器组所需的 :ref:`ug_credentials_ocp_k8s` 提供信息。"
+
+#: ../../source/containers_instance_groups.rst:287
+msgid "To create a container group:"
+msgstr "要创建容器组："
+
+#: ../../source/containers_instance_groups.rst:289
+msgid "Use the controller user interface to create an :ref:`ug_credentials_ocp_k8s` credential that will be used with your container group, see :ref:`ug_credentials_add` in the |atu| for detail."
+msgstr "使用控制器用户界面创建与您的容器组一起使用的 :ref:`ug_credentials_ocp_k8s` 凭证，详情请参阅 |atu| 中的 :ref:`ug_credentials_add`。"
+
+#: ../../source/containers_instance_groups.rst:291
+msgid "Create a new container group by navigating to the Instance Groups configuration window by clicking **Instance Groups** from the left navigation bar."
+msgstr "从左面的导航栏中点 **Instance Groups** 进入 Instance Groups 配置窗口，创建一个新容器组。"
+
+#: ../../source/containers_instance_groups.rst:293
+msgid "Click the **Add** button and select **Create Container Group**."
+msgstr "点 **Add** 按钮并选择 **Create Container Group**。"
+
+#: ../../source/containers_instance_groups.rst:295
+msgid "|IG - create new CG|"
+msgstr "|IG - create new CG|"
+
+#: ../../source/containers_instance_groups.rst:299
+msgid "Enter a name for your new container group and select the credential previously created to associate it to the container group."
+msgstr "输入新容器组的名称，并选择之前创建的凭证将其与容器组关联。"
+
+#: ../../source/containers_instance_groups.rst:304
+msgid "Customize the Pod spec"
+msgstr "自定义 Pod 规格"
+
+#: ../../source/containers_instance_groups.rst:306
+msgid "|aap| provides a simple default Pod specification, however, you can provide a custom YAML (or JSON) document that overrides the default Pod spec. This field uses any custom fields (i.e. ``ImagePullSecrets``) that can be \"serialized\" as valid Pod JSON or YAML. A full list of options can be found in the `OpenShift documentation <https://docs.openshift.com/online/pro/architecture/core_concepts/pods_and_services.html>`_."
+msgstr "|aap| 提供一个简单的默认 Pod 规格，但您可以提供一个自定义 YAML（或 JSON）文档来覆盖默认的 Pod 规格。此字段使用任何可以被\"序列化\"为有效 Pod JSON 或 YAML 的自定义字段（例如 ``ImagePullSecrets``）。完整的选项列表可在 `OpenShift documentation <https://docs.openshift.com/online/pro/architecture/core_concepts/pods_and_services.html>`_ 中找到。"
+
+#: ../../source/containers_instance_groups.rst:308
+msgid "To customize the Pod spec, specify the namespace in the **Pod Spec Override** field by using the toggle to enable and expand the **Pod Spec Override** field and click **Save** when done."
+msgstr "要自定义 Pod 规格，使用切换功能启用并扩展 **Pod Spec Override** 字段，在 **Pod Spec Override** 字段中指定命名空间，完成后点击 **Save**。"
+
+#: ../../source/containers_instance_groups.rst:310
+msgid "|IG - CG customize pod|"
+msgstr "|IG - CG customize pod|"
+
+#: ../../source/containers_instance_groups.rst:314
+msgid "You may provide additional customizations, if needed. Click **Expand** to view the entire customization window."
+msgstr "如果需要，您可以提供额外的定制功能。请点击 **Expand** 查看整个定制窗口。"
+
+#: ../../source/containers_instance_groups.rst:320
+msgid "The image used at job launch time is determined by which |ee| is associated with the job. If a Container Registry credential is associated with the |ee|, then the controller will attempt to make a ``ImagePullSecret`` to pull the image. If you prefer not to give the service account permission to manage secrets, you must pre-create the ``ImagePullSecret`` and specify it on the pod spec, and omit any credential from the |ee| used."
+msgstr "在作业启动时使用的镜像由 |ee| 与作业关联。如果一个 Container Registry 凭证与 |ee| 关联，则控制器会尝试生成 ``ImagePullSecret`` 来拉取镜像。如果您不想授予服务帐户管理 secret 的权限，您必须预先创建 ``ImagePullSecret`` 并在 pod spec 中指定它，并忽略来自 |ee| 的任何凭证。"
+
+#: ../../source/containers_instance_groups.rst:322
+msgid "Refer to the *Allowing Pods to Reference Images from Other Secured Registries* section of the `Red Hat Container Registry Authentication article <https://access.redhat.com/RegistryAuthentication>`_ for more information on how to create image pull secrets."
+msgstr "如需了解如何创建镜像 pull secret 的更多信息，请参阅 `Red Hat Container Registry Authentication article <https://access.redhat.com/RegistryAuthentication>`_ 的 *Allowing Pods to reference Images from other Secured Registries* 部分。"
+
+#: ../../source/containers_instance_groups.rst:324
+msgid "Once the container group is successfully created, the **Details** tab of the newly created container group remains, which allows you to review and edit your container group information. This is the same menu that is opened if the Edit (|edit-button|) button is clicked from the **Instance Group** link. You can also edit **Instances** and review **Jobs** associated with this instance group."
+msgstr "成功创建容器组后，新创建的容器组的 **Details** 选项卡将保留，它可用于审核和编辑容器组信息。如果从 **Instance Group** 链接点击 Edit (|edit-button|) 按钮，也打开此菜单。您也可以编辑 **Instances** 并查看与该实例组关联的 **Jobs**。"
+
+#: ../../source/containers_instance_groups.rst:328
+msgid "|IG - example CG successfully created|"
+msgstr "|IG - example CG successfully created|"
+
+#: ../../source/containers_instance_groups.rst:332
+msgid "Container groups and instance groups are labeled accordingly."
+msgstr "对容器组和实例组进行相应的标记。"
+
+#: ../../source/containers_instance_groups.rst:336
+msgid "Despite the fact that customers have custom Pod specs, upgrades may be difficult if the default ``pod_spec`` changes. Most any manifest can be applied to any namespace, with the namespace specified separately, most likely you will only need to override the namespace. Similarly, pinning a default image for different releases of the platform to different versions of the default job runner container is tricky. If the default image is specified in the Pod spec, then upgrades do not pick up the new default changes are made to the default Pod spec."
+msgstr "尽管客户有自定义的 Pod 规格，如果默认 ``pod_spec`` 更改，则升级可能会较为困难。大多数清单都可应用于任何命名空间，命名空间单独指定，很可能您只需要覆盖命名空间。类似地，将不同版本平台的默认镜像固定到默认作业运行程序容器的不同版本较为复杂。如果默认镜像在 Pod 规格中指定，则升级不会选择针对默认 Pod 规格所做的新默认更改。"
+
+#: ../../source/containers_instance_groups.rst:340
+msgid "Verify container group functions"
+msgstr "验证容器组功能"
+
+#: ../../source/containers_instance_groups.rst:341
+msgid "To verify the deployment and termination of your container:"
+msgstr "验证容器的部署和终止："
+
+#: ../../source/containers_instance_groups.rst:343
+msgid "Create a mock inventory and associate the container group to it by populating the name of the container group in the **Instance Group** field. See :ref:`ug_inventories_add` in the |atu| for detail."
+msgstr "通过在 **Instance Group** 字段中填充容器组的名称来创建 mock 清单，并将容器组与其关联。如需详情，请参阅 |atu| 中的 :ref:`ug_inventories_add`。"
+
+#: ../../source/containers_instance_groups.rst:345
+msgid "|Dummy inventory|"
+msgstr "|Dummy inventory|"
+
+#: ../../source/containers_instance_groups.rst:349
+msgid "Create \"localhost\" host in inventory with variables:"
+msgstr "使用变量在清单中创建“本地主机”主机："
+
+#: ../../source/containers_instance_groups.rst:355
+msgid "|Inventory with localhost|"
+msgstr "|Inventory with localhost|"
+
+#: ../../source/containers_instance_groups.rst:359
+msgid "Launch an ad hoc job against the localhost using the *ping* or *setup* module. Even though the **Machine Credential** field is required, it does not matter which one is selected for this simple test."
+msgstr "使用 *ping* 或者 *setup* 模块对本地主机启动一个临时作业。尽管需要 **Machine Credential**，为此简单测试选择哪个选项无关紧要。"
+
+#: ../../source/containers_instance_groups.rst:361
+msgid "|Launch inventory with localhost|"
+msgstr "|Launch inventory with localhost|"
+
+#: ../../source/containers_instance_groups.rst:367
+msgid "You can see in the jobs detail view the container was reached successfully using one of ad hoc jobs."
+msgstr "您可在作业详情视图中看到，已成功使用一个临时作业访问了该容器。"
+
+#: ../../source/containers_instance_groups.rst:369
+msgid "|Inventory with localhost ping success|"
+msgstr "|Inventory with localhost ping success|"
+
+#: ../../source/containers_instance_groups.rst:374
+msgid "If you have an OpenShift UI, you can see Pods appear and disappear as they deploy and terminate. Alternatively, you can use the CLI to perform a ``get pod`` operation on your namespace to watch these same events occurring in real-time."
+msgstr "如果您有 OpenShift UI，您可以看到在部署和终止 Pod 时它会出现和消失。另外，您可以使用 CLI 在命名空间上执行 ``get pod`` 操作，以观察实时发生的这些相同事件。"
+
+#: ../../source/containers_instance_groups.rst:378
+msgid "View container group jobs"
+msgstr "查看容器组作业"
+
+#: ../../source/containers_instance_groups.rst:380
+msgid "When you run a job associated with a container group, you can see the details of that job in the **Details** view and its associated container group and the execution environment that spun up."
+msgstr "当您运行与容器组关联的作业时，您可以在 **Details** 视图中看到该作业的详情，以及关联的容器组和其执行环境。"
+
+#: ../../source/containers_instance_groups.rst:382
+msgid "|IG - instances jobs|"
+msgstr "|IG - instances jobs|"
+
+#: ../../source/containers_instance_groups.rst:388
+msgid "Kubernetes API failure conditions"
+msgstr "Kubernetes API 故障状况"
+
+#: ../../source/containers_instance_groups.rst:390
+msgid "When running a container group and the Kubernetes API responds that the resource quota has been exceeded, the controller keeps the job in pending state. Other failures result in the traceback of the **Error Details** field showing the failure reason, similar to the example here:"
+msgstr "在运行容器组和 Kubernetes API 时，如果出现超出资源配额的问题，则控制器会将作业保持为待处理状态。如果出现其他问题，**Error Details** 字段中的追溯信息会显示故障原因，类似于以下示例："
+
+#: ../../source/containers_instance_groups.rst:397
+msgid "Container capacity limits"
+msgstr "容器容量限制"
+
+#: ../../source/containers_instance_groups.rst:402
+msgid "Capacity limits and quotas for containers are defined via objects in the Kubernetes API:"
+msgstr "容器的容量限制和配额通过 Kubernetes API 中的对象定义："
+
+#: ../../source/containers_instance_groups.rst:404
+msgid "To set limits on all pods within a given namespace, use the ``LimitRange`` object. Refer to the OpenShift documentation for `Quotas and Limit Ranges <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#overview>`_."
+msgstr "要设置一个指定命名空间中的所有 pod 的限制，请使用 ``LimitRange`` 对象。请参阅 OpenShift 文档 `Quotas and Limit Ranges <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#overview>`_。"
+
+#: ../../source/containers_instance_groups.rst:406
+msgid "To set limits directly on the pod definition launched by the controller, see :ref:`ag_customize_pod_spec` and refer to the OpenShift documentation to set the options to `compute resources <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#dev-compute-resources>`_."
+msgstr "要直接在由控制器启动的 pod 定义上设置限制，请参阅 :ref:`ag_customize_pod_spec`，并参阅 OpenShift 文档来设置选项 `compute resources <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#dev-compute-resources>`_。"
+
+#: ../../source/containers_instance_groups.rst:410
+msgid "Container groups do not use the capacity algorithm that normal nodes use. You would need to explicitly set the number of forks at the job template level, for instance. If forks are configured in the controller, that setting will be passed along to the container."
+msgstr "容器组不使用常规节点所使用的容量算法。您需要在作业模板一级为实例明确设置 fork 的数量。如果在控制器中配置了 fork，则该设置会随同传递给容器。"
+

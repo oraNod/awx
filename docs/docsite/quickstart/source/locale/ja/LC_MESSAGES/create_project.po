@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_project.rst:2
+msgid "Setting up a Project"
+msgstr "プロジェクトの設定"
+
+#: ../../source/create_project.rst:8
+msgid "A Project is a logical collection of Ansible playbooks, represented in the controller."
+msgstr "プロジェクトとは、コントローラーにある Ansible Playbook の論理的コレクションのことです。"
+
+#: ../../source/create_project.rst:10
+msgid "You can manage playbooks and playbook directories by either placing them manually under the Project Base Path on your controller server, or by placing your playbooks into a source code management (SCM) system supported by the controller, including Git, Subversion, and Mercurial."
+msgstr "Playbook および Playbook ディレクトリーをコントローラーサーバーのプロジェクトのベースパスに手動で配置するか、コントローラーがサポートするソースコード管理 (SCM) システム (例: Git、Subversion、Mercurial) に Playbook を配置することで、Playbook と Playbook ディレクトリーを管理できます。"
+
+#: ../../source/create_project.rst:14
+msgid "It is recommended that, whenever possible, you use source control to manage your playbooks. This type of best practice provides the ability to treat your infrastructure as code and is in line with DevOps ideals. While this Quick Start Guide uses lightweight examples to get you up and running, we suggest using source control to manage playbook for production purposes."
+msgstr "できる限り、ソース管理を使用して Playbook を管理することを推奨します。このタイプのベストプラクティスでは、コードとしてインフラストラクチャーを処理することができ、DevOps の理想と一致しています。このクイックスタートガイドでは、軽量のサンプルを使ってシステムを使用開始できるようにしていますが、実稼動環境の目的では、ソース管理を使用して Playbook を管理することを推奨します。"
+
+#: ../../source/create_project.rst:16
+msgid "To review existing projects, click **Projects** from the left navigation bar."
+msgstr "既存のプロジェクトを確認するには、左側のナビゲーションバーで **プロジェクト** をクリックします。"
+
+#: ../../source/create_project.rst:18
+msgid "|Projects - home|"
+msgstr "|Projects - home|"
+
+#: ../../source/create_project.rst:22
+msgid "The |at| simplifies the startup process by providing you with a Demo Project to work with initially."
+msgstr "|at| は、最初の作業用にデモ用プロジェクトを提供し、スタートプロセスを簡素化しています。"
+
+#: ../../source/create_project.rst:24
+msgid "Click on **Demo Project** to view its details."
+msgstr "**デモ用プロジェクト** をクリックして、その詳細を表示します。"
+
+#: ../../source/create_project.rst:26
+msgid "|Projects - demo project|"
+msgstr "|Projects - demo project|"
+
+#: ../../source/create_project.rst:30
+msgid "For the purpose of this Quick Start Guide, leave the default demo project as is. But to edit the default project later - from the Details tab, click **Edit**, or from the Projects list view, click the Edit (|edit|) button next to the project name to edit the appropriate details, then save your changes."
+msgstr "本クイックスタートガイドの目的上、デフォルトのデモ用プロジェクトをそのまま残します。ただし、後でデフォルトのプロジェクトを編集するには、詳細タブで **編集** をクリックするか、プロジェクト一覧表示でプロジェクト名の横にある編集 (|edit|) ボタンをクリックして適切な詳細を編集し、変更を保存します。"
+
+#: ../../source/create_project.rst:34
+msgid "If you want to fetch the project for latest changes, you can manually start an SCM sync for this project. Update the SCM-based demo project from the Details tab, click **Sync**, or from the Projects list view, click the Sync (|sync|) button next to the project name."
+msgstr "最新の変更を反映したプロジェクトを取得する場合は、このプロジェクトの SCM 同期を手動で開始できます。Details タブから SCM ベースのデモプロジェクトを更新し、**Sync** をクリックするか、プロジェクトリストビューから、プロジェクト名の横にある同期 (|sync|) ボタンをクリックします。"
+
+#: ../../source/create_project.rst:40
+msgid "Please note that immediately after adding new projects setup to use source control, a \"sync\" automatically starts that fetches the project details from the configured source control."
+msgstr "ソースコントロールを使用するために新しいプロジェクト設定を追加した直後に「同期」が自動的に開始され、設定されたソースコントロールからプロジェクト詳細の取り込みが実行されることに注意してください。"
+

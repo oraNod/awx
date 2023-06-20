@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/overview.rst:4
+msgid "Overview"
+msgstr ""
+
+#: ../../source/overview.rst:9
+msgid ""
+"Thank you for your interest in Ansible Tower. Tower is a graphically-"
+"enabled framework accessible via a web interface and a REST API endpoint "
+"for Ansible, the open source IT orchestration engine. Whether sharing "
+"operations tasks with your team or integrating with Ansible through the "
+"Tower REST API, Tower provides many powerful tools to make your "
+"automation life easier."
+msgstr ""
+
+#: ../../source/overview.rst:12
+msgid "Real-time Playbook Output and Exploration"
+msgstr ""
+
+#: ../../source/overview.rst:17
+msgid ""
+"Watch playbooks run in real time, seeing each host as they check in. "
+"Easily go back and explore the results for specific tasks and hosts in "
+"great detail. Search for specific plays or hosts and see just those "
+"results, or quickly zero in on errors that need to be corrected."
+msgstr ""
+
+#: ../../source/overview.rst:20
+msgid "\"Push Button\" Automation"
+msgstr ""
+
+#: ../../source/overview.rst:25
+msgid ""
+"Access your favorite projects and re-trigger execution from the web "
+"interface with a minimum of clicking. Tower will ask for input variables,"
+" prompt for your credentials, kick off and monitor the job, and display "
+"results and host history over time."
+msgstr ""
+
+#: ../../source/overview.rst:28
+msgid "Enhanced and Simplifed Role-Based Access Control and Auditing"
+msgstr ""
+
+#: ../../source/overview.rst:33
+msgid ""
+"Ansible Tower allows for the granting of permissions to perform a "
+"specific task (such as to view, create, or modify a file) to different "
+"teams or explicit users through role-based access control (RBAC)."
+msgstr ""
+
+#: ../../source/overview.rst:35
+msgid ""
+"Keep some projects private, while allowing some users to edit inventory "
+"and others to run playbooks against only certain systems--either in check"
+" (dry run) or live mode. You can also allow certain users to use "
+"credentials without exposing the credentials to them. Regardless of what "
+"you do, Tower records the history of operations and who made them--"
+"including objects edited and jobs launched."
+msgstr ""
+
+#: ../../source/overview.rst:37
+msgid ""
+"Based on user feedback, Ansible Tower both expands and simplifies its "
+"role-based access control. No longer is job template visibility "
+"configured via a combination of permissions on inventory, projects, and "
+"credentials. If you want to give any user or team permissions to use a "
+"job template, just assign permissions directly on the job template. "
+"Similarly, credentials are now full objects in Tower’s RBAC system, and "
+"can be assigned to multiple users and/or teams for use."
+msgstr ""
+
+#: ../../source/overview.rst:39
+msgid ""
+"A new ‘Auditor’ type has been introduced in Tower as well, who can see "
+"all aspects of the systems automation, but has no permission to run or "
+"change automation, for those that need a system-level auditor. (This may "
+"also be useful for a service account that scrapes automation information "
+"from Tower’s API.) Refer to :ref:`rbac-ug` for more information."
+msgstr ""
+
+#: ../../source/overview.rst:43
+msgid "Cloud & Autoscaling Flexibility"
+msgstr ""
+
+#: ../../source/overview.rst:49
+msgid ""
+"Tower features a powerful provisioning callback feature that allows nodes"
+" to request configuration on demand. While optional, this is an ideal "
+"solution for a cloud auto-scaling scenario, integrating with provisioning"
+" servers like Cobbler, or when dealing with managed systems with "
+"unpredictable uptimes. Requiring no management software to be installed "
+"on remote nodes, the callback solution can be triggered via a simple call"
+" to 'curl' or 'wget', and is easily embeddable in init scripts, "
+"kickstarts, or preseeds. Access is controlled such that only machines in "
+"inventory can request configuration."
+msgstr ""
+
+#: ../../source/overview.rst:52
+msgid "The Ideal RESTful API"
+msgstr ""
+
+#: ../../source/overview.rst:57
+msgid ""
+"The Tower REST API is the ideal RESTful API for a systems management "
+"application, with all resources fully discoverable, paginated, "
+"searchable, and well modeled. A styled API browser allows API exploration"
+" from the API root at ``http://<Tower server name>/api/``, showing off "
+"every resource and relation. Everything that can be done in the user "
+"interface can be done in the API - and more."
+msgstr ""
+
+#: ../../source/overview.rst:60
+msgid "Backup and Restore"
+msgstr ""
+
+#: ../../source/overview.rst:65
+msgid ""
+"The ability to backup and restore your system(s) has been integrated into"
+" the Tower setup playbook, making it easy for you to backup and replicate"
+" your Tower instance as needed."
+msgstr ""
+
+#: ../../source/overview.rst:68
+msgid "Ansible Galaxy Integration"
+msgstr ""
+
+#: ../../source/overview.rst:73
+msgid ""
+"When it comes to describing your automation, everyone repeats the DRY "
+"mantra--\"Don’t Repeat Yourself.\" Using centralized copies of Ansible "
+"roles, such as in Ansible Galaxy, allows you to bring that philosophy to "
+"your playbooks. By including an Ansible Galaxy requirements.yml file in "
+"your project directory, Tower automatically fetches the roles your "
+"playbook needs from Galaxy, GitHub, or your local source control. Refer "
+"to :ref:`ug_galaxy` for more information."
+msgstr ""
+
+#: ../../source/overview.rst:76
+msgid "Inventory Support for OpenStack"
+msgstr ""
+
+#: ../../source/overview.rst:82
+msgid ""
+"Ansible is committed to making OpenStack simple for everyone to use. As "
+"part of that,  dynamic inventory support has been added for OpenStack. "
+"This allows you to easily target any of the virtual machines or images "
+"that you’re running in your OpenStack cloud."
+msgstr ""
+
+#: ../../source/overview.rst:86
+msgid "Remote Command Execution"
+msgstr ""
+
+#: ../../source/overview.rst:91
+msgid ""
+"Often times, you just need to do a simple task on a few hosts, whether "
+"it’s add a single user, update a single security vulnerability, or "
+"restart a misbehaving service. Beginning with version 2.2.0, Tower "
+"includes remote command execution--any task that you can describe as a "
+"single Ansible play can be run on a host or group of hosts in your "
+"inventory, allowing you to get managing your systems quickly and easily. "
+"Plus, it is all backed by Tower’s RBAC engine and detailed audit logging,"
+" removing any questions regarding who has done what to what machines."
+msgstr ""
+
+#: ../../source/overview.rst:95
+msgid "System Tracking"
+msgstr ""
+
+#: ../../source/overview.rst:100
+msgid ""
+"Introduced in version 2.2.0, Tower’s System Tracking brings a new level "
+"of visibility to your infrastructure--you can see exactly what is "
+"happening on your systems, comparing it to both the prior state of the "
+"system and to other systems in your cluster, which helps you to ensure "
+"compliance. The rich and extensible store of data available in System "
+"Tracking is accessible via Tower’s REST API, enabling you to feed it into"
+" other tools and systems."
+msgstr ""
+
+#: ../../source/overview.rst:103
+msgid "Integrated Notifications"
+msgstr ""
+
+#: ../../source/overview.rst:108
+msgid ""
+"Starting with version 3.0, |at| allows you to easily keep track of the "
+"status of your automation. You can configure stackable notifications for "
+"job templates, projects, or entire organizations, and configure different"
+" notifications for job success and job failure. The following "
+"notification sources are supported: - Slack - E-mail - SMS (via Twilio) -"
+" HipChat - Pagerduty - IRC - Webhooks (post to an arbitrary webhook, for "
+"integration into other tools)"
+msgstr ""
+
+#: ../../source/overview.rst:119
+msgid "Satellite and CloudForms Integration"
+msgstr ""
+
+#: ../../source/overview.rst:126
+msgid ""
+"|at| 3.0 also adds dynamic inventory sources for Red Hat Satellite 6 and "
+"Red Hat CloudForms."
+msgstr ""
+
+#: ../../source/overview.rst:129
+msgid "Run-time Job Customization"
+msgstr ""
+
+#: ../../source/overview.rst:134
+msgid ""
+"Bringing the flexibility of the command line to Tower, you can now prompt"
+" for any of the following:"
+msgstr ""
+
+#: ../../source/overview.rst:136
+msgid "inventory"
+msgstr ""
+
+#: ../../source/overview.rst:137
+msgid "credential"
+msgstr ""
+
+#: ../../source/overview.rst:138
+msgid "job tags"
+msgstr ""
+
+#: ../../source/overview.rst:139
+msgid "limits"
+msgstr ""
+

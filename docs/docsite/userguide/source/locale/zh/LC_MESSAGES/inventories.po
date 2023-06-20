@@ -1,0 +1,1298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/inventories.rst:5
+msgid "Inventories"
+msgstr "清单"
+
+#: ../../source/inventories.rst:10
+msgid "An :term:`Inventory` is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. Inventories are divided into groups and these groups contain the actual hosts. Groups may be sourced manually, by entering host names into the |at|, or from one of its supported cloud providers."
+msgstr ":term:`Inventory`是可以作为作业启动对象的主机集合，与 Ansible 清单文件相同。清单被分成若干组，这些组包含实际的主机。组的来源可以是通过在 |at| 中输入主机名手动获取的，也可以来自支持的云供应商之一。"
+
+#: ../../source/inventories.rst:14
+msgid "If you have a custom dynamic inventory script, or a cloud provider that is not yet supported natively in the controller, you can also import that into the controller. Refer to :ref:`ag_inv_import` in the |ata|."
+msgstr "如果您有自定义动态清单脚本，或者尚未在控制器中受到原生支持的云提供商，您也可以将其导入控制器。请参阅 |ata| 中的 :ref:`ag_inv_import`。"
+
+#: ../../source/inventories.rst:17
+msgid "The Inventories window displays a list of the inventories that are currently available. The inventory list may be sorted by name and searched type, organization, description, owners and modifiers of the inventory, or additional criteria as needed."
+msgstr "Inventories 窗口显示当前可用的清单列表。用户可以根据需要，按照名称、搜索类型、机构、描述、所有者等进行排序。"
+
+#: ../../source/inventories.rst:19
+msgid "|Inventories - home with examples|"
+msgstr "|Inventories - home with examples|"
+
+#: ../../source/inventories.rst:23
+msgid "The list of Inventory details includes:"
+msgstr "清单详情列表包括："
+
+#: ../../source/inventories.rst:25
+msgid "**Name**: The inventory name. Clicking the Inventory name navigates to the properties screen for the selected inventory, which shows the inventory's groups and hosts. (This view is also accessible from the |edit button| icon.)"
+msgstr "**Name**：清单名称。点击清单名称可以进入所选清单的属性屏幕，其中显示了清单的组和主机。（也可以从 |edit button| 图标访问此视图。）"
+
+#: ../../source/inventories.rst:29
+msgid "**Status**"
+msgstr "**状态**"
+
+#: ../../source/inventories.rst:31
+msgid "The statuses are:"
+msgstr "状态为："
+
+#: ../../source/inventories.rst:33
+msgid "**Success**: when the inventory source sync completed successfully"
+msgstr "**Success**：清单源同步成功完成"
+
+#: ../../source/inventories.rst:34
+msgid "**Disabled**: no inventory source added to the inventory"
+msgstr "**disabled**：没有添加到清单中的清单源"
+
+#: ../../source/inventories.rst:35
+msgid "**Error**: when the inventory source sync completed with error"
+msgstr "**Error**：清单源同步完成但带有错误"
+
+#: ../../source/inventories.rst:37
+msgid "An example of inventories of various states, including one with detail for a disabled state:"
+msgstr "一个有不同状态的清单示例，其中包括一个带有已禁用状态的详情信息："
+
+#: ../../source/inventories.rst:41
+msgid "**Type**: Identifies whether it is a standard inventory or a Smart Inventory."
+msgstr "**Type**：标识它是标准清单还是智能清单。"
+
+#: ../../source/inventories.rst:42
+msgid "**Organization**: The organization to which the inventory belongs."
+msgstr "**Organization**：清单所属的机构。"
+
+#: ../../source/inventories.rst:43
+msgid "**Actions**: The following actions are available for the selected inventory:"
+msgstr "**Actions**：所选的清单可以使用以下操作："
+
+#: ../../source/inventories.rst:45
+msgid "**Edit** (|edit button|): Edit the properties for the selected inventory"
+msgstr "**编辑** (|edit button|)：编辑所选清单的属性"
+
+#: ../../source/inventories.rst:46
+msgid "**Copy** (|copy|): Makes a copy of an existing inventory as a template for creating a new one"
+msgstr "**复制** (|copy|)：制作现有清单的副本作为创建新清单的模板"
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "如果删除了由其他工作项目使用的项，则会打开一条信息，列出会受到删除影响的项，并提示您确认删除。一些界面会包括无效的或以前已被删除的项，因此它们将无法运行。以下是这类信息的一个示例："
+
+#: ../../source/inventories.rst:58
+msgid "Smart Inventories"
+msgstr "智能清单"
+
+#: ../../source/inventories.rst:63
+msgid "A Smart Inventory is a collection of hosts defined by a stored search that can be viewed like a standard inventory and made to be easily used with job runs. Organization administrators have admin permission to inventories in their organization and can create a Smart Inventories. A Smart Inventory is identified by ``KIND=smart``. You can define a Smart Inventory using the same method being used with Search. ``InventorySource`` is directly associated with an Inventory."
+msgstr "智能清单是一个由存储的搜索定义的主机集合，可以像标准清单一样查看，并可以轻松用于作业运行。机构管理员对其机构中的清单具有管理员权限，并可创建智能清单。智能清单由 ``KIND=smart`` 标识。您可以使用 Search 中所用的相同方法定义智能清单。``InventorySource`` 直接与一个清单关联。"
+
+#: ../../source/inventories.rst:65
+msgid "The ``Inventory`` model has the following new fields that are blank by default but are set accordingly for Smart Inventories:"
+msgstr "``Inventory`` 模型具有以下新字段，这些字段默认为空白，但会针对智能清单进行相应的设置："
+
+#: ../../source/inventories.rst:67
+msgid "``kind`` is set to ``smart`` for Smart Inventories"
+msgstr "对于智能清单，``kind`` 会设置为 ``smart``"
+
+#: ../../source/inventories.rst:68
+msgid "``host_filter`` is set AND ``kind`` is set to ``smart`` for Smart Inventories."
+msgstr "对于智能清单，会设置 ``host_filter`` 且 ``kind`` 会设置为 ``smart``。"
+
+#: ../../source/inventories.rst:70
+msgid "The ``host`` model has a related endpoint, ``smart_inventories`` that identifies a set of all the Smart Inventory a host is associated with. The membership table is updated every time a job runs against a smart inventory."
+msgstr "``host`` 模型具有一个相关的端点 ``smart_inventories``，用于标识主机所关联的所有智能清单的集合。每次针对智能清单运行作业时，都会更新成员资格表。"
+
+#: ../../source/inventories.rst:74
+msgid "To update the memberships more frequently, you can change the file-based setting ``AWX_REBUILD_SMART_MEMBERSHIP`` to **True** (default is False). This will update memberships in the following events:"
+msgstr "要更频繁地更新成员资格，您可以将基于文件的设置 ``AWX_REBUILD_SMART_MEMBERSHIP`` 更改为 **True**（默认为 False）。这将在以下事件中更新成员资格："
+
+#: ../../source/inventories.rst:76
+msgid "a new host is added"
+msgstr "添加了新主机"
+
+#: ../../source/inventories.rst:77
+msgid "an existing host is modified (updated or deleted)"
+msgstr "修改（更新或删除）了现有主机"
+
+#: ../../source/inventories.rst:78
+msgid "a new Smart Inventory is added"
+msgstr "添加了新智能清单"
+
+#: ../../source/inventories.rst:79
+msgid "an existing Smart Inventory is modified (updated or deleted)"
+msgstr "修改（更新或删除）了现有智能清单"
+
+#: ../../source/inventories.rst:81
+msgid "You can view actual inventories without being editable:"
+msgstr "您可以查看实际清单而无需变为可编辑状态："
+
+#: ../../source/inventories.rst:83
+msgid "Names of Host and Group created as a result of an inventory source sync"
+msgstr "清单源同步后创建的主机和组的名称"
+
+#: ../../source/inventories.rst:84
+msgid "Group records cannot be edited or moved"
+msgstr "组记录无法编辑或移动"
+
+#: ../../source/inventories.rst:86
+msgid "You cannot create hosts from a Smart Inventory host endpoint (``/inventories/N/hosts/``) as with a normal inventory. The administrator of a Smart Inventory has permission to edit fields such as the name, description, variables, and the ability to delete, but does not have the permission to modify the ``host_filter``, because that will affect which hosts (that have a primary membership inside another inventory) are included in the smart inventory. Note, ``host_filter`` only apply to hosts inside of inventories inside of the Smart Inventory's organization."
+msgstr "您无法像普通清单一样从智能清单主机端点 (``/inventories/N/hosts/``) 创建主机。智能清单的管理员有权限编辑名称、描述、变量和删除功能等字段，但没有修改 ``host_filter`` 的权限，因为这会影响智能清单中包含哪些主机（在另一个清单中具有主要成员资格）。请注意，``host_filter`` 只适用于智能清单所属机构内的清单内主机。"
+
+#: ../../source/inventories.rst:88
+msgid "In order to modify the ``host_filter``, you need to be the organization administrator of the inventory's organization. Organization admins already have implicit \"admin\" access to all inventories inside the organization, therefore, this does not convey any permissions they did not already possess."
+msgstr "若要修改 ``host_filter``，您需要成为清单所属机构的机构管理员。机构管理员已经具有对机构内所有清单的隐式“管理员”访问权限，因此，这不会使他们具有尚未拥有的任何权限。"
+
+#: ../../source/inventories.rst:90
+msgid "Administrators of the Smart Inventory can grant other users (who are not also admins of your organization) permissions like \"use\" \"adhoc\" to the smart inventory, and these will allow the actions indicate by the role, just like other standard inventories. However, this will not give them any special permissions to hosts (which live in a different inventory). It will not allow them direct read permission to hosts, or permit them to see additional hosts under ``/#/hosts/``, although they can still view the hosts under the smart inventory host list."
+msgstr "智能清单管理员可以授予其他用户（不是您机构的管理员的用户）权限，如对智能清单的“使用”、“临时”权限，这些权限将允许执行角色所指示的操作，就像其他标准清单一样。但是，这不会赋予他们对（位于不同清单中的）主机的任何特殊权限。它不赋予他们对主机的直接读取权限，或允许他们看到 ``/#/hosts/`` 下的其他主机，虽然他们仍然可以查看智能清单主机列表下的主机。"
+
+#: ../../source/inventories.rst:92
+msgid "In some situations, you can modify the following:"
+msgstr "在有些情况下，您可以修改以下内容："
+
+#: ../../source/inventories.rst:94
+msgid "A new Host manually created on Inventory w/ inventory sources"
+msgstr "在包含清单源的清单上手动创建的新主机"
+
+#: ../../source/inventories.rst:95
+msgid "In Groups that were created as a result of inventory source syncs"
+msgstr "在清单源同步后创建的组中"
+
+#: ../../source/inventories.rst:96
+msgid "Variables on Host and Group are changeable"
+msgstr "主机和组上的变量可更改"
+
+#: ../../source/inventories.rst:98
+msgid "Hosts associated with the Smart Inventory are manifested at view time. If the results of a Smart Inventory contains more than one host with identical hostnames, only one of the matching hosts will be included as part of the Smart Inventory, ordered by Host ID."
+msgstr "与智能清单关联的主机会在查看时显示。如果智能清单的结果包含多个具有相同主机名的主机，则只会包含一个匹配的主机作为智能清单的一部分，按主机 ID 排序。"
+
+#: ../../source/inventories.rst:104
+msgid "Smart Host Filter"
+msgstr "智能主机过滤器"
+
+#: ../../source/inventories.rst:106
+msgid "You can use a search filter to populate hosts for an inventory. This feature utilized the capability of the fact searching feature."
+msgstr "您可以使用搜索过滤器为一个清单填充主机。此功能使用了事实搜索功能。"
+
+#: ../../source/inventories.rst:108
+msgid "Facts generated by an Ansible playbook during a Job Template run are stored by the |at| into the database whenever ``use_fact_cache=True`` is set per-Job Template. New facts are merged with existing facts and are per-host. These stored facts can be used to filter hosts via the ``/api/v2/hosts`` endpoint, using the ``GET`` query parameter ``host_filter`` For example: ``/api/v2/hosts?host_filter=ansible_facts__ansible_processor_vcpus=8``"
+msgstr "当 ``use_fact_cache=True`` 根据每个作业模板设置时，在运行作业模板期间由 Ansible playbook 生成的事实就会被 |at| 存储到数据库中。新的事实将按主机与现有事实合并。这些存储的事实可用于通过 ``/api/v2/hosts`` 端点（使用 ``GET`` 参数 ``host_filter``）过滤主机。例如 ``/api/v2/hosts?host_filter=ansible_facts__ansible_processor_vcpus=8``"
+
+#: ../../source/inventories.rst:110
+msgid "The ``host_filter`` parameter allows for:"
+msgstr "``host_filter`` 参数允许以下操作："
+
+#: ../../source/inventories.rst:112
+msgid "grouping via ()"
+msgstr "通过 () 进行分组"
+
+#: ../../source/inventories.rst:113
+msgid "use of the boolean and operator:"
+msgstr "使用布尔值和运算符："
+
+#: ../../source/inventories.rst:115
+msgid "``__`` to reference related fields in relational fields"
+msgstr "``__`` 用于引用关系字段中的相关字段"
+
+#: ../../source/inventories.rst:116
+msgid "``__`` is used on ansible_facts to separate keys in a JSON key path"
+msgstr "``__`` 在 ansible_facts 上用于分离 JSON 键路径中的键"
+
+#: ../../source/inventories.rst:117
+msgid "``[]`` is used to denote a json array in the path specification"
+msgstr "``[]`` 用于表示路径规格中的 json 数组"
+
+#: ../../source/inventories.rst:118
+msgid "``\"\"`` can be used in the value when spaces are wanted in the value"
+msgstr "``\"\"`` 可在值中需要空格时用于值中"
+
+#: ../../source/inventories.rst:120
+msgid "\"classic\" Django queries may be embedded in the ``host_filter``"
+msgstr "\"classic\" Django 查询可以嵌入到 ``host_filter`` 中"
+
+#: ../../source/inventories.rst:122
+msgid "Examples:"
+msgstr "示例："
+
+#: ../../source/inventories.rst:134
+msgid "You can search ``host_filter`` by host name, group name, and Ansible facts."
+msgstr "您可以按主机名、组名称和 Ansible 事实来搜索 ``host_filter``。"
+
+#: ../../source/inventories.rst:136
+msgid "The format for a group search is:"
+msgstr "组搜索的格式为："
+
+#: ../../source/inventories.rst:142
+msgid "The format for a fact search is:"
+msgstr "事实搜索的格式为："
+
+#: ../../source/inventories.rst:148
+msgid "You can also perform Smart Search searches, which consist a host name and host description."
+msgstr "您还可以执行包含主机名和主机描述的智能搜索。"
+
+#: ../../source/inventories.rst:155
+msgid "If a search term in ``host_filter`` is of string type, to make the value a number (e.g. ``2.66``), or a JSON keyword (e.g. ``null``, ``true`` or ``false``) valid, add double quotations around the value to prevent the controller from mistakenly parsing it as a non-string:"
+msgstr "如果 ``host_filter`` 中的搜索词为字符串类型，要使值成为数字（如 ``2.66``）或使 JSON 关键字（如 ``null``、``true`` 或 ``false``）有效，请在值的两旁添加双引号以防止控制器错误地将它解析为非字符串："
+
+#: ../../source/inventories.rst:165
+msgid "Define host filter with ansible_facts"
+msgstr "使用 ansible_facts 定义主机过滤器"
+
+#: ../../source/inventories.rst:167
+msgid "To use ``ansible_facts`` to define the host filter when creating Smart Inventories, perform the following steps:"
+msgstr "要在创建智能清单时使用 ``ansible_facts`` 定义主机过滤器，请执行以下步骤："
+
+#: ../../source/inventories.rst:169
+msgid "In the *Create new smart inventory screen*, click the |search| button next to the **Smart host filter** field to open a pop-up window to filter hosts for this inventory."
+msgstr "在 *Create new Smart inventory screen* 中，点 **Smart host filter** 字段旁的 |search| 按钮打开弹出窗口来过滤此清单的主机。"
+
+#: ../../source/inventories.rst:173
+msgid "In the search pop-up window, change the search criteria from **Name** to **Advanced** and select **ansible_facts** from the **Key** field."
+msgstr "在搜索弹出窗口中，将 **Name** 的搜索条件从 **Name** 更改为 **Advanced**，然后从 **Key** 字段中选择 **ansible_facts**。"
+
+#: ../../source/inventories.rst:178
+msgid "If you wanted to add an ansible fact of"
+msgstr "如果要添加 ansible 事实"
+
+#: ../../source/inventories.rst:185
+msgid "In the search field, enter ``ansible_processor[]=\"GenuineIntel\"`` (no extra spaces or ``__`` before the value) and press **[Enter]**."
+msgstr "在搜索字段中输入 ``ansible_processor[]=\"GenuineIntel\"`` （在值前没有额外的空格或 ``__`` ），然后按 **[Enter]**。"
+
+#: ../../source/inventories.rst:189
+msgid "The resulting search criteria for the specified ansible fact populates in the lower part of the window."
+msgstr "生成的搜索条件在窗口的较低部分填充了指定的 ansible 事实。"
+
+#: ../../source/inventories.rst:193
+msgid "Click **Select** to add it to the **Smart host filter** field."
+msgstr "点 **Select** 将其添加到 **Smart host filter** 字段中。"
+
+#: ../../source/inventories.rst:197
+msgid "Click **Save** to save the new Smart Inventory."
+msgstr "点 **Save** 保存新的智能清单。"
+
+#: ../../source/inventories.rst:199
+msgid "The Details tab of the new Smart Inventory opens and displays the specified ansible facts in the **Smart host filter** field."
+msgstr "新智能清单的 Details 选项卡会打开，并在 **Smart host filter** 字段中显示指定的 ansible 事实。"
+
+#: ../../source/inventories.rst:203
+msgid "From the Details view, you can edit the **Smart host filter** field by clicking **Edit** and delete existing filter(s), clear all existing filters, or add new ones."
+msgstr "在 Details 视图中，您可以点击 **Edit** 并删除现有过滤器，以编辑 **Smart host filter** 字段，清除所有现有过滤器或添加新过滤器。"
+
+#: ../../source/inventories.rst:211
+msgid "Inventory Plugins"
+msgstr "清单插件"
+
+#: ../../source/inventories.rst:216
+msgid "Inventory updates use dynamically-generated YAML files which are parsed by their respective inventory plugin. In |atversion|, users can provide the new style inventory plugin config directly to the controller via the inventory source ``source_vars`` for all the following inventory sources:"
+msgstr "清单更新使用动态生成的 YAML 文件，这些文件由其各自的清单插件解析。在 |atversion| 中，用户可以为以下所有清单源通过清单源 ``source_vars`` 直接向控制器提供新风格的清单插件配置："
+
+#: ../../source/inventories.rst:218
+msgid ":ref:`ug_source_ec2`"
+msgstr ":ref:`ug_source_ec2`"
+
+#: ../../source/inventories.rst:219
+msgid ":ref:`ug_source_gce`"
+msgstr ":ref:`ug_source_gce`"
+
+#: ../../source/inventories.rst:220
+msgid ":ref:`ug_source_azure`"
+msgstr ":ref:`ug_source_azure`"
+
+#: ../../source/inventories.rst:221
+msgid ":ref:`ug_source_vmvcenter`"
+msgstr ":ref:`ug_source_vmvcenter`"
+
+#: ../../source/inventories.rst:222
+msgid ":ref:`ug_source_satellite`"
+msgstr ":ref:`ug_source_satellite`"
+
+#: ../../source/inventories.rst:223
+msgid ":ref:`ug_source_insights`"
+msgstr ":ref:`ug_source_insights`"
+
+#: ../../source/inventories.rst:224
+msgid ":ref:`ug_source_openstack`"
+msgstr ":ref:`ug_source_openstack`"
+
+#: ../../source/inventories.rst:225
+msgid ":ref:`ug_source_rhv`"
+msgstr ":ref:`ug_source_rhv`"
+
+#: ../../source/inventories.rst:226
+msgid ":ref:`ug_source_tower`"
+msgstr ":ref:`ug_source_tower`"
+
+#: ../../source/inventories.rst:229
+msgid "Newly created configurations for inventory sources will contain the default plugin configuration values. If you want your newly created inventory sources in 3.8 to match the output of a 3.7 source, you must apply a specific set of configuration values for that source. To ensure backward compatibility, the controller uses \"templates\" for each of these sources to force the output of inventory plugins into the legacy format. Refer to :ref:`ir_inv_plugin_templates_reference` section of this guide for each source and their respective templates to help you migrate to the new style inventory plugin output."
+msgstr "为清单源新创建的配置会包含默认插件配置值。 如果您希望 3.8 中新创建的清单源与 3.7 源的输出匹配，必须为该源应用一组特定的配置值。为了实现向后兼容，控制器对每个源都使用\"templates\"将清单插件的输出强制到旧格式。如需了解更多的相关信息，请参阅此指南中的 :ref:`ir_inv_plugin_templates_reference` 章节。"
+
+#: ../../source/inventories.rst:231
+msgid "``source_vars`` that contain ``plugin: foo.bar.baz`` as a top-level key will be replaced with the appropriate fully-qualified inventory plugin name at runtime based on the ``InventorySource`` source. For example, if ec2 is selected for the ``InventorySource`` then, at run-time, plugin will be set to ``amazon.aws.aws_ec2``."
+msgstr "在运行时会根据 ``InventorySource`` 源，把包括了``plugin: foo.bar.baz`` 作为顶层键的 ``source_vars`` 替换为正确的、完全限定的清单插件名称。例如，如果 ``InventorySource`` 为 ec2，则在运行时会将插件设置为 ``amazon.aws.aws_ec2``。"
+
+#: ../../source/inventories.rst:237
+msgid "Add a new inventory"
+msgstr "添加新清单"
+
+#: ../../source/inventories.rst:243
+msgid "Adding a new inventory involves several components:"
+msgstr "添加新清单涉及几个组件："
+
+#: ../../source/inventories.rst:245
+msgid ":ref:`ug_inventories_add_permissions`"
+msgstr ":ref:`ug_inventories_add_permissions`"
+
+#: ../../source/inventories.rst:246
+msgid ":ref:`ug_inventories_add_groups`"
+msgstr ":ref:`ug_inventories_add_groups`"
+
+#: ../../source/inventories.rst:247
+msgid ":ref:`ug_inventories_add_host`"
+msgstr ":ref:`ug_inventories_add_host`"
+
+#: ../../source/inventories.rst:248
+msgid ":ref:`ug_inventories_add_source`"
+msgstr ":ref:`ug_inventories_add_source`"
+
+#: ../../source/inventories.rst:249
+msgid ":ref:`ug_inventories_view_completed_jobs`"
+msgstr ":ref:`ug_inventories_view_completed_jobs`"
+
+#: ../../source/inventories.rst:251
+msgid "To create a new inventory or Smart Inventory:"
+msgstr "要创建新清单或智能清单，请执行以下操作："
+
+#: ../../source/inventories.rst:253
+msgid "Click the **Add** button, and select the type of inventory to create."
+msgstr "点 **Add** 按钮，然后选择要创建的清单类型。"
+
+#: ../../source/inventories.rst:255
+msgid "The type of inventory is identified at the top of the create form."
+msgstr "清单的类型在创建表单的顶部标识。"
+
+#: ../../source/inventories.rst:257
+msgid "|Inventories_create_new - create new inventory|"
+msgstr "|Inventories_create_new - create new inventory|"
+
+#: ../../source/inventories.rst:261
+msgid "Enter the appropriate details into the following fields:"
+msgstr "在以下字段中输入相关信息："
+
+#: ../../source/inventories.rst:263
+msgid "**Name**: Enter a name appropriate for this inventory."
+msgstr "**Name**：输入适合此清单的名称。"
+
+#: ../../source/inventories.rst:264
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)."
+msgstr "**Description**：根据需要输入任意描述（可选）。"
+
+#: ../../source/inventories.rst:265
+msgid "**Organization**: Required. Choose among the available organizations."
+msgstr "**Organization**：必需。在可用机构中进行选择。"
+
+#: ../../source/inventories.rst:266
+msgid "**Smart Host Filter**: (Only applicable to Smart Inventories) Click the |search| button to open a separate window to filter hosts for this inventory. These options are based on the organization you chose."
+msgstr "**Smart Host Filter**：（仅适用于智能清单）点击 |search| 按钮，打开单独的窗口对此清单的主机进行过滤。这些选项基于您选择的机构。"
+
+#: ../../source/inventories.rst:268
+msgid "Filters are similar to tags in that tags are used to filter certain hosts that contain those names. Therefore, to populate the **Smart Host Filter** field, you are specifying a tag that contains the hosts you want, not actually selecting the hosts themselves. Enter the tag in the **Search** field and press [Enter]. Filters are case-sensitive. Refer to the :ref:`ug_host_filters` section for more information."
+msgstr "过滤器与标签类似，因为标签用于过滤某些包含这些名称的主机。因此，要填充 **Smart Host Filter** 字段，您需要指定包含您所需主机的标签，而不是实际选择主机本身。请在 **Search** 字段中输入标签，然后按 [Enter] 键。过滤器区分大小写。如需了解更多信息，请参阅 :ref:`ug_host_filters` 部分。"
+
+#: ../../source/inventories.rst:270
+msgid "**Instance Groups**: Click the |search| button to open a separate window. Choose the instance groups for this inventory to run on. If the list is extensive, use the search to narrow the options."
+msgstr "**Instance Groups**：点击 |search| 按钮以打开单独的窗口。选择要在其上面运行此清单的实例组。如果列表较长，请使用搜索功能来缩小选项范围。"
+
+#: ../../source/inventories.rst:271
+msgid "**Variables**: Variable definitions and values to be applied to all hosts in this inventory. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**Variables**：要应用到此清单中所有主机的变量定义和值。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。"
+
+#: ../../source/inventories.rst:275
+msgid "|Inventories_create_new_saved - create new inventory|"
+msgstr "|Inventories_create_new_saved - create new inventory|"
+
+#: ../../source/inventories.rst:279
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/inventories.rst:281
+msgid "After saving the new inventory, you can proceed with configuring permissions, groups, hosts, sources, and view completed jobs, if applicable to the type of inventory. For more instructions, refer to the subsequent sections."
+msgstr "在保存新清单后，您可以继续配置权限、组、主机、源和查看已完成的作业（如果适用于相关清单类型）。如需更多说明，请参阅后续部分。"
+
+#: ../../source/inventories.rst:286
+msgid "Add permissions"
+msgstr "添加权限"
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "在 **Access** 选项卡中，点 **Add** 按钮。"
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "选择要添加的用户或团队并点 **Next**"
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "点名称旁边的复选框从列表中选择一个或多个用户或团队，将它们添加为成员并点 **Next**。"
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "在这个示例中，选择了两个用户来添加。"
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "选择您希望所选用户或团队具有的角色。请确保向下滚动以获得完整的角色列表。不同的资源有不同的可用选项。"
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "点 **Save** 按钮将角色应用到所选用户或团队，并将它们添加为成员。"
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "将关闭 Add Users/Teams 窗口，以显示为每个用户和团队分配的更新角色。"
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "若要删除特定用户的角色，可单击其资源旁边的解除关联(x)按钮。"
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "这会出现确认对话框，要求您确认解除关联。"
+
+#: ../../source/inventories.rst:294
+msgid "Add groups"
+msgstr "添加组"
+
+#: ../../source/inventories.rst:300
+msgid "Inventories are divided into groups, which may contain hosts and other groups, and hosts. Groups are only applicable to standard inventories and is not a configurable directly through a Smart Inventory. You can associate an existing group through host(s) that are used with standard inventories. There are several actions available for standard inventories:"
+msgstr "清单被分成若干组，这些组可能包含主机和其他组以及主机。组只适用于标准清单，而且无法直接通过智能清单进行配置。您可以通过与标准清单搭配使用的主机来关联现有的组。有几个操作可用于标准清单："
+
+#: ../../source/inventories.rst:302
+msgid "Create a new Group"
+msgstr "创建新组"
+
+#: ../../source/inventories.rst:303
+msgid "Create a new Host"
+msgstr "创建新主机"
+
+#: ../../source/inventories.rst:304
+msgid "Run a command on the selected Inventory"
+msgstr "在所选清单上运行命令"
+
+#: ../../source/inventories.rst:305
+msgid "Edit Inventory properties"
+msgstr "编辑清单属性"
+
+#: ../../source/inventories.rst:306
+msgid "View activity streams for Groups and Hosts"
+msgstr "查看组和主机的活动流"
+
+#: ../../source/inventories.rst:307
+msgid "Obtain help building your Inventory"
+msgstr "获取构建清单的帮助"
+
+#: ../../source/inventories.rst:312
+msgid "Inventory sources are not associated with groups. Spawned groups are top-level and may still have child groups, and all of these spawned groups may have hosts."
+msgstr "清单源不与组关联。Spawn 组为顶级组，可能还会包含子组，所有这些 spawn 的组都可能含有主机。"
+
+#: ../../source/inventories.rst:314
+msgid "To create a new group for an inventory:"
+msgstr "要为清单创建新组，请执行以下操作："
+
+#: ../../source/inventories.rst:316
+msgid "Click the **Add** button to open the **Create Group** window."
+msgstr "点 **Add** 按钮，打开 **Create Group** 窗口。"
+
+#: ../../source/inventories.rst:318
+msgid "|Inventories_manage_group_add|"
+msgstr "|Inventories_manage_group_add|"
+
+#: ../../source/inventories.rst:322
+#: ../../source/inventories.rst:390
+#: ../../source/inventories.rst:465
+msgid "Enter the appropriate details into the required and optional fields:"
+msgstr "在必填和可选字段中输入相关详情："
+
+#: ../../source/inventories.rst:324
+#: ../../source/inventories.rst:342
+#: ../../source/inventories.rst:467
+msgid "**Name**: Required"
+msgstr "**Name**：（必需）"
+
+#: ../../source/inventories.rst:325
+#: ../../source/inventories.rst:343
+#: ../../source/inventories.rst:393
+#: ../../source/inventories.rst:468
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)"
+msgstr "**Description**：根据需要输入任意描述（可选）"
+
+#: ../../source/inventories.rst:326
+#: ../../source/inventories.rst:344
+#: ../../source/inventories.rst:394
+msgid "**Variables**: Enter definitions and values to be applied to all hosts in this group. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**Variables**：输入要应用到此组中所有主机的定义和值。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。"
+
+#: ../../source/inventories.rst:328
+#: ../../source/inventories.rst:346
+#: ../../source/inventories.rst:396
+msgid "When done, click **Save**."
+msgstr "完成后，点击 **保存**。"
+
+#: ../../source/inventories.rst:332
+msgid "Add groups within groups"
+msgstr "在组内添加组"
+
+#: ../../source/inventories.rst:334
+msgid "To add groups within groups:"
+msgstr "要在组内添加组，请执行以下操作："
+
+#: ../../source/inventories.rst:336
+msgid "Click the **Related Groups** tab."
+msgstr "点 **Related Groups** 标签页。"
+
+#: ../../source/inventories.rst:338
+msgid "Click the **Add** button, and select whether to add a group that already exists in your configuration or create a new group."
+msgstr "点 **Add** 按钮，并选择是添加您的配置中已存在的组还是创建新组。"
+
+#: ../../source/inventories.rst:340
+msgid "If creating a new group, enter the appropriate details into the required and optional fields:"
+msgstr "如果创建新组，请在必填和可选字段中输入相关详情："
+
+#: ../../source/inventories.rst:348
+msgid "The **Create Group** window closes and the newly created group displays as an entry in the list of groups associated with the group that it was created for."
+msgstr "**Create Group** 窗口关闭，在为之创建了新组的组所关联的组列表中，新创建的组会显示为一个条目。"
+
+#: ../../source/inventories.rst:350
+msgid "|Inventories add group subgroup|"
+msgstr "|Inventories add group subgroup|"
+
+#: ../../source/inventories.rst:354
+msgid "If you chose to add an existing group, available groups will appear in a separate selection window."
+msgstr "如果您选择了添加现有组，可用组将出现在单独的选择窗口中。"
+
+#: ../../source/inventories.rst:356
+msgid "|Inventories add group existing subgroup|"
+msgstr "|Inventories add group existing subgroup|"
+
+#: ../../source/inventories.rst:360
+msgid "Once a group is selected, it displays as an entry in the list of groups associated with the group."
+msgstr "选择了一个组之后，它将在与组关联的组列表中显示为一个条目。"
+
+#: ../../source/inventories.rst:362
+msgid "5. To configure additional groups and hosts under the subgroup, click on the name of the subgroup from the list of groups and repeat the same steps described in this section."
+msgstr "5. 要在子组下配置附加组和主机，请点击组列表中的子组名称，然后重复本部分中所述的步骤。"
+
+#: ../../source/inventories.rst:367
+msgid "View or edit inventory groups"
+msgstr "查看或编辑清单组"
+
+#: ../../source/inventories.rst:369
+msgid "The list view displays all your inventory groups at once, or you can filter it to only display the root group(s). An inventory group is considered a root group if it is not a subset of another group."
+msgstr "通过列表视图，您可以一次查看所有清单组，或者在过滤后仅显示根组。如果清单组不是另一个组的子集，则被视为根组。"
+
+#: ../../source/inventories.rst:371
+msgid "You may be able to delete a subgroup without concern for dependencies, since the controller will look for dependencies such as any child groups or hosts. If any exists, a confirmation dialog displays for you to choose whether to delete the root group and all of its subgroups and hosts; or promote the subgroup(s) so they become the top-level inventory group(s), along with their host(s)."
+msgstr "您可以删除子组而无需考虑依赖项，因为控制器会查找依赖项（如任何子组或主机）。如果存在，会显示一个确认对话框，供您选择是删除根组及其所有子组和主机，还是提升子组，以便它们及其主机成为顶级清单组。"
+
+#: ../../source/inventories.rst:378
+msgid "Add hosts"
+msgstr "添加主机"
+
+#: ../../source/inventories.rst:380
+msgid "You can configure hosts for the inventory as well as for groups and groups within groups. To configure hosts:"
+msgstr "您可以为清单以及组和组内的组配置主机。要配置主机，请执行以下操作："
+
+#: ../../source/inventories.rst:382
+msgid "Click the **Hosts** tab."
+msgstr "点击 **Hosts** 标签页。"
+
+#: ../../source/inventories.rst:384
+msgid "Click the **Add** button, and select whether to add a host that already exists in your configuration or create a new host."
+msgstr "点 **Add** 按钮，并选择是添加您的配置中已存在的主机还是创建新主机。"
+
+#: ../../source/inventories.rst:386
+msgid "If creating a new host, select the |toggle button| button to specify whether or not to include this host while running jobs."
+msgstr "如果创建新主机，请选择 |toggle button| 按钮指定是否在运行作业时包含这个主机。"
+
+#: ../../source/inventories.rst:392
+msgid "**Host Name**: Required"
+msgstr "**Host Name**：（必需）"
+
+#: ../../source/inventories.rst:398
+msgid "The **Create Host** window closes and the newly created host displays as an entry in the list of hosts associated with the group that it was created for."
+msgstr "**Create Host** 窗口关闭，在为之创建了新主机的组所关联的组列表中，新创建的主机会显示为一个条目。"
+
+#: ../../source/inventories.rst:400
+msgid "|Inventories add group host|"
+msgstr "|Inventories add group host|"
+
+#: ../../source/inventories.rst:404
+msgid "If you chose to add an existing host, available hosts will appear in a separate selection window."
+msgstr "如果您选择了添加现有主机，可用主机将出现在单独的选择窗口中。"
+
+#: ../../source/inventories.rst:406
+msgid "|Inventories add existing host|"
+msgstr "|Inventories add existing host|"
+
+#: ../../source/inventories.rst:410
+msgid "Once a host is selected, it displays as an entry in the list of hosts associated with the group. You can disassociate a host from this screen by selecting the host and click the **Disassociate** button."
+msgstr "选择了主机后，它会在与组关联的主机列表中显示。您可以通过选择主机并点击 **Disassociate** 按钮来从此屏幕中取消关联主机。"
+
+#: ../../source/inventories.rst:414
+msgid "You may also run ad hoc commands from this screen. Refer to :ref:`ug_inventories_run_ad_hoc` for more detail."
+msgstr "您也可以在此屏幕中运行临时命令。更多详情请参阅 :ref:`ug_inventories_run_ad_hoc`。"
+
+#: ../../source/inventories.rst:417
+msgid "6. To configure additional groups for the host, click on the name of the host from the list of hosts."
+msgstr "6. 要为主机配置额外的组，请点击主机列表中的主机名称。"
+
+#: ../../source/inventories.rst:420
+msgid "|Inventories add group host emphasized|"
+msgstr "|Inventories add group host emphasized|"
+
+#: ../../source/inventories.rst:424
+msgid "This opens the Details tab of the selected host."
+msgstr "这会打开所选主机的 Details 标签页。"
+
+#: ../../source/inventories.rst:426
+msgid "|Inventories add group host details|"
+msgstr "|Inventories add group host details|"
+
+#: ../../source/inventories.rst:430
+msgid "Click the **Groups** tab to configure groups for the host."
+msgstr "点击 **Groups** 标签页为主机配置组。"
+
+#: ../../source/inventories.rst:432
+msgid "Click the **Add** button to associate the host with an existing group."
+msgstr "点 **Add** 按钮将主机与现有组关联。"
+
+#: ../../source/inventories.rst:434
+msgid "Available groups appear in a separate selection window."
+msgstr "可用的组会出现在单独的选择窗口中。"
+
+#: ../../source/inventories.rst:438
+msgid "Click to select the group(s) to associate with the host and click **Save**."
+msgstr "点击以选择与主机关联的组，然后点击 **Save**。"
+
+#: ../../source/inventories.rst:440
+msgid "Once a group is associated, it displays as an entry in the list of groups associated with the host."
+msgstr "关联了一个组之后，它将在与主机关联的组列表中显示为一个条目。"
+
+#: ../../source/inventories.rst:442
+msgid "If a host was used to run a job, you can view details about those jobs in the **Completed Jobs** tab of the host and click **Expanded** to view details about each job."
+msgstr "如果使用了某个主机来运行作业，您可以在此主机的 **Completed Jobs** 标签页中查看这些作业的详情，并点击 **Expanded** 查看每个作业的详情。"
+
+#: ../../source/inventories.rst:450
+msgid "Add source"
+msgstr "添加源"
+
+#: ../../source/inventories.rst:452
+msgid "Inventory sources are not associated with groups. Spawned groups are top-level and may still have child groups, and all of these spawned groups may have hosts. Adding a source to an inventory only applies to standard inventories. Smart inventories inherit their source from the standard inventories they are associated with. To configure the source for the inventory:"
+msgstr "清单源不与组关联。Spawn 组可能仍然具有子组，且所有这些生成的组都可能含有主机。在清单中添加源仅适用于标准清单。智能清单从与其关联的标准清单中继承其源。要配置清单的来源，请配置清单的来源："
+
+#: ../../source/inventories.rst:454
+msgid "In the inventory you want to add a source, click the **Sources** tab."
+msgstr "在您要添加源的清单中，点击**Sources** 标签。"
+
+#: ../../source/inventories.rst:456
+msgid "Click the **Add** button."
+msgstr "点 **Add** 按钮。"
+
+#: ../../source/inventories.rst:458
+msgid "This opens the Create Source window."
+msgstr "这会打开 Create Source 窗口。"
+
+#: ../../source/inventories.rst:460
+msgid "|Inventories create source|"
+msgstr "|Inventories create source|"
+
+#: ../../source/inventories.rst:469
+msgid "**Execution Environment**: Optionally search (|search|) or enter the name of the execution environment with which you want to run your inventory imports. Refer to the :ref:`ug_execution_environments` section for details on building an execution environment."
+msgstr "**Execution Environment**（可选）：搜索(|search|)或输入要运行清单导入的执行环境的名称。有关构建执行环境的详情，请参阅 :ref:`ug_execution_environments` 部分。"
+
+#: ../../source/inventories.rst:470
+msgid "**Source**: Choose a source for your inventory. Refer to the :ref:`ug_inventory_sources` section for more information about each source and details for entering the appropriate information."
+msgstr "**Source**：为您的清单选择一个源。请参阅 :ref:`ug_inventory_sources` 部分，以了解有关每个源的更多信息以及用于输入适当信息的详情。"
+
+#: ../../source/inventories.rst:474
+msgid "After completing the required information for your chosen :ref:`inventory source <ug_inventory_sources>`, you can continue to optionally specify other common parameters, such as verbosity, host filters, and variables."
+msgstr "为所选 :ref:`inventory source <ug_inventory_sources>` 提供了所需的信息后，可以继续指定其他可选的常规参数，如详细程度、主机过滤器和变量。"
+
+#: ../../source/inventories.rst:478
+msgid "The **Regions**, **Instance Filters**, and **Only Group By** fields have been removed in |at| 3.8."
+msgstr "在 |at| 3.8 中已删除了 **Regions**、**Instance Filters** 和 **Only Group By** 字段。"
+
+#: ../../source/inventories.rst:480
+msgid "Select the appropriate level of output on any inventory source's update jobs from the **Verbosity** drop-down menu."
+msgstr "从 **Verbosity** 下拉菜单中选择清单源更新作业的适当输出级别。"
+
+#: ../../source/inventories.rst:482
+msgid "Use the **Host Filter** field to specify only matching host names to be imported into the controller."
+msgstr "使用 **Host Filter** 字段指定仅导入控制器中的匹配主机名。"
+
+#: ../../source/inventories.rst:484
+msgid "In the **Enabled Variable**, specify the controller to retrieve the enabled state from the given dictionary of host variables. The enabled variable may be specified using dot notation as 'foo.bar', in which case the lookup will traverse into nested dicts, equivalent to: ``from_dict.get('foo', {}).get('bar', default)``."
+msgstr "在 **Enabled Variable** 中，指定控制器从给定的主机变量字典中检索启用的状态。启用的变量可以使用点标记来指定，如 'foo.bar'，它相当于 ``from_dict.get('foo', {}).get('bar', default)``。"
+
+#: ../../source/inventories.rst:486
+msgid "If you specified a dictionary of host variables in the **Enabled Variable** field, you can provide a value to enable on import. For example, if ``enabled_var='status.power_state'`` and ``enabled_value='powered_on'`` with the following host variables, the host would be marked enabled:"
+msgstr "如果在 **Enabled Variable** 字段中指定了主机变量字典，则可以提供一个值来在导入时启用。例如，如果 ``enabled_var='status.power_state'`` 和 ``enabled_value='powered_on'`` 带有以下主机变量，则主机会被标记为启用："
+
+#: ../../source/inventories.rst:502
+msgid "If ``power_state`` were any value other than ``powered_on``, then the host would be disabled when imported into the controller. If the key is not found, then the host will be enabled."
+msgstr "如果 ``power_state`` 是 ``powered_on`` 以外的任何其他值，则主机在导入到控制器时被禁用。如果未找到键，则会启用主机。"
+
+#: ../../source/inventories.rst:504
+msgid "All cloud inventory sources have the following update options:"
+msgstr "所有云清单源都有以下更新选项："
+
+#: ../../source/inventories.rst:506
+msgid "**Overwrite**: If checked, any hosts and groups that were previously present on the external source but are now removed, will be removed from the controller inventory. Hosts and groups that were not managed by the inventory source will be promoted to the next manually created group, or if there is no manually created group to promote them into, they will be left in the \"all\" default group for the inventory."
+msgstr "**Overwrite**：如果选中，以前存在于外部源上的但现已被删除的任何主机和组都将从控制器清单中删除。不由清单源管理的主机和组将提升到下一个手动创建的组，如果没有手动创建组来提升它们，则它们将保留在清单的“all”默认组中。"
+
+#: ../../source/inventories.rst:508
+msgid "When not checked, local child hosts and groups not found on the external source will remain untouched by the inventory update process."
+msgstr "如果没有选中，外部源上没有的本地子主机和组将在清单更新过程中保持不变。"
+
+#: ../../source/inventories.rst:510
+msgid "**Overwrite Variables**: If checked, all variables for child groups and hosts will be removed and replaced by those found on the external source. When not checked, a merge will be performed, combining local variables with those found on the external source."
+msgstr "**Overwrite Variables**：如果选中，子组和主机的所有变量都将被删除，并替换为外部源上的变量。如果没有选择，就会执行合并，将本地变量与外部源上的变量合并。"
+
+#: ../../source/inventories.rst:512
+msgid "**Update on Launch**: Each time a job runs using this inventory, refresh the inventory from the selected source before executing job tasks. To avoid job overflows if jobs are spawned faster than the inventory can sync, selecting this allows you to configure a **Cache Timeout** to cache prior inventory syncs for a certain number of seconds."
+msgstr "**Update on Launch**：每次使用此清单运行作业时，在执行作业任务前从所选源中刷新清单。如果作业的生成速度快于清单的同步速度，为了避免作业溢出，可以选择此选项来配置一个 **Cache Timeout**，以将之前的清单同步缓存几秒钟。"
+
+#: ../../source/inventories.rst:514
+msgid "The \"Update on Launch\" setting refers to a dependency system for projects and inventory, and it will not specifically exclude two jobs from running at the same time. If a cache timeout is specified, then the dependencies for the second job is created and it uses the project and inventory update that the first job spawned. Both jobs then wait for that project and/or inventory update to finish before proceeding. If they are different job templates, they can then both start and run at the same time, if the system has the capacity to do so. If you intend to use the controller's provisioning callback feature with a dynamic inventory source, **Update on Launch** should be set for the inventory group."
+msgstr "“Update on Launch”设置指的是项目和清单的依赖项系统，并且它不会特别排除两个作业同时运行。如果指定了缓存超时，那么会创建第二个作业的依赖项，并使用第一个作业生成的项目和清单更新。然后，两个作业会等待该项目和/或清单更新完成，然后再继续。如果它们是不同的作业模板，则它们可以同时启动并运行，只要系统有足够的容量。如果您要将控制器的部署回调功能与动态清单源结合使用，则应该为清单组设置 **Update on Launch**。"
+
+#: ../../source/inventories.rst:516
+msgid "If you sync an inventory source that uses a project that has **Update On Launch** set, then the project may automatically update (according to cache timeout rules) before the inventory update starts."
+msgstr "如果同步了使用带有 **Update On Launch** 设置的项目的清单源，则项目可能会在清单更新开始前自动更新（根据缓存超时规则）。"
+
+#: ../../source/inventories.rst:518
+msgid "You can create a job template that uses an inventory that sources from the same project that the template uses. In this case, the project will update and then the inventory will update (if updates are not already in-progress, or if the cache timeout has not already expired)."
+msgstr "您可以创建一个作业模板，它使用来自模板的同一项目中的清单。在这种情况下，项目会更新，然后清单将会更新（如果还没有更新，或者缓存超时还没有过期）。"
+
+#: ../../source/inventories.rst:521
+msgid "Review your entries and selections and click **Save** when done. This allows you to configure additional details, such as schedules and notifications."
+msgstr "检查您的条目和选择，完成后点击 **Save**。这时您可以配置附加详情，如调度和通知。"
+
+#: ../../source/inventories.rst:523
+msgid "To configure schedules associated with this inventory source, click the **Schedules** tab."
+msgstr "要配置与这个清单源关联的调度，请点击 **Schedules** 标签页。"
+
+#: ../../source/inventories.rst:525
+msgid "If schedules are already set up; review, edit, or enable/disable your schedule preferences."
+msgstr "如果已经设置了调度，请检查、编辑或启用/禁用您的调度首选项。"
+
+#: ../../source/inventories.rst:526
+msgid "if schedules have not been set up, refer to :ref:`ug_scheduling` for more information."
+msgstr "如果还没有设置调度，请参阅 :ref:`ug_scheduling` 了解更多信息。"
+
+#: ../../source/inventories.rst:530
+msgid "The **Notifications** tab is only present after you save the newly-created source."
+msgstr "**Notifications** 标签页只有在您保存新创建的源后才会显示。"
+
+#: ../../source/inventories.rst:534
+msgid "To configure notifications for the source, click the **Notifications** tab."
+msgstr "要为源配置通知，请点击 **Notifications** 标签页。"
+
+#: ../../source/inventories.rst:536
+msgid "If notifications are already set up, use the toggles to enable or disable the notifications to use with your particular source. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "如果已经设置了通知，请使用切换按钮启用或禁用要与特定源搭配使用的通知。更多详情请参阅 :ref:`ug_notifications_on_off`。"
+
+#: ../../source/inventories.rst:538
+msgid "if notifications have not been set up, refer to :ref:`ug_notifications` for more information."
+msgstr "如果还没有设置通知，请参阅 :ref:`ug_notifications` 了解更多信息。"
+
+#: ../../source/inventories.rst:541
+msgid "Review your entries and selections and click **Save** when done."
+msgstr "检查您的条目和选择，完成后点击 **Save**。"
+
+#: ../../source/inventories.rst:543
+msgid "Once a source is defined, it displays as an entry in the list of sources associated with the inventory. From the **Sources** tab you can perform a sync on a single source, or sync all of them at once. You can also perform additional actions such as scheduling a sync process, and edit or delete the source."
+msgstr "一旦定义了源，它便会在与清单关联的源列表中显示为一个条目。在 **Sources** 标签页中，您可以对单个源执行同步，或同时同步所有源。您也可以执行其他操作，如调度同步过程，以及编辑或删除源。"
+
+#: ../../source/inventories.rst:545
+msgid "|Inventories view sources|"
+msgstr "|Inventories view sources|"
+
+#: ../../source/inventories.rst:553
+msgid "Inventory Sources"
+msgstr "清单源"
+
+#: ../../source/inventories.rst:555
+msgid "Choose a source which matches the inventory type against which a host can be entered:"
+msgstr "选择与可以作为主机输入的清单类型匹配的源："
+
+#: ../../source/inventories.rst:561
+msgid "Sourced from a Project"
+msgstr "源于一个项目"
+
+#: ../../source/inventories.rst:566
+msgid "An inventory that is sourced from a project means that is uses the SCM type from the project it is tied to. For example, if the project's source is from GitHub, then the inventory will use the same source."
+msgstr "源于一个项目的清单意味着它会使用与之关联的项目中的 SCM 类型。例如，如果项目源来自 GitHub 项目，则清单将使用相同的源。"
+
+#: ../../source/inventories.rst:568
+msgid "To configure a project-sourced inventory, select **Sourced from a Project** from the Source field."
+msgstr "要配置源于项目的清单，请从 Source 字段中选择 **Sourced from a Project**。"
+
+#: ../../source/inventories.rst:570
+#: ../../source/inventories.rst:599
+msgid "The Create Source window expands with additional fields. Enter the following details:"
+msgstr "Create Source 窗口会展开更多字段。请输入以下详情："
+
+#: ../../source/inventories.rst:572
+msgid "**Credential**: Optionally specify the credential to use for this source."
+msgstr "**Credential**：指定用于此源的凭证（可选）。"
+
+#: ../../source/inventories.rst:573
+msgid "**Project**: Required. Specify the project this inventory is using as its source. Click the |search| button to choose from a list of projects. If the list is extensive, use the search to narrow the options."
+msgstr "**Project**：必需。指定此清单使用的项目作为其源。点击 |search| 按钮以从项目列表中进行选择。如果列表较长，请使用搜索功能来缩小选项范围。"
+
+#: ../../source/inventories.rst:574
+msgid "**Inventory File**: Required. Select an inventory file associated with the sourced project. If not already populated, you can type it into the text field within the drop down menu to filter the extraneous file types. In addition to a flat file inventory, you can point to a directory or an inventory script."
+msgstr "**Inventory File**：必需。选择与源项目关联的清单文件。如果尚未填充，则可以将其键入到下拉菜单中的文本字段，以过滤无关的文件类型。除了平面文件清单外，您还可以指向目录或清单脚本。"
+
+#: ../../source/inventories.rst:578
+#: ../../source/inventories.rst:605
+#: ../../source/inventories.rst:633
+#: ../../source/inventories.rst:650
+#: ../../source/inventories.rst:672
+#: ../../source/inventories.rst:696
+#: ../../source/inventories.rst:722
+#: ../../source/inventories.rst:745
+#: ../../source/inventories.rst:766
+#: ../../source/inventories.rst:791
+msgid "You can optionally specify the verbosity, host filter, enabled variable/value, and update options as described in the main procedure for :ref:`adding a source <ug_add_inv_common_fields>`."
+msgstr "您还可以选择指定详细程度、主机过滤器、启用的变量/值和更新选项，如 :ref:`adding a source <ug_add_inv_common_fields>` 中所述。"
+
+#: ../../source/inventories.rst:580
+msgid "In order to pass to the custom inventory script, you can optionally set environment variables in the **Environment Variables** field. You may also place inventory scripts in source control and then run it from a project. See :ref:`ag_inv_import` in the |ata| for detail."
+msgstr "要传递给自定义清单脚本，您可以选择在 **Environment Variables** 字段中设置环境变量。您还可以将清单脚本置于源控制中，然后从项目运行它。详情请参阅 |ata| 中的 :ref:`ag_inv_import`。"
+
+#: ../../source/inventories.rst:582
+msgid "|Inventories - create source - sourced from project example|"
+msgstr "|Inventories - create source - sourced from project example|"
+
+#: ../../source/inventories.rst:586
+msgid "If you are executing a custom inventory script from SCM, please make sure you set the execution bit (i.e. ``chmod +x``) on the script in your upstream source control. If you do not, the controller will throw a ``[Errno 13] Permission denied`` error upon execution."
+msgstr "如果您要从 SCM 执行自定义清单脚本，请确保您在上游源控制中的脚本上设置执行位（例如 ``chmod +x``）。如果您不设置，那么控制器会在执行时抛出 ``[Errno 13] Permission denied`` 错误。"
+
+#: ../../source/inventories.rst:592
+msgid "Amazon Web Services EC2"
+msgstr "Amazon Web Services EC2"
+
+#: ../../source/inventories.rst:597
+msgid "To configure an AWS EC2-sourced inventory, select **Amazon EC2** from the Source field."
+msgstr "要配置源于 AWS EC2 的清单，请从 Source 字段中选择 **Amazon EC2**。"
+
+#: ../../source/inventories.rst:601
+msgid "**Credential**: Optionally choose from an existing AWS credential (for more information, refer to :ref:`ug_credentials`)."
+msgstr "**Credential**：（可选）从现有 AWS 凭证中选择（详情请参阅 :ref:`ug_credentials`）。"
+
+#: ../../source/inventories.rst:603
+msgid "If the controller is running on an EC2 instance with an assigned IAM Role, the credential may be omitted, and the security credentials from the instance metadata will be used instead. For more information on using IAM Roles, refer to the `IAM_Roles_for_Amazon_EC2_documentation_at_Amazon <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam- roles-for-amazon-ec2.html>`_."
+msgstr "如果控制器在带有分配的 IAM 角色的 EC2 实例上运行，则可能会省略凭证，并将改用实例元数据中的安全凭证。有关使用 IAM 角色的更多信息，请参阅 `IAM_Roles_for_Amazon_EC2_documentation_at_Amazon <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam- roles-for-amazon-ec2.html>`_。"
+
+#: ../../source/inventories.rst:607
+msgid "Use the **Source Variables** field to override variables used by the ``aws_ec2`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `aws_ec2 inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/amazon/aws/content/inventory/aws_ec2>`__."
+msgstr "使用 **Source Variables** 字段覆盖 ``aws_ec2`` 清单插件使用的变量。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请查看 `aws_ec2 inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/amazon/aws/content/inventory/aws_ec2>`__。"
+
+#: ../../source/inventories.rst:609
+msgid "|Inventories - create source - AWS EC2 example|"
+msgstr "|Inventories - create source - AWS EC2 example|"
+
+#: ../../source/inventories.rst:615
+msgid "If you only use ``include_filters``, the AWS plugin always returns all the hosts. To use this properly, the first condition on the ``or`` must be on ``filters`` and then build the rest of the ``OR`` conditions on a list of ``include_filters``."
+msgstr "如果您只使用 ``include_filters``，AWS 插件总是返回所有主机。要正确使用它，``or`` 中的第一个条件必须是 ``filters``，然后在 ``include_filters`` 列表中构建剩余的 ``OR`` 条件。"
+
+#: ../../source/inventories.rst:620
+msgid "Google Compute Engine"
+msgstr "Google Compute Engine"
+
+#: ../../source/inventories.rst:625
+msgid "To configure a Google-sourced inventory, select **Google Compute Engine** from the Source field."
+msgstr "要配置源于 Google 的清单，请从 Source 字段中选择 **Google Compute Engine**。"
+
+#: ../../source/inventories.rst:627
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing GCE Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "Create Source 窗口会展开所需的 **Credential** 字段。从现有 GCE 凭证中进行选择。如需更多信息，请参阅 :ref:`ug_credentials`。"
+
+#: ../../source/inventories.rst:629
+msgid "|Inventories - create source - GCE example|"
+msgstr "|Inventories - create source - GCE example|"
+
+#: ../../source/inventories.rst:635
+msgid "Use the **Source Variables** field to override variables used by the ``gcp_compute`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `gcp_compute inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/google/cloud/content/inventory/gcp_compute>`__."
+msgstr "使用 **Source Variables** 字段覆盖 ``gcp_compute`` 清单插件使用的变量。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请查看 `gcp_compute inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/google/cloud/content/inventory/gcp_compute>`__。"
+
+#: ../../source/inventories.rst:641
+msgid "Microsoft Azure Resource Manager"
+msgstr "Microsoft Azure Resource Manager"
+
+#: ../../source/inventories.rst:646
+msgid "To configure a Azure Resource Manager-sourced inventory, select **Microsoft Azure Resource Manager** from the Source field."
+msgstr "要配置源于 Azure Resource Manager 的清单，请从 Source 字段中选择 **Azure Resource Manager**。"
+
+#: ../../source/inventories.rst:648
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Azure Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "Create Source 窗口会展开所需的 **Credential** 字段。从现有 Azure 凭证中进行选择。如需更多信息，请参阅 :ref:`ug_credentials`。"
+
+#: ../../source/inventories.rst:652
+msgid "Use the **Source Variables** field to override variables used by the  ``azure_rm`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `azure_rm inventory plugin documentation <https://cloud.redhat.com/ansible/automation-hub/repo/published/azure/azcollection/content/inventory/azure_rm>`__."
+msgstr "使用 **Source Variables** 字段覆盖 ``azure_rm`` 清单插件使用的变量。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请查看 `azure_rm inventory plugin documentation <https://cloud.redhat.com/ansible/automation-hub/repo/published/azure/azcollection/content/inventory/azure_rm>`__。"
+
+#: ../../source/inventories.rst:654
+msgid "|Inventories - create source - Azure RM example|"
+msgstr "|Inventories - create source - Azure RM example|"
+
+#: ../../source/inventories.rst:662
+msgid "VMware vCenter"
+msgstr "VMware vCenter"
+
+#: ../../source/inventories.rst:668
+msgid "To configure a VMWare-sourced inventory, select **VMware vCenter** from the Source field."
+msgstr "要配置源于 VMWare 的清单，请从 Source 字段中选择 **VMware vCenter**。"
+
+#: ../../source/inventories.rst:670
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing VMware Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "Create Source 窗口会展开所需的 **Credential** 字段。从现有 VMware 凭证中进行选择。如需更多信息，请参阅 :ref:`ug_credentials`。"
+
+#: ../../source/inventories.rst:674
+msgid "Use the **Source Variables** field to override variables used by the ``vmware_inventory`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `vmware_inventory inventory plugin <https://github.com/ansible-collections/community.vmware/blob/main/plugins/inventory/vmware_vm_inventory.py>`__."
+msgstr "使用 **Source Variables** 字段覆盖 ``vmware_inventory`` 清单插件使用的变量。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请查看 `vmware_inventory inventory plugin <https://github.com/ansible-collections/community.vmware/blob/main/plugins/inventory/vmware_vm_inventory.py>`__。"
+
+#: ../../source/inventories.rst:676
+msgid "Starting with Ansible 2.9, VMWare properties have changed from lower case to camelCase. The controller provides aliases for the top-level keys, but lower case keys in nested properties have been discontinued. For a list of valid and supported properties starting with Ansible 2.9, refer to `virtual machine attributes in the VMware dynamic inventory plugin <https://docs.ansible.com/ansible/latest/collections/community/vmware/docsite/vmware_scenarios/vmware_inventory_vm_attributes.html>`_."
+msgstr "从 Ansible 2.9 开始，VMWare 属性已从小写改为 camelCase。控制器为顶级键提供别名，但不再使用嵌套属性中的小写键。有关从 Ansible 2.9 开始的有效支持的属性列表，请参阅 `virtual machine attributes in the VMware dynamic inventory plugin <https://docs.ansible.com/ansible/latest/collections/community/vmware/docsite/vmware_scenarios/vmware_inventory_vm_attributes.html>`_。"
+
+#: ../../source/inventories.rst:679
+msgid "|Inventories - create source - VMware example|"
+msgstr "|Inventories - create source - VMware example|"
+
+#: ../../source/inventories.rst:687
+msgid "Red Hat Satellite 6"
+msgstr "Red Hat Satellite 6"
+
+#: ../../source/inventories.rst:692
+msgid "To configure a Red Hat Satellite-sourced inventory, select **Red Hat Satellite** from the Source field."
+msgstr "要配置源于 Red Hat Satellite 的清单，请从 Source 字段中选择 **Red Hat Satellite**。"
+
+#: ../../source/inventories.rst:694
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Satellite Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "Create Source 窗口会展开所需的 **Credential** 字段。从现有 Satellite 凭证中进行选择。如需更多信息，请参阅 :ref:`ug_credentials`。"
+
+#: ../../source/inventories.rst:698
+msgid "Use the **Source Variables** field to specify parameters used by the foreman inventory source. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, refer to the `theforeman.foreman.foreman – Foreman inventory source <https://docs.ansible.com/ansible/latest/collections/theforeman/foreman/foreman_inventory.html>`_ in the Ansible documentation."
+msgstr "使用 **Source Variables** 字段指定 foreman 清单源使用的参数。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请参阅 Ansible 文档中的 `theforeman.foreman.foreman – Foreman inventory source <https://docs.ansible.com/ansible/latest/collections/theforeman/foreman/foreman_inventory.html>`_。"
+
+#: ../../source/inventories.rst:701
+msgid "|Inventories - create source - RH Satellite example|"
+msgstr "|Inventories - create source - RH Satellite example|"
+
+#: ../../source/inventories.rst:705
+msgid "If you encounter an issue with the controller inventory not having the \"related groups\" from Satellite, you might need to define these variables in the inventory source. See the inventory plugins template example for :ref:`ir_plugin_satellite` in the |atir| for detail."
+msgstr "如果您遇到控制器清单没有 Satellite 的\"相关组\"的问题，您可能需要在清单源中定义这些变量。如需详情，请参阅 :ref: 中的`ir_plugin_satellite` |atir| 清单插件模板示例。"
+
+#: ../../source/inventories.rst:707
+msgid "If you see the message, ``\"no foreman.id\" variable(s) when syncing the inventory``, refer to the solution on the Red Hat Customer Portal at: https://access.redhat.com/solutions/5826451. Be sure to login with your customer credentials to access the full article."
+msgstr "如果您看到这个信息 ``\"no foreman.id\" variable(s) when syncing the inventory``，请参阅红帽客户门户网站中的解决方案：https://access.redhat.com/solutions/5826451.。请确保使用您的客户凭证登录以访问完整文章。"
+
+#: ../../source/inventories.rst:713
+msgid "Red Hat Insights"
+msgstr "Red Hat Insights"
+
+#: ../../source/inventories.rst:718
+msgid "To configure a Red Hat Insights-sourced inventory, select **Red Hat Insights** from the Source field."
+msgstr "要配置源于 Red Hat Insights 的清单，请从 Source 字段中选择 **Red Hat Insights**。"
+
+#: ../../source/inventories.rst:720
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Insights Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "Create Source 窗口会展开所需的 **Credential** 字段。从现有 Insights 凭证中进行选择。如需更多信息，请参阅 :ref:`ug_credentials`。"
+
+#: ../../source/inventories.rst:724
+msgid "Use the **Source Variables** field to override variables used by the ``insights`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `insights inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/insights/content/inventory/insights>`__."
+msgstr "使用 **Source Variables** 字段覆盖 ``insights`` 清单插件使用的变量。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请查看 `insights inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/insights/content/inventory/insights>`__。"
+
+#: ../../source/inventories.rst:727
+msgid "|Inventories - create source - RH Insights example|"
+msgstr "|Inventories - create source - RH Insights example|"
+
+#: ../../source/inventories.rst:735
+msgid "OpenStack"
+msgstr "OpenStack"
+
+#: ../../source/inventories.rst:741
+msgid "To configure an OpenStack-sourced inventory, select **OpenStack** from the Source field."
+msgstr "要配置源于 OpenStack 的清单，请从 Source 字段中选择 **OpenStack**。"
+
+#: ../../source/inventories.rst:743
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing OpenStack Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "Create Source 窗口会展开所需的 **Credential** 字段。从现有 OpenStack 凭证中进行选择。如需更多信息，请参阅 :ref:`ug_credentials`。"
+
+#: ../../source/inventories.rst:747
+msgid "Use the **Source Variables** field to override variables used by the ``openstack`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `openstack inventory plugin <https://docs.ansible.com/ansible/latest/collections/openstack/cloud/openstack_inventory.html>`_ in the Ansible collections documentation."
+msgstr "使用 **Source Variables** 字段覆盖 ``openstack`` 清单插件使用的变量。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请查看 Ansible collections 文档中的 `openstack inventory plugin <https://docs.ansible.com/ansible/latest/collections/openstack/cloud/openstack_inventory.html>`__。"
+
+#: ../../source/inventories.rst:749
+msgid "|Inventories - create source - OpenStack example|"
+msgstr "|Inventories - create source - OpenStack example|"
+
+#: ../../source/inventories.rst:757
+msgid "Red Hat Virtualization"
+msgstr "Red Hat Virtualization"
+
+#: ../../source/inventories.rst:762
+msgid "To configure a Red Hat Virtualization-sourced inventory, select **Red Hat Virtualization** from the Source field."
+msgstr "要配置源于 Red Hat Virtualization 的清单，请从 Source 字段中选择 **Red Hat Virtualization**。"
+
+#: ../../source/inventories.rst:764
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Red Hat Virtualization Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "Create Source 窗口会展开所需的 **Credential** 字段。从现有 Red Hat Virtualization 凭证中进行选择。如需更多信息，请参阅 :ref:`ug_credentials`。"
+
+#: ../../source/inventories.rst:768
+msgid "Use the **Source Variables** field to override variables used by the ``ovirt`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `ovirt inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/rhv/content/inventory/ovirt>`__."
+msgstr "使用 **Source Variables** 字段覆盖 ``ovirt`` 清单插件使用的变量。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请查看 `ovirt inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/rhv/content/inventory/ovirt>`__。"
+
+#: ../../source/inventories.rst:770
+msgid "|Inventories - create source - RHV example|"
+msgstr "|Inventories - create source - RHV example|"
+
+#: ../../source/inventories.rst:776
+msgid "Red Hat Virtualization (ovirt) inventory source requests are secure by default. To change this default setting, set the key ``ovirt_insecure`` to **true** in ``source_variables``, which is only available from the API details of the inventory source at the ``/api/v2/inventory_sources/N/`` endpoint."
+msgstr "Red Hat Virtualization（ovirt）清单源请求默认是安全的。要更改此默认设置，在 ``source_variables`` 中将键 ``ovirt_insecure`` 设置为 **true**，这只在 ``/api/v2/inventory_sources/N/`` 端点中的清单源 API 详情中可用。"
+
+#: ../../source/inventories.rst:781
+msgid "Red Hat Ansible Automation Platform"
+msgstr "Red Hat Ansible Automation Platform"
+
+#: ../../source/inventories.rst:787
+msgid "To configure a |at|-sourced inventory, select **Red Hat Ansible Automation Platform** from the Source field."
+msgstr "要配置源于 |at| 的清单，请从 Source 字段中选择 **Red Hat Ansible Automation Platform**。"
+
+#: ../../source/inventories.rst:789
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Ansible Automation Platform Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "Create Source 窗口会展开所需的 **Credential** 字段。从现有 Ansible Automation Platform 凭证中进行选择。如需更多信息，请参阅 :ref:`ug_credentials`。"
+
+#: ../../source/inventories.rst:795
+msgid "Use the **Source Variables** field to override variables used by the ``controller`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `controller inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/ansible/controller/content/inventory/controller>`__ (requires your Red Hat Customer login)."
+msgstr "使用 **Source Variables** 字段覆盖 ``controller`` 清单插件使用的变量。使用 JSON 或 YAML 语法输入变量。使用单选按钮在两者之间切换。有关这些变量的详细描述，请查看 `controller inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/ansible/controller/content/inventory/controller>`__（需要使用 Red Hat Customer 帐户登录）。"
+
+#: ../../source/inventories.rst:800
+msgid "Export old inventory scripts"
+msgstr "导出旧的清单脚本"
+
+#: ../../source/inventories.rst:804
+msgid "Despite the removal of the custom inventory scripts API, the scripts are still saved in the database. The commands described in this section allows you to recover the scripts in a format that is suitable for you to subsequently check into source control. Usage looks like this:"
+msgstr "尽管删除了自定义清单脚本 API，这些脚本仍然保存在数据库中。本节中介绍了适合您随后检查源控制的格式的脚本。使用情况如下所示："
+
+#: ../../source/inventories.rst:812
+msgid "Making use of the output:"
+msgstr "使用输出："
+
+#: ../../source/inventories.rst:819
+msgid "The naming of the scripts is ``_<pk>__<name>``. This is the naming scheme used for project folders."
+msgstr "脚本的命名方式是 ``_<pk>__<name>``。这是用于项目文件夹的命名方案。"
+
+#: ../../source/inventories.rst:836
+msgid "Each file contains a script. Scripts can be ``bash/python/ruby/more``, so the extension is not included. They are all directly executable (assuming the scripts worked). If you execute the script, it dumps the inventory data."
+msgstr "每个文件都包含一个脚本。脚本可以是 ``bash/python/ruby/more``，不包含扩展名。它们都是可直接执行的（假设脚本可以正常工作）。如果执行该脚本，它会转储清单数据。"
+
+#: ../../source/inventories.rst:849
+msgid "You can verify functionality with ``ansible-inventory``. This should give the same data, but reformatted."
+msgstr "您可以使用 ``ansible-inventory`` 验证功能。这应该会提供相同的数据，但被重新格式化。"
+
+#: ../../source/inventories.rst:856
+msgid "In the above example, you could ``cd`` into ``my_scripts`` and then issue a ``git init`` command, add the scripts you want, push it to source control, and then create an SCM inventory source in the |at| user interface."
+msgstr "在上例中，您可以 ``cd`` 到 ``my_scripts``，然后运行 ``git init`` 命令，添加您想要的脚本，将其推送到源控制，然后在 |at| 用户界面中创建 SCM 清单源。"
+
+#: ../../source/inventories.rst:859
+msgid "For more information on syncing or using custom inventory scripts, refer to :ref:`ag_inv_import` in the |ata|."
+msgstr "有关同步或使用自定义清单脚本的详情，请参阅 |ata| 中的 :ref:`ag_inv_import`。"
+
+#: ../../source/inventories.rst:865
+msgid "View completed jobs"
+msgstr "查看完成的作业"
+
+#: ../../source/inventories.rst:867
+msgid "If an inventory was used to run a job, you can view details about those jobs in the **Completed Jobs** tab of the inventory and click **Expanded** to view details about each job."
+msgstr "如果使用了某个清单来运行作业，您可以在此清单的 **Completed Jobs** 标签页中查看这些作业的详情，并点击 **Expanded** 查看每个作业的详情。"
+
+#: ../../source/inventories.rst:869
+msgid "|Inventories view completed jobs|"
+msgstr "|Inventories view completed jobs|"
+
+#: ../../source/inventories.rst:880
+msgid "Running Ad Hoc Commands"
+msgstr "运行临时（Ad Hoc）命令"
+
+#: ../../source/inventories.rst:887
+msgid "To run an ad hoc command:"
+msgstr "要运行临时命令，请执行以下操作："
+
+#: ../../source/inventories.rst:889
+msgid "Select an inventory source from the list of hosts or groups. The inventory source can be a single group or host, a selection of multiple hosts, or a selection of multiple groups."
+msgstr "从主机或组列表中选择清单源。该清单源可以是单个组或主机，也可以是特定的多个主机或特定的多个组。"
+
+#: ../../source/inventories.rst:891
+msgid "|ad hoc-commands-inventory-home|"
+msgstr "|ad hoc-commands-inventory-home|"
+
+#: ../../source/inventories.rst:895
+msgid "Click the **Run Command** button."
+msgstr "点 **Run Command** 按钮。"
+
+#: ../../source/inventories.rst:897
+msgid "The Run command window opens."
+msgstr "这将打开 Run 命令窗口。"
+
+#: ../../source/inventories.rst:901
+msgid "Enter the details for the following fields:"
+msgstr "输入以下字段的详情："
+
+#: ../../source/inventories.rst:903
+msgid "**Module**: Select one of the modules that the |at| supports running commands against."
+msgstr "**Module**：选择 |at| 支持运行命令的模块之一。"
+
+#: ../../source/inventories.rst:906
+msgid "command"
+msgstr "命令"
+
+#: ../../source/inventories.rst:906
+msgid "apt_repository"
+msgstr "apt_repository"
+
+#: ../../source/inventories.rst:906
+msgid "mount"
+msgstr "mount"
+
+#: ../../source/inventories.rst:906
+msgid "win_service"
+msgstr "win_service"
+
+#: ../../source/inventories.rst:908
+msgid "shell"
+msgstr "shell"
+
+#: ../../source/inventories.rst:908
+msgid "apt_rpm"
+msgstr "apt_rpm"
+
+#: ../../source/inventories.rst:908
+msgid "ping"
+msgstr "ping"
+
+#: ../../source/inventories.rst:908
+msgid "win_updates"
+msgstr "win_updates"
+
+#: ../../source/inventories.rst:910
+msgid "yum"
+msgstr "yum"
+
+#: ../../source/inventories.rst:910
+msgid "service"
+msgstr "service"
+
+#: ../../source/inventories.rst:910
+msgid "selinux"
+msgstr "selinux"
+
+#: ../../source/inventories.rst:910
+msgid "win_group"
+msgstr "win_group"
+
+#: ../../source/inventories.rst:912
+msgid "apt"
+msgstr "apt"
+
+#: ../../source/inventories.rst:912
+msgid "group"
+msgstr "group"
+
+#: ../../source/inventories.rst:912
+msgid "setup"
+msgstr "setup"
+
+#: ../../source/inventories.rst:912
+msgid "win_user"
+msgstr "win_user"
+
+#: ../../source/inventories.rst:914
+msgid "apt_key"
+msgstr "apt_key"
+
+#: ../../source/inventories.rst:914
+msgid "user"
+msgstr "user"
+
+#: ../../source/inventories.rst:914
+msgid "win_ping"
+msgstr "win_ping"
+
+#: ../../source/inventories.rst:917
+msgid "**Arguments**: Provide arguments to be used with the module you selected."
+msgstr "**Arguments**：提供要与您选择的模块搭配使用的参数。"
+
+#: ../../source/inventories.rst:918
+msgid "**Limit**: Enter the limit used to target hosts in the inventory. To target all hosts in the inventory enter ``all`` or ``*``, or leave the field blank. This is automatically populated with whatever was selected in the previous view prior to clicking the launch button."
+msgstr "**Limit**：输入用于确定清单中的目标主机的限制。要将清单中的所有主机作为目标，请输入 ``all`` 或 ``*``，或将该字段留空。该字段将自动填充在点击启动按钮之前的上一个视图中选择的内容。"
+
+#: ../../source/inventories.rst:919
+msgid "**Machine Credential**: Select the credential to use when accessing the remote hosts to run the command. Choose the credential containing the username and SSH key or password that Ansbile needs to log into the remote hosts."
+msgstr "**Machine Credential**：选择要在访问远程主机时用来运行命令的凭证。选择包含 Ansbile 登录远程主机所需的用户名和 SSH 密钥或密码的凭证。"
+
+#: ../../source/inventories.rst:920
+msgid "**Verbosity**: Select a verbosity level for the standard output."
+msgstr "**Verbosity**：选择标准输出的详细程度。"
+
+#: ../../source/inventories.rst:921
+msgid "**Forks**: If needed, select the number of parallel or simultaneous processes to use while executing the command."
+msgstr "**Forks**：如果需要，请选择执行命令时使用的并行或同步进程数量。"
+
+#: ../../source/inventories.rst:922
+msgid "**Show Changes**: Select to enable the display of Ansible changes in the standard output. The default is OFF."
+msgstr "**Show Changes**：选择此项可在标准输出中显示 Ansible 更改。默认值为 OFF。"
+
+#: ../../source/inventories.rst:923
+msgid "**Enable Privilege Escalation**: If enabled, the playbook is run with administrator privileges. This is the equivalent of passing the ``--become`` option to the ``ansible`` command."
+msgstr "**Enable Privilege Escalation**：如果启用此项，则会使用管理员权限运行 playbook。这等同于将 ``--become`` 选项传递给 ``ansible`` 命令。"
+
+#: ../../source/inventories.rst:924
+msgid "**Extra Variables**: Provide extra command line variables to be applied when running this inventory. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**Extra Variables**：提供要在运行此清单时应用的额外命令行变量。使用 JSON 或 YAML 语法输入变量.。用单选按钮在两者之间切换。"
+
+#: ../../source/inventories.rst:926
+msgid "|ad hoc-commands-inventory-run-command|"
+msgstr "|ad hoc-commands-inventory-run-command|"
+
+#: ../../source/inventories.rst:930
+msgid "Click **Next** to choose the |ee| you want the ad-hoc command to be run against."
+msgstr "点 **Next** 选择您要针对的 |ee| 运行临时命令。"
+
+#: ../../source/inventories.rst:934
+msgid "Click **Next** to choose the credential you want to use and click the **Launch** button."
+msgstr "点 **Next** 选择要使用的凭证，然后点击 **Launch** 按钮。"
+
+#: ../../source/inventories.rst:937
+msgid "The results display in the **Output** tab of the module's job window."
+msgstr "结果会显示在模块作业窗口的 **Output** 标签页中。"
+
+#: ../../source/inventories.rst:939
+msgid "|ad hoc-commands-inventory-results-example|"
+msgstr "|ad hoc-commands-inventory-results-example|"
+

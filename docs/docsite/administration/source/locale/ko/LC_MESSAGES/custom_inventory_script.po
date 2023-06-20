@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/custom_inventory_script.rst:4
+msgid "Custom Inventory Scripts"
+msgstr "사용자 지정 인벤토리 스크립트"
+
+#: ../../source/custom_inventory_script.rst:11
+msgid "Inventory scripts have been discontinued. For more information, see :ref:`ug_customscripts` in the |atu|."
+msgstr "인벤토리 스크립트는 사용이 중단되었습니다. 자세한 내용은 |atu|에서 :ref:`ug_customscripts`를 참조하십시오."
+
+#: ../../source/custom_inventory_script.rst:14
+msgid "If you use custom inventory scripts, migrate to sourcing these scripts from a project. See :ref:`ag_inv_import` in the subsequent chapter, and also refer to :ref:`ug_inventory_sources` in the |atu| for more detail."
+msgstr "사용자 지정 인벤토리 스크립트를 사용하는 경우 프로젝트에서 해당 스크립트를 소싱하도록 마이그레이션합니다. 자세한 내용은 후속 섹션에 있는 :ref:`ag_inv_import`와 |atu|의 :ref:`ug_inventory_sources`를 참조하십시오."
+
+#: ../../source/custom_inventory_script.rst:16
+msgid "If you are setting up an inventory file, refer to the `Red Hat Ansible Automation Platform Installation Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_installation_guide/single-machine-scenario>`_ on `access.redhat.com <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform>`_ and find examples specific to your setup."
+msgstr "인벤토리 파일을 설정하는 경우 `access.redhat.com <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform>`_의 `Red Hat Ansible Automation Platform Installation Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_installation_guide/single-machine-scenario>`_를 참조하고 설정 관련 예제를 찾습니다."
+
+#: ../../source/custom_inventory_script.rst:18
+msgid "If you are migrating to |ees|, see:"
+msgstr "|ees| 으로 마이그레이션하는 경우 다음을 참조하십시오."
+
+#: ../../source/custom_inventory_script.rst:20
+msgid ":ref:`upgrade_venv`"
+msgstr ":ref:`upgrade_venv`"
+
+#: ../../source/custom_inventory_script.rst:21
+msgid "`Designing a mesh deployment in your environment <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-standalone-controller-non-inst-database>`_"
+msgstr "`Designing a mesh deployment in your environment <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-standalone-controller-non-inst-database>`_"
+
+#: ../../source/custom_inventory_script.rst:22
+msgid ":ref:`mesh_topology_ee` in the |atumg| to validate your topology"
+msgstr "|atumg|에 있는 :ref:`mesh_topology_ee`에서 토폴로지의 유효성을 검사합니다."
+
+#: ../../source/custom_inventory_script.rst:24
+msgid "To learn more about automation mesh, refer to the `Red Hat Ansible Automation Mesh Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh>`_ on `access.redhat.com <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform>`_."
+msgstr "자동화 메시에 대한 자세한 내용은 `access.redhat.com <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform>`_의 `Red Hat Ansible Automation Mesh Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/assembly-planning-mesh>`_를 참조하십시오."
+
+#: ../../source/custom_inventory_script.rst:26
+msgid "If you already have a mesh topology set up and want to view node type, node health, and specific details about each node, see :ref:`ag_topology_viewer` later in this guide."
+msgstr "메시 토폴로지가 이미 설정되어 있고 노드 유형, 노드 상태 및 각 노드에 대한 특정 세부 정보를 보려면 이 가이드의 뒷부분에 있는 :ref:`ag_topology_viewer` 을 참조하십시오."
+

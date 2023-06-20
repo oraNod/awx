@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/search_sort.rst:4
+msgid "Search"
+msgstr "検索"
+
+#: ../../../common/source/search.rst:5
+msgid "The |at| has a powerful search tool that provides both search and filter capabilities that span across multiple functions. Acceptable search criteria are provided in an expandable \"cheat-sheet\" accessible from the **Advanced** option from the **Name** drop-down menu in the search field. From there, use the combination of **Set Type**, **Key**, **Lookup type** to filter."
+msgstr "|at| には強力な検索ツールがあり、複数の機能にまたがる検索およびフィルタリングの両方の機能を提供しています。検索条件は、検索フィールドの **名前** ドロップダウンメニューから **詳細** オプションを選択すると、拡張可能な「チートシート」として提供されます。そこから、**タイプの設定**、**キー**、**ルックアップタイプ**を組み合わせて、フィルタリングを行います。"
+
+#: ../../../common/source/search.rst:7
+msgid "|key sheet|"
+msgstr "|key sheet|"
+
+#: ../../../common/source/search.rst:13
+msgid "Searching Tips"
+msgstr "検索のヒント"
+
+#: ../../../common/source/search.rst:15
+msgid "These searching tips assume that you are not searching hosts. Most of this section still applies to hosts but with some subtle differences. A typical syntax of a search consists a field (left-hand side) and a value (right-hand side). A colon is used to separate the field that you want to search from the value. If a search doesn't have a colon (see example 3) it is treated as a simple string search where ``?search=foobar`` is sent. Here are the examples of syntax used for searching:"
+msgstr "これらの検索ヒントは、ホストの検索を対象としていません。このセクションの大半はホストにも適用されますが、相違点が少しあります。通常の検索構文には、フィールド (左側) と値 (右側) が含まれます。コロンは、検索するフィールドと値を区別するために使用します。検索にコロンが含まれない場合には (例 3 参照)、``?search=foobar`` を送信する単純な文字列検索として処理されます。検索に使用する構文例を以下に示します。"
+
+#: ../../../common/source/search.rst:17
+msgid "``name:localhost`` In this example, the string before the colon represents the field that you want to search on. If that string does not match something from **Fields** or **Related Fields** then it's treated the same way Example 3 is (string search). The string after the colon is the string that you want to search for within the name attribute."
+msgstr "``name:localhost``: この例では、コロンの前の文字列は、検索するフィールドを表します。その文字列が **フィールド** または **関連フィールド** のアイテムと一致しない場合には、例 3 (文字列検索) と同じ方法で処理されます。コロンの後ろの文字列は、名前属性内で検索する文字列です。"
+
+#: ../../../common/source/search.rst:19
+msgid "``organization.name:Default``  This example shows a Related Field Search. The period in the left-hand portion separates the model from the field in this case. Depending on how deep/complex the search is, you could have multiple periods in that left-hand portion."
+msgstr "``organization.name:Default``: この例は、関連フィールドの検索です。今回の例では、左側のピリオドは、フィールドとモデルを分割します。検索の複雑性や検索層の深さにより、左側の部分にピリオドを複数使用される場合もあります。"
+
+#: ../../../common/source/search.rst:21
+msgid "``foobar``    Simple string (key term) search that will find all instances of that term using an ``icontains`` search against the name and description fields. If a space is used between terms (e.g. foo bar), then any results that contain both terms will be returned. If the terms are wrapped in quotes (e.g. \"foo bar\"), the controller will search for the entire string with the terms appearing together. Specific name searches will search against the API name. For example, ``Management job`` in the user interface is ``system_job`` in the API."
+msgstr "``foobar``: ``icontains`` 検索を使用して、名前や説明フィールドの中から対象の用語をすべて検索するための単純な文字列 (キーワード)。用語と用語の間にスペースが使用されている場合には (例: foo bar)、両方の用語が含まれる結果がすべて返されます。用語が引用句で括られている場合には (例: \"foo bar\")、コントローラーはキーワード両方が含まれる文字列全体を探し出します。固有名の検索は、API 名に対して検索します。たとえば、ユーザーインターフェースの ``Management job`` は、API の ``system_job`` です。"
+
+#: ../../../common/source/search.rst:23
+msgid "``organization:Default``  This example shows a Related Field search but without specifying a field to go along with the organization. This is supported by the API and is analogous to a simple string search but done against the organization (will do an ``icontains`` search against both the name and description)."
+msgstr "``organization:Default``: この例は、組織で使用できるフィールドを指定しないで、関連フィールドを検索する例です。これは、API によりサポートされ、単純な文字列検索に似ていますが、組織に対して検索がかけられます (名前と説明両方に対して ``icontains`` の検索がかけられます)。"
+
+#: ../../../common/source/search.rst:27
+msgid "Values for search fields"
+msgstr "検索フィールドの値"
+
+#: ../../../common/source/search.rst:29
+msgid "To find values for certain fields, refer to the API endpoint for extensive options and their valid values. For example, if you want to search against ``/api/v2/jobs`` -> ``type`` field, you can find the values by performing an **OPTIONS** request to ``/api/v2/jobs`` and look for entries in the API for ``\"type\"``. Additionally, you can view the related searches by scrolling to the bottom of each screen. In the example for ``/api/v2/jobs``, the related search shows:"
+msgstr "特定のフィールドの値を検索するには、拡張オプションと有効な値の API エンドポイントを参照してください。たとえば、``/api/v2/jobs`` -> ``type`` フィールドを検索する場合は、``/api/v2/jobs`` に **OPTIONS** 要求を実行して値を検索し、API のエントリーに ``\"type\"`` がないかを特定します。さらに、各画面の下までスクロールして関連の検索を確認できます。``/api/v2/jobs`` の例では、関連検索は以下を返します。"
+
+#: ../../../common/source/search.rst:55
+msgid "The values for Fields come from the keys in a **GET** request. ``url``, ``related``, and ``summary_fields`` are not used. The values for Related Fields also come from the **OPTIONS** response, but from a different attribute.  Related Fields is populated by taking all the values from ``related_search_fields`` and stripping off the ``__search`` from the end."
+msgstr "フィールドの値は、**GET** 要求のキーから取得します。``url``、``related`` および ``summary_fields`` は使用しません。関連フィールドの値は、異なる属性の **OPTIONS** 応答から取得します。関連フィールドには、``related_search_fields`` からのすべての値を取得してデータが投入され、末尾の ``__search`` を取り除きます。"
+
+#: ../../../common/source/search.rst:57
+msgid "Any search that does not start with a value from Fields or a value from the Related Fields, will be treated as a generic string search. Searching for something like ``localhost`` will result in the UI sending ``?search=localhost`` as a query parameter to the API endpoint. This is a shortcut for an ``icontains`` search on the name and description fields."
+msgstr "フィールドからの値または関連フィールドからの値が文頭にこない検索は、一般的な文字列検索として処理されます。``localhost`` などの検索は、API エンドポイントに、クエリーパラメーターとして ``?search=localhost`` を送信する UI が結果として返されます。これは、名前および説明フィールドに対する ``icontains`` 検索のショートカットです。"
+
+#: ../../../common/source/search.rst:61
+msgid "Searching using values from Related Fields"
+msgstr "関連フィールドの値を使用した検索"
+
+#: ../../../common/source/search.rst:63
+msgid "Searching a Related Field requires you to start the search string with the Related Field. This example describes how to search using values from the Related Field, `organization`."
+msgstr "関連フィールドの検索では、関連フィールドで検索文字列を開始する必要があります。以下の例では、関連フィールド `organization` からの値を使用した検索方法を説明します。"
+
+#: ../../../common/source/search.rst:65
+msgid "The left-hand side of the search string must start with `organization` (ex: ``organization:Default``). Depending on the related field, you might want to provide more specific direction for the search by providing secondary/tertiary fields. An example of this would be to specify that you want to search for all job templates that use a project matching a certain name. The syntax on this would look like: ``job_template.project.name:\"A Project\"``."
+msgstr "検索文字列の左側は、`organization` (例: ``organization:Default``) で開始する必要があります。関連フィールドによっては、2 つ目/3 つ目のフィールドを指定して、より具体的な検索を行います。この例では、特定の名前のプロジェクトを使用するジョブテンプレートをすべて検索するように指定します。この検索の構文は ``job_template.project.name:\"A Project\"`` のようになります。"
+
+#: ../../../common/source/search.rst:69
+msgid "This query would execute against the ``unified_job_templates`` endpoint which is why it starts with ``job_template``. If we were searching against the ``job_templates`` endpoint, then you wouldn't need the ``job_template`` portion of that query."
+msgstr "このクエリーは、 ``unified_job_templates`` エンドポイントに対して実行するので、文頭が ``job_template`` となっています。``job_templates`` エンドポイントに対して検索を行う場合には、このクエリーには ``job_template`` の部分は必要ありません。"
+
+#: ../../../common/source/search.rst:73
+msgid "Other search considerations"
+msgstr "その他の検索に関する留意事項"
+
+#: ../../../common/source/search.rst:75
+msgid "The following are a few things about searching in the controller that you should be aware of:"
+msgstr "以下は、コントローラーでの検索に関して注意すべき事項です。"
+
+#: ../../../common/source/search.rst:77
+msgid "There's currently no supported syntax for **OR** queries. All search terms get **AND**'d in the query parameters."
+msgstr "検索により (**AND** パラメーターを使用した検索の場合のように) タグの共通部分である結果のサブセットが返されます。現在のところ、 (**OR** パラメーターを使用した検索のような) 複数パラメーターの結果を返す検索はサポートされていません。"
+
+#: ../../../common/source/search.rst:78
+msgid "The left-hand portion of a search parameter can be wrapped in quotes to support searching for strings with spaces."
+msgstr "スペースを含む文字列検索に対応するには、検索パラメーターの左側の部分を引用句で括ることができます。"
+
+#: ../../../common/source/search.rst:79
+msgid "Currently, the values in the Fields are direct attributes expected to be returned in a **GET** request.  Whenever you search against one of the values, the controller essentially does an ``__icontains`` search. So, for example, ``name:localhost`` would send back ``?name__icontains=localhost``. The controller currently performs this search for every Field value, even ``id``, which is not ideal."
+msgstr "現在、フィールドの値は直接属性で、**GET** 要求で返されるはずです。値のいずれかに対して検索を行う場合は必ず、コントローラーは ``__icontains`` 検索を行います。たとえば ``name:localhost`` は ``?name__icontains=localhost`` を返します。コントローラーは現在、すべてのフィールドの値に対する検索を行います。この検索には ``id`` も含まれるので、理想的ではありません。"
+
+#: ../../../common/source/search.rst:83
+msgid "Sort"
+msgstr "並び替え"
+
+#: ../../../common/source/search.rst:88
+msgid "Where applicable, use the arrows in each column to sort by ascending or descending order (following is an example from the schedules list)."
+msgstr "該当する場合は、昇順または降順で並び替えるには各列の矢印を使用します (以下は、スケジュール一覧からの例です)。"
+
+#: ../../../common/source/search.rst:90
+msgid "|sort arrow|"
+msgstr "|sort arrow|"
+
+#: ../../../common/source/search.rst:95
+msgid "The direction of the arrow indicates the sort order of the column."
+msgstr "矢印の方向は、列の並べ替え順序を示します。"
+

@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/conventions.rst:3
+msgid "Conventions"
+msgstr "규칙"
+
+#: ../../source/conventions.rst:11
+msgid "|aap| controller uses a standard REST API, rooted at ``/api/`` on the server. The API is versioned for compatibility reasons, and currently ``api/v2/`` is the latest available version. You can see information about what API versions are available by querying ``/api/``."
+msgstr "|aap| 컨트롤러는 루트가 서버의 ``/api/``인 표준 REST API를 사용합니다. API는 호환성을 위해 버전이 지정되었으며, 현재 사용 가능한 최신 버전은 ``api/v2/``입니다. 사용 가능한 API 버전에 대한 정보는 ``/api/``를 쿼리하여 확인할 수 있습니다."
+
+#: ../../source/conventions.rst:13
+msgid "``/api/v1/`` has been discontinued as of |at| version 3.6. Refer to previous versions of the api for details on v1."
+msgstr "``/api/v1/``은 |at| 버전 3.6부터 중단되었습니다. v1에 대한 자세한 내용은 이전 버전의 API를 참조하십시오."
+
+#: ../../source/conventions.rst:15
+msgid "You may have to specify the content/type on **POST** or **PUT** requests accordingly."
+msgstr "**POST** 또는 **PUT** 요청에서 콘텐츠/유형을 적절하게 지정해야 할 수도 있습니다."
+
+#: ../../source/conventions.rst:17
+msgid "**PUT**: Update a specific resource (by an identifier) or a collection of resources. PUT can also be used to create a specific resource if the resource identifier is known before-hand."
+msgstr "**PUT**: 특정 리소스(ID별) 또는 리소스 컬렉션을 업데이트합니다. 리소스 ID를 미리 알고 있는 경우 PUT을 사용하여 특정 리소스를 생성할 수도 있습니다."
+
+#: ../../source/conventions.rst:18
+msgid "**POST**: Create a new resource. Also acts as a catch-all verb for operations that do not fit into the other categories."
+msgstr "**POST**: 새 리소스를 생성합니다. 또한 다른 카테고리에 맞지 않는 작업에 대해 다양한 동사 역할을 합니다."
+
+#: ../../source/conventions.rst:20
+msgid "All URIs  not ending with ``\"/\"`` receive a 301 redirect."
+msgstr "``\"/\"``로 끝나지 않는 모든 URI에는 301 리디렉션이 수신됩니다."
+
+#: ../../source/conventions.rst:24
+msgid "|atversionshort| API change: Formatting of extra_vars attached to Job Template records is preserved. Previously, YAML would be converted to JSON and returned as JSON. In 2.2.0 and newer, YAML is returned as YAML with formatting and comments preserved, and JSON is returned as JSON."
+msgstr "|atversionshort| API 변경: 작업 템플릿 레코드에 연결된 extra_vars 형식이 유지됩니다. 이전에는 YAML이 JSON으로 변환되어 JSON으로 반환되었습니다. 2.2.0 이상에서 YAML은 서식 및 주석이 보존된 YAML로 반환되고 JSON은 JSON으로 반환됩니다."
+

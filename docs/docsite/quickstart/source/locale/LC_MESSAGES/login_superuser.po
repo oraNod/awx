@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower Quick
+# Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Quick Setup 3.7.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-25 09:55-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/login_superuser.rst:2
+msgid "Login as a Superuser"
+msgstr ""
+
+#: ../../source/login_superuser.rst:7
+msgid ""
+"Using the login information provided after your installation completed, "
+"open a web browser and log in to Tower by browsing to the Tower server "
+"URL at: ``https://<TOWER_SERVER_NAME>/``"
+msgstr ""
+
+#: ../../source/login_superuser.rst:9
+msgid ""
+"Refer to :ref:`ir_setuplaybook` in the *Tower Installation and Reference "
+"Guide* for more information."
+msgstr ""
+
+#: ../../source/login_superuser.rst:13
+msgid ""
+"Tower installs a self-signed certificate for HTTPS communication which "
+"may require acceptance in your browser. Refer to the :ref:`General "
+"Installation Notes <installandreference:ir_general_install_notes>` in the"
+" *Tower Installation and Reference Guide* for help with replacing this "
+"certificate if needed."
+msgstr ""
+
+#: ../../source/login_superuser.rst:16
+msgid ""
+"Once the Tower UI is accessible, use the credentials specified during the"
+" installation process to login. The default username is ``admin``. The "
+"password for ``admin`` is the value specified for ``admin_password`` in "
+"your inventory file."
+msgstr ""
+
+#: ../../source/login_superuser.rst:18
+msgid ""
+"These defaults can be changed later by clicking the Users (|users-icon|) "
+"icon from the left navigation bar."
+msgstr ""
+
+#: ../../source/login_superuser.rst:22
+msgid "|Login form|"
+msgstr ""
+

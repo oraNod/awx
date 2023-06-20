@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/glossary.rst:2
+msgid "Glossary"
+msgstr "用語集"
+
+#: ../../source/glossary.rst:8
+msgid "Ad Hoc"
+msgstr "アドホック"
+
+#: ../../source/glossary.rst:10
+msgid "Refers to running Ansible to perform some quick command, using /usr/bin/ansible, rather than the orchestration language, which is /usr/bin/ansible-playbook. An example of an ad hoc command might be rebooting 50 machines in your infrastructure. Anything you can do ad hoc can be accomplished by writing a Playbook, and Playbooks can also glue lots of other operations together."
+msgstr "Ansible を実行して、/usr/bin/ansible-playbook のオーケストレーション言語ではなく /usr/bin/ansible を使用してクイックコマンドを実行することを指します。アドホックコマンドの例には、インフラストラクチャー内での 50 台のマシンを再起動することなどが含まれます。アドホックに実行できるすべてのことは Playbook を作成して実行でき、Playbook は数多くの他の操作を 1 つにまとめることができます。"
+
+#: ../../source/glossary.rst:11
+msgid "Callback Plugin"
+msgstr "Callback プラグイン"
+
+#: ../../source/glossary.rst:13
+msgid "Refers to some user-written code that can intercept results from Ansible and do something with them. Some supplied examples in the GitHub project perform custom logging, send email, or even play sound effects."
+msgstr "Ansible からの結果をインターセプトでき、それらについて何らかの処理を行うユーザー作成コードを指します。GitHub プロジェクトで提供されている一部のサンプルの実行内容には、カスタムロギングやメール送信、さらにはサウンド効果の再生などが含まれます。"
+
+#: ../../source/glossary.rst:14
+msgid "Control Groups"
+msgstr "コントロールグループ"
+
+#: ../../source/glossary.rst:16
+msgid "Also known as '*cgroups*', a control group is a feature in the Linux kernel that allows resources to be grouped and allocated to run certain processes. In addition to assigning resources to processes, cgroups can also report actual resource usage by all processes running inside of the cgroup."
+msgstr "コントロールグループは「*cgroup*」とも呼ばれる Linux カーネルの機能で、リソースをグループ化し、特定のプロセスを実行するために割り当てることができるようになります。プロセスへのリソースの割り当てに加えて、cgroup は、cgroup 内で実行されるすべてのプロセスによる実際のリソースの使用量の報告も行います。"
+
+#: ../../source/glossary.rst:17
+msgid "Check Mode"
+msgstr "Check Mode (チェックモード)"
+
+#: ../../source/glossary.rst:19
+msgid "Refers to running Ansible with the ``--check`` option, which does not make any changes on the remote systems, but only outputs the changes that might occur if the command ran without this flag. This is analogous to so-called “dry run” modes in other systems, though the user should be warned that this does not take into account unexpected command failures or cascade effects (which is true of similar modes in other systems). Use this to get an idea of what might happen, but it is not a substitute for a good staging environment."
+msgstr "``--check`` オプションを指定して Ansible を実行することを指します。このオプションを選択してもリモートシステムに変更は加えられることはなく、コマンドがこのフラグなしに実行された場合に生じる可能性のある変更のみを出力します。これは、他のシステムでのいわゆる「ドライラン」モードに類似しています。ただし、この場合は予期しないコマンドの失敗やカスケード効果が考慮されないことに注意してください (他のシステムの同様のモードについても同じです)。このモードを使用すると、起こり得ることの概要を把握することはできますが、これが適切なステージング環境の代わりになる訳ではありません。"
+
+#: ../../source/glossary.rst:20
+msgid "Container Groups"
+msgstr "コンテナーグループ"
+
+#: ../../source/glossary.rst:22
+msgid "Container Groups are a type of Instance Group that specify a configuration for provisioning a pod in a Kubernetes or OpenShift cluster where a job is run. These pods are provisioned on-demand and exist only for the duration of the playbook run."
+msgstr "コンテナーグループはインスタンスグループの 1 種で、ジョブが実行される Kubernetes または OpenShift クラスター内での Pod のプロビジョニングに関する設定を指定します。これらの Pod はオンデマンドでプロビジョニングされ、Playbook が実行されている期間のみ存在します。"
+
+#: ../../source/glossary.rst:23
+msgid "Credentials"
+msgstr "認証情報"
+
+#: ../../source/glossary.rst:25
+msgid "Authentication details that may be utilized by the controller to launch jobs against machines, to synchronize with inventory sources, and to import project content from a version control system."
+msgstr "コントローラーがマシンに対してジョブを起動したり、インベントリーソースと同期したり、バージョン管理システムからプロジェクトコンテンツをインポートしたりする際に使用される可能性のある認証情報の詳細です。"
+
+#: ../../source/glossary.rst:26
+msgid "Credential Plugin"
+msgstr "認証情報プラグイン"
+
+#: ../../source/glossary.rst:28
+msgid "Python code that contains definitions for an external credential type, its metadata fields, and the code needed for interacting with a secret management system."
+msgstr "外部の認証情報タイプ、メタデータフィールド、シークレット管理システムとの対話に必要なコードの定義を含む Python コード"
+
+#: ../../source/glossary.rst:29
+msgid "Distributed Job"
+msgstr "分散ジョブ"
+
+#: ../../source/glossary.rst:31
+msgid "A job that consists of a job template, an inventory, and slice size. When executed, a distributed job slices each inventory into a number of “slice size” chunks, which are then used to run smaller job slices."
+msgstr "ジョブテンプレート、インベントリー、スライスサイズで構成されるジョブ。実行されると、分散されたジョブは、各インベントリーを複数の「スライスサイズ」のチャンクにスライスし、これらをサイズの小さいジョブスライスの実行に使用します。"
+
+#: ../../source/glossary.rst:32
+msgid "External Credential Type"
+msgstr "外部認証情報タイプ"
+
+#: ../../source/glossary.rst:34
+msgid "A managed credential type for |at| used for authenticating with a secret management system."
+msgstr "シークレット管理システムとの認証に使用する |at| の管理認証情報タイプ"
+
+#: ../../source/glossary.rst:35
+msgid "Facts"
+msgstr "ファクト"
+
+#: ../../source/glossary.rst:37
+msgid "Facts are simply things that are discovered about remote nodes. While they can be used in playbooks and templates just like variables, facts are things that are inferred, rather than set. Facts are automatically discovered when running plays by executing the internal setup module on the remote nodes. You never have to call the setup module explicitly, it just runs, but it can be disabled to save time if it is not needed. For the convenience of users who are switching from other configuration management systems, the fact module also pulls in facts from the ‘ohai’ and ‘facter’ tools if they are installed, which are fact libraries from Chef and Puppet, respectively."
+msgstr "端的に言うと、ファクトはリモートノードについて発見される事柄を指します。ファクトは変数のように Playbook やテンプレートで使用できますが、ファクトは設定される事柄というよりは推測される事柄と言えます。ファクトは、リモートノードで内部セットアップモジュールを実行することでプレイの実行中に自動的に検出されます。セットアップモジュールは明示的に呼び出さなくても実行されますが、実行する必要がない場合は時間を節約するために無効に設定できます。他の設定管理システムから切り替えを行われている場合の利点として、ファクトモジュールは Chef および Puppet のファクトライブラリーである 「ohai」および「facter」ツールから (インストールされている場合) ファクトを取り込みます。"
+
+#: ../../source/glossary.rst:38
+msgid "Forks"
+msgstr "フォーク"
+
+#: ../../source/glossary.rst:40
+msgid "Ansible and |at| talk to remote nodes in parallel and the level of parallelism can be set serveral ways--during the creation or editing of a Job Template, by passing ``--forks``, or by editing the default in a configuration file. The default is a very conservative 5 forks, though if you have a lot of RAM, you can easily set this to a value like 50 for increased parallelism."
+msgstr "Ansible および |at| は複数のリモートノードと同時に対話でき、並列処理のレベルは、ジョブテンプレートの作成または編集時に ``--forks`` を渡すか、または設定ファイルのデフォルトを編集するなどの複数の方法で設定することができます。デフォルトには非常に控え目な 5 つのフォークが設定されますが、多くの RAM がある場合は、並列処理のレベルを上げるために 50 などの値に設定することもできます。"
+
+#: ../../source/glossary.rst:41
+msgid "Group"
+msgstr "グループ"
+
+#: ../../source/glossary.rst:43
+msgid "A set of hosts in Ansible that can be addressed as a set, of which many may exist within a single Inventory."
+msgstr "セットとして対応可能な Ansible 内の一連のホストを指します。それらの内の多くが単一インベントリーに存在する場合があります。"
+
+#: ../../source/glossary.rst:44
+msgid "Group Vars"
+msgstr "グループ変数"
+
+#: ../../source/glossary.rst:46
+msgid "The ``group_vars/`` files are files that live in a directory alongside an inventory file, with an optional filename named after each group. This is a convenient place to put variables that will be provided to a given group, especially complex data structures, so that these variables do not have to be embedded in the inventory file or playbook."
+msgstr "``group_vars/`` ファイルは、各グループに由来するオプションのファイル名で、インベントリーファイルと共にディレクトリーに存在するファイルのことです。このファイルは、とくにデータ構造が複雑な場合などに、所定グループに提供される変数を配置できる便利な場所になります。これにより、これらの変数がインベントリーファイルまたは Playbook に埋め込まれる必要がなくなります。"
+
+#: ../../source/glossary.rst:47
+msgid "Handlers"
+msgstr "ハンドラー"
+
+#: ../../source/glossary.rst:49
+msgid "Handlers are just like regular tasks in an Ansible playbook (see Tasks), but are only run if the Task contains a “notify” directive and also indicates that it changed something. For example, if a config file is changed then the task referencing the config file templating operation may notify a service restart handler. This means services can be bounced only if they need to be restarted. Handlers can be used for things other than service restarts, but service restarts are the most common usage."
+msgstr "ハンドラーは Ansible Playbook の通常のタスクのような機能を持ちます(「タスク」を参照) が、タスクに「notify (通知)」指示があり、変更があったことが示唆される場合にのみ実行されます。たとえば、設定ファイルが変更された後に、設定ファイルを参照するテンプレート作成操作のタスクはサービス再起動ハンドラーに通知する可能性があります。これは、サービスが再起動する必要がある場合にのみバウンスできることを意味します。ハンドラーはサービスの再起動以外のタスクに使用できますが、サービスの再起動が最も一般的な使用例になります。"
+
+#: ../../source/glossary.rst:50
+msgid "Host"
+msgstr "ホスト"
+
+#: ../../source/glossary.rst:52
+msgid "A system managed by |at|, which may include a physical, virtual, cloud-based server, or other device. Typically an operating system instance. Hosts are contained in Inventory. Sometimes referred to as a \"node\"."
+msgstr "|at| によって管理されるシステムで、物理、仮想、クラウドベースのサーバー、または他のデバイスが含まれる場合があり、通常はオペレーティングシステムインスタンスです。ホストはインベントリーに含まれます。ホストは「ノード」と呼ばれることもあります。"
+
+#: ../../source/glossary.rst:53
+msgid "Host Specifier"
+msgstr "ホスト指定子"
+
+#: ../../source/glossary.rst:55
+msgid "Each Play in Ansible maps a series of tasks (which define the role, purpose, or orders of a system) to a set of systems. This “hosts:” directive in each play is often called the hosts specifier. It may select one system, many systems, one or more groups, or even some hosts that are in one group and explicitly not in another."
+msgstr "Ansible の各プレイは、(システムのロール、目的または順序を定義する) 一連のタスクをシステムのセットにマップします。各プレイにあるこの「hosts:」指示はホスト指定子と呼ばれることが多くあります。これは 1 つのシステム、数多くのシステム、1 つ以上のグループ、または １つのグループにあるが別のグループには明示的にないとされる一部のホストを選択することができます。"
+
+#: ../../source/glossary.rst:56
+msgid "Instance Group"
+msgstr "インスタンスグループ"
+
+#: ../../source/glossary.rst:58
+msgid "A group that contains instances for use in a clustered environment. An instance group provides the ability to group instances based on policy."
+msgstr "クラスター環境で使用するインスタンスで構成されるグループ。インスタンスグループでは、ポリシーをもとにインスタンスをグループ化できます。"
+
+#: ../../source/glossary.rst:59
+msgid "Inventory"
+msgstr "インベントリー"
+
+#: ../../source/glossary.rst:61
+msgid "A collection of hosts against which Jobs may be launched."
+msgstr "ジョブの起動対象となるホストのコレクションです。"
+
+#: ../../source/glossary.rst:62
+msgid "Inventory Script"
+msgstr "インベントリースクリプト"
+
+#: ../../source/glossary.rst:64
+msgid "A very simple program (or a complicated one) that looks up hosts, group membership for hosts, and variable information from an external resource--whether that be a SQL database, a CMDB solution, or something like LDAP. This concept was adapted from Puppet (where it is called an “External Nodes Classifier”) and works more or less exactly the same way."
+msgstr "ホスト、ホストのグループメンバーシップおよび変数情報を、SQL データベース、CMDB ソリューションまたは LDAP に類する外部リソースから参照する非常に簡単なプログラム (または複雑なプログラム) のことです。この概念は Puppet (「外部ノード分類子」と呼ばれている) から取られたもので、ほぼ同じ様に機能します。"
+
+#: ../../source/glossary.rst:65
+msgid "Inventory Source"
+msgstr "インベントリーソース"
+
+#: ../../source/glossary.rst:67
+msgid "Information about a cloud or other script that should be merged into the current inventory group, resulting in the automatic population of Groups, Hosts, and variables about those groups and hosts."
+msgstr "現在のインベントリーグループにマージする必要のあるクラウドまたは他のスクリプトについての情報のことです。グループ、ホストおよびグループやホストについての変数が自動的に設定されます。"
+
+#: ../../source/glossary.rst:68
+msgid "Job"
+msgstr "ジョブ"
+
+#: ../../source/glossary.rst:70
+msgid "One of many background tasks launched by the controller, this is usually the instantiation of a Job Template; the launch of an Ansible playbook. Other types of jobs include inventory imports, project synchronizations from source control, or administrative cleanup actions."
+msgstr "コントローラーによって起動される数多くのバックグラウンドタスクの 1 つで、通常はジョブテンプレートのインスタンス化、または Ansible Playbook の起動を指します。他のジョブの種類には、インベントリーのインポート、ソースコントロールからのプロジェクトの同期または管理者のクリーンアップ操作が含まれます。"
+
+#: ../../source/glossary.rst:71
+msgid "Job Detail"
+msgstr "ジョブの詳細"
+
+#: ../../source/glossary.rst:73
+msgid "The history of running a particular job, including its output and success/failure status."
+msgstr "出力および成功/失敗を含む、特定ジョブの実行履歴のことです。"
+
+#: ../../source/glossary.rst:74
+msgid "Job Slice"
+msgstr "ジョブスライス"
+
+#: ../../source/glossary.rst:76
+#: ../../source/glossary.rst:145
+msgid "See :term:`Distributed Job`."
+msgstr "「:term:`Distributed Job`」を参照してください。"
+
+#: ../../source/glossary.rst:77
+msgid "Job Template"
+msgstr "ジョブテンプレート"
+
+#: ../../source/glossary.rst:79
+msgid "The combination of an Ansible playbook and the set of parameters required to launch it."
+msgstr "Ansible Playbook とその起動に必要なパラメーターのセットの組み合わせです。"
+
+#: ../../source/glossary.rst:80
+msgid "JSON"
+msgstr "JSON"
+
+#: ../../source/glossary.rst:82
+msgid "Ansible and |at| use JSON for return data from remote modules. This allows modules to be written in any language, not just Python."
+msgstr "Ansible および |at| はリモートモジュールから返されるデータに JSON を使用します。モジュールは Python だけではなくすべての言語で作成することができます。"
+
+#: ../../source/glossary.rst:83
+msgid "Mesh"
+msgstr "メッシュ"
+
+#: ../../source/glossary.rst:85
+msgid "Describes a network comprising of nodes. Communication between nodes is established at the transport layer by protocols such as TCP, UDP or Unix sockets. See also, :term:`node`."
+msgstr "ノードで構成されるネットワークを意味します。ノード間の通信は、TCP、UDP、Unix ソケットなどのプロトコルによってトランスポート層で確立されます。「:term:`node`」も参照してください。"
+
+#: ../../source/glossary.rst:86
+msgid "Metadata"
+msgstr "メタデータ"
+
+#: ../../source/glossary.rst:88
+msgid "Information for locating a secret in the external system once authenticated. The uses provides this information when linking an external credential to a target credential field."
+msgstr "認証後に外部システムのシークレットの場所を特定する情報。外部認証情報とターゲットの認証情報フィールドをリンクするときにこの情報を使用します。"
+
+#: ../../source/glossary.rst:89
+msgid "Node"
+msgstr "ノード"
+
+#: ../../source/glossary.rst:91
+msgid "A node corresponds to entries in the instance database model, or the ``/api/v2/instances/`` endpoint, and is a machine participating in the cluster / mesh. The unified jobs API reports ``controller_node`` and ``execution_node`` fields. The execution node is where the job runs, and the controller node interfaces between the job and server functions."
+msgstr "ノードは、インスタンスデータベースモデルまたは ``/api/v2/instances/`` エンドポイント内のエントリーに相当し、クラスター/メッシュに参加するマシンです。統合ジョブ API は ``controller_node`` および ``execution_node`` フィールドを報告します。実行ノードではジョブが実行され、ローラーノードはジョブとサーバー機能間のインターフェースとして機能します。"
+
+#: ../../source/glossary.rst:94
+msgid "Node Type"
+msgstr "ノードタイプ"
+
+#: ../../source/glossary.rst:94
+msgid "Description"
+msgstr "説明"
+
+#: ../../source/glossary.rst:96
+msgid "Control"
+msgstr "コントロール"
+
+#: ../../source/glossary.rst:96
+msgid "Nodes that run persistent |aap| services, and delegate jobs to hybrid and execution nodes"
+msgstr "永続的な |aap| サービスを実行し、ジョブをハイブリッドノードおよび実行ノードに委譲するノード"
+
+#: ../../source/glossary.rst:98
+msgid "Hybrid"
+msgstr "ハイブリッド"
+
+#: ../../source/glossary.rst:98
+msgid "Nodes that run persistent |aap| services and execute jobs"
+msgstr "永続的な |aap| サービスを実行し、ジョブを実行するノード"
+
+#: ../../source/glossary.rst:100
+msgid "Hop"
+msgstr "ホップ"
+
+#: ../../source/glossary.rst:100
+msgid "Used for relaying across the mesh only"
+msgstr "メッシュ全体でのリレーにのみ使用されます"
+
+#: ../../source/glossary.rst:102
+msgid "Execution"
+msgstr "実行"
+
+#: ../../source/glossary.rst:102
+msgid "Nodes that run jobs delivered from control nodes (jobs submitted from the user's Ansible automation)"
+msgstr "コントロールノードから配信されたジョブ（ユーザーの Ansible 自動化から送信されたジョブ）を実行するノード"
+
+#: ../../source/glossary.rst:104
+msgid "Notification Template"
+msgstr "通知テンプレート"
+
+#: ../../source/glossary.rst:106
+msgid "An instance of a notification type (Email, Slack, Webhook, etc.) with a name, description, and a defined configuration."
+msgstr "名前、説明および定義された設定を持つ通知タイプ (メール、Slack、Webhook など) のことを指します。"
+
+#: ../../source/glossary.rst:107
+msgid "Notification"
+msgstr "Notification (通知)"
+
+#: ../../source/glossary.rst:109
+msgid "A manifestation of the notification template; for example, when a job fails a notification is sent using the configuration defined by the notification template."
+msgstr "通知テンプレートの表示。たとえばジョブが失敗すると、通知テンプレートによって定義された設定を使用して、通知が送信されます。"
+
+#: ../../source/glossary.rst:110
+msgid "Notify"
+msgstr "Notify (通知)"
+
+#: ../../source/glossary.rst:112
+msgid "The act of a task registering a change event and informing a handler task that another action needs to be run at the end of the play. If a handler is notified by multiple tasks, it will still be run only once. Handlers are run in the order they are listed, not in the order that they are notified."
+msgstr "変更イベントを登録し、ハンドラータスクにプレイの終了時に別の操作の実行が必要であることを知らせるタスクの行為を指します。ハンドラーが複数のタスクによる通知を受けても、ハンドラーは 1 回のみ実行されます。ハンドラーは、それらが通知を受けた順ではなく、一覧表示された順に実行されます。"
+
+#: ../../source/glossary.rst:113
+msgid "Organization"
+msgstr "組織"
+
+#: ../../source/glossary.rst:115
+msgid "A logical collection of Users, Teams, Projects, and Inventories. The highest level in the |at| object hierarchy is the Organization."
+msgstr "ユーザー、チーム、プロジェクトおよびインベントリーの論理コレクションです。組織は、|at| のオブジェクト階層で最上位のオブジェクトです。"
+
+#: ../../source/glossary.rst:116
+msgid "Organization Administrator"
+msgstr "組織管理者"
+
+#: ../../source/glossary.rst:118
+msgid "An |at| user with the rights to modify the Organization's membership and settings, including making new users and projects within that organization. An organization admin can also grant permissions to other users within the organization."
+msgstr "組織内での新規ユーザーおよびプロジェクトの作成を含む、組織のメンバーシップおよび設定を変更する権利を持つ |at| ユーザーのことを指します。組織管理者は組織内の他のユーザーにパーミッションを付与することもできます。"
+
+#: ../../source/glossary.rst:119
+msgid "Permissions"
+msgstr "パーミッション"
+
+#: ../../source/glossary.rst:121
+msgid "The set of privileges assigned to Users and Teams that provide the ability to read, modify, and administer Projects, Inventories, and other |at| objects."
+msgstr "プロジェクト、インベントリーその他 |at| オブジェクトの読み取り、変更および管理を実行するためにユーザーおよびチームに割り当てられる権限のセットを指します。"
+
+#: ../../source/glossary.rst:122
+msgid "Plays"
+msgstr "プレイ"
+
+#: ../../source/glossary.rst:124
+msgid "A playbook is a list of plays. A play is minimally a mapping between a set of hosts selected by a host specifier (usually chosen by groups, but sometimes by hostname globs) and the tasks which run on those hosts to define the role that those systems will perform. There can be one or many plays in a playbook."
+msgstr "Playbook はプレイのリストを指します。最小単位のプレイは、ホスト指定子で選択されるホストのセット (通常はグループで選択されますが、ホスト名 glob で選択されることもある) と、システムが実行するロールを定義するためにホストで実行されるタスク間のマッピングです。Playbook には 1 つまたは数多くのプレイが含まれる場合があります。"
+
+#: ../../source/glossary.rst:125
+msgid "Playbook"
+msgstr "Playbook"
+
+#: ../../source/glossary.rst:127
+msgid "An Ansible playbook. Refer to http://docs.ansible.com/ for more information."
+msgstr "Ansible Playbook を指します。詳細は、http://docs.ansible.com/ を参照してください。"
+
+#: ../../source/glossary.rst:128
+msgid "Policy"
+msgstr "ポリシー"
+
+#: ../../source/glossary.rst:130
+msgid "Policies dictate how instance groups behave and how jobs are executed."
+msgstr "ポリシーは、インスタンスグループがどのように動作し、ジョブがどのように実行されるかを規定します。"
+
+#: ../../source/glossary.rst:131
+msgid "Project"
+msgstr "プロジェクト"
+
+#: ../../source/glossary.rst:133
+msgid "A logical collection of Ansible playbooks, represented in |at|."
+msgstr "|at| に表示される Ansible Playbook の論理コレクションです。"
+
+#: ../../source/glossary.rst:134
+msgid "Roles"
+msgstr "ロール"
+
+#: ../../source/glossary.rst:136
+msgid "Roles are units of organization in Ansible and |at|. Assigning a role to a group of hosts (or a set of groups, or host patterns, etc.) implies that they should implement a specific behavior. A role may include applying certain variable values, certain tasks, and certain handlers--or just one or more of these things. Because of the file structure associated with a role, roles become redistributable units that allow you to share behavior among playbooks--or even with other users."
+msgstr "ロールは Ansible および |at| における組織単位です。ロールをホストのグループ (またはグループまたはホストパターンのセットなど) に割り当てることは、ホストのグループが特定の動作を実装することを意味します。ロールには特定の変数の値、特定のタスク、特定のハンドラー、またはこれらの 1 つまたは複数を適用することが含まれます。ファイル構造がロールに関連付けられていることから、ロールは再配布可能な単位であり、これを使って Playbook 間または他のユーザーとの間で動作を共有することができます。"
+
+#: ../../source/glossary.rst:137
+msgid "Secret Management System"
+msgstr "シークレット管理システム"
+
+#: ../../source/glossary.rst:139
+msgid "A server or service for securely storing and controlling access to tokens, passwords, certificates, encryption keys, and other sensitive data."
+msgstr "トークン、パスワード、証明書、暗号化キー、他の機密データをセキュアに保存して、これらのデータへのアクセスを制御するサーバーまたはサービス"
+
+#: ../../source/glossary.rst:140
+msgid "Schedule"
+msgstr "スケジュール"
+
+#: ../../source/glossary.rst:142
+msgid "The calendar of dates and times for which a job should run automatically."
+msgstr "ジョブが自動的に実行される日時のカレンダーのことを指します。"
+
+#: ../../source/glossary.rst:143
+msgid "Sliced Job"
+msgstr "スライスされたジョブ"
+
+#: ../../source/glossary.rst:146
+msgid "Source Credential"
+msgstr "ソース認証情報"
+
+#: ../../source/glossary.rst:148
+msgid "An external credential that is linked to the field of a target credential."
+msgstr "ターゲット認証情報のフィールドにリンクされる外部認証情報"
+
+#: ../../source/glossary.rst:149
+msgid "Sudo"
+msgstr "Sudo"
+
+#: ../../source/glossary.rst:151
+msgid "Ansible does not require root logins and, since it is daemonless, does not require root level daemons (which can be a security concern in sensitive environments). Ansible can log in and perform many operations wrapped in a ``sudo`` command, and can work with both password-less and password-based sudo. Some operations that do not normally work with ``sudo`` (like ``scp`` file transfer) can be achieved with Ansible’s *copy*, *template*, and *fetch* modules while running in ``sudo`` mode."
+msgstr "Ansible では root ログインが不要であり、デーモンが不要のため root レベルのデーモンも要求されません(これは機密環境ではセキュリティー上の懸念点となる可能性があります)。Ansible は ``sudo`` コマンドでログインでき、このコマンドでラップされた数多くの操作を実行でき、パスワードなしか、またはパスワードを使用する sudo で機能します。通常 ``sudo`` で機能しない操作 (``scp`` ファイル転送など) については、``sudo`` モードで実行中の Ansible の *copy*、*template*、および *fetch* モジュールを使用して実行できます。"
+
+#: ../../source/glossary.rst:152
+msgid "Superuser"
+msgstr "スーパーユーザー"
+
+#: ../../source/glossary.rst:154
+msgid "An admin of the |at| server who has permission to edit any object in the system, whether associated to any organization. Superusers can create organizations and other superusers."
+msgstr "組織に関連付けられているかを問わず、システムのすべてのオブジェクトを編集するパーミッションを持つ |at| サーバーの管理者のことです。スーパーユーザーは組織および他のスーパーユーザーを作成することができます。"
+
+#: ../../source/glossary.rst:155
+msgid "Survey"
+msgstr "Survey"
+
+#: ../../source/glossary.rst:157
+msgid "Questions asked by a job template at job launch time, configurable on the job template."
+msgstr "ジョブテンプレート上で設定可能な、ジョブ起動時にジョブテンプレートによって尋ねられる質問のことを指します。"
+
+#: ../../source/glossary.rst:158
+msgid "Target Credential"
+msgstr "ターゲット認証情報"
+
+#: ../../source/glossary.rst:160
+msgid "A non-external credential with an input field that is linked to an external credential."
+msgstr "外部認証情報にリンクされている入力フィールドが含まれる外部以外の認証情報"
+
+#: ../../source/glossary.rst:161
+msgid "Team"
+msgstr "チーム"
+
+#: ../../source/glossary.rst:163
+msgid "A sub-division of an Organization with associated Users, Projects, Credentials, and Permissions. Teams provide a means to implement role-based access control schemes and delegate responsibilities across Organizations."
+msgstr "関連付けられたユーザー、プロジェクト、認証情報およびパーミッションを持つ組織の下位区分のことです。チームは、ロールベースのアクセス制御スキームを実装し、組織全体で責任を委任する手段となります。"
+
+#: ../../source/glossary.rst:164
+msgid "User"
+msgstr "ユーザー"
+
+#: ../../source/glossary.rst:166
+msgid "An |at| operator with associated permissions and credentials."
+msgstr "パーミッションおよび認証情報が関連付けられた |at| オペレーターのことを指します。"
+
+#: ../../source/glossary.rst:167
+msgid "Webhook"
+msgstr "Webhook"
+
+#: ../../source/glossary.rst:169
+msgid "Webhooks allow communication and information sharing between apps. They are used to respond to commits pushed to SCMs and launch job templates or workflow templates."
+msgstr "Webhook は、アプリ間の通信と情報共有を可能にします。Webhook は、SCM にプッシュされたコミットに応答し、ジョブテンプレートまたはワークフローテンプレートを起動するために使用されます。"
+
+#: ../../source/glossary.rst:170
+msgid "Workflow Job Template"
+msgstr "ワークフロージョブテンプレート"
+
+#: ../../source/glossary.rst:172
+msgid "A set consisting of any combination of job templates, project syncs, and inventory syncs, linked together in order to execute them as a single unit."
+msgstr "単一ユニットとして実行するためにリンクされたジョブテンプレート、プロジェクトの同期、およびインベントリーの同期の任意の組み合わせで構成されるセットのことを指します。"
+
+#: ../../source/glossary.rst:173
+msgid "YAML"
+msgstr "YAML"
+
+#: ../../source/glossary.rst:175
+msgid "Ansible and |at| use YAML to define playbook configuration languages and also variable files. YAML has a minimum of syntax, is very clean, and is easy for people to skim. It is a good data format for configuration files and humans, but is also machine readable. YAML is fairly popular in the dynamic language community and the format has libraries available for serialization in many languages (Python, Perl, Ruby, etc.)."
+msgstr "Ansible および |at| は YAML を使用して、Playbook の設定言語および変数ファイルを定義します。YAML には最小限の構文のみが含まれるため、簡単に確認できます。これは設定ファイルとして、また読みやすさの面でも優れたデータ形式ですが、機械による読み取り可能な形式でもあります。YAML は動的言語コミュニティーで比較的よく使用されており、この形式には多くの言語 (Python、Perl、Ruby など) でのシリアライズに利用できるライブラリーが含まれます。"
+

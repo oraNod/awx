@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/job_capacity.rst:2
+msgid "This section describes how to determine capacity for instance groups and its impact to your jobs. For container groups, see :ref:`ag_container_capacity` in the |ata|."
+msgstr "이 섹션에서는 인스턴스 그룹의 용량과 해당 용량이 작업에 미치는 영향에 대해 설명합니다. 컨테이너 그룹의 경우 |ata|의 :ref:`ag_container_capacity`를 참조하십시오."
+
+#: ../../source/job_capacity.rst:4
+msgid "The |at| capacity system determines how many jobs can run on an instance given the amount of resources available to the instance and the size of the jobs that are running (referred to as *Impact*). The algorithm used to determine this is based entirely on two things:"
+msgstr "|at| 용량 시스템은 인스턴스에 사용할 수 있는 리소스 양과 실행 중인 작업의 크기(*영향*이라고 함)를 기준으로 인스턴스에서 실행할 수 있는 작업 수를 결정합니다. 이를 결정하는 데 사용되는 알고리즘은 전적으로 다음 두 가지를 기반으로 합니다."
+
+#: ../../source/job_capacity.rst:6
+msgid "How much memory is available to the system (``mem_capacity``)"
+msgstr "시스템에 사용할 수 있는 메모리의 양(``mem_capacity``)"
+
+#: ../../source/job_capacity.rst:7
+msgid "How much CPU is available to the system (``cpu_capacity``)"
+msgstr "시스템에 사용할 수 있는 CPU의 양(``cpu_capacity``)"
+
+#: ../../source/job_capacity.rst:9
+msgid "Capacity also impacts Instance Groups. Since Groups are made up of instances, likewise, instances can be assigned to multiple groups. This means that impact to one instance can potentially affect the overall capacity of other Groups."
+msgstr "용량은 인스턴스 그룹에도 영향을 미칩니다. 그룹은 인스턴스로 구성되므로 인스턴스를 여러 그룹에 할당할 수도 있습니다. 즉, 한 인스턴스에 대한 영향이 다른 그룹의 전체 용량에 잠재적으로 영향을 미칠 수 있습니다."
+
+#: ../../source/job_capacity.rst:11
+msgid "Instance Groups (not instances themselves) can be assigned to be used by jobs at various levels (see :ref:`ag_clustering`). When the Task Manager is preparing its graph to determine which group a job will run on, it will commit the capacity of an Instance Group to a job that hasn’t or isn’t ready to start yet."
+msgstr "인스턴스 그룹(인스턴스 자체가 아님)은 다양한 수준의 작업에서 사용하도록 할당할 수 있습니다(:ref:`ag_clustering` 참조). 작업 관리자에서 작업을 실행할 그룹을 결정하기 위해 그래프를 준비할 때 인스턴스 그룹의 용량을 아직 시작할 준비가 되지 않은 작업으로 커밋합니다."
+
+#: ../../source/job_capacity.rst:13
+msgid "Finally, in smaller configurations, if only one instance is available for a job to run, the Task Manager will allow that job to run on the instance even if it pushes the instance over capacity. This guarantees that jobs themselves won't get stuck as a result of an under-provisioned system."
+msgstr "마지막으로 더 작은 구성에서 작업을 실행할 수 있는 인스턴스가 하나만 있는 경우, 작업 관리자는 해당 작업이 인스턴스를 용량 이상으로 푸시하더라도 인스턴스에서 실행되도록 허용합니다. 이렇게 하면 시스템이 프로비저닝되지 않아 작업 자체가 중단되지 않습니다."
+
+#: ../../source/job_capacity.rst:15
+msgid "Therefore, Capacity and Impact is not a zero-sum system relative to jobs and instances/Instance Groups."
+msgstr "따라서 용량과 영향은 작업과 인스턴스/인스턴스 그룹에 대한 제로섬 시스템이 아닙니다."
+
+#: ../../source/job_capacity.rst:17
+msgid "For information on sliced jobs and their impact to capacity, see :ref:`ug_job_slice_execution`."
+msgstr "분할된 작업 및 용량에 미치는 영향에 대한 자세한 내용은 :ref:`ug_job_slice_execution`을 참조하십시오."
+
+#: ../../source/job_capacity.rst:22
+msgid "Resource determination for capacity algorithm"
+msgstr "용량 알고리즘의 리소스 결정"
+
+#: ../../source/job_capacity.rst:24
+msgid "The capacity algorithms are defined in order to determine how many forks a system is capable of running simultaneously. This controls how many systems Ansible itself will communicate with simultaneously. Increasing the number of forks a |at| system is running will, in general, allow jobs to run faster by performing more work in parallel. The trade-off is that this will increase the load on the system, which could cause work to slow down overall."
+msgstr "용량 알고리즘은 시스템에서 동시에 실행할 수 있는 포크 수를 결정하기 위해 정의합니다. 이 알고리즘은 Ansible 자체에서 동시에 통신할 시스템 수를 제어합니다. 일반적으로 |at| 시스템이 실행 중인 포크 수를 늘리면 더 많은 작업을 병렬로 수행하여 작업을 더 빠르게 실행할 수 있습니다. 단점은 이로 인해 시스템 부하가 증가하여 작업 속도가 전반적으로 느려질 수 있다는 것입니다."
+
+#: ../../source/job_capacity.rst:26
+msgid "|At| can operate in two modes when determining capacity. ``mem_capacity`` (the default) will allow you to over-commit CPU resources while protecting the system from running out of memory. If most of your work is not CPU-bound, then selecting this mode will maximize the number of forks."
+msgstr "|At|는 용량을 결정할 때 두 가지 모드로 작동할 수 있습니다. ``mem_capacity``(기본값)를 사용하면 시스템의 메모리 부족을 방지하면서 CPU 리소스를 오버 커밋할 수 있습니다. 대부분의 작업이 CPU 종속이 아닌 경우 이 모드를 선택하면 포크 수가 최대화됩니다."
+
+#: ../../source/job_capacity.rst:30
+msgid "Memory relative capacity"
+msgstr "메모리 상대 용량"
+
+#: ../../source/job_capacity.rst:32
+msgid "``mem_capacity`` is calculated relative to the amount of memory needed per fork. Taking into account the overhead for internal components, this comes out to be about 100MB per fork. When considering the amount of memory available to Ansible jobs, the capacity algorithm will reserve 2GB of memory to account for the presence of other services. The algorithm formula for this is:"
+msgstr "``mem_capacity``는 포크당 필요한 메모리 양을 기준으로 계산됩니다. 내부 구성 요소의 오버헤드를 고려하면 포크당 약 100MB가 됩니다. 용량 알고리즘에서는 Ansible 작업에 사용할 수 있는 메모리의 양을 검토할 때 다른 서비스의 존재를 고려하여 2GB의 메모리를 예약합니다. 이에 대한 알고리즘 공식은 다음과 같습니다."
+
+#: ../../source/job_capacity.rst:38
+msgid "As an example:"
+msgstr "예를 들면 다음과 같습니다."
+
+#: ../../source/job_capacity.rst:44
+msgid "Therefore, a system with 4GB of memory would be capable of running 20 forks. The value ``mem_per_fork`` can be controlled by setting the settings value (or environment variable) ``SYSTEM_TASK_FORKS_MEM``, which defaults to 100."
+msgstr "따라서 메모리가 4GB인 시스템은 20개의 포크를 실행할 수 있습니다. 값 ``mem_per_fork``는 설정 값(또는 환경 변수) ``SYSTEM_TASK_FORKS_MEM``을 설정하여 제어할 수 있으며, 기본값은 100입니다."
+
+#: ../../source/job_capacity.rst:49
+msgid "CPU relative capacity"
+msgstr "CPU 상대 용량"
+
+#: ../../source/job_capacity.rst:51
+msgid "Often, Ansible workloads can be fairly CPU-bound. In these cases, sometimes reducing the simultaneous workload allows more tasks to run faster and reduces the average time-to-completion of those jobs."
+msgstr "Ansible 워크로드는 상당히 CPU 종속적인 경우가 많습니다. 이러한 경우 동시 워크로드를 줄이면 더 많은 작업을 더 빠르게 실행하고 해당 작업의 평균 완료 시간을 줄일 수 있습니다."
+
+#: ../../source/job_capacity.rst:53
+msgid "Just as the ``mem_capacity`` algorithm uses the amount of memory need per fork, the ``cpu_capacity`` algorithm looks at the amount of CPU resources is needed per fork. The baseline value for this is 4 forks per core. The algorithm formula for this is:"
+msgstr "``mem_capacity`` 알고리즘이 포크당 필요한 메모리 양을 사용하는 것처럼 ``cpu_capacity`` 알고리즘은 포크당 필요한 CPU 리소스의 양을 확인합니다. 기준 값은 코어당 포크 4개입니다. 이에 대한 알고리즘 공식은 다음과 같습니다."
+
+#: ../../source/job_capacity.rst:59
+msgid "For example, a 4-core system:"
+msgstr "예를 들어 4코어 시스템은 다음과 같습니다."
+
+#: ../../source/job_capacity.rst:65
+msgid "The value ``fork_per_cpu`` can be controlled by setting the settings value (or environment variable) ``SYSTEM_TASK_FORKS_CPU`` which defaults to 4."
+msgstr "값 ``fork_per_cpu``는 설정 값(또는 환경 변수) ``SYSTEM_TASK_FORKS_CPU``를 설정하여 제어할 수 있으며, 기본값은 4입니다."
+
+#: ../../source/job_capacity.rst:69
+msgid "Capacity job impacts"
+msgstr "작업이 용량에 미치는 영향"
+
+#: ../../source/job_capacity.rst:71
+msgid "When selecting the capacity, it's important to understand how each job type affects capacity."
+msgstr "용량을 선택할 때는 각 작업 유형이 용량에 미치는 영향을 이해하는 것이 중요합니다."
+
+#: ../../source/job_capacity.rst:73
+msgid "It's helpful to understand what forks mean to Ansible: https://www.ansible.com/blog/ansible-performance-tuning (see the section on \"Know Your Forks\")."
+msgstr "그러면 https://www.ansible.com/blog/ansible-performance-tuning에서 포크가 Ansible에 의미하는 바를 이해하는 데 도움이 됩니다(\"포크 알아보기\" 섹션 참조)."
+
+#: ../../source/job_capacity.rst:75
+msgid "The default forks value for Ansible is 5. However, if |at| knows that you're running against fewer systems than that, then the actual concurrency value will be lower."
+msgstr "Ansible의 기본 포크 값은 5입니다. 그러나 |at|에서 그보다 적은 수의 시스템에 대해 실행 중임을 확인하는 경우 실제 동시성 값은 더 낮아집니다."
+
+#: ../../source/job_capacity.rst:77
+msgid "When a job is run, |at| will add 1 to the number of forks selected to compensate for the Ansible parent process. So if you are running a playbook against 5 systems with a forks value of 5, then the actual forks value from the perspective of Job Impact will be 6."
+msgstr "작업이 실행되면 |at|에서 Ansible 상위 프로세스를 보완하기 위해 선택된 포크 수에 1을 추가합니다. 따라서 포크 값이 5인 시스템 5개에 대해 플레이북을 실행하는 경우, 작업이 미치는 영향의 관점에서의 실제 포크 값은 6이 됩니다."
+
+#: ../../source/job_capacity.rst:81
+msgid "Impact of job types in automation controller"
+msgstr "자동화 컨트롤러에서 작업 유형이 미치는 영향"
+
+#: ../../source/job_capacity.rst:83
+msgid "Jobs and Ad-hoc jobs follow the above model, forks + 1. If you set a fork value on your job template, your job capacity value will be the minimum of the forks value supplied, and the number of hosts that you have, plus one. The plus one is to account for the parent Ansible process."
+msgstr "jobs 및 임시 작업은 위 모델인 포크 수 + 1을 따릅니다. 작업 템플릿에 포크 값을 설정하면 작업 용량 값은 제공한 포크 값의 최솟값과 보유한 호스트 수에 1을 더한 값이 됩니다. 추가된 하나는 상위 Ansible 프로세스를 고려한 것입니다."
+
+#: ../../source/job_capacity.rst:85
+msgid "Instance capacity determines which jobs get assigned to any specific instance. Jobs and ad hoc commands use more capacity if they have a higher forks value."
+msgstr "인스턴스 용량에 따라 특정 인스턴스에 할당되는 작업이 결정됩니다. 작업 및 임시 명령은 해당 포크 값이 높을수록 용량을 더 많이 사용합니다."
+
+#: ../../source/job_capacity.rst:87
+msgid "Other job types have a fixed impact:"
+msgstr "기타 작업 유형의 영향은 다음과 같이 정해져 있습니다."
+
+#: ../../source/job_capacity.rst:89
+msgid "Inventory Updates: 1"
+msgstr "인벤토리 업데이트: 1"
+
+#: ../../source/job_capacity.rst:90
+msgid "Project Updates: 1"
+msgstr "프로젝트 업데이트: 1"
+
+#: ../../source/job_capacity.rst:91
+msgid "System Jobs: 5"
+msgstr "시스템 작업: 5"
+
+#: ../../source/job_capacity.rst:93
+msgid "If you don’t set a forks value on your job template, your job will use Ansible’s default forks value of five. Even though Ansible defaults to five forks, it will use fewer if your job has fewer than five hosts. In general, setting a forks value higher than what the system is capable of could cause trouble by running out of memory or over-committing CPU. So, the job template fork values that you use should fit on the system. If you have playbooks using 1000 forks but none of your systems individually has that much capacity, then your systems are undersized and at risk of performance or resource issues."
+msgstr "작업 템플릿에 포크 값을 설정하지 않으면 작업에서 Ansible의 기본 포크 값인 5를 사용합니다. Ansible은 기본적으로 포크 5개로 기본 설정되지만 작업의 호스트가 5개 미만인 경우 더 적게 사용됩니다. 일반적으로 포크 값을 시스템에서 사용할 수 있는 것보다 높게 설정하면 메모리가 부족하거나 CPU를 오버 커밋하여 문제가 발생할 수 있습니다. 따라서 사용하는 작업 템플릿 포크 값이 시스템에 적합해야 합니다. 포크를 1000개 사용하는 플레이북이 있지만 개별적으로 이렇게 많은 용량이 있는 시스템이 없는 경우, 시스템 크기가 부족하여 성능 또는 리소스 문제가 발생할 위험이 있습니다."
+
+#: ../../source/job_capacity.rst:97
+msgid "Selecting the right capacity"
+msgstr "적절한 용량 선택"
+
+#: ../../source/job_capacity.rst:99
+msgid "Selecting a capacity out of the CPU-bound or the memory-bound capacity limits is, in essence, selecting between the minimum or maximum number of forks. In the above examples, the CPU capacity would allow a maximum of 16 forks while the memory capacity would allow 20. For some systems, the disparity between these can be large and often times you may want to have a balance between these two."
+msgstr "CPU 종속 또는 메모리 종속 용량 제한 중에서 용량을 선택하는 일은 본질적으로 최소 또는 최대 포크 수 중에서 선택하는 것과 같습니다. 위 예에서 CPU 용량은 최대 16개의 포크를 허용하는 반면 메모리 용량은 20개를 허용합니다. 일부 시스템의 경우 이러한 용량 차이가 클 수 있으며 종종 이 둘 사이의 균형을 유지해야 할 수도 있습니다."
+
+#: ../../source/job_capacity.rst:101
+msgid "The instance field ``capacity_adjustment`` allows you to select how much of one or the other you want to consider. It is represented as a value between 0.0 and 1.0. If set to a value of 1.0, then the largest value will be used. The above example involves memory capacity, so a value of 20 forks would be selected. If set to a value of 0.0 then the smallest value will be used. A value of 0.5 would be a 50/50 balance between the two algorithms which would be 18:"
+msgstr "인스턴스 필드 ``capacity_adjustment``를 사용하면 어느 쪽의 용량을 고려할지 선택할 수 있습니다. 이 필드는 0.0에서 1.0 사이의 값으로 표시됩니다. 값을 1.0으로 설정하면 가장 큰 값이 사용됩니다. 위 예제에서는 메모리 용량을 사용하므로 포크 값 20개가 선택됩니다. 값을 0.0으로 설정하면 가장 작은 값이 사용됩니다. 값 0.5는 두 알고리즘을 50/50 비율로 적용하여 18개가 됩니다."
+
+#: ../../source/job_capacity.rst:107
+msgid "To view or edit the capacity in the user interface, select the **Instances** tab of the Instance Group."
+msgstr "사용자 인터페이스에서 용량을 보거나 편집하려면 인스턴스 그룹의 **인스턴스** 탭을 선택합니다."
+

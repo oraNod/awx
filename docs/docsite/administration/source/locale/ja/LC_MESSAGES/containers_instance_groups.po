@@ -1,0 +1,557 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/containers_instance_groups.rst:4
+msgid "Container and Instance Groups"
+msgstr "コンテナーおよびインスタンスグループ"
+
+#: ../../source/containers_instance_groups.rst:10
+msgid "The controller allows you to execute jobs via ansible playbook runs directly on a member of the cluster or in a namespace of an Openshift cluster with the necessary service account provisioned called a Container Group. You can execute jobs in a container group only as-needed per playbook. For more information, see :ref:`ag_container_groups` towards the end of this section."
+msgstr "コントローラーを使用すると、クラスターのメンバーで直接実行される Ansible Playbook を介してジョブを実行するか、コンテナーグループと呼ばれる必要なサービスアカウントがプロビジョニングされた Openshift クラスターの名前空間でジョブを実行できます。コンテナーグループ内のジョブは、プレイブックごとに必要な場合にのみ実行できます。詳細については、を参照してください。必要に応じて Playbook ごとにコンテナーグループでジョブを実行できます。詳細は、このセクションに後述されている「:ref:`ag_container_groups`」を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:12
+msgid "For |ees|, see :ref:`ug_execution_environments` in the |atu|."
+msgstr "|ees| については、|atu| の「:ref:`ug_execution_environments`」を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:17
+msgid "Instance Groups"
+msgstr "インスタンスグループ"
+
+#: ../../source/containers_instance_groups.rst:19
+msgid "Instances can be grouped into one or more Instance Groups. Instance groups can be assigned to one or more of the resources listed below."
+msgstr "インスタンスは、1 つまたは複数のインスタンスグループにグループ化することができます。インスタンスグループは、以下に記載のリソース 1 つまたは複数に割り当てることができます。"
+
+#: ../../source/containers_instance_groups.rst:21
+msgid "Organizations"
+msgstr "組織"
+
+#: ../../source/containers_instance_groups.rst:22
+msgid "Inventories"
+msgstr "インベントリー"
+
+#: ../../source/containers_instance_groups.rst:23
+msgid "Job Templates"
+msgstr "ジョブテンプレート"
+
+#: ../../source/containers_instance_groups.rst:25
+msgid "When a job associated with one of the resources executes, it will be assigned to the instance group associated with the resource. During the execution process, instance groups associated with Job Templates are checked before those associated with Inventories. Similarly, instance groups associated with Inventories are checked before those associated with Organizations. Thus, Instance Group assignments for the three resources form a hierarchy: Job Template **>** Inventory **>** Organization."
+msgstr "リソースの 1 つに関連付けられているジョブが実行されると、そのリソースに関連付けられているインスタンスグループに割り当てられます。実行プロセス中に、インベントリーに関連付けられたインスタンスグループではなく、ジョブテンプレートに関連付けられたインスタンスグループが先に確認されます。同様に、インベントリーに関連付けられているインスタンスグループは、組織に関連付けられているインスタンスグループよりも先に確認されます。そのため、3 つのリソースのインスタンスグループの割り当てには、Job Template **>** Inventory **>** Organization の階層が形成されます。"
+
+#: ../../source/containers_instance_groups.rst:27
+msgid "Here are some of the things to consider when working with instance groups:"
+msgstr "インスタンスグループの使用時に考慮すべき事項を複数、以下に示します。"
+
+#: ../../source/containers_instance_groups.rst:29
+msgid "You may optionally define other groups and group instances in those groups. These groups should be prefixed with ``instance_group_``. Instances are required to be in the ``automationcontroller`` or ``execution_nodes`` group alongside other ``instance_group_`` groups. In a clustered setup, at least one instance **must** be present in the ``automationcontroller`` group, which will appear as ``controlplane`` in the API instance groups. See :ref:`ag_automationcontroller_group_policies` for example scenarios."
+msgstr "必要に応じて、これらのグループに他のグループおよびグループインスタンスを定義することができます。これらのグループには、``instance_group_`` のプレフィックスを指定する必要があります。インスタンスは、``instance_group_`` グループと共に ``automationcontroller`` または ``execution_nodes`` グループに含まれる必要があります。クラスター化された設定では、1 つ以上のインスタンスが ``automationcontroller`` グループに存在する **必要があります**。これは、API インスタンスグループの ``controlplane`` として表示されます。シナリオの例は、:ref:`ag_automationcontroller_group_policies`を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:31
+msgid "A ``default`` API instance group is automatically created with all nodes capable of running jobs. Technically, it is like any other instance group but if a specific instance group is not associated with a specific resource, then job execution will always fall back to the ``default`` instance group. The ``default`` instance group always exists (it cannot be deleted nor renamed)."
+msgstr "``default`` API インスタンスグループは、ジョブの実行が可能な全ノードで自動的に作成されます。技術的には、他のインスタンスグループと同様ですが、特定のインスタンスグループが特定のリソースに関連付けられていない場合に、ジョブ実行は常に ``default`` インスタンスグループにフォールバックします。``default`` インスタンスグループは常に存在します（削除または名前もできません）。"
+
+#: ../../source/containers_instance_groups.rst:33
+msgid "Do not create a group named ``instance_group_default``."
+msgstr "名前が ``instance_group_default`` のグループは作成しないでください。"
+
+#: ../../source/containers_instance_groups.rst:35
+msgid "Do not name any instance the same as a group name."
+msgstr "インスタンスにグループ名と同じ名前を指定しないでください。"
+
+#: ../../source/containers_instance_groups.rst:41
+msgid "``automationcontroller`` group policies"
+msgstr "``automationcontroller`` グループのポリシー"
+
+#: ../../source/containers_instance_groups.rst:46
+msgid "Use the following criteria when defining nodes:"
+msgstr "ノードを定義する際には、以下の基準を使用します。"
+
+#: ../../source/containers_instance_groups.rst:48
+msgid "nodes in the ``automationcontroller`` group can define ``node_type`` hostvar to be ``hybrid`` (default) or ``control``"
+msgstr "``automationcontroller`` グループのノードは、``node_type`` hostvar を ``hybrid`` (デフォルト) または ``control`` に定義できます。"
+
+#: ../../source/containers_instance_groups.rst:49
+msgid "nodes in the ``execution_nodes`` group can define ``node_type`` hostvar to be ``execution`` (default) or ``hop``"
+msgstr "``execution_nodes`` グループのノードは、``node_type`` hostvar を ``execution`` (デフォルト) または ``hop`` に定義できます。"
+
+#: ../../source/containers_instance_groups.rst:51
+msgid "You can define custom groups in the inventory file by naming groups with ``instance_group_*`` where ``*`` becomes the name of the group in the API. Or, you can create custom instance groups in the API after the install has finished."
+msgstr "``instance_group_*`` を使用してグループに名前を付けることで、インベントリーファイルでカスタムグループを定義できます。``*`` は API のグループの名前になります。または、インストールが完了した後に API でカスタムインスタンスグループを作成できます。"
+
+#: ../../source/containers_instance_groups.rst:53
+msgid "The current behavior expects a member of an ``instance_group_*`` be part of ``automationcontroller`` or ``execution_nodes`` group. Consider this example scenario:"
+msgstr "現在の動作では、``instance_group_*`` のメンバーが ``automationcontroller`` または ``execution_nodes`` グループのメンバーであることを想定しています。このシナリオ例を挙げています。"
+
+#: ../../source/containers_instance_groups.rst:69
+msgid "As a result of running the installer, you will get the error below:"
+msgstr "インストーラーを実行すると、以下のエラーが発生します。"
+
+#: ../../source/containers_instance_groups.rst:77
+msgid "To fix this, you could move the box ``110-addr.tatu.home`` to an ``execution_node`` group."
+msgstr "これを修正するには、ボックス ``110-addr.tatu.home`` を ``execution_node`` グループに移動します。"
+
+#: ../../source/containers_instance_groups.rst:94
+msgid "This results in:"
+msgstr "その結果、以下のようになります。"
+
+#: ../../source/containers_instance_groups.rst:101
+msgid "Upon upgrading from controller 4.0 or earlier, the legacy ``instance_group_`` member will most likely have the awx code installed, which would cause that node to be placed in the ``automationcontroller`` group."
+msgstr "コントローラー 4.0 以前からアップグレードすると、レガシーの ``instance_group_`` メンバーには awx コードがインストールされている可能性があります。これにより、ノードが ``automationcontroller`` グループに配置されます。"
+
+#: ../../source/containers_instance_groups.rst:105
+msgid "Configuring Instance Groups from the API"
+msgstr "API からのインスタンスグループの設定"
+
+#: ../../source/containers_instance_groups.rst:110
+msgid "Instance groups can be created by POSTing to ``/api/v2/instance_groups`` as a system administrator."
+msgstr "インスタンスグループは、システム管理者として ``/api/v2/instance_groups`` に POST 要求を出すことで作成できます。"
+
+#: ../../source/containers_instance_groups.rst:112
+msgid "Once created, instances can be associated with an instance group with:"
+msgstr "インスタンスグループを作成したら、インスタンスをインスタンスグループに関連付けることができます。"
+
+#: ../../source/containers_instance_groups.rst:118
+msgid "An instance that is added to an instance group will automatically reconfigure itself to listen on the group's work queue. See the following section, :ref:`ag_instance_group_policies`, for more details."
+msgstr "インスタンスグループに追加したインスタンスは、自動的にグループの作業キューをリッスンするように再設定されます。詳細は、以下の「:ref:`ag_instance_group_policies`」セクションを参照してください。"
+
+#: ../../source/containers_instance_groups.rst:124
+msgid "Instance group policies"
+msgstr "インスタンスグループのポリシー"
+
+#: ../../source/containers_instance_groups.rst:130
+msgid "You can configure controller instances to automatically join Instance Groups when they come online by defining a :term:`policy`. These policies are evaluated for every new instance that comes online."
+msgstr ":term:`policy` を定義することにより、オンラインになると自動的にインスタンスグループに参加するようにコントローラーインスタンスを設定できます。これらのポリシーは、新しいインスタンスがオンラインになるたびに評価されます。"
+
+#: ../../source/containers_instance_groups.rst:132
+msgid "Instance Group Policies are controlled by three optional fields on an ``Instance Group``:"
+msgstr "インスタンスグループポリシーは、``Instance Group`` の 3 つの任意フィールドにより制御されます。"
+
+#: ../../source/containers_instance_groups.rst:134
+msgid "``policy_instance_percentage``: This is a number between 0 - 100. It guarantees that this percentage of active controller instances will be added to this Instance Group. As new instances come online, if the number of Instances in this group relative to the total number of instances is less than the given percentage, then new ones will be added until the percentage condition is satisfied."
+msgstr "``policy_instance_percentage``: これは、0 ~ 100 の間の数字で指定します。これにより、確実に、アクティブなコントローラーインスタンスの割合が対象のインスタンスグループに追加されるようになります。新しいインスタンスがオンラインになると、このグループのインスタンス数が、インスタンスの全体数に対して、指定の割合より少ない場合には、指定の割合の条件を満たすまで、新しいインスタンスが追加されます。"
+
+#: ../../source/containers_instance_groups.rst:135
+msgid "``policy_instance_minimum``: This policy attempts to keep at least this many instances in the Instance Group. If the number of available instances is lower than this minimum, then all instances will be placed in this Instance Group."
+msgstr "``policy_instance_minimum``: このポリシーは、インスタンスグループに配置するように試行する最小インスタンス数を指定します。利用可能なインスタンス数がこの最小数よりも少ない場合には、すべてのインスタンスがこのインスタンスグループに配置されます。"
+
+#: ../../source/containers_instance_groups.rst:136
+msgid "``policy_instance_list``: This is a fixed list of instance names to always include in this Instance Group."
+msgstr "``policy_instance_list``: これは、このインスタンスグループに常に含めるインスタンス名の固定一覧です。"
+
+#: ../../source/containers_instance_groups.rst:138
+msgid "The Instance Groups list view from the |at| User Interface provides a summary of the capacity levels for each instance group according to instance group policies:"
+msgstr "|at| ユーザーインターフェースのインスタンスグループ一覧ビューでは、インスタンスグループのポリシーをもとにした各インスタンスグループのキャパシティーレベルの概要がわかります。"
+
+#: ../../source/containers_instance_groups.rst:140
+msgid "|Instance Group policy example|"
+msgstr "|Instance Group policy example|"
+
+#: ../../source/containers_instance_groups.rst:146
+msgid "Notable policy considerations"
+msgstr "主なポリシーの考慮事項"
+
+#: ../../source/containers_instance_groups.rst:148
+msgid "``policy_instance_percentage`` and ``policy_instance_minimum`` both set minimum allocations. The rule that results in more instances assigned to the group will take effect. For example, if you have a ``policy_instance_percentage`` of 50% and a ``policy_instance_minimum`` of 2 and you start 6 instances, 3 of them would be assigned to the Instance Group. If you reduce the number of total instances in the cluster to 2, then both of them would be assigned to the Instance Group to satisfy ``policy_instance_minimum``. This way, you can set a lower bound on the amount of available resources."
+msgstr "``policy_instance_percentage`` および ``policy_instance_minimum`` はいずれも、最小割り当てレベルを指定します。このグループに割り当てる数が多いルールが適用されます。たとえば、``policy_instance_percentage`` が 50%、``policy_instance_minimum`` が 2 の場合に、6 台のインスタンスを起動すると、3 台がこのインスタンスグループに割り当てられます。クラスター内のインスタンス総数を 2 に減らすと、``policy_instance_minimum`` の条件を満たすために、この 2 台のインスタンスがいずれも、インスタンスグループに割り当てられます。こうすることで、利用可能なリソースの制限に合わせて、低い値を設定できます。"
+
+#: ../../source/containers_instance_groups.rst:150
+msgid "Policies do not actively prevent instances from being associated with multiple Instance Groups, but this can effectively be achieved by making the percentages add up to 100. If you have 4 instance groups, assign each a percentage value of 25 and the instances will be distributed among them with no overlap."
+msgstr "ポリシーは、自発的にインスタンスが複数のインスタンスグループに割り当てられないように規制するわけではありませんが、割合を合計すると 100 になるように指定すると実質的に、複数のインスタンスグループに割り当てないようにできます。インスタンスグループが 4 つあり、割合の値が 25 に割り当てると、インスタンスは重複することなく分散されます。"
+
+#: ../../source/containers_instance_groups.rst:154
+msgid "Manually pinning instances to specific groups"
+msgstr "固有のグループへのインスタンスの手動固定"
+
+#: ../../source/containers_instance_groups.rst:161
+msgid "If you have a special instance which needs to be exclusively assigned to a specific Instance Group but don't want it to automatically join other groups via \"percentage\" or \"minimum\" policies:"
+msgstr "インスタンスが特別で、特定のインスタンスグループだけに割り当てる必要があり、「percentage」または「minimum」のポリシーで他のグループに自動的に参加させない場合には、以下を行います。"
+
+#: ../../source/containers_instance_groups.rst:163
+msgid "Add the instance to one or more Instance Groups' ``policy_instance_list``"
+msgstr "インスタンスを 1 つまたは複数のインスタンスグループの ``policy_instance_list`` に追加します。"
+
+#: ../../source/containers_instance_groups.rst:165
+msgid "Update the instance's ``managed_by_policy`` property to be ``False``."
+msgstr "インスタンスの ``managed_by_policy`` プロパティーを ``False`` に更新します。"
+
+#: ../../source/containers_instance_groups.rst:167
+msgid "This will prevent the Instance from being automatically added to other groups based on percentage and minimum policy; it will only belong to the groups you've manually assigned it to:"
+msgstr "こうすることで、割合や最小ポリシーをもとに、インスタンスが他のグループに自動的に追加されないようにします。手動で割り当てたグループにのみ所属するようになります。"
+
+#: ../../source/containers_instance_groups.rst:183
+msgid "Job Runtime Behavior"
+msgstr "ジョブランタイムの動作"
+
+#: ../../source/containers_instance_groups.rst:185
+msgid "When you run a job associated with a instance group, some behaviors worth noting are:"
+msgstr "インスタンスグループに関連付けられたジョブを実行する場合は、以下の動作に注意してください。"
+
+#: ../../source/containers_instance_groups.rst:187
+msgid "If a cluster is divided into separate instance groups, then the behavior is similar to the cluster as a whole. If two instances are assigned to a group then either one is just as likely to receive a job as any other in the same group."
+msgstr "クラスターを複数のインスタンスグループに分類する場合は、クラスター全体の動作と類似します。インスタンス 2 台がグループに割り当てられると、同じグループ内の他のインスタンスと同様に、いずれかのインスタンスがジョブを受信する可能性が高いです。"
+
+#: ../../source/containers_instance_groups.rst:188
+msgid "As controller instances are brought online, it effectively expands the work capacity of the system. If those instances are also placed into instance groups, then they also expand that group's capacity. If an instance is performing work and it is a member of multiple groups, then capacity will be reduced from all groups for which it is a member. De-provisioning an instance will remove capacity from the cluster wherever that instance was assigned. See the :ref:`ag_cluster_deprovision` section for more detail."
+msgstr "コントローラーインスタンスがオンラインになると、システムの作業容量が効率的に拡張されます。これらのインスタンスがインスタンスグループにも置かれている場合、そのグループの容量も拡張されます。複数のグループに所属するインスタンスが作業を実行する場合は、所属する全グループから容量が削減されます。インスタンスのプロビジョニングを解除すると、インスタンスの割当先のクラスターから容量がなくなります。詳細については「:ref:`ag_cluster_deprovision`」のセクションを参照してください。"
+
+#: ../../source/containers_instance_groups.rst:191
+msgid "Not all instances are required to be provisioned with an equal capacity."
+msgstr "すべてのインスタンスを同じ容量でプロビジョニングする必要はありません。"
+
+#: ../../source/containers_instance_groups.rst:195
+msgid "Control Where a Job Runs"
+msgstr "ジョブ実行場所の制御"
+
+#: ../../source/containers_instance_groups.rst:197
+msgid "If any of the job template, inventory, or organization has instance groups associated with them, a job ran from that job template will not be eligible for the default behavior. That means that if all of the instances inside of the instance groups associated with these 3 resources are out of capacity, the job will remain in the pending state until capacity becomes available."
+msgstr "ジョブテンプレート、インベントリー、または組織にインスタンスグループが割り当てられている場合には、対象のジョブテンプレートから実行されたジョブはデフォルトの動作を実行する資格はありません。つまり、これら 3 つのリソースに関連付けられたインスタンスグループに所属する全インスタンスに十分な容量がない場合には、容量が使用可能になるまでジョブは保留状態のままになります。"
+
+#: ../../source/containers_instance_groups.rst:199
+msgid "The order of preference in determining which instance group to submit the job to is as follows:"
+msgstr "ジョブの送信先のインスタンスグループを決定する場合の優先順位は、以下のとおりです。"
+
+#: ../../source/containers_instance_groups.rst:201
+msgid "job template"
+msgstr "ジョブテンプレート"
+
+#: ../../source/containers_instance_groups.rst:202
+msgid "inventory"
+msgstr "インベントリー"
+
+#: ../../source/containers_instance_groups.rst:203
+msgid "organization (by way of project)"
+msgstr "組織 (プロジェクトの形式)"
+
+#: ../../source/containers_instance_groups.rst:205
+msgid "If instance groups are associated with the job template, and all of these are at capacity, then the job will be submitted to instance groups specified on inventory, and then organization. Jobs should execute in those groups in preferential order as resources are available."
+msgstr "インスタンスグループがジョブテンプレートと関連付けられており、いずれも許容容量内である場合には、ジョブはインベントリーで指定したインスタンスグループ、次に組織で指定したインスタンスグループに送信されます。リソースがあるので、ジョブはこれらのグループ内で、任意の順番で実行してください。"
+
+#: ../../source/containers_instance_groups.rst:207
+msgid "The global ``default`` group can still be associated with a resource, just like any of the custom instance groups defined in the playbook. This can be used to specify a preferred instance group on the job template or inventory, but still allow the job to be submitted to any instance if those are out of capacity."
+msgstr "グローバルの ``default`` グループは、Playbook で定義されるカスタムのインスタンスグループと同様に、リソースと関連付けることができます。これは、ジョブテンプレートやインベントリーに希望のインスタンスグループを指定するのに使用できますが、容量が足りない場合にはジョブは別のインスタンスに送信できます。"
+
+#: ../../source/containers_instance_groups.rst:209
+msgid "As an example, by associating ``group_a`` with a Job Template and also associating the ``default`` group with its inventory, you allow the ``default`` group to be used as a fallback in case ``group_a`` gets out of capacity."
+msgstr "たとえば、ジョブテンプレートと ``group_a`` を関連付けたり、インベントリーと ``default``グループを関連付けたりすることで、``group_a`` の容量が足りなくなると、 ``default`` グループをフォールバックとして使用できるようになります。"
+
+#: ../../source/containers_instance_groups.rst:211
+msgid "In addition, it is possible to not associate an instance group with one resource but designate another resource as the fallback. For example, not associating an instance group with a job template and have it fall back to the inventory and/or the organization's instance group."
+msgstr "さらに、インスタンスグループにリソースを関連付けずに、フォールバックとして別のリソースを指定することができます。たとえば、ジョブテンプレートにインスタンスグループを割り当てずに、インベントリーや組織のインスタンスグループにフォールバックするように設定できます。"
+
+#: ../../source/containers_instance_groups.rst:213
+msgid "This presents two other great use cases:"
+msgstr "この設定には、優れたユースケースが他に 2 つあります。"
+
+#: ../../source/containers_instance_groups.rst:215
+msgid "Associating instance groups with an inventory (omitting assigning the job template to an instance group) will allow the user to ensure that any playbook run against a specific inventory will run only on the group associated with it. This can be super useful in the situation where only those instances have a direct link to the managed nodes."
+msgstr "(ジョブテンプレートをインスタンスグループに割り当てずに) インスタンスグループにインベントリーを関連付けることで、特定のインベントリーに対して実行される Playbook が関連付けられたグループでのみ実行されるようにすることができます。これらのインスタンスのみが管理ノードに直接関連付けられている場合に非常に便利です。"
+
+#: ../../source/containers_instance_groups.rst:217
+msgid "An administrator can assign instance groups to organizations. This effectively allows the administrator to segment out the entire infrastructure and guarantee that each organization has capacity to run jobs without interfering with any other organization's ability to run jobs."
+msgstr "管理者は、インスタンスグループに組織を割り当てることができます。これにより、管理者はインフラストラクチャー全体をセグメントに分け、各組織が他の組織のジョブ実行機能を妨げずに、ジョブを実行できるように保証します。"
+
+#: ../../source/containers_instance_groups.rst:219
+msgid "Likewise, an administrator could assign multiple groups to each organization as desired, as in the following scenario:"
+msgstr "同様に、以下のシナリオのように、管理者は希望に合わせて複数のグループを各組織に割り当てることもできます。"
+
+#: ../../source/containers_instance_groups.rst:221
+msgid "There are three instance groups: A, B, and C. There are two organizations: Org1 and Org2."
+msgstr "A、B、C の 3 つのインスタンスグループがあり、Org1 および Org2 の 2 つの組織がある場合"
+
+#: ../../source/containers_instance_groups.rst:222
+msgid "The administrator assigns group A to Org1, group B to Org2 and then assign group C to both Org1 and Org2 as an overflow for any extra capacity that may be needed."
+msgstr "管理者が Org1 にグループ A を、Org2 にグループ B を、容量が余分に必要となる可能性があるのでオーバーフロー用として Org1 および Org2 両方にグループ C を割り当てる場合"
+
+#: ../../source/containers_instance_groups.rst:223
+msgid "The organization administrators are then free to assign inventory or job templates to whichever group they want (or just let them inherit the default order from the organization)."
+msgstr "組織の管理者が自由にインベントリーまたはジョブテンプレートを希望のグループに割り当てる (か、組織からのデフォルトの順番を継承する) 場合"
+
+#: ../../source/containers_instance_groups.rst:225
+msgid "|Instance Group example|"
+msgstr "|Instance Group example|"
+
+#: ../../source/containers_instance_groups.rst:229
+msgid "Arranging resources in this way offers a lot of flexibility. Also, you can create instance groups with only one instance, thus allowing you to direct work towards a very specific Host in the controller cluster."
+msgstr "このような方法でリソースを割り当てると柔軟性が高くなります。また、インスタンスが 1 つしか含まれないインスタンスグループを作成することができるため、コントローラークラスターの固有のホストに作業を割り当てることができるようになります。"
+
+#: ../../source/containers_instance_groups.rst:235
+msgid "Deprovision Instance Groups"
+msgstr "インスタンスグループのプロビジョニング解除"
+
+#: ../../source/containers_instance_groups.rst:240
+msgid "Re-running the setup playbook does not automatically deprovision instances since clusters do not currently distinguish between an instance that was taken offline intentionally or due to failure. Instead, shut down all services on the controller instance and then run the deprovisioning tool from any other instance:"
+msgstr "Playbook の設定を再実行しても、自動的にインスタンスのプロビジョニングが解除されるわけではありません。これは現在、インスタンスがオフラインになった理由が意図的なのか、障害が原因なのかをクラスターでは識別できないためです。代わりに、コントローラーインスタンスの全サービスをシャットダウンしてから、他のインスタンスからプロビジョニング解除ツールを実行します。"
+
+#: ../../source/containers_instance_groups.rst:242
+msgid "Shut down the instance or stop the service with the command, ``automation-controller-service stop``."
+msgstr "``automation-controller-service stop`` のコマンドで、インスタンスをシャットダウンするか、サービスを停止します。"
+
+#: ../../source/containers_instance_groups.rst:244
+msgid "Run the deprovision command ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>`` from another instance to remove it from the controller cluster registry."
+msgstr "別のインスタンスから、プロビジョニング解除のコマンド ``$ awx-manage deprovision_instance --hostname=<name used in inventory file>`` を実行して、コントローラーのクラスターレジストリーから削除します。"
+
+#: ../../source/containers_instance_groups.rst:246
+msgid "Example: ``awx-manage deprovision_instance --hostname=hostB``"
+msgstr "例: ``awx-manage deprovision_instance --hostname=hostB``"
+
+#: ../../source/containers_instance_groups.rst:249
+msgid "Similarly, deprovisioning instance groups in the controller does not automatically deprovision or remove instance groups, even though re-provisioning will often cause these to be unused. They may still show up in API endpoints and stats monitoring. These groups can be removed with the following command:"
+msgstr "同様に、プロビジョニングを解除しても、多くの場合、コントローラーのインスタンスグループが使用されないにも関わらず、コントローラーのインスタンスグループのプロビジョニングを解除しても、インスタンスグループが自動的に削除されたり、プロビジョニングが解除されたりしません。そのまま API エンドポイントに表示されたり、統計が監視されたりする可能性があります。これらのグループは、以下のコマンドを使用すると、削除することができます。"
+
+#: ../../source/containers_instance_groups.rst:251
+msgid "Example: ``awx-manage unregister_queue --queuename=<name>``"
+msgstr "例: ``awx-manage unregister_queue --queuename=<name>``"
+
+#: ../../source/containers_instance_groups.rst:253
+msgid "Removing an instance's membership from an instance group in the inventory file and re-running the setup playbook does not ensure the instance won't be added back to a group. To be sure that an instance will not be added back to a group, remove via the API and also remove it in your inventory file, or you can stop defining instance groups in the inventory file altogether. You can also manage instance group topology through the |at| User Interface. For more information on managing instance groups in the UI, refer to :ref:`Instance Groups <userguide:ug_instance_groups>` in the |atu|."
+msgstr "このインベントリーファイルのインスタンスグループから、インスタンスのメンバーシップを削除して、Playbook の設定を再実行しても、インスタンスがグループに再度追加されなくなるわけではありません。インスタンスがグループに追加されないようにするには、API 経由で削除し、インベントリーファイルからも削除するか、インベントリーファイルでインスタンスグループの定義をなくします。|at| ユーザーインターフェースでインスタンスグループのトポロジーを管理することも可能です。UI でのインスタンスグループの管理に関する詳細は、『|atu|』の「:ref:`Instance Groups <userguide:ug_instance_groups>`」を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:257
+msgid "If you have isolated instance groups created in older versions of the controller (3.8.x and earlier) and want to migrate them to execution nodes to make them compatible for use with the automation mesh architecture, see :ref:`migrate_iso_to_exe` in the |atumg|."
+msgstr "以前のバージョンのコントローラー（3.8.x 以前）で作成したインスタンスグループを分離していて、それらを実行ノードに移行して、自動化メッシュアーキテクチャーと使用する際に互換性を持たせるようにするには、『|atumg|』の「:ref:`migrate_iso_to_exe`」を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:263
+msgid "Container Groups"
+msgstr "コンテナーグループ"
+
+#: ../../source/containers_instance_groups.rst:269
+msgid "|aap| supports :term:`Container Groups`, which allow you to execute jobs in the controller regardless of whether the controller is installed as a standalone, in  a virtual environment, or in a container. Container groups act as a pool of resources within a virtual environment. You can create instance groups to point to an OpenShift container, which are job environments that are provisioned on-demand as a Pod that exists only for the duration of the playbook run. This is known as the ephemeral execution model and ensures a clean environment for every job run."
+msgstr "|aap| は、:term:`Container Groups` をサポートしています。これにより、コントローラーがスタンドアロンとしてインストールされているか、仮想環境またはコンテナーにインストールされているかに関係なく、コントローラーでジョブを実行できます。コンテナーグループは、仮想環境内のリソースのプールとして機能します。OpenShift コンテナーを指すインスタンスグループを作成できます。これは、Playbook の実行中のみ存在する Pod としてオンデマンドでプロビジョニングされるジョブ環境です。これは一時的な実行モデルと呼ばれ、すべてのジョブ実行に対してクリーンな環境を確保します。"
+
+#: ../../source/containers_instance_groups.rst:271
+msgid "In some cases, it is desirable to have container groups be \"always-on\", which is configured through the creation of an instance."
+msgstr "場合によっては、コンテナーグループを「常時オン」にしておくことが望ましいです。これは、インスタンスの作成時に設定されます。"
+
+#: ../../source/containers_instance_groups.rst:275
+msgid "Container Groups upgraded from versions prior to |at| 4.0 will revert back to default and completely remove the old pod definition, clearing out all custom pod definitions in the migration."
+msgstr "|at| 4.0 以前のバージョンからアップグレードしたコンテナーグループはデフォルトに戻り、古い Pod 定義を完全に削除して、移行中のすべてのカスタム Pod 定義を消去します。"
+
+#: ../../source/containers_instance_groups.rst:278
+msgid "Container groups are different from |ees| in that |ees| are container images and do not use a virtual environment. See :ref:`ug_execution_environments` in the |atu| for further detail."
+msgstr "|ees| はコンテナーイメージであり、仮想環境を使用しないという点で、|ees| とコンテナーグループは異なります。詳細については、『|atu|』の「:ref:`ug_execution_environments`」を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:282
+msgid "Create a container group"
+msgstr "コンテナーグループの作成"
+
+#: ../../../common/source/get-creds-from-service-account.rst:2
+msgid "A ``ContainerGroup`` is a type of ``InstanceGroup`` that has an associated Credential that allows for connecting to an OpenShift cluster. To set up a container group, you must first have the following:"
+msgstr "``ContainerGroup`` は、OpenShift クラスターに接続できる認証情報が関連付けられた ``InstanceGroup`` のタイプです。コンテナーグループを設定するには、まず、以下が必要です。"
+
+#: ../../../common/source/get-creds-from-service-account.rst:4
+msgid "A namespace you can launch into (every cluster has a “default” namespace, but you may want to use a specific namespace)"
+msgstr "起動できる namespace (すべてのクラスターにはデフォルトの namespace がありますが、特定の namespace を使用することもできます)"
+
+#: ../../../common/source/get-creds-from-service-account.rst:5
+msgid "A service account that has the roles that allow it to launch and manage Pods in this namespace"
+msgstr "この namespace で Pod を起動および管理可能なロールを持つサービスアカウント"
+
+#: ../../../common/source/get-creds-from-service-account.rst:6
+msgid "If you will be using |ees| in a private registry, and have a Container Registry credential associated to them in the automation controller, the service account also needs the roles to get, create, and delete secrets in the namespace. If you do not want to give these roles to the service account, you can pre-create the ``ImagePullSecrets`` and specify them on the pod spec for the ContainerGroup. In this case, the |ee| should NOT have a Container Registry credential associated, or the controller will attempt to create the secret for you in the namespace."
+msgstr "プライベートレジストリーで |ees| を使用する場合は、オートメーションコントローラーでコンテナーレジストリー認証情報が関連付けられている場合、サービスアカウントには、名前空間で秘密を取得、作成、および削除するためのロールも必要です。これらのロールをサービスアカウントに付与したくない場合は、``ImagePullSecrets`` を事前に作成して、および ContainerGroup の Pod 仕様でそれらを指定します。この場合は、|ee| コンテナーレジストリー認証情報を関連付けないでください。関連付けられていない場合、コントローラーは名前空間に秘密を作成しようとします。"
+
+#: ../../../common/source/get-creds-from-service-account.rst:7
+msgid "A token associated with that service account (OpenShift or Kubernetes Bearer Token)"
+msgstr "そのサービスアカウントに関連付けられたトークン (OpenShift または Kubernetes Bearer トークン)"
+
+#: ../../../common/source/get-creds-from-service-account.rst:8
+msgid "A CA certificate associated with the cluster"
+msgstr "クラスターに関連付けられた CA 証明書"
+
+#: ../../../common/source/get-creds-from-service-account.rst:10
+msgid "This section describes creating a Service Account in an Openshift cluster (or K8s) in order to be used to run jobs in a container group via |at|. After the Service Account is created, its credentials are provided to the controller in the form of an Openshift or Kubernetes API bearer token credential. Below describes how to create a service account and collect the needed information for configuring |at|."
+msgstr "このセクションでは、コンテナーグループでジョブを実行するために使用されるOpenshift クラスター (または K8s) でサービスアカウントを作成する方法について説明します|at|。サービスアカウントが作成されると、その資格情報が Openshift または Kubernetes API ベアラートークン資格情報の形式でコントローラーに提供されます。以下に、サービスアカウントを作成し、設定に必要な情報を収集する方法について説明します|at|。"
+
+#: ../../../common/source/get-creds-from-service-account.rst:12
+msgid "To configure the controller:"
+msgstr "コントローラーの設定"
+
+#: ../../../common/source/get-creds-from-service-account.rst:14
+msgid "To create a service account, you may download and use this sample service account, :download:`containergroup sa <../../common/source/containergroup-sa.yml>` and modify it as needed to obtain the above credentials."
+msgstr "サービスアカウントを作成するには、次のサンプルサービスアカウントをダウンロードして使用できます。:download:`containergroup sa <../../common/source/containergroup-sa.yml>`上記の認証情報を取得するために、必要に応じて変更します。"
+
+#: ../../../common/source/get-creds-from-service-account.rst:16
+msgid "Apply the configuration from ``containergroup-sa.yml``::"
+msgstr "``containergroup-sa.yml``:: から設定を適用します。"
+
+#: ../../../common/source/get-creds-from-service-account.rst:21
+msgid "Get the secret name associated with the service account::"
+msgstr "サービスアカウントに関連付けられているシークレット名を取得します::"
+
+#: ../../../common/source/get-creds-from-service-account.rst:25
+msgid "Get the token from the secret::"
+msgstr "シークレットからトークンを取得します::"
+
+#: ../../../common/source/get-creds-from-service-account.rst:29
+msgid "Get the CA cert::"
+msgstr "CA 証明書を取得します::"
+
+#: ../../../common/source/get-creds-from-service-account.rst:33
+msgid "Use the contents of ``containergroup-sa.token`` and ``containergroup-ca.crt`` to provide the information for the :ref:`ug_credentials_ocp_k8s` required for the container group."
+msgstr "``containergroup-sa.token`` と ``containergroup-ca.crt`` の内容を使用して、コンテナーグループに必要な :ref:`ug_credentials_ocp_k8s` の情報を提供します。"
+
+#: ../../source/containers_instance_groups.rst:287
+msgid "To create a container group:"
+msgstr "コンテナーグループを作成するには、以下を実行します。"
+
+#: ../../source/containers_instance_groups.rst:289
+msgid "Use the controller user interface to create an :ref:`ug_credentials_ocp_k8s` credential that will be used with your container group, see :ref:`ug_credentials_add` in the |atu| for detail."
+msgstr "コントローラーのユーザーインタフェースを使用して、コンテナーグループで使用する :ref:`ug_credentials_ocp_k8s` 認証情報を作成します。詳細は、|atu| の :ref:`ug_credentials_add` を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:291
+msgid "Create a new container group by navigating to the Instance Groups configuration window by clicking **Instance Groups** from the left navigation bar."
+msgstr "左側のナビゲーションバーから **インスタンスグループ** をクリックして、インスタンスグループ設定ウィンドウに移動して、新しいコンテナーグループを作成します。"
+
+#: ../../source/containers_instance_groups.rst:293
+msgid "Click the **Add** button and select **Create Container Group**."
+msgstr "**Add** ボタンをクリックして、**Create Container Group** を選択します。"
+
+#: ../../source/containers_instance_groups.rst:295
+msgid "|IG - create new CG|"
+msgstr "|IG - create new CG|"
+
+#: ../../source/containers_instance_groups.rst:299
+msgid "Enter a name for your new container group and select the credential previously created to associate it to the container group."
+msgstr "新しいコンテナーグループの名前を入力し、以前に作成した資格情報を選択して、コンテナーグループに割り当てます。"
+
+#: ../../source/containers_instance_groups.rst:304
+msgid "Customize the Pod spec"
+msgstr "Pod 仕様のカスタマイズ"
+
+#: ../../source/containers_instance_groups.rst:306
+msgid "|aap| provides a simple default Pod specification, however, you can provide a custom YAML (or JSON) document that overrides the default Pod spec. This field uses any custom fields (i.e. ``ImagePullSecrets``) that can be \"serialized\" as valid Pod JSON or YAML. A full list of options can be found in the `OpenShift documentation <https://docs.openshift.com/online/pro/architecture/core_concepts/pods_and_services.html>`_."
+msgstr "|aap| にはデフォルトのシンプルな Pod の仕様が用意されていますが、カスタムの YAML (または JSON) ドキュメントを指定して、デフォルトの Pod の仕様をオーバーライドすることができます。このフィールドでは、有効な Pod JSON または YAML として「シリアル化」できる任意のカスタムフィールド (つまり ``ImagePullSecrets``) が使用可能です。オプションの完全な一覧は `OpenShift documentation <https://docs.openshift.com/online/pro/architecture/core_concepts/pods_and_services.html>`_ にあります。"
+
+#: ../../source/containers_instance_groups.rst:308
+msgid "To customize the Pod spec, specify the namespace in the **Pod Spec Override** field by using the toggle to enable and expand the **Pod Spec Override** field and click **Save** when done."
+msgstr "Pod の仕様をカスタマイズするには、トグルを使用して **Pod Spec Override** フィールドで名前空間を指定し、**Pod Spec Override** フィールドを有効にして展開し、作業が完了したら **Save** をクリックします。"
+
+#: ../../source/containers_instance_groups.rst:310
+msgid "|IG - CG customize pod|"
+msgstr "|IG - CG customize pod|"
+
+#: ../../source/containers_instance_groups.rst:314
+msgid "You may provide additional customizations, if needed. Click **Expand** to view the entire customization window."
+msgstr "必要に応じて、追加のカスタマイズを指定できます。カスタマイズウィンドウ全体を表示するには、**Expand** をクリックします。"
+
+#: ../../source/containers_instance_groups.rst:320
+msgid "The image used at job launch time is determined by which |ee| is associated with the job. If a Container Registry credential is associated with the |ee|, then the controller will attempt to make a ``ImagePullSecret`` to pull the image. If you prefer not to give the service account permission to manage secrets, you must pre-create the ``ImagePullSecret`` and specify it on the pod spec, and omit any credential from the |ee| used."
+msgstr "ジョブの起動時に使用されるイメージは、ジョブに関連付けられている |ee| によって決まります。コンテナーレジストリーの認証情報が |ee| に関連付けられている場合は、その後、コントローラーは ``ImagePullSecret`` を作成して、イメージをプルします。秘密を管理する権限をサービスアカウントに付与したくない場合は、``ImagePullSecret`` を事前に作成して Pod 仕様に指定して、仕様する |ee| から認証情報を省略する必要があります。"
+
+#: ../../source/containers_instance_groups.rst:322
+msgid "Refer to the *Allowing Pods to Reference Images from Other Secured Registries* section of the `Red Hat Container Registry Authentication article <https://access.redhat.com/RegistryAuthentication>`_ for more information on how to create image pull secrets."
+msgstr "イメージのプルシークレットを作成する方法は、`Red Hat Container Registry Authentication article <https://access.redhat.com/RegistryAuthentication>`_ の「他のセキュアなレジストリーからのイメージを参照する pod の許可」を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:324
+msgid "Once the container group is successfully created, the **Details** tab of the newly created container group remains, which allows you to review and edit your container group information. This is the same menu that is opened if the Edit (|edit-button|) button is clicked from the **Instance Group** link. You can also edit **Instances** and review **Jobs** associated with this instance group."
+msgstr "コンテナーグループが正常に作成されると、新規に作成されたコンテナーグループの **Details** タブがそのまま表示され、コンテナーグループの情報をレビューして編集することができます。これは、**Instance Group** リンクから編集 (|edit-button|) ボタンをクリックして開くメニューと同じです。また、**Instances** を編集して、このインスタンスグループに関連付けられた **Jobs** をレビューすることも可能です。"
+
+#: ../../source/containers_instance_groups.rst:328
+msgid "|IG - example CG successfully created|"
+msgstr "|IG - example CG successfully created|"
+
+#: ../../source/containers_instance_groups.rst:332
+msgid "Container groups and instance groups are labeled accordingly."
+msgstr "コンテナーグループとインスタンスグループは適宜ラベル付けされます。"
+
+#: ../../source/containers_instance_groups.rst:336
+msgid "Despite the fact that customers have custom Pod specs, upgrades may be difficult if the default ``pod_spec`` changes. Most any manifest can be applied to any namespace, with the namespace specified separately, most likely you will only need to override the namespace. Similarly, pinning a default image for different releases of the platform to different versions of the default job runner container is tricky. If the default image is specified in the Pod spec, then upgrades do not pick up the new default changes are made to the default Pod spec."
+msgstr "カスタムの Pod 仕様を指定している場合でも、デフォルトの ``pod_spec`` が変更されていると、アップグレードが困難な場合があります。マニフェストの多くは任意の名前空間に適用することができますが、名前空間を個別に指定すると、大抵の場合はその名前空間をオーバーライドするだけですみます。同様に、デフォルトのジョブランナーコンテナーの各種バージョンに、プラットフォームの各種リリースのデフォルトイメージを固定する場合も注意が必要です。デフォルトイメージが Pod の仕様で指定されている場合は、デフォルトの Pod 仕様に対して行われた新しいデフォルトの変更は、アップグレードには反映されません。"
+
+#: ../../source/containers_instance_groups.rst:340
+msgid "Verify container group functions"
+msgstr "コンテナーグループ機能の検証"
+
+#: ../../source/containers_instance_groups.rst:341
+msgid "To verify the deployment and termination of your container:"
+msgstr "コンテナーのデプロイと終了を確認するには、以下を実行します。"
+
+#: ../../source/containers_instance_groups.rst:343
+msgid "Create a mock inventory and associate the container group to it by populating the name of the container group in the **Instance Group** field. See :ref:`ug_inventories_add` in the |atu| for detail."
+msgstr "模擬インベントリーを作成し、**インスタンスグループ** フィールドにコンテナーグループの名前を入力してコンテナーグループをそのインベントリーに関連付けます。詳細については、『|atu|』の「:ref:`ug_inventories_add`」を参照してください。"
+
+#: ../../source/containers_instance_groups.rst:345
+msgid "|Dummy inventory|"
+msgstr "|Dummy inventory|"
+
+#: ../../source/containers_instance_groups.rst:349
+msgid "Create \"localhost\" host in inventory with variables:"
+msgstr "以下の変数を使用して、インベントリーに「localhost」ホストを作成します。"
+
+#: ../../source/containers_instance_groups.rst:355
+msgid "|Inventory with localhost|"
+msgstr "|Inventory with localhost|"
+
+#: ../../source/containers_instance_groups.rst:359
+msgid "Launch an ad hoc job against the localhost using the *ping* or *setup* module. Even though the **Machine Credential** field is required, it does not matter which one is selected for this simple test."
+msgstr "*ping* または *setup* モジュールを使用して、localhost に対してアドホックジョブを起動します。**マシンの認証情報** フィールドは必須ですが、このシンプルなテストではどちらを選択してもかまいません。"
+
+#: ../../source/containers_instance_groups.rst:361
+msgid "|Launch inventory with localhost|"
+msgstr "|Launch inventory with localhost|"
+
+#: ../../source/containers_instance_groups.rst:367
+msgid "You can see in the jobs detail view the container was reached successfully using one of ad hoc jobs."
+msgstr "ジョブの詳細ビューに、アドホックジョブの 1 つを使用してコンテナーに正常に到達したことが表示されます。"
+
+#: ../../source/containers_instance_groups.rst:369
+msgid "|Inventory with localhost ping success|"
+msgstr "|Inventory with localhost ping success|"
+
+#: ../../source/containers_instance_groups.rst:374
+msgid "If you have an OpenShift UI, you can see Pods appear and disappear as they deploy and terminate. Alternatively, you can use the CLI to perform a ``get pod`` operation on your namespace to watch these same events occurring in real-time."
+msgstr "OpenShift UI を使用している場合には、Pod のデプロイ時や終了時に、Pod が表示されたり非表示になったりします。また、CLI を使用して namespace で ``get pod`` の操作を実行すると、これらの同じイベントがリアルタイムで発生することを確認できます。"
+
+#: ../../source/containers_instance_groups.rst:378
+msgid "View container group jobs"
+msgstr "コンテナーグループジョブの表示"
+
+#: ../../source/containers_instance_groups.rst:380
+msgid "When you run a job associated with a container group, you can see the details of that job in the **Details** view and its associated container group and the execution environment that spun up."
+msgstr "コンテナーグループに関連付けられたジョブを実行すると、そのジョブの詳細を **詳細** ビューと、関連付けられたコンテナーグループ、および起動した実行環境で確認できます。"
+
+#: ../../source/containers_instance_groups.rst:382
+msgid "|IG - instances jobs|"
+msgstr "|IG - instances jobs|"
+
+#: ../../source/containers_instance_groups.rst:388
+msgid "Kubernetes API failure conditions"
+msgstr "Kubernetes API の障害状態"
+
+#: ../../source/containers_instance_groups.rst:390
+msgid "When running a container group and the Kubernetes API responds that the resource quota has been exceeded, the controller keeps the job in pending state. Other failures result in the traceback of the **Error Details** field showing the failure reason, similar to the example here:"
+msgstr "コンテナーグループを実行しており、Kubernetes API からリソースのクォータを超えたという応答があると、コントローラーはジョブを保留状態のままにします。他の障害では、以下の例のように、障害の理由を示す **エラーの詳細** フィールドのトレースバックになります。"
+
+#: ../../source/containers_instance_groups.rst:397
+msgid "Container capacity limits"
+msgstr "コンテナーの容量制限"
+
+#: ../../source/containers_instance_groups.rst:402
+msgid "Capacity limits and quotas for containers are defined via objects in the Kubernetes API:"
+msgstr "コンテナーの容量制限と割り当ては、Kubernetes API のオブジェクトを介して定義されます。"
+
+#: ../../source/containers_instance_groups.rst:404
+msgid "To set limits on all pods within a given namespace, use the ``LimitRange`` object. Refer to the OpenShift documentation for `Quotas and Limit Ranges <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#overview>`_."
+msgstr "特定の namespace 内のすべての Pod に制限を設定するには、``LimitRange`` オブジェクトを使用します。`Quotas and Limit Ranges <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#overview>`_ に関しては、OpenShift のドキュメントを参照してください。"
+
+#: ../../source/containers_instance_groups.rst:406
+msgid "To set limits directly on the pod definition launched by the controller, see :ref:`ag_customize_pod_spec` and refer to the OpenShift documentation to set the options to `compute resources <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#dev-compute-resources>`_."
+msgstr "コントローラーによって起動した Pod 定義に直接制限を設定するには、:ref:`ag_customize_pod_spec` を参照し、OpenShift のドキュメントを参照してオプションを `compute resources <https://docs.openshift.com/online/pro/dev_guide/compute_resources.html#dev-compute-resources>`_ に設定します。"
+
+#: ../../source/containers_instance_groups.rst:410
+msgid "Container groups do not use the capacity algorithm that normal nodes use. You would need to explicitly set the number of forks at the job template level, for instance. If forks are configured in the controller, that setting will be passed along to the container."
+msgstr "コンテナーグループは、通常のノードが使用する容量アルゴリズムを使用しません。たとえば、フォークの数をジョブテンプレートレベルで明示的に設定する必要があります。コントローラーでフォークが構成されている場合、その設定はコンテナーに渡されます。"
+

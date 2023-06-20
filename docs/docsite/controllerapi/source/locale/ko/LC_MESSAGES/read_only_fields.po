@@ -1,0 +1,29 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/read_only_fields.rst:3
+msgid "Read-only Fields"
+msgstr "읽기 전용 필드"
+
+#: ../../source/read_only_fields.rst:9
+msgid "Certain fields in the REST API are marked read-only. These usually include the URL of a resource, the ID, and occasionally some internal fields. For instance, the ``'created\\_by'`` attribute of each object indicates which user created the resource, and cannot be edited."
+msgstr "REST API의 특정 필드는 읽기 전용으로 표시됩니다. 여기에는 일반적으로 리소스의 URL, ID 그리고 경우에 따라 일부 내부 필드가 포함됩니다. 예를 들어, 각 오브젝트의 ``'created\\_by'`` 특성은 리소스를 생성한 사용자를 나타내며 편집할 수 없습니다."
+
+#: ../../source/read_only_fields.rst:14
+msgid "If you post some values and notice that they are not changing, these fields may be read-only."
+msgstr "일부 값을 게시한 후 해당 값이 변경되지 않는다면 이러한 필드는 읽기 전용에 해당합니다."
+

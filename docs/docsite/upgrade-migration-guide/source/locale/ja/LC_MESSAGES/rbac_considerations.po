@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Upgrade and Migration Guide 4.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-10 17:06+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/rbac_considerations.rst:7
+msgid "Role-Based Access Controls"
+msgstr "ロールベースのアクセス制御"
+
+#: ../../source/rbac_considerations.rst:15
+msgid "|at| 3.7 contains minor updates to the Role-Based Access Control (RBAC) system. For the latest RBAC documentation, refer to the :ref:`Role-Based Access Controls<userguide:rbac-ug>` section in the Tower User Guide."
+msgstr "|at| 3.7 には、ロールベースのアクセス制御 (RBAC) システムへのマイナーアップデートが含まれます。最新の RBAC ドキュメントは、Tower ユーザーガイドの「:ref:`Role-Based Access Controls<userguide:rbac-ug>`」セクションを参照してください。"
+
+#: ../../source/rbac_considerations.rst:18
+msgid "Organization field on Job Templates"
+msgstr "ジョブテンプレートの組織フィールド"
+
+#: ../../source/rbac_considerations.rst:20
+msgid "Job templates in |at| now include an organization field in the API. This is set on creation based on the organization of the project used by the Job Template, and cannot be changed. Because of this, a project's organization cannot be changed once it is in use by Job Templates."
+msgstr "|at| のジョブテンプレートには、API に組織フィールドが追加されました。これは、ジョブテンプレートが使用するプロジェクトの組織に基づいて作成時に設定され、変更することはできません。したがって、ジョブテンプレートで使用されたプロジェクトの組織を変更することはできません。"
+
+#: ../../source/rbac_considerations.rst:23
+msgid "This changes visibility and access to job templates. Previously, an admin of the organization that a job template's inventory belonged to would also be granted admin access to the job template. While existing permissions are preserved on an upgrade to |at| 3.7, newly created jobs will only grant view access to the job template to the inventory admin in this scenario."
+msgstr "これにより、ジョブテンプレートの可視性やアクセスが変更されました。以前は、ジョブテンプレートのインベントリーが属していた組織の管理者にも、ジョブテンプレートへの管理者アクセスが付与されていました。|at| 3.7 へのアップグレード時に既存のパーミッションは保持されますが、新規に作成されたジョブに対して、このシナリオのインベントリー管理者に付与されるのは、ジョブテンプレートの表示アクセス権のみになります。"

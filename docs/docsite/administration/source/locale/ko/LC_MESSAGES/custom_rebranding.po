@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/custom_rebranding.rst:5
+msgid "Using Custom Logos in automation controller"
+msgstr "자동화 컨트롤러에서 사용자 정의 로고 사용"
+
+#: ../../../common/source/logos_branding.rst:2
+msgid "|at| supports the use of a custom logo. You can add a custom logo by uploading an image; and supply a custom login message from the **User Interface settings** of the Settings menu."
+msgstr "|at|는 사용자 지정 로고 사용을 지원합니다. 이미지를 업로드하여 사용자 지정 로고를 추가하고 설정 메뉴 **사용자 인터페이스 설정**에서 사용자 지정 로그인 메시지를 제공할 수 있습니다."
+
+#: ../../../common/source/logos_branding.rst:9
+msgid "For the custom logo to look its best, use a ``.png`` file with a transparent background. GIF, PNG, and JPEG formats are supported."
+msgstr "사용자 지정 로고를 가장 멋지게 표시하려면 투명 배경으로 ``.png`` 파일을 사용합니다. GIF, PNG, JPEG 형식이 지원됩니다."
+
+#: ../../../common/source/logos_branding.rst:12
+msgid "If needed, you can add specific information (such as a legal notice or a disclaimer) to a text box in the login modal by adding it to the **Custom Login Info** text field."
+msgstr "필요한 경우 **사용자 지정 로그인 정보** 텍스트 필드에 추가하여 로그인 모달의 텍스트 상자에 특정 정보(예: 법적 고지 또는 고지 사항)를 추가할 수 있습니다."
+
+#: ../../../common/source/logos_branding.rst:15
+msgid "For example, if you uploaded a specific logo, and added the following text:"
+msgstr "예를 들어 특정 로고를 업로드하고 다음 텍스트를 추가했다고 가정합니다."
+
+#: ../../../common/source/logos_branding.rst:20
+msgid "The Tower login dialog would look like this:"
+msgstr "Tower 로그인 대화 상자는 다음과 같습니다."
+
+#: ../../../common/source/logos_branding.rst:26
+msgid "Selecting ``Revert`` will result in the appearance of the standard |at| logo."
+msgstr "``Revert``를 선택하면 표준 |at| 로고가 표시됩니다."
+

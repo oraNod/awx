@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/me.rst:3
+msgid "Me API Endpoint"
+msgstr "Me API 端点"
+
+#: ../../source/me.rst:9
+msgid "Make a GET request to retrieve user information about the current user."
+msgstr "发出 GET 请求以检索当前用户的用户信息。"
+
+#: ../../source/me.rst:53
+msgid "One result should be returned containing the following fields:"
+msgstr "应该返回一个包含以下字段的结果："
+
+#: ../../source/me.rst:55
+msgid "``id``: Database ID for this user. (integer)"
+msgstr "``id``：此用户的数据库 ID。（整数）"
+
+#: ../../source/me.rst:56
+msgid "``type``: Data type for this user. (multiple choice)"
+msgstr "``type``：此用户的数据类型。（多选项）"
+
+#: ../../source/me.rst:57
+msgid "``user``: User"
+msgstr "``user``：用户"
+
+#: ../../source/me.rst:58
+msgid "``url``: URL for this user. (string)"
+msgstr "``url``：此用户的 URL。（字符串）"
+
+#: ../../source/me.rst:59
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``：包含相关资源的 URL 的数据结构。（对象）"
+
+#: ../../source/me.rst:60
+msgid "``created``: Timestamp when this user was created. (datetime)"
+msgstr "``created``：创建此用户时的时间戳。（日期时间）"
+
+#: ../../source/me.rst:61
+msgid "``username``: Required. 30 characters or fewer. Letters, numbers and @/./+/-/_ characters (string)"
+msgstr "``username``：必需。30 个字符或更少。字母、数字和@/./+/-/_（字符串）"
+
+#: ../../source/me.rst:62
+msgid "``first_name``: (string)"
+msgstr "``first_name``：（字符串）"
+
+#: ../../source/me.rst:63
+msgid "``last_name``: (string)"
+msgstr "``last_name``：（字符串）"
+
+#: ../../source/me.rst:64
+msgid "``email``: (email)"
+msgstr "``email``：（电子邮件）"
+
+#: ../../source/me.rst:65
+msgid "``is_superuser``: Designates that this user has all permissions without explicitly assigning them. (boolean)"
+msgstr "``is_superuser``：指定此用户拥有所有权限但没有明确分配给他们。（布尔值）"
+
+#: ../../source/me.rst:66
+msgid "``password``: Write-only field used to change the password. (string)"
+msgstr "``password``：用于更改密码只写字段。（字符串）"
+
+#: ../../source/me.rst:67
+msgid "``ldap_dn``: (string)"
+msgstr "``ldap_dn``：（字符串）"
+
+#: ../../source/me.rst:69
+msgid "Use the primary URL for the user (``/api/v1/users/N/``) to modify the user."
+msgstr "使用用户 (``/api/v1/users/N/``) 的主 URL 来修改用户。"
+
+#: ../../source/me.rst:72
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/me.rst:78
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

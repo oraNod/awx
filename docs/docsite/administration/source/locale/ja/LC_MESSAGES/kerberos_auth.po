@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/kerberos_auth.rst:2
+msgid "User Authentication with Kerberos"
+msgstr "Kerberos でのユーザー認証"
+
+#: ../../source/kerberos_auth.rst:8
+msgid "User authentication via Active Directory (AD), also referred to as authentication through Kerberos, is supported through the |at|."
+msgstr "|at| では、Active Directory (AD) でのユーザー認証、または Kerberos での認証がサポートされます。"
+
+#: ../../source/kerberos_auth.rst:10
+msgid "To get started, first set up the Kerberos packages in the controller system so that you can successfully generate a Kerberos ticket. To install the packages, use the following steps:"
+msgstr "まず、Kerberos チケットを正常に生成できるように、コントローラーシステムの Kerberos パッケージを設定します。パッケージをインストールするには、以下の手順を使用します。"
+
+#: ../../source/kerberos_auth.rst:18
+msgid "Once installed, edit the ``/etc/krb5.conf`` file, as follows, to provide the address of the AD, the domain, etc.:"
+msgstr "インストールが済むと、以下のように ``/etc/krb5.conf`` ファイルを編集して、AD、ドメインなどのアドレスを指定します。"
+
+#: ../../source/kerberos_auth.rst:45
+msgid "After the configuration file has been updated, you should be able to successfully authenticate and get a valid token. The following steps show how to authenticate and get a token:"
+msgstr "設定ファイルの更新後に、認証が成功して、有効なトークを取得できるはずです。以下の手順では、認証およびトークンの取得方法を説明します。"
+
+#: ../../source/kerberos_auth.rst:65
+msgid "Once you have a valid ticket, you can check to ensure that everything is working as expected from command line. To test this, make sure that your inventory looks like the following:"
+msgstr "有効なチケットを取得したら、コマンドラインからすべてが想定通りに機能していることを確認します。これをテストするには、インベントリーが以下のようになっていることを確認します。"
+
+#: ../../source/kerberos_auth.rst:77
+msgid "You should also:"
+msgstr "以下を行う必要があります。"
+
+#: ../../source/kerberos_auth.rst:79
+msgid "Ensure that the hostname is the proper client hostname matching the entry in AD and is not the IP address."
+msgstr "ホスト名が、AD のエントリーと一致しており、IP アドレスではなく、正しいクライアントのホスト名が指定されていることを確認します。"
+
+#: ../../source/kerberos_auth.rst:81
+msgid "In the username declaration, ensure that the domain name (the text after ``@``) is properly entered with regard to upper- and lower-case letters, as Kerberos is case sensitive. For the controller, you should also ensure that the inventory looks the same."
+msgstr "また、Kerberos は大文字、小文字を区別するため、ユーザー名の宣言でドメイン名 (``@`` の後の文字) が大文字、小文字など、正しく入力されていることを確認します。コントローラーの場合は、インベントリーが同じであることも確認します。"
+
+#: ../../source/kerberos_auth.rst:86
+msgid "If you encounter a ``Server not found in Kerberos database`` error message, and your inventory is configured using FQDNs (**not IP addresses**), ensure that the service principal name is not missing or mis-configured."
+msgstr "``Server not found in Kerberos database`` のエラーメッセージが表示され、インベントリーが (**IP アドレスではなく**) FQDN で設定されている場合には、サービスのプリンシパル名が抜けていないこと、またプリンシパル名の設定に間違いがないことを確認します。"
+
+#: ../../source/kerberos_auth.rst:89
+msgid "Now, running a playbook should run as expected. You can test this by running the playbook as the ``awx`` user."
+msgstr "想定通りに Playbook が実行されるようになるはずです。``awx`` ユーザーとして Playbook を実行してテストすることができます。"
+
+#: ../../source/kerberos_auth.rst:91
+msgid "Once you have verified that playbooks work properly, integration with the controller is easy. Generate the Kerberos ticket as the ``awx`` user and the controller should automatically pick up the generated ticket for authentication."
+msgstr "Playbook が適切に機能していることが確認できたら、コントローラーとの統合は簡単です。``awx`` ユーザーで Kerberos チケットを生成すると、コントローラーは自動的に生成したチケットを取得して認証を行います。"
+
+#: ../../source/kerberos_auth.rst:95
+msgid "The python ``kerberos`` package must be installed. Ansible is designed to check if ``kerberos`` package is installed and, if so, it uses kerberos authentication."
+msgstr "python ``kerberos`` パッケージは必ずインストールするようにしてください。Ansible は、``kerberos`` パッケージがインストールされているかどうかを確認し、されている場合には Kerberos 認証を使用します。"
+
+#: ../../source/kerberos_auth.rst:99
+msgid "AD and Kerberos Credentials"
+msgstr "AD および Kerberos 認証情報"
+
+#: ../../source/kerberos_auth.rst:101
+msgid "Active Directory only:"
+msgstr "Active Directory のみ:"
+
+#: ../../source/kerberos_auth.rst:103
+msgid "If you are only planning to run playbooks against Windows machines with AD usernames and passwords as machine credentials, you can use \"user@<domain>\" format for the username and an associated password."
+msgstr "AD ユーザー名およびパスワードをマシンの認証情報として使用して Windows マシンだけに Playbook を実行する予定の場合には、ユーザー名と関連付けられたパスワードに対して \"user@<domain>\" を使用することができます。"
+
+#: ../../source/kerberos_auth.rst:105
+msgid "With Kerberos:"
+msgstr "Kerberos の場合:"
+
+#: ../../source/kerberos_auth.rst:107
+msgid "If Kerberos is installed, you can create a machine credential with the username and password, using the \"user@<domain>\" format for the username."
+msgstr "Kerberos がインストールされている場合には、 \"user@<domain>\" の形式のユーザー名とパスワードを使用してマシンの認証情報を作成することができます。"
+
+#: ../../source/kerberos_auth.rst:111
+msgid "Working with Kerberos Tickets"
+msgstr "Keroberos チケットの使用"
+
+#: ../../source/kerberos_auth.rst:113
+msgid "Ansible defaults to automatically managing Kerberos tickets when both the username and password are specified in the machine credential for a host that is configured for kerberos. A new ticket is created in a temporary credential cache for each host, before each task executes (to minimize the chance of ticket expiration). The temporary credential caches are deleted after each task, and will not interfere with the default credential cache."
+msgstr "Ansible は、Kerberos を設定したホストマシンの認証情報にユーザー名とパスワード両方が指定される場合には、Kerberos チケットが自動的に管理されるように初期設定されています。(チケットが失効する可能性を最小限に抑えるために) 各タスクが実行する前に、各ホストに新しいチケットが一時的な認証キャッシュに作成されます。デフォルトの認証キャッシュを干渉しないように、一時的な認証キャッシュは、各タスクが完了すると削除されます。"
+
+#: ../../source/kerberos_auth.rst:115
+msgid "To disable automatic ticket management (e.g., to use an existing SSO ticket or call ``kinit`` manually to populate the default credential cache), set ``ansible_winrm_kinit_mode=manual`` via the inventory."
+msgstr "チケットの自動管理を無効にするには (例: 既存の SSO チケットを使用するか、手動で ``kinit`` を呼び出し、デフォルトの認証キャッシュを生成)、インベントリー経由で ``ansible_winrm_kinit_mode=manual`` を設定します。"
+
+#: ../../source/kerberos_auth.rst:117
+msgid "Automatic ticket management requires a standard kinit binary on the control host system path. To specify a different location or binary name, set the ``ansible_winrm_kinit_cmd`` inventory variable to the fully-qualified path to an MIT krbv5 kinit-compatible binary."
+msgstr "チケットの自動管理には、制御ホストシステムのパスに標準の kinit のバイナリーが必要です。異なる場所またはバイナリー名を指定するには、``ansible_winrm_kinit_cmd`` インベントリー変数を、MIT krbv5 kinit 互換のあるバイナリーへの完全修飾パスに設定します。"
+

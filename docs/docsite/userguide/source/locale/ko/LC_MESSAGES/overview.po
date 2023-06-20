@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/overview.rst:4
+msgid "Overview"
+msgstr "개요"
+
+#: ../../source/overview.rst:9
+msgid "Thank you for your interest in |rhaap|. |aap| makes it possible for users across an organization to share, vet, and manage automation content by means of a simple, powerful, and agentless technical implementation. IT managers can provide guidelines on how automation is applied to individual teams. Meanwhile, automation developers retain the freedom to write tasks that use existing knowledge, without the operational overhead of conforming to complex tools and frameworks. It is a more secure and stable foundation for deploying end-to-end automation solutions, from hybrid cloud to the edge."
+msgstr "|rhaap|에 관심을 가져 주셔서 감사합니다. |aap|을 사용하면 조직 전체의 사용자가 간단하고 강력하며 에이전트가 없는 기술 구현을 통해 자동화 콘텐츠를 공유, 검사, 관리할 수 있습니다. IT 관리자는 개별 팀에 자동화 적용 방법에 대한 지침을 제공할 수 있습니다. 자동화 개발자는 복잡한 툴 및 프레임워크를 따르는 운영 오버헤드 없이 기존 지식을 사용하는 작업을 자유롭게 작성할 수 있습니다. 하이브리드 클라우드에서 에지에 이르기까지 포괄적인 자동화 솔루션을 배포할 수 있는 더 안전하고 안정적인 기반입니다."
+
+#: ../../source/overview.rst:11
+msgid "|aap| includes |at|, which allows users to define, operate, scale, and delegate automation across their enterprise."
+msgstr "|aap|에는 사용자가 엔터프라이즈 전체에서 자동화를 정의, 운영, 확장, 위임할 수 있는 |at|가 포함되어 있습니다."
+
+#: ../../source/overview.rst:15
+msgid "Real-time Playbook Output and Exploration"
+msgstr "실시간 플레이북 출력 및 탐색"
+
+#: ../../source/overview.rst:20
+msgid "Watch playbooks run in real time, seeing each host as they check in. Easily go back and explore the results for specific tasks and hosts in great detail. Search for specific plays or hosts and see just those results, or quickly zero in on errors that need to be corrected."
+msgstr "플레이북이 실행되는 것을 실시간으로 보면서 체크인할 때 각 호스트를 확인합니다. 쉽게 돌아가서 특정 작업 및 호스트에 대한 결과를 매우 자세히 탐색할 수 있습니다. 특정 플레이 또는 호스트를 검색하여 해당 결과만 보거나 수정해야 하는 오류에 초점을 둘 수 있습니다."
+
+#: ../../source/overview.rst:23
+msgid "\"Push Button\" Automation"
+msgstr "\"푸시 버튼\" 자동화"
+
+#: ../../source/overview.rst:28
+msgid "Access your favorite projects and re-trigger execution from the web interface with a minimum of clicking. |at| will ask for input variables, prompt for your credentials, kick off and monitor the job, and display results and host history over time."
+msgstr "최소한의 클릭을 사용하여 웹 인터페이스에서 즐겨 찾는 프로젝트에 액세스하고 실행을 다시 트리거합니다. |at|는 입력 변수를 요청하고 인증 정보를 입력하라는 메시지를 표시한 후 작업을 시작 및 모니터링하고, 시간 경과에 따른 결과 및 호스트 기록을 표시합니다."
+
+#: ../../source/overview.rst:32
+msgid "Enhanced and Simplified Role-Based Access Control and Auditing"
+msgstr "역할 기반 액세스 제어 및 감사 강화 및 단순화"
+
+#: ../../source/overview.rst:37
+msgid "|At| allows for the granting of permissions to perform a specific task (such as to view, create, or modify a file) to different teams or explicit users through role-based access control (RBAC)."
+msgstr "|At|를 사용하면 역할 기반 액세스 제어(RBAC)를 통해 다른 팀이나 명시적 사용자에게 특정 작업(예: 파일 보기, 생성 또는 수정)을 수행할 수 있는 권한을 부여할 수 있습니다."
+
+#: ../../source/overview.rst:39
+msgid "Keep some projects private, while allowing some users to edit inventory and others to run playbooks against only certain systems--either in check (dry run) or live mode. You can also allow certain users to use credentials without exposing the credentials to them. Regardless of what you do, |at| records the history of operations and who made them--including objects edited and jobs launched."
+msgstr "일부 프로젝트는 비공개로 유지하면서 일부 사용자는 인벤토리를 편집하고 다른 사용자는 특정 시스템에 대해서만 플레이북을 확인(시험 실행) 또는 라이브 모드로 실행할 수 있도록 허용합니다. 특정 사용자가 인증 정보를 노출하지 않고 사용하도록 허용할 수도 있습니다. 어떠한 작업을 수행하든 |at|는 편집된 오브젝트와 시작된 작업을 포함하여 작업에 대한 기록과 작업을 수행한 사용자를 기록합니다."
+
+#: ../../source/overview.rst:41
+msgid "Based on user feedback, |at| both expands and simplifies its role-based access control. No longer is job template visibility configured via a combination of permissions on inventory, projects, and credentials. If you want to give any user or team permissions to use a job template, just assign permissions directly on the job template. Similarly, credentials are now full objects in |at|'s RBAC system, and can be assigned to multiple users and/or teams for use."
+msgstr "|at|는 사용자 피드백에 따라 역할 기반 액세스 제어를 확장하고 단순화합니다. 더 이상 작업 템플릿 가시성을 인벤토리, 프로젝트, 인증 정보에 대한 권한 조합을 통해 구성하지 않습니다. 사용자 또는 팀에 작업 템플릿을 사용할 수 있는 권한을 부여하려면 작업 템플릿에 직접 권한을 할당하기만 하면 됩니다. 마찬가지로 인증 정보는 |at| RBAC 시스템의 전체 오브젝트에 해당하며, 여러 사용자 및/또는 팀에 할당하여 사용할 수 있습니다."
+
+#: ../../source/overview.rst:43
+msgid "|At| includes an ‘Auditor’ type, who can see all aspects of the systems automation, but has no permission to run or change automation, for those that need a system-level auditor. (This may also be useful for a service account that scrapes automation information from the REST API.) Refer to :ref:`rbac-ug` for more information."
+msgstr "|At|에는 시스템 자동화의 모든 측면을 볼 수 있지만 시스템 수준 감사자가 필요한 사람들을 위해 자동화를 실행하거나 변경할 권한이 없는 '감사자' 유형이 포함됩니다. (이는 REST API에서 자동화 정보를 스크랩하는 서비스 계정에도 유용할 수 있습니다.) 자세한 내용은 :ref:`rbac-ug`를 참조하십시오."
+
+#: ../../source/overview.rst:45
+msgid "Subsequent releases of |at| provides more granular permissions, making it easier to delegate inside your organizations and remove automation bottlenecks."
+msgstr "|at|의 후속 릴리스에서는 더 세분화된 권한을 제공하여 더 쉽게 조직 내부에서 위임하고 자동화 병목 현상을 제거할 수 있습니다."
+
+#: ../../source/overview.rst:49
+msgid "Cloud & Autoscaling Flexibility"
+msgstr "클라우드 및 자동 확장 유연성"
+
+#: ../../source/overview.rst:55
+msgid "|At| features a powerful provisioning callback feature that allows nodes to request configuration on demand. While optional, this is an ideal solution for a cloud auto-scaling scenario, integrating with provisioning servers like Cobbler, or when dealing with managed systems with unpredictable uptimes. Requiring no management software to be installed on remote nodes, the callback solution can be triggered via a simple call to 'curl' or 'wget', and is easily embeddable in init scripts, kickstarts, or preseeds. Access is controlled such that only machines in inventory can request configuration."
+msgstr "|At|에서는 요청 시 노드에서 구성을 요청할 수 있는 강력한 프로비저닝 콜백 기능을 제공합니다. 이 기능은 선택 사항이지만 Cobbler와 같은 프로비저닝 서버와 통합하는 클라우드 자동 확장 시나리오나 가동 시간을 예측할 수 없는 관리형 시스템을 처리할 때 이상적인 솔루션입니다. 원격 노드에 관리 소프트웨어를 설치할 필요가 없는 콜백 솔루션은 'curl' 또는 'wget'에 대한 간단한 호출을 통해 트리거할 수 있으며, init 스크립트, kickstart 또는 preseed에 쉽게 포함할 수 있습니다. 인벤토리에 있는 머신에서만 구성을 요청할 수 있도록 액세스가 제어됩니다."
+
+#: ../../source/overview.rst:59
+msgid "The Ideal RESTful API"
+msgstr "이상적인 RESTful API"
+
+#: ../../source/overview.rst:64
+msgid "The |at| REST API is the ideal RESTful API for a systems management application, with all resources fully discoverable, paginated, searchable, and well modeled. A styled API browser allows API exploration from the API root at ``http://<server name>/api/``, showing off every resource and relation. Everything that can be done in the user interface can be done in the API - and more."
+msgstr "|at| REST API는 시스템 관리 애플리케이션에 이상적인 RESTful API로, 모든 리소스가 완전히 검색 가능하고 페이지가 매겨지며 잘 모델링됩니다. 스타일이 지정된 API 브라우저에서는 API 루트(``http://<server name>/api/``)에서 API 탐색을 수행하여 모든 리소스와 관계를 표시할 수 있습니다. 사용자 인터페이스에서 수행할 수 있는 모든 작업과 그 이상을 API에서 수행할 수 있습니다."
+
+#: ../../source/overview.rst:67
+msgid "Backup and Restore"
+msgstr "백업 및 복원"
+
+#: ../../source/overview.rst:72
+msgid "The ability to backup and restore your system(s) has been integrated into the |aap| setup playbook, making it easy for you to backup and replicate your instance as needed."
+msgstr "시스템을 백업하고 복원하는 기능이 |aap| 설정 플레이북에 통합되어 필요에 따라 인스턴스를 쉽게 백업하고 복제할 수 있습니다."
+
+#: ../../source/overview.rst:75
+msgid "Ansible Galaxy Integration"
+msgstr "Ansible Galaxy 통합"
+
+#: ../../source/overview.rst:80
+msgid "When it comes to describing your automation, everyone repeats the DRY mantra--\"Don’t Repeat Yourself.\" Using centralized copies of Ansible roles, such as in Ansible Galaxy, allows you to bring that philosophy to your playbooks. By including an Ansible Galaxy requirements.yml file in your project directory, |at| automatically fetches the roles your playbook needs from Galaxy, GitHub, or your local source control. Refer to :ref:`ug_galaxy` for more information."
+msgstr "자동화를 설명하는 사람들은 모두 \"반복 금지\"라는 주문을 반복해서 말합니다. Ansible Galaxy에서와 같이 중앙 집중식 Ansible 역할 복사본을 사용하면 이러한 철학을 플레이북에 적용할 수 있습니다. 프로젝트 디렉터리에 Ansible Galaxy requirements.yml 파일을 포함하면 |at|에서 Galaxy, GitHub 또는 로컬 소스 제어를 통해 플레이북에 필요한 역할을 자동으로 가져옵니다. 자세한 내용은 :ref:`ug_galaxy`을 참조하십시오."
+
+#: ../../source/overview.rst:83
+msgid "Inventory Support for OpenStack"
+msgstr "OpenStack에 대한 인벤토리 지원"
+
+#: ../../source/overview.rst:89
+msgid "Ansible is committed to making OpenStack simple for everyone to use. As part of that,  dynamic inventory support has been added for OpenStack. This allows you to easily target any of the virtual machines or images that you’re running in your OpenStack cloud."
+msgstr "Ansible은 모든 사용자가 사용할 수 있도록 OpenStack을 간소화하기 최선을 다하고 있습니다. 이러한 노력의 일환으로 OpenStack에 대한 동적 인벤토리 지원이 추가되었습니다. 이를 통해 OpenStack 클라우드에서 실행 중인 가상 머신 또는 이미지를 쉽게 대상으로 지정할 수 있습니다."
+
+#: ../../source/overview.rst:93
+msgid "Remote Command Execution"
+msgstr "원격 명령 실행"
+
+#: ../../source/overview.rst:98
+msgid "Often times, you just need to do a simple task on a few hosts, whether it’s add a single user, update a single security vulnerability, or restart a misbehaving service. |At| includes remote command execution--any task that you can describe as a single Ansible play can be run on a host or group of hosts in your inventory, allowing you to get managing your systems quickly and easily. Plus, it is all backed by an RBAC engine and detailed audit logging, removing any questions regarding who has done what to what machines."
+msgstr "단일 사용자를 추가하거나, 단일 보안 취약점을 업데이트하거나, 오작동하는 서비스를 다시 시작하는 등 몇 개의 호스트에서 간단한 작업만 수행하면 되는 경우가 많습니다. |At|에는 원격 명령 실행 기능이 포함되어 있습니다. 단일 Ansible 플레이로 설명할 수 있는 모든 작업을 인벤토리의 호스트 또는 호스트 그룹에서 실행하여 시스템을 쉽고 빠르고 관리할 수 있습니다. 또한 RBAC 엔진 및 세부 감사 로깅이 모두 지원되므로 누가 어떤 머신에 어떤 작업을 수행했는지 질문할 필요가 없습니다."
+
+#: ../../source/overview.rst:102
+msgid "System Tracking"
+msgstr "시스템 추적"
+
+#: ../../source/overview.rst:109
+msgid "You can collect facts by using the fact caching feature. Refer to :ref:`ug_fact_caching` for more detail."
+msgstr "사실 캐싱 기능을 사용하여 사실을 수집할 수 있습니다. 자세한 내용은 :ref:`ug_fact_caching`을 참조하십시오."
+
+#: ../../source/overview.rst:113
+msgid "Integrated Notifications"
+msgstr "통합 알림"
+
+#: ../../source/overview.rst:118
+msgid "|at| allows you to easily keep track of the status of your automation. You can configure stackable notifications for job templates, projects, or entire organizations, and configure different notifications for job start, job success, job failure, and job approval (for workflow nodes). The following notification sources are supported:"
+msgstr "|at|에서는 자동화 상태를 쉽게 추적할 수 있습니다. 작업 템플릿, 프로젝트 또는 전체 조직에 대해 누적 가능한 알림을 구성하고 작업 시작, 작업 성공, 작업 실패, 작업 승인(워크플로우 노드의 경우)에 대해 서로 다른 알림을 구성할 수 있습니다. 다음 알림 소스가 지원됩니다."
+
+#: ../../source/overview.rst:120
+msgid "Email"
+msgstr "이메일"
+
+#: ../../source/overview.rst:121
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../source/overview.rst:122
+msgid "IRC"
+msgstr "IRC"
+
+#: ../../source/overview.rst:123
+msgid "Mattermost"
+msgstr "Mattermost"
+
+#: ../../source/overview.rst:124
+msgid "PagerDuty"
+msgstr "PagerDuty"
+
+#: ../../source/overview.rst:125
+msgid "Rocket.Chat"
+msgstr "Rocket.Chat"
+
+#: ../../source/overview.rst:126
+msgid "Slack"
+msgstr "Slack"
+
+#: ../../source/overview.rst:127
+msgid "Twilio"
+msgstr "Twilio"
+
+#: ../../source/overview.rst:128
+msgid "Webhook (post to an arbitrary webhook, for integration into other tools)"
+msgstr "Webhook(다른 툴과의 통합을 위해 임의의 Webhook에 게시)"
+
+#: ../../source/overview.rst:130
+msgid "Additionally, you can :ref:`customize notification messages <ug_custom_notifications>` for each of the above notification types."
+msgstr "또한 위 알림 유형 각각에 대해 :ref:`customize notification messages <ug_custom_notifications>`를 수행할 수 있습니다."
+
+#: ../../source/overview.rst:134
+msgid "Satellite Integration"
+msgstr "Satellite 통합"
+
+#: ../../source/overview.rst:139
+msgid "Dynamic inventory sources for Red Hat Satellite 6 are supported."
+msgstr "Red Hat Satellite 6의 동적 인벤토리 소스가 지원됩니다."
+
+#: ../../source/overview.rst:143
+msgid "Run-time Job Customization"
+msgstr "런타임 작업 사용자 정의"
+
+#: ../../source/overview.rst:148
+msgid "Bringing the flexibility of the Ansible command line, you can now prompt for any of the following:"
+msgstr "Ansible 명령행의 유연성을 활용하여 다음 중 하나를 요청할 수 있습니다."
+
+#: ../../source/overview.rst:150
+msgid "inventory"
+msgstr "인벤토리"
+
+#: ../../source/overview.rst:151
+msgid "credential"
+msgstr "인증 정보"
+
+#: ../../source/overview.rst:152
+msgid "job tags"
+msgstr "작업 태그"
+
+#: ../../source/overview.rst:153
+msgid "limits"
+msgstr "제한"
+
+#: ../../source/overview.rst:157
+msgid "Red Hat Insights Integration"
+msgstr "Red Hat Insights 통합"
+
+#: ../../source/overview.rst:162
+msgid "|At| supports integration with Red Hat Insights, which allows Insights playbooks to be used as a |aap| Project."
+msgstr "|At|에서는 Red Hat Insights와의 통합을 지원하여 Insights 플레이북을 |aap| 프로젝트로 사용할 수 있습니다."
+
+#: ../../source/overview.rst:166
+msgid "Enhanced User Interface"
+msgstr "향상된 사용자 인터페이스"
+
+#: ../../source/overview.rst:172
+msgid "The layout of the user interface is organized with intuitive navigational elements. With information displayed at-a-glance, it is intuitive to find and use the automation you need. Compact and expanded viewing modes show and hide information as needed, and various built-in attributes make it easy to sort."
+msgstr "사용자 인터페이스의 레이아웃은 직관적인 탐색 요소로 구성됩니다. 정보가 한눈에 표시되므로 필요한 자동화를 직관적으로 찾고 사용할 수 있습니다. 필요에 따라 컴팩트 및 펼치기 보기 모드를 사용하여 정보를 표시하거나 숨기고, 다양한 기본 제공 특성을 통해 쉽게 정렬할 수 있습니다."
+
+#: ../../source/overview.rst:176
+msgid "Custom Virtual Environments"
+msgstr "사용자 정의 가상 환경"
+
+#: ../../source/overview.rst:182
+msgid "Custom Ansible environment support allows you to have different Ansible environments and specify custom paths for different teams and jobs."
+msgstr "사용자 지정 Ansible 환경 지원을 사용하면 다양한 Ansible 환경을 보유하고 다양한 팀과 작업에 사용자 정의 경로를 지정할 수 있습니다."
+
+#: ../../source/overview.rst:186
+msgid "Authentication Enhancements"
+msgstr "인증 개선 사항"
+
+#: ../../source/overview.rst:192
+msgid "|At| supports LDAP, SAML, token-based authentication. Enhanced LDAP and SAML support allows you to integrate your enterprise account information in a more flexible manner. Token-based Authentication allows for easily authentication of third-party tools and services with |at| via integrated OAuth 2 token support."
+msgstr "|At|에서는 LDAP, SAML, 토큰 기반 인증을 지원합니다. LDAP 및 SAML 지원 향상을 통해 엔터프라이즈 계정 정보를 보다 유연한 방식으로 통합할 수 있습니다. 토큰 기반 인증을 사용하면 통합 OAuth 2 토큰 지원을 통해 |at|로 타사 툴 및 서비스를 쉽게 인증할 수 있습니다."
+
+#: ../../source/overview.rst:195
+msgid "Cluster Management"
+msgstr "클러스터 관리"
+
+#: ../../source/overview.rst:201
+msgid "Run-time management of cluster groups allows for easily configurable scaling."
+msgstr "클러스터 그룹 런타임 관리를 통해 확장을 쉽게 구성할 수 있습니다."
+
+#: ../../source/overview.rst:205
+msgid "Container Platform Support"
+msgstr "컨테이너 플랫폼 지원"
+
+#: ../../source/overview.rst:210
+msgid "|aap| is available as a containerized pod service for Red Hat OpenShift Container Platform that can be scaled up and down easily as needed."
+msgstr "|aap|은 Red Hat OpenShift Container Platform에 컨테이너화된 Pod 서비스로 사용할 수 있으며, 필요에 따라 쉽게 확장 및 축소할 수 있습니다."
+
+#: ../../source/overview.rst:214
+msgid "Workflow Enhancements"
+msgstr "워크플로우 개선 사항"
+
+#: ../../source/overview.rst:224
+msgid "In order to better model your complex provisioning, deployment, and orchestration workflows, |at| expanded workflows in a number of ways:"
+msgstr "복잡한 프로비저닝, 배포, 오케스트레이션 워크플로우를 더 효과적으로 모델링하기 위해 |at|는 다음과 같은 다양한 방법으로 워크플로우를 확장했습니다."
+
+#: ../../source/overview.rst:227
+msgid "**Inventory overrides for Workflows**. You can now override an inventory across a workflow at workflow definition time, or even at launch time. Define your application deployment workflow, and then easily re-use them in multiple environments."
+msgstr "**워크플로우에 대한 인벤토리 덮어쓰기**. 이제 워크플로우 정의 시 또는 시작 시에도 워크플로우 전체에서 인벤토리를 덮어쓸 수 있습니다. 애플리케이션 배포 워크플로우를 정의한 다음 여러 환경에서 쉽게 다시 사용할 수 있습니다."
+
+#: ../../source/overview.rst:229
+msgid "**Convergence nodes for Workflows**. When modeling complex processes, you sometimes need to wait for multiple steps to finish before proceeding. Now |at| workflows can easily replicate this; workflow steps can now wait for any number of prior workflow steps to complete properly before proceeding."
+msgstr "**워크플로우 통합 노드**. 복잡한 프로세스를 모델링할 때 여러 단계가 완료될 때까지 기다린 후 진행해야 하는 경우가 있습니다. 이제 |at| 워크플로우에서 이러한 방식을 쉽게 복제할 수 있습니다. 워크플로우 단계는 이전 워크플로우 단계가 몇 개든 모두 올바르게 완료될 때까지 기다린 후 진행할 수 있습니다."
+
+#: ../../source/overview.rst:231
+msgid "**Workflow Nesting**. Re-use individual workflows as components of a larger workflow. Examples include combining provisioning and application deployment workflows into a single master workflow."
+msgstr "**워크플로우 중첩**. 개별 워크플로우를 대규모 워크플로우의 구성 요소로 다시 사용합니다. 예를 들면 프로비저닝 및 애플리케이션 배포 워크플로우를 단일 마스터 워크플로우로 결합합니다."
+
+#: ../../source/overview.rst:233
+msgid "**Workflow Pause and Approval**. You can build workflows containing approval nodes that require user intervention. This makes it possible to pause workflows in between playbooks so that a user can give approval (or denial) for continuing on to the next step in the workflow."
+msgstr "**워크플로우 일시 중지 및 승인**. 사용자 개입이 필요한 승인 노드가 포함된 워크플로우를 빌드할 수 있습니다. 이렇게 하면 플레이북 간에 워크플로우를 일시 중지하여 사용자가 워크플로우의 다음 단계를 계속 진행하는 것에 대해 승인(또는 거부)할 수 있습니다."
+
+#: ../../source/overview.rst:237
+msgid "Job Distribution"
+msgstr "작업 배포"
+
+#: ../../source/overview.rst:243
+msgid "As automation moves enterprise-wide, the need to automate at scale grows. |At| offer the ability to take a fact gathering or configuration job running across thousands of machines and slice it into individual job slices that can be distributed across your |at| cluster for increased reliability, faster job completion, and better cluster utilization. If you need to change a parameter across 15,000 switches at scale, or gather information across your multi-thousand-node RHEL estate, you can now do so easily."
+msgstr "자동화가 엔터프라이즈 수준으로 전환됨에 따라 대규모 자동화에 대한 필요성이 커지고 있습니다. |At|는 수천 대의 머신에서 실행되는 사실 수집 또는 구성 작업을 수행하고, 안정성 향상, 작업 완료 시간 단축, 클러스터 사용률 개선을 위해 |at| 클러스터에 배포할 수 있는 개별 작업 슬라이스로 작업을 분할하는 기능을 제공합니다. 이제 15,000개의 스위치에서 대규모로 매개변수를 변경하거나 수천 개의 노드가 있는 RHEL 자산에서 정보를 수집해야 하는 작업을 쉽게 수행할 수 있습니다."
+
+#: ../../source/overview.rst:249
+msgid "Support for deployment in a FIPS-enabled environment"
+msgstr "FIPS 지원 환경의 배포 지원"
+
+#: ../../source/overview.rst:255
+msgid "If you require running your environment in restricted modes such as FIPS, |at| deploys and runs in such environments."
+msgstr "|at|는 FIPS와 같은 제한된 모드에서 환경을 실행해야 하는 경우에도 배포 및 실행됩니다."
+
+#: ../../source/overview.rst:259
+msgid "Limit the number of hosts per organization"
+msgstr "조직당 호스트 수 제한"
+
+#: ../../source/overview.rst:264
+msgid "Lots of large organizations have instances shared among many organizations. They do not want any one organization to be able to use all the licensed hosts, this feature allows superusers to set a specified upper limit on how many licensed hosts may be allocated to each organization. The |at| algorithm factors changes in the limit for an organization and the number of total hosts across all organizations. Any inventory updates will fail if an inventory sync brings an organization out of compliance with the policy. Additionally, superusers are able to 'over-allocate' their licenses, with a warning."
+msgstr "대부분의 대규모 조직에는 여러 조직에서 공유하는 인스턴스가 있습니다. 조직은 한 조직이 라이센스가 부여된 모든 호스트를 사용하는 것을 원하지 않습니다. 이 기능을 사용하면 슈퍼유저가 각 조직에 할당할 수 있는 라이센스가 부여된 호스트 수에 대해 지정된 상한을 설정할 수 있습니다. |at| 알고리즘 요소는 조직에 대한 제한과 모든 조직의 총 호스트 수를 변경합니다. 인벤토리 동기화로 인해 조직이 정책을 준수하지 않는 경우 인벤토리가 업데이트되지 않습니다. 또한 슈퍼유저는 경고와 함께 라이센스를 '초과 할당'할 수 있습니다."
+
+#: ../../source/overview.rst:268
+msgid "Inventory Plugins"
+msgstr "인벤토리 플러그인"
+
+#: ../../source/overview.rst:273
+msgid "Updated |at| to use the following inventory plugins from upstream collections if inventory updates are run with Ansible 2.9:"
+msgstr "Ansible 2.9에서 인벤토리 업데이트가 실행되는 경우 업스트림 컬렉션의 다음 인벤토리 플러그인을 사용하도록 |at|가 업데이트되었습니다."
+
+#: ../../source/overview.rst:275
+msgid "amazon.aws.aws_ec2"
+msgstr "amazon.aws.aws_ec2"
+
+#: ../../source/overview.rst:276
+msgid "community.vmware.vmware_vm_inventory"
+msgstr "community.vmware.vmware_vm_inventory"
+
+#: ../../source/overview.rst:277
+msgid "azure.azcollection.azure_rm"
+msgstr "azure.azcollection.azure_rm"
+
+#: ../../source/overview.rst:278
+msgid "google.cloud.gcp_compute"
+msgstr "google.cloud.gcp_compute"
+
+#: ../../source/overview.rst:279
+msgid "theforeman.foreman.foreman"
+msgstr "theforeman.foreman.foreman"
+
+#: ../../source/overview.rst:280
+msgid "openstack.cloud.openstack"
+msgstr "openstack.cloud.openstack"
+
+#: ../../source/overview.rst:281
+msgid "ovirt.ovirt.ovirt"
+msgstr "ovirt.ovirt.ovirt"
+
+#: ../../source/overview.rst:282
+msgid "awx.awx.tower"
+msgstr "awx.awx.tower"
+
+#: ../../source/overview.rst:286
+msgid "Secret Management System"
+msgstr "시크릿 관리 시스템"
+
+#: ../../source/overview.rst:293
+msgid "With a secret management system, external credentials are stored and supplied for use in |at| so you don't have to provide them directly."
+msgstr "시크릿 관리 시스템을 사용하면 외부 인증 정보가 저장되고 |at|에서 사용할 수 있도록 제공되므로 직접 제공할 필요가 없습니다."
+
+#: ../../source/overview.rst:297
+msgid "|ah| Integration"
+msgstr "|ah| 통합"
+
+#: ../../source/overview.rst:303
+msgid "|ah| will act as a content provider for |at|, which requires both an |at| deployment and an |ah| deployment running alongside each other."
+msgstr "|ah|는 |at|의 콘텐츠 공급자 역할을 하며, 이를 위해서는 |at| 배포와 |ah| 배포가 함께 실행되어야 합니다."
+

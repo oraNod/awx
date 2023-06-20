@@ -1,0 +1,25 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api_ref.rst:2
+msgid "Controller API Reference Guide"
+msgstr "컨트롤러 API 참조 가이드"
+
+#: ../../source/api_ref.rst:4
+msgid "The automation controller API Reference Manual provides in-depth documentation for Red Hat Ansible Automation Platform's controller REST API, including examples on how to integrate with it."
+msgstr "자동화 컨트롤러 API 참조 매뉴얼은 통합 방법에 대한 예제를 포함하여 Red Hat Ansible Automation Platform의 컨트롤러 REST API에 대한 심층 문서를 제공합니다."
+

@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/metrics.rst:4
+msgid "Metrics"
+msgstr "指标"
+
+#: ../../source/metrics.rst:9
+msgid "A metrics endpoint is available in the API: ``/api/v2/metrics/`` that surfaces instantaneous metrics about the controller, which can be consumed by system monitoring software like the open source project Prometheus."
+msgstr "在 API 中引有一个指标端点：``/api/v2/metrics/``， 提供有关控制器的即时指标，它可被如 Prometheus 这样的开源项目系统监控软件使用。"
+
+#: ../../source/metrics.rst:11
+msgid "The type of data shown at the ``metrics/`` endpoint is ``Content-type: text/plain`` and ``application/json`` as well. This endpoint contains useful information, such as counts of how many active user sessions there are, or how many jobs are actively running on each controller node. Prometheus can be configured to scrape these metrics from the controller by hitting the controller metrics endpoint and storing this data in a time-series database. Clients can later use Prometheus in conjunction with other software like Grafana or Metricsbeat to visualize that data and set up alerts."
+msgstr "``metrics/`` 端点中显示的数据类型是 ``Content-type: text/plain`` 和 ``application/json``。这个端点包含有用的信息，如计数有多少活跃用户会话，或每个控制器节点上有多少活跃运行的作业。Prometheus 可以配置为通过点控制器指标端点并将此数据存储到时序数据库中，从控制器中抓取这些指标。客户端之后可以使用 Prometheus 与 Grafana 或 Metricsbeat 等其它软件来视觉化这些数据并设置警报。"
+
+#: ../../source/metrics.rst:14
+msgid "Set up Prometheus"
+msgstr "设置 Prometheus"
+
+#: ../../source/metrics.rst:16
+msgid "To set up and use Prometheus, you will need to install Prometheus on a virtual machine or container. Refer to the `Prometheus documentation`_ for further detail."
+msgstr "要设置和使用 Prometheus，您需要在虚拟机或容器上安装 Prometheus。如需更多详情，请参阅 `Prometheus documentation`_。"
+
+#: ../../source/metrics.rst:20
+msgid "In the Prometheus config file (typically ``prometheus.yml``), specify a ``<token_value>``, a valid user/password for a controller user you have created, and a ``<controller_host>``."
+msgstr "在 Prometheus 配置文件（通常为 ``prometheus.yml``）中，指定 ``<token_value>``，这是您创建的控制器用户的有效用户/密码，并指定 ``<controller_host>``。"
+
+#: ../../source/metrics.rst:22
+msgid "Alternatively, you can provide an OAuth2 token (which can be generated at ``/api/v2/users/N/personal_tokens/``). By default, the config assumes a user with username=admin and password=password."
+msgstr "另外，您可以提供 OAuth2 令牌（可在 ``/api/v2/users/N/personal_tokens/`` 生成）。默认情况下，配置假设用户使用用户名=admin 和密码=password。"
+
+#: ../../source/metrics.rst:24
+msgid "Using an OAuth2 Token, created at the ``/api/v2/tokens`` endpoint to authenticate prometheus with the controller, the following example provides a valid scrape config if the URL for your controller's metrics endpoint was ``https://controller_host:443/metrics``."
+msgstr "使用在 ``/api/v2/tokens`` 端点中创建的 OAuth2 Token，通过控制器验证 prometheus 身份。如果控制器的指标端点的 URL 为 ``https://controller_host:443/metrics``，以下示例提供有效 scrape 配置。"
+
+#: ../../source/metrics.rst:44
+msgid "For help configuring other aspects of Prometheus, such as alerts and service discovery configurations, refer to the `Prometheus configuration docs`_."
+msgstr "如需帮助配置 Prometheus 的其它方面，如警示和服务发现配置，请参阅 `Prometheus configuration docs`_。"
+
+#: ../../source/metrics.rst:48
+msgid "If Prometheus is already running, you must restart it in order to apply the configuration changes by making a **POST** to the reload endpoint, or by killing the Prometheus process or service."
+msgstr "如果 Prometheus 已在运行，您必须重启它以便应用配置更改，方法是对重新加载端点进行发布 **POST**，或终止 Prometheus 进程或服务。"
+
+#: ../../source/metrics.rst:50
+msgid "Use a browser to navigate to your graph in the Prometheus UI at ``http://your_prometheus:9090/graph`` and test out some queries. For example, you can query the current number of active controller user sessions by executing: ``awx_sessions_total{type=\"user\"}``."
+msgstr "使用浏览器导航到 ``http://your_prometheus:9090/graph`` 处 Prometheus UI 中的图标，并测试一些查询。例如，您可以通过执行：``awx_sessions_total{type=\"user\"}`` 来查询当前活跃控制器用户会话数量。"
+
+#: ../../source/metrics.rst:54
+msgid "Refer to the metrics endpoint in the controller API for your instance (``api/v2/metrics``) for more ways to query."
+msgstr "如需了解查询的更多方法，请参阅您的实例 (``api/v2/metrics``) 的控制器 API 中的指标端点。"
+

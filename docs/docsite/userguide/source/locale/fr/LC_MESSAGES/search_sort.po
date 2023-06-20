@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/search_sort.rst:4
+msgid "Search"
+msgstr ""
+
+#: ../../../common/source/search.rst:5
+msgid ""
+"|at| release 3.1 introduces the Tower Search, a powerful search tool that"
+" provides both search and filter capabilities that span across multiple "
+"functions."
+msgstr ""
+
+#: ../../../common/source/search.rst:7
+msgid "|search bar|"
+msgstr ""
+
+#: ../../../common/source/search.rst:11
+msgid ""
+"Acceptable search criteria are provided in an expandable \"cheat-sheet\" "
+"accessible from the **Key** button."
+msgstr ""
+
+#: ../../../common/source/search.rst:13
+msgid "|key sheet|"
+msgstr ""
+
+#: ../../../common/source/search.rst:18
+msgid ""
+"A few rules to note about searching and filtering, and what the syntax "
+"equivalent is for each:"
+msgstr ""
+
+#: ../../../common/source/search.rst:22
+msgid "**Rule**"
+msgstr ""
+
+#: ../../../common/source/search.rst:22
+msgid "**Syntax Equivalent**"
+msgstr ""
+
+#: ../../../common/source/search.rst:24
+msgid "Searches are not case-senstitive."
+msgstr ""
+
+#: ../../../common/source/search.rst:26
+msgid "Example: ``FooBar``"
+msgstr ""
+
+#: ../../../common/source/search.rst:24
+msgid "``name:icontains:foobar``"
+msgstr ""
+
+#: ../../../common/source/search.rst:28
+msgid ""
+"Entering key terms in the search will find all instances of that term "
+"across all fields."
+msgstr ""
+
+#: ../../../common/source/search.rst:31
+msgid "Example 1: ``mySearchTerm``"
+msgstr ""
+
+#: ../../../common/source/search.rst:33
+msgid ""
+"Example 2: In a Projects List, ``organization:foo`` searches for name AND"
+" description."
+msgstr ""
+
+#: ../../../common/source/search.rst:28
+msgid "``name:icontains:mySearchTerm``"
+msgstr ""
+
+#: ../../../common/source/search.rst:36
+msgid "Specific name searches will search against the API name."
+msgstr ""
+
+#: ../../../common/source/search.rst:38
+msgid ""
+"Example: ``Management job`` in the user interface is ``system_job`` in "
+"the API."
+msgstr ""
+
+#: ../../../common/source/search.rst:41
+msgid ""
+"Placing a search string inside quotes will search for all instances that "
+"match exactly to that search string."
+msgstr ""
+
+#: ../../../common/source/search.rst:46
+msgid "Example: ``\"foo bar baz\"``"
+msgstr ""
+
+#: ../../../common/source/search.rst:41
+msgid "``AND foo AND bar AND baz``"
+msgstr ""
+
+#: ../../../common/source/search.rst:48
+msgid ""
+"Searching terms without quotes will search for any instances that match "
+"any of the terms."
+msgstr ""
+
+#: ../../../common/source/search.rst:52
+msgid "Example: ``foo bar baz``"
+msgstr ""
+
+#: ../../../common/source/search.rst:48
+msgid "``OR foo OR bar OR baz``"
+msgstr ""
+
+#: ../../../common/source/search.rst:55
+msgid "Click **Clear All** to clear the search criteria."
+msgstr ""
+
+#: ../../../common/source/search.rst:57
+msgid "|clear all|"
+msgstr ""
+
+#: ../../../common/source/search.rst:63
+msgid "Sort"
+msgstr ""
+
+#: ../../../common/source/search.rst:68
+msgid "Use the arrows in each column to sort by ascending or descending order."
+msgstr ""
+
+#: ../../../common/source/search.rst:70
+msgid "|sort arrow|"
+msgstr ""
+
+#: ../../../common/source/search.rst:75
+msgid "The direction of the arrow indicates the sort order of the column."
+msgstr ""
+
+#: ../../../common/source/search.rst:77
+msgid "|sort order|"
+msgstr ""
+

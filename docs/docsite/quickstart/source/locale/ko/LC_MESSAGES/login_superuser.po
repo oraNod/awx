@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/login_superuser.rst:2
+msgid "Login as a Superuser"
+msgstr "슈퍼유저로 로그인"
+
+#: ../../source/login_superuser.rst:7
+msgid "Using the login information provided after your installation completed, open a web browser and log in to the controller by browsing to its server URL at: ``https://<CONTROLLER_SERVER_NAME>/``"
+msgstr "설치가 완료되면 제공되는 로그인 정보를 사용하여 웹 브라우저를 열고 서버 URL(``https://<CONTROLLER_SERVER_NAME>/``)로 이동하여 컨트롤러에 로그인합니다."
+
+#: ../../source/login_superuser.rst:9
+msgid "Once the controller UI is accessible, use the credentials specified during the installation process to login. The default username is ``admin``. The password for ``admin`` is the value specified for ``admin_password`` in your inventory file."
+msgstr "컨트롤러 UI에 액세스할 수 있게 되면 설치 프로세스 중 지정된 인증 정보를 사용하여 로그인합니다. 기본 사용자 이름은 ``admin``입니다. ``admin``의 암호는 인벤토리 파일의 ``admin_password``에 지정된 값입니다."
+
+#: ../../source/login_superuser.rst:11
+msgid "These defaults can be changed later by clicking **Users** from the left navigation bar."
+msgstr "이러한 기본값은 왼쪽 탐색 모음에서 **사용자**를 클릭하여 나중에 변경할 수 있습니다."
+
+#: ../../source/login_superuser.rst:13
+msgid "|Login form|"
+msgstr "|Login form|"
+

@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../common/source/lic-feat-support.rst:2
+msgid "Red Hat Ansible Automation Platform Controller Licensing, Updates, and Support"
+msgstr "Red Hat Ansible Automation Platform Controller 许可、更新和支持"
+
+#: ../../../common/source/lic-feat-support.rst:7
+msgid "|RHAT| (\"**Automation Controller**\") is a software product provided as part of an annual |rhaap| subscription entered into between you and Red Hat, Inc. (\"**Red Hat**\")."
+msgstr "|RHAT| (\"**automation Controller**\") 是一个软件产品，是您和 Red Hat, Inc.(\"**Red Hat**\")之间的年度 |rhaap| 订阅的一部分提供。"
+
+#: ../../../common/source/lic-feat-support.rst:9
+msgid "Ansible is an open source software project and is licensed under the GNU General Public License version 3, as detailed in the Ansible source code: https://github.com/ansible/ansible/blob/devel/COPYING"
+msgstr "Ansible 是一个开源软件项目，它使用 GNU General Public License version 3 的使用许可证。详细信息包括在 Ansible 源代码中：https://github.com/ansible/ansible/blob/devel/COPYING"
+
+#: ../../../common/source/lic-feat-support.rst:11
+msgid "You **must** have valid subscriptions attached before installing the |aap|. See :ref:`attach_subscriptions` for detail."
+msgstr "在安装 |aap| 前，**必须**附加了有效的订阅。详情请参阅 :ref:`attach_subscriptions`。"
+
+#: ../../../common/source/lic-feat-support.rst:14
+msgid "Support"
+msgstr "支持"
+
+#: ../../../common/source/lic-feat-support.rst:19
+msgid "Red Hat offers support to paid |rhaap| customers."
+msgstr "红帽为付费的 |rhaap| 用户提供支持。"
+
+#: ../../../common/source/lic-feat-support.rst:21
+msgid "If you or your company has purchased a subscription for |aap|, you can contact the support team at https://access.redhat.com. To better understand the levels of support which match your |aap| subscription, refer to :ref:`subscription-types`. For details of what is covered under an |aap| subscription, please see the Scopes of Support at: https://access.redhat.com/support/policy/updates/ansible-tower#scope-of-coverage-4 and https://access.redhat.com/support/policy/updates/ansible-engine."
+msgstr "如果您或您的公司购买了 |aap| 的订阅服务，您可以通过以下方式与支持团队联系：https://access.redhat.com. 为了更好地了解与您的 |aap| 订阅相对应的支持级别，请参阅 :ref:`subscription-types`。有关 |aap| 订阅涵盖内容的详情，请参阅“支持范围”，网址为：https://access.redhat.com/support/policy/updates/ansible-tower#scope-of-coverage-4 和 https://access.redhat.com/support/policy/updates/ansible-engine."
+
+#: ../../../common/source/lic-feat-support.rst:27
+msgid "Trial / Evaluation"
+msgstr "试用/评估"
+
+#: ../../../common/source/lic-feat-support.rst:35
+msgid "While a license is required for |at| to run, there is no fee for a trial license."
+msgstr "虽然 |at| 需要一个有效的许可证方可运行，但它的测试版本的许可证是免费的。"
+
+#: ../../../common/source/lic-feat-support.rst:37
+msgid "Trial licenses for |rhaa| are available at: http://ansible.com/license"
+msgstr "|rhaa| 的试用许可证位于：http://ansible.com/license"
+
+#: ../../../common/source/lic-feat-support.rst:38
+msgid "Support is not included in a trial license or during an evaluation of the |at| software."
+msgstr "使用试用许可证或在试用 |at| 软件期间，不提供支持服务。"
+
+#: ../../../common/source/lic-feat-support.rst:44
+msgid "Subscription Types"
+msgstr "订阅类型"
+
+#: ../../../common/source/lic-feat-support.rst:52
+msgid "|rhaap| is provided at various levels of support and number of machines as an annual Subscription."
+msgstr "做为一个年度订阅，|rhaap| 有不同级别的支持，受支持的机器数量也会不同。"
+
+#: ../../../common/source/lic-feat-support.rst:59
+msgid "Standard"
+msgstr "标准（Standard）"
+
+#: ../../../common/source/lic-feat-support.rst:55
+msgid "Manage any size environment"
+msgstr "管理任意规模的环境"
+
+#: ../../../common/source/lic-feat-support.rst:56
+msgid "Enterprise 8x5 support and SLA"
+msgstr "企业级 8x5 支持和 SLA"
+
+#: ../../../common/source/lic-feat-support.rst:57
+#: ../../../common/source/lic-feat-support.rst:64
+msgid "Maintenance and upgrades included"
+msgstr "包括维护和升级"
+
+#: ../../../common/source/lic-feat-support.rst:58
+#: ../../../common/source/lic-feat-support.rst:65
+msgid "Review the SLA at: https://access.redhat.com/support/offerings/production/sla"
+msgstr "要查看 SLA，请访问：https://access.redhat.com/support/offerings/production/sla"
+
+#: ../../../common/source/lic-feat-support.rst:59
+#: ../../../common/source/lic-feat-support.rst:66
+msgid "Review the Red Hat Support Severity Level Definitions at: https://access.redhat.com/support/policy/severity"
+msgstr "要查看红帽支持严重性级别定义，请访问：https://access.redhat.com/support/policy/severity"
+
+#: ../../../common/source/lic-feat-support.rst:66
+msgid "Premium"
+msgstr "高级（Premium）"
+
+#: ../../../common/source/lic-feat-support.rst:62
+msgid "Manage any size environment, including mission-critical environments"
+msgstr "管理任意规模的环境，包括关键任务环境"
+
+#: ../../../common/source/lic-feat-support.rst:63
+msgid "Premium 24x7 support and SLA"
+msgstr "高级 24x7 支持和 SLA"
+
+#: ../../../common/source/lic-feat-support.rst:68
+msgid "All Subscription levels include regular updates and releases of |at|, Ansible, and any other components of the Platform."
+msgstr "所有订阅级别包括常规的 |at| 更新和版本，Ansible 以及平台的其他组件。"
+
+#: ../../../common/source/lic-feat-support.rst:70
+msgid "For more information, contact Ansible via the Red Hat Customer portal at https://access.redhat.com/ or at http://www.ansible.com/contact-us/."
+msgstr "如需更多信息，请通过红帽客户门户网站联系 Ansible：https://access.redhat.com/ 或 http://www.ansible.com/contact-us/."
+
+#: ../../../common/source/lic-feat-support.rst:74
+msgid "Node Counting in Licenses"
+msgstr "许可证中的节点计数"
+
+#: ../../../common/source/lic-feat-support.rst:78
+msgid "The |RHAT| license defines the number of Managed Nodes that can be managed as part of a |rhaap| subscription. A typical license will say ‘License Count: 500’, which sets the maximum number of Managed Nodes at 500."
+msgstr "|RHAT| 许可证定义了可作为 |rhaap| 订阅进行管理的受管节点的数量。典型的许可证会包括“License Count: 500’，它代表受管理的节点的最大数量为 500 个。"
+
+#: ../../../common/source/lic-feat-support.rst:80
+msgid "For more information on managed node requirements for licensing, please see https://access.redhat.com/articles/3331481."
+msgstr "更多相关信息，请参阅 https://access.redhat.com/articles/3331481."
+
+#: ../../../common/source/lic-feat-support.rst:86
+msgid "Attaching Subscriptions"
+msgstr "附加订阅"
+
+#: ../../../common/source/lic-feat-support.rst:91
+msgid "You **must** have valid subscriptions attached before installing the |aap|. Attaching an |aap| subscription enables |ah| repositories. A valid subscription needs to be attached to the |ah| node only. Other nodes do not need to have a valid subscription/pool attached, even if the **[automationhub]** group is blank, given this is done at the ``repos_el`` role level and that this role is run on both **[default]** and **[automationhub]** hosts."
+msgstr "在安装 |aap| 前，**必须**附加了有效的订阅 。 附加 |aap| 订阅会启用 |ah| 软件仓库。 有效的订阅只需要附加到 |ah| 节点。 其他节点不需要附加有效的订阅/池，即使 **[automationhub]** 组为空白，因为这是由 ``repos_el`` 角色级别实现的，此角色会在 **[default]** 和 **[automationhub]** 主机上运行。"
+
+#: ../../../common/source/lic-feat-support.rst:95
+msgid "Attaching subscriptions is unnecessary if your Red Hat account enabled `Simple Content Access Mode <https://access.redhat.com/articles/simple-content-access>`_. But you still need to register to RHSM or Satellite before installing the |aap|."
+msgstr "如果您的红帽帐户启用了 `Simple Content Access Mode <https://access.redhat.com/articles/simple-content-access>`_，则不需要附加订阅。但在安装 |aap| 前，您仍需要注册到 RHSM 或 Satellite。"
+
+#: ../../../common/source/lic-feat-support.rst:97
+msgid "To find out the ``pool_id`` of your |aap| subscription:"
+msgstr "要获得您的 |aap| 订阅的 ``pool_id``："
+
+#: ../../../common/source/lic-feat-support.rst:103
+msgid "The command returns the following:"
+msgstr "该命令返回以下内容："
+
+#: ../../../common/source/lic-feat-support.rst:118
+msgid "To attach this subscription:"
+msgstr "附加此订阅："
+
+#: ../../../common/source/lic-feat-support.rst:124
+msgid "If this is properly done, and all nodes have |rhaap| attached, then it will find the |ah| repositories correctly."
+msgstr "如果正确完成此操作，并且所有节点都附加了 |rhaap|，则可以正确地找到 |ah| 仓库。"
+
+#: ../../../common/source/lic-feat-support.rst:126
+msgid "To check whether the subscription was successfully attached:"
+msgstr "检查订阅是否已成功附加："
+
+#: ../../../common/source/lic-feat-support.rst:133
+msgid "To remove this subscription:"
+msgstr "删除此订阅："
+
+#: ../../../common/source/lic-feat-support.rst:141
+msgid "|AAP| Component Licenses"
+msgstr "|AAP| 组件许可证"
+
+#: ../../../common/source/lic-feat-support.rst:149
+msgid "To view the license information for the components included within |at|, refer to ``/usr/share/doc/automation-controller-<version>/README`` where ``<version>`` refers to the version of |at| you have installed."
+msgstr "要查看 |at| 中包含组件的许可证信息，请参阅 ``/usr/share/doc/automation-controller-<version>/README``，其中的 ``<version>`` 代表您安装的 |at| 版本。"
+
+#: ../../../common/source/lic-feat-support.rst:151
+msgid "To view a specific license, refer to ``/usr/share/doc/automation-controller-<version>/*.txt``, where ``*`` is replaced by the license file name to which you are referring."
+msgstr "要查看特定的许可证，请参考 ``/usr/share/doc/automation-controller-<version>/*.txt``，其中 ``*`` 代表您需要了解的许可证文件名称。"
+

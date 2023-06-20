@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/project-sign.rst:4
+msgid "Project Signing and Verification"
+msgstr "项目签名和验证"
+
+#: ../../source/project-sign.rst:11
+msgid "Project signing and verification provides the ability to sign files in your project directory and then verify whether or not that content has changed in any way, or files have been added or removed from the project unexpectedly. To accomplish this, a private key for signing and a matching public key for verifying are needed."
+msgstr "项目签名和验证提供了在项目目录中为文件签名的功能，然后可以验证内容是否有任何形式的改变，或者文件被意外地从项目中删除或添加到项目。这需要使用一个私有进行签名并使用与它匹配的公钥进行验证。"
+
+#: ../../source/project-sign.rst:13
+msgid "For project maintainers, the supported way to perform content signing is to use a utility called, ``ansible-sign``, through the command-line interface (CLI) that comes with it."
+msgstr "对于项目维护者，对内容进行签名的方式是，通过命令行界面 (CLI) 提供的一个名为 ``ansible-sign`` 的工具程序进行。"
+
+#: ../../source/project-sign.rst:15
+msgid "The CLI aims to make it easy to use cryptographic technology like GNU Privacy Guard (GPG) to validate that specified files within a project have not been tampered with in any way. Currently, GPG is the only supported means of signing and validation."
+msgstr "CLI 旨在方便地使用加密技术，如 GNU Privacy Guard (GPG) 等技术来验证项目中的文件是否已被改变或破坏。当前，GPG 是唯一支持的签名和验证方法。"
+
+#: ../../source/project-sign.rst:17
+msgid "The |aa| controller is used to verify the signed content. After a matching public key has been associated with the signed project, the controller will verify that the files included during signing have not changed, and that files have been added or removed unexpectedly. If the signature is not valid or a file has changed, the project will fail to update, and no jobs making use of the project will be able to launch. Verification status of the project ensures that only secure, untampered content is run in jobs."
+msgstr "|aa| 控制器用于验证签名的内容。当匹配的公钥与已签名项目相关联后，控制器会验证被签名的文件是否被改变，以及文件是否被意外添加或删除。如果签名无效或文件被改变，项目将无法更新，使用这个项目的作业将无法启动。通过项目的验证状态，可以确保只有安全的、没有被修改的内容才会在作业中运行。"
+
+#: ../../source/project-sign.rst:19
+msgid "Assuming that the repository has already been configured for signing and verification (see below), the usual workflow for altering the project becomes the following:"
+msgstr "假设已配置了仓库签名和验证（请参阅以下），更改项目的常见工作流将变成："
+
+#: ../../source/project-sign.rst:21
+msgid "User has a project repository set up already and wants to make a change to a file."
+msgstr "用户设置了一个项目仓库，并希望对一个文件进行修改。"
+
+#: ../../source/project-sign.rst:22
+msgid "User makes the change, runs ``ansible-sign project gpg-sign /path/to/project``,  which updates a checksum manifest and signs it."
+msgstr "用户进行更改，运行 ``ansible-sign project gpg-sign /path/to/project``，它将更新校验和清单并进行签名。"
+
+#: ../../source/project-sign.rst:23
+msgid "User commits the change and the updated checksum manifest and the signature to the repository."
+msgstr "用户将向仓库提交进行的更改以及更新的校验和清单，以及签名。"
+
+#: ../../source/project-sign.rst:24
+msgid "When the user syncs the project, the controller (already configured, in this scenario) pulls in the new changes, checks that the public key associated with the project in the controller matches the private key that the checksum manifest was signed with (this prevents tampering with the checksum manifest itself), then re-calculates checksums of each file in the manifest to ensure that the checksum matches (and thus that no file has changed). It also looks to ensure that all files are accounted for: They must have been either included in, or excluded from, the ``MANIFEST.in`` file discussed below; if files have been added or removed unexpectedly, verification will fail."
+msgstr "当用户同步项目时，控制器（在这个情况中已配置）会拉取新的更改，检查与控制器中项目关联的公钥是否与校验和清单签名的私钥匹配（防止对校验和清单本身进行了修改），然后重新计算清单中每个文件的校验和，以确保校验和匹配（确保文件没有被修改）。 它还会确保所有文件都被考虑：文件包括或排除了以下讨论的 ``MANIFEST.in`` 文件中指定的文件 ; 如果有文件已被意外添加或删除，验证将失败。"
+
+#: ../../source/project-sign.rst:30
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../source/project-sign.rst:32
+msgid "RHEL nodes must properly be subscribed to:"
+msgstr "RHEL 节点必须正确订阅："
+
+#: ../../source/project-sign.rst:34
+msgid "RHEL subscription and with **baseos** and **appstream** repositories enabled"
+msgstr "RHEL 订阅并启用了 **baseos** 和 **appstream** 软件仓库启"
+
+#: ../../source/project-sign.rst:35
+msgid "|AAP| subscription and the proper |AAP| channel enabled:"
+msgstr "|AAP| 订阅并启用了正确的 |AAP| 频道："
+
+#: ../../source/project-sign.rst:43
+msgid "A valid GPG public/private keypair is required for signing content. Refer to `How to create GPG keypairs`_ for details."
+msgstr "对内容进行签名需要一个有效的 GPG 公钥/私钥。详情请参阅 `How to create GPG keypairs`_。"
+
+#: ../../source/project-sign.rst:47
+msgid "Vist the `GnuPG documentation <https://www.gnupg.org/documentation/index.html>`_ for more information regarding GPG keys."
+msgstr "请参阅 `GnuPG documentation <https://www.gnupg.org/documentation/index.html>`_ 以了解有关 GPG 密钥的更多信息。"
+
+#: ../../source/project-sign.rst:49
+msgid "You can verify that you have a valid GPG keypair and in your default GnuPG keyring, with the following command:"
+msgstr "您可以使用以下命令验证您是否具有有效的 GPG 密钥对和默认 GnuPG 密钥环："
+
+#: ../../source/project-sign.rst:57
+msgid "If the above command produces no output, or one line of output that states, ``trustdb was created``, then you do not have a secret key in your default keyring. In this case, refer to `How to create GPG keypairs`_ to learn how to create a new keypair before proceeding. If it produces output other than that, you have a valid secret key and are ready to move on to using ``ansible-sign``."
+msgstr "如果上述命令没有输出，或只输出了一行 ``trustdb was created``，则代表在您的默认密钥环中没有 secret 密钥。在这种情况下，请先参考 `How to create GPG keypairs`_ 以了解如何创建新密钥对。如果命令的输出超出以上内容，代表您已有一个有效的 secret 密钥，您可以使用 ``ansible-sign`` 继续。"
+
+#: ../../source/project-sign.rst:61
+msgid "Add a GPG key to Ansible Automation Controller"
+msgstr "在 Ansible Automation Controller 中添加 GPG 密钥"
+
+#: ../../source/project-sign.rst:63
+msgid "In order to use the GPG key for content singing and validation in the controller, you must add it running the following command in the CLI:"
+msgstr "要将 GPG 密钥用于控制器中的内容并验证，您必须在 CLI 中运行以下命令："
+
+#: ../../source/project-sign.rst:71
+msgid "In the controller user interface, click **Credentials** from the left side navigation menu then click the **Add** button."
+msgstr "在控制器用户界面中，点左侧导航栏中的 **Credentials**，然后点 **Add** 按钮。"
+
+#: ../../source/project-sign.rst:73
+msgid "Provide the new credential a meaningful name (for example, “Infrastructure team public GPG key”)"
+msgstr "提供有意义的名称（例如：“Infrastructure team public GPG key”）"
+
+#: ../../source/project-sign.rst:75
+msgid "In the Credential Type field, select **GPG Public Key**."
+msgstr "在 Credential Type 字段中，选择 **GPG Public Key**。"
+
+#: ../../source/project-sign.rst:77
+msgid "Click **Browse** to locate and select the public key file (e.g., ``my_public_key.asc``)"
+msgstr "点 **Browse** 找到并选择公钥文件（例如 ``my_public_key.asc``）"
+
+#: ../../source/project-sign.rst:79
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/project-sign.rst:83
+msgid "This credential can now be selected in :ref:`projects <ug_projects_add>`, and content verification will automatically take place on future project syncs."
+msgstr "现在，这个凭证可以在 :ref:`projects <ug_projects_add>` 中选择，内容验证将会在将来的项目同步时自动进行。"
+
+#: ../../source/project-sign.rst:89
+msgid "Use the project cache SCM timeout to control how often you want the controller to re-validate the signed content. When a project is configured to update on launch (of any job template configured to use that project), you can enable the cache timeout setting, which tells it to update after N seconds have passed since the last update. If validation is running too frequently, you can slow down how often project updates occur by specifying the time in the **Cache Timeout** field of the Option Details pane of the project."
+msgstr "使用项目缓存 SCM 超时来控制您希望控制器重新验证已签名的内容的频率。当项目配置为在启动时更新时（任何配置了该项目的作业模板），您可以启用缓存超时设置，这告诉它在自上次更新后 N 秒后更新。如果验证太频繁，则可以通过在项目的 Option Details 框中的 **Cache Timeout** 字段中指定一个超时时间来进行调整。"
+
+#: ../../source/project-sign.rst:96
+msgid "Access the ``ansible-sign`` CLI utility"
+msgstr "访问 ``ansible-sign`` CLI 工具"
+
+#: ../../source/project-sign.rst:98
+msgid "The ``ansible-sign`` utility provide options for the user to sign and verify whether the project is signed."
+msgstr "``ansible-sign`` 工具为用户提供了签名和验证项目是否已签名的选项。"
+
+#: ../../source/project-sign.rst:100
+msgid "Run the following command to install ``ansible-sign``:"
+msgstr "运行以下命令来安装 ``ansible-sign``："
+
+#: ../../source/project-sign.rst:106
+msgid "Verify that ``ansible-sign`` was successfully installed:"
+msgstr "验证 ``ansible-sign`` 已成功安装："
+
+#: ../../source/project-sign.rst:113
+msgid "Output similar to the following displays (possibly with a different version number):"
+msgstr "输出类似以下内容（可能具有不同的版本号）："
+
+#: ../../source/project-sign.rst:120
+msgid "This indicates you have successfully installed ``ansible-sign``."
+msgstr "这表明您已成功安装了 ``ansible-sign``。"
+
+#: ../../source/project-sign.rst:124
+msgid "Signing your project"
+msgstr "对您的项目进行签名"
+
+#: ../../source/project-sign.rst:126
+msgid "As the name suggests, signing a project involves an Ansible project directory. Refer to the `Ansible documentation <https://docs.ansible.com/ansible/latest/user_guide/sample_setup.html>`_ for more sophisticated examples of project directory structures."
+msgstr "顾名思义，为项目签名涉及一个 Ansible 项目目录。如需更复杂的项目目录结构的示例，请参阅 `Ansible documentation <https://docs.ansible.com/ansible/latest/user_guide/sample_setup.html>`_。"
+
+#: ../../source/project-sign.rst:128
+msgid "The following sample project has a very simple structure. An inventory file, and two small playbooks under a playbooks directory:"
+msgstr "以下示例项目有一个非常简单的结构。它包括一个清单文件，以及 playbook 目录下的两个简单的 playbook："
+
+#: ../../source/project-sign.rst:145
+msgid "The commands used in this section assume that your working directory is the root of your project. As a rule, ``ansible-sign project`` commands always take the project root directory as their last argument, and therefore, we use ``.`` to indicate the current working directory."
+msgstr "本节中使用的命令假设您的工作目录是您的项目的根目录。作为一个规则，``ansible-sign project`` 命令始终将项目根目录视为其最后一个参数，因此我们可以使用 ``.`` 表示当前工作目录。"
+
+#: ../../source/project-sign.rst:147
+msgid "The way that ``ansible-sign`` protects content from tampering is by taking checksums (SHA256) of all of the secured files in the project, compiling those into a checksum manifest file, and then finally signing that manifest file."
+msgstr "``ansible-sign`` 保护内容不受篡改的方式是，对项目中所有安全的文件进行校验和(SHA256)，将它们编译到校验和清单文件中，最后再对该清单文件进行签名。"
+
+#: ../../source/project-sign.rst:149
+msgid "The first step toward signing content is to create a file that tells ``ansible-sign`` which files to protect. This file should be called ``MANIFEST.in`` and reside in the project root directory."
+msgstr "对内容进行签名的第一步是，创建一个文件，该文件为 ``ansible-sign`` 指定要保护的文件。该文件应称为 ``MANIFEST.in``，并位于项目根目录中。"
+
+#: ../../source/project-sign.rst:151
+msgid "Internally, ``ansible-sign`` makes use of the ``distlib.manifest`` module of Python’s distlib library, and thus ``MANIFEST.in`` must follow the syntax that this library specifies. See the `Python Packaging User Guide <https://packaging.python.org/en/latest/guides/using-manifest-in/#manifest-in-commands>`_ for an explanation of the ``MANIFEST.in`` file directives."
+msgstr "在内部，``ansible-sign`` 使用 Python distlib 库的 ``distlib.manifest`` 模块，因此 ``MANIFEST.in`` 必须遵循这个库指定的语法。有关 ``MANIFEST.in`` 文件指令的说明，请参阅 `Python Packaging User Guide <https://packaging.python.org/en/latest/guides/using-manifest-in/#manifest-in-commands>`_。"
+
+#: ../../source/project-sign.rst:153
+msgid "In the sample project, included are two directives, resulting in a ``MANIFEST.in`` file that looks like this:"
+msgstr "在示例项目中，包含两个指令，``MANIFEST.in`` 文件类似如下："
+
+#: ../../source/project-sign.rst:160
+msgid "With this file in place, generate your checksum manifest file and sign it. Both of these steps are achieved in a single ``ansible-sign`` command:"
+msgstr "使用这个文件，生成您的验证和清单文件并对其进行签名。这些步骤通过一个 ``ansible-sign`` 命令实现："
+
+#: ../../source/project-sign.rst:170
+msgid "Now the project has been signed."
+msgstr "现在，该项目已被签名。"
+
+#: ../../source/project-sign.rst:172
+msgid "Notice that the ``gpg-sign`` subcommand resides under the ``project`` subcommand. For signing project content, every command will start with ``ansible-sign project``. As noted above, as a rule, every ``ansible-sign project`` command takes the project root directory as its final argument."
+msgstr "请注意，``gpg-sign`` 子命令位于 ``project`` 子命令下。对于签名项目内容，每个命令都将以 ``ansible-sign project`` 开头。如上所述，作为一个规则，每个 ``ansible-sign project`` 命令都会将项目根目录作为其最终参数。"
+
+#: ../../source/project-sign.rst:174
+msgid "As mentioned earlier, ``ansible-sign`` by default makes use of your default keyring and looks for the first available secret key that it can find, to sign your project. You can specify a specific secret key to use with the ``--fingerprint`` option, or even a completely independent GPG home directory with the ``--gnupg-home`` option."
+msgstr "如前所述，``ansible-sign`` 默认会使用您的默认密钥环，并使用第一个可用的 secret 密钥为项目签名。您可以使用 ``--fingerprint`` 选项指定一个特定的 secret 密钥进行签名，甚至可以使用 ``--gnupg-home`` 选项进行完全独立的 GPG 主目录。"
+
+#: ../../source/project-sign.rst:178
+msgid "If you are using a desktop environment, GnuPG will automatically prompt you for your secret key’s passphrase. If this functionality does not work, or you are working without a desktop environment (e.g., via SSH), you can use the ``-p/--prompt-passphrase`` flag after ``gpg-sign`` in the above command, which will cause ``ansible-sign`` to prompt for the password instead."
+msgstr "如果您使用一个桌面环境，则 GnuPG 会自动提示您输入 secret 密钥的密码短语。如果此功能无法正常工作，或者在没有桌面环境的情况下工作（例如，通过 SSH），您可以在以上命令的 ``gpg-sign`` 后使用 ``-p/--prompt-passphrase`` 标志，这会使 ``ansible-sign`` 提示输入密码。"
+
+#: ../../source/project-sign.rst:180
+msgid "Upon viewing the structure of the project directory, notice that a new ``.ansible-sign`` directory was created. This directory contains the checksum manifest and a detached GPG signature for it."
+msgstr "查看项目目录的结构后，请注意创建了一个新的 ``.ansible-sign`` 目录。该目录包含校验和清单，以及一个独立的 GPG 签名。"
+
+#: ../../source/project-sign.rst:197
+msgid "Verifying your project"
+msgstr "验证您的项目"
+
+#: ../../source/project-sign.rst:199
+msgid "If you want to verify that a signed Ansible project has not been altered, you can use ``ansible-sign`` to check whether the signature is valid and that the checksums of the files match what the checksum manifest says they should be. In particular, the ``ansible-sign project gpg-verify`` command can be used to automatically verify both of these conditions."
+msgstr "如果要验证已签名的 Ansible 项目没有被更改，您可以使用 ``ansible-sign`` 检查签名是否有效，以及文件的校验和是否与正确的值匹配。特别是，可以使用 ``ansible-sign project gpg-verify`` 命令自动验证这两个条件。"
+
+#: ../../source/project-sign.rst:210
+msgid "By default, ``ansible-sign`` makes use of your default GPG keyring to look for a matching public key. You can specify a keyring file with the ``--keyring`` option, or a different GPG home with the ``--gnugpg-home`` option."
+msgstr "默认情况下，``ansible-sign`` 使用默认 GPG 密钥环查找匹配的公钥。您可以使用 ``--keyring`` 选项指定一个密钥环文件，或使用 ``--gnugpg-home`` 选项指定不同的 GPG 主目录。"
+
+#: ../../source/project-sign.rst:212
+msgid "If verification fails for any reason, information will be displayed to help you debug the cause. More verbosity can be enabled by passing the global ``--debug`` flag, immediately after ``ansible-sign`` in your commands."
+msgstr "如果因为任何原因验证失败，则会显示信息以帮助您进行调试。通过在命令 ``ansible-sign`` 后使用全局 ``--debug`` 标志来输出更多信息。"
+
+#: ../../source/project-sign.rst:216
+msgid "When a GPG credential is used in a project, content verification will automatically take place on future project syncs."
+msgstr "在项目中使用 GPG 凭据时，内容验证将会在未来的项目同步上自动进行。"
+
+#: ../../source/project-sign.rst:221
+msgid "Automate signing"
+msgstr "自动签名"
+
+#: ../../source/project-sign.rst:223
+msgid "In environments with highly-trusted CI environments (e.g., OpenShift, Jenkins, etc.), it is possible to automate the signing process. For example, you could store your GPG private key in a CI platform of choice as a secret, and import that into GnuPG in the CI environment. You could then run through the signing workflow above within the normal CI workflow/container/environment."
+msgstr "在具有高度可信的 CI 环境（如 OpenShift、Jenkins 等）中，可以自动化签名的流程。例如，您可以将使用的 CI 平台中将您的 GPG 私钥存储为一个 secret，并在 CI 环境中将其导入到 GnuPG 中。然后，您可以在一般的 CI 工作流/容器/环境中运行签名工作流。"
+
+#: ../../source/project-sign.rst:225
+msgid "When signing a project using GPG, the environment variable ``ANSIBLE_SIGN_GPG_PASSPHRASE`` can be set to the passphrase of the signing key. This can be injected (and masked/secured) in a CI pipeline."
+msgstr "当使用 GPG 对项目进行签名时，``ANSIBLE_SIGN_GPG_PASSPHRASE`` 环境变量 可以设置为签名密钥的密码短语。这可以在 CI 管道中注入（masked/secured）。"
+
+#: ../../source/project-sign.rst:227
+msgid "Depending on the scenario at hand, ``ansible-sign`` will return with a different exit-code, during both signing and verification. This can also be useful in the context of CI and automation, as a CI environment can act differently based on the failure (for example, sending alerts for some errors but silently failing for others)."
+msgstr "根据具体情况，在签名和验证期间，``ansible-sign`` 将以不同的退出代码返回。这在 CI 和自动化上下文中也很有用，因为 CI 环境根据故障进行不同的操作（例如，对于一些错误会发送警报，但对其他错误会静默）。"
+
+#: ../../source/project-sign.rst:229
+msgid "These are the exit codes used in ``ansible-sign`` currently, which can be considered stable:"
+msgstr "以下是 ``ansible-sign`` 当前使用的退出代码，它们被视为稳定："
+
+#: ../../source/project-sign.rst:235
+msgid "Exit code"
+msgstr "退出代码"
+
+#: ../../source/project-sign.rst:236
+msgid "Approximate meaning"
+msgstr "大约含义"
+
+#: ../../source/project-sign.rst:237
+msgid "Example scenarios"
+msgstr "示例情境"
+
+#: ../../source/project-sign.rst:238
+msgid "0"
+msgstr "0"
+
+#: ../../source/project-sign.rst:239
+msgid "Success"
+msgstr "成功"
+
+#: ../../source/project-sign.rst:240
+msgid "Signing was successful"
+msgstr "签名成功"
+
+#: ../../source/project-sign.rst:241
+msgid "Verification was successful"
+msgstr "验证成功"
+
+#: ../../source/project-sign.rst:242
+msgid "1"
+msgstr "1"
+
+#: ../../source/project-sign.rst:243
+msgid "General failure"
+msgstr "常规故障"
+
+#: ../../source/project-sign.rst:244
+msgid "The checksum manifest file contained a syntax error during verification"
+msgstr "验证和清单文件在验证过程中包含语法错误"
+
+#: ../../source/project-sign.rst:245
+msgid "The signature file did not exist during verification"
+msgstr "验证过程中不存在签名文件"
+
+#: ../../source/project-sign.rst:246
+msgid "``MANIFEST.in`` did not exist during signing"
+msgstr "在签名过程中 ``MANIFEST.in`` 不存在"
+
+#: ../../source/project-sign.rst:247
+msgid "2"
+msgstr "2"
+
+#: ../../source/project-sign.rst:248
+msgid "Checksum verification failure"
+msgstr "验证和验证失败"
+
+#: ../../source/project-sign.rst:249
+msgid "The checksum hashes calculated during verification differed from what was in the signed checksum manifest (e.g., a project file was changed but the signing process was not re-completed)"
+msgstr "在验证过程中计算的校验和哈希值与签名校验和清单中的内容不同（例如，项目文件已更改，但签署过程并没有重新完成）"
+
+#: ../../source/project-sign.rst:251
+msgid "3"
+msgstr "3"
+
+#: ../../source/project-sign.rst:252
+msgid "Signature verification failure"
+msgstr "签名验证失败"
+
+#: ../../source/project-sign.rst:253
+msgid "The signer's public key was not in the user's GPG keyring"
+msgstr "签名人的公钥没有在用户的 GPG 密钥环中"
+
+#: ../../source/project-sign.rst:254
+#: ../../source/project-sign.rst:259
+msgid "The wrong GnuPG home directory or keyring file was specified"
+msgstr "指定了错误的 GnuPG 主目录或密钥环文件"
+
+#: ../../source/project-sign.rst:255
+msgid "The signed checksum manifest file was modified in some way"
+msgstr "签名的验证和清单文件被修改"
+
+#: ../../source/project-sign.rst:256
+msgid "4"
+msgstr "4"
+
+#: ../../source/project-sign.rst:257
+msgid "Signing process failure"
+msgstr "签名进程失败"
+
+#: ../../source/project-sign.rst:258
+msgid "The signer's private key was not found in the GPG keyring"
+msgstr "签名人的私钥没有在 GPG 密钥环中找到"
+

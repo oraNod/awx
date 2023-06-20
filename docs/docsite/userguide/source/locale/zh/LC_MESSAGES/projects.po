@@ -1,0 +1,636 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/projects.rst:4
+msgid "Projects"
+msgstr "项目"
+
+#: ../../source/projects.rst:9
+msgid "A :term:`Project` is a logical collection of Ansible playbooks."
+msgstr ":term:`Project` 是 Ansible playbook 的逻辑集合。"
+
+#: ../../source/projects.rst:11
+msgid "You can manage playbooks and playbook directories by either placing them manually under the Project Base Path on your server, or by placing your playbooks into a source code management (SCM) system supported by |at|, including Git, Subversion, and Red Hat Insights. To create a Red Hat Insights project, refer to :ref:`insights`."
+msgstr "您可以将 playbook 和 playbook 目录手动放置到服务器的 Project Base 路径下，或者将 playbook 放置到 |at| 支持的源代码管理 (SCM) 系统，包括 Git、Subversion 和红帽 Insights，这两种方法均可管理 playbook 和 playbook 目录。要创建红帽 Insights 项目，请参阅 :ref:`insights`。"
+
+#: ../../source/projects.rst:15
+msgid "By default, the Project Base Path is ``/var/lib/awx/projects``, but this may have been modified by the administrator. It is configured in ``/etc/tower/conf.d/custom.py``. Use caution when editing this file, as incorrect settings can disable your installation."
+msgstr "默认情况下，项目基本路径是 ``/var/lib/awx/projects``，但可能已被管理员修改。它在 ``/etc/tower/conf.d/custom.py`` 中配置。编辑此文件时请小心谨慎，因为不正确的设置可能会禁用您的安装。"
+
+#: ../../source/projects.rst:17
+msgid "The Projects page displays the list of the projects that are currently available. The default view is collapsed (**Compact**) with project name and its status, but you can use the arrow next to each entry to expand for more information."
+msgstr "Projects 页面中显示当前可用的项目列表。默认视图为折叠状态(**Compact**)，只显示项目名称及其状态，但您可以使用每个条目旁边的箭头展开以了解更多信息。"
+
+#: ../../source/projects.rst:19
+msgid "|Projects - home with example project|"
+msgstr "|Projects - home with example project|"
+
+#: ../../source/projects.rst:25
+msgid "For each project listed, you can get the latest SCM revision (|refresh|), edit the project (|edit|), or copy the project attributes (|copy|), using the respective icons next to each project. Projects are allowed to be updated while a related job is running.  In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "对于列出的每个项目，您可以使用每个项目旁边的相应图标获取最新的 SCM 修订 (|refresh|)、编辑项目 (|edit|) 或复制项目属性 (|copy|)。在相关作业运行时允许更新项目。如果您的项目太大（10 GB 左右），则 ``/tmp`` 上的磁盘空间可能会出现问题。"
+
+#: ../../source/projects.rst:36
+msgid "**Status** indicates the state of the project and may be one of the following (note that you can also filter your view by specific status types):"
+msgstr "**Status** 指示项目的状态，可能是以下之一（注意您也可以根据特定状态类型过滤您的视图）："
+
+#: ../../source/projects.rst:38
+msgid "**Pending** - The source control update has been created, but not queued or started yet. Any job (not just source control updates) will stay in pending until it's actually ready to be run by the system. Reasons for it not being ready because it has dependencies that are currently running so it has to wait until they are done, or there is not enough capacity to run in the locations it is configured to."
+msgstr "**Pending** - 已创建源控制更新但尚未排队或启动。在实际准备好由系统运行之前，任何作业（不仅仅是源控制更新）都会停留在等待状态。源控制更新未准备就绪的原因是有依赖项当前正在运行，必须等到它们都已完成，或者其配置的位置没有足够的运行容量。"
+
+#: ../../source/projects.rst:39
+msgid "**Waiting** - The source control update is in the queue waiting to be executed."
+msgstr "**Waiting** - 源控制更新处于等待执行的队列中。"
+
+#: ../../source/projects.rst:40
+msgid "**Running** - The source control update is currently in progress."
+msgstr "**Running** - 源控制更新当前正在进行中。"
+
+#: ../../source/projects.rst:41
+msgid "**Successful** - The last source control update for this project succeeded."
+msgstr "**Successful** - 此项目的最后源控制更新成功。"
+
+#: ../../source/projects.rst:42
+msgid "**Failed** - The last source control update for this project failed."
+msgstr "**Failed** - 此项目的最后源控制更新失败。"
+
+#: ../../source/projects.rst:43
+msgid "**Error** - The last source control update job failed to run at all. (To be deprecated.)"
+msgstr "**Error** - 最后的源控制更新作业根本无法运行。（即将弃用。）"
+
+#: ../../source/projects.rst:44
+msgid "**Canceled** - The last source control update for the project was canceled."
+msgstr "**Canceled** - 项目的最后源控制更新已被取消。"
+
+#: ../../source/projects.rst:45
+msgid "**Never updated** - The project is configured for source control, but has never been updated."
+msgstr "**Never updated** - 项目被配置用于源控制，但从未更新。"
+
+#: ../../source/projects.rst:46
+msgid "**OK** - The project is not configured for source control, and is correctly in place. (To be deprecated.)"
+msgstr "**OK** - 项目未被配置用于源控制，并且位于正确的位置。（即将弃用。）"
+
+#: ../../source/projects.rst:47
+msgid "**Missing** - Projects are absent from the project base path of ``/var/lib/awx/projects`` (applicable for manual or source control managed projects)."
+msgstr "**Missing** - 项目不存在于 ``/var/lib/awx/projects`` 的项目基本路径中（适用于手动或源控制管理的项目）。"
+
+#: ../../source/projects.rst:54
+msgid "Projects of credential type Manual cannot update or schedule source control-based actions without being reconfigured as an SCM type credential."
+msgstr "凭证类型为 Manual 的项目若不重新配置为 SCM 类型的凭证，将无法更新或调度基于源控制的操作。"
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "如果删除了由其他工作项目使用的项，则会打开一条信息，列出会受到删除影响的项，并提示您确认删除。一些界面会包括无效的或以前已被删除的项，因此它们将无法运行。以下是这类信息的一个示例："
+
+#: ../../source/projects.rst:62
+msgid "Add a new project"
+msgstr "添加新项目"
+
+#: ../../source/projects.rst:67
+msgid "To create a new project:"
+msgstr "要创建新项目，请执行以下操作："
+
+#: ../../source/projects.rst:69
+msgid "Click the **Add** button, which launches the **Create Project** window."
+msgstr "点 **Add** 按钮，启动 **Create Project** 窗口。"
+
+#: ../../source/projects.rst:71
+msgid "|Projects - create new project|"
+msgstr "|Projects - create new project|"
+
+#: ../../source/projects.rst:75
+msgid "Enter the appropriate details into the following required fields:"
+msgstr "在以下必填字段中输入相关信息："
+
+#: ../../source/projects.rst:77
+msgid "**Name**"
+msgstr "**名称**"
+
+#: ../../source/projects.rst:78
+msgid "**Description** (optional)"
+msgstr "**Description**（可选）"
+
+#: ../../source/projects.rst:79
+msgid "**Organization** - A project must have at least one organization. Pick one organization now to create the project, and then after the project is created you can add additional organizations."
+msgstr "**Organization** - 一个项目必须至少有一个机构。现在选择一个机构以创建项目，然后在创建项目后，您可以添加额外的机构。"
+
+#: ../../source/projects.rst:80
+msgid "**Execution Environment** (optional) - Enter the name of the execution environment or search from a list of existing ones to run this project. See :ref:`upgrade_venv` in the |atumg| for more information."
+msgstr "**Execution Environment**（可选）- 输入执行环境的名称，或从现有环境列表中搜索以运行此项目。如需更多信息，请参阅 |atumg| 中的 :ref:`upgrade_venv`。"
+
+#: ../../source/projects.rst:81
+msgid "**Source Control Type** - Select from the drop-down menu list an SCM type associated with this project. The options in the subsequent section become available depend on the type you choose. Refer to :ref:`ug_manual` or :ref:`ug_projects_scm_types` in the subsequent sections for more detail."
+msgstr "**Source Control Type** - 从下拉菜单中选择与这个项目关联的 SCM 类型。后续部分中的选项会根据您选择的类型显示出来。更多详情请参阅后续部分中的 :ref:`ug_manual` 或 :ref:`ug_projects_scm_types`。"
+
+#: ../../source/projects.rst:82
+msgid "**Content Signature Validation Credential** - Use this optional field to enable content verification. Specify the GPG key to use for validating content signature during project sync. If the content has been tampered with, the job will not run. See :ref:`ug_content_signing` for more detail."
+msgstr "**Content Signature Validation Credential** - 使用这个可选字段启用内容验证功能。指定用于在项目同步过程中验证内容签名的 GPG 密钥。如果内容已被篡改，则作业不会运行。如需更多详情，请参阅 :ref:`ug_content_signing`。"
+
+#: ../../source/projects.rst:85
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/projects.rst:91
+msgid "Manage playbooks manually"
+msgstr "手动管理 playbook"
+
+#: ../../source/projects.rst:97
+msgid "Create one or more directories to store playbooks under the Project Base Path (for example, /var/lib/awx/projects/)."
+msgstr "在项目基本路径下创建一个或多个目录来存储 playbook（例如，/var/lib/awx/projects/）。"
+
+#: ../../source/projects.rst:98
+msgid "Create or copy playbook files into the playbook directory."
+msgstr "创建 playbook 文件或将其复制到 playbook 目录中。"
+
+#: ../../source/projects.rst:99
+msgid "Ensure that the playbook directory and files are owned by the same UNIX user and group that the |at| service runs as."
+msgstr "确保 playbook 目录和文件属于运行 |at| 服务的同一 UNIX 用户和组。"
+
+#: ../../source/projects.rst:100
+msgid "Ensure that the permissions are appropriate for the playbook directories and files."
+msgstr "确保权限适合 playbook 目录和文件。"
+
+#: ../../source/projects.rst:102
+msgid "If adding a manual project, each project path inside of the project root folder can only be assigned to one project. If you receive the following message, ensure that you have not already assigned the project path to an existing project:"
+msgstr "如果添加手动项目，项目根文件夹中的每个项目路径只能分配给一个项目。如果您收到以下消息，请确保您还没有将项目路径分配给现有项目："
+
+#: ../../source/projects.rst:104
+msgid "``All of the project paths have been assigned to existing projects, or there are no directories found in the base path.`` ``You will need to add a project path before creating a new project.``"
+msgstr "``All of the project paths have been assigned to existing projects, or there are no directories found in the base path.`` ``You will need to add a project path before creating a new project.``"
+
+#: ../../source/projects.rst:107
+msgid "If you have trouble adding a project path, check the permissions and SELinux context settings for the project directory and files."
+msgstr "如果您在添加项目路径时遇到问题，请检查项目目录和文件的权限和 SELinux 上下文设置。"
+
+#: ../../source/projects.rst:110
+msgid "If you have not added any Ansible playbook directories to the base project path, you will receive the following message:"
+msgstr "如果您尚未将任何 Ansible playbook 目录添加到基本项目路径，您将收到以下消息："
+
+#: ../../source/projects.rst:112
+msgid "|Projects - create new warning|"
+msgstr "|Projects - create new warning|"
+
+#: ../../source/projects.rst:114
+msgid "Correct this issue by creating the appropriate playbook directories and checking out playbooks from your SCM or otherwise copying playbooks into the appropriate playbook directories."
+msgstr "要纠正这个问题，请创建适当的 playbook 目录并从您的 SCM 中签出 playbook 或将 playbook 复制到适当的 playbook 目录。"
+
+#: ../../source/projects.rst:122
+msgid "Manage playbooks using source control"
+msgstr "使用源控制管理 playbook"
+
+#: ../../source/projects.rst:136
+msgid "SCM Types - Git and Subversion"
+msgstr "SCM 类型 - Git 和 Subversion"
+
+#: ../../source/projects.rst:138
+msgid "To configure playbooks to use source control, in the Project **Details** tab:"
+msgstr "要配置 playbook 以使用源控制，在 Project **Details** 选项卡中："
+
+#: ../../source/projects.rst:140
+msgid "Select the appropriate option (Git or Subversion) from the **SCM Type** drop-down menu list."
+msgstr "从 **SCM Type** 下拉菜单中选择适当的选项（Git 或 Subversion）。"
+
+#: ../../source/projects.rst:142
+msgid "|Projects - create SCM project|"
+msgstr "|Projects - create SCM project|"
+
+#: ../../source/projects.rst:146
+#: ../../source/projects.rst:215
+msgid "Enter the appropriate details into the following fields:"
+msgstr "在以下字段中输入相关信息："
+
+#: ../../source/projects.rst:148
+msgid "**SCM URL** - See an example in the tooltip |tooltip|."
+msgstr "**SCM URL** - 请参阅工具提示 |tooltip| 中的示例。"
+
+#: ../../source/projects.rst:152
+msgid "**SCM Branch/Tag/Commit** - Optionally enter the SCM branch, tags, commit hashes, arbitrary refs, or revision number (if applicable) from the source control (Git or Subversion) to checkout. Some commit hashes and refs may not be available unless you also provide a custom refspec in the next field. If left blank, the default is HEAD which is the last checked out Branch/Tag/Commit for this project."
+msgstr "**SCM Branch/Tag/Commit**（可选）- 输入源控制（Git 或 Subversion）中的 SCM 分支、标签、提交散列、任意 refs 或修订号（若适用）以签出。除非您在下一字段中还提供了自定义 refspec，否则某些提交散列和 refs 可能无法使用。如果留空，则默认为 HEAD，这是该项目的最近的签出分支/标签/提交。"
+
+#: ../../source/projects.rst:153
+msgid "**SCM Refspec** - This field is an option specific to git source control and only advanced users familiar and comfortable with git should specify which references to download from the remote repository. For more detail, see :ref:`job branch overriding <ug_job_branching>`."
+msgstr "**SCM Refspec** - 这个字段是 git 源控制特有的选项，只有熟悉并能够轻松使用 git 的高级用户才应该指定要从远程存储库下载哪些参考。更多详情请参阅 :ref:`job branch overriding <ug_job_branching>`。"
+
+#: ../../source/projects.rst:155
+msgid "**Source Control Credential** - If authentication is required, select the appropriate source control credential"
+msgstr "**Source Control Credential** - 如果需要验证，请选择适当的源控制凭证"
+
+#: ../../source/projects.rst:157
+#: ../../source/projects.rst:189
+#: ../../source/projects.rst:220
+msgid "In the **SCM Update Options**, optionally select the launch behavior, if applicable."
+msgstr "在 **SCM Update Options** 中，在适用的情况下，可以选择启动行为。"
+
+#: ../../source/projects.rst:159
+#: ../../source/projects.rst:191
+#: ../../source/projects.rst:222
+msgid "**Clean** - Removes any local modifications prior to performing an update."
+msgstr "**Clean** - 在进行更新前删除任何本地修改。"
+
+#: ../../source/projects.rst:160
+#: ../../source/projects.rst:192
+#: ../../source/projects.rst:223
+msgid "**Delete** - Deletes the local repository in its entirety prior to performing an update. Depending on the size of the repository this may significantly increase the amount of time required to complete an update."
+msgstr "**Delete** - 在进行更新前删除整个本地存储库。根据存储库的大小，这可能会显著增加完成更新所需的时间。"
+
+#: ../../source/projects.rst:161
+msgid "**Track submodules** - Tracks the latest commit. See more details in the tooltip |tooltip|."
+msgstr "**Track submodules** - 跟踪最新的提交。请参阅工具提示 |tooltip| 中的更多详情。"
+
+#: ../../source/projects.rst:162
+#: ../../source/projects.rst:193
+msgid "**Update Revision on Launch** - Updates the revision of the project to the current revision in the remote source control, as well as cache the roles directory from :ref:`Galaxy <ug_galaxy>` or :ref:`Collections <ug_collections>`. |At| ensures that the local revision matches and that the roles and collections are up-to-date with the last update. Also, to avoid job overflows if jobs are spawned faster than the project can sync, selecting this allows you to configure a Cache Timeout to cache prior project syncs for a certain number of seconds."
+msgstr "**Update Revision on Launch** - 将项目的修订更新至远程源控制中的当前修订，并缓存来自 :ref:`Galaxy <ug_galaxy>` 或 :ref:`Collections <ug_collections>` 的角色目录。 |At| 确保本地修订版本与最新角色和集合匹配。 另外，如果作业的生成速度快于项目的同步速度，为了避免作业溢出，您可以配置一个缓存超时来为以前的项目同步缓存特定的时间（秒）。"
+
+#: ../../source/projects.rst:163
+msgid "**Allow Branch Override** - Allows a job template that uses this project to launch with a specified SCM branch or revision other than that of the project's. For more detail, see :ref:`job branch overriding <ug_job_branching>`."
+msgstr "**Allow Branch Override** - 允许使用这个项目的作业模板通过项目以外的指定 SCM 分支或修订来启动。如需了解更多详情，请参阅 :ref:`job branch overriding <ug_job_branching>`。"
+
+#: ../../source/projects.rst:167
+#: ../../source/projects.rst:198
+#: ../../source/projects.rst:233
+msgid "Click **Save** to save your project."
+msgstr "点击 **Save** 保存您的项目。"
+
+#: ../../source/projects.rst:170
+msgid "Using a GitHub link offers an easy way to use a playbook. To help get you started, use the ``helloworld.yml`` file available at: https://github.com/ansible/tower-example.git"
+msgstr "使用 GitHub 链接为使用 playbook 提供了一种简单的方法。要帮助您入门，请使用位于以下位置的 ``helloworld.yml`` 文件：https://github.com/ansible/tower-example.git"
+
+#: ../../source/projects.rst:172
+msgid "This link offers a very similar playbook to the one created manually in the instructions found in the :ref:`Automation Controller Quick Setup Guide <qs_start>`. Using it will not alter or harm your system in anyway."
+msgstr "这个链接提供的 playbook 与 :ref:`Automation Controller Quick Setup Guide <qs_start>`说明中手动创建的 playbook 非常相似。使用它不会给您的系统带来任何改变或损害。"
+
+#: ../../source/projects.rst:176
+msgid "SCM Type - Red Hat Insights"
+msgstr "SCM 类型 - Red Hat Insights"
+
+#: ../../source/projects.rst:183
+msgid "To configure playbooks to use Red Hat Insights, in the Project **Details** tab:"
+msgstr "要配置 playbook 来使用 Red Hat Insights，在 Project **Details** 标签页中："
+
+#: ../../source/projects.rst:185
+msgid "Select **Red Hat Insights** from the **SCM Type** drop-down menu list."
+msgstr "从 **SCM Type** 下拉菜单中选择 **Red Hat Insights**。"
+
+#: ../../source/projects.rst:187
+msgid "Red Hat Insights requires a credential for authentication. Select from the **Credential** field the appropriate credential for use with Insights."
+msgstr "Red Hat Insights 需要一个凭证来进行身份验证。从 **Credential** 字段中选择可用于 Insights 的适当凭证。"
+
+#: ../../source/projects.rst:202
+msgid "SCM Type - Remote Archive"
+msgstr "SCM 类型 - 远程归档"
+
+#: ../../source/projects.rst:209
+msgid "Playbooks using a remote archive allow projects to be provided based on a build process that produces a versioned artifact, or release, containing all the requirements for that project in a single archive."
+msgstr "使用远程存档的 playbook 允许基于生成版本工件或发行版本的构建过程提供项目，其中包含该项目在单个存档中的所有要求。"
+
+#: ../../source/projects.rst:211
+msgid "To configure playbooks to use a remote archive, in the Project **Details** tab:"
+msgstr "要将 playbook 配置为使用远程存档，在 Project **Details** 选项卡中："
+
+#: ../../source/projects.rst:213
+msgid "Select **Remote Archive** from the **SCM Type** drop-down menu list."
+msgstr "从 **SCM Type** 下拉菜单中选择 **Remote Archive**。"
+
+#: ../../source/projects.rst:217
+msgid "**SCM URL** - requires a URL to a remote archive, such as a *GitHub Release* or a build artifact stored in *Artifactory* and unpacks it into the project path for use"
+msgstr "**SCM URL** - 需要一个远程归档的 URL，如 *GitHub Release* 或存储在 *Artifactory* 中的构建工件，并将其解包到要使用的项目路径中"
+
+#: ../../source/projects.rst:218
+msgid "**SCM Credential** - If authentication is required, select the appropriate SCM credential"
+msgstr "**SCM Credential** - 如果需要验证，请选择适当的 SCM 凭证"
+
+#: ../../source/projects.rst:224
+msgid "**Update Revision on Launch** - Not recommended, as this option updates the revision of the project to the current revision in the remote source control, as well as cache the roles directory from :ref:`Galaxy <ug_galaxy>` or :ref:`Collections <ug_collections>`."
+msgstr "**Update Revision on Launch** - 不建议使用此选项，因为它会将项目的修订更新至远程源控制中的当前修订版本，并缓存来自 :ref:`Galaxy <ug_galaxy>` 或 :ref:`Collections <ug_collections>` 的角色目录。"
+
+#: ../../source/projects.rst:225
+msgid "**Allow Branch Override** - Not recommended, as this option allows a job template that uses this project to launch with a specified SCM branch or revision other than that of the project's."
+msgstr "**Allow Branch Override** - 不建议使用此选项，因为它允许使用此项目的作业模板使用项目以外的指定 SCM 分支或修订启动。"
+
+#: ../../source/projects.rst:230
+msgid "Since this SCM type is intended to support the concept of unchanging artifacts, it is advisable to disable Galaxy integration (for roles, at minimum)."
+msgstr "由于此 SCM 类型旨在支持未修改工件的概念，因此建议禁用 Galaxy 集成（至少针对角色）。"
+
+#: ../../source/projects.rst:237
+msgid "Updating projects from source control"
+msgstr "从源控制更新项目"
+
+#: ../../source/projects.rst:242
+msgid "Update an existing SCM-based project by selecting the project and clicking the |refresh| button."
+msgstr "通过选择项目并点 |refresh| 按钮来更新基于 SCM 的现有项目。"
+
+#: ../../source/projects.rst:246
+msgid "Please note that immediately after adding a project setup to use source control, a \"Sync\" starts that fetches the project details from the configured source control."
+msgstr "请注意，在添加项目设置以使用源控制后，会立即启动一个“同步”进程来从配置的源控制获取项目详情。"
+
+#: ../../source/projects.rst:248
+msgid "|projects - list all|"
+msgstr "|projects - list all|"
+
+#: ../../source/projects.rst:252
+msgid "Click on project's status under the **Status** column to get further details about the update process."
+msgstr "点 **Status** 列下项目的状态，以获取有关更新过程的更多详情。"
+
+#: ../../source/projects.rst:257
+msgid "|Project - update status|"
+msgstr "|Project - update status|"
+
+#: ../../source/projects.rst:263
+msgid "Work with Permissions"
+msgstr "使用权限"
+
+#: ../../source/projects.rst:267
+msgid "The set of permissions assigned to this project (role-based access controls) that provide the ability to read, modify, and administer projects, inventories, job templates, and other |at| elements are Privileges."
+msgstr "权限是指分配给此项目的权限集（基于角色的访问控制），可提供读取、修改和管理项目、清单、作业模板及其他 |at| 元素的能力。"
+
+#: ../../source/projects.rst:269
+msgid "You can access the project permissions via the **Access** tab next to the **Details** tab. This screen displays a list of users that currently have permissions to this project. The list may be sorted and searched by **Username**, **First Name**, or **Last Name**."
+msgstr "您可以通过 **Details** 标签页旁边的 **Access** 标签页访问项目权限。此屏幕显示目前对此项目具有权限的用户列表。该列表可以根据 **Username**、**First Name** 或 **Last Name** 进行排序和搜索。"
+
+#: ../../source/projects.rst:271
+msgid "|Projects - permissions list for example project|"
+msgstr "|Projects - permissions list for example project|"
+
+#: ../../source/projects.rst:277
+msgid "Add Permissions"
+msgstr "添加权限"
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "在 **Access** 选项卡中，点 **Add** 按钮。"
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "选择要添加的用户或团队并点 **Next**"
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "点名称旁边的复选框从列表中选择一个或多个用户或团队，将它们添加为成员并点 **Next**。"
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "在这个示例中，选择了两个用户来添加。"
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "选择您希望所选用户或团队具有的角色。请确保向下滚动以获得完整的角色列表。不同的资源有不同的可用选项。"
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "点 **Save** 按钮将角色应用到所选用户或团队，并将它们添加为成员。"
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "将关闭 Add Users/Teams 窗口，以显示为每个用户和团队分配的更新角色。"
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "若要删除特定用户的角色，可单击其资源旁边的解除关联(x)按钮。"
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "这会出现确认对话框，要求您确认解除关联。"
+
+#: ../../source/projects.rst:283
+msgid "Work with Notifications"
+msgstr "使用通知"
+
+#: ../../source/projects.rst:285
+msgid "Clicking the **Notifications** tab allows you to review any notification integrations you have setup."
+msgstr "点击 **Notifications** 标签页可以查看您设置的任何通知集成。"
+
+#: ../../source/projects.rst:289
+msgid "Use the toggles to enable or disable the notifications to use with your particular project. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "请使用切换按钮启用或禁用要与特定项目搭配使用的通知。更多详情请参阅 :ref:`ug_notifications_on_off`。"
+
+#: ../../source/projects.rst:291
+msgid "If no notifications have been set up, you can configure them from the  **Notifications** link from the left navigation bar to create a new notification."
+msgstr "如果没有设置通知，您可以从左侧导航栏中的 **Notifications** 链接配置它们，以创建新通知。"
+
+#: ../../source/projects.rst:295
+msgid "Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types."
+msgstr "有关配置各种通知类型的其他详情，请参阅 :ref:`ug_notifications_types`。"
+
+#: ../../source/projects.rst:299
+msgid "Work with Job Templates"
+msgstr "使用作业模板"
+
+#: ../../source/projects.rst:301
+msgid "Clicking on **Job Templates** allows you to add and review any job templates or workflow templates associated with this project."
+msgstr "您可以点击 **Job Templates** 来添加和查看与此项目关联的任何作业模板或工作流模板。"
+
+#: ../../source/projects.rst:305
+msgid "Click on the recent jobs that ran using that template to see its details and other useful information. You can sort this list by various criteria, and perform a search to filter the templates of interest."
+msgstr "点使用该模板运行的当前作业的状态来查看其详细信息和其他有用信息。您可以根据各种条件对列表进行排序，并执行搜索来过滤相关的模板。"
+
+#: ../../source/projects.rst:309
+msgid "From this view, you can also launch (|launch|),  edit (|edit|), or copy (|copy|) the template configuration."
+msgstr "从此视图中，您还可以启动启动 (|launch|), 编辑 (|edit|), 或复制 (|copy|) 模板配置。"
+
+#: ../../source/projects.rst:315
+msgid "Work with Schedules"
+msgstr "使用计划"
+
+#: ../../source/projects.rst:321
+msgid "Clicking on **Schedules** allows you to review any schedules set up for this project."
+msgstr "您可以点击 **Schedules** 来查看为此项目设置的所有计划。"
+
+#: ../../source/projects.rst:327
+msgid "Schedule a Project"
+msgstr "调度项目"
+
+#: ../../source/projects.rst:330
+msgid "To schedule a project run, click the **Schedules** tab."
+msgstr "要调度项目运行，请点击 **Schedules** 标签页。"
+
+#: ../../source/projects.rst:332
+msgid "If schedules are already set up; review, edit, or enable/disable your schedule preferences."
+msgstr "如果已经设置了计划，请检查、编辑或启用/禁用您的计划首选项。"
+
+#: ../../source/projects.rst:333
+msgid "If schedules have not been set up, refer to :ref:`ug_scheduling` for more information."
+msgstr "如果还没有设置计划，请参阅 :ref:`ug_scheduling` 了解更多信息。"
+
+#: ../../source/projects.rst:339
+msgid "Ansible Galaxy Support"
+msgstr "Ansible Galaxy 支持"
+
+#: ../../source/projects.rst:346
+msgid "At the end of a Project update, |at| searches for a file called ``requirements.yml`` in the ``roles`` directory, located at ``<project-top-level-directory>/roles/requirements.yml``. If this file is found, the following command automatically runs:"
+msgstr "在项目更新结束时，|at| 会搜索位于 ``<project-top-level-directory>/roles/requirements.yml`` 的 ``roles`` 目录中名为 ``requirements.yml`` 的文件。如果找到这个文件，以下命令会自动运行："
+
+#: ../../source/projects.rst:353
+msgid "This file allows you to reference Galaxy roles or roles within other repositories which can be checked out in conjunction with your own project. The addition of this Ansible Galaxy support eliminates the need to create git submodules for achieving this result. Given that SCM projects (along with roles/collections) are pulled into and executed from a private job environment, a <private job directory> specific to the project within ``/tmp`` is created by default. However, you can specify another **Job Execution Path** based on your environment in the Jobs Settings tab of the Settings window:"
+msgstr "您可以通过此文件引用可以与您自己的项目一起签出的 Galaxy 角色或其他存储库中的角色。添加此 Ansible Galaxy 支持后便无需创建 git 子模块以实现此结果。由于 SCM 项目（以及角色/集合）被拉取并从私有作业环境中执行，因此默认会在 ``/tmp`` 中创建特定于具体项目的 <private job directory> 。 但是，您可以根据您的环境，在 Settings 窗口的 Jobs Settings 选项卡中指定另外一个 **Job Execution Path**:"
+
+#: ../../source/projects.rst:357
+msgid "The cache directory is a subdirectory inside the global projects folder. The content may be copied from the cache location to ``<job private directory>/requirements_roles`` location."
+msgstr "缓存目录是全局项目目录中的一个子目录。内容可以从缓存位置复制到 ``<job private directory>/requirements_roles`` 位置。"
+
+#: ../../source/projects.rst:359
+msgid "By default, |at| has a system-wide setting that allows roles to be dynamically downloaded from the ``roles/requirements.yml`` file for SCM projects. You may turn off this setting in the **Jobs settings** screen of the Settings menu by switching the **Enable Role Download** toggle button to **OFF**."
+msgstr "默认情况下，|at| 有一个系统范围设置，允许从 SCM 项目的 ``roles/requirements.yml`` 文件中动态下载角色。您可以通过将 **Enable Role Download** 切换按钮切换到 **OFF**，在 Settings 菜单的 **Jobs settings** 标签页中关闭这个设置。"
+
+#: ../../source/projects.rst:364
+msgid "Whenever a project sync runs, |at| determines if the project source and any roles from Galaxy and/or Collections are out of date with the project. Project updates will download the roles inside the update."
+msgstr "每当项目同步运行时，|at| 会决定项目源以及来自 Galaxy 和/或集合的任何角色是否已与项目不同步。项目更新将会下载更新内的角色。"
+
+#: ../../source/projects.rst:366
+msgid "If jobs need to pick up a change made to an upstream role, updating the project will ensure this happens. A change to the role means that a new commit was pushed to the *provision-role* source control. To make this change take effect in a job, you do not need to push a new commit to the *playbooks* repo, but you **do need** to update the project, which downloads roles to a local cache. For instance, say you have two git repositories in source control. The first one is *playbooks* and the project in |at| points to this URL. The second one is *provision-role* and it is referenced by the ``roles/requirements.yml`` file inside of the *playbooks* git repo."
+msgstr "如果作业需要获取上游角色的更改，更新项目会确保这种情况发生。 对角色的更改意味着新提交被推送到 *provision-role* 源控制。 要使这一更改在作业中生效，您不需要将新提交推送到 *playbooks* 仓库，但您**需要**更新项目，该项目会将角色下载到本地缓存中。例如，假设您在源控制中有两个 git 仓库。 第一个是 *playbooks*，|at| 中的项目指向这个 URL。 第二个是 *provision-role*，它被 *playbooks* git repo 中的 ``roles/requirements.yml`` 文件引用。"
+
+#: ../../source/projects.rst:370
+msgid "In short, jobs would download the most recent roles before every job run. Roles and collections are locally cached for performance reasons, and you will need to select **Update Revision on Launch** in the project SCM Update Options to ensure that the upstream role is re-downloaded before each job run:"
+msgstr "简而言之，作业会在每个作业运行前下载最新角色。因为性能的原因，角色和集合会在本地被缓存，您需要在项目的 SCM 更新选项中选择 **Update Revision on Launch**，以确保上游角色在每次作业运行前都会重新下载："
+
+#: ../../source/projects.rst:372
+#: ../../source/projects.rst:427
+msgid "|update-on-launch|"
+msgstr "|update-on-launch|"
+
+#: ../../source/projects.rst:378
+msgid "The update happens much earlier in the process than the sync, so this surfaces errors and details faster and in a more logic place."
+msgstr "更新的过程比同步要更早发生，因此在此阶段可以更快地显示错误和详细信息。"
+
+#: ../../source/projects.rst:380
+msgid "For more information and examples on the syntax of the ``requirements.yml`` file, refer to the `role requirements section`_ in the Ansible documentation."
+msgstr "如需有关 ``requirements.yml`` 文件语法的更多信息和示例，请参阅 Ansible 文档中的 `role requirements section`_。"
+
+#: ../../source/projects.rst:386
+msgid "If there are any directories that should specifically be exposed, you can specify those in the Jobs section of the Settings screen in the **Paths to Expose to Isolated Jobs** or by updating the following entry in the settings file:"
+msgstr "如果有任何需要特别公开的目录，您可以在 Settings 界面的 **Paths to Expose to Isolated Jobs** 的 Jobs 部分指定，或者在设置文件中更新以下条目："
+
+#: ../../source/projects.rst:388
+msgid "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../source/projects.rst:391
+msgid "The primary file you may want to add to ``AWX_ISOLATION_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "如果 playbook 需要使用在 ``/var/lib/awx/.ssh`` 中定义的密钥或设置，则需要把它做为主文件添加到 ``AWX_ISOLATION_SHOW_PATHS`` 。"
+
+#: ../../source/projects.rst:394
+msgid "If you made changes in the settings file, be sure to restart services with the ``automation-controller-service restart`` command after your changes have been saved."
+msgstr "如果您更改了设置文件，请确定在保存了更改后使用 ``automation-controller-service restart`` 命令重启服务。"
+
+#: ../../source/projects.rst:399
+msgid "In the User Interface, you can configure these settings in the Jobs settings window."
+msgstr "在用户界面中，您可以在 Jobs settings 窗口中配置这些设置。"
+
+#: ../../source/projects.rst:407
+msgid "The **Primary Galaxy Server Username** and **Primary Galaxy Server Password** fields are no longer configurable in |at| 3.8. We recommend using tokens to access Galaxy or |ah| instead."
+msgstr "**Primary Galaxy Server Username** 和 **Primary Galaxy Server Password** 字段在 |at| 3.8 中无法进行配置。我们推荐使用令牌访问 Galaxy 或 |ah|。"
+
+#: ../../source/projects.rst:413
+msgid "Collections Support"
+msgstr "集合支持"
+
+#: ../../source/projects.rst:419
+msgid "|At| supports project-specific `Ansible collections <https://docs.ansible.com/ansible/latest/user_guide/collections_using.html>`_ in job runs. If you specify a collections requirements file in the SCM at ``collections/requirements.yml``, |at| will install collections in that file in the implicit project sync before a job run."
+msgstr "|At| 在作业运行中支持特定于项目的 `Ansible collections <https://docs.ansible.com/ansible/latest/user_guide/collections_using.html>`_ 。如果您在 ``collections/requirements.yml`` 的 SCM 中指定了一个集合要求文件，|at| 将在作业运行前在隐式项目同步中将集合安装到该文件中。"
+
+#: ../../source/projects.rst:421
+msgid "By default, |at| has a system-wide setting that allows collections to be dynamically downloaded from the ``collections/requirements.yml`` file for SCM projects. You may turn off this setting in the **Jobs settings** tab of the Settings menu by switching the **Enable Collections Download** toggle button to **OFF**."
+msgstr "默认情况下，|at| 有一个系统范围设置，允许从 SCM 项目的 ``collections/requirements.yml`` 文件中动态下载角色。您可以使用 Settings 菜单中的 **Jobs settings** 标签页关闭这个设置（将 **Enable Collections Download** 切换按钮切换到 **OFF**）。"
+
+#: ../../source/projects.rst:425
+msgid "Roles and collections are locally cached for performance reasons, and you will need to select **Update Revision on Launch** in the project SCM Update Options to ensure this:"
+msgstr "因为性能的原因，角色和集合会在本地缓存。您需要在项目 SCM 更新选项中选择 **Update Revision on Launch** 以确保："
+
+#: ../../source/projects.rst:433
+msgid "Using Collections via Hub"
+msgstr "通过 Hub 使用集合"
+
+#: ../../source/projects.rst:435
+msgid "Before |at| can use |ah| as the default source for collections content, you need to create an API token in the |ah| UI so that it could be specified in |at|. You may connect to a private |ah| or a public |ah| collection, the only difference is which URL you specify."
+msgstr "在 |at| 可以使用 |ah| 作为集合内容的默认源前，您需要在 |ah| UI 中创建 API 令牌，以便在 |at| 中指定它。您可以连接到私有 |ah| 或公共 |ah| 集合，唯一的区别是您指定哪个 URL。"
+
+#: ../../source/projects.rst:437
+msgid "Navigate to https://cloud.redhat.com/ansible/automation-hub/token and click **Load token**."
+msgstr "进入 https://cloud.redhat.com/ansible/automation-hub/token 并点 **Load token**。"
+
+#: ../../source/projects.rst:439
+msgid "Click the copy icon to copy the API token to the clipboard."
+msgstr "点复制图标将 API 令牌复制到剪贴板。"
+
+#: ../../source/projects.rst:443
+msgid "To use the public |ah|, create an |ah| credential using the copied token and pointing to the URLs shown in the **Server URL** and **SSO URL** fields of the token page:"
+msgstr "要使用公共 |ah|，请使用复制的令牌创建一个 |ah| 凭证，并指向令牌页面的 **Server URL** 和 **SSO URL** 字段中显示的 URL："
+
+#: ../../source/projects.rst:445
+msgid "**Galaxy Server URL** = ``https://cloud.redhat.com/api/automation-hub/``"
+msgstr "**Galaxy Server URL** = ``https://cloud.redhat.com/api/automation-hub/``"
+
+#: ../../source/projects.rst:447
+msgid "**AUTH SEVER URL** = ``https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token``"
+msgstr "**AUTH SEVER URL** = ``https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token``"
+
+#: ../../source/projects.rst:449
+msgid "To use a private |ah|, create an |ah| credential using a token retrieved from the Repo Management dashboard of your local |ah| and pointing to the published repo URL as shown:"
+msgstr "要使用私有 |ah|，请使用本地 |ah| 的 Repo Management 仪表板中获取的令牌创建一个 |ah| 凭证，并指向公布的存储库 URL，如下所示："
+
+#: ../../source/projects.rst:454
+msgid "You can create different repos with different namespaces/collections in them. But for each repo in |ah| you need to create a different |ah| credential. Copy the **Ansible CLI URL** from the |ah| UI in the format of ``https://$<hub_url>/api/galaxy/content/<repo you want to pull from>`` into the **Galaxy Server URL** field of the *Create Credential* form:"
+msgstr "您可以使用不同的命名空间/集合创建不同的仓库。 但是，对于 |ah| 中的每个仓库，您需要创建不同的 |ah| 凭证。将 |ah| UI 中的 **Ansible CLI URL** 复制到 *Create Credential* 表单的 **Galaxy Server URL** 字段中，格式为 ``https://$<hub_url>/api/galaxy/content/<repo you want to pull from>``："
+
+#: ../../source/projects.rst:458
+msgid "Refer to `Managing Red Hat Certified and Ansible Galaxy Collections in Ansible Hub <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/1.2/html/managing_red_hat_certified_and_ansible_galaxy_collections_in_automation_hub/index>`_ for |ah| UI-specific instructions."
+msgstr "与 |ah| UI 具体相关的信息，请参阅 `Managing Red Hat Certified and Ansible Galaxy Collections in Ansible Hub <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/1.2/html/managing_red_hat_certified_and_ansible_galaxy_collections_in_automation_hub/index>`_。"
+
+#: ../../source/projects.rst:460
+msgid "Navigate to the organization for which you want to be able to sync content from |ah| and add the new |ah| credential to the organization. This step allows you to associate each organization with the |ah| credential (i.e. repo) that you want to be able to use content from."
+msgstr "进入到您要从 |ah| 进行同步内容的机构，并将新的 |ah| 凭证添加到这个机构。此步骤允许您将每个机构与您要使用内容的 |ah| 凭证（例如 repo）相关联。"
+
+#: ../../source/projects.rst:466
+msgid "Suppose you have two repos:"
+msgstr "假设您有两个仓库："
+
+#: ../../source/projects.rst:468
+msgid "*Prod*: ``Namespace 1`` and ``Namespace 2``, each with collection ``A`` and ``B`` so: ``namespace1.collectionA:v2.0.0`` and ``namespace2.collectionB:v2.0.0``"
+msgstr "*prod*：``Namespace 1`` 和 ``Namespace 2`` 每个都有集合 ``A`` 和 ``B``： ``namespace1.collectionA:v2.0.0`` 和 ``namespace2.collectionB:v2.0.0``"
+
+#: ../../source/projects.rst:470
+msgid "*Stage*: ``Namespace 1`` with only collection ``A`` so: ``namespace1.collectionA:v1.5.0`` on |ah|, you will have a repo URL for *Prod* and *Stage*."
+msgstr "*Stage*: ``Namespace 1`` 只有集合 ``A``：``namespace1.collectionA:v1.5.0`` |ah|，您将会有一个 *Prod* 和 *Stage* 的 repo URL。"
+
+#: ../../source/projects.rst:472
+msgid "You can create an |ah| credential for each one. Then you can assign different levels of access to different organizations. For example, you can create a Developers organization has access to both repos, while an Operations organization just has access to the |ah| **Prod** repo only."
+msgstr "您可以为每个创建一个 |ah| 凭证。然后您可以为不同机构分配不同级别的访问权限。例如，您可以创建一个 Developers 机构，两个仓库都可以被这个机构访问。另外，创建一个 Operations 机构，它只能访问 |ah| **Prod** 仓库。"
+
+#: ../../source/projects.rst:474
+msgid "Refer to `Managing User Access in Ansible Hub <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/1.0/html/managing_user_access_in_automation_hub/index>`_ for |ah| UI-specific instructions."
+msgstr "与 |ah| UI 具体相关的信息，请参阅 `Managing User Access in Ansible Hub <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/1.0/html/managing_user_access_in_automation_hub/index>`_。"
+
+#: ../../source/projects.rst:476
+msgid "If the |ah| has self-signed certificates, click the toggle to enable the setting **Ignore Ansible Galaxy SSL Certificate Verification**. For **public Automation Hub**, which uses a signed certificate, click the toggle to disable it instead. Note this is a global setting:"
+msgstr "如果 |ah| 有自签名证书，点切换启用设置 **Ignore Ansible Galaxy SSL Certificate Verification**。对于使用签名证书的 **public Automation Hub**，点切换来禁用它。请注意，这是一个全局设置："
+
+#: ../../source/projects.rst:480
+msgid "Create a project, where the source repository specifies the necessary collections in a requirements file located in the ``collections/requirements.yml`` file. Refer to the syntax described in the Ansible documentation: https://docs.ansible.com/ansible/latest/user_guide/collections_using.html#install-multiple-collections-with-a-requirements-file."
+msgstr "创建一个项目，其中源仓库在 ``collections/requirements.yml`` 文件中指定必要的集合。请参阅 Ansible 文档中的语法介绍： https://docs.ansible.com/ansible/latest/user_guide/collections_using.html#install-multiple-collections-with-a-requirements-file."
+
+#: ../../source/projects.rst:484
+msgid "In the Projects list view, click |update| to run an update against this project. |At| fetches the Galaxy collections from the ``collections/requirements.yml`` file and report it as changed; and the collections will now be installed for any job template using this project."
+msgstr "在 Projects 列表视图中，点 |update| 以针对此项目运行更新。|At| 从文件 ``collections/requirements.yml`` 中获取 Galaxy 集合并按更改报告 ; 现在将使用这个项目为任何作业模板安装集合。"
+
+#: ../../source/projects.rst:490
+msgid "If updates are needed from Galaxy or Collections, a sync is performed that downloads the required roles, consuming that much more space in your /tmp file. In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "如果需要从 Galaxy 或 Collections 进行更新，则会执行一个下载所需角色的同步，这将消耗您的 /tmp 文件中的更多空间。当您的项目较大时（大约 10 GB），``/tmp`` 可能会导致磁盘空间的问题。"
+
+#: ../../source/projects.rst:493
+msgid "For more information on collections, refer to `Using Collections <https://docs.ansible.com/ansible/latest/user_guide/collections_using.html>`_.  For more information on how Red Hat itself publishes one of these official collections, which can be used to automate your |at| install directly, refer to the `AWX Ansible Collection <https://cloud.redhat.com/ansible/automation-hub/ansible/tower/docs>`_ documentation. This page is accessible with your Red Hat customer credentials as part of your |rhaap| subscription."
+msgstr "如需有关集合的更多信息，请参阅 `Using Collections <https://docs.ansible.com/ansible/latest/user_guide/collections_using.html>`_。如需有关红帽官方发布的、可用于直接自动化 |at| 安装的集合信息，请参阅 `AWX Ansible Collection <https://cloud.redhat.com/ansible/automation-hub/ansible/tower/docs>`_ 文档。此页面可通过您的红帽客户凭证进行访问，它是您的 |rhaap| 订阅的一部分。"
+

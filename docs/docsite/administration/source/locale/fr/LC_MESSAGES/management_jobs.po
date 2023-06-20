@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/management_jobs.rst:4
+msgid "Management Jobs"
+msgstr ""
+
+#: ../../source/management_jobs.rst:12
+msgid ""
+"**Management Jobs** assist in the cleaning of old data from Tower, "
+"including system tracking information, job histories, and activity "
+"streams. You can use this if you have specific retention policies or need"
+" to decrease the storage used by your Tower database. From the Settings "
+"(|settings|) menu, click on **Management Jobs**."
+msgstr ""
+
+#: ../../source/management_jobs.rst:16
+msgid "|management jobs|"
+msgstr ""
+
+#: ../../source/management_jobs.rst:20
+msgid "Several job types are available for you to schedule and launch:"
+msgstr ""
+
+#: ../../source/management_jobs.rst:22
+msgid ""
+"**Cleanup Activity Stream**: Remove activity stream history older than a "
+"specified number of days"
+msgstr ""
+
+#: ../../source/management_jobs.rst:23
+msgid "**Cleanup Fact Details**:   Remove system tracking history"
+msgstr ""
+
+#: ../../source/management_jobs.rst:24
+msgid ""
+"**Cleanup Job Details**: Remove job history older than a specified number"
+" of days"
+msgstr ""
+
+#: ../../source/management_jobs.rst:27
+msgid "Removing Old Activity Stream Data"
+msgstr ""
+
+#: ../../source/management_jobs.rst:33
+msgid ""
+"To remove older activity stream data, click on the |launch| button beside"
+" **Cleanup Activity Stream**."
+msgstr ""
+
+#: ../../source/management_jobs.rst:35
+msgid "|activity stream launch - remove activity stream launch|"
+msgstr ""
+
+#: ../../source/management_jobs.rst:39 ../../source/management_jobs.rst:199
+msgid ""
+"Enter the number of days of data you would like to save and click "
+"**Launch**."
+msgstr ""
+
+#: ../../source/management_jobs.rst:42 ../../source/management_jobs.rst:130
+#: ../../source/management_jobs.rst:202
+msgid "Scheduling"
+msgstr ""
+
+#: ../../source/management_jobs.rst:44
+msgid ""
+"To review or set a schedule for purging data marked for deletion, click "
+"on the |schedule| button."
+msgstr ""
+
+#: ../../source/management_jobs.rst:46
+msgid "|activity stream launch - remove activity stream schedule|"
+msgstr ""
+
+#: ../../source/management_jobs.rst:50
+msgid ""
+"Note that you can turn this scheduled management job on and off easily "
+"using the **ON/OFF** toggle button to the left of the Job Name."
+msgstr ""
+
+#: ../../source/management_jobs.rst:52
+msgid ""
+"Click on the Job Name, in this example \"Cleanup Activity Schedule\", to "
+"review or edit the schedule settings. You can also use the |add| button "
+"to create a new schedule for this management job."
+msgstr ""
+
+#: ../../source/management_jobs.rst:58 ../../source/management_jobs.rst:145
+#: ../../source/management_jobs.rst:219
+msgid ""
+"Enter the appropriate details into the following fields and select "
+"**Save**:"
+msgstr ""
+
+#: ../../source/management_jobs.rst:60 ../../source/management_jobs.rst:147
+#: ../../source/management_jobs.rst:221
+msgid "Name (required)"
+msgstr ""
+
+#: ../../source/management_jobs.rst:61 ../../source/management_jobs.rst:148
+#: ../../source/management_jobs.rst:222
+msgid "Start Date (required)"
+msgstr ""
+
+#: ../../source/management_jobs.rst:62 ../../source/management_jobs.rst:149
+#: ../../source/management_jobs.rst:223
+msgid "Start Time (required)"
+msgstr ""
+
+#: ../../source/management_jobs.rst:63 ../../source/management_jobs.rst:150
+#: ../../source/management_jobs.rst:224
+msgid "Local Time Zone (the entered Start Time should be in this timezone)"
+msgstr ""
+
+#: ../../source/management_jobs.rst:64 ../../source/management_jobs.rst:151
+#: ../../source/management_jobs.rst:225
+msgid ""
+"Repeat Frequency (the appropriate options display as the update frequency"
+" is modified.)"
+msgstr ""
+
+#: ../../source/management_jobs.rst:66 ../../source/management_jobs.rst:153
+#: ../../source/management_jobs.rst:227
+msgid ""
+"The **Details** tab displays a description of the schedule and a list of "
+"the scheduled occurrences in the selected Local Time Zone."
+msgstr ""
+
+#: ../../source/management_jobs.rst:70 ../../source/management_jobs.rst:157
+#: ../../source/management_jobs.rst:231
+msgid ""
+"Jobs are scheduled in UTC. Repeating jobs that runs at a specific time of"
+" day may move relative to a local timezone when Daylight Saving Time "
+"shifts occur."
+msgstr ""
+
+#: ../../source/management_jobs.rst:74 ../../source/management_jobs.rst:161
+#: ../../source/management_jobs.rst:234
+msgid "Notifications"
+msgstr ""
+
+#: ../../source/management_jobs.rst:76 ../../source/management_jobs.rst:163
+#: ../../source/management_jobs.rst:236
+msgid ""
+"To set or review notifications associated with this management job, click"
+" the Configure Notifications (|notify|) button. You can also access "
+"notifications through the Settings (|settings|) menu."
+msgstr ""
+
+#: ../../source/management_jobs.rst:83 ../../source/management_jobs.rst:167
+#: ../../source/management_jobs.rst:240
+msgid ""
+"Click the |add-notifier| button to create a new notification. "
+"Notification types include:"
+msgstr ""
+
+#: ../../source/management_jobs.rst:85 ../../source/management_jobs.rst:169
+#: ../../source/management_jobs.rst:242
+msgid "Email"
+msgstr ""
+
+#: ../../source/management_jobs.rst:86 ../../source/management_jobs.rst:170
+#: ../../source/management_jobs.rst:243
+msgid "Slack"
+msgstr ""
+
+#: ../../source/management_jobs.rst:87 ../../source/management_jobs.rst:171
+#: ../../source/management_jobs.rst:244
+msgid "Twilio"
+msgstr ""
+
+#: ../../source/management_jobs.rst:88 ../../source/management_jobs.rst:172
+#: ../../source/management_jobs.rst:245
+msgid "PagerDuty"
+msgstr ""
+
+#: ../../source/management_jobs.rst:89 ../../source/management_jobs.rst:173
+#: ../../source/management_jobs.rst:246
+msgid "HipChat"
+msgstr ""
+
+#: ../../source/management_jobs.rst:90 ../../source/management_jobs.rst:174
+#: ../../source/management_jobs.rst:247
+msgid "Webhook"
+msgstr ""
+
+#: ../../source/management_jobs.rst:91 ../../source/management_jobs.rst:175
+#: ../../source/management_jobs.rst:248
+msgid "IRC"
+msgstr ""
+
+#: ../../source/management_jobs.rst:97 ../../source/management_jobs.rst:180
+#: ../../source/management_jobs.rst:253
+msgid "Refer to :ref:`ug_notifications` in the |atu| for more information."
+msgstr ""
+
+#: ../../source/management_jobs.rst:101
+msgid "Removing Old Fact (System Tracking) Data"
+msgstr ""
+
+#: ../../source/management_jobs.rst:107
+msgid ""
+"To remove system tracking data, click on the |launch| button beside "
+"**Cleanup Fact Details**."
+msgstr ""
+
+#: ../../source/management_jobs.rst:109
+msgid "|fact details launch - remove fact details launch|"
+msgstr ""
+
+#: ../../source/management_jobs.rst:113
+msgid ""
+"Select the **time period** after which you want to remove old data as "
+"well as the **frequency** for snapshot retention."
+msgstr ""
+
+#: ../../source/management_jobs.rst:115
+msgid ""
+"For facts collected older than the time period specified, you can choose "
+"to save one fact scan (or snapshot) per period of time(frequency). For "
+"example, facts older than 30 days could be purged, while one weekly fact "
+"scan is retained."
+msgstr ""
+
+#: ../../source/management_jobs.rst:119
+msgid "Setting both numerical variables to \"0\" will delete all facts."
+msgstr ""
+
+#: ../../source/management_jobs.rst:121
+msgid ""
+"To help clarify this purge and retention schedule, consider the following"
+" timeline:"
+msgstr ""
+
+#: ../../source/management_jobs.rst:123
+msgid "|fact scan retention timeline|"
+msgstr ""
+
+#: ../../source/management_jobs.rst:127
+msgid ""
+"For this timeline example, consider that you have been running Tower for "
+"17 days (since Jan 1st) and have collected 17 days of fact scans . On Jan"
+" 17, you decide to remove all fact scans older than 3 days while keeping "
+"a weekly snapshot. The most recent scan and a scan from one week earlier "
+"remains, along with the most recent data to be kept."
+msgstr ""
+
+#: ../../source/management_jobs.rst:132
+msgid ""
+"To review or set a schedule for cleaning up system tracking information, "
+"click on the |schedule| button."
+msgstr ""
+
+#: ../../source/management_jobs.rst:134
+msgid "|cleanup fact details schedule|"
+msgstr ""
+
+#: ../../source/management_jobs.rst:143
+msgid ""
+"You can use the |add| button to create a new schedule for this management"
+" job."
+msgstr ""
+
+#: ../../source/management_jobs.rst:185
+msgid "Removing Old Job History"
+msgstr ""
+
+#: ../../source/management_jobs.rst:191
+msgid ""
+"To remove job history older than a specified number of days, click on the"
+" |launch| button beside **Cleanup Job Details**."
+msgstr ""
+
+#: ../../source/management_jobs.rst:195
+msgid "|management jobs - cleanup job launch|"
+msgstr ""
+
+#: ../../source/management_jobs.rst:204
+msgid ""
+"To review or set a schedule for cleaning up job history, click on the "
+"|schedule| button."
+msgstr ""
+
+#: ../../source/management_jobs.rst:208
+msgid "|management jobs - cleanup job schedule|"
+msgstr ""
+
+#: ../../source/management_jobs.rst:212
+msgid ""
+"Note that you can easily turn this scheduled management job on and off "
+"easily using the **ON/OFF** toggle button to the left of the Job Name."
+msgstr ""
+
+#: ../../source/management_jobs.rst:214
+msgid ""
+"Click on the Job Name, in this example \"Cleanup Job Schedule\", to "
+"review or edit the schedule settings. You can also use the |add| button "
+"to create a new schedule for this management job."
+msgstr ""
+

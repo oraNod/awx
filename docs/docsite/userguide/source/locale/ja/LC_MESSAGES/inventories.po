@@ -1,0 +1,1298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/inventories.rst:5
+msgid "Inventories"
+msgstr "インベントリー"
+
+#: ../../source/inventories.rst:10
+msgid "An :term:`Inventory` is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. Inventories are divided into groups and these groups contain the actual hosts. Groups may be sourced manually, by entering host names into the |at|, or from one of its supported cloud providers."
+msgstr ":term:`Inventory` (インベントリー) は、ジョブを起動できるホストのコレクションです (Ansible インベントリーファイルと同様)。インベントリーはグループに分類され、それらのグループには実際のホストが含まれます。グループは、ホスト名を |at| に入力して手動で取得することも、サポートされるクラウドプロバイダーから取得することもできます。"
+
+#: ../../source/inventories.rst:14
+msgid "If you have a custom dynamic inventory script, or a cloud provider that is not yet supported natively in the controller, you can also import that into the controller. Refer to :ref:`ag_inv_import` in the |ata|."
+msgstr "カスタム動的インベントリースクリプト、またはコントローラーでネイティブにサポートされていないクラウドプロバイダーがある場合に、それをコントローラーにインポートすることもできます。|ata| の「:ref:`ag_inv_import`」を参照してください。"
+
+#: ../../source/inventories.rst:17
+msgid "The Inventories window displays a list of the inventories that are currently available. The inventory list may be sorted by name and searched type, organization, description, owners and modifiers of the inventory, or additional criteria as needed."
+msgstr "インベントリウィンドウは、現在利用できるインベントリーの一覧が表示されます。インベントリーの一覧は、名前と検索タイプ、組織、説明、インベントリーの所有者と変更者、または必要に応じて追加の基準で並べ替えることができます。"
+
+#: ../../source/inventories.rst:19
+msgid "|Inventories - home with examples|"
+msgstr "|Inventories - home with examples|"
+
+#: ../../source/inventories.rst:23
+msgid "The list of Inventory details includes:"
+msgstr "インベントリーの詳細の一覧には、以下が含まれます。"
+
+#: ../../source/inventories.rst:25
+msgid "**Name**: The inventory name. Clicking the Inventory name navigates to the properties screen for the selected inventory, which shows the inventory's groups and hosts. (This view is also accessible from the |edit button| icon.)"
+msgstr "**名前**: インベントリー名。インベントリー名をクリックすると、選択したインベントリーのプロパティー画面に移動します。ここでは、インベントリーのグループおよびホストが表示されます (このビューは |edit button| アイコンからアクセスすることもできます)。"
+
+#: ../../source/inventories.rst:29
+msgid "**Status**"
+msgstr "**ステータス**"
+
+#: ../../source/inventories.rst:31
+msgid "The statuses are:"
+msgstr "ステータスは以下のとおりです。"
+
+#: ../../source/inventories.rst:33
+msgid "**Success**: when the inventory source sync completed successfully"
+msgstr "**成功**: インベントリーソースの同期が正常に完了した時"
+
+#: ../../source/inventories.rst:34
+msgid "**Disabled**: no inventory source added to the inventory"
+msgstr "**無効**: インベントリーに追加されたインベントリーソースがない"
+
+#: ../../source/inventories.rst:35
+msgid "**Error**: when the inventory source sync completed with error"
+msgstr "**エラー**: インベントリーソースの同期がエラーを出して完了する場合"
+
+#: ../../source/inventories.rst:37
+msgid "An example of inventories of various states, including one with detail for a disabled state:"
+msgstr "各種の状態のインベントリーの例。これには、無効の状態の詳細が含まれます。"
+
+#: ../../source/inventories.rst:41
+msgid "**Type**: Identifies whether it is a standard inventory or a Smart Inventory."
+msgstr "**タイプ**: これが標準インベントリーか、またはスマートインベントリーであるかどうかを特定します。"
+
+#: ../../source/inventories.rst:42
+msgid "**Organization**: The organization to which the inventory belongs."
+msgstr "**組織**: インベントリーが属する組織。"
+
+#: ../../source/inventories.rst:43
+msgid "**Actions**: The following actions are available for the selected inventory:"
+msgstr "**アクション**: 以下のアクションを選択したインベントリーについて実行できます。"
+
+#: ../../source/inventories.rst:45
+msgid "**Edit** (|edit button|): Edit the properties for the selected inventory"
+msgstr "**編集** (|edit button|): 選択したインベントリーのプロパティーを編集します。"
+
+#: ../../source/inventories.rst:46
+msgid "**Copy** (|copy|): Makes a copy of an existing inventory as a template for creating a new one"
+msgstr "**コピー** (|copy|): 新しいインベントリーの作成用のテンプレートとして、既存のインベントリーのコピーを作成します。"
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "他の作業アイテムが使用するアイテムを削除する場合は、メッセージが開き、削除されるアイテムと、削除の確認を促すプロンプトが表示されます。画面によっては、無効なアイテムや、過去に削除されたアイテムが含まれる場合があるので、それらのアイテムは実行に失敗します。以下は、これらのメッセージ例です。"
+
+#: ../../source/inventories.rst:58
+msgid "Smart Inventories"
+msgstr "スマートインベントリー"
+
+#: ../../source/inventories.rst:63
+msgid "A Smart Inventory is a collection of hosts defined by a stored search that can be viewed like a standard inventory and made to be easily used with job runs. Organization administrators have admin permission to inventories in their organization and can create a Smart Inventories. A Smart Inventory is identified by ``KIND=smart``. You can define a Smart Inventory using the same method being used with Search. ``InventorySource`` is directly associated with an Inventory."
+msgstr "スマートインベントリーは、保存した検索で定義されるホストのコレクションであり、標準インベントリーのように表示し、ジョブ実行で簡単に使用できます。組織管理者には、それぞれの組織内のインベントリーへの管理者パーミッションがあり、スマートインベントリーを作成できます。スマートインベントリーは ``KIND=smart`` で特定されます。スマートインベントリーは、検索で使用されるのと同じ方法で定義できます。``InventorySource`` はインベントリーに直接関連付けられます。"
+
+#: ../../source/inventories.rst:65
+msgid "The ``Inventory`` model has the following new fields that are blank by default but are set accordingly for Smart Inventories:"
+msgstr "``Inventory`` モデルには、以下のように、デフォルトで空白となっている新規フィールドが含まれていますが、スマートインベントリー向けに以下のように設定されます。"
+
+#: ../../source/inventories.rst:67
+msgid "``kind`` is set to ``smart`` for Smart Inventories"
+msgstr "スマートインベントリーの場合には、 ``kind`` は ``smart`` に設定される"
+
+#: ../../source/inventories.rst:68
+msgid "``host_filter`` is set AND ``kind`` is set to ``smart`` for Smart Inventories."
+msgstr "スマートインベントリーの場合には、 ``host_filter`` と ``kind`` は ``smart`` に設定される"
+
+#: ../../source/inventories.rst:70
+msgid "The ``host`` model has a related endpoint, ``smart_inventories`` that identifies a set of all the Smart Inventory a host is associated with. The membership table is updated every time a job runs against a smart inventory."
+msgstr "``host`` モデルには関連するエンドポイント (ホストが関連付けられているすべてのスマートインベントリーのセットを識別する ``smart_inventories``) があります。メンバーシップテーブルは、スマートインベントリーに対してジョブが実行されるたびに更新されます。"
+
+#: ../../source/inventories.rst:74
+msgid "To update the memberships more frequently, you can change the file-based setting ``AWX_REBUILD_SMART_MEMBERSHIP`` to **True** (default is False). This will update memberships in the following events:"
+msgstr "メンバーシップをより頻繁に更新するには、ファイルベースの設定 ``AWX_REBUILD_SMART_MEMBERSHIP`` を **True** (デフォルトは False) に変更します。これにより、次のイベントのメンバーシップが更新されます。"
+
+#: ../../source/inventories.rst:76
+msgid "a new host is added"
+msgstr "新規ホストが追加される"
+
+#: ../../source/inventories.rst:77
+msgid "an existing host is modified (updated or deleted)"
+msgstr "既存ホストが変更される (更新または削除される)"
+
+#: ../../source/inventories.rst:78
+msgid "a new Smart Inventory is added"
+msgstr "新規スマートインベントリーが追加される"
+
+#: ../../source/inventories.rst:79
+msgid "an existing Smart Inventory is modified (updated or deleted)"
+msgstr "既存スマートインベントリーが変更される (更新または削除される)"
+
+#: ../../source/inventories.rst:81
+msgid "You can view actual inventories without being editable:"
+msgstr "実際のインベントリーは、編集可能にせずに表示することができます。"
+
+#: ../../source/inventories.rst:83
+msgid "Names of Host and Group created as a result of an inventory source sync"
+msgstr "ホストおよびグループの名前はインベントリーソースの同期の結果として作成されます。"
+
+#: ../../source/inventories.rst:84
+msgid "Group records cannot be edited or moved"
+msgstr "グループのレコードは編集したり、移動したりすることはできません。"
+
+#: ../../source/inventories.rst:86
+msgid "You cannot create hosts from a Smart Inventory host endpoint (``/inventories/N/hosts/``) as with a normal inventory. The administrator of a Smart Inventory has permission to edit fields such as the name, description, variables, and the ability to delete, but does not have the permission to modify the ``host_filter``, because that will affect which hosts (that have a primary membership inside another inventory) are included in the smart inventory. Note, ``host_filter`` only apply to hosts inside of inventories inside of the Smart Inventory's organization."
+msgstr "通常のインベントリーと同様に、スマートインベントリーのホストエンドポイント (``/inventories/N/hosts/``) からホストを作成することはできません。スマートインベントリーの管理者には、名前、説明、変数および削除機能などのフィールドを編集するパーミッションがありますが、``host_filter`` を変更するパーミッションはありません。これを変更すると、(別のインベントリー内にプライマリーメンバーシップを有する) ホストの中のどのホストがスマートインベントリーに組み込まれるかに影響があるためです。``host_filter`` はスマートインベントリーの組織内のインベントリーに含まれるホストのみに適用されることに注意してください。"
+
+#: ../../source/inventories.rst:88
+msgid "In order to modify the ``host_filter``, you need to be the organization administrator of the inventory's organization. Organization admins already have implicit \"admin\" access to all inventories inside the organization, therefore, this does not convey any permissions they did not already possess."
+msgstr "``host_filter`` を変更するには、インベントリーの組織の組織管理者である必要があります。組織管理者には組織内のすべてのインベントリーへの暗黙的な「管理」アクセスをすでに有しているため、組織管理者が有していないパーミッションが必要になることはありません。"
+
+#: ../../source/inventories.rst:90
+msgid "Administrators of the Smart Inventory can grant other users (who are not also admins of your organization) permissions like \"use\" \"adhoc\" to the smart inventory, and these will allow the actions indicate by the role, just like other standard inventories. However, this will not give them any special permissions to hosts (which live in a different inventory). It will not allow them direct read permission to hosts, or permit them to see additional hosts under ``/#/hosts/``, although they can still view the hosts under the smart inventory host list."
+msgstr "スマートインベントリーの管理者は、(組織の管理者ではない) 他のユーザーに対し、スマートインベントリーへの「使用」や「アドホック」などのパーミッションを付与することができ、これらのパーミッションは、他の標準インベントリーの場合と同様にロールが示唆する各種アクションを許可します。ただし、これにより、これらの管理者に (異なるインベントリーにある) ホストへの特別なパーミッションが付与される訳ではありません。それらの管理者は、スマートインベントリーホストの一覧でホストを閲覧できますが、ホストの直接の読み取りパーミッションが付与される訳ではなく、``/#/hosts/`` で追加のホストを確認できる訳でもありません。"
+
+#: ../../source/inventories.rst:92
+msgid "In some situations, you can modify the following:"
+msgstr "ある状況では、以下を変更することができます。"
+
+#: ../../source/inventories.rst:94
+msgid "A new Host manually created on Inventory w/ inventory sources"
+msgstr "インベントリーソースを使ってインベントリーで手動で作成された新規ホスト"
+
+#: ../../source/inventories.rst:95
+msgid "In Groups that were created as a result of inventory source syncs"
+msgstr "インベントリーソースの同期の結果として作成されたグループ"
+
+#: ../../source/inventories.rst:96
+msgid "Variables on Host and Group are changeable"
+msgstr "変更可能なホストおよびグループの変数"
+
+#: ../../source/inventories.rst:98
+msgid "Hosts associated with the Smart Inventory are manifested at view time. If the results of a Smart Inventory contains more than one host with identical hostnames, only one of the matching hosts will be included as part of the Smart Inventory, ordered by Host ID."
+msgstr "スマートインベントリーに関連付けられたホストは表示される際に明示されます。スマートインベントリーの結果に同じホスト名を持つ複数のホストが含まれる場合、一致するホストの 1 つのみがスマートインベントリーの一部として組み込まれ、ホスト ID 別に並べ替えられます。"
+
+#: ../../source/inventories.rst:104
+msgid "Smart Host Filter"
+msgstr "スマートホストフィルター"
+
+#: ../../source/inventories.rst:106
+msgid "You can use a search filter to populate hosts for an inventory. This feature utilized the capability of the fact searching feature."
+msgstr "検索フィルターを使用してインベントリーのホストを設定できます。この機能では、ファクト検索機能を利用できます。"
+
+#: ../../source/inventories.rst:108
+msgid "Facts generated by an Ansible playbook during a Job Template run are stored by the |at| into the database whenever ``use_fact_cache=True`` is set per-Job Template. New facts are merged with existing facts and are per-host. These stored facts can be used to filter hosts via the ``/api/v2/hosts`` endpoint, using the ``GET`` query parameter ``host_filter`` For example: ``/api/v2/hosts?host_filter=ansible_facts__ansible_processor_vcpus=8``"
+msgstr "``use_fact_cache=True`` がジョブテンプレートごとに設定されている場合には、|at| は、ジョブテンプレートの実行時に Ansible Playbook で生成されるファクトをデータベースに保存します。新規ファクトは既存ファクトにマージされ、ホストごとに設定されます。保存したこれらのファクトは、``GET`` クエリーパラメーター ``host_filter`` を使用して、``/api/v2/hosts`` エンドポイント経由でホストのフィルターに使用できます。例: ``/api/v2/hosts?host_filter=ansible_facts__ansible_processor_vcpus=8``"
+
+#: ../../source/inventories.rst:110
+msgid "The ``host_filter`` parameter allows for:"
+msgstr "``host_filter`` パラメーターでは、以下が可能です。"
+
+#: ../../source/inventories.rst:112
+msgid "grouping via ()"
+msgstr "() でのグループ化"
+
+#: ../../source/inventories.rst:113
+msgid "use of the boolean and operator:"
+msgstr "ブール値および演算子の使用:"
+
+#: ../../source/inventories.rst:115
+msgid "``__`` to reference related fields in relational fields"
+msgstr "``__``: 関連付けられたフィールドの関連フィールドを参照します。"
+
+#: ../../source/inventories.rst:116
+msgid "``__`` is used on ansible_facts to separate keys in a JSON key path"
+msgstr "``__``: JSON キーパスでキーを分離するために ansible_facts で使用されます。"
+
+#: ../../source/inventories.rst:117
+msgid "``[]`` is used to denote a json array in the path specification"
+msgstr "``[]``: パスの指定で json アレイを表すために使用されます。"
+
+#: ../../source/inventories.rst:118
+msgid "``\"\"`` can be used in the value when spaces are wanted in the value"
+msgstr "``\"\"``: 値にスペースが必要な場合、その値に使用されます。"
+
+#: ../../source/inventories.rst:120
+msgid "\"classic\" Django queries may be embedded in the ``host_filter``"
+msgstr "「標準的な」Django クエリーを ``host_filter`` に組み込むことができる"
+
+#: ../../source/inventories.rst:122
+msgid "Examples:"
+msgstr "例:"
+
+#: ../../source/inventories.rst:134
+msgid "You can search ``host_filter`` by host name, group name, and Ansible facts."
+msgstr "``host_filter`` はホスト名、グループ名、および Ansible ファクト別に検索できます。"
+
+#: ../../source/inventories.rst:136
+msgid "The format for a group search is:"
+msgstr "グループ検索の形式は以下のようになります。"
+
+#: ../../source/inventories.rst:142
+msgid "The format for a fact search is:"
+msgstr "ファクト検索の形式は以下の ようになります。"
+
+#: ../../source/inventories.rst:148
+msgid "You can also perform Smart Search searches, which consist a host name and host description."
+msgstr "また、ホスト名とホストの説明で構成されるスマート検索の検索を実行することもできます。"
+
+#: ../../source/inventories.rst:155
+msgid "If a search term in ``host_filter`` is of string type, to make the value a number (e.g. ``2.66``), or a JSON keyword (e.g. ``null``, ``true`` or ``false``) valid, add double quotations around the value to prevent the controller from mistakenly parsing it as a non-string:"
+msgstr "``host_filter`` の検索用語が文字列タイプの場合には、値を数値 (例: ``2.66``) にしたり、JSON キーワード (例: ``null``、``true`` または ``false``) を有効にしたりするには、値を二重引用符で囲みます。これにより、コントローラーが誤って検索用語を文字列以外として解析するのを防ぐことができます。"
+
+#: ../../source/inventories.rst:165
+msgid "Define host filter with ansible_facts"
+msgstr "ansible_facts を使用したホストフィルターの定義"
+
+#: ../../source/inventories.rst:167
+msgid "To use ``ansible_facts`` to define the host filter when creating Smart Inventories, perform the following steps:"
+msgstr "スマートインベントリーの作成時に ``ansible_facts`` を使用してホストフィルターを定義するには、以下の手順を実行します。"
+
+#: ../../source/inventories.rst:169
+msgid "In the *Create new smart inventory screen*, click the |search| button next to the **Smart host filter** field to open a pop-up window to filter hosts for this inventory."
+msgstr "*Create new smart inventory* 画面で **Smart host filter** フィールドの横にある |search| ボタンをクリックし、ポップアップウィンドウを開いてこのインベントリーのホストを絞り込みます。"
+
+#: ../../source/inventories.rst:173
+msgid "In the search pop-up window, change the search criteria from **Name** to **Advanced** and select **ansible_facts** from the **Key** field."
+msgstr "検索ポップアップウィンドウで、検索条件を **Name** から **Advanced** に変更し、**Key** フィールドから **ansible_facts** を選択します。"
+
+#: ../../source/inventories.rst:178
+msgid "If you wanted to add an ansible fact of"
+msgstr "次の Ansible ファクトを追加する場合"
+
+#: ../../source/inventories.rst:185
+msgid "In the search field, enter ``ansible_processor[]=\"GenuineIntel\"`` (no extra spaces or ``__`` before the value) and press **[Enter]**."
+msgstr "検索フィールドに ``ansible_processor[]=\"GenuineIntel\"`` を入力し (値の前に余分なスペースまたは ``__`` を追加しない)、**[Enter]** を押します。"
+
+#: ../../source/inventories.rst:189
+msgid "The resulting search criteria for the specified ansible fact populates in the lower part of the window."
+msgstr "これにより、指定した Ansible ファクトの検索条件がウィンドウの下部に反映されます。"
+
+#: ../../source/inventories.rst:193
+msgid "Click **Select** to add it to the **Smart host filter** field."
+msgstr "**Select** をクリックして、**Smart host filter** フィールドに追加します。"
+
+#: ../../source/inventories.rst:197
+msgid "Click **Save** to save the new Smart Inventory."
+msgstr "**Save** をクリックして、新規スマートインベントリーを保存します。"
+
+#: ../../source/inventories.rst:199
+msgid "The Details tab of the new Smart Inventory opens and displays the specified ansible facts in the **Smart host filter** field."
+msgstr "新規スマートインベントリーの Details タブが開き、**Smart host filter** フィールドに指定した Ansible ファクトが表示されます。"
+
+#: ../../source/inventories.rst:203
+msgid "From the Details view, you can edit the **Smart host filter** field by clicking **Edit** and delete existing filter(s), clear all existing filters, or add new ones."
+msgstr "Details ビューで、**Edit** をクリックして **Smart host filter** フィールドを編集することや、既存フィルターの削除、すべての既存フィルターの消去、新しいフィルターの追加が可能です。"
+
+#: ../../source/inventories.rst:211
+msgid "Inventory Plugins"
+msgstr "インベントリープラグイン"
+
+#: ../../source/inventories.rst:216
+msgid "Inventory updates use dynamically-generated YAML files which are parsed by their respective inventory plugin. In |atversion|, users can provide the new style inventory plugin config directly to the controller via the inventory source ``source_vars`` for all the following inventory sources:"
+msgstr "インベントリーの更新は、それぞれのインベントリープラグインで解析される動的に生成された YAML ファイルを使用します。|atversion| では、ユーザーは以下のすべてのインベントリーソースの ``source_vars`` インベントリーソースを使用して、新しいスタイルのインベントリープラグイン設定をコントローラーに直接提供できるようになりました。"
+
+#: ../../source/inventories.rst:218
+msgid ":ref:`ug_source_ec2`"
+msgstr ":ref:`ug_source_ec2`"
+
+#: ../../source/inventories.rst:219
+msgid ":ref:`ug_source_gce`"
+msgstr ":ref:`ug_source_gce`"
+
+#: ../../source/inventories.rst:220
+msgid ":ref:`ug_source_azure`"
+msgstr ":ref:`ug_source_azure`"
+
+#: ../../source/inventories.rst:221
+msgid ":ref:`ug_source_vmvcenter`"
+msgstr ":ref:`ug_source_vmvcenter`"
+
+#: ../../source/inventories.rst:222
+msgid ":ref:`ug_source_satellite`"
+msgstr ":ref:`ug_source_satellite`"
+
+#: ../../source/inventories.rst:223
+msgid ":ref:`ug_source_insights`"
+msgstr ":ref:`ug_source_insights`"
+
+#: ../../source/inventories.rst:224
+msgid ":ref:`ug_source_openstack`"
+msgstr ":ref:`ug_source_openstack`"
+
+#: ../../source/inventories.rst:225
+msgid ":ref:`ug_source_rhv`"
+msgstr ":ref:`ug_source_rhv`"
+
+#: ../../source/inventories.rst:226
+msgid ":ref:`ug_source_tower`"
+msgstr ":ref:`ug_source_tower`"
+
+#: ../../source/inventories.rst:229
+msgid "Newly created configurations for inventory sources will contain the default plugin configuration values. If you want your newly created inventory sources in 3.8 to match the output of a 3.7 source, you must apply a specific set of configuration values for that source. To ensure backward compatibility, the controller uses \"templates\" for each of these sources to force the output of inventory plugins into the legacy format. Refer to :ref:`ir_inv_plugin_templates_reference` section of this guide for each source and their respective templates to help you migrate to the new style inventory plugin output."
+msgstr "インベントリーソースに新規に作成された設定には、デフォルトのプラグイン設定値が含まれます。3.8 で新たに作成されたインベントリーソースを 3.7 ソースの出力に一致させるには、そのソースに特定の設定値セットを適用する必要があります。後方互換性を確保するために、コントローラーはこれらのソースごとに「テンプレート」を使用して、インベントリープラグインの出力をレガシー形式で使用します。新しいスタイルインベントリープラグインの出力に移行するのに役立つ各ソースおよびそのテンプレートについては、本書の「:ref:`ir_inv_plugin_templates_reference`」を参照してください。"
+
+#: ../../source/inventories.rst:231
+msgid "``source_vars`` that contain ``plugin: foo.bar.baz`` as a top-level key will be replaced with the appropriate fully-qualified inventory plugin name at runtime based on the ``InventorySource`` source. For example, if ec2 is selected for the ``InventorySource`` then, at run-time, plugin will be set to ``amazon.aws.aws_ec2``."
+msgstr "トップレベルキーとして ``plugin: foo.bar.baz`` が含まれる ``source_vars`` では、``InventorySource`` ソースに基づいてランタイム時に適切な完全修飾インベントリープラグイン名に置き換えられます。たとえば、実行時に ``InventorySource`` に ec2 が選択されると、プラグインが ``amazon.aws.aws_ec2`` に設定されます。"
+
+#: ../../source/inventories.rst:237
+msgid "Add a new inventory"
+msgstr "新規インベントリーの追加"
+
+#: ../../source/inventories.rst:243
+msgid "Adding a new inventory involves several components:"
+msgstr "新規インベントリーを追加するには、複数のコンポーネントが必要です。"
+
+#: ../../source/inventories.rst:245
+msgid ":ref:`ug_inventories_add_permissions`"
+msgstr ":ref:`ug_inventories_add_permissions`"
+
+#: ../../source/inventories.rst:246
+msgid ":ref:`ug_inventories_add_groups`"
+msgstr ":ref:`ug_inventories_add_groups`"
+
+#: ../../source/inventories.rst:247
+msgid ":ref:`ug_inventories_add_host`"
+msgstr ":ref:`ug_inventories_add_host`"
+
+#: ../../source/inventories.rst:248
+msgid ":ref:`ug_inventories_add_source`"
+msgstr ":ref:`ug_inventories_add_source`"
+
+#: ../../source/inventories.rst:249
+msgid ":ref:`ug_inventories_view_completed_jobs`"
+msgstr ":ref:`ug_inventories_view_completed_jobs`"
+
+#: ../../source/inventories.rst:251
+msgid "To create a new inventory or Smart Inventory:"
+msgstr "新規インベントリーまたはスマートインベントリーを作成するには、以下を実行します。"
+
+#: ../../source/inventories.rst:253
+msgid "Click the **Add** button, and select the type of inventory to create."
+msgstr "**追加** ボタンをクリックし、作成するインベントリーのタイプを選択します。"
+
+#: ../../source/inventories.rst:255
+msgid "The type of inventory is identified at the top of the create form."
+msgstr "インベントリーのタイプは、作成フォームの上部に識別されます。"
+
+#: ../../source/inventories.rst:257
+msgid "|Inventories_create_new - create new inventory|"
+msgstr "|Inventories_create_new - create new inventory|"
+
+#: ../../source/inventories.rst:261
+msgid "Enter the appropriate details into the following fields:"
+msgstr "以下のフィールドに該当する詳細を入力します。"
+
+#: ../../source/inventories.rst:263
+msgid "**Name**: Enter a name appropriate for this inventory."
+msgstr "**名前**: このインベントリーに適した名前を入力します。"
+
+#: ../../source/inventories.rst:264
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)."
+msgstr "**説明**: 任意の説明を入力します (オプション)。"
+
+#: ../../source/inventories.rst:265
+msgid "**Organization**: Required. Choose among the available organizations."
+msgstr "**組織**: 必須。利用可能な組織から選択します。"
+
+#: ../../source/inventories.rst:266
+msgid "**Smart Host Filter**: (Only applicable to Smart Inventories) Click the |search| button to open a separate window to filter hosts for this inventory. These options are based on the organization you chose."
+msgstr "**スマートホストフィルター**: (スマートインベントリーのみに適用) |search| ボタンをクリックして別のウィンドウを開き、このインベントリーのホストをフィルターします。これらのオプションは、選択した組織に基づくものです。"
+
+#: ../../source/inventories.rst:268
+msgid "Filters are similar to tags in that tags are used to filter certain hosts that contain those names. Therefore, to populate the **Smart Host Filter** field, you are specifying a tag that contains the hosts you want, not actually selecting the hosts themselves. Enter the tag in the **Search** field and press [Enter]. Filters are case-sensitive. Refer to the :ref:`ug_host_filters` section for more information."
+msgstr "フィルターは、タグを使用して該当の名前を含むホストをフィルターする点で、タグに似ています。そのため、**スマートホストフィルター** フィールドにデータを投入するには、実際にホスト自体を選択するのではなく、希望のホストを含むタグを指定します。**検索** フィールドにタグを入力して、[Enter] を押します。 フィルターでは、大文字と小文字が区別されます。詳細は、「:ref:`ug_host_filters`」セクションを参照してください。"
+
+#: ../../source/inventories.rst:270
+msgid "**Instance Groups**: Click the |search| button to open a separate window. Choose the instance groups for this inventory to run on. If the list is extensive, use the search to narrow the options."
+msgstr "**インスタンスグループ**: |search| ボタンをクリックして別個のウィンドウを開きます。このインベントリーの実行に使用するインスタンスグループを選択します。一覧に多くのオプションが含まれる場合、検索を使用してオプションの範囲を絞ります。"
+
+#: ../../source/inventories.rst:271
+msgid "**Variables**: Variable definitions and values to be applied to all hosts in this inventory. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**変数**: このインベントリーのすべてのホストに適用される変数の定義および値。JSON または YAML 構文を使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。"
+
+#: ../../source/inventories.rst:275
+msgid "|Inventories_create_new_saved - create new inventory|"
+msgstr "|Inventories_create_new_saved - create new inventory|"
+
+#: ../../source/inventories.rst:279
+msgid "Click **Save** when done."
+msgstr "完了したら **保存** をクリックします。"
+
+#: ../../source/inventories.rst:281
+msgid "After saving the new inventory, you can proceed with configuring permissions, groups, hosts, sources, and view completed jobs, if applicable to the type of inventory. For more instructions, refer to the subsequent sections."
+msgstr "新規インベントリーが保存された後に、パーミッション、グループ、ホスト、およびソースの設定や、完了したジョブの表示に進みます (インベントリーのタイプに応じて適用可能な場合)。詳細の説明については、後続のセクションを参照してください。"
+
+#: ../../source/inventories.rst:286
+msgid "Add permissions"
+msgstr "パーミッションの追加"
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "**アクセス** タブで **追加** ボタンをクリックします。"
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "追加するユーザーまたはチームを選択し、**次へ**をクリックします。"
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "リストから 1 つまたは複数のユーザーを選択します。これには、メンバーとして追加するユーザーの隣にあるチェックボックスをクリックして、**次へ** をクリックします。"
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "この例では、追加するユーザーが 2 つ選択されています。"
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "選択したユーザーやチームに割り当てるロールを選択します。役割の一覧は、下にスクロールして確認してください。リソースによって利用できるオプションが異なります。"
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "**保存** ボタンをクリックすると、選択したユーザーまたはチームにロールが適用され、メンバーとして追加されます。"
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "ユーザー/チームの追加ウィンドウが閉じ、各ユーザーやチームに割り当てられた更新済みのロールが表示されます。"
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "特定ユーザーのロールを削除するには、そのリソースの横にある「関連付けの解除」(x) ボタンをクリックします。"
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "これにより確認ダイアログが起動し、関連付けの解除を確定するように求められます。"
+
+#: ../../source/inventories.rst:294
+msgid "Add groups"
+msgstr "グループの追加"
+
+#: ../../source/inventories.rst:300
+msgid "Inventories are divided into groups, which may contain hosts and other groups, and hosts. Groups are only applicable to standard inventories and is not a configurable directly through a Smart Inventory. You can associate an existing group through host(s) that are used with standard inventories. There are several actions available for standard inventories:"
+msgstr "インベントリーは、ホストおよび他のグループか、またはホストが含まれるグループに分類されます。グループは標準インベントリーのみに適用され、スマートインベントリーから直接設定することはできません。既存グループは、標準インベントリーで使用されるホストに関連付けることができます。標準インベントリーで選択可能なアクションには以下が含まれます。"
+
+#: ../../source/inventories.rst:302
+msgid "Create a new Group"
+msgstr "新規グループの作成"
+
+#: ../../source/inventories.rst:303
+msgid "Create a new Host"
+msgstr "新規ホストの作成"
+
+#: ../../source/inventories.rst:304
+msgid "Run a command on the selected Inventory"
+msgstr "選択したインベントリーでのコマンドの実行"
+
+#: ../../source/inventories.rst:305
+msgid "Edit Inventory properties"
+msgstr "インベントリープロパティーの編集"
+
+#: ../../source/inventories.rst:306
+msgid "View activity streams for Groups and Hosts"
+msgstr "グループおよびホストのアクティビティーストリームの表示"
+
+#: ../../source/inventories.rst:307
+msgid "Obtain help building your Inventory"
+msgstr "インベントリーの構築に関するヘルプの取得"
+
+#: ../../source/inventories.rst:312
+msgid "Inventory sources are not associated with groups. Spawned groups are top-level and may still have child groups, and all of these spawned groups may have hosts."
+msgstr "インベントリーソースはグループに関連付けられていません。生成されたグループは最上位であり、依然として子グループを持つ可能性があり、生成されるすべてのグループにホストを含めることができます。"
+
+#: ../../source/inventories.rst:314
+msgid "To create a new group for an inventory:"
+msgstr "インベントリーの新規グループを作成するには、以下を実行します。"
+
+#: ../../source/inventories.rst:316
+msgid "Click the **Add** button to open the **Create Group** window."
+msgstr "**追加** ボタンをクリックして、**グループの作成** ウィンドウを開きます。"
+
+#: ../../source/inventories.rst:318
+msgid "|Inventories_manage_group_add|"
+msgstr "|Inventories_manage_group_add|"
+
+#: ../../source/inventories.rst:322
+#: ../../source/inventories.rst:390
+#: ../../source/inventories.rst:465
+msgid "Enter the appropriate details into the required and optional fields:"
+msgstr "必須およびオプションのフィールドに該当する詳細を入力します。"
+
+#: ../../source/inventories.rst:324
+#: ../../source/inventories.rst:342
+#: ../../source/inventories.rst:467
+msgid "**Name**: Required"
+msgstr "**名前**: 必須"
+
+#: ../../source/inventories.rst:325
+#: ../../source/inventories.rst:343
+#: ../../source/inventories.rst:393
+#: ../../source/inventories.rst:468
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)"
+msgstr "**説明**: 任意の説明を入力します (オプション)。"
+
+#: ../../source/inventories.rst:326
+#: ../../source/inventories.rst:344
+#: ../../source/inventories.rst:394
+msgid "**Variables**: Enter definitions and values to be applied to all hosts in this group. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**変数**: このグループのすべてのホストに適用される定義および値を入力します。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。"
+
+#: ../../source/inventories.rst:328
+#: ../../source/inventories.rst:346
+#: ../../source/inventories.rst:396
+msgid "When done, click **Save**."
+msgstr "完了したら、**保存** をクリックします。"
+
+#: ../../source/inventories.rst:332
+msgid "Add groups within groups"
+msgstr "グループ内でのグループの追加"
+
+#: ../../source/inventories.rst:334
+msgid "To add groups within groups:"
+msgstr "グループ内にグループを追加するには、以下を実行します。"
+
+#: ../../source/inventories.rst:336
+msgid "Click the **Related Groups** tab."
+msgstr "**関連するグループ** タブをクリックします。"
+
+#: ../../source/inventories.rst:338
+msgid "Click the **Add** button, and select whether to add a group that already exists in your configuration or create a new group."
+msgstr "**追加** ボタンをクリックして、設定にすでに存在するグループを追加するか、新規グループを作成するかどうかを選択します。"
+
+#: ../../source/inventories.rst:340
+msgid "If creating a new group, enter the appropriate details into the required and optional fields:"
+msgstr "新規グループを作成する場合、該当する詳細情報を必須およびオプションフィールドに入力します。"
+
+#: ../../source/inventories.rst:348
+msgid "The **Create Group** window closes and the newly created group displays as an entry in the list of groups associated with the group that it was created for."
+msgstr "**グループの作成** ウィンドウが閉じ、新規に作成されたグループが、元のグループに関連付けられたグループの一覧のエントリーとして表示されます。"
+
+#: ../../source/inventories.rst:350
+msgid "|Inventories add group subgroup|"
+msgstr "|Inventories add group subgroup|"
+
+#: ../../source/inventories.rst:354
+msgid "If you chose to add an existing group, available groups will appear in a separate selection window."
+msgstr "既存グループを追加する選択をした場合、選択可能なグループが別個の選択ウィンドウに表示されます。"
+
+#: ../../source/inventories.rst:356
+msgid "|Inventories add group existing subgroup|"
+msgstr "|Inventories add group existing subgroup|"
+
+#: ../../source/inventories.rst:360
+msgid "Once a group is selected, it displays as an entry in the list of groups associated with the group."
+msgstr "グループが選択されると、グループに関連付けられたグループの一覧のエントリーとして表示されます。"
+
+#: ../../source/inventories.rst:362
+msgid "5. To configure additional groups and hosts under the subgroup, click on the name of the subgroup from the list of groups and repeat the same steps described in this section."
+msgstr "5. サブグループの下に追加のグループおよびホストを設定するには、グループの一覧からサブグループの名前をクリックし、このセクションの説明にある同じ手順を繰り返します。"
+
+#: ../../source/inventories.rst:367
+msgid "View or edit inventory groups"
+msgstr "インベントリーグループの表示または編集"
+
+#: ../../source/inventories.rst:369
+msgid "The list view displays all your inventory groups at once, or you can filter it to only display the root group(s). An inventory group is considered a root group if it is not a subset of another group."
+msgstr "リストビューは、一度にすべてのインベントリーグループを表示するか、フィルタリングして root グループのみを表示できるようになりました。インベントリーグループは、別のグループのサブセットでない場合には、root グループとみなされます。"
+
+#: ../../source/inventories.rst:371
+msgid "You may be able to delete a subgroup without concern for dependencies, since the controller will look for dependencies such as any child groups or hosts. If any exists, a confirmation dialog displays for you to choose whether to delete the root group and all of its subgroups and hosts; or promote the subgroup(s) so they become the top-level inventory group(s), along with their host(s)."
+msgstr "コントローラは子グループやホストなどの依存関係を検索するため、依存関係を気にせずにサブグループを削除できる場合があります。存在する場合は、確認ダイアログが表示され、ルートグループとそのすべてのサブグループおよびホストを削除するかどうかを選択できます。または、ホストとともにトップレベルのインベントリグループになるようにサブグループをプロモートします。"
+
+#: ../../source/inventories.rst:378
+msgid "Add hosts"
+msgstr "ホストの追加"
+
+#: ../../source/inventories.rst:380
+msgid "You can configure hosts for the inventory as well as for groups and groups within groups. To configure hosts:"
+msgstr "ホストをインベントリー、グループおよびグループ内のグループ用に設定することができます。ホストを設定するには、以下を実行します。"
+
+#: ../../source/inventories.rst:382
+msgid "Click the **Hosts** tab."
+msgstr "**ホスト** タブをクリックします。"
+
+#: ../../source/inventories.rst:384
+msgid "Click the **Add** button, and select whether to add a host that already exists in your configuration or create a new host."
+msgstr "**追加** ボタンをクリックして、設定にすでに存在するホストを追加するか、新規ホストを作成するかどうかを選択します。"
+
+#: ../../source/inventories.rst:386
+msgid "If creating a new host, select the |toggle button| button to specify whether or not to include this host while running jobs."
+msgstr "新規ホストを作成する場合は、|toggle button| ボタンを選択して、ジョブの実行中にこのホストを組み込むかどうかを指定します。"
+
+#: ../../source/inventories.rst:392
+msgid "**Host Name**: Required"
+msgstr "**ホスト名**: 必須"
+
+#: ../../source/inventories.rst:398
+msgid "The **Create Host** window closes and the newly created host displays as an entry in the list of hosts associated with the group that it was created for."
+msgstr "**ホストの作成** ウィンドウが閉じ、新規に作成されたホストが、元のグループに関連付けられたホストの一覧のエントリーとして表示されます。"
+
+#: ../../source/inventories.rst:400
+msgid "|Inventories add group host|"
+msgstr "|Inventories add group host|"
+
+#: ../../source/inventories.rst:404
+msgid "If you chose to add an existing host, available hosts will appear in a separate selection window."
+msgstr "既存ホストを追加する選択をした場合、選択可能なホストが別個の選択ウィンドウに表示されます。"
+
+#: ../../source/inventories.rst:406
+msgid "|Inventories add existing host|"
+msgstr "|Inventories add existing host|"
+
+#: ../../source/inventories.rst:410
+msgid "Once a host is selected, it displays as an entry in the list of hosts associated with the group. You can disassociate a host from this screen by selecting the host and click the **Disassociate** button."
+msgstr "ホストを選択すると、グループに関連付けられたホストの一覧のエントリーとして表示されます。ホストを選択して、**関連付けの解除** ボタンをクリックして、この画面からホストの関連付けを解除できます。"
+
+#: ../../source/inventories.rst:414
+msgid "You may also run ad hoc commands from this screen. Refer to :ref:`ug_inventories_run_ad_hoc` for more detail."
+msgstr "この画面からアドホックのコマンドを実行することもできます。詳細は、「:ref:`ug_inventories_run_ad_hoc`」を参照してください。"
+
+#: ../../source/inventories.rst:417
+msgid "6. To configure additional groups for the host, click on the name of the host from the list of hosts."
+msgstr "6. ホストの追加グループを設定するには、ホストの一覧からホストの名前をクリックします。"
+
+#: ../../source/inventories.rst:420
+msgid "|Inventories add group host emphasized|"
+msgstr "|Inventories add group host emphasized|"
+
+#: ../../source/inventories.rst:424
+msgid "This opens the Details tab of the selected host."
+msgstr "これにより、選択したホストの「詳細」タブが開きます。"
+
+#: ../../source/inventories.rst:426
+msgid "|Inventories add group host details|"
+msgstr "|Inventories add group host details|"
+
+#: ../../source/inventories.rst:430
+msgid "Click the **Groups** tab to configure groups for the host."
+msgstr "**グループ** タブをクリックして、ホストのグループを設定します。"
+
+#: ../../source/inventories.rst:432
+msgid "Click the **Add** button to associate the host with an existing group."
+msgstr "**追加** ボタンをクリックして、ホストを既存グループに関連付けます。"
+
+#: ../../source/inventories.rst:434
+msgid "Available groups appear in a separate selection window."
+msgstr "選択可能なグループが別個の選択ウィンドウに表示されます。"
+
+#: ../../source/inventories.rst:438
+msgid "Click to select the group(s) to associate with the host and click **Save**."
+msgstr "クリックして、ホストに関連付けるグループを選択し、**保存** をクリックします。"
+
+#: ../../source/inventories.rst:440
+msgid "Once a group is associated, it displays as an entry in the list of groups associated with the host."
+msgstr "グループが関連付けられると、そのグループがホストに関連付けられたグループの一覧にエントリーとして表示されます。"
+
+#: ../../source/inventories.rst:442
+msgid "If a host was used to run a job, you can view details about those jobs in the **Completed Jobs** tab of the host and click **Expanded** to view details about each job."
+msgstr "ホストがジョブの実行に使用されている場合には、このジョブの詳細は、ホストの **完了したジョブ** タブで確認できます。各ジョブの詳細を表示するには、**展開** をクリックします。"
+
+#: ../../source/inventories.rst:450
+msgid "Add source"
+msgstr "ソースの追加"
+
+#: ../../source/inventories.rst:452
+msgid "Inventory sources are not associated with groups. Spawned groups are top-level and may still have child groups, and all of these spawned groups may have hosts. Adding a source to an inventory only applies to standard inventories. Smart inventories inherit their source from the standard inventories they are associated with. To configure the source for the inventory:"
+msgstr "インベントリーソースはグループに関連付けられていません。生成されたグループは最上位であり、依然として子グループを持つ可能性があり、生成されるすべてのグループにホストを含めることができます。ソースのインベントリーへの追加は、標準インベントリーのみに適用されます。スマートインベントリーの場合、それらが関連付けられている標準インベントリーからソースを継承します。インベントリーのソースを設定するには、以下を実行します。"
+
+#: ../../source/inventories.rst:454
+msgid "In the inventory you want to add a source, click the **Sources** tab."
+msgstr "ソースを追加するインベントリーで、**ソース** タブをクリックします。"
+
+#: ../../source/inventories.rst:456
+msgid "Click the **Add** button."
+msgstr "**追加** ボタンをクリックします。"
+
+#: ../../source/inventories.rst:458
+msgid "This opens the Create Source window."
+msgstr "これにより、「ソースの作成」ウィンドウが開きます。"
+
+#: ../../source/inventories.rst:460
+msgid "|Inventories create source|"
+msgstr "|Inventories create source|"
+
+#: ../../source/inventories.rst:469
+msgid "**Execution Environment**: Optionally search (|search|) or enter the name of the execution environment with which you want to run your inventory imports. Refer to the :ref:`ug_execution_environments` section for details on building an execution environment."
+msgstr "**実行環境**: 必要に応じて、検索 (|search|)、またはインベントリーのインポートを実行する実行環境の名前を入力します。実行環境の構築に関する詳細は、:ref:`ug_execution_environments` を参照してください。"
+
+#: ../../source/inventories.rst:470
+msgid "**Source**: Choose a source for your inventory. Refer to the :ref:`ug_inventory_sources` section for more information about each source and details for entering the appropriate information."
+msgstr "**ソース**: インベントリーのソースを選択します。それぞれのソースや適切な情報を入力する詳細な方法は、「:ref:`ug_inventory_sources`」セクションを参照してください。"
+
+#: ../../source/inventories.rst:474
+msgid "After completing the required information for your chosen :ref:`inventory source <ug_inventory_sources>`, you can continue to optionally specify other common parameters, such as verbosity, host filters, and variables."
+msgstr "選択した :ref:`inventory source <ug_inventory_sources>` の情報を入力したら、必要に応じて、詳細、ホストフィルター、変数などのその他の共通パラメーターも指定します。"
+
+#: ../../source/inventories.rst:478
+msgid "The **Regions**, **Instance Filters**, and **Only Group By** fields have been removed in |at| 3.8."
+msgstr "フィールドの **リージョン**、**インスタンスフィルター**、および **グループ化のみ** は |at| 3.8 で削除されました。"
+
+#: ../../source/inventories.rst:480
+msgid "Select the appropriate level of output on any inventory source's update jobs from the **Verbosity** drop-down menu."
+msgstr "**詳細** ドロップダウンメニューから、インベントリーソースの更新ジョブで適切な出力レベルを選択します。"
+
+#: ../../source/inventories.rst:482
+msgid "Use the **Host Filter** field to specify only matching host names to be imported into the controller."
+msgstr "**ホストフィルター** フィールドを使用して、コントローラーにインポートされる一致するホスト名のみを指定します。"
+
+#: ../../source/inventories.rst:484
+msgid "In the **Enabled Variable**, specify the controller to retrieve the enabled state from the given dictionary of host variables. The enabled variable may be specified using dot notation as 'foo.bar', in which case the lookup will traverse into nested dicts, equivalent to: ``from_dict.get('foo', {}).get('bar', default)``."
+msgstr "**有効な変数** でコントローラーを指定して、指定のホスト変数のディクショナリーから有効な状態を取得します。有効な変数は、ドット表記を使用して「foo.bar」として指定することで、ルックアップはネストされたディクショナリー (``from_dict.get('foo', {}).get('bar', default)`` と同等) に移動します。"
+
+#: ../../source/inventories.rst:486
+msgid "If you specified a dictionary of host variables in the **Enabled Variable** field, you can provide a value to enable on import. For example, if ``enabled_var='status.power_state'`` and ``enabled_value='powered_on'`` with the following host variables, the host would be marked enabled:"
+msgstr "**有効な変数** フィールドでホスト変数のディクショナリーを指定した場合は、インポート時に有効にする値を指定できます。たとえば、``enabled_var='status.power_state'`` および ``enabled_value='powered_on'`` で以下のホスト変数を使用する場合は、ホストが有効とマークされます。"
+
+#: ../../source/inventories.rst:502
+msgid "If ``power_state`` were any value other than ``powered_on``, then the host would be disabled when imported into the controller. If the key is not found, then the host will be enabled."
+msgstr "``power_state`` が ``powered_on`` 以外になっていると、コントローラーにインポートしたときにホストが無効になります。キーが見つからない場合は、ホストが有効になります。"
+
+#: ../../source/inventories.rst:504
+msgid "All cloud inventory sources have the following update options:"
+msgstr "すべてのクラウドインベントリーソースには、以下の更新オプションがあります。"
+
+#: ../../source/inventories.rst:506
+msgid "**Overwrite**: If checked, any hosts and groups that were previously present on the external source but are now removed, will be removed from the controller inventory. Hosts and groups that were not managed by the inventory source will be promoted to the next manually created group, or if there is no manually created group to promote them into, they will be left in the \"all\" default group for the inventory."
+msgstr "**上書き**: チェックが付いている場合、以前は外部ソースにあり、現在は削除されているホストおよびグループがコントローラーインベントリーから削除されます。インベントリーソースで管理されていなかったホストおよびグループは次に手動で作成されるグループにプロモートされるか、またはプロモート先となる手動で作成されたグループがない場合は、それらはインベントリーの「すべて」のデフォルトグループに残ります。"
+
+#: ../../source/inventories.rst:508
+msgid "When not checked, local child hosts and groups not found on the external source will remain untouched by the inventory update process."
+msgstr "チェックが付けられていない場合、外部ソースにないローカルの子ホストおよびグループは、インベントリーの更新プロセスによって処理されないままになります。"
+
+#: ../../source/inventories.rst:510
+msgid "**Overwrite Variables**: If checked, all variables for child groups and hosts will be removed and replaced by those found on the external source. When not checked, a merge will be performed, combining local variables with those found on the external source."
+msgstr "**変数の上書き**: チェックが付いている場合、子グループおよびホストの変数はすべて削除され、外部ソースで見つかったものに置き換えられます。チェックが付いていないと、マージが実行し、ローカル変数と、外部ソースで見つかったものが組み合わされます。"
+
+#: ../../source/inventories.rst:512
+msgid "**Update on Launch**: Each time a job runs using this inventory, refresh the inventory from the selected source before executing job tasks. To avoid job overflows if jobs are spawned faster than the inventory can sync, selecting this allows you to configure a **Cache Timeout** to cache prior inventory syncs for a certain number of seconds."
+msgstr "**起動時の更新**: このインベントリーを使用してジョブを実行するたびに、ジョブタスクの実行前に選択したソースからインベントリーの更新が実行されます。ジョブの生成速度がインベントリーの同期速度を上回る場合のジョブのオーバーフローを避けるために、これを選択して、特定の期間 (秒単位) 以前のインベントリーの同期をキャッシュするよう**キャッシュタイムアウト**を設定できます。"
+
+#: ../../source/inventories.rst:514
+msgid "The \"Update on Launch\" setting refers to a dependency system for projects and inventory, and it will not specifically exclude two jobs from running at the same time. If a cache timeout is specified, then the dependencies for the second job is created and it uses the project and inventory update that the first job spawned. Both jobs then wait for that project and/or inventory update to finish before proceeding. If they are different job templates, they can then both start and run at the same time, if the system has the capacity to do so. If you intend to use the controller's provisioning callback feature with a dynamic inventory source, **Update on Launch** should be set for the inventory group."
+msgstr "「起動時の更新」の設定は、プロジェクトおよびインベントリーの依存関係システムを参照しますが、特に 2 つのジョブが同時に実行されないようにする訳ではありません。キャッシュのタイムアウトを指定した場合には、2 番目のジョブの依存関係が作成され、最初のジョブで起動したプロジェクトおよびインベントリーの更新が使用されます。両方のジョブは、プロジェクトおよび/またはインベントリーの更新が終了するまで待機してから次に進みます。これらのジョブで異なるジョブテンプレートを使用しており、システムの容量がある場合には、両ジョブを同時に開始し、実行することができます。動的インベントリソースを使用するコントローラーのプロビジョニングコールバック機能を使用する場合には、インベントリーグループの **起動時に更新** を設定しておく必要があります。"
+
+#: ../../source/inventories.rst:516
+msgid "If you sync an inventory source that uses a project that has **Update On Launch** set, then the project may automatically update (according to cache timeout rules) before the inventory update starts."
+msgstr "**起動時に更新** が設定されているプロジェクトを使用するインベントリーソースを同期すると、インベントリーの更新が開始される前に、プロジェクトが (キャッシュタイムアウトルールに従って) 自動的に更新される場合があります。"
+
+#: ../../source/inventories.rst:518
+msgid "You can create a job template that uses an inventory that sources from the same project that the template uses. In this case, the project will update and then the inventory will update (if updates are not already in-progress, or if the cache timeout has not already expired)."
+msgstr "テンプレートが使用するのと同じプロジェクトから供給されるインベントリーを使用するジョブテンプレートを作成できます。この場合、プロジェクトが更新され、次にインベントリーが更新されます (更新がまだ進行中でない場合、またはキャッシュタイムアウトがまだ期限切れになっていない場合)。"
+
+#: ../../source/inventories.rst:521
+msgid "Review your entries and selections and click **Save** when done. This allows you to configure additional details, such as schedules and notifications."
+msgstr "実行後にエントリーおよび選択を確認し、**保存** をクリックします。これにより、スケジュールや通知など、詳細をさらに設定することができます。"
+
+#: ../../source/inventories.rst:523
+msgid "To configure schedules associated with this inventory source, click the **Schedules** tab."
+msgstr "このインベントリーソースに関連付けられているスケジュールを設定するには、**スケジュール** タブをクリックします。"
+
+#: ../../source/inventories.rst:525
+msgid "If schedules are already set up; review, edit, or enable/disable your schedule preferences."
+msgstr "スケジュールがすでに設定されている場合には、スケジュールの設定をレビュー、編集、または有効化/無効化します。"
+
+#: ../../source/inventories.rst:526
+msgid "if schedules have not been set up, refer to :ref:`ug_scheduling` for more information."
+msgstr "スケジュールが設定されていない場合には、詳細情報を「:ref:`ug_scheduling`」で参照してください。"
+
+#: ../../source/inventories.rst:530
+msgid "The **Notifications** tab is only present after you save the newly-created source."
+msgstr "**通知** タブは、新しく作成したソースを保存した後にのみ表示されます。"
+
+#: ../../source/inventories.rst:534
+msgid "To configure notifications for the source, click the **Notifications** tab."
+msgstr "ソースの通知を設定するには、**通知** タブをクリックします。"
+
+#: ../../source/inventories.rst:536
+msgid "If notifications are already set up, use the toggles to enable or disable the notifications to use with your particular source. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "通知がすでに設定されている場合は、トグルを使用して、特定のソースで使用する通知を有効または無効にします。詳細については「:ref:`ug_notifications_on_off`」を参照してください。"
+
+#: ../../source/inventories.rst:538
+msgid "if notifications have not been set up, refer to :ref:`ug_notifications` for more information."
+msgstr "通知が設定されていない場合には、詳細情報を「:ref:`ug_notifications`」で参照してください。"
+
+#: ../../source/inventories.rst:541
+msgid "Review your entries and selections and click **Save** when done."
+msgstr "実行後にエントリーおよび選択を確認し、**保存** をクリックします。"
+
+#: ../../source/inventories.rst:543
+msgid "Once a source is defined, it displays as an entry in the list of sources associated with the inventory. From the **Sources** tab you can perform a sync on a single source, or sync all of them at once. You can also perform additional actions such as scheduling a sync process, and edit or delete the source."
+msgstr "ソースが定義されると、インベントリーに関連付けられたソースの一覧のエントリーとして表示されます。**ソース** タブから、単一ソースに対して同期を実行することも、1 度にすべての同期を実行することもできます。また、同期プロセスのスケジュールやソースの編集または削除など、追加のアクションを実行することもできます。"
+
+#: ../../source/inventories.rst:545
+msgid "|Inventories view sources|"
+msgstr "|Inventories view sources|"
+
+#: ../../source/inventories.rst:553
+msgid "Inventory Sources"
+msgstr "インベントリーソース"
+
+#: ../../source/inventories.rst:555
+msgid "Choose a source which matches the inventory type against which a host can be entered:"
+msgstr "ホストを入力できるインベントリータイプに一致するソースを選択します。"
+
+#: ../../source/inventories.rst:561
+msgid "Sourced from a Project"
+msgstr "ソース: プロジェクト"
+
+#: ../../source/inventories.rst:566
+msgid "An inventory that is sourced from a project means that is uses the SCM type from the project it is tied to. For example, if the project's source is from GitHub, then the inventory will use the same source."
+msgstr "プロジェクトから取得されるインベントリーは、それが関連付けられているプロジェクトの SCM タイプを使用します。たとえば、プロジェクトのソースが GitHub にある場合、インベントリーは同じソースを使用します。"
+
+#: ../../source/inventories.rst:568
+msgid "To configure a project-sourced inventory, select **Sourced from a Project** from the Source field."
+msgstr "プロジェクトから取得されるインベントリーを設定するには、「ソース」フィールドから **ソース: プロジェクト** を選択します。"
+
+#: ../../source/inventories.rst:570
+#: ../../source/inventories.rst:599
+msgid "The Create Source window expands with additional fields. Enter the following details:"
+msgstr "「ソースの作成」ウィンドウは追加フィールドと共に展開されます。以下の詳細を入力します。"
+
+#: ../../source/inventories.rst:572
+msgid "**Credential**: Optionally specify the credential to use for this source."
+msgstr "**認証情報**: 必要に応じて、このソースに使用する認証情報を指定します。"
+
+#: ../../source/inventories.rst:573
+msgid "**Project**: Required. Specify the project this inventory is using as its source. Click the |search| button to choose from a list of projects. If the list is extensive, use the search to narrow the options."
+msgstr "**プロジェクト**: 必須。このインベントリーがソースとして使用しているプロジェクトを指定します。|search| ボタンをクリックしてプロジェクトの一覧から選択します。一覧に多くのオプションが含まれる場合、検索を使用してオプションの範囲を絞ります。"
+
+#: ../../source/inventories.rst:574
+msgid "**Inventory File**: Required. Select an inventory file associated with the sourced project. If not already populated, you can type it into the text field within the drop down menu to filter the extraneous file types. In addition to a flat file inventory, you can point to a directory or an inventory script."
+msgstr "**インベントリーファイル**: 必須。取得されたプロジェクトに関連付けられたインベントリーファイルを選択します。データが入力されていない場合には、ドロップダウンメニューのテキストフィールドに、データを入力して異種のファイルタイプをフィルタリングします。フラットファイルインベントリー以外に、ディレクトリーやインベントリースクリプトを参照することもできます。"
+
+#: ../../source/inventories.rst:578
+#: ../../source/inventories.rst:605
+#: ../../source/inventories.rst:633
+#: ../../source/inventories.rst:650
+#: ../../source/inventories.rst:672
+#: ../../source/inventories.rst:696
+#: ../../source/inventories.rst:722
+#: ../../source/inventories.rst:745
+#: ../../source/inventories.rst:766
+#: ../../source/inventories.rst:791
+msgid "You can optionally specify the verbosity, host filter, enabled variable/value, and update options as described in the main procedure for :ref:`adding a source <ug_add_inv_common_fields>`."
+msgstr "必要に応じて、:ref:`adding a source <ug_add_inv_common_fields>` の主な手順で説明されているように、詳細、ホストフィルター、有効な変数/値、および更新オプションを指定できます。"
+
+#: ../../source/inventories.rst:580
+msgid "In order to pass to the custom inventory script, you can optionally set environment variables in the **Environment Variables** field. You may also place inventory scripts in source control and then run it from a project. See :ref:`ag_inv_import` in the |ata| for detail."
+msgstr "カスタムインベントリースクリプトに渡すには、オプションで **環境変数** フィールドに環境変数を設定できます。また、インベントリースクリプトをソースコントロールに配置してから、プロジェクトからこれを実行することもできます。詳細は、|ata| の :ref:`ag_inv_import` を参照してください。"
+
+#: ../../source/inventories.rst:582
+msgid "|Inventories - create source - sourced from project example|"
+msgstr "|Inventories - create source - sourced from project example|"
+
+#: ../../source/inventories.rst:586
+msgid "If you are executing a custom inventory script from SCM, please make sure you set the execution bit (i.e. ``chmod +x``) on the script in your upstream source control. If you do not, the controller will throw a ``[Errno 13] Permission denied`` error upon execution."
+msgstr "SCM からカスタムのインベントリースクリプトを実行する場合には、アップストリームのソース管理のスクリプトに実行の部分 (例 :``chmod +x``) を設定してください。設定していない場合には、実行時にコントローラーは ``[Errno 13] Permission denied`` のエラーを送出します。"
+
+#: ../../source/inventories.rst:592
+msgid "Amazon Web Services EC2"
+msgstr "Amazon Web Services EC2"
+
+#: ../../source/inventories.rst:597
+msgid "To configure an AWS EC2-sourced inventory, select **Amazon EC2** from the Source field."
+msgstr "AWS EC2 から取得されるインベントリーを設定するには、「ソース」フィールドから **Amazon EC2** を選択します。"
+
+#: ../../source/inventories.rst:601
+msgid "**Credential**: Optionally choose from an existing AWS credential (for more information, refer to :ref:`ug_credentials`)."
+msgstr "**認証情報**: 必要に応じて、既存の AWS 認証情報から選択します (詳細は「:ref:`ug_credentials`」を参照)。"
+
+#: ../../source/inventories.rst:603
+msgid "If the controller is running on an EC2 instance with an assigned IAM Role, the credential may be omitted, and the security credentials from the instance metadata will be used instead. For more information on using IAM Roles, refer to the `IAM_Roles_for_Amazon_EC2_documentation_at_Amazon <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam- roles-for-amazon-ec2.html>`_."
+msgstr "コントローラーが割り当てられた IAM ロールを使って EC2 インスタンスで実行されている場合は、認証情報を省略でき、インスタンスメタデータのセキュリティー認証情報が代わりに使用されます。IAM ロールの使用についての詳細は、`IAM_Roles_for_Amazon_EC2_documentation_at_Amazon <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam- roles-for-amazon-ec2.html>`_ を参照してください。"
+
+#: ../../source/inventories.rst:607
+msgid "Use the **Source Variables** field to override variables used by the ``aws_ec2`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `aws_ec2 inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/amazon/aws/content/inventory/aws_ec2>`__."
+msgstr "**ソース変数** フィールドを使用して、``aws_ec2`` インベントリー更新プラグインで使用される変数を上書きします。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。これらの変数の詳細は、`aws_ec2 inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/amazon/aws/content/inventory/aws_ec2>`__ を参照してください。"
+
+#: ../../source/inventories.rst:609
+msgid "|Inventories - create source - AWS EC2 example|"
+msgstr "|Inventories - create source - AWS EC2 example|"
+
+#: ../../source/inventories.rst:615
+msgid "If you only use ``include_filters``, the AWS plugin always returns all the hosts. To use this properly, the first condition on the ``or`` must be on ``filters`` and then build the rest of the ``OR`` conditions on a list of ``include_filters``."
+msgstr "``include_filters`` のみを使用する場合、AWS プラグインは常にすべてのホストを返します。これを適切に使用するには、``or`` の最初の条件を ``filters`` に配置してから、``OR`` の一覧で残りの ``include_filters`` 条件をビルドします。"
+
+#: ../../source/inventories.rst:620
+msgid "Google Compute Engine"
+msgstr "Google Compute Engine"
+
+#: ../../source/inventories.rst:625
+msgid "To configure a Google-sourced inventory, select **Google Compute Engine** from the Source field."
+msgstr "Google から取得されるインベントリーを設定するには、「ソース」フィールドから **Google Compute Engine** を選択します。"
+
+#: ../../source/inventories.rst:627
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing GCE Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "「ソースの作成」ウィンドウで必要な **認証情報** フィールドが展開されるため、既存の GCE 認証情報から選択してください。詳細は「:ref:`ug_credentials`」を参照してください。"
+
+#: ../../source/inventories.rst:629
+msgid "|Inventories - create source - GCE example|"
+msgstr "|Inventories - create source - GCE example|"
+
+#: ../../source/inventories.rst:635
+msgid "Use the **Source Variables** field to override variables used by the ``gcp_compute`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `gcp_compute inventory plugin documenation <https://cloud.redhat.com/ansible/automation-hub/repo/published/google/cloud/content/inventory/gcp_compute>`__."
+msgstr "**ソース変数** フィールドを使用して、``gcp_compute`` インベントリー更新プラグインで使用される変数を上書きします。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。これらの変数の詳細は、`gcp_compute インベントリープラグインのドキュメント <https://cloud.redhat.com/ansible/automation-hub/repo/published/google/cloud/content/inventory/gcp_compute>`__ を参照してください。"
+
+#: ../../source/inventories.rst:641
+msgid "Microsoft Azure Resource Manager"
+msgstr "Microsoft Azure Resource Manager"
+
+#: ../../source/inventories.rst:646
+msgid "To configure a Azure Resource Manager-sourced inventory, select **Microsoft Azure Resource Manager** from the Source field."
+msgstr "Azure Resource Manager から取得されるインベントリーを設定するには、「ソース」フィールドから **Microsoft Azure Resource Managee** を選択します。"
+
+#: ../../source/inventories.rst:648
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Azure Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "「ソースの作成」ウィンドウで必要な **認証情報** フィールドが展開されるため、既存の Azure 認証情報から選択してください。詳細は「:ref:`ug_credentials`」を参照してください。"
+
+#: ../../source/inventories.rst:652
+msgid "Use the **Source Variables** field to override variables used by the  ``azure_rm`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `azure_rm inventory plugin documentation <https://cloud.redhat.com/ansible/automation-hub/repo/published/azure/azcollection/content/inventory/azure_rm>`__."
+msgstr "**ソース変数** フィールドを使用して、``azure_rm`` インベントリー更新プラグインで使用される変数を上書きします。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。これらの変数の詳細は、`azure_rm inventory plugin documentation <https://cloud.redhat.com/ansible/automation-hub/repo/published/azure/azcollection/content/inventory/azure_rm>`__ を参照してください。"
+
+#: ../../source/inventories.rst:654
+msgid "|Inventories - create source - Azure RM example|"
+msgstr "|Inventories - create source - Azure RM example|"
+
+#: ../../source/inventories.rst:662
+msgid "VMware vCenter"
+msgstr "VMware vCenter"
+
+#: ../../source/inventories.rst:668
+msgid "To configure a VMWare-sourced inventory, select **VMware vCenter** from the Source field."
+msgstr "VMWare から取得されるインベントリーを設定するには、「ソース」フィールドから **VMware vCenter** を選択します。"
+
+#: ../../source/inventories.rst:670
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing VMware Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "「ソースの作成」ウィンドウで必要な **認証情報** フィールドが展開されるため、既存の VMware 認証情報から選択してください。詳細は「:ref:`ug_credentials`」を参照してください。"
+
+#: ../../source/inventories.rst:674
+msgid "Use the **Source Variables** field to override variables used by the ``vmware_inventory`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `vmware_inventory inventory plugin <https://github.com/ansible-collections/community.vmware/blob/main/plugins/inventory/vmware_vm_inventory.py>`__."
+msgstr "**ソース変数** フィールドを使用して、``vmware_inventory`` インベントリー更新プラグインで使用される変数を上書きします。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。これらの変数の詳細は、`vmware_inventory inventory plugin <https://github.com/ansible-collections/community.vmware/blob/main/plugins/inventory/vmware_vm_inventory.py>`__ を参照してください。"
+
+#: ../../source/inventories.rst:676
+msgid "Starting with Ansible 2.9, VMWare properties have changed from lower case to camelCase. The controller provides aliases for the top-level keys, but lower case keys in nested properties have been discontinued. For a list of valid and supported properties starting with Ansible 2.9, refer to `virtual machine attributes in the VMware dynamic inventory plugin <https://docs.ansible.com/ansible/latest/collections/community/vmware/docsite/vmware_scenarios/vmware_inventory_vm_attributes.html>`_."
+msgstr "Ansible 2.9 で、VMWare プロパティーが小文字から camelCase に変更になりました。コントローラーはトップレベルのキーのエイリアスを提供しますが、ネストされたプロパティーの小文字のキーは廃止になりました。Ansible 2.9 以降のバージョンでサポートされているプロパティーの一覧は、`virtual machine attributes in the VMware dynamic inventory plugin <https://docs.ansible.com/ansible/latest/collections/community/vmware/docsite/vmware_scenarios/vmware_inventory_vm_attributes.html>`_ を参照してください。"
+
+#: ../../source/inventories.rst:679
+msgid "|Inventories - create source - VMware example|"
+msgstr "|Inventories - create source - VMware example|"
+
+#: ../../source/inventories.rst:687
+msgid "Red Hat Satellite 6"
+msgstr "Red Hat Satellite 6"
+
+#: ../../source/inventories.rst:692
+msgid "To configure a Red Hat Satellite-sourced inventory, select **Red Hat Satellite** from the Source field."
+msgstr "Red Hat Satellite から取得されるインベントリーを設定するには、「ソース」フィールドから **Red Hat Satellite** を選択します。"
+
+#: ../../source/inventories.rst:694
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Satellite Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "「ソースの作成」ウィンドウで必要な **認証情報** フィールドが展開されるため、既存の Satellite 認証情報から選択してください。詳細は「:ref:`ug_credentials`」を参照してください。"
+
+#: ../../source/inventories.rst:698
+msgid "Use the **Source Variables** field to specify parameters used by the foreman inventory source. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, refer to the `theforeman.foreman.foreman – Foreman inventory source <https://docs.ansible.com/ansible/latest/collections/theforeman/foreman/foreman_inventory.html>`_ in the Ansible documentation."
+msgstr "**ソース変数**フィールドを使用して、foreman インベントリーソースが使用するパラメータを指定します。JSON または YAML 構文のいずれかを使用して変数を入力してください。以下の変数の詳細な説明は、Ansible ドキュメントの `theforeman.foreman.foreman – Foreman inventory source <https://docs.ansible.com/ansible/latest/collections/theforeman/foreman/foreman_inventory.html>`_ を参照してください。"
+
+#: ../../source/inventories.rst:701
+msgid "|Inventories - create source - RH Satellite example|"
+msgstr "|Inventories - create source - RH Satellite example|"
+
+#: ../../source/inventories.rst:705
+msgid "If you encounter an issue with the controller inventory not having the \"related groups\" from Satellite, you might need to define these variables in the inventory source. See the inventory plugins template example for :ref:`ir_plugin_satellite` in the |atir| for detail."
+msgstr "コントローラーインベントリーで Satellite から「関連グループ」が含まれない場合には、インベントリーソースでこれらの変数を定義する必要がある場合があります。詳細は、|atir| の :ref:`ir_plugin_satellite` を参照してください。"
+
+#: ../../source/inventories.rst:707
+msgid "If you see the message, ``\"no foreman.id\" variable(s) when syncing the inventory``, refer to the solution on the Red Hat Customer Portal at: https://access.redhat.com/solutions/5826451. Be sure to login with your customer credentials to access the full article."
+msgstr "``\"no foreman.id\" variable(s) when syncing the inventory`` メッセージが表示される場合は、Red Hat カスタマーポータルの https://access.redhat.com/solutions/5826451. ソリューションを参照してください。お客様の認証情報でログインして、完全な記事にアクセスするようにしてください。"
+
+#: ../../source/inventories.rst:713
+msgid "Red Hat Insights"
+msgstr "Red Hat Insights"
+
+#: ../../source/inventories.rst:718
+msgid "To configure a Red Hat Insights-sourced inventory, select **Red Hat Insights** from the Source field."
+msgstr "Red Hat Insights から取得されるインベントリーを設定するには、「ソース」フィールドから **Red Hat Insights** を選択します。"
+
+#: ../../source/inventories.rst:720
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Insights Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "「ソースの作成」ウィンドウで必要な **認証情報** フィールドが展開されるため、既存の Insights 認証情報から選択してください。詳細は「:ref:`ug_credentials`」を参照してください。"
+
+#: ../../source/inventories.rst:724
+msgid "Use the **Source Variables** field to override variables used by the ``insights`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `insights inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/insights/content/inventory/insights>`__."
+msgstr "**ソース変数** フィールドを使用して、``insights`` インベントリー更新プラグインで使用される変数を上書きします。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。これらの変数の詳細は、`insights inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/insights/content/inventory/insights>`__ を参照してください。"
+
+#: ../../source/inventories.rst:727
+msgid "|Inventories - create source - RH Insights example|"
+msgstr "|Inventories - create source - RH Insights example|"
+
+#: ../../source/inventories.rst:735
+msgid "OpenStack"
+msgstr "OpenStack"
+
+#: ../../source/inventories.rst:741
+msgid "To configure an OpenStack-sourced inventory, select **OpenStack** from the Source field."
+msgstr "OpenStack から取得されるインベントリーを設定するには、「ソース」フィールドから **OpenStack** を選択します。"
+
+#: ../../source/inventories.rst:743
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing OpenStack Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "「ソースの作成」ウィンドウで必要な **認証情報** フィールドが展開されるため、既存の OpenStack 認証情報から選択してください。詳細は「:ref:`ug_credentials`」を参照してください。"
+
+#: ../../source/inventories.rst:747
+msgid "Use the **Source Variables** field to override variables used by the ``openstack`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `openstack inventory plugin <https://docs.ansible.com/ansible/latest/collections/openstack/cloud/openstack_inventory.html>`_ in the Ansible collections documentation."
+msgstr "**ソース変数** フィールドを使用して、``openstack`` インベントリー更新プラグインで使用される変数を上書きします。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。これらの変数の詳細は、Ansibleコレクションのドキュメントの`openstack inventory plugin <https://docs.ansible.com/ansible/latest/collections/openstack/cloud/openstack_inventory.html>`_を参照してください。"
+
+#: ../../source/inventories.rst:749
+msgid "|Inventories - create source - OpenStack example|"
+msgstr "|Inventories - create source - OpenStack example|"
+
+#: ../../source/inventories.rst:757
+msgid "Red Hat Virtualization"
+msgstr "Red Hat Virtualization"
+
+#: ../../source/inventories.rst:762
+msgid "To configure a Red Hat Virtualization-sourced inventory, select **Red Hat Virtualization** from the Source field."
+msgstr "Red Hat Virtualization から取得されるインベントリーを設定するには、「ソース」フィールドから **Red Hat Virtualization** を選択します。"
+
+#: ../../source/inventories.rst:764
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Red Hat Virtualization Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "「ソースの作成」ウィンドウで必要な **認証情報** フィールドが展開されるため、既存の Red Hat Virtualization 認証情報から選択してください。詳細は「:ref:`ug_credentials`」を参照してください。"
+
+#: ../../source/inventories.rst:768
+msgid "Use the **Source Variables** field to override variables used by the ``ovirt`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `ovirt inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/rhv/content/inventory/ovirt>`__."
+msgstr "**ソース変数** フィールドを使用して、``ovirt`` インベントリー更新プラグインで使用される変数を上書きします。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。これらの変数の詳細は、`ovirt inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/redhat/rhv/content/inventory/ovirt>`__ を参照してください。"
+
+#: ../../source/inventories.rst:770
+msgid "|Inventories - create source - RHV example|"
+msgstr "|Inventories - create source - RHV example|"
+
+#: ../../source/inventories.rst:776
+msgid "Red Hat Virtualization (ovirt) inventory source requests are secure by default. To change this default setting, set the key ``ovirt_insecure`` to **true** in ``source_variables``, which is only available from the API details of the inventory source at the ``/api/v2/inventory_sources/N/`` endpoint."
+msgstr "Red Hat Virtualization (ovirt) インベントリーのソース要求はデフォルトで保護されています。このデフォルト設定を変更するには、``source_variables`` のキー ``ovirt_insecure`` を **true** に設定します。これは ``/api/v2/inventory_sources/N/`` エンドポイントのインベントリーソースの API の詳細からしか入手できません。"
+
+#: ../../source/inventories.rst:781
+msgid "Red Hat Ansible Automation Platform"
+msgstr "Red Hat Ansible Automation Platform"
+
+#: ../../source/inventories.rst:787
+msgid "To configure a |at|-sourced inventory, select **Red Hat Ansible Automation Platform** from the Source field."
+msgstr "|at| から取得されるインベントリーを設定するには、「ソース」フィールドから **Red Hat Ansible Automation Platform** を選択します。"
+
+#: ../../source/inventories.rst:789
+msgid "The Create Source window expands with the required **Credential** field. Choose from an existing Ansible Automation Platform Credential. For more information, refer to :ref:`ug_credentials`."
+msgstr "「ソースの作成」ウィンドウで必要な **認証情報** フィールドが展開されるため、既存の Ansible Automation Platform 認証情報から選択してください。詳細は「:ref:`ug_credentials`」を参照してください。"
+
+#: ../../source/inventories.rst:795
+msgid "Use the **Source Variables** field to override variables used by the ``controller`` inventory plugin. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two. For a detailed description of these variables, view the `controller inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/ansible/controller/content/inventory/controller>`__ (requires your Red Hat Customer login)."
+msgstr "**ソース変数** フィールドを使用して、``controller`` インベントリー更新プラグインで使用される変数を上書きします。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。これらの変数の詳細は、`controller inventory plugin <https://cloud.redhat.com/ansible/automation-hub/repo/published/ansible/controller/content/inventory/controller>`__ を参照してください (Red Hat Customer ログインが必要になります)。"
+
+#: ../../source/inventories.rst:800
+msgid "Export old inventory scripts"
+msgstr "古いインベントリースクリプトをエクスポートする"
+
+#: ../../source/inventories.rst:804
+msgid "Despite the removal of the custom inventory scripts API, the scripts are still saved in the database. The commands described in this section allows you to recover the scripts in a format that is suitable for you to subsequently check into source control. Usage looks like this:"
+msgstr "カスタムインベントリースクリプト API を削除すると、スクリプトはデータベースに保存されます。このセクションで説明するコマンドにより、後でソースコントロールへのチェックに適した形式でスクリプトを回復できます。使用方法は以下のようになります。"
+
+#: ../../source/inventories.rst:812
+msgid "Making use of the output:"
+msgstr "出力を活用します。"
+
+#: ../../source/inventories.rst:819
+msgid "The naming of the scripts is ``_<pk>__<name>``. This is the naming scheme used for project folders."
+msgstr "スクリプトの名前は ``_<pk>__<name>`` です。これは、プロジェクトフォルダーに使用される命名スキームです。"
+
+#: ../../source/inventories.rst:836
+msgid "Each file contains a script. Scripts can be ``bash/python/ruby/more``, so the extension is not included. They are all directly executable (assuming the scripts worked). If you execute the script, it dumps the inventory data."
+msgstr "各ファイルにはスクリプトが含まれます。スクリプトには ``bash/python/ruby/more`` を指定できるため、拡張子は含まれます。スクリプトはすべて直接実行可能です（スクリプトが機能することを前提とします）。スクリプトを実行すると、インベントリーデータがダンプされます。"
+
+#: ../../source/inventories.rst:849
+msgid "You can verify functionality with ``ansible-inventory``. This should give the same data, but reformatted."
+msgstr "``ansible-inventory`` で機能を検証すると、同じデータが提供されますが、再フォーマットされます。"
+
+#: ../../source/inventories.rst:856
+msgid "In the above example, you could ``cd`` into ``my_scripts`` and then issue a ``git init`` command, add the scripts you want, push it to source control, and then create an SCM inventory source in the |at| user interface."
+msgstr "上記の例では、``cd`` で ``my_scripts`` に移動してから、``git init`` コマンドを実行し、必要なスクリプトを追加して、これをソースコントロールにプッシュしてから、|at| ユーザーインターフェースに SCM インベントリーソースを作成します。"
+
+#: ../../source/inventories.rst:859
+msgid "For more information on syncing or using custom inventory scripts, refer to :ref:`ag_inv_import` in the |ata|."
+msgstr "カスタムインベントリースクリプトの同期または使用についての詳細は、|ata| の :ref:`ag_inv_import` を参照してください。"
+
+#: ../../source/inventories.rst:865
+msgid "View completed jobs"
+msgstr "完了したジョブの表示"
+
+#: ../../source/inventories.rst:867
+msgid "If an inventory was used to run a job, you can view details about those jobs in the **Completed Jobs** tab of the inventory and click **Expanded** to view details about each job."
+msgstr "インベントリーがジョブの実行に使用されている場合には、このジョブの詳細は、インベントリーの **完了したジョブ** タブで確認できます。各ジョブの詳細を表示するには、**展開** をクリックします。"
+
+#: ../../source/inventories.rst:869
+msgid "|Inventories view completed jobs|"
+msgstr "|Inventories view completed jobs|"
+
+#: ../../source/inventories.rst:880
+msgid "Running Ad Hoc Commands"
+msgstr "アドホックコマンドの実行"
+
+#: ../../source/inventories.rst:887
+msgid "To run an ad hoc command:"
+msgstr "アドホックコマンドを実行するには、以下を実行します。"
+
+#: ../../source/inventories.rst:889
+msgid "Select an inventory source from the list of hosts or groups. The inventory source can be a single group or host, a selection of multiple hosts, or a selection of multiple groups."
+msgstr "ホストまたはグループの一覧からインベントリーソースを選択します。インベントリーソースは単一グループまたはホストにすることも、複数のホストのセレクションや複数グループのセレクションにすることもできます。"
+
+#: ../../source/inventories.rst:891
+msgid "|ad hoc-commands-inventory-home|"
+msgstr "|ad hoc-commands-inventory-home|"
+
+#: ../../source/inventories.rst:895
+msgid "Click the **Run Command** button."
+msgstr "**コマンド実行** ボタンをクリックします。"
+
+#: ../../source/inventories.rst:897
+msgid "The Run command window opens."
+msgstr "コマンドの実行ウィンドウが開きます。"
+
+#: ../../source/inventories.rst:901
+msgid "Enter the details for the following fields:"
+msgstr "以下のフィールドに詳細を記入します。"
+
+#: ../../source/inventories.rst:903
+msgid "**Module**: Select one of the modules that the |at| supports running commands against."
+msgstr "**モジュール**: |at| がコマンドの実行での使用をサポートしているモジュールのいずれかを選択します。"
+
+#: ../../source/inventories.rst:906
+msgid "command"
+msgstr "コマンド"
+
+#: ../../source/inventories.rst:906
+msgid "apt_repository"
+msgstr "apt_repository"
+
+#: ../../source/inventories.rst:906
+msgid "mount"
+msgstr "mount"
+
+#: ../../source/inventories.rst:906
+msgid "win_service"
+msgstr "win_service"
+
+#: ../../source/inventories.rst:908
+msgid "shell"
+msgstr "shell"
+
+#: ../../source/inventories.rst:908
+msgid "apt_rpm"
+msgstr "apt_rpm"
+
+#: ../../source/inventories.rst:908
+msgid "ping"
+msgstr "ping"
+
+#: ../../source/inventories.rst:908
+msgid "win_updates"
+msgstr "win_updates"
+
+#: ../../source/inventories.rst:910
+msgid "yum"
+msgstr "yum"
+
+#: ../../source/inventories.rst:910
+msgid "service"
+msgstr "service"
+
+#: ../../source/inventories.rst:910
+msgid "selinux"
+msgstr "selinux"
+
+#: ../../source/inventories.rst:910
+msgid "win_group"
+msgstr "win_group"
+
+#: ../../source/inventories.rst:912
+msgid "apt"
+msgstr "apt"
+
+#: ../../source/inventories.rst:912
+msgid "group"
+msgstr "group"
+
+#: ../../source/inventories.rst:912
+msgid "setup"
+msgstr "setup"
+
+#: ../../source/inventories.rst:912
+msgid "win_user"
+msgstr "win_user"
+
+#: ../../source/inventories.rst:914
+msgid "apt_key"
+msgstr "apt_key"
+
+#: ../../source/inventories.rst:914
+msgid "user"
+msgstr "user"
+
+#: ../../source/inventories.rst:914
+msgid "win_ping"
+msgstr "win_ping"
+
+#: ../../source/inventories.rst:917
+msgid "**Arguments**: Provide arguments to be used with the module you selected."
+msgstr "**引数**: 選択したモジュールで使用する引数を指定します。"
+
+#: ../../source/inventories.rst:918
+msgid "**Limit**: Enter the limit used to target hosts in the inventory. To target all hosts in the inventory enter ``all`` or ``*``, or leave the field blank. This is automatically populated with whatever was selected in the previous view prior to clicking the launch button."
+msgstr "**制限**: インベントリー内でホストをターゲットとして使用できる上限を入力します。インベントリー内の全ホストをターゲットに設定するには、``all`` または ``*`` を入力するか、またはフィールドを空白にします。これは、起動ボタンをクリックする前のビューで選択した内容が自動的に投入されます。"
+
+#: ../../source/inventories.rst:919
+msgid "**Machine Credential**: Select the credential to use when accessing the remote hosts to run the command. Choose the credential containing the username and SSH key or password that Ansbile needs to log into the remote hosts."
+msgstr "**マシンの認証情報**: コマンドを実行するためにリモートホストにアクセスする際に使用する認証情報を選択します。Ansible がリモートホストにログインするのに必要なユーザー名および SSH キーまたはパスワードが含まれる認証情報を選択します。"
+
+#: ../../source/inventories.rst:920
+msgid "**Verbosity**: Select a verbosity level for the standard output."
+msgstr "**詳細**: 標準出力の詳細レベルを選択します。"
+
+#: ../../source/inventories.rst:921
+msgid "**Forks**: If needed, select the number of parallel or simultaneous processes to use while executing the command."
+msgstr "**フォーク**: 必要な場合には、コマンドの実行中に使用する並列または同時プロセスの数を選択します。"
+
+#: ../../source/inventories.rst:922
+msgid "**Show Changes**: Select to enable the display of Ansible changes in the standard output. The default is OFF."
+msgstr "**変更の表示**: 選択して標準出力での Ansible の変更の表示を有効にします。デフォルトはオフになります。"
+
+#: ../../source/inventories.rst:923
+msgid "**Enable Privilege Escalation**: If enabled, the playbook is run with administrator privileges. This is the equivalent of passing the ``--become`` option to the ``ansible`` command."
+msgstr "**権限昇格の有効化**: 有効な場合には、Playbook は管理者権限を使用して実行されます。これは ``--become`` オプションを ``ansible`` コマンドに渡すのと同等です。"
+
+#: ../../source/inventories.rst:924
+msgid "**Extra Variables**: Provide extra command line variables to be applied when running this inventory. Enter variables using either JSON or YAML syntax. Use the radio button to toggle between the two."
+msgstr "**追加変数**: このインベントリーの実行時に適用される追加のコマンドライン変数を指定します。JSON または YAML 構文のいずれかを使用して変数を入力します。ラジオボタンを使用してこれら 2 つの間の切り替えを行います。"
+
+#: ../../source/inventories.rst:926
+msgid "|ad hoc-commands-inventory-run-command|"
+msgstr "|ad hoc-commands-inventory-run-command|"
+
+#: ../../source/inventories.rst:930
+msgid "Click **Next** to choose the |ee| you want the ad-hoc command to be run against."
+msgstr "**次へ** をクリックして、アドホックコマンドを実行する |ee| を選択します。"
+
+#: ../../source/inventories.rst:934
+msgid "Click **Next** to choose the credential you want to use and click the **Launch** button."
+msgstr "**次へ** をクリックして、使用する認証情報を選択し、**起動** ボタンをクリックします。"
+
+#: ../../source/inventories.rst:937
+msgid "The results display in the **Output** tab of the module's job window."
+msgstr "結果は、モジュールのジョブウィンドウの **出力** タブに表示されます。"
+
+#: ../../source/inventories.rst:939
+msgid "|ad hoc-commands-inventory-results-example|"
+msgstr "|ad hoc-commands-inventory-results-example|"
+

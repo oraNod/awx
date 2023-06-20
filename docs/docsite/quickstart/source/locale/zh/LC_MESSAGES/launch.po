@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/launch.rst:2
+msgid "Launch it!"
+msgstr "启动它！"
+
+#: ../../source/launch.rst:9
+msgid "From the Templates list view, click the Launch (|launch|) button to run the Demo Job Template."
+msgstr "在 Templates 列表中，点 Launch（|launch|）按钮来运行 Demo Job Template。"
+
+#: ../../source/launch.rst:13
+msgid "|Job templates - home launch|"
+msgstr "|Job templates - home launch|"
+
+#: ../../source/launch.rst:18
+msgid "The initial job launch returns a status page which updates automatically using the controller's Live Event feature until the job is complete. Once complete, the job results look like the following:"
+msgstr "初始作业启动会返回状态页面，该页面使用控制器的实时事件功能自动更新，直到作业完成为止。完成后，作业结果类似如下："
+
+#: ../../source/launch.rst:20
+msgid "|Job templates - demo run complete|"
+msgstr "|Job templates - demo run complete|"
+
+#: ../../source/launch.rst:24
+msgid "For more details on the job results, refer to :ref:`ug_jobs`."
+msgstr "如需作业结果的详情，请参阅 :ref:`ug_jobs`。"
+
+#: ../../source/launch.rst:26
+msgid "Congratulations! Your controller installation is officially setup and running properly. To learn more about these controller features or to learn about administration tasks, the controller API, etc., refer to the following documentation sets:"
+msgstr "祝贺您！您的控制器已正式安装并正确运行。要了解更多有关这些控制器功能的信息，或者了解管理任务、控制器 API 等，请参阅以下文档集："
+
+#: ../../source/launch.rst:28
+msgid ":ref:`Automation Controller User Guide <userguide:ug_start>`"
+msgstr ":ref:`Automation Controller User Guide <userguide:ug_start>`"
+
+#: ../../source/launch.rst:29
+msgid "`Red Hat Ansible Automation Platform Installation Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.0-ea/html-single/red_hat_ansible_automation_platform_installation_guide/index>`_"
+msgstr "`Red Hat Ansible Automation Platform Installation Guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.0-ea/html-single/red_hat_ansible_automation_platform_installation_guide/index>`_"
+
+#: ../../source/launch.rst:30
+msgid ":ref:`Automation Controller Administration Guide <administration:ag_start>`"
+msgstr ":ref:`Automation Controller Administration Guide <administration:ag_start>`"
+
+#: ../../source/launch.rst:31
+msgid ":ref:`Automation Controller API Guide<controllerapi:api_start>`"
+msgstr ":ref:`Automation Controller API Guide<controllerapi:api_start>`"
+
+#: ../../source/launch.rst:32
+msgid ":ref:`Automation Controller Release Notes <release-notes:releasenotes_start>`"
+msgstr ":ref:`Automation Controller Release Notes <release-notes:releasenotes_start>`"
+
+#: ../../source/launch.rst:33
+msgid "`Ansible Documentation`_"
+msgstr "`Ansible Documentation`_"
+

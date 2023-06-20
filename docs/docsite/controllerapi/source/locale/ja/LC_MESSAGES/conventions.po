@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/conventions.rst:3
+msgid "Conventions"
+msgstr "表記規則"
+
+#: ../../source/conventions.rst:11
+msgid "|aap| controller uses a standard REST API, rooted at ``/api/`` on the server. The API is versioned for compatibility reasons, and currently ``api/v2/`` is the latest available version. You can see information about what API versions are available by querying ``/api/``."
+msgstr "|aap| コントローラーでは標準 REST API を使用し、サーバー上の ``/api/`` をルートとします。API は互換性の目的でバージョンが分けられており、``api/v2/`` が最新版です。``/api/`` にクエリーを実行すると、利用可能な API バージョンの情報が確認できます。"
+
+#: ../../source/conventions.rst:13
+msgid "``/api/v1/`` has been discontinued as of |at| version 3.6. Refer to previous versions of the api for details on v1."
+msgstr "``/api/v1/`` は、|at| バージョン 3.6 の時点で廃止になりました。v1 の詳細は、以前の API バージョンを参照してください。"
+
+#: ../../source/conventions.rst:15
+msgid "You may have to specify the content/type on **POST** or **PUT** requests accordingly."
+msgstr "バージョンに合わせて、**POST** または **PUT** 要求でのコンテンツ/タイプを指定する必要がある場合があります。"
+
+#: ../../source/conventions.rst:17
+msgid "**PUT**: Update a specific resource (by an identifier) or a collection of resources. PUT can also be used to create a specific resource if the resource identifier is known before-hand."
+msgstr "**PUT**: (識別子による) 特定のリソースもしくはリソースの集合を更新します。リソース識別子が前もって分かっている場合は、PUT を使って特定のリソースを作成することが可能です。"
+
+#: ../../source/conventions.rst:18
+msgid "**POST**: Create a new resource. Also acts as a catch-all verb for operations that do not fit into the other categories."
+msgstr "**POST**: 新しいリソースを作成します。他のカテゴリーに該当しない演算用の汎用動詞としても機能します。"
+
+#: ../../source/conventions.rst:20
+msgid "All URIs  not ending with ``\"/\"`` receive a 301 redirect."
+msgstr "``\"/\"`` で終わらない URI はすべて 301 リダイレクトを返します。"
+
+#: ../../source/conventions.rst:24
+msgid "|atversionshort| API change: Formatting of extra_vars attached to Job Template records is preserved. Previously, YAML would be converted to JSON and returned as JSON. In 2.2.0 and newer, YAML is returned as YAML with formatting and comments preserved, and JSON is returned as JSON."
+msgstr "|atversionshort| API の変更: ジョブテンプレートのレコードに割り当てられる extra_vars のフォーマットが保持されます。以前のリリースでは、YAML は JSON に変換され、JSON として返されていました。2.2.0 以降、YAML はフォーマットとコメントが保持された状態で YAML として返され、JSON は JSON として返されます。"
+

@@ -1,0 +1,804 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/security.rst:4
+msgid "Security"
+msgstr "보안"
+
+#: ../../source/security.rst:9
+msgid "The following sections will help you gain an understanding of how |at| handles and lets you control file system security."
+msgstr "다음 섹션은 |at|에서 파일 시스템 보안을 처리하고 사용자가 제어하도록 하는 방법을 이해하는 데 도움이 됩니다."
+
+#: ../../source/security.rst:11
+msgid "All playbooks are executed via the ``awx`` file system user. For running jobs, |at| offers job isolation via the use of Linux containers. This projection ensures jobs can only access playbooks, roles, and data from the Project directory for that job template."
+msgstr "모든 플레이북은 ``awx`` 파일 시스템 사용자를 통해 실행됩니다. 실행 중인 작업의 경우 |at|는 Linux 컨테이너를 사용하여 작업을 격리합니다. 이러한 프로젝션을 통해 작업은 해당 작업 템플릿의 프로젝트 디렉터리에 있는 플레이북, 역할, 데이터에만 액세스할 수 있습니다."
+
+#: ../../source/security.rst:13
+msgid "For credential security, users may choose to upload locked SSH keys and set the unlock password to \"ask\". You can also choose to have the system prompt them for SSH credentials or sudo passwords rather than having the system store them in the database."
+msgstr "인증 정보 보안의 경우 사용자가 잠긴 SSH 키를 업로드하고 잠금 해제 암호를 \"묻기\"로 설정하도록 선택할 수 있습니다. 또한 SSH 인증 정보나 sudo 암호를 데이터베이스에 저장하는 대신 사용자에게 묻는 메시지를 표시하도록 선택할 수도 있습니다."
+
+#: ../../source/security.rst:17
+msgid "Playbook Access and Information Sharing"
+msgstr "플레이북 액세스 및 정보 공유"
+
+#: ../../source/security.rst:25
+msgid "|At|'s use of automation execution environments and Linux containers prevents playbooks from reading files outside of their project directory."
+msgstr "|At|에서 자동화 실행 환경 및 Linux 컨테이너를 사용하면 플레이북에서 프로젝트 디렉터리 외부의 파일을 읽지 않습니다."
+
+#: ../../source/security.rst:27
+msgid "By default, the only data exposed to the ansible-playbook process inside the container is the current project being used."
+msgstr "기본적으로 컨테이너 내부의 ansible-playbook 프로세스에 노출되는 데이터는 현재 사용 중인 프로젝트뿐입니다."
+
+#: ../../source/security.rst:29
+msgid "You can customize this in the Job Settings and expose additional directories from the host into the container. Refer the next section, :ref:`ug_isolation` for more information."
+msgstr "작업 설정에서 이를 사용자 지정하고 호스트에서 컨테이너에 추가 디렉터리를 노출할 수 있습니다. 자세한 내용은 다음 섹션, :ref:`ug_isolation`를 참조하십시오."
+
+#: ../../source/security.rst:34
+msgid "Isolation functionality and variables"
+msgstr "격리 기능 및 변수"
+
+#: ../../../common/source/isolation_variables.rst:2
+msgid "|At| uses container technology to isolate jobs from each other. By default, only the current project is exposed to the container running a job template."
+msgstr "|At|에서는 컨테이너 기술을 사용하여 각 작업을 격리합니다. 기본적으로 현재 프로젝트만 작업 템플릿을 실행하는 컨테이너에 노출됩니다."
+
+#: ../../../common/source/isolation_variables.rst:4
+msgid "You may find that you need to customize your playbook runs to expose additional directories. To fine tune your usage of job isolation, there are certain variables that can be set."
+msgstr "추가 디렉터리를 노출하도록 플레이북 실행을 사용자 지정해야 할 수도 있습니다. 작업 격리 사용을 미세 조정하기 위해 설정할 수 있는 특정 변수가 있습니다."
+
+#: ../../../common/source/isolation_variables.rst:6
+msgid "By default, |at| will use the system's ``tmp`` directory (``/tmp`` by default) as its staging area. This can be changed in the **Job Execution Path** field of the Jobs settings screen, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "기본적으로 |at|에서는 시스템의 ``tmp`` 디렉터리(기본적으로 ``/tmp``)를 스테이징 영역으로 사용합니다. 작업 설정 화면의 **작업 실행 경로** 필드 또는 ``/api/v2/settings/jobs``의 REST API에서 이 설정을 변경할 수 있습니다."
+
+#: ../../../common/source/isolation_variables.rst:8
+msgid "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+msgstr "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+
+#: ../../../common/source/isolation_variables.rst:10
+msgid "If there are any additional directories that should specifically be exposed from the host to the container that playbooks run in, you can specify those in the **Paths to Expose to Isolated Jobs** field of the Jobs setting scren, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "구체적으로 호스트에서 플레이북이 실행되는 컨테이너로 노출되어야 하는 추가 디렉터리가 있는 경우 작업 설정 화면의 **격리된 작업에 노출된 경로** 필드 또는 ``/api/v2/settings/jobs``의 REST API에서 지정할 수 있습니다."
+
+#: ../../../common/source/isolation_variables.rst:13
+msgid "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/isolation_variables.rst:16
+msgid "The primary file you may want to add to ``AWX_ISOLATION_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "플레이북에서 경로에 정의된 키 또는 설정을 사용해야 하는 경우 ``AWX_ISOLATION_SHOW_PATHS``에 ``/var/lib/awx/.ssh`` 파일을 추가하는 것이 좋습니다."
+
+#: ../../../common/source/isolation_variables.rst:18
+msgid "The above fields can be found in the Jobs Settings window:"
+msgstr "위의 필드는 작업 설정 창에서 찾을 수 있습니다."
+
+#: ../../source/security.rst:46
+msgid "Role-Based Access Controls"
+msgstr "역할 기반 액세스 제어"
+
+#: ../../source/security.rst:52
+msgid "Role-Based Access Controls (RBAC) are built into |at| and allow administrators to delegate access to server inventories, organizations, and more. Administrators can also centralize the management of various credentials, allowing end users to leverage a needed secret without ever exposing that secret to the end user. RBAC controls allow the controller to help you increase security and streamline management."
+msgstr "|at|에는 역할 기반 액세스 제어(RBAC)가 내장되어 있어 관리자가 서버 인벤토리, 조직 등에 대한 액세스 권한을 위임할 수 있습니다. 관리자는 또한 다양한 인증 정보 관리를 중앙 집중화하여 최종 사용자가 해당 시크릿을 최종 사용자에게 노출하지 않고도 필요한 시크릿을 활용하도록 할 수 있습니다. 컨트롤러는 RBAC 제어를 통해 보안을 강화하고 관리를 간소화할 수 있습니다."
+
+#: ../../source/security.rst:54
+msgid "RBACs are easiest to think of in terms of Roles which define precisely who or what can see, change, or delete an \"object\" for which a specific capability is being set. RBAC is the practice of granting roles to users or teams."
+msgstr "RBAC는 특정 기능이 설정되는 \"오브젝트\"를 보거나 변경하거나 삭제할 수 있는 사람 또는 대상을 정확하게 정의하는 역할의 관점에서 생각하는 것이 가장 쉽습니다. RBAC는 사용자 또는 팀에 역할을 부여하는 방식에 해당합니다."
+
+#: ../../source/security.rst:56
+msgid "There are a few main concepts that you should become familiar with regarding |at|'s RBAC design--roles, resources, and users. Users can be members of a role, which gives them certain access to any resources associated with that role, or any resources associated with \"descendant\" roles."
+msgstr "|at|의 RBAC 설계와 관련하여 숙지해야 하는 몇 가지 기본 개념(역할, 리소스, 사용자)이 있습니다. 사용자는 역할의 멤버가 될 수 있으며, 역할은 해당 역할과 연결된 리소스 또는 \"하위\" 역할과 연결된 리소스에 대한 특정 액세스 권한을 부여합니다."
+
+#: ../../source/security.rst:58
+msgid "A role is essentially a collection of capabilities. Users are granted access to these capabilities and the controller's resources through the roles to which they are assigned or through roles inherited through the role hierarchy."
+msgstr "역할은 기본적으로 기능 컬렉션입니다. 이러한 기능과 컨트롤러의 리소스에 대한 액세스 권한은 사용자에게 할당된 역할이나 역할 계층 구조에서 상속된 역할을 통해 사용자에게 부여됩니다."
+
+#: ../../source/security.rst:60
+msgid "Roles associate a group of capabilities with a group of users. All capabilities are derived from membership within a role. Users receive capabilities only through the roles to which they are assigned or through roles they inherit through the role hierarchy. All members of a role have all capabilities granted to that role. Within an organization, roles are relatively stable, while users and capabilities are both numerous and may change rapidly. Users can have many roles."
+msgstr "역할은 기능 그룹을 사용자 그룹과 연결합니다. 모든 기능은 역할 내의 멤버십에서 파생됩니다. 사용자는 할당된 역할이나 역할 계층 구조를 통해 상속된 역할을 통해서만 기능을 받습니다. 역할의 모든 멤버는 해당 역할에 부여된 모든 기능을 수행할 수 있습니다. 역할은 조직 내에서 비교적 안정적이지만 사용자와 기능은 둘 다 다양하고 빠르게 변경될 수 있습니다. 사용자는 다수의 역할을 가질 수 있습니다."
+
+#: ../../source/security.rst:64
+msgid "Role Hierarchy and Access Inheritance"
+msgstr "역할 계층 구조 및 액세스 권한 상속"
+
+#: ../../source/security.rst:66
+msgid "Imagine that you have an organization named \"SomeCompany\" and want to allow two people, \"Josie\" and \"Carter\", access to manage all the settings associated with that organization. You should make both people members of the organization's ``admin_role``."
+msgstr "\"SomeCompany\"라는 조직을 보유하고 있고, \"Josie\"와 \"Carter\"라는 두 직원에게 해당 조직과 관련된 모든 설정을 관리할 수 있는 액세스 권한을 부여하려고 하는 상황을 가정해 보겠습니다. 두 사람 모두 조직의 ``admin_role`` 멤버로 만들어야 합니다."
+
+#: ../../source/security.rst:68
+msgid "|user-role-relationship|"
+msgstr "|user-role-relationship|"
+
+#: ../../source/security.rst:72
+msgid "Often, you will have many Roles in a system and you will want some roles to include all of the capabilities of other roles. For example, you may want a System Administrator to have access to everything that an Organization Administrator has access to, who has everything that a Project Administrator has access to, and so on."
+msgstr "일반적으로 시스템에는 많은 역할이 있고, 일부 역할에 다른 역할의 기능이 모두 포함되기를 원합니다. 예를 들어, 시스템 관리자는 조직 관리자가 액세스할 수 있는 모든 항목에 액세스할 수 있고, 조직 관리자는 프로젝트 관리자가 액세스할 수 있는 모든 항목에 액세스할 수 있기를 원할 수 있습니다."
+
+#: ../../source/security.rst:74
+msgid "This concept is referred to as the 'Role Hierarchy':"
+msgstr "이러한 개념을 '역할 계층'이라고 합니다."
+
+#: ../../source/security.rst:76
+msgid "Parent roles get all capabilities bestowed on any child roles"
+msgstr "상위 역할에는 모든 하위 역할에 부여된 모든 기능이 제공됩니다."
+
+#: ../../source/security.rst:77
+msgid "Members of roles automatically get all capabilities for the role they are a member of, as well as any child roles."
+msgstr "역할의 멤버에게는 멤버로 속한 역할과 모든 하위 역할의 모든 기능이 자동으로 제공됩니다."
+
+#: ../../source/security.rst:79
+msgid "The Role Hierarchy is represented by allowing Roles to have \"Parent Roles\". Any capability that a Role has is implicitly granted to any parent roles (or parents of those parents, and so on)."
+msgstr "역할 계층은 역할에 \"상위 역할\"이 포함되도록 허용하는 방식으로 표현합니다. 역할에 포함된 모든 기능은 모든 상위 역할(또는 해당 상위의 상위 등)에 암시적으로 부여됩니다."
+
+#: ../../source/security.rst:81
+msgid "|rbac-role-hierarchy|"
+msgstr "|rbac-role-hierarchy|"
+
+#: ../../source/security.rst:85
+msgid "Often, you will have many Roles in a system and you will want some roles to include all of the capabilities of other roles. For example, you may want a System Administrator to have access to everything that an Organization Administrator has access to, who has everything that a Project Administrator has access to, and so on. We refer to this concept as the 'Role Hierarchy' and it is represented by allowing Roles to have \"Parent Roles\". Any capability that a Role has is implicitly granted to any parent roles (or parents of those parents, and so on). Of course Roles can have more than one parent, and capabilities are implicitly granted to all parents."
+msgstr "일반적으로 시스템에는 많은 역할이 있고, 일부 역할에 다른 역할의 기능이 모두 포함되기를 원합니다. 예를 들어, 시스템 관리자는 조직 관리자가 액세스할 수 있는 모든 항목에 액세스할 수 있고, 조직 관리자는 프로젝트 관리자가 액세스할 수 있는 모든 항목에 액세스할 수 있기를 원할 수 있습니다. 이러한 개념을 \"역할 계층\"이라고 하며, 역할 계층은 역할에 \"상위 역할\"이 포함되도록 허용하는 방식으로 표현합니다. 역할에 포함된 모든 기능은 모든 상위 역할(또는 해당 상위의 상위 등)에 암시적으로 부여됩니다. 물론 역할에는 상위가 두 개 이상 있을 수 있으며, 기능은 모든 상위에 암시적으로 부여됩니다."
+
+#: ../../source/security.rst:87
+msgid "|rbac-heirarchy-morecomplex|"
+msgstr "|rbac-heirarchy-morecomplex|"
+
+#: ../../source/security.rst:91
+msgid "RBAC controls also give you the capability to explicitly permit User and Teams of Users to run playbooks against certain sets of hosts. Users and teams are restricted to just the sets of playbooks and hosts to which they are granted capabilities. And, with |at|, you can create or import as many Users and Teams as you require--create users and teams manually or import them from LDAP or Active Directory."
+msgstr "또한 RBAC 제어 방식을 사용하면 사용자 및 사용자 팀이 특정 호스트 세트에 대해 플레이북을 실행하도록 명시적으로 허용할 수 있습니다. 사용자와 팀은 기능이 부여된 플레이북 및 호스트 세트에 한해 실행할 수 있습니다. 또한 |at|를 사용하면 사용자와 팀을 필요한 만큼 생성하거나 가져올 수 있습니다. 즉, 사용자와 팀을 수동으로 생성하거나 LDAP 또는 Active Directory에서 가져올 수 있습니다."
+
+#: ../../source/security.rst:93
+msgid "RBACs are easiest to think of in terms of who or what can see, change, or delete an \"object\" for which a specific capability is being determined."
+msgstr "RBAC는 특정 기능이 결정되는 \"오브젝트\"를 보거나 변경하거나 삭제할 수 있는 사람 또는 대상의 관점에서 생각하는 것이 가장 쉽습니다."
+
+#: ../../source/security.rst:96
+msgid "Applying RBAC"
+msgstr "RBAC 적용"
+
+#: ../../source/security.rst:98
+msgid "The following sections cover how to apply |at|'s RBAC system in your environment."
+msgstr "다음 섹션에서는 사용자 환경에 |at|의 RBAC 시스템을 적용하는 방법을 다룹니다."
+
+#: ../../source/security.rst:102
+msgid "Editing Users"
+msgstr "사용자 편집"
+
+#: ../../source/security.rst:104
+msgid "When editing a user, a |at| system administrator may specify the user as being either a *System Administrator* (also referred to as the Superuser) or a *System Auditor*."
+msgstr "사용자를 편집할 때 |at| 시스템 관리자는 사용자를 *시스템 관리자*(슈퍼유저라고도 함) 또는 *시스템 감사자* 중 하나로 지정할 수 있습니다."
+
+#: ../../source/security.rst:106
+msgid "System administrators implicitly inherit all capabilities for all objects (read/write/execute) within the |at| environment."
+msgstr "시스템 관리자는 |at| 환경 내의 모든 오브젝트에 대한 모든 기능(읽기/쓰기/실행)을 암시적으로 상속합니다."
+
+#: ../../source/security.rst:107
+msgid "System Auditors implicitly inherit the read-only capability for all objects within the |at| environment."
+msgstr "시스템 감사자는 |at| 환경 내의 모든 오브젝트에 대한 읽기 전용 기능을 암시적으로 상속합니다."
+
+#: ../../source/security.rst:110
+msgid "Editing Organizations"
+msgstr "조직 편집"
+
+#: ../../source/security.rst:112
+msgid "When editing an organization, system administrators may specify the following roles:"
+msgstr "시스템 관리자는 조직을 편집할 때 다음 역할을 지정할 수 있습니다."
+
+#: ../../source/security.rst:114
+msgid "One or more users as organization administrators"
+msgstr "한 명 이상의 사용자를 조직 관리자로 지정"
+
+#: ../../source/security.rst:115
+msgid "One or more users as organization auditors"
+msgstr "한 명 이상의 사용자를 조직 감사자로 지정"
+
+#: ../../source/security.rst:116
+msgid "And one or more users (or teams) as organization members"
+msgstr "한 명 이상의 사용자(또는 팀)를 조직 멤버로 지정"
+
+#: ../../source/security.rst:119
+msgid "Users/teams that are members of an organization can view their organization administrator."
+msgstr "조직의 멤버인 사용자/팀은 조직 관리자를 볼 수 있습니다."
+
+#: ../../source/security.rst:121
+msgid "Users who are organization administrators implicitly inherit all capabilities for all objects within that |at| organization."
+msgstr "조직 관리자인 사용자는 해당 |at| 조직 내의 모든 오브젝트에 대한 모든 기능을 암시적으로 상속합니다."
+
+#: ../../source/security.rst:123
+msgid "Users who are organization auditors implicitly inherit the read-only capability for all objects within that |at| organization."
+msgstr "조직 감사자인 사용자는 해당 |at| 조직 내의 모든 오브젝트에 대한 읽기 전용 기능을 암시적으로 상속합니다."
+
+#: ../../source/security.rst:127
+msgid "Editing Projects in an Organization"
+msgstr "조직의 프로젝트 편집"
+
+#: ../../source/security.rst:129
+msgid "When editing a project in an organization for which they are the administrator, system administrators and organization administrators may specify:"
+msgstr "시스템 관리자 및 조직 관리자는 자신이 관리자로 속해 있는 조직에서 프로젝트를 편집할 때 다음을 지정할 수 있습니다."
+
+#: ../../source/security.rst:131
+msgid "One or more users/teams that are project administrators"
+msgstr "프로젝트 관리자에 해당하는 하나 이상의 사용자/팀"
+
+#: ../../source/security.rst:132
+msgid "One or more users/teams that are project members"
+msgstr "프로젝트 멤버에 해당하는 하나 이상의 사용자/팀"
+
+#: ../../source/security.rst:133
+msgid "And one or more users/teams that may update the project from SCM, from among the users/teams that are members of that organization."
+msgstr "해당 조직의 멤버에 해당하는 사용자/팀 중 SCM에서 프로젝트를 업데이트할 수 있는 하나 이상의 사용자/팀"
+
+#: ../../source/security.rst:135
+msgid "Users who are members of a project can view their project administrators."
+msgstr "프로젝트 멤버에 해당하는 사용자는 프로젝트 관리자를 볼 수 있습니다."
+
+#: ../../source/security.rst:137
+msgid "Project administrators implicitly inherit the capability to update the project from SCM."
+msgstr "프로젝트 관리자는 SCM에서 프로젝트를 업데이트하는 기능을 암시적으로 상속합니다."
+
+#: ../../source/security.rst:139
+msgid "Administrators can also specify one or more users/teams (from those that are members of that project) that can use that project in a job template."
+msgstr "또한 관리자는 (해당 프로젝트의 멤버인 사용자/팀 중) 작업 템플릿에서 해당 프로젝트를 사용할 수 있는 사용자/팀을 하나 이상 지정할 수도 있습니다."
+
+#: ../../source/security.rst:143
+msgid "Creating Inventories and Credentials within an Organization"
+msgstr "조직 내에서 인벤토리 및 인증 정보 생성"
+
+#: ../../source/security.rst:145
+msgid "All access that is granted to use, read, or write credentials is now handled through roles. You no longer set the “team” or “user” for a credential. Instead, you use |at|'s RBAC system to grant ownership, auditor, or usage roles."
+msgstr "인증 정보를 사용하거나 읽거나 쓸 수 있도록 부여하는 모든 액세스 권한이 이제 역할을 통해 처리됩니다. 인증 정보에 더 이상 ‘팀’ 또는 ‘사용자’를 설정하지 않습니다. 대신 |at|의 RBAC 시스템을 사용하여 소유권, 감사자 또는 사용 역할을 부여합니다."
+
+#: ../../source/security.rst:147
+msgid "System administrators and organization administrators may create inventories and credentials within organizations under their administrative capabilities."
+msgstr "시스템 관리자와 조직 관리자는 관리 기능에 따라 조직 내에서 인벤토리 및 인증 정보를 생성할 수도 있습니다."
+
+#: ../../source/security.rst:149
+msgid "Whether editing an inventory or a credential, System administrators and organization administrators may specify one or more users/teams (from those that are members of that organization) to be granted the usage capability for that inventory or credential."
+msgstr "인벤토리를 편집하든 인증 정보를 편집하든 시스템 관리자와 조직 관리자는 (해당 조직의 멤버인 사용자/팀 중에서) 해당 인벤토리 또는 인증 정보를 사용할 수 있는 기능을 제공할 사용자/팀을 하나 이상 지정할 수 있습니다."
+
+#: ../../source/security.rst:151
+msgid "System administrators and organization administrators may specify one or more users/teams (from those that are members of that organization) that have the capabilities to update (dynamic or manually) an inventory.  Administrators can also execute ad hoc commands for an inventory."
+msgstr "시스템 관리자와 조직 관리자는 (해당 조직의 멤버인 사용자/팀 중에서) (동적 또는 수동으로) 인벤토리를 업데이트할 수 있는 사용자/팀을 하나 이상 지정할 수 있습니다.  관리자는 인벤토리에 임시 명령을 실행할 수도 있습니다."
+
+#: ../../source/security.rst:155
+msgid "Editing Job Templates"
+msgstr "작업 템플릿 편집"
+
+#: ../../source/security.rst:157
+msgid "System administrators, organization administrators, and project administrators, within a project under their administrative capabilities, may create and modify new job templates for that project."
+msgstr "시스템 관리자, 조직 관리자, 프로젝트 관리자는 자신에게 제공되는 관리 기능에 따라 프로젝트 내에서 해당 프로젝트에 대해 새 작업 템플릿을 생성하고 수정할 수 있습니다."
+
+#: ../../source/security.rst:159
+msgid "When editing a job template, administrators (|at|, organization, and project) can select among the inventory and credentials in the organization for which they have usage capabilities or they may leave those fields blank so that they will be selected at runtime."
+msgstr "작업 템플릿을 편집할 때 관리자(|at|, 조직, 프로젝트)는 자신이 사용할 수 있는 조직의 인벤토리 및 인증 정보 중에서 선택하거나, 런타임 시 선택되도록 해당 필드를 비워 둘 수 있습니다."
+
+#: ../../source/security.rst:161
+msgid "Additionally, they may specify one or more users/teams (from those that are members of that project) that have execution capabilities for that job template. The execution capability is valid regardless of any explicit capabilities the user/team may have been granted against the inventory or credential specified in the job template."
+msgstr "또한 (해당 프로젝트의 멤버인 사용자/팀 중) 해당 작업 템플릿을 실행할 수 있는 사용자/팀을 하나 이상 지정할 수 있습니다. 작업 템플릿에 지정된 인벤토리 또는 인증 정보에 대해 사용자/팀에 부여된 명시적 기능과 관계없이 실행 기능은 유효합니다."
+
+#: ../../source/security.rst:164
+msgid "User View"
+msgstr "사용자 뷰"
+
+#: ../../source/security.rst:166
+msgid "A user can:"
+msgstr "사용자는 다음을 수행할 수 있습니다."
+
+#: ../../source/security.rst:168
+msgid "See any organization or project for which they are a member"
+msgstr "멤버로 속한 모든 조직 또는 프로젝트 보기"
+
+#: ../../source/security.rst:169
+msgid "Create their own credential objects which only belong to them"
+msgstr "자신에게만 해당하는 자체 인증 정보 오브젝트 생성"
+
+#: ../../source/security.rst:170
+msgid "See and execute any job template for which they have been granted execution capabilities"
+msgstr "실행 기능이 부여된 모든 작업 템플릿 참조 및 실행"
+
+#: ../../source/security.rst:172
+msgid "If a job template a user has been granted execution capabilities on does not specify an inventory or credential, the user will be prompted at run-time to select among the inventory and credentials in the organization they own or have been granted usage capabilities."
+msgstr "사용자에게 실행 기능이 제공된 작업 템플릿에서 인벤토리 또는 인증 정보를 지정하지 않는 경우, 런타임에 사용자에게 사용자가 소유하거나 사용 기능이 있는 조직의 인벤토리 및 인증 정보 중에서 선택하라는 메시지가 표시됩니다."
+
+#: ../../source/security.rst:174
+msgid "Users that are job template administrators can make changes to job templates; however, to change to the inventory, project, playbook, or credentials used in the job template, the user must also have the \"Use\" role for the project and inventory currently being used or being set."
+msgstr "작업 템플릿 관리자인 사용자는 작업 템플릿을 변경할 수 있습니다. 그러나 작업 템플릿에 사용된 인벤토리, 프로젝트, 플레이북 또는 인증 정보를 변경하려면 사용자에게 현재 사용 중이거나 설정 중인 프로젝트 및 인벤토리에 대한 ‘사용’ 역할도 있어야 합니다."
+
+#: ../../source/security.rst:179
+#: ../../source/security.rst:0
+msgid "Roles"
+msgstr "역할"
+
+#: ../../source/security.rst:181
+msgid "As stated earlier in this documentation, all access that is granted to use, read, or write credentials is now handled through roles, and  roles are defined for a resource."
+msgstr "이 문서의 앞부분에서 설명한 것처럼 인증 정보를 사용하거나 읽거나 쓸 수 있도록 부여하는 모든 액세스 권한이 이제 역할을 통해 처리되며, 역할은 리소스에 대해 정의됩니다."
+
+#: ../../source/security.rst:185
+msgid "Built-in roles"
+msgstr "기본 제공 역할"
+
+#: ../../source/security.rst:187
+msgid "The following table lists the RBAC system roles and a brief description of the how that role is defined with regard to privileges in |at|."
+msgstr "다음 테이블에는 RBAC 시스템 역할과 해당 역할이 |at|의 권한과 관련하여 정의되는 방법에 대한 간략한 설명이 있습니다."
+
+#: ../../source/security.rst:190
+#: ../../source/security.rst:0
+msgid "System Role"
+msgstr "시스템 역할"
+
+#: ../../source/security.rst:190
+msgid "What it can do"
+msgstr "수행할 수 있는 작업"
+
+#: ../../source/security.rst:192
+msgid "System Administrator - System wide singleton"
+msgstr "시스템 관리자 - 시스템 수준 싱글톤"
+
+#: ../../source/security.rst:192
+msgid "Manages all aspects of the system"
+msgstr "시스템의 모든 측면 관리"
+
+#: ../../source/security.rst:194
+msgid "System Auditor - System wide singleton"
+msgstr "시스템 감사자 - 시스템 수준 싱글톤"
+
+#: ../../source/security.rst:194
+msgid "Views all aspects of the system"
+msgstr "시스템의 모든 측면 보기"
+
+#: ../../source/security.rst:196
+msgid "Ad Hoc Role - Inventory"
+msgstr "임시 역할 - 인벤토리"
+
+#: ../../source/security.rst:196
+msgid "Runs ad hoc commands on an Inventory"
+msgstr "인벤토리에서 임시 명령 실행"
+
+#: ../../source/security.rst:198
+msgid "Admin Role - Organizations, Teams, Inventory, Projects, Job Templates"
+msgstr "관리자 역할 - 조직, 팀, 인벤토리, 프로젝트, 작업 템플릿"
+
+#: ../../source/security.rst:198
+msgid "Manages all aspects of a defined Organization, Team, Inventory, Project, or Job Template"
+msgstr "정의된 조직, 팀, 인벤토리, 프로젝트 또는 작업 템플릿의 모든 측면 관리"
+
+#: ../../source/security.rst:200
+msgid "Auditor Role - All"
+msgstr "감사자 역할 - 모두"
+
+#: ../../source/security.rst:200
+msgid "Views all aspects of a defined Organization, Project, Inventory, or Job Template"
+msgstr "정의된 조직, 프로젝트, 인벤토리 또는 작업 템플릿의 모든 측면 보기"
+
+#: ../../source/security.rst:202
+msgid "Execute Role - Job Templates"
+msgstr "실행 역할 - 작업 템플릿"
+
+#: ../../source/security.rst:202
+msgid "Runs assigned Job Template"
+msgstr "할당된 작업 템플릿 실행"
+
+#: ../../source/security.rst:204
+msgid "Member Role - Organization, Team"
+msgstr "멤버 역할 - 조직, 팀"
+
+#: ../../source/security.rst:204
+msgid "Manages all of the settings associated with that Organization or Team"
+msgstr "해당 조직 또는 팀과 관련된 모든 설정을 관리"
+
+#: ../../source/security.rst:206
+msgid "Read Role - Organizations, Teams, Inventory, Projects, Job Templates"
+msgstr "읽기 역할 - 조직, 팀, 인벤토리, 프로젝트, 작업 템플릿"
+
+#: ../../source/security.rst:206
+msgid "Views all aspects of a defined Organization, Team, Inventory, Project, or Job Template"
+msgstr "정의된 조직, 팀, 인벤토리, 프로젝트 또는 작업 템플릿의 모든 측면 보기"
+
+#: ../../source/security.rst:208
+msgid "Update Role - Project"
+msgstr "업데이트 역할 - 프로젝트"
+
+#: ../../source/security.rst:208
+msgid "Updates the Project from the configured source control management system"
+msgstr "구성된 소스 제어 관리 시스템에서 프로젝트 업데이트"
+
+#: ../../source/security.rst:210
+msgid "Update Role - Inventory"
+msgstr "업데이트 역할 - 인벤토리"
+
+#: ../../source/security.rst:210
+msgid "Updates the Inventory using the cloud source update system"
+msgstr "클라우드 소스 업데이트 시스템을 사용하여 인벤토리 업데이트"
+
+#: ../../source/security.rst:212
+msgid "Owner Role - Credential"
+msgstr "소유자 역할 - 인증 정보"
+
+#: ../../source/security.rst:212
+msgid "Owns and manages all aspects of this Credential"
+msgstr "이 인증 정보의 모든 측면 소유 및 관리"
+
+#: ../../source/security.rst:214
+msgid "Use Role - Credential, Inventory, Project"
+msgstr "사용 역할 - 인증 정보, 인벤토리, 프로젝트"
+
+#: ../../source/security.rst:214
+msgid "Uses the Credential, Inventory, or Project in a Job Template"
+msgstr "작업 템플릿의 인증 정보, 인벤토리 또는 프로젝트 사용"
+
+#: ../../source/security.rst:218
+msgid "A Singleton Role is a special role that grants system-wide permissions. |at| currently provides two built-in Singleton Roles but the ability to create or customize a Singleton Role is not supported at this time."
+msgstr "싱글톤 역할은 시스템 전체에 대한 권한을 부여하는 특수 역할입니다. |at|는 현재 두 가지 기본 제공 싱글톤 역할을 제공하고 있지만, 싱글톤 역할을 생성하거나 사용자 정의하는 기능은 지원하지 않습니다."
+
+#: ../../source/security.rst:221
+msgid "Common Team Roles - \"Personas\""
+msgstr "일반적인 팀 역할 - \"사용자\""
+
+#: ../../source/security.rst:223
+msgid "|At| support personnel typically works on ensuring that the controller is available and manages it a way to balance supportability and ease-of-use for users. Often, |at| support will assign “Organization Owner/Admin” to users in order to allow them to create a new Organization and add members from their team the respective access needed. This minimizes supporting individuals and focuses more on maintaining uptime of the service and assisting users who are using |at|."
+msgstr "일반적으로 |At| 지원 담당자는 컨트롤러를 사용할 수 있도록 유지하고 지원 가능성과 사용자의 사용 편의성 사이의 균형을 유지하며 관리합니다. |at| 지원에서는 종종 사용자가 새 조직을 생성하고 해당 팀의 멤버에게 필요한 해당 액세스 권한을 추가할 수 있도록 사용자에게 ‘조직 소유자/관리자’를 할당합니다. 이를 통해 개인 지원을 최소화하고 서비스 가동 시간 유지와 |at|을/를 사용하는 사용자 지원에 더 중점을 둘 수 있습니다."
+
+#: ../../source/security.rst:225
+msgid "Below are some common roles managed by the |at| Organization:"
+msgstr "다음은 |at| 조직에서 관리하는 몇 가지 일반적인 역할입니다."
+
+#: ../../source/security.rst:0
+msgid "(for Organizations)"
+msgstr "(조직의 경우)"
+
+#: ../../source/security.rst:0
+msgid "Common User"
+msgstr "일반 사용자"
+
+#: ../../source/security.rst:0
+msgid "Description"
+msgstr "설명"
+
+#: ../../source/security.rst:0
+msgid "Owner"
+msgstr "소유자"
+
+#: ../../source/security.rst:0
+msgid "Team Lead -"
+msgstr "팀 리더 -"
+
+#: ../../source/security.rst:0
+msgid "Technical Lead"
+msgstr "기술 리더"
+
+#: ../../source/security.rst:0
+msgid "This user has the ability to control access for other users in their organization."
+msgstr "이 사용자는 조직의 다른 사용자가 액세스하는 권한을 제어할 수 있습니다."
+
+#: ../../source/security.rst:0
+msgid "They can add/remove and grant users specific access to projects, inventories, and job templates."
+msgstr "프로젝트, 인벤토리, 작업 템플릿에 대한 특정 액세스 권한을 추가/제거하고 사용자에게 부여할 수 있습니다."
+
+#: ../../source/security.rst:0
+msgid "This user also has the ability to create/remove/modify any aspect of an organization’s projects,"
+msgstr "또한 이 사용자는 조직의 프로젝트, 템플릿, 인벤토리, 팀, 인증 정보에 걸친 모든 측면을"
+
+#: ../../source/security.rst:0
+msgid "templates, inventories, teams, and credentials."
+msgstr "생성/제거/수정할 수 있습니다."
+
+#: ../../source/security.rst:0
+msgid "Auditor"
+msgstr "감사자"
+
+#: ../../source/security.rst:0
+msgid "Security Engineer -"
+msgstr "보안 엔지니어 -"
+
+#: ../../source/security.rst:0
+msgid "Project Manager"
+msgstr "프로젝트 관리자"
+
+#: ../../source/security.rst:0
+msgid "This account can view all aspects of the organization in read-only mode."
+msgstr "이 계정은 읽기 전용 모드로 조직의 모든 측면을 볼 수 있습니다."
+
+#: ../../source/security.rst:0
+msgid "This may be good for a user who checks in and maintains compliance."
+msgstr "따라서 규정 준수를 확인하고 유지하는 사용자에게 유용할 수 있습니다."
+
+#: ../../source/security.rst:0
+msgid "This might also be a good role for a service account who manages or"
+msgstr "또한 이 역할은 |at|의 작업 데이터를 관리하거나 일부 다른 데이터 수집기로"
+
+#: ../../source/security.rst:0
+msgid "ships job data from |at| to some other data collector."
+msgstr "전송하는 서비스 계정에 유용할 수도 있습니다."
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Member -"
+msgstr "멤버 -"
+
+#: ../../source/security.rst:0
+msgid "Team"
+msgstr "팀"
+
+#: ../../source/security.rst:0
+msgid "All other users"
+msgstr "기타 모든 사용자"
+
+#: ../../source/security.rst:0
+msgid "These users by default as an organization member do not receive any access to any aspect"
+msgstr "이러한 사용자는 기본적으로 조직 멤버이며, 조직의 어떤 측면에도"
+
+#: ../../source/security.rst:0
+msgid "of the organization. In order to grant them access the respective organization owner needs"
+msgstr "액세스할 수 없습니다. 이러한 사용자에게 액세스 권한을 부여하려면 각 조직 소유자가"
+
+#: ../../source/security.rst:0
+msgid "to add them to their respective team and grant them Admin, Execute, Use, Update, Ad-hoc"
+msgstr "각 팀에 이들 사용자를 추가하고, 조직의 프로젝트, 인벤토리, 작업 템플릿의 각 구성 요소에 대한"
+
+#: ../../source/security.rst:0
+msgid "permissions to each component of the organization’s projects, inventories, and job templates."
+msgstr "관리, 실행, 사용, 업데이트, 임시 권한을 부여해야 합니다."
+
+#: ../../source/security.rst:0
+msgid "Team “Owner”"
+msgstr "팀 ‘소유자’"
+
+#: ../../source/security.rst:0
+msgid "Power users -"
+msgstr "고급 사용자 -"
+
+#: ../../source/security.rst:0
+msgid "Lead Developer"
+msgstr "주요 개발자"
+
+#: ../../source/security.rst:0
+msgid "Organization Owners can provide “admin” through the team interface, over any component"
+msgstr "조직 소유자는 팀 인터페이스를 통해 프로젝트, 인벤토리, 작업 템플릿을 포함한 모든"
+
+#: ../../source/security.rst:0
+msgid "of their organization including projects, inventories, and job templates. These users are able"
+msgstr "조직 구성 요소를 담당하는 ‘관리자’를 제공할 수 있습니다. 이러한 사용자는"
+
+#: ../../source/security.rst:0
+msgid "to modify and utilize the respective component given access."
+msgstr "액세스 권한을 부여받은 각 구성 요소를 수정하고 활용할 수 있습니다."
+
+#: ../../source/security.rst:0
+msgid "Team “Execute”"
+msgstr "팀 ‘실행’"
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Developers -"
+msgstr "개발자 -"
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Engineers"
+msgstr "엔지니어"
+
+#: ../../source/security.rst:0
+msgid "This will be the most common and allows the organization member the ability to execute"
+msgstr "가장 일반적인 역할로, 조직 멤버가 작업 템플릿을 실행하고 특정 구성 요소에 대한 권한을"
+
+#: ../../source/security.rst:0
+msgid "job templates and read permission to the specific components. This is permission applies to templates."
+msgstr "읽을 수 있도록 허용합니다. 이 역할은 템플릿에 적용되는 권한에 해당합니다."
+
+#: ../../source/security.rst:0
+msgid "Team “Use”"
+msgstr "팀 ‘사용’"
+
+#: ../../source/security.rst:0
+msgid "This permission applies to an organization’s credentials, inventories, and projects."
+msgstr "이 권한은 조직의 인증 정보, 인벤토리, 프로젝트에 적용됩니다."
+
+#: ../../source/security.rst:0
+msgid "This permission allows the ability for a user to the respective component within their job template."
+msgstr "이 권한은 사용자가 작업 템플릿 내의 각 구성 요소를 사용할 수 있도록 허용합니다."
+
+#: ../../source/security.rst:0
+msgid "Team “Update”"
+msgstr "팀 ‘업데이트’"
+
+#: ../../source/security.rst:0
+msgid "This permission applies to projects. Allows the user to be able to run an SCM update on a project."
+msgstr "이 권한은 프로젝트에 적용됩니다. 사용자가 프로젝트에서 SCM 업데이트를 실행할 수 있도록 허용합니다."
+
+#: ../../source/security.rst:262
+msgid "Function of roles: editing and creating"
+msgstr "역할의 기능: 편집 및 생성"
+
+#: ../../source/security.rst:264
+msgid "A new organization “resource roles” functionality was introduced in |at| 3.3 that are specific to a certain resource type - such as workflows. Being a member of such a role usually provides two types of permissions, in the case of workflows, where a user is given a \"workflow admin role\" for the organization \"Default\":"
+msgstr "|at| 3.3에는 워크플로우와 같은 특정 리소스 유형과 관련된 조직의 ‘리소스 역할’ 기능이 새롭게 도입되었습니다. 이러한 역할의 멤버가 되면 일반적으로 두 가지 유형의 권한이 제공됩니다. 워크플로우의 경우 사용자에게 조직 \"Default\"에 대한 \"워크플로우 관리자 역할\"이 제공됩니다."
+
+#: ../../source/security.rst:266
+msgid "this user can create new workflows in the organization \"Default\""
+msgstr "이 사용자는 조직 \"Default\"에 새 워크플로우를 생성할 수 있습니다."
+
+#: ../../source/security.rst:267
+msgid "user can edit all workflows in the \"Default\" organization"
+msgstr "사용자는 \"Default\" 조직의 모든 워크플로우를 편집할 수 있습니다."
+
+#: ../../source/security.rst:269
+msgid "One exception is job templates, where having the role is irrelevant of creation permission (more details on its own section)."
+msgstr "한 가지 예외는 역할을 갖는 것이 생성 권한과 관련이 없는 작업 템플릿입니다(자세한 내용은 자체 섹션 참조)."
+
+#: ../../source/security.rst:272
+msgid "Independence of resource roles and organization membership roles"
+msgstr "리소스 역할 및 조직 멤버 역할의 독립성"
+
+#: ../../source/security.rst:274
+msgid "Resource-specific organization roles are independent of the organization roles of admin and member. Having the \"workflow admin role\" for the \"Default\" organization will not allow a user to view all users in the organization, but having a \"member\" role in the \"Default\" organization will. The two types of roles are delegated independently of each other."
+msgstr "리소스별 조직 역할은 조직 역할인 관리자 및 멤버와 독립적입니다. \"Default\" 조직에 대한 \"워크플로우 관리자 역할\"이 있다고 해서 사용자가 조직의 모든 사용자를 볼 수 있는 것은 아니지만, \"Default\" 조직에서 \"멤버\" 역할이 있으면 볼 수 있습니다. 두 가지 유형의 역할은 서로 독립적으로 위임됩니다."
+
+#: ../../source/security.rst:278
+msgid "Necessary permissions to edit job templates"
+msgstr "작업 템플릿을 편집하는 데 필요한 권한"
+
+#: ../../source/security.rst:280
+msgid "Users can edit fields not impacting job runs (non-sensitive fields) with a Job Template admin role alone. However, to edit fields that impact job runs in a job template, a user needs the following:"
+msgstr "작업 실행에 영향을 미치지 않는 필드(민감하지 않은 필드)의 경우 사용자는 작업 템플릿 관리자 역할만으로도 필드를 편집할 수 있습니다. 그러나 작업 템플릿에서 작업 실행에 영향을 미치는 필드를 편집하려면 사용자에게 다음이 필요합니다."
+
+#: ../../source/security.rst:282
+msgid "**admin** role to the job template"
+msgstr "작업 템플릿에 대한 **관리자** 역할"
+
+#: ../../source/security.rst:283
+msgid "**use** role to related project"
+msgstr "관련 프로젝트에 대한 **사용** 역할"
+
+#: ../../source/security.rst:284
+msgid "**use** role to related inventory"
+msgstr "관련 인벤토리에 대한 **사용** 역할"
+
+#: ../../source/security.rst:286
+msgid "An \"organization job template admin\" role was introduced, but having this role isn't sufficient by itself to edit a job template within the organization if the user does not have use role to the project / inventory a job template uses."
+msgstr "\"조직 작업 템플릿 관리자\" 역할이 도입되었지만 작업 템플릿에서 사용하는 프로젝트/인벤토리에 대한 사용 역할이 없는 경우 이 역할만으로는 조직 내 작업 템플릿을 편집하기에 충분하지 않습니다."
+
+#: ../../source/security.rst:288
+msgid "In order to delegate *full* job template control (within an organization) to a user or team, you will need grant the team or user all 3 organization-level roles:"
+msgstr "(조직 내) *전체* 작업 템플릿 제어를 사용자 또는 팀에 위임하려면 팀 또는 사용자에게 세 가지 조직 수준 역할을 모두 부여해야 합니다."
+
+#: ../../source/security.rst:290
+msgid "job template admin"
+msgstr "작업 템플릿 관리자"
+
+#: ../../source/security.rst:291
+msgid "project admin"
+msgstr "프로젝트 관리자"
+
+#: ../../source/security.rst:292
+msgid "inventory admin"
+msgstr "인벤토리 관리자"
+
+#: ../../source/security.rst:294
+msgid "This will ensure that the user (or all users who are members of the team with these roles) have full access to modify job templates in the organization. If a job template uses an inventory or project from another organization, the user with these organization roles may still not have permission to modify that job template. For clarity of managing permissions, it is best-practice to not mix projects / inventories from different organizations."
+msgstr "그러면 사용자(또는 이러한 역할이 있는 팀의 멤버인 모든 사용자)에게 조직의 작업 템플릿을 수정할 수 있는 전체 액세스 권한이 부여됩니다. 작업 템플릿에서 다른 조직의 인벤토리나 프로젝트를 사용하는 경우 이러한 조직 역할의 사용자가 여전히 해당 작업 템플릿을 수정할 권한이 없을 수 있습니다. 권한을 명확하게 관리하기 위해 다른 조직의 프로젝트/인벤토리를 혼합하지 않는 것이 가장 좋습니다."
+
+#: ../../source/security.rst:297
+msgid "RBAC permissions"
+msgstr "RBAC 권한"
+
+#: ../../source/security.rst:299
+msgid "Each role should have a content object, for instance, the org admin role has a content object of the org. To delegate a role, you need admin permission to the content object, with some exceptions that would result in you being able to reset a user's password."
+msgstr "각 역할에는 콘텐츠 오브젝트가 있어야 합니다(예: 조직 관리자 역할에는 조직의 콘텐츠 오브젝트가 있음). 역할을 위임하려면 사용자 암호를 재설정할 수 있는 일부 예외를 제외하고 콘텐츠 오브젝트에 대한 관리자 권한이 필요합니다."
+
+#: ../../source/security.rst:301
+msgid "**Parent** is the organization."
+msgstr "**상위**는 해당 조직입니다."
+
+#: ../../source/security.rst:303
+msgid "**Allow** is what this new permission will explicitly allow."
+msgstr "**허용**은 이 새 권한이 명시적으로 허용하는 항목입니다."
+
+#: ../../source/security.rst:305
+msgid "**Scope** is the parent resource that this new role will be created on. Example: ``Organization.project_create_role``."
+msgstr "**범위**는 이 새 역할이 생성될 상위 리소스입니다. 예를 들면 ``Organization.project_create_role``입니다."
+
+#: ../../source/security.rst:307
+msgid "An assumption is being made that the creator of the resource should be given the admin role for that resource. If there are any instances where resource creation does not also imply resource administration, they will be explicitly called out."
+msgstr "리소스 생성자에게 해당 리소스에 대한 관리자 역할을 부여해야 한다고 가정하고 있습니다. 리소스 생성이 리소스 관리를 의미하지는 않는 인스턴스가 있는 경우 명시적으로 호출됩니다."
+
+#: ../../source/security.rst:309
+msgid "Here are the rules associated with each admin type:"
+msgstr "다음은 각 관리자 유형과 연결된 규칙입니다."
+
+#: ../../source/security.rst:311
+msgid "**Project Admin**"
+msgstr "**프로젝트 관리자**"
+
+#: ../../source/security.rst:313
+msgid "Allow: Create, read, update, delete any project"
+msgstr "허용: 모든 프로젝트의 생성, 읽기, 업데이트, 삭제"
+
+#: ../../source/security.rst:314
+#: ../../source/security.rst:321
+#: ../../source/security.rst:332
+#: ../../source/security.rst:339
+#: ../../source/security.rst:345
+#: ../../source/security.rst:351
+msgid "Scope: Organization"
+msgstr "범위: 조직"
+
+#: ../../source/security.rst:315
+msgid "User Interface: *Project Add Screen - Organizations*"
+msgstr "사용자 인터페이스: *프로젝트 추가 화면 - 조직*"
+
+#: ../../source/security.rst:317
+msgid "**Inventory Admin**"
+msgstr "**인벤토리 관리자**"
+
+#: ../../source/security.rst:319
+#: ../../source/security.rst:330
+#: ../../source/security.rst:337
+#: ../../source/security.rst:343
+#: ../../source/security.rst:349
+msgid "Parent: Org admin"
+msgstr "상위: 조직 관리자"
+
+#: ../../source/security.rst:320
+msgid "Allow: Create, read, update, delete any inventory"
+msgstr "허용: 인벤토리 생성, 읽기, 업데이트, 삭제"
+
+#: ../../source/security.rst:322
+msgid "User Interface: *Inventory Add Screen - Organizations*"
+msgstr "사용자 인터페이스: *인벤토리 추가 화면 - 조직*"
+
+#: ../../source/security.rst:326
+msgid "As it is with the **Use** role, if you give a user Project Admin and Inventory Admin, it allows them to create Job Templates (not workflows) for your organization."
+msgstr "**사용** 역할과 마찬가지로 사용자에게 프로젝트 관리자 및 인벤토리 관리자 역할을 부여하면 사용자가 조직의 작업 템플릿(워크플로우 아님)을 생성할 수 있습니다."
+
+#: ../../source/security.rst:328
+msgid "**Credential Admin**"
+msgstr "**인증 정보 관리자**"
+
+#: ../../source/security.rst:331
+msgid "Allow: Create, read, update, delete shared credentials"
+msgstr "허용: 공유 인증 정보의 생성, 읽기, 업데이트, 삭제"
+
+#: ../../source/security.rst:333
+msgid "User Interface: *Credential Add Screen - Organizations*"
+msgstr "사용자 인터페이스: *인증 정보 추가 화면 - 조직*"
+
+#: ../../source/security.rst:335
+msgid "**Notification Admin**"
+msgstr "**알림 관리자**"
+
+#: ../../source/security.rst:338
+msgid "Allow: Assignment of notifications"
+msgstr "허용: 알림 할당"
+
+#: ../../source/security.rst:341
+msgid "**Workflow Admin**"
+msgstr "**워크플로우 관리자**"
+
+#: ../../source/security.rst:344
+msgid "Allow: Create a workflow"
+msgstr "허용: 워크플로우 생성"
+
+#: ../../source/security.rst:347
+msgid "**Org Execute**"
+msgstr "**조직 실행**"
+
+#: ../../source/security.rst:350
+msgid "Allow: Executing JTs and WFJTs"
+msgstr "허용: JT 및 WFJT 실행"
+
+#: ../../source/security.rst:354
+msgid "The following is a sample scenario showing an organization with its roles and which resource(s) each have access to:"
+msgstr "다음은 조직과 해당 역할 그리고 각 역할이 액세스할 수 있는 리소스를 보여주는 샘플 시나리오입니다."
+

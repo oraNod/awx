@@ -1,0 +1,744 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/notifications.rst:4
+msgid "Notifications"
+msgstr "通知"
+
+#: ../../source/notifications.rst:13
+msgid "A :term:`Notification Template` is an instance of a :term:`Notification` type (Email, Slack, Webhook, etc.) with a name, description, and a defined configuration."
+msgstr ":term:`Notification Template` は、名前、説明および定義された設定が含まれる、:term:`Notification` タイプ (メール、Slack、Webhook など) のことを指します。"
+
+#: ../../source/notifications.rst:15
+msgid "For example:"
+msgstr "例:"
+
+#: ../../source/notifications.rst:17
+msgid "A username, password, server, and recipients are needed for an Email notification template"
+msgstr "メールの通知テンプレートには、ユーザー名、パスワード、サーバー、および受信者が必要です。"
+
+#: ../../source/notifications.rst:18
+msgid "The token and a list of channels are needed for a Slack notification template"
+msgstr "Slack 通知テンプレートには、トークンとチャンネルの一覧が必要です。"
+
+#: ../../source/notifications.rst:19
+msgid "The URL and Headers are needed for a Webhook notification template"
+msgstr "Webhook 通知テンプレートには、URL とヘッダーが必要です。"
+
+#: ../../source/notifications.rst:21
+msgid "A Notification is a manifestation of the notification template; for example, when a job fails, a notification is sent using the configuration defined by the notification template."
+msgstr "通知は、通知テンプレートによる表示です。たとえば、ジョブが失敗すると、通知テンプレートが定義する設定を使用して通知が送信されます。"
+
+#: ../../source/notifications.rst:23
+msgid "At a high level, the typical flow for the notification system works as follows:"
+msgstr "概要としては、通知システムの通常のフローは以下のようになります。"
+
+#: ../../source/notifications.rst:25
+msgid "A user creates a notification template to the REST API at the ``/api/v2/notification_templates`` endpoint (either through the API or through the UI)."
+msgstr "ユーザーは、``/api/v2/notification_templates`` エンドポイントに REST API の通知テンプレートを作成します (API または UI 経由)。"
+
+#: ../../source/notifications.rst:26
+msgid "A user assigns the notification template to any of the various objects that support it (all variants of job templates as well as organizations and projects) and at the appropriate trigger level for which they want the notification (started, success, or error). For example a user may wish to assign a particular notification template to trigger when Job Template 1 fails. In which case, they will associate the notification template with the job template at ``/api/v2/job_templates/n/notification_templates_error`` API endpoint."
+msgstr "ユーザーはサポートする各種オブジェクトのいずれか (すべての種類のジョブテンプレート、組織およびプロジェクト) に対し、通知の必要なトリガーレベル (開始済み、成功、エラーなど) で通知テンプレートを割り当てます。たとえば、ジョブテンプレート 1 の失敗時にトリガーする特定の通知テンプレートを割り当てる場合には、通知テンプレートは ``/api/v2/job_templates/n/notification_templates_error`` API エンドポイントでジョブテンプレートに関連付けられます。"
+
+#: ../../source/notifications.rst:27
+msgid "You can set notifications on job start, not just job end. Users and teams are also able to define their own notifications that can be attached to arbitrary jobs."
+msgstr "ジョブの終了時だけでなく、開始時にも通知を設定できるようになりました。ユーザーおよびチームも、独自の通知を定義して任意のジョブに割り当てることができます。"
+
+#: ../../source/notifications.rst:31
+msgid "Notification Hierarchy"
+msgstr "通知の階層"
+
+#: ../../source/notifications.rst:36
+msgid "Notification templates assigned at certain levels will inherit templates defined on parent objects as such:"
+msgstr "特定のレベルで割り当てられた通知テンプレートは、以下のように親オブジェクトで定義されたテンプレートを継承します。"
+
+#: ../../source/notifications.rst:38
+msgid "Job Templates will use notification templates defined on it as well as inheriting notification templates from the Project used by the Job Template and from the Organization that it is listed under (via the Project)."
+msgstr "ジョブテンプレートはそれに定義されている通知テンプレートを使用し、ジョブテンプレートで使用されるプロジェクトおよびその下に一覧表示される組織から通知テンプレートを (プロジェクト経由で) 継承します。"
+
+#: ../../source/notifications.rst:39
+msgid "Project Updates will use notification templates defined on the project and will inherit notification templates from the Organization associated with it"
+msgstr "プロジェクト更新は、プロジェクトで定義される通知テンプレートを使用し、それに関連付けられる組織から通知テンプレートを継承します。"
+
+#: ../../source/notifications.rst:40
+msgid "Inventory Updates will use notification templates defined on the Organization that it is listed under"
+msgstr "インベントリー更新は、その下に一覧表示される組織で定義される通知テンプレートを使用します。"
+
+#: ../../source/notifications.rst:41
+msgid "Ad-hoc commands will use notification templates defined on the Organization that the inventory is associated with"
+msgstr "アドホックコマンドは、インベントリーが関連付けられる組織に定義された通知テンプレートを使用します。"
+
+#: ../../source/notifications.rst:44
+msgid "Workflow"
+msgstr "ワークフロー"
+
+#: ../../source/notifications.rst:49
+msgid "When a job succeeds or fails, the error or success handler will pull a list of relevant notification templates using the procedure defined above. It will then create a Notification object for each one containing relevant details about the job and then sends it to the destination (email addresses, slack channel(s), sms numbers, etc). These Notification objects are available as related resources on job types (jobs, inventory updates, project updates), and also at ``/api/v2/notifications``. You may also see what notifications have been sent from a notification templates by examining its related resources."
+msgstr "ジョブが成功または失敗したら、エラーまたは成功ハンドラーは上記で定義した手順で、関連する通知テンプレートの一覧をプルします。次に、ジョブの関連情報を含めてそれぞれの通知オブジェクトを作成し、このオブジェクトを宛先 (メールアドレス、slack チャンネル、sms 番号など) に送信します。これらの通知オブジェクトはジョブタイプ (ジョブ、インベントリー更新、プロジェクト更新) の関連リソースとして利用でき、``/api/v2/notifications`` からも入手できます。また、この関連リソースを調査して、通知テンプレートから送信される通知を確認することもできます。"
+
+#: ../../source/notifications.rst:51
+msgid "If a notification fails, it will not impact the job associated to it or cause it to fail. The status of the notification can be viewed at its detail endpoint (``/api/v2/notifications/<n>``)."
+msgstr "通知が失敗する場合、それに関連するジョブに影響を与えたり、これにより失敗することはありません。通知のステータスはその詳細エンドポイント (``/api/v2/notifications/<n>``) で確認できます。"
+
+#: ../../source/notifications.rst:57
+msgid "Create a Notification Template"
+msgstr "通知テンプレートの作成"
+
+#: ../../source/notifications.rst:64
+msgid "To create a Notification Template:"
+msgstr "通知テンプレートを作成するには、以下を実行します。"
+
+#: ../../source/notifications.rst:66
+msgid "Click **Notifications** from the left navigation bar."
+msgstr "左のナビゲーションバーから **通知** をクリックします。"
+
+#: ../../source/notifications.rst:68
+msgid "Click the **Add** button."
+msgstr "**追加** ボタンをクリックします。"
+
+#: ../../source/notifications.rst:72
+msgid "Enter the name of the notification and a description in their respective fields, and specify the organization (required) it belongs to."
+msgstr "通知の名前と説明をそれぞれのフィールドに入力し、通知が属する組織を指定します (必要な場合)。"
+
+#: ../../source/notifications.rst:74
+msgid "Choose a type of notification from the **Type** drop-down menu. Refer to the subsequent sections for additional information."
+msgstr "**タイプ** ドロップダウンメニューから、通知のタイプを選択します。詳細は、その後のセクションを参照してください。"
+
+#: ../../source/notifications.rst:76
+msgid "Once all required information is complete, click **Save** to add the notification."
+msgstr "すべての必須情報を入力したら、**保存** をクリックして通知を追加します。"
+
+#: ../../source/notifications.rst:82
+msgid "Notification Types"
+msgstr "通知タイプ"
+
+#: ../../source/notifications.rst:96
+msgid "Notification types supported with |at|:"
+msgstr "|at| でサポートされる通知タイプ:"
+
+#: ../../source/notifications.rst:101
+msgid "Each of these have their own configuration and behavioral semantics and testing them may need to be approached in different ways. Additionally, you can customize each type of notification down to a specific detail, or a set of criteria to trigger a notification. See :ref:`ug_custom_notifications` for more detail on configuring custom notifications. The following sections will give as much detail as possible on each type of notification."
+msgstr "それぞれの通知タイプには、独自の設定と、動作に関するセマンティクスがあり、それらに対するテストは異なる方法で実行する必要があります。また、通知の各タイプの具体的な詳細をカスタマイズしたり、通知をトリガーする条件を設定したりできます。カスタム通知の設定については、「:ref:`ug_custom_notifications`」を参照してください。以下のセクションでは、通知の各タイプについて、極力詳細に説明します。"
+
+#: ../../source/notifications.rst:105
+msgid "Email"
+msgstr "メール"
+
+#: ../../source/notifications.rst:107
+msgid "The email notification type supports a wide variety of SMTP servers and has support for TLS/SSL connections."
+msgstr "メール通知タイプは各種の SMTP サーバーをサポートし、TLS/SSL 接続のサポートがあります。"
+
+#: ../../source/notifications.rst:109
+msgid "You must provide the following details to setup an email notification:"
+msgstr "メール通知を設定するには以下の情報を指定する必要があります。"
+
+#: ../../source/notifications.rst:111
+msgid "Host"
+msgstr "ホスト"
+
+#: ../../source/notifications.rst:112
+msgid "Recipient list"
+msgstr "受信者リスト"
+
+#: ../../source/notifications.rst:113
+msgid "Sender email"
+msgstr "送信者のメール"
+
+#: ../../source/notifications.rst:114
+msgid "Port"
+msgstr "ポート"
+
+#: ../../source/notifications.rst:115
+msgid "Timeout (in seconds): allows you to specify up to 120 seconds, the length of time |at| may attempt connecting to the email server before giving up."
+msgstr "タイムアウト (秒単位): |at| がタイムアウトになるまでメールサーバーへの接続を試行する時間。最大 120 秒まで指定できます。"
+
+#: ../../source/notifications.rst:120
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../source/notifications.rst:122
+msgid "Grafana is a fairly straightforward integration. First, create an API Key in the `Grafana system`_ (this is the token that is given to |at|)."
+msgstr "Grafana での統合は比較的簡単です。最初に `Grafana system`_ (|at| に渡すトークン) の API キーを作成します。"
+
+#: ../../source/notifications.rst:126
+msgid "You must provide the following details to setup a Grafana notification:"
+msgstr "Grafana の通知を設定するには以下の情報を指定する必要があります。"
+
+#: ../../source/notifications.rst:128
+msgid "Grafana URL: The URL of the Grafana API service, generally ``http://yourcompany.grafana.com``."
+msgstr "Grafana URL: Grafana API サービスの URL。通常は ``http://yourcompany.grafana.com`` です。"
+
+#: ../../source/notifications.rst:129
+msgid "Grafana API Key: The user must first create an API Key in the Grafana system (this is the token that is given to |at|)."
+msgstr "Grafana API キー: ユーザーはまず API キー (|at| に渡すトークン) を Grafana システムで作成する必要があります。"
+
+#: ../../source/notifications.rst:131
+msgid "The other options of note are:"
+msgstr "注意すべきその他のオプションは以下のとおりです。"
+
+#: ../../source/notifications.rst:133
+msgid "ID of the Dashboard: When you created an API Key for the Grafana account, you can set up a dashboard with its own unique ID."
+msgstr "ダッシュボード ID: Grafana アカウントの API キーを作成したら、一意の ID を使用してダッシュボードを設定できます。"
+
+#: ../../source/notifications.rst:134
+msgid "ID of the Panel: If you added panels and graphs to your Grafana interface, you can specify its ID here."
+msgstr "パネル ID：パネルとグラフを Grafana インターフェースに追加した場合に、この ID を指定できます。"
+
+#: ../../source/notifications.rst:135
+msgid "Tags for the Annotation: Enter keywords that help identify the type(s) of events(s) of the notification you are configuring."
+msgstr "アノテーションのタグ: 設定している通知のイベントタイプを識別しやすくするためのキーワードを入力します。"
+
+#: ../../source/notifications.rst:136
+msgid "Disable SSL Verification: SSL verification is on by default, but you can choose to turn off verification the authenticity of the target's certificate. Environments that use internal or private CA's should select this option to disable verification."
+msgstr "SSL 検証の無効化: デフォルトでは SSL 検証は有効になっていますが、ターゲットの証明書の信ぴょう性を検証する機能を無効にすることもできます。内部またはプライベートの CA を使用する環境では、このオプションで検証を無効にするようにしてください。"
+
+#: ../../source/notifications.rst:142
+msgid "IRC"
+msgstr "IRC"
+
+#: ../../source/notifications.rst:144
+msgid "The IRC notification takes the form of an IRC bot that will connect, deliver its messages to channel(s) or individual user(s), and then disconnect. The notification bot also supports SSL authentication. The bot does not currently support Nickserv identification. If a channel or user does not exist or is not on-line then the Notification will not fail; the failure scenario is reserved specifically for connectivity."
+msgstr "IRC 通知は、メッセージをチャンネルまたは個別ユーザーに接続し、配信してから接続を解除する IRC ボットの形式を取ります。通知ボットは SSL 認証もサポートします。ボットは現在 Nickserv ID をサポートしていません。チャンネルまたはユーザーが存在しないか、オンラインにない場合、通知は失敗しません。失敗シナリオは接続に関する場合に適用されます。"
+
+#: ../../source/notifications.rst:146
+msgid "Connectivity information is straightforward:"
+msgstr "接続に関する情報はシンプルです。"
+
+#: ../../source/notifications.rst:148
+msgid "IRC Server Password (optional): IRC servers can require a password to connect. If the server does not require one, leave blank"
+msgstr "IRC サーバーパスワード (オプション): IRC サーバーではパスワードの接続が要求されます。サーバーがこれを要求しない場合には、空白のままにします。"
+
+#: ../../source/notifications.rst:149
+msgid "IRC Server Port: The IRC server Port"
+msgstr "IRC サーバーポート: IRC サーバーポート"
+
+#: ../../source/notifications.rst:150
+msgid "IRC Server Address: The host name or address of the IRC server"
+msgstr "IRC サーバーアドレス: IRC サーバーのホスト名またはアドレス"
+
+#: ../../source/notifications.rst:151
+msgid "IRC Nick: The bot's nickname once it connects to the server"
+msgstr "IRC ニック: サーバー接続後のボットのニックネーム"
+
+#: ../../source/notifications.rst:152
+msgid "Destination Channels or Users: A list of users and/or channels to which to send the notification."
+msgstr "送信先チャンネルまたはユーザー: 通知の送信先のユーザーおよび/またはチャンネルの一覧。"
+
+#: ../../source/notifications.rst:153
+msgid "SSL Connection (optional): Should the bot use SSL when connecting"
+msgstr "SSL 接続 (オプション): ボットは接続時に SSL を使用します。"
+
+#: ../../source/notifications.rst:159
+msgid "Mattermost"
+msgstr "Mattermost"
+
+#: ../../source/notifications.rst:161
+msgid "The Mattermost notification type provides a simple interface to Mattermost's messaging and collaboration workspace. The parameters that can be specified are:"
+msgstr "Mattermost 通知は、Mattermost のメッセージおよびコラボレーションワークスペースに対する簡単なインターフェースを提供します。指定可能なパラメーターは以下のとおりです。"
+
+#: ../../source/notifications.rst:163
+#: ../../source/notifications.rst:191
+msgid "Target URL (required): The full URL that will be POSTed to"
+msgstr "ターゲット URL (必須): POST が実行される完全 URL"
+
+#: ../../source/notifications.rst:164
+#: ../../source/notifications.rst:192
+#: ../../source/notifications.rst:247
+msgid "Username"
+msgstr "ユーザー名"
+
+#: ../../source/notifications.rst:165
+msgid "Channel"
+msgstr "チャネル"
+
+#: ../../source/notifications.rst:166
+#: ../../source/notifications.rst:193
+msgid "Icon URL: specifies the icon to display for this notification"
+msgstr "アイコン URL: この通知向けに表示するアイコンを指定します。"
+
+#: ../../source/notifications.rst:167
+#: ../../source/notifications.rst:194
+msgid "Disable SSL Verification: Turns off verification of the authenticity of the target's certificate. Environments that use internal or private CA's should select this option to disable verification."
+msgstr "SSL 検証の無効化: ターゲットの証明書の信ぴょう性を検証する機能を無効にします。内部またはプライベートの CA を使用する環境では、このオプションで検証を無効にするようにしてください。"
+
+#: ../../source/notifications.rst:173
+msgid "PagerDuty"
+msgstr "PagerDuty"
+
+#: ../../source/notifications.rst:175
+msgid "PagerDuty is a fairly straightforward integration. First, create an API Key in the `PagerDuty system`_ (this is the token that is given to |at|) and then create a \"Service\" which provides an \"Integration Key\" that will also be given to |at|. The other required options are:"
+msgstr "PagerDuty は単純な統合です。まず `PagerDuty system`_ で API キー (|at| に提供されるトークン) を作成してから、|at| に指定される「統合キー」を提供する「サービス」を作成します。他に必要なオプションは以下のとおりです。"
+
+#: ../../source/notifications.rst:179
+msgid "API Token: The user must first create an API Key in the PagerDuty system (this is the token that is given to |at|)."
+msgstr "API トークン: ユーザーはまず API キー (|at| に指定されるトークン) を PagerDuty システムに作成する必要があります。"
+
+#: ../../source/notifications.rst:180
+msgid "PagerDuty Subdomain: When you sign up for the PagerDuty account, you receive a unique subdomain to communicate with. For instance, if you signed up as \"testuser\", the web dashboard will be at ``testuser.pagerduty.com`` and you will give the API ``testuser`` as the subdomain (not the full domain)."
+msgstr "PagerDuty サブドメイン: PagerDuty アカウントのサインアップ時に、通信する固有のサブドメインを受け取ります。たとえば、「testuser」としてサインアップした場合、Web ダッシュボードは ``testuser.pagerduty.com`` になり、サブドメイン (フルドメインではない) として API ``testuser`` を指定します。"
+
+#: ../../source/notifications.rst:181
+msgid "API Service/Integration Key"
+msgstr "API サービス/統合キー"
+
+#: ../../source/notifications.rst:182
+msgid "Client Identifier: This will be sent along with the alert content to the pagerduty service to help identify the service that is using the api key/service. This is helpful if multiple integrations are using the same API key and service."
+msgstr "クライアント ID: これはアラートコンテンツと共に pagerduty サービスに送信され、api キー/サービスを使用しているサービスの識別に使用されます。これは、複数の統合が同じ API キーおよびサービスを使用している場合に役立ちます。"
+
+#: ../../source/notifications.rst:187
+msgid "Rocket.Chat"
+msgstr "Rocket.Chat"
+
+#: ../../source/notifications.rst:189
+msgid "The Rocket.Chat notification type provides an interface to Rocket.Chat's collaboration and communication platform. The parameters that can be specified are:"
+msgstr "Rocket.Chat の通知は、Rocket.Chat のコラボレーションおよびコミュニケーションプラットフォームへのインターフェースを提供します。指定できるパラメーターは次のとおりです。"
+
+#: ../../source/notifications.rst:200
+msgid "Slack"
+msgstr "Slack"
+
+#: ../../source/notifications.rst:202
+msgid "Slack, a collaborative team communication and messaging tool, is pretty easy to configure."
+msgstr "Slack というコラボレーション用のチームのコミュニケーションおよびメッセージングツールは非常に設定しやすいツールです。"
+
+#: ../../source/notifications.rst:204
+msgid "You must supply the following to setup Slack notifications:"
+msgstr "以下を指定して Slack 通知を設定する必要があります。"
+
+#: ../../source/notifications.rst:206
+msgid "A Slack app (refer to the `Basic App Setup <https://api.slack.com/authentication/basics>`_ page of the Slack documentation for information on how to create one)"
+msgstr "Slack アプリケーション (作成方法は Slack ドキュメントの `Basic App Setup <https://api.slack.com/authentication/basics>`_ ページを参照)"
+
+#: ../../source/notifications.rst:208
+msgid "A token (refer to `Enabling Interactions with Bots <https://api.slack.com/bot-users>`_ and specific details on bot tokens on the `Token Types <https://api.slack.com/authentication/token-types#bot>`_ documentation page)"
+msgstr "トークン (`Enabling Interactions with Bots <https://api.slack.com/bot-users>`_ および `Token Types <https://api.slack.com/authentication/token-types#bot>`_ ドキュメントページのボットトークンに関する詳細を参照)"
+
+#: ../../source/notifications.rst:210
+msgid "Once you have a bot/app set up, you must navigate to \"Your Apps\", click on the newly-created app and then go to **Add features and functionality**, which allows you to configure incoming webhooks, bots, and permissions; as well as **Install your app to your workspace**."
+msgstr "ボット/アプリケーションの設定が完了したら、「Your Apps」に移動し、新たに作成したアプリケーションをクリックし、**Add features and functionality** に移動します。これにより、着信 Webhook、ボット、およびパーミッションを設定できるようになります。また、**アプリケーションをワークスペース** にインストールすることもできます。"
+
+#: ../../source/notifications.rst:212
+msgid "You must also invite the notification bot to join the channel(s) in question in Slack. Note that private messages are not supported."
+msgstr "また、通知ボットが Slack で該当するチャンネルに参加できるように招待する必要があります。プライベートメッセージはサポートされていないことに注意してください。"
+
+#: ../../source/notifications.rst:218
+msgid "Twilio"
+msgstr "Twilio"
+
+#: ../../source/notifications.rst:220
+msgid "Twilio service is an Voice and SMS automation service. Once you are signed in, you must create a phone number from which the message will be sent. You can then define a \"Messaging Service\" under Programmable SMS and associate the number you created before with it."
+msgstr "Twilio サービスは、音声および SMS 自動化サービスです。サインインしたら、メッセージ送信元の電話番号を作成する必要があります。次に、プログラミング可能な SMS で「メッセージングサービス」を定義してから、先ほど作成した番号をこのサービスに関連付けてください。"
+
+#: ../../source/notifications.rst:222
+msgid "Note that you may need to verify this number or some other information before you are allowed to use it to send to any numbers. The Messaging Service does not need a status callback URL nor does it need the ability to Process inbound messages."
+msgstr "この番号を使用して任意の番号に送信する前に、その番号や他の情報を確認する必要があります。メッセージングサービスにはステータスコールバック URL も、インバウンドメッセージを処理する機能も不要です。"
+
+#: ../../source/notifications.rst:224
+msgid "Under your individual (or sub) account settings, you will have API credentials. Twilio uses two credentials to determine which account an API request is coming from. The “Account SID”, which acts as a username, and the “Auth Token” which acts as a password."
+msgstr "個別 (またはサブ) アカウントの設定では、API 認証情報を設定します。Twilio は 2 つの認証情報を使用して API 要求の出所を判別します。「アカウント SID」はユーザー名として機能し、「認証トークン」はパスワードとして機能します。"
+
+#: ../../source/notifications.rst:226
+msgid "To setup Twilio, provide the following details:"
+msgstr "Twilio を設定するには、以下の詳細を指定します。"
+
+#: ../../source/notifications.rst:228
+msgid "Account Token"
+msgstr "アカウントトークン"
+
+#: ../../source/notifications.rst:229
+msgid "Source Phone Number (this is the number associated with the messaging service above and must be given in the form of \"+15556667777\")"
+msgstr "送信元の電話番号 (これは上記のメッセージングサービスに関連付けられた番号であり、「+15556667777」の形式で指定する必要があります)"
+
+#: ../../source/notifications.rst:230
+msgid "Destination SMS number (this will be the list of numbers to receive the SMS and should be the 10-digit phone number)"
+msgstr "着信先の SMS 番号 (これは SMS を受信するための番号の一覧であり、10 桁の電話番号である必要があります)"
+
+#: ../../source/notifications.rst:231
+msgid "Account SID"
+msgstr "アカウント SID"
+
+#: ../../source/notifications.rst:237
+msgid "Webhook"
+msgstr "Webhook"
+
+#: ../../source/notifications.rst:239
+msgid "The webhook notification type provides a simple interface to sending POSTs to a predefined web service. |at| will POST to this address using application/json content type with the data payload containing all relevant details in json format. Some web service APIs expect HTTP requests to be in a certain format with certain fields. You can configure more of the webhook notification in the following ways:"
+msgstr "Webhook 通知タイプは、事前定義された Web サービスに POST を送信するためのシンプルなインターフェースを実現します。|at| は、JSON 形式で関連情報がすべて含まれるデータペイロードと、アプリケーション/JSON のコンテンツタイプを使用して、このアドレスに POST 要求を送信します。Web サービス API によっては、HTTP 要求が特定のフィールドおよび特定の形式でないといけない場合があります。以下の方法で、これまでよりも多くの Webhook 通知を設定できます。"
+
+#: ../../source/notifications.rst:241
+msgid "configure the HTTP method (using **POST** or **PUT**)"
+msgstr "HTTP メソッドの設定 (**POST** または **PUT** を使用)"
+
+#: ../../source/notifications.rst:242
+msgid "body of the outgoing request"
+msgstr "送信要求の本文"
+
+#: ../../source/notifications.rst:243
+msgid "configure authentication (using basic auth)"
+msgstr "認証の設定 (基本認証を使用)"
+
+#: ../../source/notifications.rst:245
+msgid "The parameters for configuring webhooks are:"
+msgstr "Webhook を設定するためのパラメーターは以下のとおりです。"
+
+#: ../../source/notifications.rst:248
+msgid "Basic Auth Password"
+msgstr "Basic 認証パスワード"
+
+#: ../../source/notifications.rst:249
+msgid "Target URL (required): The full URL to which the webhook notification will be PUT or POSTed."
+msgstr "ターゲット URL (必須): Webhook の通知が PUT または POST 要求として送信される完全なURL。"
+
+#: ../../source/notifications.rst:250
+msgid "Disable SSL Verification: SSL verification is on by default, but you can choose to turn off verification of the authenticity of the target’s certificate. Environments that use internal or private CA’s should select this option to disable verification."
+msgstr "SSL 検証の無効化: デフォルトでは SSL 検証はオンになっていますが、ターゲットの証明書の信ぴょう性を検証する機能を無効にすることもできます。内部またはプライベートの CA を使用する環境では、このオプションで検証を無効にするようにしてください。"
+
+#: ../../source/notifications.rst:251
+msgid "HTTP Headers (required): Headers in JSON form where the keys and values are strings. For example, ``{\"Authentication\": \"988881adc9fc3655077dc2d4d757d480b5ea0e11\", \"MessageType\": \"Test\"}``"
+msgstr "HTTP ヘッダー (必須): キーと値が文字列である JSON 形式のヘッダー。以下は例になります。``{\"Authentication\": \"988881adc9fc3655077dc2d4d757d480b5ea0e11\", \"MessageType\": \"Test\"}``"
+
+#: ../../source/notifications.rst:253
+msgid "HTTP Method (required). Select the method for your webhook:"
+msgstr "HTTPメソッド (必須): 以下の Webhook のメソッドを選択します。"
+
+#: ../../source/notifications.rst:255
+msgid "POST: Creates a new resource. Also acts as a catch-all for operations that do not fit into the other categories. It is likely you need to POST unless you know your webhook service expects a PUT."
+msgstr "POST: 新しいリソースを作成します。他のカテゴリーに当てはまらない操作の汎用メソッドとしても機能します。Webhook サービスが PUT を要求していることがわかっていない限り、POST の実行が必要である可能性があります。"
+
+#: ../../source/notifications.rst:256
+msgid "PUT: Updates a specific resource (by an identifier) or a collection of resources. PUT can also be used to create a specific resource if the resource identifier is known beforehand."
+msgstr "PUT: (識別子によって) 特定のリソースまたはリソースのコレクションを更新します。リソースの識別子が事前にわかっている場合、PUT は特定のリソースの作成にも使用できます。"
+
+#: ../../source/notifications.rst:263
+msgid "Webhook payloads"
+msgstr "Webhook ペイロード"
+
+#: ../../source/notifications.rst:265
+msgid "|At| sends by default the following data at the webhook endpoint:"
+msgstr "|At| は、デフォルトで Webhook エンドポイントで次のデータを送信します。"
+
+#: ../../source/notifications.rst:286
+msgid "An example of a ``started`` notifications via webhook message as it is returned by |at|:"
+msgstr "|at| から返される Webhook メッセージによる ``started`` 通知の例:"
+
+#: ../../source/notifications.rst:296
+msgid "|At| returns by default the following data at the webhook endpoint for a ``success``/``fail`` status:"
+msgstr "|At| は、デフォルトで ``success``/``fail`` 状態の Webhook エンドポイントで次のデータを返します。"
+
+#: ../../source/notifications.rst:317
+msgid "An example of a ``success``/``fail`` notifications via webhook message as it is returned by |at|:"
+msgstr "|at| から返される Webhook メッセージによる ``success``/``fail`` 通知の例:"
+
+#: ../../source/notifications.rst:331
+msgid "Create custom notifications"
+msgstr "カスタム通知の作成"
+
+#: ../../source/notifications.rst:333
+msgid "You can :ref:`customize the text content <ir_notifications_reference>` of each of the :ref:`ug_notifications_types` by enabling the **Customize Messages** portion at the bottom of the notifications form using the toggle button."
+msgstr "トグルボタンを使用して通知フォームの最下部にある **メッセージのカスタマイズ** を有効にすると、各 :ref:`ug_notifications_types` の :ref:`customize the text content <ir_notifications_reference>` を行うことができます。"
+
+#: ../../source/notifications.rst:337
+msgid "You can provide a custom message for various job events:"
+msgstr "各種のジョブイベントに対して以下のカスタムメッセージを提供できます。"
+
+#: ../../source/notifications.rst:339
+msgid "Start"
+msgstr "開始"
+
+#: ../../source/notifications.rst:340
+msgid "Success"
+msgstr "成功"
+
+#: ../../source/notifications.rst:341
+msgid "Error"
+msgstr "エラー"
+
+#: ../../source/notifications.rst:342
+msgid "Workflow approved"
+msgstr "ワークフローの承認"
+
+#: ../../source/notifications.rst:343
+msgid "Workflow denied"
+msgstr "ワークフローの拒否"
+
+#: ../../source/notifications.rst:344
+msgid "Workflow running"
+msgstr "ワークフローの実行中"
+
+#: ../../source/notifications.rst:345
+msgid "Workflow timed out"
+msgstr "ワークフローのタイムアウト"
+
+#: ../../source/notifications.rst:347
+msgid "The message forms vary depending on the type of notification you are configuring. For example, messages for email and PagerDuty notifications have the appearance of a typical email form with a subject and body, in which case, |at| displays the fields as **Message** and **Message Body**. Other notification types only expect a **Message** for each type of event:"
+msgstr "メッセージの形式は、設定している通知の種類によって異なります。たとえば、メールおよび PagerDuty 通知のメッセージは、件名と本文を含む一般的なメール形式で、その場合、|at| は **メッセージ** および **メッセージボディー** というフィールドを表示します。他の通知タイプでは、各イベントのタイプの **メッセージ** のみになります。"
+
+#: ../../source/notifications.rst:351
+msgid "The **Message** fields are pre-populated with a template containing a top-level variable, ``job`` coupled with an attribute, such as ``id`` or ``name``, for example. Templates are enclosed in curly braces and may draw from a fixed set of fields provided by |at|, as shown in the pre-populated **Messages** fields."
+msgstr "**メッセージ** フィールドにはトップレベルの変数を含むテンプレートが事前設定されており、``job`` は ``id`` または ``name`` などの属性と組み合わせられます。テンプレートは中括弧で囲まれ、事前設定された **メッセージ** フィールドに示されるように、|at| によって指定される固定のフィールドセットから作成されます。"
+
+#: ../../source/notifications.rst:355
+msgid "This pre-populated field suggests commonly displayed messages to a recipient who is notified of an event. You can, however, customize these messages with different criteria by adding your own attribute(s) for the job as needed. Custom notification messages are rendered using Jinja - the same templating engine used by Ansible playbooks."
+msgstr "この事前設定されたフィールドでは、イベントの通知を受けた受信者に共通して表示されるメッセージが提案されています。ただし、ジョブに関連した独自の属性を必要に応じて追加することにより、これらのメッセージを異なる条件でカスタマイズできます。カスタムの通知メッセージは、Ansible Playbook で使用されるテンプレート作成エンジンと同じ Jinja を使用してレンダリングされます。"
+
+#: ../../source/notifications.rst:357
+msgid "Messages and message bodies have different types of content:"
+msgstr "メッセージとメッセージ本文には、以下のような各種タイプのコンテンツがあります。"
+
+#: ../../source/notifications.rst:359
+msgid "messages will always just be strings (one-liners only; new lines are not allowed)"
+msgstr "メッセージは常に文字列のみになります (1 行のみ。改行は使用できません)"
+
+#: ../../source/notifications.rst:361
+msgid "message bodies will be either a dictionary or block of text:"
+msgstr "メッセージ本文は、以下のような辞書またはテキストブロックのいずれかになります。"
+
+#: ../../source/notifications.rst:363
+msgid "the message body for *Webhooks* and *PagerDuty* uses dictionary definitions. The default message body for these is ``{{ job_metadata }}``, you can either leave that as is or provide your own dictionary"
+msgstr "*Webhook* および *PagerDuty* では、辞書定義が使用されます。これらのデフォルトのメッセージ本文は ``{{ job_metadata }}`` で、そのまま使用することも、独自の辞書を指定することもできます。"
+
+#: ../../source/notifications.rst:365
+msgid "the message body for email uses a block of text or a multi-line string. The default message body is:"
+msgstr "メールのメッセージ本文では、テキストブロックまたは複数行の文字列が使用されます。デフォルトのメッセージ本文は次のようになります。"
+
+#: ../../source/notifications.rst:371
+msgid "You can tweak this text (leaving ``{{ job_metadata }}`` in, or drop ``{{ job_metadata }}`` altogether). Since the body is a block of text, it can really be any string you want."
+msgstr "このテキストは微調整できます (``{{ job_metadata }}`` をそのままにするか、``{{ job_metadata }}`` を完全に削除します)。本文はテキストブロックであるため、実際には任意の文字列を使用できます。"
+
+#: ../../source/notifications.rst:373
+msgid "``{{ job_metadata }}`` gets rendered as a dictionary containing fields that describe the job being executed. In all cases, ``{{ job_metadata }}`` will include the following fields:"
+msgstr "``{{ job_metadata }}`` は実行中のジョブを説明するフィールドを含む辞書としてレンダリングされます。いずれの場合にも、``{{ job_metadata }}`` には以下のフィールドが含まれます。"
+
+#: ../../source/notifications.rst:375
+msgid "``id``"
+msgstr "``id``"
+
+#: ../../source/notifications.rst:376
+msgid "``name``"
+msgstr "``name``"
+
+#: ../../source/notifications.rst:377
+msgid "``url``"
+msgstr "``url``"
+
+#: ../../source/notifications.rst:378
+msgid "``created_by``"
+msgstr "``created_by``"
+
+#: ../../source/notifications.rst:379
+msgid "``started``"
+msgstr "``started``"
+
+#: ../../source/notifications.rst:380
+msgid "``finished``"
+msgstr "``finished``"
+
+#: ../../source/notifications.rst:381
+msgid "``status``"
+msgstr "``status``"
+
+#: ../../source/notifications.rst:382
+msgid "``traceback``"
+msgstr "``traceback``"
+
+#: ../../source/notifications.rst:386
+msgid "At the present time, you cannot query individual fields within ``{{ job_metadata }}``. When using ``{{ job_metadata }}`` in a notification template, all data will be returned."
+msgstr "現時点では、``{{ job_metadata }}`` 内の個々のフィールドにクエリーすることはできません。通知テンプレートで ``{{ job_metadata }}`` を使用する場合、すべてのデータが返されます。"
+
+#: ../../source/notifications.rst:389
+#: ../../source/notifications.rst:442
+msgid "The resulting dictionary will look something like this:"
+msgstr "作成された辞書は次のようになります。"
+
+#: ../../source/notifications.rst:403
+msgid "If ``{{ job_metadata }}`` is rendered in a job, it will include the following additional fields:"
+msgstr "``{{ job_metadata }}`` がジョブでレンダリングされる場合は、以下の追加フィールドが含まれます。"
+
+#: ../../source/notifications.rst:405
+msgid "``inventory``"
+msgstr "``inventory``"
+
+#: ../../source/notifications.rst:406
+msgid "``project``"
+msgstr "``project``"
+
+#: ../../source/notifications.rst:407
+msgid "``playbook``"
+msgstr "``playbook``"
+
+#: ../../source/notifications.rst:408
+msgid "``credential``"
+msgstr "``credential``"
+
+#: ../../source/notifications.rst:409
+msgid "``limit``"
+msgstr "``limit``"
+
+#: ../../source/notifications.rst:410
+msgid "``extra_vars``"
+msgstr "``extra_vars``"
+
+#: ../../source/notifications.rst:411
+msgid "``hosts``"
+msgstr "``hosts``"
+
+#: ../../source/notifications.rst:415
+msgid "The resulting dictionary will look something like:"
+msgstr "作成された辞書は次のようになります。"
+
+#: ../../source/notifications.rst:436
+msgid "If ``{{ job_metadata }}`` is rendered in a workflow job, it will include the following additional field:"
+msgstr "``{{ job_metadata }}`` がワークフロージョブでレンダリングされる場合、以下の追加フィールドが含まれます。"
+
+#: ../../source/notifications.rst:438
+msgid "``body`` (this will enumerate all the nodes in the workflow job and includes a description of the job associated with each node)"
+msgstr "``body`` (これにより、ワークフロージョブ内のすべてのノードが列挙され、各ノードに関連付けられたジョブの説明が含まれます)"
+
+#: ../../source/notifications.rst:462
+msgid "For more detail, refer to `Using variables with Jinja2`_."
+msgstr "詳細については、`Using variables with Jinja2`_ を参照してください。"
+
+#: ../../source/notifications.rst:467
+msgid "|At| requires valid syntax in order to retrieve the correct data to display the messages. For a list of supported attributes and the proper syntax construction, refer to the :ref:`ir_notifications_reference` section of this guide."
+msgstr "|At| では、正しいデータを取得してメッセージを表示するには、有効な構文が必要です。サポートされている属性と適切な構文構成のリストについては、本書の「:ref:`ir_notifications_reference`」を参照してください。"
+
+#: ../../source/notifications.rst:470
+msgid "If you create a notification template that uses invalid syntax or references unusable fields, an error message displays indicating the nature of the error. If you delete a notification’s custom message, the default message is shown in its place."
+msgstr "無効な構文や使用できないフィールドの参照を使用する通知テンプレートを作成すると、エラーの内容を示すエラーメッセージが表示されます。通知のカスタムメッセージを削除すると、この場所にはデフォルトのメッセージが表示されます。"
+
+#: ../../source/notifications.rst:475
+msgid "If you save the notifications template without editing the custom message (or edit and revert back to the default values), the **Details** screen assumes the defaults and will not display the custom message tables. If you edit and save any of the values, the entire table displays in the **Details** screen."
+msgstr "カスタムメッセージを編集せずに通知テンプレートを保存する（または編集してデフォルト値に戻す）場合、**Details** 画面はデフォルトを想定し、カスタムメッセージテーブルは表示されません。値を編集および保存した場合には、テーブル全体が **Details** 画面に表示されます。"
+
+#: ../../source/notifications.rst:483
+msgid "Enable and Disable Notifications"
+msgstr "通知の有効化と無効化"
+
+#: ../../source/notifications.rst:485
+msgid "You can select which notifications to notify you when a specific job starts, in addition to notifying you on success or failure at the end of the job run. Some behaviors to keep in mind:"
+msgstr "特定のジョブ実行の終了時に成功か失敗かを通知することに加えて、そのジョブの開始時に通知する内容を選択できます。以下は留意が必要な動作です。"
+
+#: ../../source/notifications.rst:487
+msgid "if a workflow template (WFJT) has notification on start enabled, and a job template (JT) within that workflow also has notification on start enabled, you will receive notifications for both"
+msgstr "ワークフローテンプレート (WFJT) でも、ワークフロー内のジョブテンプレート (JT) でも開始時の通知が有効化されている場合には、両方のメッセージが受信される"
+
+#: ../../source/notifications.rst:488
+msgid "you can enable notifications to run on many JTs within a WFJT"
+msgstr "WFJT 内の多くの JT で通知の実行を有効化できる"
+
+#: ../../source/notifications.rst:489
+msgid "you can enable notifications to run on a sliced job template (SJT) start and each slice will generate a notification"
+msgstr "スライスされたジョブテンプレート (SJT) で実行される通知を有効化でき、各スライスが通知を生成するようになる"
+
+#: ../../source/notifications.rst:490
+msgid "when you enable a notification to run on job start, and that notification gets deleted, the JT continues to run, but will result in an error message"
+msgstr "ジョブ開始時の通知の実行が有効化されている場合に、その通知が削除されると、JT は引き続き実行されるが、エラーメッセージが表示される"
+
+#: ../../source/notifications.rst:492
+msgid "You can enable notifications on job start, job success, and job failure, or any combination thereof, from the **Notifications** tab of the following resources:"
+msgstr "ジョブの開始、ジョブの成功、ジョブの失敗、またはこれらの任意の組み合わせの通知を、以下のリソースの **通知** タブから有効化できます。"
+
+#: ../../source/notifications.rst:494
+msgid "Job Template"
+msgstr "ジョブテンプレート"
+
+#: ../../source/notifications.rst:495
+msgid "Workflow Template"
+msgstr "ワークフローテンプレート"
+
+#: ../../source/notifications.rst:496
+msgid "Projects (shown in the example below)"
+msgstr "プロジェクト (以下の例を参照)"
+
+#: ../../source/notifications.rst:497
+msgid "Inventory Source"
+msgstr "インベントリーソース"
+
+#: ../../source/notifications.rst:498
+#: ../../source/notifications.rst:554
+msgid "Organizations"
+msgstr "組織"
+
+#: ../../source/notifications.rst:503
+msgid "For workflow templates that have approval nodes, in addition to *Start*, *Success*, and *Failure*, you can enable or disable certain approval-related events:"
+msgstr "承認ノードがあるワークフローテンプレートの場合は、*開始*、*成功*、および *エラー* に加えて、以下のように特定の承認関連のイベントを有効または無効にできます。"
+
+#: ../../source/notifications.rst:507
+msgid "Refer to :ref:`ug_wf_approval_nodes` for additional detail on working with these types of nodes."
+msgstr "これらのタイプのノードの操作の詳細については、「:ref:`ug_wf_approval_nodes`」を参照してください。"
+
+#: ../../source/notifications.rst:511
+msgid "Configure the ``host`` hostname for notifications"
+msgstr "通知用の ``host`` のホスト名設定"
+
+#: ../../source/notifications.rst:516
+msgid "In the :ref:`System Settings <configure_tower_system>`, you can replace the default value in the **Base URL of the service** field with your preferred hostname to change the notification hostname."
+msgstr ":ref:`System Settings <configure_tower_system>` で、**Service のベース URL** フィールドのデフォルト値を、希望のホスト名に置き換えることで、通知ホスト名を変更できます。"
+
+#: ../../source/notifications.rst:520
+msgid "Refreshing your license also changes the notification hostname. New installations of |at| should not have to set the hostname for notifications."
+msgstr "ライセンスを更新すると、通知のホスト名も更新します。|at| の新規インストールでは、通知用にホストを設定する必要がありません。"
+
+#: ../../source/notifications.rst:523
+msgid "Reset the ``TOWER_URL_BASE``"
+msgstr "``TOWER_URL_BASE`` のリセット"
+
+#: ../../source/notifications.rst:530
+msgid "The primary way that |at| determines how the base URL (``TOWER_URL_BASE``) is defined is by looking at an incoming request and setting the server address based on that incoming request."
+msgstr "|at| でベース URL (``TOWER_URL_BASE``) の定義方法を判別する主な方法は、受信要求を確認し、受信要求に基づいてサーバーアドレスを設定する方法です。"
+
+#: ../../source/notifications.rst:532
+msgid "|At| takes settings values from the database first. If no settings values are found, it falls back to using the values from the settings files.  If a user posts a license by navigating to the |at| host's IP adddress, the posted license is written to the settings entry in the database."
+msgstr "|At| は、最初にデータベースから設定値を取ります。設定の値が見つからないとフォールバックが行われ、設定ファイルの値を使用します。ユーザーが |at| ホストの IP アドレスに移動してライセンスを掲載する場合、掲載されるライセンスはデータベースの設定エントリーに書き込まれます。"
+
+#: ../../source/notifications.rst:534
+msgid "To change the ``TOWER_URL_BASE`` if the wrong address has been picked up, navigate to **Miscellaneous System settings** from the Settings menu using the DNS entry you wish to appear in notifications, and re-add your license."
+msgstr "誤ったアドレスが選択された場合に ``TOWER_URL_BASE`` を変更するには、通知に表示する DNS エントリーを使用して設定メニューの **その他のシステム設定** に移動し、ライセンスを再度追加します。"
+
+#: ../../source/notifications.rst:539
+msgid "Notifications API"
+msgstr "通知 API"
+
+#: ../../source/notifications.rst:544
+msgid "Use the ``started``, ``success``, or ``error`` endpoints:"
+msgstr "エンドポイントの ``started`` 、``success``、または ``error`` を使用します。"
+
+#: ../../source/notifications.rst:552
+msgid "Additionally, the ``../../../N/notification_templates_started`` endpoints have **GET** and **POST** actions for:"
+msgstr "``../../../N/notification_templates_started`` エンドポイントでは、以下に対する **GET** および **POST** アクションも使用されます。"
+
+#: ../../source/notifications.rst:555
+msgid "Projects"
+msgstr "プロジェクト"
+
+#: ../../source/notifications.rst:556
+msgid "Inventory Sources"
+msgstr "インベントリーソース"
+
+#: ../../source/notifications.rst:557
+msgid "Job Templates"
+msgstr "ジョブテンプレート"
+
+#: ../../source/notifications.rst:558
+msgid "System Job Templates"
+msgstr "システムジョブテンプレート"
+
+#: ../../source/notifications.rst:559
+msgid "Workflow Job Templates"
+msgstr "ワークフロージョブテンプレート"
+

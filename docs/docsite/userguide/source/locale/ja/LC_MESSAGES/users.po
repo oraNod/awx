@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/users.rst:4
+msgid "Users"
+msgstr "ユーザー"
+
+#: ../../source/users.rst:10
+msgid "A :term:`User` is someone who has access to |at| with associated permissions and credentials. Access the Users page by clicking **Users** from the left navigation bar. The User list may be sorted and searched by **Username**, **First Name**, or **Last Name** and click the headers to toggle your sorting preference."
+msgstr ":term:`User` とは、パーミッションおよび認証情報が関連付けられており、|at| にアクセスできるユーザーのことです。ユーザーページには、左のナビゲーションバーから **ユーザー** をクリックしてアクセスします。ユーザーの一覧は、**ユーザー名** 別、**名** 別、または **姓** 別に並び替えや検索ができます。ヘッダーをクリックして、並び替えの順序を切り換えます。"
+
+#: ../../source/users.rst:15
+msgid "You can easily view permissions and user type information by looking beside their user name in the User overview screen."
+msgstr "パーミッションやユーザータイプの情報は、ユーザーの概要画面でユーザー名の隣に表示されているため、簡単に確認できます。"
+
+#: ../../source/users.rst:21
+msgid "Create a User"
+msgstr "ユーザーの作成"
+
+#: ../../source/users.rst:23
+msgid "To create a new user:"
+msgstr "新規ユーザーを作成するには、以下を実行します。"
+
+#: ../../source/users.rst:25
+msgid "Click the **Add** button, which opens the Create User dialog."
+msgstr "**追加** ボタンをクリックすると、「ユーザーの作成」ダイアログが開きます。"
+
+#: ../../source/users.rst:27
+msgid "Enter the appropriate details about your new user. Fields marked with an asterisk (*) are required."
+msgstr "新しいユーザーに関する適切な情報を入力してください。アスタリスク (*) の付いたフィールドは必須です。"
+
+#: ../../source/users.rst:31
+msgid "When modifying your own password, log out and log back in again in order for it to take effect."
+msgstr "パスワードを変更する場合には、ログアウトして、ログインし直し、変更を適用してください。"
+
+#: ../../source/users.rst:33
+msgid "Three types of Users can be assigned:"
+msgstr "ユーザーには 3 つのタイプを割り当てることができます。"
+
+#: ../../source/users.rst:35
+msgid "**Normal User**: Normal Users have read and write access limited to the resources (such as inventory, projects, and job templates) for which that user has been granted the appropriate roles and privileges."
+msgstr "**Normal User (標準ユーザー)**: 標準ユーザーには、適切なロールや権限が付与されているリソース (インベントリー、プロジェクト、およびジョブテンプレートなど) に限定される読み取りおよび書き込みアクセスがあります。"
+
+#: ../../source/users.rst:37
+msgid "**System Auditor**: Auditors implicitly inherit the read-only capability for all objects within the environment."
+msgstr "**System Auditor (システム監査者)**: 監査者は、環境内のすべてのオブジェクトの読み取り専用機能を暗黙的に継承します。"
+
+#: ../../source/users.rst:39
+msgid "**System Administrator**: A System Administrator (also known as Superuser) has full system administration privileges -- with full read and write privileges over the entire installation. A System Administrator is typically responsible for managing all aspects of |at| and delegating responsibilities for day-to-day work to various Users. Assign with caution!"
+msgstr "**System Administrator (システム管理者)**: システム管理者 (スーパーユーザーとしても知られる) には、完全なシステム管理者権限があります。 これには、インストール全体に対する完全な読み取り権限および書き込み権限があります。通常、システム管理者は、|at| のすべての分野を管理し、さまざまなユーザーに日常業務の責任を委任します。"
+
+#: ../../source/users.rst:46
+msgid "The initial user (usually \"admin\") created by the installation process is a Superuser. One Superuser must always exist. To delete the \"admin\" user account, you must first create another Superuser account."
+msgstr "インストールプロセスで作成される初期 ユーザー (通常は「管理者」) はスーパーユーザーです。1 スーパーユーザーは常に存在している必要があります。「管理者」ユーザーアカウントを削除するには、まず別のスーパーアカウントを作成する必要があります。"
+
+#: ../../source/users.rst:48
+msgid "Select **Save** when finished."
+msgstr "終了したら **保存** を選択します。"
+
+#: ../../source/users.rst:50
+msgid "Once the user is successfully created, the **User** dialog opens for that newly created User."
+msgstr "ユーザーが正常に作成されると、新規作成したユーザーの **ユーザー** ダイアログが表示されます。"
+
+#: ../../source/users.rst:57
+msgid "You may delete the user from its Details screen by clicking **Delete**, or once you exit the details screen, you can delete users from a list of current users. See :ref:`ug_users_delete` for more detail."
+msgstr "**削除** をクリックして、詳細画面からユーザーを削除するか、詳細画面を終了すると、現在のユーザーのリストからユーザーを削除できます。詳細は、:ref:`ug_users_delete` を参照してください。"
+
+#: ../../source/users.rst:59
+msgid "The count for the number of users has also been updated, and a new entry for the new user is added to the list of users below the edit form. The same window opens whether you click on the user's name, or the Edit (|edit-button|) button beside the user. Here, the User's **Organizations**, **Teams**, and **Permissions**, as well as other user membership details, may be reviewed and modified."
+msgstr "ユーザーの数も更新されており、新規ユーザーの新規エントリーが編集フォームの下のユーザーの一覧に追加されていることに注意してください。ユーザー名をクリックして、ユーザーの横の編集 (|edit-button|) ボタンをクリックしても、同じウィンドウが開きます。ここで、ユーザーの **組織**、**チーム** および **パーミッション** や、他のユーザーのメンバーシップの詳細をレビューしたり、変更したりできます。"
+
+#: ../../source/users.rst:63
+msgid "If the user is not a newly-created user, the user's details screen displays the last login activity of that user."
+msgstr "そのユーザーが新規に作成されたものではない場合、ユーザーの詳細画面には、そのユーザーの最後のログインアクティビティーが表示されます。"
+
+#: ../../source/users.rst:67
+msgid "When you log in as yourself, and view the details of your own user profile, you can manage tokens from your user profile. See :ref:`ug_users_tokens` for more detail."
+msgstr "自分自身としてログインし、自分のユーザープロファイルの情報を表示する場合には、ユーザープロファイルからトークンを管理できます。詳細は、:ref:`ug_users_tokens` を参照してください。"
+
+#: ../../source/users.rst:74
+msgid "Delete a User"
+msgstr "ユーザーを削除します。"
+
+#: ../../source/users.rst:76
+msgid "Before you can delete a user, you must have user permissions. When you delete a user account, the name and email of the user are permanently removed from |at|."
+msgstr "ユーザーを削除する前に、ユーザー権限が必要です。ユーザーアカウントを削除すると、ユーザーの名前とメールアドレスが |at| から完全に削除されます。"
+
+#: ../../source/users.rst:78
+msgid "Expand the **Access** menu from the left navigation bar, and click **Users** to display a list of the current users."
+msgstr "左側のナビゲーションバーから **アクセス** メニューを展開し、**ユーザー** をクリックして現在のユーザーのリストを表示します。"
+
+#: ../../source/users.rst:80
+msgid "Select the check box(es) for the user(s) that you want to remove and click **Delete**."
+msgstr "削除するユーザーのチェックボックスを選択し、**削除** をクリックします。"
+
+#: ../../source/users.rst:84
+msgid "Click **Delete** in the confirmation warning message to permanently delete the user."
+msgstr "確認警告メッセージの **削除** をクリックして、ユーザーを完全に削除します。"
+
+#: ../../source/users.rst:88
+msgid "Users - Organizations"
+msgstr "ユーザー - 組織"
+
+#: ../../source/users.rst:93
+msgid "This displays the list of organizations of which that user is a member. This list may be searched by Organization Name or Description. Organization membership cannot be modified from this display panel."
+msgstr "ユーザーがメンバーとなっている組織の一覧が表示されます。この一覧は、組織名または説明で検索できます。組織のメンバーシップは表示パネルからは変更できません。"
+
+#: ../../source/users.rst:96
+msgid "|Users - Organizations list for example user|"
+msgstr "|Users - Organizations list for example user|"
+
+#: ../../source/users.rst:101
+msgid "Users - Teams"
+msgstr "ユーザー - チーム"
+
+#: ../../source/users.rst:106
+msgid "This displays the list of teams of which that user is a member. This list may be searched by **Team Name** or **Description**. Team membership cannot be modified from this display panel. For more information, refer to :ref:`ug_teams`."
+msgstr "ユーザーがメンバーとなっているチームの一覧が表示されます。この一覧は、**チーム名** または **説明** で検索できます。チームのメンバーシップは表示パネルからは変更できません。詳細は、:ref:`ug_teams` を参照してください。"
+
+#: ../../source/users.rst:108
+msgid "Until a Team has been created and the user has been assigned to that team, the assigned Teams Details for the User appears blank."
+msgstr "チームが作成され、ユーザーがチームに割り当てられるまで、ユーザーの割り当てられたチームの詳細は表示されません。"
+
+#: ../../source/users.rst:110
+msgid "|Users - teams list for example user|"
+msgstr "|Users - teams list for example user|"
+
+#: ../../source/users.rst:119
+msgid "Users - Permissions"
+msgstr "ユーザー - パーミッション"
+
+#: ../../source/users.rst:124
+msgid "The set of Permissions assigned to this user (role-based access controls) that provide the ability to read, modify, and administer projects, inventories, job templates, and other |at| elements are Privileges."
+msgstr "このユーザーに割り当てられており、プロジェクト、インベントリー、ジョブテンプレート、およびその他の |at| 要素の読み取り、変更、および管理を行う機能を提供するパーミッションのセット (ロールベースのアクセス制御) は、権限とも呼ばれています。"
+
+#: ../../source/users.rst:128
+msgid "It is important to note that the job template administrator may not have access to any inventory, project, or credentials associated with the template. Without access to these, certain fields in the job template aren't editable."
+msgstr "ジョブテンプレートの管理者は、テンプレートに関連付けられたインベントリー、プロジェクトまたは認証情報にアクセスできない可能性があることに注意してください。これらへのアクセスがないと、ジョブテンプレートの一部のフィールドを編集することができません。"
+
+#: ../../source/users.rst:130
+msgid "This screen displays a list of the roles that are currently assigned to the selected User and can be sorted and searched by **Name**, **Type**, or **Role**."
+msgstr "この画面には、選択されたユーザーに対して現在利用できるロールの一覧が表示されます。ロールの一覧は、**名前**、**タイプ**、または **ロール** で並べ替えや検索が可能です。"
+
+#: ../../source/users.rst:132
+msgid "|Users - permissions list for example user|"
+msgstr "|Users - permissions list for example user|"
+
+#: ../../source/users.rst:138
+msgid "Add Permissions"
+msgstr "パーミッションの追加"
+
+#: ../../source/users.rst:140
+msgid "To add permissions to a particular user:"
+msgstr "パーミッションを特定ユーザーに追加するには、以下を実行します。"
+
+#: ../../source/users.rst:142
+msgid "Click the **Add** button, which opens the Add Permissions Wizard."
+msgstr "**追加** ボタンをクリックすると、「パーミッションの追加」ウィザードが開きます。"
+
+#: ../../source/users.rst:147
+msgid "Click to select the object for which the user will have access and click **Next**."
+msgstr "クリックして、ユーザーがアクセスできるオブジェクトを選択し、**次へ** をクリックします。"
+
+#: ../../source/users.rst:149
+msgid "Click to select the resource to assign team roles and click **Next**."
+msgstr "クリックして、チームロールを割り当てるリソースを選択し、**次へ** をクリックします。"
+
+#: ../../source/users.rst:153
+msgid "Click the checkbox beside the role to assign that role to your chosen type of resource. Different resources have different options available."
+msgstr "ロールの横にあるチェックボックスをクリックすると、選択したタイプのリソースにそのロールが割り当てられます。リソースによって利用できるオプションが異なります。"
+
+#: ../../source/users.rst:158
+msgid "Click **Save** when done, and the Add Permissions Wizard closes to display the updated profile for the user with the roles assigned for each selected resource."
+msgstr "その後に **保存** をクリックすると「パーミッションの追加」ウィザードが閉じ、選択したリソースごとにロールが割り当てられたユーザーの更新後のプロファイルが表示されます。"
+
+#: ../../source/users.rst:162
+msgid "To remove Permissions for a particular resource, click the disassociate (x) button next to its resource. This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "特定リソースのパーミッションを削除するには、そのリソースの隣にある関連付けの解除 (x) ボタンをクリックします。これにより、確認ダイアログが起動し、関連付けの解除を確定するように求められます。"
+
+#: ../../source/users.rst:167
+msgid "You can also add teams, individual, or multiple users and assign them permissions at the object level (projects, inventories, job templates, and workflow templates) as well. This feature reduces the time for an organization to onboard many users at one time."
+msgstr "また、チーム、個々のユーザー、または複数のユーザーを追加して、オブジェクトレベル (プロジェクト、インベントリー、ジョブテンプレート、およびワークフローテンプレート) にパーミッションを割り当てることもできます。この機能により、組織が一度に多数のユーザーが参加する時間を短縮できます。"
+
+#: ../../source/users.rst:173
+msgid "Users - Tokens"
+msgstr "ユーザー: トークン"
+
+#: ../../source/users.rst:175
+msgid "The **Tokens** tab will only be present for your user (yourself). Before you add a token for your user, you may want to :ref:`create an application <ug_applications_auth_create>` if you want to associate your token to it. You may also create a personal access token (PAT) without associating it with any application. To create a token for your user:"
+msgstr "**トークン** タブが表示されるのは、ユーザー自身にしか表示されません。トークンを関連付けるには、ユーザーのトークンを追加する前に :ref:`create an application <ug_applications_auth_create>` を行ってください。また、トークンをアプリケーションに関連付けずにパーソナルアクセストークン (PAT) を作成することもできます。ユーザーのトークンを作成するには以下の手順に従います。"
+
+#: ../../source/users.rst:177
+msgid "If not already selected, click on your user from the Users list view to configure your OAuth 2 tokens."
+msgstr "まだ選択していない場合には、ユーザーリストビューからユーザーをクリックして、OAuth 2 トークンを設定します。"
+
+#: ../../../common/source/add-token.rst:3
+msgid "Click the **Tokens** tab from your user's profile."
+msgstr "ユーザーのプロファイルから **トークン** タブをクリックします。"
+
+#: ../../../common/source/add-token.rst:5
+msgid "When no tokens are present, the Tokens screen prompts you to add them:"
+msgstr "トークンがない場合には、トークン画面で追加するようにプロンプトが表示されます。"
+
+#: ../../../common/source/add-token.rst:9
+msgid "Click the **Add** button, which opens the Create Token window."
+msgstr "**Add** ボタンをクリックすると、トークンの作成ウィンドウが開きます。"
+
+#: ../../../common/source/add-token.rst:11
+msgid "Enter the following details in Create Token window:"
+msgstr "トークンの作成ウィンドウで以下の詳細を入力します。"
+
+#: ../../../common/source/add-token.rst:13
+msgid "**Application**: enter the name of the application with which you want to associate your token. Alternatively, you can search for it by clicking the |search| button. This opens a separate window that allows you to choose from the available options. Use the Search bar to filter by name if the list is extensive. Leave this field blank if you want to create a Personal Access Token (PAT) that is not linked to any application."
+msgstr "**アプリケーション**: トークンを関連付けるアプリケーションの名前を入力します。または、|search| ボタンをクリックして検索することもできます。これにより、別のウィンドウが開き、利用可能なオプションから選択できます。リストが広範囲に及ぶ場合には、検索バーを使用して、名前別に絞り込むことができます。どのアプリケーションにもリンクされないパーソナルアクセストークン (PAT) を作成する場合には、このフィールドは空白のままにします。"
+
+#: ../../../common/source/add-token.rst:15
+msgid "**Description**: optionally provide a short description for your token."
+msgstr "**説明** (オプション): トークンに関する簡単な説明を入力します。"
+
+#: ../../../common/source/add-token.rst:17
+msgid "**Scope** (required): specify the level of access you want this token to have."
+msgstr "**範囲** (必須): 対象のトークンのアクセスレベルを指定します。"
+
+#: ../../../common/source/add-token.rst:21
+msgid "When done, click **Save** or **Cancel** to abandon your changes."
+msgstr "完了したら **保存** または、変更を破棄するには **キャンセル** をクリックします。"
+
+#: ../../../common/source/add-token.rst:23
+msgid "After the token is saved, the newly created token for the user displays with the token information and when it expires."
+msgstr "トークンの保存後には、ユーザー用に新規作成されたトークンおよび、トークン情報、トークンの失効のタイミングが表示されます。"
+
+#: ../../../common/source/add-token.rst:27
+msgid "This is the only time the token value and associated refresh token value will ever be shown."
+msgstr "この時だけ唯一、トークンの値と関連の更新トークンの値が表示されます。"
+
+#: ../../../common/source/add-token.rst:29
+msgid "In the user's profile, the application for which it is assigned to and its expiration displays in the token list view."
+msgstr "ユーザーのプロファイルのトークン一覧ビューで、トークンが割り当てられるアプリケーションと、有効期限が表示されます。"
+

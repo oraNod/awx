@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/access_resources.rst:3
+msgid "Access Resources"
+msgstr "访问资源"
+
+#: ../../source/access_resources.rst:8
+msgid "Traditionally, |at| uses a primary key to access individual resource objects. Starting in 3.2 and API v2, the named URL feature allows you to access controller resources via resource-specific human-readable identifiers. In |at| versions prior to 3.2, the only way of accessing a resource object without auxiliary query string is via resource primary key number, for example, via URL path: ``/api/v2/hosts/2/``. Now, you can use a named URL to do the same thing, for example, via URL path ``/api/v2/hosts/host_name++inv_name++org_name/``."
+msgstr "通常，|at| 使用主键访问单个资源对象。从 3.2 和 API v2 开始，命名的 URL 功能允许您通过特定于资源的人类可读标识符来访问控制器资源。在 3.2 之前的 |at| 版本中，不使用辅助查询字符串访问资源对象的唯一方法是通过资源主键号（例如，通过 URL 路径：``/api/v2/hosts/2/``）。现在，您可以使用命名 URL 来进行同一操作，例如通过 URL 路径 ``/api/v2/hosts/host_name++inv_name++org_name/``。"
+
+#: ../../source/access_resources.rst:11
+msgid "Configuration Settings"
+msgstr "配置设置"
+
+#: ../../source/access_resources.rst:13
+msgid "There are two named-URL-related configuration settings available under ``/api/v2/settings/named-url/``:"
+msgstr "``/api/v2/settings/named-url/`` 下有两个与 named URL 相关的配置设置："
+
+#: ../../source/access_resources.rst:15
+msgid "``NAMED_URL_FORMATS`` and ``NAMED_URL_GRAPH_NODES``"
+msgstr "``NAMED_URL_FORMATS`` 和 ``NAMED_URL_GRAPH_NODES``"
+
+#: ../../source/access_resources.rst:17
+msgid "``NAMED_URL_FORMATS`` is a read only key-value pair list of all available named URL identifier formats. A typical ``NAMED_URL_FORMATS`` looks like this:"
+msgstr "``NAMED_URL_FORMATS`` 是所有可用命名 URL 标识符格式的只读键值对列表。典型的 ``NAMED_URL_FORMATS`` 如下所示："
+
+#: ../../source/access_resources.rst:43
+msgid "For each item in ``NAMED_URL_FORMATS``, the key is the API name of the resource to have named URL, the value is a string indicating how to form a human-readable unique identifier for that resource. ``NAMED_URL_FORMATS`` exclusively lists every resource that can have named URL, any resource not listed there has no named URL. If a resource can have named URL, its objects should have a named_url field which represents the object-specific named URL. That field should only be visible under detail view, not list view. You can access specified resource objects using accurately generated named URL. This includes not only the object itself but also its related URLs. For example, if ``/api/v2/res_name/obj_slug/`` is valid, ``/api/v2/res_name/obj_slug/related_res_name/`` should also be valid."
+msgstr "对于 ``NAMED_URL_FORMATS`` 中的每项，键是具有命名 URL 的资源的 API 名称，值是一个字符串，表明如何为该资源形成一个人类可读的唯一标识符。``NAMED_URL_FORMATS`` 仅列出所有可具有命名 URL 的资源，任何没有列出的资源都没有命名 URL。如果资源可具有命名 URL，则其对象应具有 named_url 字段，该字段代表特定于对象是命名 URL。该字段只能在详情视图中可见，而不是列表视图。您可以使用准确生成的命名 URL来访问指定的资源对象。这不仅包括对象本身还包括其相关的 URL。例如，如果 ``/api/v2/res_name/obj_slug/`` 有效，则 ``/api/v2/res_name/obj_slug/related_res_name/`` 也将有效。"
+
+#: ../../source/access_resources.rst:45
+msgid "``NAMED_URL_FORMATS`` are instructive enough to compose human-readable unique identifier and named URL themselves. For ease-of-use, every object of a resource that can have named URL will have a related field ``named_url`` that displays that object's named URL. You can copy and paste that field for your own custom use. Also refer to the help text of API browser if a resource object has named URL for further guidance."
+msgstr "``NAMED_URL_FORMATS`` 指导性强，可以自行编写人类可读的唯一标识符和命名 URL。为了实现易用性，具有命名 URL 的资源的每个对象都会具有一个相关的字段 ``named_url`` 来显示对象的命名 URL。您可以复制并粘贴该字段供您自己自定义使用。另外，如果资源对象具有命名 URL，还可参考 API 浏览器的帮助文本，以获得进一步指导。"
+
+#: ../../source/access_resources.rst:47
+msgid "Suppose you want to manually determine the named URL for a label with ID 5. A typical procedure of composing a named URL for this specific resource object using ``NAMED_URL_FORMATS`` is to first look up the labels field of ``NAMED_URL_FORMATS`` to get the identifier format ``<name>++<organization.name>``:"
+msgstr "假设您要手动决定一个 ID 为 5 的标签的命名 URL。使用 ``NAMED_URL_FORMATS`` 为此特定资源对象编写命名 URL 的典型步骤是首先查找 ``NAMED_URL_FORMATS`` 的标签字段，以获得标识符格式 ``<name>++<organization.name>``："
+
+#: ../../source/access_resources.rst:49
+msgid "The first part of the URL format is ``<name>``, which indicates that the label resource detail can be found in ``/api/v2/labels/5/``, and look for ``name`` field in returned JSON. Suppose you have the ``name`` field with value 'Foo', then the first part of the unique identifier is **Foo**."
+msgstr "URL 格式的第一部分是 ``<name>``，它表示可在 ``/api/v2/labels/5/`` 中找到标签资源详情，并在返回的 JSON 中查找 ``name`` 字段。假定请具有带值“Foo”的 ``name`` 字段，那么唯一标识符的第一部分为 **Foo**。"
+
+#: ../../source/access_resources.rst:50
+msgid "The second part of the format are double pluses ++. That is the delimiter that separates different parts of a unique identifier. Append them to the unique identifier to get **Foo++**"
+msgstr "这个格式的第二部分是双加号 ++。 这是分隔一个唯一标识符的不同部分的限定符。将它们附加到唯一标识符以获得 **Foo++**"
+
+#: ../../source/access_resources.rst:51
+msgid "The third part of the format is ``<organization.name>``, which indicates that field is not in the current label object under investigation, but in an organization which the label object points to. Thus, as the format indicates, look up the organization in the related field of current returned JSON. That field may or may not exist. If it exists, follow the URL given in that field, for example, ``/api/v2/organizations/3/``, to get the detail of the specific organization, extract its ``name`` field, for example, 'Default', and append it to our current unique identifier. Since ``<organizations.name>`` is the last part of format, thus, generating the resulting named URL: ``/api/v2/labels/Foo++Default/``.  In the case where organization does not exist in related field of the label object detail, append an empty string instead, which essentially does not alter the current identifier. So ``Foo++`` becomes the final unique identifier and the resulting generated named URL becomes ``/api/v2/labels/Foo++/``."
+msgstr "格式的第三个部分是 ``<organization.name>``，它代表字段不在调查下的当前标签对象中，但在标签对象指向的机构中。因此，如格式所示，在当前返回的 JSON 的相关字段中查找机构。字段可能存在也可能不存在。如果存在，点击字段中给定的 URL，例如 ``/api/v2/organizations/3/`` 用于获得特定机构的详细信息，提取其 ``name`` 字段，例如“默认”，并将其附加到当前的唯一标示符中。因为 ``<organizations.name>`` 是格式的最后一部分，因此，生成结果命名 URL ``/api/v2/labels/Foo++Default/``。如果标签对象详情的相关字段中不存在机构，请附加空字符串，它基本不会改变当前标识符。因此 ``Foo++`` 变为最终的唯一标识符，结果生成的命名 URL 变为 ``/api/v2/labels/Foo++/``。"
+
+#: ../../source/access_resources.rst:53
+msgid "An important aspect of generating a unique identifier for named URL has to do with reserved characters. Because the identifier is part of a URL, the following reserved characters by URL standard is encoded by percentage symbols: ``;/?:@=&[]``. For example, if an organization is named ``;/?:@=&[]``, its unique identifier should be ``%3B%2F%3F%3A%40%3D%26%5B%5D``. Another special reserved character is ``+``, which is not reserved by URL standard but used by named URL to link different parts of an identifier. It is encoded by ``[+]``. For example, if an organization is named ``[+]``, its unique identifier is ``%5B[+]%5D``, where original ``[`` and ``]`` are percent encoded and ``+`` is converted to ``[+]``."
+msgstr "为命名 URL 生成唯一标识符的一个重要方面是处理保留的字符。因为标识符是 URL 的一部分，以下 URL 标准保留的字符使用百分比符号 ``;/?:@=&[]`` 来编码。例如，如果一个机构被命名 ``;/?:@=&[]``，它的唯一保留标识符应该是 ``%3B%2F%3F%3A%40%3D%26%5B%5D``。另一个特殊的保留符是 ``+``，它不是由 URL 标准保留，而是由链接标识符不同部分的命名 URL 使用。它由 ``[+]`` 编码。例如，如果机构命名为 ``[+]``，其唯一标示符是 ``%5B[+]%5D``，其中原始 ``[`` 和 ``]`` 时百分比编码，``+`` 转换为 ``[+]``。"
+
+#: ../../source/access_resources.rst:55
+msgid "Although ``NAMED_URL_FORMATS`` cannot be manually modified, modifications do occur automatically and expanded over time, reflecting underlying resource modification and expansion. Consult the ``NAMED_URL_FORMATS`` on the same cluster where you want to use the named URL feature."
+msgstr "虽然 ``NAMED_URL_FORMATS`` 无法手动修改，但修改操作会随着时间自动进行并扩展以反映底层的资源修改和扩展。请在您要使用 named URL 功能的同一个集群中查看 ``NAMED_URL_FORMATS``。"
+
+#: ../../source/access_resources.rst:57
+msgid "``NAMED_URL_GRAPH_NODES`` is another read-only list of key-value pairs that exposes the internal graph data structure used to manage named URLs. This is not intended to be human-readable but should be used for programmatically generating named URLs. An example script for generating named URL given the primary key of arbitrary resource objects that can have a named URL, using info provided by ``NAMED_URL_GRAPH_NODES``, can be found in GitHub at https://github.com/ansible/awx/blob/devel/tools/scripts/pk_to_named_url.py."
+msgstr "``NAMED_URL_GRAPH_NODES`` 是另一个只读键值对列表，它公开了用来管理命名 URL 的内部图形数据结构。它不用于人工读取，而是应该用于通过编程生成命名 URL。用于生成命名 URL 的示例脚本给出了任意资源对象的主键，它可能具有命名 URL，使用 ``NAMED_URL_GRAPH_NODES`` 提供的信息，可在 GitHub 中找到：https://github.com/ansible/awx/blob/devel/tools/scripts/pk_to_named_url.py."
+
+#: ../../source/access_resources.rst:60
+msgid "Identifier Format Protocol"
+msgstr "标识符格式协议"
+
+#: ../../source/access_resources.rst:62
+msgid "Resources are identifiable by their unique keys, which are basically tuples of resource fields. Every resource is guaranteed to have its primary key number alone as a unique key, but there might be multiple other unique keys. A resource can generate an identifier format thus, have a named URL if it contains at least one unique key that satisfies the rules below:"
+msgstr "资源可以通过其唯一键来识别，它们基本是资源字段的元组。每个资源都保证将其主键数作为唯一键，但可能还有多个其他唯一键。因此，如果资源至少包含满足以下规则的唯一键，则可生成标识符格式，具有命名 URL："
+
+#: ../../source/access_resources.rst:64
+msgid "The key must contain only fields that are either the ``name`` field, or text fields with a finite number of possible choices (like credential type resource's ``kind`` field)."
+msgstr "键必须只包含 ``name`` 字段或文本字段，且具有有限数量的选项（比如凭证类型资源的 ``kind`` 字段）。"
+
+#: ../../source/access_resources.rst:66
+msgid "The only allowed exceptional fields that breaks rule #1 is a many-to-one related field relating to a resource other than itself, which is also allowed to have a slug."
+msgstr "可以不满足第一条规则的唯一允例外字段是与自身以外的资源相关的多对一的关联字段，它也允许具有 slug。"
+
+#: ../../source/access_resources.rst:68
+msgid "Suppose there are resources ``Foo`` and ``Bar``, both ``Foo`` and ``Bar`` contain a ``name`` field and a ``choice`` field that can only have value 'yes' or 'no'. Additionally, resource ``Foo`` contains a many-to-one field (a foreign key) relating to ``Bar``, e.g. ``fk``. ``Foo`` has a unique key tuple (``name``, ``choice``, ``fk``) and ``Bar`` has a unique key tuple (``name``, ``choice``). ``Bar`` can have named URL because it satisfies rule #1 above. ``Foo`` can also have named URL, even though it breaks rule #1, the extra field breaking rule #1 is the ``fk`` field, which is many-to-one-related to ``Bar`` and ``Bar`` can have named URL."
+msgstr "假设有两个资源 ``Foo`` 和 ``Bar``，``Foo`` 和 ``Bar`` 含有 ``name`` 字段和 ``choice`` 字段，后者的值只能是“yes”或“no”。另外，资源 ``Foo`` 包含与 ``Bar`` 相关的多对一字段（外键），例如 ``fk``。``Foo`` 具有唯一键元组（``name``、``choice``、``fk``），``Bar`` 具有唯一键元组（``name``、``choice``）。``Bar`` 可以具有命名 URL，因为它满足的上面的第一条规则。``Foo`` 也可具有命名 URL，但是它违背了第一条规则，违背规则的额外字段是 ``fk`` 字段，它是多对一与 ``Bar`` 和 ``Bar`` 相关，可以具有命名 URL。"
+
+#: ../../source/access_resources.rst:70
+msgid "For resources satisfying rule #1 above, their human-readable unique identifiers are combinations of foreign key fields, delimited by ``+``. In specific, resource ``Bar`` in the above example will have slug format ``<name>+<choice>``. Note the field order matters in slug format: ``name`` field always comes first if present, following by all the rest fields arranged in lexicographic order of field name. For example, if Bar also has an ``a_choice`` field satisfying rule #1 and the unique key becomes (``name``, ``choice``, ``a_choice``), its slug format becomes ``<name>+<a_choice>+<choice>``."
+msgstr "对于满足上述第一条规则的资源，它们的人类可读唯一标识符是外键字段的组合，由 ``+`` 限定。具体来说，上例中的资源 ``Bar`` 将使用 slug 格式 ``<name>+<choice>``。请注意，在 slug 格式中字段顺序很重要：``name`` 字段总是排在最前（如果存在），后面是所有字段名称按字母顺序排列的剩余字段。例如，如果 Bar 还具有满足第一条规则 的 ``a_choice`` 字段，且唯一键将变为（``name``、``choice``、``a_choice``），其 slug 格式变为 ``<name>+<a_choice>+<choice>``。"
+
+#: ../../source/access_resources.rst:72
+msgid "For resources satisfying rule #2 above, if traced back via the extra foreign key fields, the result is a tree of resources that all together identify objects of that resource. In order to generate identifier format, each resource in the traceback tree generates its own part of standalone format in the way previously described, using all fields but the foreign keys. Finally all parts are combined by ``++`` in the following order:"
+msgstr "对于满足上面第二条规则要求的资源，如果通过额外的外键字段追溯，结果是一个资源树，所有资源都标识该资源的对象。为了生成标识符格式，追溯树中的每个资源都会以前面描述的方式生成自己的独立格式，使用所有字段，但不使用外键。最后，所有组件都按照以下顺序由 ``++`` 组合："
+
+#: ../../source/access_resources.rst:74
+msgid "Put stand-alone format as the first identifier component."
+msgstr "将独立格式设置为第一个标识符组件。"
+
+#: ../../source/access_resources.rst:75
+msgid "Recursively generate unique identifiers for each resource. The underlying resource is pointing to using a foreign key (a child of a traceback tree node)."
+msgstr "为每个资源递归生成唯一标识符。底层资源指向使用一个外键（追溯 树节点的子代）。"
+
+#: ../../source/access_resources.rst:76
+msgid "Treat generated unique identifiers as the rest of the identifier components. Sort them in lexicographic order of corresponding foreign keys."
+msgstr "将生成的唯一标识符作为标识符组件的其余部分处理，按对应外键的字符顺序排序。"
+
+#: ../../source/access_resources.rst:77
+msgid "Combine all components together using ``++`` to generate the final identifier format."
+msgstr "使用 ``++`` 组合所有组件来生成最终识别符格式。"
+
+#: ../../source/access_resources.rst:79
+msgid "In reference to the example above, when generating an identifier format for resource ``Foo``, the controller generates the stand-alone formats, ``<name>+<choice>`` for ``Foo`` and ``<fk.name>+<fk.choice>`` for ``Bar``, then combine them together to be ``<name>+<choice>++<fk.name>+<fk.choice>``."
+msgstr "在上面的例子中，在为资源 ``Foo`` 生成标识符格式时，控制器会生成独立格式，``<name>+<choice>`` 用于 ``Foo`` 和 ``<fk.name>+<fk.choice>`` 用于 ``Bar``，然后将它们组合在一起成为 ``<name>+<choice>++<fk.name>+<fk.choice>``。"
+
+#: ../../source/access_resources.rst:81
+msgid "When generating identifiers according to the given identifier format, there are cases where a foreign key may point to nowhere. In this case, the controller substitutes the part of the format corresponding to the resource the foreign key should point to with an empty string ''. For example, if a ``Foo`` object has the name ='alice', choice ='yes', but ``fk`` field = None, its resulting identifier will be ``alice+yes++``."
+msgstr "根据给定的标识符格式生成标识符时，会出现外键可能不指向任何位置的情况。在这种情况下，控制器替换了与该资源相对应的格式部分，外键应该指向一个空字符串。例如，如果对象 ``Foo`` 具有 name ='alice', choice ='yes'，但 ``fk`` field = None，则其生成的标识符将是 ``alice+yes++``。"
+

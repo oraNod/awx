@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/project-sign.rst:4
+msgid "Project Signing and Verification"
+msgstr "프로젝트 서명 및 확인"
+
+#: ../../source/project-sign.rst:11
+msgid "Project signing and verification provides the ability to sign files in your project directory and then verify whether or not that content has changed in any way, or files have been added or removed from the project unexpectedly. To accomplish this, a private key for signing and a matching public key for verifying are needed."
+msgstr "프로젝트 서명 및 확인을 통해 프로젝트 디렉터리의 파일에 서명하고 내용이 변경되었는지, 또는 프로젝트에서 파일이 예기치 않게 추가 또는 제거되었는지 확인할 수 있습니다. 이를 위해서는 서명을 위한 개인 키와 확인을 위한 일치하는 공개 키가 필요합니다."
+
+#: ../../source/project-sign.rst:13
+msgid "For project maintainers, the supported way to perform content signing is to use a utility called, ``ansible-sign``, through the command-line interface (CLI) that comes with it."
+msgstr "프로젝트 유지 관리자의 경우 콘텐츠 서명을 수행하는 데 지원되는 방법은 함께 제공되는 CLI(명령줄 인터페이스)를 통해 ``ansible-sign``라는 유틸리티를 사용하는 것입니다."
+
+#: ../../source/project-sign.rst:15
+msgid "The CLI aims to make it easy to use cryptographic technology like GNU Privacy Guard (GPG) to validate that specified files within a project have not been tampered with in any way. Currently, GPG is the only supported means of signing and validation."
+msgstr "CLI는 GPG(GNU 개인 정보 보호 ECDHE)와 같은 암호화 기술을 사용하여 프로젝트 내의 지정된 파일이 어떤 방식으로든 변조되지 않았는지 확인하는 것을 목표로 합니다. 현재 GPG는 서명 및 유효성 검사에 지원되는 유일한 수단입니다."
+
+#: ../../source/project-sign.rst:17
+msgid "The |aa| controller is used to verify the signed content. After a matching public key has been associated with the signed project, the controller will verify that the files included during signing have not changed, and that files have been added or removed unexpectedly. If the signature is not valid or a file has changed, the project will fail to update, and no jobs making use of the project will be able to launch. Verification status of the project ensures that only secure, untampered content is run in jobs."
+msgstr "|aa| 컨트롤러는 서명된 콘텐츠를 확인하는 데 사용됩니다. 일치하는 공개 키가 서명된 프로젝트와 연결되면 컨트롤러는 서명 중에 포함된 파일이 변경되지 않았는지, 파일이 예기치 않게 추가 또는 제거되었는지 확인합니다. 서명이 유효하지 않거나 파일이 변경된 경우 프로젝트 업데이트에 실패하고 프로젝트를 사용하는 작업을 시작할 수 없습니다. 프로젝트의 확인 상태는 수정되지 않은 안전한 콘텐츠만 작업에서 실행되도록 합니다."
+
+#: ../../source/project-sign.rst:19
+msgid "Assuming that the repository has already been configured for signing and verification (see below), the usual workflow for altering the project becomes the following:"
+msgstr "리포지토리가 서명 및 확인을 위해 이미 구성되어 있다고 가정하면(아래 참조), 프로젝트 변경에 대한 일반적인 워크플로는 다음과 같습니다."
+
+#: ../../source/project-sign.rst:21
+msgid "User has a project repository set up already and wants to make a change to a file."
+msgstr "사용자에게 프로젝트 리포지토리가 이미 설정되어 있으며 파일을 변경하려고 합니다."
+
+#: ../../source/project-sign.rst:22
+msgid "User makes the change, runs ``ansible-sign project gpg-sign /path/to/project``,  which updates a checksum manifest and signs it."
+msgstr "사용자는 변경 사항을 수행하고 ``ansible-sign project gpg-sign /path/to/project`` 을 실행하여 체크섬 매니페스트를 업데이트하고 서명합니다."
+
+#: ../../source/project-sign.rst:23
+msgid "User commits the change and the updated checksum manifest and the signature to the repository."
+msgstr "사용자는 변경 사항 및 업데이트된 체크섬 매니페스트와 서명을 리포지토리에 커밋합니다."
+
+#: ../../source/project-sign.rst:24
+msgid "When the user syncs the project, the controller (already configured, in this scenario) pulls in the new changes, checks that the public key associated with the project in the controller matches the private key that the checksum manifest was signed with (this prevents tampering with the checksum manifest itself), then re-calculates checksums of each file in the manifest to ensure that the checksum matches (and thus that no file has changed). It also looks to ensure that all files are accounted for: They must have been either included in, or excluded from, the ``MANIFEST.in`` file discussed below; if files have been added or removed unexpectedly, verification will fail."
+msgstr "사용자가 프로젝트를 동기화하면 컨트롤러(이 시나리오에서 이미 구성된 컨트롤러)가 새 변경 사항을 가져오고, 컨트롤러의 프로젝트와 연결된 공용 키가 체크섬 매니페스트가 서명된 개인 키와 일치하는지 확인한 다음(이렇게 하면 체크섬 매니페스트 자체를 변조하는 것을 방지함) 각 체크섬을 다시 계산합니다. 체크섬이 일치하는지(따라서 파일이 변경되지 않았는지) 확인하기 위해 매니페스트에 파일을 저장합니다. 또한 모든 파일이 처리되는지 확인합니다. 아래에 설명된 ``MANIFEST.in`` 파일에 포함되거나 제외된 파일이어야 합니다. 파일이 예기치 않게 추가 또는 제거되면 확인이 실패합니다."
+
+#: ../../source/project-sign.rst:30
+msgid "Prerequisites"
+msgstr "사전 요구 사항"
+
+#: ../../source/project-sign.rst:32
+msgid "RHEL nodes must properly be subscribed to:"
+msgstr "RHEL 노드를 다음과 같이 올바르게 구독해야 합니다."
+
+#: ../../source/project-sign.rst:34
+msgid "RHEL subscription and with **baseos** and **appstream** repositories enabled"
+msgstr "RHEL 서브스크립션과 **baseos** 및 **appstream** 리포지토리가 활성화된 경우"
+
+#: ../../source/project-sign.rst:35
+msgid "|AAP| subscription and the proper |AAP| channel enabled:"
+msgstr "|AAP| 서브스크립션 및 적절한 |AAP| 채널이 활성화되었습니다."
+
+#: ../../source/project-sign.rst:43
+msgid "A valid GPG public/private keypair is required for signing content. Refer to `How to create GPG keypairs`_ for details."
+msgstr "콘텐츠에 서명하려면 유효한 GPG 공용/개인 키 쌍이 필요합니다. 자세한 내용은 `How to create GPG keypairs`_을 참조하십시오."
+
+#: ../../source/project-sign.rst:47
+msgid "Vist the `GnuPG documentation <https://www.gnupg.org/documentation/index.html>`_ for more information regarding GPG keys."
+msgstr "GPG 키에 대한 자세한 내용은 `GnuPG documentation <https://www.gnupg.org/documentation/index.html>`_을 참조하십시오."
+
+#: ../../source/project-sign.rst:49
+msgid "You can verify that you have a valid GPG keypair and in your default GnuPG keyring, with the following command:"
+msgstr "다음 명령을 사용하여 유효한 GPG 키 쌍과 기본 GnuPG 인증 키에 있는지 확인할 수 있습니다."
+
+#: ../../source/project-sign.rst:57
+msgid "If the above command produces no output, or one line of output that states, ``trustdb was created``, then you do not have a secret key in your default keyring. In this case, refer to `How to create GPG keypairs`_ to learn how to create a new keypair before proceeding. If it produces output other than that, you have a valid secret key and are ready to move on to using ``ansible-sign``."
+msgstr "위의 명령이 출력을 생성하지 않거나 ``trustdb was created``를 나타내는 한 줄의 출력을 생성하지 않으면 기본 키 링에 시크릿 키가 없습니다. 이 경우 `How to create GPG keypairs`_을 참조하여 진행하기 전에 새 키 쌍을 만드는 방법을 알아봅니다. 그 이외의 출력을 생성하는 경우 유효한 시크릿 키가 있고 ``ansible-sign``을 사용하여 이동할 준비가 된 것입니다."
+
+#: ../../source/project-sign.rst:61
+msgid "Add a GPG key to Ansible Automation Controller"
+msgstr "Ansible Automation Controller에 GPG 키 추가"
+
+#: ../../source/project-sign.rst:63
+msgid "In order to use the GPG key for content singing and validation in the controller, you must add it running the following command in the CLI:"
+msgstr "컨트롤러의 콘텐츠 소싱 및 검증에 GPG 키를 사용하려면 CLI에서 다음 명령을 실행하여 추가해야 합니다."
+
+#: ../../source/project-sign.rst:71
+msgid "In the controller user interface, click **Credentials** from the left side navigation menu then click the **Add** button."
+msgstr "컨트롤러 사용자 인터페이스의 왼쪽 탐색 메뉴에서 **인증 정보**를 클릭한 다음 **추가** 버튼을 클릭합니다."
+
+#: ../../source/project-sign.rst:73
+msgid "Provide the new credential a meaningful name (for example, “Infrastructure team public GPG key”)"
+msgstr "새 인증 정보에 의미 있는 이름을 지정합니다(예: \"인프라 팀 공개 GPG 키\")"
+
+#: ../../source/project-sign.rst:75
+msgid "In the Credential Type field, select **GPG Public Key**."
+msgstr "인증 정보 유형 필드에서 **GPG 공개 키**를 선택합니다."
+
+#: ../../source/project-sign.rst:77
+msgid "Click **Browse** to locate and select the public key file (e.g., ``my_public_key.asc``)"
+msgstr "**검색**을 클릭하여 공개 키 파일을 찾아서 선택합니다(예: ``my_public_key.asc``)"
+
+#: ../../source/project-sign.rst:79
+msgid "Click **Save** when done."
+msgstr "완료되면 **저장**을 클릭합니다."
+
+#: ../../source/project-sign.rst:83
+msgid "This credential can now be selected in :ref:`projects <ug_projects_add>`, and content verification will automatically take place on future project syncs."
+msgstr "이제 이 인증 정보를 :ref:`projects <ug_projects_add>` 에서 선택할 수 있으며 향후 프로젝트 동기화 시 컨텐츠 확인이 자동으로 수행됩니다."
+
+#: ../../source/project-sign.rst:89
+msgid "Use the project cache SCM timeout to control how often you want the controller to re-validate the signed content. When a project is configured to update on launch (of any job template configured to use that project), you can enable the cache timeout setting, which tells it to update after N seconds have passed since the last update. If validation is running too frequently, you can slow down how often project updates occur by specifying the time in the **Cache Timeout** field of the Option Details pane of the project."
+msgstr "프로젝트 캐시 SCM 시간 제한을 사용하여 컨트롤러가 서명된 콘텐츠를 재검토하는 빈도를 제어합니다. 프로젝트를 시작할 때 업데이트하도록 구성된 작업 템플릿의 경우 마지막 업데이트 이후 N초가 경과한 후 업데이트하라는 캐시 시간 초과 설정을 실행할 수 있습니다. 유효성 검사가 너무 자주 실행되는 경우 프로젝트의 선택 세부 정보 창의 **캐시 제한 시간** 필드에 시간을 지정하여 프로젝트 업데이트의 빈도를 줄일 수 있습니다."
+
+#: ../../source/project-sign.rst:96
+msgid "Access the ``ansible-sign`` CLI utility"
+msgstr "``ansible-sign`` CLI 유틸리티에 액세스"
+
+#: ../../source/project-sign.rst:98
+msgid "The ``ansible-sign`` utility provide options for the user to sign and verify whether the project is signed."
+msgstr "``ansible-sign`` 유틸리티는 사용자가 프로젝트에 서명하고 프로젝트 서명 여부를 확인할 수 있는 옵션을 제공합니다."
+
+#: ../../source/project-sign.rst:100
+msgid "Run the following command to install ``ansible-sign``:"
+msgstr "다음 명령을 실행하여 ``ansible-sign`` 를 설치합니다."
+
+#: ../../source/project-sign.rst:106
+msgid "Verify that ``ansible-sign`` was successfully installed:"
+msgstr "``ansible-sign``이/가 성공적으로 설치되었는지 확인합니다."
+
+#: ../../source/project-sign.rst:113
+msgid "Output similar to the following displays (possibly with a different version number):"
+msgstr "다음과 유사한 출력 (다른 버전 번호가 있을 수 있음)"
+
+#: ../../source/project-sign.rst:120
+msgid "This indicates you have successfully installed ``ansible-sign``."
+msgstr "``ansible-sign`` 을 성공적으로 설치했음을 나타냅니다."
+
+#: ../../source/project-sign.rst:124
+msgid "Signing your project"
+msgstr "프로젝트에 서명"
+
+#: ../../source/project-sign.rst:126
+msgid "As the name suggests, signing a project involves an Ansible project directory. Refer to the `Ansible documentation <https://docs.ansible.com/ansible/latest/user_guide/sample_setup.html>`_ for more sophisticated examples of project directory structures."
+msgstr "이름에서 알 수 있듯이 프로젝트에 서명하려면 Ansible 프로젝트 디렉터리가 포함됩니다. 프로젝트 디렉터리 구조의 보다 정교한 예제는 `Ansible documentation <https://docs.ansible.com/ansible/latest/user_guide/sample_setup.html>`_을 참조하십시오."
+
+#: ../../source/project-sign.rst:128
+msgid "The following sample project has a very simple structure. An inventory file, and two small playbooks under a playbooks directory:"
+msgstr "다음 샘플 프로젝트에는 매우 간단한 구성이 있습니다. 인벤토리 파일 및 플레이북 디렉토리 아래에 있는 두 개의 작은 플레이북:"
+
+#: ../../source/project-sign.rst:145
+msgid "The commands used in this section assume that your working directory is the root of your project. As a rule, ``ansible-sign project`` commands always take the project root directory as their last argument, and therefore, we use ``.`` to indicate the current working directory."
+msgstr "이 섹션에 사용된 명령은 작업 디렉터리가 프로젝트의 루트라고 가정합니다. 일반적으로 ``ansible-sign project`` 명령은 항상 프로젝트 루트 디렉터리를 마지막 인수로 사용하므로 ``.`` 를 사용하여 현재 작업 디렉터리를 표시합니다."
+
+#: ../../source/project-sign.rst:147
+msgid "The way that ``ansible-sign`` protects content from tampering is by taking checksums (SHA256) of all of the secured files in the project, compiling those into a checksum manifest file, and then finally signing that manifest file."
+msgstr "``ansible-sign`` 가 변조되지 않도록 콘텐츠를 보호하는 방법은 프로젝트의 모든 보안 파일의 체크섬(SHA256)을 사용하여 체크섬 매니페스트 파일로 컴파일한 다음 해당 매니페스트 파일에 서명하는 것입니다."
+
+#: ../../source/project-sign.rst:149
+msgid "The first step toward signing content is to create a file that tells ``ansible-sign`` which files to protect. This file should be called ``MANIFEST.in`` and reside in the project root directory."
+msgstr "콘텐츠에 서명하기 위한 첫 번째 단계는 ``ansible-sign``에 보호할 파일을 알려주는 파일을 생성하는 것입니다. 이 파일은 ``MANIFEST.in`` 이라고 하며 프로젝트 루트 디렉터리에 있어야 합니다."
+
+#: ../../source/project-sign.rst:151
+msgid "Internally, ``ansible-sign`` makes use of the ``distlib.manifest`` module of Python’s distlib library, and thus ``MANIFEST.in`` must follow the syntax that this library specifies. See the `Python Packaging User Guide <https://packaging.python.org/en/latest/guides/using-manifest-in/#manifest-in-commands>`_ for an explanation of the ``MANIFEST.in`` file directives."
+msgstr "내부적으로 ``ansible-sign`` 은 Python의 distlib 라이브러리의 ``distlib.manifest`` 모듈을 사용하므로 ``MANIFEST.in`` 는 이 라이브러리에서 지정하는 구문을 따라야 합니다. ``MANIFEST.in`` 파일 지시문에 대한 설명은 `Python Packaging User Guide <https://packaging.python.org/en/latest/guides/using-manifest-in/#manifest-in-commands>`_을 참조하십시오."
+
+#: ../../source/project-sign.rst:153
+msgid "In the sample project, included are two directives, resulting in a ``MANIFEST.in`` file that looks like this:"
+msgstr "샘플 프로젝트에는 두 개의 지시문이 포함되어 있으므로 다음과 같은 ``MANIFEST.in`` 파일이 생성됩니다."
+
+#: ../../source/project-sign.rst:160
+msgid "With this file in place, generate your checksum manifest file and sign it. Both of these steps are achieved in a single ``ansible-sign`` command:"
+msgstr "이 파일을 사용하여 체크섬 매니페스트 파일을 생성하고 서명하십시오. 다음 두 단계는 모두 단일 ``ansible-sign`` 명령으로 수행됩니다."
+
+#: ../../source/project-sign.rst:170
+msgid "Now the project has been signed."
+msgstr "이제 프로젝트에 서명되었습니다."
+
+#: ../../source/project-sign.rst:172
+msgid "Notice that the ``gpg-sign`` subcommand resides under the ``project`` subcommand. For signing project content, every command will start with ``ansible-sign project``. As noted above, as a rule, every ``ansible-sign project`` command takes the project root directory as its final argument."
+msgstr "``gpg-sign`` 하위 명령은 ``project`` 하위 명령에 있습니다. 프로젝트 콘텐츠에 서명하기 위해 모든 명령은 ``ansible-sign project`` 로 시작합니다. 위에서 언급했듯이 일반적으로 모든 ``ansible-sign project`` 명령은 프로젝트 루트 디렉터리를 최종 인수로 사용합니다."
+
+#: ../../source/project-sign.rst:174
+msgid "As mentioned earlier, ``ansible-sign`` by default makes use of your default keyring and looks for the first available secret key that it can find, to sign your project. You can specify a specific secret key to use with the ``--fingerprint`` option, or even a completely independent GPG home directory with the ``--gnupg-home`` option."
+msgstr "앞에서 설명한 대로 ``ansible-sign`` 는 기본적으로 기본 키링을 사용하며 프로젝트에 서명하기 위해 찾을 수 있는 첫 번째 사용 가능한 시크릿 키를 찾습니다. ``--fingerprint`` 옵션과 함께 사용할 특정 시크릿 키를 지정하거나 ``--gnupg-home`` 옵션을 사용하여 완전히 독립된 GPG 홈 디렉토리를 지정할 수 있습니다."
+
+#: ../../source/project-sign.rst:178
+msgid "If you are using a desktop environment, GnuPG will automatically prompt you for your secret key’s passphrase. If this functionality does not work, or you are working without a desktop environment (e.g., via SSH), you can use the ``-p/--prompt-passphrase`` flag after ``gpg-sign`` in the above command, which will cause ``ansible-sign`` to prompt for the password instead."
+msgstr "데스크톱 환경을 사용하는 경우 GnuPG는 자동으로 시크릿 키의 암호를 입력하라는 메시지를 표시합니다. 이 기능이 작동하지 않거나 데스크탑 환경(예: SSH를 통해) 없이 작업하는 경우 위의 명령에서 ``gpg-sign`` 뒤에 ``-p/--prompt-passphrase`` 플래그를 사용하면 ``ansible-sign`` 가 대신 암호를 입력하라는 메시지가 표시됩니다."
+
+#: ../../source/project-sign.rst:180
+msgid "Upon viewing the structure of the project directory, notice that a new ``.ansible-sign`` directory was created. This directory contains the checksum manifest and a detached GPG signature for it."
+msgstr "프로젝트 디렉터리의 구조를 볼 때 새 ``.ansible-sign`` 디렉터리가 생성되었는지 확인합니다. 이 디렉터리에는 체크섬 매니페스트 및 GPG 분리 서명이 포함되어 있습니다."
+
+#: ../../source/project-sign.rst:197
+msgid "Verifying your project"
+msgstr "프로젝트 확인"
+
+#: ../../source/project-sign.rst:199
+msgid "If you want to verify that a signed Ansible project has not been altered, you can use ``ansible-sign`` to check whether the signature is valid and that the checksums of the files match what the checksum manifest says they should be. In particular, the ``ansible-sign project gpg-verify`` command can be used to automatically verify both of these conditions."
+msgstr "서명된 Ansible 프로젝트가 변경되지 않았는지 확인하려면 ``ansible-sign`` 를 사용하여 서명이 유효한지 여부와 파일의 체크섬이 해당 체크섬 매니페스트와 일치하는지 확인할 수 있습니다. 특히 ``ansible-sign project gpg-verify`` 명령을 사용하여 이러한 두 조건을 자동으로 확인할 수 있습니다."
+
+#: ../../source/project-sign.rst:210
+msgid "By default, ``ansible-sign`` makes use of your default GPG keyring to look for a matching public key. You can specify a keyring file with the ``--keyring`` option, or a different GPG home with the ``--gnugpg-home`` option."
+msgstr "기본적으로 ``ansible-sign`` 는 기본 GPG 인증 키를 사용하여 일치하는 공개 키를 찾습니다. ``--keyring`` 옵션을 사용하여 인증 키 파일을 지정하거나 ``--gnugpg-home`` 옵션을 사용하여 다른 GPG 홈을 지정할 수 있습니다."
+
+#: ../../source/project-sign.rst:212
+msgid "If verification fails for any reason, information will be displayed to help you debug the cause. More verbosity can be enabled by passing the global ``--debug`` flag, immediately after ``ansible-sign`` in your commands."
+msgstr "어떤 이유로든 확인이 실패하면 원인을 디버깅하는 데 도움이 되는 정보가 표시됩니다. 명령에서 ``ansible-sign`` 직후 글로벌 ``--debug`` 플래그를 전달하여 더 자세한 정보를 활성화할 수 있습니다."
+
+#: ../../source/project-sign.rst:216
+msgid "When a GPG credential is used in a project, content verification will automatically take place on future project syncs."
+msgstr "GPG 인증 정보가 프로젝트에 사용되는 경우 향후 프로젝트 동기화에서 컨텐츠 확인이 자동으로 수행됩니다."
+
+#: ../../source/project-sign.rst:221
+msgid "Automate signing"
+msgstr "자동화 서명"
+
+#: ../../source/project-sign.rst:223
+msgid "In environments with highly-trusted CI environments (e.g., OpenShift, Jenkins, etc.), it is possible to automate the signing process. For example, you could store your GPG private key in a CI platform of choice as a secret, and import that into GnuPG in the CI environment. You could then run through the signing workflow above within the normal CI workflow/container/environment."
+msgstr "신뢰할 수 있는 CI 환경(예: OpenShift, Jenkins 등)이 있는 환경에서는 서명 프로세스를 자동화할 수 있습니다. 예를 들어 선택한 CI 플랫폼에 GPG 개인 키를 시크릿으로 저장하고 CI 환경에서 GnuPG로 가져올 수 있습니다. 그런 다음 일반 CI 워크플로/컨테이너/환경 내에서 위의 서명 워크플로를 통해 실행할 수 있습니다."
+
+#: ../../source/project-sign.rst:225
+msgid "When signing a project using GPG, the environment variable ``ANSIBLE_SIGN_GPG_PASSPHRASE`` can be set to the passphrase of the signing key. This can be injected (and masked/secured) in a CI pipeline."
+msgstr "GPG를 사용하여 프로젝트에 서명할 때 환경 변수 ``ANSIBLE_SIGN_GPG_PASSPHRASE`` 는 서명 키의 암호로 설정할 수 있습니다. 이는 CI 파이프라인에 삽입(및 마스크/보안)할 수 있습니다."
+
+#: ../../source/project-sign.rst:227
+msgid "Depending on the scenario at hand, ``ansible-sign`` will return with a different exit-code, during both signing and verification. This can also be useful in the context of CI and automation, as a CI environment can act differently based on the failure (for example, sending alerts for some errors but silently failing for others)."
+msgstr "당면 상황에 따라 ``ansible-sign`` 는 서명 및 확인 중에 다른 종료 코드를 사용하여 반환됩니다. 이는 CI 환경이 장애에 따라 다르게 작동할 수 있기 때문에 CI 및 자동화의 맥락에서 유용할 수 있습니다(예: 일부 오류에 대해서는 경고를 보내지만 다른 오류에 대해서는 자동으로 실패함)."
+
+#: ../../source/project-sign.rst:229
+msgid "These are the exit codes used in ``ansible-sign`` currently, which can be considered stable:"
+msgstr "다음은 현재 ``ansible-sign`` 에서 사용되는 종료 코드이며 안정적인 것으로 간주할 수 있습니다."
+
+#: ../../source/project-sign.rst:235
+msgid "Exit code"
+msgstr "종료 코드"
+
+#: ../../source/project-sign.rst:236
+msgid "Approximate meaning"
+msgstr "대략적인 의미"
+
+#: ../../source/project-sign.rst:237
+msgid "Example scenarios"
+msgstr "시나리오 예"
+
+#: ../../source/project-sign.rst:238
+msgid "0"
+msgstr "0"
+
+#: ../../source/project-sign.rst:239
+msgid "Success"
+msgstr "성공"
+
+#: ../../source/project-sign.rst:240
+msgid "Signing was successful"
+msgstr "서명에 성공했습니다."
+
+#: ../../source/project-sign.rst:241
+msgid "Verification was successful"
+msgstr "검증에 성공했습니다."
+
+#: ../../source/project-sign.rst:242
+msgid "1"
+msgstr "1"
+
+#: ../../source/project-sign.rst:243
+msgid "General failure"
+msgstr "일반적인 실패"
+
+#: ../../source/project-sign.rst:244
+msgid "The checksum manifest file contained a syntax error during verification"
+msgstr "체크섬 매니페스트 파일에는 확인 중에 구문 오류가 포함되어 있었습니다."
+
+#: ../../source/project-sign.rst:245
+msgid "The signature file did not exist during verification"
+msgstr "확인 중에 서명 파일이 존재하지 않았습니다."
+
+#: ../../source/project-sign.rst:246
+msgid "``MANIFEST.in`` did not exist during signing"
+msgstr "서명하는 동안 ``MANIFEST.in`` 존재하지 않음"
+
+#: ../../source/project-sign.rst:247
+msgid "2"
+msgstr "2"
+
+#: ../../source/project-sign.rst:248
+msgid "Checksum verification failure"
+msgstr "체크섬 확인 실패"
+
+#: ../../source/project-sign.rst:249
+msgid "The checksum hashes calculated during verification differed from what was in the signed checksum manifest (e.g., a project file was changed but the signing process was not re-completed)"
+msgstr "확인 중에 계산된 체크섬 해시는 서명된 체크섬 매니페스트에 있는 것과 달랐습니다(예: 프로젝트 파일이 변경되었지만 서명 프로세스가 다시 완료되지 않은 경우)"
+
+#: ../../source/project-sign.rst:251
+msgid "3"
+msgstr "3"
+
+#: ../../source/project-sign.rst:252
+msgid "Signature verification failure"
+msgstr "서명 확인 실패"
+
+#: ../../source/project-sign.rst:253
+msgid "The signer's public key was not in the user's GPG keyring"
+msgstr "서명자의 공개 키가 사용자의 GPG 키링에 없는 경우"
+
+#: ../../source/project-sign.rst:254
+#: ../../source/project-sign.rst:259
+msgid "The wrong GnuPG home directory or keyring file was specified"
+msgstr "잘못된 GnuPG 홈 디렉터리 또는 키링 파일이 지정되었습니다."
+
+#: ../../source/project-sign.rst:255
+msgid "The signed checksum manifest file was modified in some way"
+msgstr "서명된 체크섬 매니페스트 파일이 어떤 방식으로든 수정됨"
+
+#: ../../source/project-sign.rst:256
+msgid "4"
+msgstr "4"
+
+#: ../../source/project-sign.rst:257
+msgid "Signing process failure"
+msgstr "서명 프로세스 실패"
+
+#: ../../source/project-sign.rst:258
+msgid "The signer's private key was not found in the GPG keyring"
+msgstr "GPG 키링에서 서명자의 개인 키를 찾을 수 없음"
+

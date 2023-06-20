@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/teams.rst:4
+msgid "Teams"
+msgstr ""
+
+#: ../../source/teams.rst:9
+msgid ""
+"A :term:`Team` is a subdivision of an organization with associated users,"
+" projects, credentials, and permissions. Teams provide a means to "
+"implement role-based access control schemes and delegate responsibilities"
+" across organizations. For instance, permissions may be granted to a "
+"whole Team rather than each user on the Team."
+msgstr ""
+
+#: ../../source/teams.rst:11
+msgid ""
+"You can create as many Teams of users as make sense for your "
+"Organization. Each Team can be assigned permissions, just as with Users."
+msgstr ""
+
+#: ../../source/teams.rst:13
+msgid ""
+"Teams can also scalably assign ownership for Credentials, preventing "
+"multiple Tower interface click-throughs to assign the same Credentials to"
+" the same user."
+msgstr ""
+
+#: ../../source/teams.rst:15
+msgid ""
+"The Teams link, accessible by clicking on the Settings (|settings|) "
+"button and then selecting **Teams**, allows you to manage the teams for "
+"Tower. The team list may be sorted and searched by **Name**, "
+"**Description**, or **Organization**."
+msgstr ""
+
+#: ../../source/teams.rst:19
+msgid ""
+"Buttons located in the upper right corner of the **Team** tab provide the"
+" following actions:"
+msgstr ""
+
+#: ../../source/teams.rst:21
+msgid "View Activity Stream"
+msgstr ""
+
+#: ../../source/teams.rst:22
+msgid "Create a new team"
+msgstr ""
+
+#: ../../source/teams.rst:24
+msgid "|Teams - expand team setup link|"
+msgstr ""
+
+#: ../../source/teams.rst:29
+msgid "Create a Team"
+msgstr ""
+
+#: ../../source/teams.rst:31
+msgid "To create a new Team:"
+msgstr ""
+
+#: ../../source/teams.rst:33 ../../source/teams.rst:75
+msgid "Click the |add| button."
+msgstr ""
+
+#: ../../source/teams.rst:37
+msgid "|Teams - create new team|"
+msgstr ""
+
+#: ../../source/teams.rst:41
+msgid "Enter the appropriate details into the following fields:"
+msgstr ""
+
+#: ../../source/teams.rst:43
+msgid "Name"
+msgstr ""
+
+#: ../../source/teams.rst:44
+msgid "Description (optional)"
+msgstr ""
+
+#: ../../source/teams.rst:45
+msgid "Organization (Choose from an existing organization)"
+msgstr ""
+
+#: ../../source/teams.rst:47
+msgid "Click **Save**."
+msgstr ""
+
+#: ../../source/teams.rst:49
+msgid ""
+"Once the Team is successfully created, Tower opens the **Details** "
+"dialog, which also allows you to review and edit your Team information. "
+"This is the same menu that is opened if the Edit (|edit-button|) button "
+"is clicked from the **Teams** link. You can also review **Users** and  "
+"**Permissions** associated with this Team."
+msgstr ""
+
+#: ../../source/teams.rst:53
+msgid "|Teams - example team successfully created|"
+msgstr ""
+
+#: ../../source/teams.rst:59
+msgid "Teams - Users"
+msgstr ""
+
+#: ../../source/teams.rst:64
+msgid ""
+"This menu displays the list of Users that are members of this Team. This "
+"list may be searched by **Username**, **First Name**, or **Last Name**. "
+"For more information, refer to :ref:`ug_users`."
+msgstr ""
+
+#: ../../source/teams.rst:66
+msgid "|Teams - users list|"
+msgstr ""
+
+#: ../../source/teams.rst:71
+msgid "Add a User"
+msgstr ""
+
+#: ../../source/teams.rst:73
+msgid ""
+"In order to add a user to a team, the user must already be created in "
+"Tower. Refer to :ref:`ug_users_create` to create a user. To add existing "
+"users to the Team:"
+msgstr ""
+
+#: ../../source/teams.rst:77
+msgid ""
+"Select one or more users from the list of available users by clicking the"
+" checkbox next to the user(s). Doing so expands the lower part of the "
+"Wizard to assign roles to each user."
+msgstr ""
+
+#: ../../source/teams.rst:79
+msgid "|Teams - add users for example team|"
+msgstr ""
+
+#: ../../source/teams.rst:83
+msgid ""
+"For each user, click from the drop-down menu to select one or more roles "
+"for that user."
+msgstr ""
+
+#: ../../source/teams.rst:87
+msgid ""
+"For help on what the roles mean, click the **Key** button. For more "
+"information, refer to the :ref:`rbac-ug-roles` section of this guide."
+msgstr ""
+
+#: ../../source/teams.rst:90
+msgid "|Teams - assign role for example users|"
+msgstr ""
+
+#: ../../source/teams.rst:94
+msgid ""
+"In this example, two users have been selected and each have been granted "
+"certain roles within this team."
+msgstr ""
+
+#: ../../source/teams.rst:96
+msgid "Click the **Save** button when done."
+msgstr ""
+
+#: ../../source/teams.rst:102
+msgid "Teams - Permissions"
+msgstr ""
+
+#: ../../source/teams.rst:108
+msgid ""
+"Selecting the **Permissions** view displays a list of the permissions "
+"that are currently available for this Team. The permissions list may be "
+"sorted and searched by **Name**, **Inventory**, **Project** or "
+"**Permission** type."
+msgstr ""
+
+#: ../../source/teams.rst:110
+msgid "|Teams - permissions list|"
+msgstr ""
+
+#: ../../source/teams.rst:114
+msgid ""
+"The set of privileges assigned to Teams that provide the ability to read,"
+" modify, and administer projects, inventories, and other Tower elements "
+"are permissions."
+msgstr ""
+
+#: ../../source/teams.rst:116
+msgid ""
+"By default, the Team is given the \"read\" permission (also called a "
+"role)."
+msgstr ""
+
+#: ../../source/teams.rst:118
+msgid ""
+"Permissions must be set explicitly via an Inventory, Project, Job "
+"Template, or within the Organization view."
+msgstr ""
+
+#: ../../source/teams.rst:122
+msgid "Add Team Permissions"
+msgstr ""
+
+#: ../../source/teams.rst:124
+msgid "To add permissions to a Team:"
+msgstr ""
+
+#: ../../source/teams.rst:126
+msgid ""
+"Click the |add permissions| button, which opens the Add Permissions "
+"Wizard."
+msgstr ""
+
+#: ../../source/teams.rst:133
+msgid "Click to select the Tower object for which the user will have access:"
+msgstr ""
+
+#: ../../source/teams.rst:135
+msgid ""
+"**Job Templates**. This is the default tab displayed in the Add "
+"Permissions Wizard."
+msgstr ""
+
+#: ../../source/teams.rst:136
+msgid "**Workflow Templates**"
+msgstr ""
+
+#: ../../source/teams.rst:137
+msgid "**Projects**"
+msgstr ""
+
+#: ../../source/teams.rst:138
+msgid "**Inventories**"
+msgstr ""
+
+#: ../../source/teams.rst:139
+msgid "**Credentials**"
+msgstr ""
+
+#: ../../source/teams.rst:143
+msgid ""
+"You can assign different roles to different resources all at once to "
+"avoid having to click the |add permissions| button. To do so, simply go "
+"from one tab to another after making your selections without saving."
+msgstr ""
+
+#: ../../source/teams.rst:145
+msgid ""
+"Perform the following steps to assign the user specific roles for each "
+"type of resource:"
+msgstr ""
+
+#: ../../source/teams.rst:147
+msgid ""
+"In the desired tab, click the checkbox beside the name of the resource to"
+" select it."
+msgstr ""
+
+#: ../../source/teams.rst:149
+msgid ""
+"The dialog expands to allow you to select the role for the resource you "
+"chose."
+msgstr ""
+
+#: ../../source/teams.rst:151
+msgid "Select the role from the drop-down menu list provided:"
+msgstr ""
+
+#: ../../source/teams.rst:153
+msgid ""
+"**Admin** allows read, run, and edit privileges (applicable to all Tower "
+"objects)"
+msgstr ""
+
+#: ../../source/teams.rst:154
+msgid ""
+"**Execute** allows read and run privileges (applicable to job templates "
+"and workflow templates)"
+msgstr ""
+
+#: ../../source/teams.rst:155
+msgid ""
+"**Use** allows use of the project in a job template (applicable to "
+"projects, inventories, and credentials)"
+msgstr ""
+
+#: ../../source/teams.rst:156
+msgid ""
+"**Update** allows updating of project, inventory, or group via the SCM "
+"Update (applicable to projects and inventories)"
+msgstr ""
+
+#: ../../source/teams.rst:157
+msgid "**Ad Hoc** allows running of ad hoc commands (applicable to inventories)"
+msgstr ""
+
+#: ../../source/teams.rst:163
+msgid ""
+"Use the **Key** button to display the help text for each of the roles "
+"applicable to the resource selected."
+msgstr ""
+
+#: ../../source/teams.rst:166
+msgid ""
+"Review your role assignments for each of the Tower objects by clicking on"
+" their respective buttons in the expanded section 2 of the Add "
+"Permissions Wizard."
+msgstr ""
+
+#: ../../source/teams.rst:171
+msgid ""
+"Click **Save** when done, and the Add Permissions Wizard closes to "
+"display the updated profile for the user with the roles assigned for each"
+" selected resource."
+msgstr ""
+
+#: ../../source/teams.rst:176
+msgid ""
+"To remove Permissions for a particular User, click the Disassociate "
+"(|x-button|) button under **Actions**. This launches a **Remove Role** "
+"dialog, asking you to confirm the disassociation."
+msgstr ""
+
+#: ../../source/teams.rst:182
+msgid ""
+"You can also add teams or individual users and assign them permissions at"
+" the object level (projects, inventories, job templates, and workflow "
+"templates) as well. |at| release 3.1 introduces the ability to batch "
+"assign permissions. This feature reduces the time for an organization to "
+"onboard many users at one time. For more details, refer to their "
+"respective chapters in the :ref:`ug_start`."
+msgstr ""
+

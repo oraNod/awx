@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/inventory_plugins_templates.rst:4
+msgid "Supported Inventory Plugin Templates"
+msgstr "지원되는 인벤토리 플러그인 템플릿"
+
+#: ../../source/inventory_plugins_templates.rst:9
+msgid "Upon upgrade to 4.x, existing configurations will be migrated to the new format that will produce a backwards compatible inventory output. Use the templates below to help aid in migrating your inventories to the new style inventory plugin output."
+msgstr "4.x로 업그레이드 시 기존 구성이 이전 버전과 호환되는 인벤토리 출력을 생성하는 새 형식으로 마이그레이션됩니다. 아래 템플릿을 사용하면 인벤토리를 새 스타일 인벤토리 플러그인 출력으로 마이그레이션하는 데 도움이 됩니다."
+
+#: ../../source/inventory_plugins_templates.rst:16
+msgid "Amazon Web Services EC2"
+msgstr "Amazon Web Services EC2"
+
+#: ../../source/inventory_plugins_templates.rst:130
+msgid "Google Compute Engine"
+msgstr "Google Compute Engine"
+
+#: ../../source/inventory_plugins_templates.rst:187
+msgid "Microsoft Azure Resource Manager"
+msgstr "Microsoft Azure Resource Manager"
+
+#: ../../source/inventory_plugins_templates.rst:233
+msgid "VMware vCenter"
+msgstr "VMware vCenter"
+
+#: ../../source/inventory_plugins_templates.rst:303
+msgid "Red Hat Satellite 6"
+msgstr "Red Hat Satellite 6"
+
+#: ../../source/inventory_plugins_templates.rst:338
+msgid "OpenStack"
+msgstr "OpenStack"
+
+#: ../../source/inventory_plugins_templates.rst:354
+msgid "Red Hat Virtualization"
+msgstr "Red Hat Virtualization"
+
+#: ../../source/inventory_plugins_templates.rst:383
+msgid "Red Hat Ansible Automation Platform"
+msgstr "Red Hat Ansible Automation Platform"
+

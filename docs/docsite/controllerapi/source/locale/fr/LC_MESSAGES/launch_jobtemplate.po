@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/launch_jobtemplate.rst:3
+msgid "Launching a Job Template"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:4
+msgid ""
+"|at| makes it simple to launch a job based on a Job Template from Tower's"
+" API or by using the ``tower-cli`` command line tool."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:6
+msgid "Launching a Job Template also:"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:8
+msgid "Creates a Job Record"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:9
+msgid ""
+"Gives that Job Record all of the attributes on the Job Template, combined"
+" with certain data you can give in this launch endpoint (\"runtime\" "
+"data)"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:10
+msgid "Runs Ansible with the combined data from the JT and runtime data"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:12
+msgid ""
+"Runtime data takes precedence over the Job Template data, contingent on "
+"the ``ask_`` ``_on_launch`` field on the job template being set to True. "
+"For example, a runtime credential is only accepted if the Job Template "
+"has ``ask_credential_on_launch`` set to True."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:14
+msgid "Launching from Job Templates via the API follows the following workflow:"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:16
+msgid ""
+"GET ``https://your.tower.server/api/v1/job_templates/<your job template "
+"id>/launch/``. The response will contain data such as "
+"``job_template_data`` and ``defaults`` which give information about the "
+"job template."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:17
+msgid ""
+"Inspect returned data for runtime data that is needed to launch. "
+"Inspecting the OPTIONS of the launch endpoint may also help deduce what "
+"POST fields are allowed."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:20
+msgid ""
+"Providing certain runtime credentials could introduce the need for a "
+"password not listed in ``passwords_needed_to_start``."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:22
+msgid "``passwords_needed_to_start``: List of passwords needed"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:23
+msgid "``credential_needed_to_start``: Boolean"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:24
+msgid "``inventory_needed_to_start``: Boolean"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:25
+msgid ""
+"``variables_needed_to_start``: List of fields that need to be passed "
+"inside of the ``extra_vars`` dictionary"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:27
+msgid ""
+"Inspect returned data for optionally allowed runtime data that the user "
+"should be asked for."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:29
+msgid ""
+"``ask_variables_on_launch``: Boolean specifying whether to prompt the "
+"user for additional variables to pass to Ansible inside of `extra_vars`"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:30
+msgid ""
+"``ask_tags_on_launch``: Boolean specifying whether to prompt the user for"
+" ``job_tags`` on launch (allow allows use of ``skip_tags`` for "
+"convienience)"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:31
+msgid ""
+"``ask_job_type_on_launch``: Boolean specifying whether to prompt the user"
+" for ``job_type`` on launch"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:32
+msgid ""
+"``ask_limit_on_launch``: Boolean specifying whether to prompt the user "
+"for ``limit`` on launch"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:33
+msgid ""
+"``ask_inventory_on_launch``: Boolean specifying whether to prompt the "
+"user for the related field ``inventory`` on launch"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:34
+msgid ""
+"``ask_credential_on_launch``: Boolean specifying whether to prompt the "
+"user for the related field ``credential`` on launch"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:35
+msgid ""
+"``survey_enabled``: Boolean specifying whether to prompt the user for "
+"additional ``extra_vars``, following the job template's ``survey_spec`` "
+"Q&A format"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:37
+msgid ""
+"POST ``https://your.tower.server/api/v1/job_templates/<your job template "
+"id>/launch/`` with any required data gathered during the previous "
+"step(s). The variables that can be passed in the request data for this "
+"action include the following."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:39
+msgid ""
+"``extra_vars``: A string that represents a JSON or YAML formatted "
+"dictionary (with escaped parentheses) which includes variables given by "
+"the user, including answers to survey questions"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:40
+msgid ""
+"``job_tags``: A string that represents a comma-separated list of tags in "
+"the playbook to run"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:41
+msgid ""
+"``limit``: A string that represents a comma-separated list of hosts or "
+"groups to operate on"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:42
+msgid ""
+"``inventory``: A integer value for the foreign key of an inventory to use"
+" in this job run"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:43
+msgid ""
+"``credential``: A integer value for the foreign key of a credential to "
+"use in this job run"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:45
+msgid ""
+"The POST will return data about the job and information about whether the"
+" runtime data was accepted. The job id is given in the ``job`` field to "
+"maintain compatibility with tools written before 3.0. The response will "
+"look similar to:"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:59
+msgid ""
+"In this example, values for ``credential`` and ``job_tags`` were given "
+"while the job template ``ask_credential_on_launch`` and "
+"``ask_tags_on_launch`` were False. These were rejected because the job "
+"template author did not allow using runtime values for them."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:61
+msgid ""
+"You can see details about the job in this response. To get an updated "
+"status, you will need to do a GET request to the job page, ``/jobs/4``, "
+"or follow the ``url`` link in the response. You can also find related "
+"links to cancel, relaunch, and so fourth."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:67
+msgid ""
+"When querying a job on a non-execution node, an error message, ``stdout "
+"capture is missing`` displays for the result_stdout field and on the "
+"related stdout page. In order to generate the stdout, use the "
+"``format=txt_download`` query parameter for the related stdout page. This"
+" generates the stdout file and any refreshes to either the job or the "
+"related std will display the job output."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:72
+msgid ""
+"You cannot assign a new inventory at the time of launch to a scan job. "
+"Scan jobs must be tied to a fixed inventory."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:76
+msgid ""
+"You cannot change the Job Type at the time of launch to or from the type "
+"of \"scan\". The ``ask_job_type_on_launch`` option only enables you to "
+"toggle \"run\" versus \"check\" at launch time."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:80
+msgid "``tower-cli`` Job Template Launching"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:82
+msgid ""
+"From the Tower command line, you can use ``tower-cli`` as a method of "
+"launching your Job Templates."
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:84
+msgid "For help with ``tower-cli`` launch, use:"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:90
+msgid "For launching from a job template, invoke tower-cli in a way similar to:"
+msgstr ""
+
+#: ../../../common/source/launch_jobtemplate.rst:93
+msgid ""
+"For an example of how to use the API, you can also add the ``-v``  flag "
+"here:"
+msgstr ""
+

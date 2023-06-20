@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/group_list.rst:3
+msgid "Group List API Endpoint"
+msgstr "グループリストの API エンドポイント"
+
+#: ../../source/group_list.rst:8
+msgid "Make a GET request to this resource to retrieve the list of groups."
+msgstr "このリソースに GET 要求を実行して、グループリストを取得します。"
+
+#: ../../source/group_list.rst:19
+msgid "The resulting data structure contains:"
+msgstr "返されるデータ構造には以下が含まれます。"
+
+#: ../../source/group_list.rst:32
+msgid "The ``count`` field indicates the total number of groups found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more group records."
+msgstr "``count`` フィールドは指定のクエリーで見つかったグループの合計数を示します。``next`` および ``previous`` フィールドは、結果が単一ページに収まらない場合に、それらの結果へのリンクを提供します。``results`` にはグループのレコードが一覧表示されますが、ゼロの場合もあります。"
+
+#: ../../source/group_list.rst:35
+msgid "Results"
+msgstr "結果"
+
+#: ../../source/group_list.rst:40
+msgid "Each group data structure includes the following fields:"
+msgstr "各グループのデータ構造には以下のフィールドが含まれます。"
+
+#: ../../source/group_list.rst:42
+msgid "``id``: Database ID for this group. (integer)"
+msgstr "``id``: グループのデータベース ID (整数)"
+
+#: ../../source/group_list.rst:43
+msgid "``type``: Data type for this group. (multiple choice)"
+msgstr "``type``: グループのデータタイプ (複数選択)"
+
+#: ../../source/group_list.rst:44
+msgid "``group``: Group"
+msgstr "``group``: グループ"
+
+#: ../../source/group_list.rst:45
+msgid "``url``: URL for this group. (string)"
+msgstr "``url``: グループの URL (文字列)"
+
+#: ../../source/group_list.rst:46
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``: 関連リソースの URL のあるデータ構造 (オブジェクト)"
+
+#: ../../source/group_list.rst:47
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``: 関連リソースの名前/説明のあるデータ構造 (オブジェクト)"
+
+#: ../../source/group_list.rst:48
+msgid "``created``: Timestamp when this group was created. (datetime)"
+msgstr "``created``: グループ作成時のタイムスタンプ (日時)"
+
+#: ../../source/group_list.rst:49
+msgid "``modified``: Timestamp when this group was last modified. (datetime)"
+msgstr "``modified``: グループの最終更新時のタイムスタンプ (日時)"
+
+#: ../../source/group_list.rst:50
+msgid "``name``: (string)"
+msgstr "``name``: (文字列)"
+
+#: ../../source/group_list.rst:51
+msgid "``description``: (string)"
+msgstr "``description``: (文字列)"
+
+#: ../../source/group_list.rst:52
+msgid "``inventory``: (field)"
+msgstr "``inventory``: (フィールド)"
+
+#: ../../source/group_list.rst:53
+msgid "``variables``: Group variables in JSON or YAML format. (string)"
+msgstr "``variables``: JSON または YAML 形式のグループ変数"
+
+#: ../../source/group_list.rst:54
+msgid "``has_active_failures``: Flag indicating whether this group has any hosts with active failures. (boolean)"
+msgstr "``has_active_failures``: このグループにアクティブなエラーのあるホストがあるかどうかを示すフラグ"
+
+#: ../../source/group_list.rst:55
+msgid "``total_hosts``: Total number of hosts directly or indirectly in this group. (integer)"
+msgstr "``total_hosts``: このグループに直接的または間接的に属するホストの合計数"
+
+#: ../../source/group_list.rst:56
+msgid "``hosts_with_active_failures``: Number of hosts in this group with active failures. (integer)"
+msgstr "``hosts_with_active_failures``: アクティブなエラーのあるこのグループ内のホストの数"
+
+#: ../../source/group_list.rst:57
+msgid "``total_groups``: Total number of child groups contained within this group. (integer)"
+msgstr "``total_groups``: このグループに含まれる子グループの合計数"
+
+#: ../../source/group_list.rst:58
+msgid "``groups_with_active_failures``: Number of child groups within this group that have active failures. (integer)"
+msgstr "``groups_with_active_failures``: アクティブなエラーのあるこのグループ内の子グループの数"
+
+#: ../../source/group_list.rst:59
+msgid "``has_inventory_sources``: Flag indicating whether this group was created/updated from any external inventory sources. (boolean)"
+msgstr "``has_inventory_sources``: このグループが外部インベントリーソースから作成/更新されたかどうかを示すフラグ"
+
+#: ../../source/group_list.rst:62
+msgid "Create Groups"
+msgstr "グループの作成"
+
+#: ../../source/group_list.rst:67
+msgid "Make a POST request to this resource with the following group fields to create a new group:"
+msgstr "新規グループを作成するには、以下のグループフィールドを使ってリソースに POST 要求を実行します。"
+
+#: ../../source/group_list.rst:69
+msgid "``name``: (string, required)"
+msgstr "``name``: (文字列。必須)"
+
+#: ../../source/group_list.rst:70
+msgid "``description``: (string, default=\"\")"
+msgstr "``description``: (文字列。デフォルトは \"\")"
+
+#: ../../source/group_list.rst:71
+msgid "``inventory``: (field, required)"
+msgstr "``inventory``: (フィールド。必須)"
+
+#: ../../source/group_list.rst:72
+msgid "``variables``: Group variables in JSON or YAML format. (string, default=\"\")"
+msgstr "``variables``: JSON または YAML 形式のグループ変数 (文字列。デフォルトは \"\")"
+
+#: ../../source/group_list.rst:76
+msgid "Reviewing the Options Endpoint"
+msgstr "オプションエンドポイントの確認"
+
+#: ../../source/group_list.rst:81
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*オプションエンドポイント* テーブルでは、このエンドポイントのオプションを確認できます。ブラウザー表示が可能な API でエンドポイントを表示している場合は、「オプション」ボタンをクリックすると以下の raw JSON が表示されます。"
+

@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ee_reference.rst:3
+msgid "Execution Environment Setup Reference"
+msgstr "실행 환경 설정 참조"
+
+#: ../../source/ee_reference.rst:5
+msgid "This section contains reference information associated with setting up and building |ees|."
+msgstr "이 섹션에는 |ees| 설정 및 빌드와 관련된 참조 정보가 포함되어 있습니다."
+
+#: ../../source/ee_reference.rst:11
+msgid "Execution environment definition"
+msgstr "실행 환경 정의"
+
+#: ../../source/ee_reference.rst:13
+msgid "A definition file is a ``.yml`` file that is required to build an image for an |ee|. An example of an |ee| definition schema is as follows:"
+msgstr "정의 파일은 |ee|의 이미지를 빌드하는 데 필요한 ``.yml`` 파일입니다. 다음은 |ee| 정의 스키마의 예제입니다."
+
+#: ../../source/ee_reference.rst:41
+msgid "Build arguments and base image"
+msgstr "빌드 인수 및 기본 이미지"
+
+#: ../../source/ee_reference.rst:43
+msgid "Default values for build arguments can be specified in the definition file in the ``default_build_args`` section as a dictionary. This is an alternative to using the ``--build-arg`` CLI flag."
+msgstr "빌드 인수의 기본값은 정의 파일 내 ``default_build_args`` 섹션에 사전으로 지정될 수 있습니다. 이는 ``--build-arg`` CLI 플래그를 사용하는 것의 대안입니다."
+
+#: ../../source/ee_reference.rst:45
+msgid "Build arguments used by ``ansible-builder`` are the following:"
+msgstr "``ansible-builder``에서 사용하는 빌드 인수는 다음과 같습니다."
+
+#: ../../source/ee_reference.rst:47
+msgid "``ANSIBLE_GALAXY_CLI_COLLECTION_OPTS`` allows the user to pass the ``–pre`` flag to enable the installation of pre-releases collections."
+msgstr "``ANSIBLE_GALAXY_CLI_COLLECTION_OPTS``를 사용하면 ``–pre`` 플래그를 전달하여 사전 릴리스 컬렉션을 설치할 수 있습니다."
+
+#: ../../source/ee_reference.rst:49
+msgid "``EE_BASE_IMAGE`` specifies the parent image for the |ee|."
+msgstr "``EE_BASE_IMAGE``는 |ee|의 상위 이미지를 지정합니다."
+
+#: ../../source/ee_reference.rst:51
+msgid "``EE_BUILDER_IMAGE`` specifies the image used for compiling type tasks."
+msgstr "``EE_BUILDER_IMAGE``는 유형 작업을 컴파일하는 데 사용되는 이미지를 지정합니다."
+
+#: ../../source/ee_reference.rst:53
+msgid "Values given inside of ``default_build_args`` will be hard-coded into the Containerfile, so they will persist if ``podman build`` is called manually."
+msgstr "``default_build_args`` 내에 제공된 값은 Containerfile에 하드 코딩되므로 ``podman build``를 수동으로 호출하는 경우 값이 지속됩니다."
+
+#: ../../source/ee_reference.rst:55
+msgid "If the same variable is specified in the CLI ``--build-arg`` flag, the CLI value will take higher precedence."
+msgstr "CLI ``--build-arg`` 플래그에 동일한 변수를 지정하는 경우 CLI 값의 우선순위가 더 높습니다."
+
+#: ../../source/ee_reference.rst:59
+msgid "Ansible config file path"
+msgstr "Ansible 구성 파일 경로"
+
+#: ../../source/ee_reference.rst:61
+msgid "When using an ``ansible.cfg`` file to pass a token and other settings for a private account to an |ah| server, listing the config file path here (as a string) will enable it to be included as a build argument in the initial phase of the build."
+msgstr "``ansible.cfg`` 파일을 사용하여 개인 계정의 토큰 및 기타 설정을 |ah| 서버에 전달할 때 여기에 구성 파일 경로를 문자열로 나열하면 초기 빌드 단계에서 해당 경로를 빌드 인수로 포함할 수 있습니다."
+
+#: ../../source/ee_reference.rst:65
+msgid "Ansible Galaxy dependencies"
+msgstr "Ansible Galaxy 종속 항목"
+
+#: ../../source/ee_reference.rst:67
+msgid "The ``galaxy`` entry points to a valid requirements file for the ``ansible-galaxy collection install -r ...`` command."
+msgstr "``galaxy`` 항목은 ``ansible-galaxy collection install -r ...`` 명령에 유효한 요구 사항 파일을 가리킵니다."
+
+#: ../../source/ee_reference.rst:69
+msgid "The entry ``requirements.yml`` may be a relative path from the directory of the |ee| definition’s folder, or an absolute path."
+msgstr "``requirements.yml`` 항목은 |ee| 정의 폴더 디렉터리의 상대 경로이거나 절대 경로일 수 있습니다."
+
+#: ../../source/ee_reference.rst:73
+msgid "Python dependencies"
+msgstr "Python 종속 항목"
+
+#: ../../source/ee_reference.rst:75
+msgid "The python entry points to a valid requirements file for the ``pip install -r ...`` command."
+msgstr "Python 항목은 ``pip install -r ...`` 명령에 유효한 요구 사항 파일을 가리킵니다."
+
+#: ../../source/ee_reference.rst:77
+msgid "The entry ``requirements.txt`` may be a relative path from the directory of the |ee| definition’s folder, or an absolute path."
+msgstr "``requirements.txt`` 항목은 |ee| 정의 폴더 디렉터리의 상대 경로이거나 절대 경로일 수 있습니다."
+
+#: ../../source/ee_reference.rst:81
+msgid "System-level dependencies"
+msgstr "시스템 수준 종속 항목"
+
+#: ../../source/ee_reference.rst:83
+msgid "The ``system`` entry points to a ``bindep`` requirements file. This will be processed by ``bindep`` and then passed to ``dnf``, other platforms are not yet supported. For more information about bindep, refer to the `OpenDev documentation <https://docs.opendev.org/opendev/bindep/latest/readme.html>`_."
+msgstr "``system`` 항목은 ``bindep`` 요구 사항 파일을 가리킵니다. 이 항목은 ``bindep``에 의해 처리된 다음 ``dnf``로 전달되며, 다른 플랫폼은 아직 지원되지 않습니다. bindep에 대한 자세한 내용은 `OpenDev documentation <https://docs.opendev.org/opendev/bindep/latest/readme.html>`_를 참조하십시오."
+
+#: ../../source/ee_reference.rst:87
+msgid "Additional custom build steps"
+msgstr "추가적인 사용자 지정 빌드 단계"
+
+#: ../../source/ee_reference.rst:89
+msgid "Additional commands may be specified in the ``additional_build_steps`` section, either for before the main build steps (``prepend``) or after (``append``). The syntax needs to be one of the following:"
+msgstr "추가 명령은 기본 빌드 단계 이전(``prepend``)이나 이후(``append``) ``additional_build_steps`` 섹션에 지정될 수 있습니다. 구문은 다음 중 하나여야 합니다."
+
+#: ../../source/ee_reference.rst:91
+msgid "a multi-line string (example shown in the ``prepend`` section above)"
+msgstr "여러 줄의 문자열(관련 예는 위의 ``prepend`` 섹션에 표시되어 있음)"
+
+#: ../../source/ee_reference.rst:92
+msgid "a dictionary (as shown via ``append``)"
+msgstr "사전(``append``를 통해 표시됨)"
+
+#: ../../source/ee_reference.rst:95
+msgid "ansible-builder build options"
+msgstr "ansible-builder 빌드 옵션"
+
+#: ../../source/ee_reference.rst:97
+msgid "The following options can be used with the ``ansible-builder build`` command:"
+msgstr "다음 옵션을 ``ansible-builder build`` 명령과 함께 사용할 수 있습니다."
+
+#: ../../source/ee_reference.rst:103
+msgid "Flag"
+msgstr "플래그"
+
+#: ../../source/ee_reference.rst:104
+msgid "Syntax"
+msgstr "구문"
+
+#: ../../source/ee_reference.rst:105
+msgid "Description"
+msgstr "설명"
+
+#: ../../source/ee_reference.rst:106
+msgid "``--tag``"
+msgstr "``--tag``"
+
+#: ../../source/ee_reference.rst:107
+msgid "``$ ansible-builder build --tag=my-custom-ee``"
+msgstr "``$ ansible-builder build --tag=my-custom-ee``"
+
+#: ../../source/ee_reference.rst:108
+msgid "To customize the tagged name applied to the built image."
+msgstr "빌드 이미지에 적용된 태그된 이름을 사용자 지정하려면 다음을 수행합니다."
+
+#: ../../source/ee_reference.rst:109
+msgid "``--file``"
+msgstr "``--file``"
+
+#: ../../source/ee_reference.rst:110
+msgid "``$ ansible-builder build --file=my-ee.yml``"
+msgstr "``$ ansible-builder build --file=my-ee.yml``"
+
+#: ../../source/ee_reference.rst:111
+msgid "To use a definition file named something other than ``execution-environment.yml``."
+msgstr "``execution-environment.yml``이 아닌 다른 이름이 지정된 정의 파일 사용하려면 다음을 수행하십시오."
+
+#: ../../source/ee_reference.rst:112
+msgid "``--context``"
+msgstr "``--context``"
+
+#: ../../source/ee_reference.rst:113
+msgid "``$ ansible-builder build --context=/path/to/dir``"
+msgstr "``$ ansible-builder build --context=/path/to/dir``"
+
+#: ../../source/ee_reference.rst:114
+msgid "To specify a location other than the default directory named ``context`` created in the current working directory."
+msgstr "현재 작업 디렉터리에 생성된 기본 디렉터리 ``context`` 이외의 위치를 지정하려면 다음을 수행합니다."
+
+#: ../../source/ee_reference.rst:115
+#: ../../source/ee_reference.rst:118
+msgid "``--build-arg``"
+msgstr "``--build-arg``"
+
+#: ../../source/ee_reference.rst:116
+msgid "``$ ansible-builder build --build-arg FOO=bar``"
+msgstr "``$ ansible-builder build --build-arg FOO=bar``"
+
+#: ../../source/ee_reference.rst:117
+msgid "To use Podman or Docker build-time variables, specify them the same way you would with ``podman build`` or ``docker build``. By default, the Containerfile or Dockerfile contains a build argument ``EE_BASE_IMAGE,`` that lets you rebuild without modifying files."
+msgstr "Podman 또는 Docker의 빌드 시간 변수를 사용하려면 ``podman build`` 또는 ``docker build``와 동일한 방식으로 지정합니다. 기본적으로 Containerfile 또는 Dockerfile에는 파일을 수정하지 않고 다시 빌드할 수 있는 빌드 인수 ``EE_BASE_IMAGE,`` 가 포함되어 있습니다."
+
+#: ../../source/ee_reference.rst:119
+msgid "``$ ansible-builder build --build-arg EE_BASE_IMAGE=registry.example.com/another-ee``"
+msgstr "``$ ansible-builder build --build-arg EE_BASE_IMAGE=registry.example.com/another-ee``"
+
+#: ../../source/ee_reference.rst:120
+msgid "To use a custom base image, replaces previously discontinued ``--base-image`` option."
+msgstr "사용자 정의 기본 이미지를 사용하려면 이전에 중단된 ``--base-image`` 옵션을 대체합니다."
+
+#: ../../source/ee_reference.rst:121
+msgid "``--container-runtime``"
+msgstr "``--container-runtime``"
+
+#: ../../source/ee_reference.rst:122
+msgid "``$ ansible-builder build --container-runtime=docker``"
+msgstr "``$ ansible-builder build --container-runtime=docker``"
+
+#: ../../source/ee_reference.rst:123
+msgid "To use Docker to build images instead of the Podman default."
+msgstr "Podman 기본값 대신 Docker를 사용하여 이미지를 빌드합니다."
+
+#: ../../source/ee_reference.rst:124
+msgid "``--verbosity``"
+msgstr "``--verbosity``"
+
+#: ../../source/ee_reference.rst:125
+msgid "``$ ansible-builder build --verbosity 2``"
+msgstr "``$ ansible-builder build --verbosity 2``"
+
+#: ../../source/ee_reference.rst:126
+msgid "To customize the level of verbosity."
+msgstr "상세 정보 표시 수준을 사용자 지정하려면 다음을 수행합니다."
+
+#: ../../source/ee_reference.rst:129
+msgid "Examples"
+msgstr "예제"
+
+#: ../../source/ee_reference.rst:130
+msgid "The example in ``test/data/pytz`` requires the ``awx.awx`` collection in the |ee| definition. The lookup plugin ``awx.awx.tower_schedule_rrule`` requires the PyPI ``pytz`` and another library to work. If ``test/data/pytz/execution-environment.yml`` file is provided to the ``ansible-builder build`` command, then it will install the collection inside the image, read the ``requirements.txt`` file inside of the collection, and then install ``pytz`` into the image."
+msgstr "``test/data/pytz`` 예제에서는 |ee| 정의에 ``awx.awx`` 컬렉션이 있어야 합니다. 조회 플러그인 ``awx.awx.tower_schedule_rrule``이 작동하려면 PyPI ``pytz``와 함께 또 다른 라이브러리가 있어야 합니다. ``test/data/pytz/execution-environment.yml`` 파일을 ``ansible-builder build`` 명령에 제공하면 이미지 내에 컬렉션을 설치하고 컬렉션 내의 ``requirements.txt`` 파일을 읽은 다음, 이미지에 ``pytz``를 설치합니다."
+
+#: ../../source/ee_reference.rst:132
+msgid "The image produced can be used inside of an ``ansible-runner`` project by placing these variables inside the ``env/settings`` file, inside of the private data directory."
+msgstr "생성된 이미지는 개인 데이터 디렉터리에 있는 ``env/settings`` 파일에 이러한 변수를 배치하여 ``ansible-runner`` 프로젝트 내에서 사용할 수 있습니다."
+
+#: ../../source/ee_reference.rst:141
+msgid "The ``awx.awx`` collection is a subset of content included in the default AWX |ee|. More details can be found in the `awx-ee repository <https://github.com/ansible/awx-ee>`_."
+msgstr "``awx.awx`` 컬렉션은 기본 AWX |ee|에 포함된 콘텐츠의 서브 세트입니다. 자세한 내용은 `awx-ee repository <https://github.com/ansible/awx-ee>`_에서 확인할 수 있습니다."
+
+#: ../../source/ee_reference.rst:150
+msgid "Collection-level metadata"
+msgstr "컬렉션 수준 메타데이터"
+
+#: ../../source/ee_reference.rst:152
+msgid "Collections inside of the ``galaxy`` entry of an |ee| will contribute their Python and system requirements to the image."
+msgstr "|ee|의 ``galaxy`` 항목 내에 있는 컬렉션은 Python 및 시스템 요구 사항을 이미지에 제공합니다."
+
+#: ../../source/ee_reference.rst:154
+msgid "Requirements from a collection can be recognized in these ways:"
+msgstr "컬렉션의 요구 사항은 다음과 같은 방법으로 인식할 수 있습니다."
+
+#: ../../source/ee_reference.rst:156
+msgid "A file ``meta/execution-environment.yml`` references the Python and/or bindep requirements files"
+msgstr "``meta/execution-environment.yml`` 파일이 Python 및/또는 bindep 요구 사항 파일을 참조합니다."
+
+#: ../../source/ee_reference.rst:157
+msgid "A file named ``requirements.txt`` is in the root level of the collection"
+msgstr "``requirements.txt``라는 파일이 루트 수준의 컬렉션에 있습니다."
+
+#: ../../source/ee_reference.rst:158
+msgid "A file named ``bindep.txt`` is in the root level of the collection"
+msgstr "``bindep.txt``라는 파일이 루트 수준의 컬렉션에 있습니다."
+
+#: ../../source/ee_reference.rst:160
+msgid "If any of these files are in the ``build_ignore`` of the collection, it will not work correctly."
+msgstr "위 파일이 컬렉션의 ``build_ignore``에 있는 경우 올바르게 작동하지 않습니다."
+
+#: ../../source/ee_reference.rst:162
+msgid "Collection maintainers can verify that ansible-builder recognizes the requirements they expect by using the ``introspect`` command, for example:"
+msgstr "컬렉션 유지 관리자는 ``introspect`` 명령을 사용하여 ansible-builder가 필요한 요구 사항을 인식하는지 확인할 수 있습니다. 예를 들면 다음과 같습니다."
+
+#: ../../source/ee_reference.rst:169
+msgid "Python Dependencies"
+msgstr "Python 종속 항목"
+
+#: ../../source/ee_reference.rst:171
+msgid "Python requirements files are combined into a single file using the ``requirements-parser`` library in order to support complex syntax like references to other files."
+msgstr "Python 요구 사항 파일은 다른 파일에 대한 참조와 같이 복잡한 구문을 지원하기 위해 ``requirements-parser`` 라이브러리를 사용하여 단일 파일로 결합됩니다."
+
+#: ../../source/ee_reference.rst:173
+msgid "Entries from separate collections that give the same package name will be combined into the same entry, with the constraints combined."
+msgstr "동일한 패키지 이름을 제공하는 개별 컬렉션의 항목은 제약 조건이 결합된 동일한 항목으로 결합됩니다."
+
+#: ../../source/ee_reference.rst:175
+msgid "There are several package names which are specifically *ignored* by ansible-builder, meaning that if a collection lists these, they will not be included in the combined file. These include test packages and packages that provide Ansible itself. The full list can be found in ``EXCLUDE_REQUIREMENTS`` in the ``ansible_builder.requirements`` module."
+msgstr "ansible-builder에서 구체적으로 *무시하는*, 즉 컬렉션에서 나열해도 결합된 파일에 포함되지 않는 여러 패키지 이름이 있습니다. 여기에는 Ansible 자체를 제공하는 패키지 및 테스트 패키지가 포함됩니다. 전체 목록은 ``EXCLUDE_REQUIREMENTS`` 모듈의 ``ansible_builder.requirements``에서 확인할 수 있습니다."
+
+#: ../../source/ee_reference.rst:179
+msgid "System-level Dependencies"
+msgstr "시스템 수준 종속 항목"
+
+#: ../../source/ee_reference.rst:181
+msgid "The ``bindep`` format provides a way of specifying cross-platform requirements. A minimum expectation is that collections specify necessary requirements for ``[platform:rpm]``."
+msgstr "``bindep`` 포맷을 사용하면 플랫폼 간 요구 사항을 지정할 수 있습니다. 최소 기대치는 컬렉션에서 ``[platform:rpm]``에 필요한 요구 사항을 지정하는 것입니다."
+
+#: ../../source/ee_reference.rst:183
+msgid "Entries from multiple collections will be combined into a single file. Only requirements with no profiles (runtime requirements) will be installed to the image. Entries from multiple collections which are outright duplicates of each other may be consolidated in the combined file."
+msgstr "여러 컬렉션의 항목은 단일 파일로 결합됩니다. 프로필이 없는 요구 사항(런타임 요구 사항)만 이미지에 설치됩니다. 결합된 파일에는 서로 완전히 중복되는 여러 컬렉션의 항목이 통합될 수 있습니다."
+

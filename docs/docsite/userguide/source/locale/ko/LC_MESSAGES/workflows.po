@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/workflows.rst:5
+msgid "Workflows"
+msgstr "워크플로우"
+
+#: ../../source/workflows.rst:10
+msgid "Workflows allow you to configure a sequence of disparate job templates (or workflow templates) that may or may not share inventory, playbooks, or permissions. However, workflows have ‘admin’ and ‘execute’ permissions, similar to job templates. A workflow accomplishes the task of tracking the full set of jobs that were part of the release process as a single unit."
+msgstr "워크플로우를 사용하면 인벤토리, 플레이북 또는 권한을 공유하거나 공유하지 않는 일련의 분산된 작업 템플릿(또는 워크플로우 템플릿)을 구성할 수 있습니다. 그러나 워크플로우에는 작업 템플릿과 유사하게 '관리' 및 '실행' 권한이 있습니다. 워크플로우는 릴리스 프로세스에 속한 전체 작업 세트를 단일 단위로 추적하는 작업을 수행합니다."
+
+#: ../../source/workflows.rst:13
+msgid "Job or workflow templates are linked together using a graph-like structure called nodes. These nodes can be jobs, project syncs, or inventory syncs. A template can be part of different workflows or used multiple times in the same workflow. A copy of the graph structure is saved to a workflow job when you launch the workflow."
+msgstr "작업 또는 워크플로우 템플릿은 노드라는 그래프와 같은 구조를 사용하여 함께 연결됩니다. 이러한 노드는 작업, 프로젝트 동기화 또는 인벤토리 동기화일 수 있습니다. 템플릿은 다른 워크플로우의 일부이거나 동일한 워크플로우에서 여러 번 사용할 수 있습니다. 워크플로우를 시작할 때 그래프 구조의 복사본이 워크플로우 작업에 저장됩니다."
+
+#: ../../source/workflows.rst:15
+msgid "The example below shows a workflow that contains all three, as well as a workflow job template:"
+msgstr "아래 예제에서는 세 가지 모두 포함하는 워크플로우와 워크플로우 작업 템플릿을 보여줍니다."
+
+#: ../../source/workflows.rst:20
+msgid "As the workflow runs, jobs are spawned from the node's linked template. Nodes linking to a job template which has prompt-driven fields (``job_type``, ``job_tags``, ``skip_tags``, ``limit``) can contain those fields, and will not be prompted on launch. Job templates with promptable credential and/or inventory, WITHOUT defaults, will not be available for inclusion in a workflow."
+msgstr "워크플로우가 실행되면 노드의 연결된 템플릿에서 작업이 생성됩니다. 프롬프트 기반 필드(``job_type``, ``job_tags``, ``skip_tags``, ``limit``)가 있는 작업 템플릿에 연결되는 노드는 이러한 필드를 포함할 수 있으며 시작 시 입력하도록 요청하지 않습니다. 기본값 없이 인증 정보 및/또는 인벤토리를 입력하도록 요청할 수 있는 작업 템플릿은 워크플로우에 포함할 수 없습니다."
+
+#: ../../source/workflows.rst:24
+msgid "Workflow scenarios and considerations"
+msgstr "워크플로우 시나리오 및 고려 사항"
+
+#: ../../source/workflows.rst:26
+msgid "Consider the following scenarios for building workflows:"
+msgstr "워크플로우를 빌드하는 경우 다음 시나리오를 고려하십시오."
+
+#: ../../source/workflows.rst:28
+msgid "A root node is set to ALWAYS by default and it not editable."
+msgstr "기본적으로 루트 노드는 ‘항상’으로 설정되어 있으며 편집할 수 없습니다."
+
+#: ../../source/workflows.rst:32
+msgid "A node can have multiple parents and children may be linked to any of the states of success, failure, or always. If always, then the state is neither success or failure. States apply at the node level, not at the workflow job template level. A workflow job will be marked as successful unless it is canceled or encounters an error."
+msgstr "한 노드에 상위가 여러 개 있을 수 있고 하위는 성공, 실패 또는 항상 상태와 연결될 수 있습니다. ‘항상’ 상태는 성공도 실패도 아닙니다. 상태는 워크플로우 작업 템플릿 수준이 아닌 노드 수준에서 적용됩니다. 워크플로우 작업은 취소되거나 오류가 발생하지 않는 한 성공으로 표시됩니다."
+
+#: ../../source/workflows.rst:36
+msgid "If you remove a job or workflow template within the workflow, the node(s) previously connected to those deleted, automatically get connected upstream and retains its edge type as in the example below:"
+msgstr "워크플로우 내의 작업 또는 워크플로우 템플릿을 제거하면 이 삭제된 노드에 이전에 연결되었던 노드가 자동으로 업스트림에 연결되고 아래와 같이 에지 유형을 유지합니다."
+
+#: ../../source/workflows.rst:40
+msgid "You could have a convergent workflow, where multiple jobs converge into one. In this scenario, any of the jobs or all of them must complete before the next one runs, as shown in the example below:"
+msgstr "여러 작업이 하나로 수렴되는 통합 워크플로우가 있을 수 있습니다. 이 시나리오에서는 아래와 같이 다음 항목이 실행되기 전에 특정 작업 또는 모든 작업을 완료해야 합니다."
+
+#: ../../source/workflows.rst:44
+msgid "In the example provided, |at| runs the first two job templates in parallel. When they both finish and succeed as specified, the 3rd downstream (:ref:`convergence node <convergence_node>`), will trigger."
+msgstr "제공된 예에서 |at|는 처음 두 개의 작업 템플릿을 병렬로 실행합니다. 지정된 대로 둘 다 완료하고 성공하면 세 번째 다운스트림(:ref:`convergence node <convergence_node>`)이 트리거됩니다."
+
+#: ../../source/workflows.rst:46
+msgid "Prompts for inventory and surveys will apply to workflow nodes in workflow job templates."
+msgstr "워크플로우 작업 템플릿의 워크플로우 노드에는 인벤토리 및 설문 조사에 대한 입력 요청이 적용됩니다."
+
+#: ../../source/workflows.rst:48
+msgid "If you launch from the API, running a ``get`` command displays a list of warnings and highlights missing components. The basic workflow for a workflow job template is illustrated below."
+msgstr "API에서 시작하는 경우 ``get`` 명령을 실행하면 경고 목록이 표시되고 누락된 구성 요소가 강조 표시됩니다. 워크플로우 작업 템플릿의 기본 워크플로우는 다음과 같습니다."
+
+#: ../../source/workflows.rst:52
+msgid "It is possible to launch several workflows simultaneously, and set a schedule for when to launch them. You can set notifications on workflows, such as when a job completes, similar to that of job templates."
+msgstr "여러 워크플로우를 동시에 시작하고 시작 스케줄을 설정할 수 있습니다. 작업 템플릿과 유사하게 워크플로우에 대한 알림(예: 작업 완료 시)을 설정할 수 있습니다."
+
+#: ../../../common/source/job-slicing-rule.rst:3
+msgid "Job slicing is intended to scale job executions horizontally. Enabling job slicing on a job template divides an inventory to be acted upon in the number of slices configured at launch time and then starts a job for each slice."
+msgstr "작업 분할은 작업 실행을 수평으로 스케일링하기 위한 것입니다. 작업 템플릿에 분할하면 시작 시 구성된 슬라이스 수에 따라 인벤토리가 분할된 다음 각 슬라이스에 대한 작업이 시작됩니다."
+
+#: ../../../common/source/job-slicing-rule.rst:5
+msgid "It is expected that the number of slices will be equal to or less than the number of controller nodes. Setting an extremely high number of job slices (e.g., thousands), while allowed, can cause performance degradation as the job scheduler is not designed to schedule simultaneously thousands of workflow nodes, which are what the sliced jobs become."
+msgstr "슬라이스 수가 컨트롤러 노드 수보다 크거나 같을 것으로 예상됩니다. 작업 스케줄러가 수천 개의 워크플로우 노드를 동시에 예약하도록 설계되지 않으므로 작업 슬라이스 수가 매우 많은 작업 슬라이스(예: 수천)를 설정하면 분할된 작업이 생성되는 작업 스케줄러를 동시에 예약하도록 설계되지 않으므로 성능이 저하될 수 있습니다."
+
+#: ../../source/workflows.rst:59
+msgid "You can build a recursive workflow, but if |at| detects an error, it will stop at the time the nested workflow attempts to run."
+msgstr "재귀 워크플로우를 빌드할 수는 있지만 |at|에서 오류를 탐지하는 경우 중첩된 워크플로우가 실행되려고 할 때 중지됩니다."
+
+#: ../../source/workflows.rst:61
+msgid "Artifacts gathered in jobs in the sub-workflow will be passed to downstream nodes."
+msgstr "하위 워크플로우에서 작업에 수집된 아티팩트는 다운스트림 노드로 전달됩니다."
+
+#: ../../source/workflows.rst:63
+msgid "An inventory can be set at the workflow level, or prompt for inventory on launch."
+msgstr "인벤토리는 워크플로우 수준에서 설정하거나 시작 시 인벤토리를 입력하도록 요청할 수 있습니다."
+
+#: ../../source/workflows.rst:65
+msgid "When launched, all job templates in the workflow that have ``ask_inventory_on_launch=true`` will use the workflow level inventory."
+msgstr "시작된 경우 ``ask_inventory_on_launch=true``가 설정된 워크플로우의 모든 작업 템플릿에서 워크플로우 수준 인벤토리를 사용합니다."
+
+#: ../../source/workflows.rst:67
+msgid "Job templates that do not prompt for inventory will ignore the workflow inventory and run against their own inventory."
+msgstr "인벤토리를 입력하도록 요청하지 않는 작업 템플릿은 워크플로우 인벤토리를 무시하고 자체 인벤토리에 대해 실행됩니다."
+
+#: ../../source/workflows.rst:69
+msgid "If a workflow prompts for inventory, schedules and other workflow nodes may provide the inventory."
+msgstr "워크플로우에서 인벤토리를 입력하도록 요청하는 경우 스케줄 및 기타 워크플로우 노드에서 인벤토리를 제공할 수 있습니다."
+
+#: ../../source/workflows.rst:71
+msgid "In a workflow convergence scenario, ``set_stats`` data will be merged in an undefined way, so it is recommended that you set unique keys."
+msgstr "워크플로우 통합 시나리오에서는 ``set_stats`` 데이터가 정의되지 않은 방식으로 병합되므로 고유 키를 설정하는 것이 좋습니다."
+
+#: ../../source/workflows.rst:75
+msgid "Extra Variables"
+msgstr "추가 변수"
+
+#: ../../source/workflows.rst:81
+msgid "Also similar to job templates, workflows use surveys to specify variables to be used in the playbooks in the workflow, called extra_vars. Survey variables are combined with extra_vars defined on the workflow job template, and saved to the workflow job extra_vars. extra_vars in the workflow job are combined with job template variables when spawning jobs within the workflow."
+msgstr "워크플로우는 작업 템플릿과 유사하게 설문 조사를 사용하여 워크플로우의 플레이북에서 사용할 extra_vars라는 변수를 지정합니다. 설문 조사 변수는 워크플로우 작업 템플릿에 정의된 extra_vars와 결합되고, 워크플로우 작업 extra_vars에 저장됩니다. 워크플로우 작업의 extra_vars는 워크플로우 내에서 작업을 생성할 때 작업 템플릿 변수와 결합됩니다."
+
+#: ../../source/workflows.rst:83
+msgid "Workflows utilize the same behavior (hierarchy) of variable precedence as Job Templates with the exception of three additional variables. Refer to the Variable Precedence Hierarchy in the :ref:`ug_jobtemplates_extravars` section of the Job Templates chapter of this guide. The three additional variables include:"
+msgstr "워크플로우는 세 가지 추가 변수를 제외하고 작업 템플릿과 동일한 변수 우선순위 동작(계층 구조)을 사용합니다. 이 가이드의 작업 템플릿 장, :ref:`ug_jobtemplates_extravars` 섹션에서 변수 우선순위 계층 구조를 참조하십시오. 세 가지 추가 변수는 다음과 같습니다."
+
+#: ../../source/workflows.rst:87
+msgid "Workflows included in a workflow will follow the same variable precedence - they will only inherit variables if they are specifically prompted for, or defined as part of a survey."
+msgstr "하나의 워크플로우에 포함된 여러 워크플로우는 동일한 변수 우선순위를 따르고, 특별히 요청하거나 설문 조사의 일부로 정의한 경우에만 변수를 상속합니다."
+
+#: ../../source/workflows.rst:89
+msgid "In addition to the workflow ``extra_vars``, jobs and workflows ran as part of a workflow can inherit variables in the artifacts dictionary of a parent job in the workflow (also combining with ancestors further upstream in its branch). These can be defined by the ``set_stats`` `Ansible module`_."
+msgstr "워크플로우 ``extra_vars`` 외에도 워크플로우의 일부로 실행된 작업과 워크플로우는 워크플로우의 상위 작업 아티팩트 사전에 있는 변수를 상속할 수 있습니다(해당 분기에서 더 업스트림에 있는 상위와도 결합). 해당 사항은 ``set_stats`` `Ansible module`_로 정의할 수 있습니다."
+
+#: ../../source/workflows.rst:93
+msgid "If you use the ``set_stats`` module in your playbook, you can produce results that can be consumed downstream by another job, for example, notify users as to the success or failure of an integration run. In this example, there are two playbooks that can be combined in a workflow to exercise artifact passing:"
+msgstr "플레이북에서 ``set_stats`` 모듈을 사용하면 다른 작업에서 다운스트림으로 사용할 수 있는 결과를 생성할 수 있습니다(예: 사용자에게 통합 실행의 성공 또는 실패에 대해 알림). 이 예제에는 아티팩트를 전달하도록 워크플로우에 결합할 수 있는 두 개의 플레이북이 있습니다."
+
+#: ../../source/workflows.rst:95
+msgid "**invoke_set_stats.yml**: first playbook in the workflow:"
+msgstr "**invoke_set_stats.yml**: 워크플로우의 첫 번째 플레이북"
+
+#: ../../source/workflows.rst:112
+msgid "**use_set_stats.yml**: second playbook in the workflow"
+msgstr "**use_set_stats.yml**: 워크플로우의 두 번째 플레이북"
+
+#: ../../source/workflows.rst:130
+msgid "The ``set_stats`` module processes this workflow as follows:"
+msgstr "``set_stats`` 모듈은 이 워크플로우를 다음과 같이 처리합니다."
+
+#: ../../source/workflows.rst:132
+msgid "The contents of an integration results (example: integration_results.txt below) is first uploaded to the web."
+msgstr "통합 결과 내용(예: 아래의 integration_results.txt)은 먼저 웹에 업로드됩니다."
+
+#: ../../source/workflows.rst:138
+msgid "Through the **invoke_set_stats** playbook, ``set_stats`` is then invoked to artifact the URL of the uploaded integration_results.txt into the Ansible variable \"integration_results_url\"."
+msgstr "그러면 **invoke_set_stats** 플레이북을 통해 ``set_stats``가 호출되어 업로드된 integration_results.txt의 URL이 Ansible 변수 \"integration_results_url\"로 전환됩니다."
+
+#: ../../source/workflows.rst:139
+msgid "The second playbook in the workflow consumes the Ansible extra variable \"integration_results_url\". It calls out to the web using the ``uri`` module to get the contents of the file uploaded by the previous Job Template Job. Then, it simply prints out the contents of the gotten file."
+msgstr "워크플로우의 두 번째 플레이북에서는 Ansible 추가 변수 \"integration_results_url\"을 사용합니다. ``uri`` 모듈로 웹을 호출하여 이전 작업 템플릿 작업에서 업로드한 파일의 내용을 가져옵니다. 그런 다음 가져온 파일의 내용을 간단히 출력합니다."
+
+#: ../../source/workflows.rst:143
+msgid "For artifacts to work, keep the default setting, ``per_host = False`` in the ``set_stats`` module."
+msgstr "아티팩트가 작동하도록 하려면 ``set_stats`` 모듈을 기본 설정 ``per_host = False``로 유지하십시오."
+
+#: ../../source/workflows.rst:147
+msgid "Workflow States"
+msgstr "워크플로우 상태"
+
+#: ../../source/workflows.rst:149
+msgid "The workflow job can have the following states (no Failed state):"
+msgstr "워크플로우 작업에는 다음과 같은 상태가 있을 수 있습니다(실패 상태 없음)."
+
+#: ../../source/workflows.rst:151
+msgid "Waiting"
+msgstr "대기 중"
+
+#: ../../source/workflows.rst:153
+msgid "Running"
+msgstr "실행 중"
+
+#: ../../source/workflows.rst:155
+msgid "Success (finished)"
+msgstr "성공(완료)"
+
+#: ../../source/workflows.rst:157
+msgid "Cancel"
+msgstr "취소"
+
+#: ../../source/workflows.rst:159
+msgid "Error"
+msgstr "오류"
+
+#: ../../source/workflows.rst:161
+msgid "Failed"
+msgstr "실패"
+
+#: ../../source/workflows.rst:163
+msgid "In the workflow scheme, canceling a job cancels the branch, while canceling the workflow job cancels the entire workflow."
+msgstr "워크플로우 구성에서 작업을 취소하면 분기가 취소되고, 워크플로우 작업을 취소하면 전체 워크플로우가 취소됩니다."
+
+#: ../../source/workflows.rst:167
+msgid "Role-Based Access Controls"
+msgstr "역할 기반 액세스 제어"
+
+#: ../../source/workflows.rst:171
+msgid "To edit and delete a workflow job template, you must have the admin role. To create a workflow job template, you must be an organization admin or a system admin. However, you can run a workflow job template that contains job templates you don't have permissions for. Similar to projects, organization admins can create a blank workflow and then grant an 'admin_role' to a low-level user, after which they can go about delegating more access and building the graph. You must have execute access to a job template to add it to a workflow job template."
+msgstr "워크플로우 작업 템플릿을 편집하고 삭제하려면 관리자 역할이 있어야 합니다. 워크플로우 작업 템플릿을 생성하려면 조직 관리자 또는 시스템 관리자여야 합니다. 그러나 권한이 없는 작업 템플릿이 포함된 워크플로우 작업 템플릿을 실행할 수 있습니다. 프로젝트와 유사하게 조직 관리자는 빈 워크플로우를 생성한 다음 하위 수준 사용자에게 'admin_role'을 부여한 후 더 많은 액세스 권한을 위임하고 그래프를 빌드할 수 있습니다. 작업 템플릿을 워크플로우 작업 템플릿에 추가하려면 작업 템플릿에 대한 실행 액세스 권한이 있어야 합니다."
+
+#: ../../source/workflows.rst:173
+msgid "Other tasks such as the ability to make a duplicate copy and re-launch a workflow can also be performed, depending on what kinds of permissions are granted to a particular user. Generally, you should have permissions to all the resources used in a workflow (like job templates) before relaunching or making a copy."
+msgstr "특정 사용자에게 부여된 권한 종류에 따라 워크플로우 복제 및 다시 시작 기능과 같은 기타 작업도 수행할 수 있습니다. 일반적으로 다시 시작하거나 복사하려면 워크플로우에서 사용되는 모든 리소스(예: 작업 템플릿)에 대한 권한이 있어야 합니다."
+
+#: ../../source/workflows.rst:177
+msgid "For more information on performing the tasks described in this section, refer to the :ref:`Administration Guide <administration:ag_start>`."
+msgstr "이 섹션에 설명된 작업을 수행하는 방법에 대한 자세한 내용은 :ref:`Administration Guide <administration:ag_start>`를 참조하십시오."
+

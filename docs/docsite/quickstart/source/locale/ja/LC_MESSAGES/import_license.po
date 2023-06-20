@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/import_license.rst:2
+msgid "Import a Subscription"
+msgstr "サブスクリプションのインポート"
+
+#: ../../../common/source/import_license.rst:3
+msgid "Available subscriptions or a subscription manifest authorize the use of the automation controller. To obtain your automation controller subscription, you can either:"
+msgstr "利用可能なサブスクリプションまたはサブスクリプションマニフェストは、自動コントローラーの使用を許可します。自動コントローラーを取得するには、次のいずれかを実行できます。"
+
+#: ../../../common/source/import_license.rst:5
+msgid "Provide your Red Hat or Satellite username and password on the license page."
+msgstr "ライセンスページに、Red Hat または Satellite のユーザー名およびパスワードを指定します。"
+
+#: ../../../common/source/import_license.rst:6
+msgid "Obtain a subscriptions manifest from your Subscription Allocations page on the customer portal. See :ref:`obtain_sub_manifest` in the |atu| for more detail."
+msgstr "カスタマーポータルのサブスクリプション割り当てページからサブスクリプションマニフェストを取得します。詳細は、|atu| の :ref:`obtain_sub_manifest` を参照してください。"
+
+#: ../../../common/source/import_license.rst:8
+msgid "If you **have** a |rhaap| subscription, use your Red Hat customer credentials when you launch the controller to access your subscription information (see instructions below)."
+msgstr "|rhaap| サブスクリプションを**お持ちの場合** は、コントローラーを起動するときに Red Hat の顧客認証情報を使用してサブスクリプション情報にアクセスします (以下の手順を参照)。"
+
+#: ../../../common/source/import_license.rst:10
+msgid "If you **do not** have a |rhaap| subscription, you can request a trial subscription `here <https://www.redhat.com/en/technologies/management/ansible/try-it>`_ or click **Request Subscription** and follow the instructions to request one."
+msgstr "|rhaap| サブスクリプションを**お持ちでない場合** は、`here <https://www.redhat.com/en/technologies/management/ansible/try-it>`_ から試用版サブスクリプションを要求するか、**サブスクリプションの要求** をクリックして指示に従って要求します。"
+
+#: ../../../common/source/import_license.rst:12
+msgid "**Disconnected environments with Satellite** will be able to use the login flow on vm-based installations if they have configured subscription manager on the controller instance to connect to their Satellite instance. Recommended workarounds for disconnected environments **without Satellite** include [1] downloading a manifest from access.redhat.com in a connected environment, then uploading it to the disconnected controller instance, or [2] connecting to the Internet through a proxy server."
+msgstr "**Satellite を使用した非接続環境** は、Satellite インスタンスに接続するためにコントローラーインスタンス上でサブスクリプションマネージャーを設定している場合は、仮想マシンベースのインストールのログインフローを使用できます。**Satellite を使用しない** 非接続環境に対する推奨回避策は、[1] 接続環境で access.redhat.com からマニフェストをダウンロードして、非接続環境のコントローラーインスタンスにアップロードするか、[2] プロキシーサーバー経由でインターネットに接続することです。"
+
+#: ../../../common/source/import_license.rst:14
+msgid "In order to use a disconnected environment, it is necessary to have a valid |at| entitlement attached to your Satellite organization's manifest. This can be confirmed by using ``hammer subscription list \\--organization <org_name>``."
+msgstr "非接続環境を使用するには、有効な |at| エンタイトルメントを Satellite 組織のマニフェストにアタッチする必要があります。これは、``hammer subscription list \\--organization <org_name>`` を使用して確認できます。"
+
+#: ../../../common/source/import_license.rst:16
+msgid "If you have issues with the subscription you have received, please contact your Sales Account Manager or Red Hat Customer Service at https://access.redhat.com/support/contact/customerService/."
+msgstr "受け取ったサブスクリプションに問題がある場合は、セールスアカウントマネージャーまたはRed Hat カスタマーサービス (https://access.redhat.com/support/contact/customerService/.) までご連絡ください。"
+
+#: ../../../common/source/import_license.rst:18
+msgid "When the controller launches for the first time, the Subscription screen automatically displays."
+msgstr "コントローラーが初めて起動すると、サブスクリプション画面が自動的に表示されます。"
+
+#: ../../../common/source/import_license.rst:20
+msgid "|no license|"
+msgstr "|no license|"
+
+#: ../../../common/source/import_license.rst:26
+msgid "By default, the option to retrieve and import your subscription is to upload a subscription manifest you generate from https://access.redhat.com/management/subscription_allocations. See :ref:`obtain_sub_manifest` for more detail. Once you have a subscription manifest, you can upload it by browsing to the location where the file is saved (the subscription manifest is the complete .zip file, not its component parts)."
+msgstr "デフォルトでは、サブスクリプションを取得してインポートするオプションは https://access.redhat.com/management/subscription_allocations から生成したサブスクリプションマニフェストをアップロードします。詳細は「:ref:`obtain_sub_manifest`」を参照してください。サブスクリプションマニフェストを取得したら、ファイルの保存先 (サブスクリプションマニフェストは完全な .zip ファイルであり、コンポーネントではありません) を参照してアップロードできます。"
+
+#: ../../../common/source/import_license.rst:28
+msgid "If the **Browse** button in the subscription manifest option is grayed-out, clear the username and password fields to enable the **Browse** button."
+msgstr "サブスクリプションマニフェストオプションの **参照** ボタンがグレー表示になっている場合は、ユーザー名とパスワードのフィールドを削除して **参照** ボタンを有効にします。"
+
+#: ../../../common/source/import_license.rst:30
+msgid "Alternatively, you can choose the option to enter your Red Hat customer credentials using your username and password. Use your Satellite username/password if your controller cluster nodes are registered to Satellite via Subscription Manager. Once you entered your credentials, click **Get Subscriptions**."
+msgstr "または、ユーザー名とパスワードを使用して Red Hat カスタマー認証情報を入力するオプションを選択できます。コントローラークラスターノードが Subscription Manager を使用して Satellite に登録されている場合は、Satellite ユーザー名/パスワードを使用します。認証情報を入力したら、**サブスクリプションの取得** をクリックします。"
+
+#: ../../../common/source/import_license.rst:33
+msgid "The subscription metadata is then retrieved from the RHSM/Satellite API, or from the manifest provided."
+msgstr "次に、サブスクリプションメタデータは RHSM/Satellite API または指定したマニフェストから取得されます。"
+
+#: ../../../common/source/import_license.rst:35
+msgid "If it is a subscription manifest, and multiple subscription counts were applied in a single installation, the controller will combine the counts but use the earliest expiration date as the expiry (at which point you will need to refresh your subscription)."
+msgstr "サブスクリプションマニフェストで、1 つのインストールに複数のサブスクリプション数が適用されている場合、コントローラーはその数を結合しますが、最も早い有効期限を有効期限日 (サブスクリプションの更新が必要となる日) と使用します。"
+
+#: ../../../common/source/import_license.rst:37
+msgid "If you entered your credential information (username/password), the controller retrieves your configured subscription service. Then it prompts you to choose the subscription you want to run (the example below shows multiple subscriptions) and entitles the controller with that metadata. You can log in over time and retrieve new subscriptions if you have renewed."
+msgstr "認証情報 (ユーザー名/パスワード) を入力すると、コントローラーは、設定したサブスクリプションサービスを取得します。これにより、実行するサブスクリプション (以下の例では複数のサブスクリプションがあります) を選択して、そのメタデータでコントローラーのエンタイトルを行います。サブスクリプションを更新した場合は、新しいサブスクリプションを取得できます。"
+
+#: ../../../common/source/import_license.rst:39
+msgid "When your subscription expires (you can check this in the Subscription details of the Subscription settings window), you will need to renew it in the controller by one of these two methods."
+msgstr "サブスクリプションの期限が切れると (サブスクリプション設定ウィンドウのサブスクリプションの詳細で確認可能)、2 つの方法のいずれかでコントローラーで更新する必要があります。"
+
+#: ../../../common/source/import_license.rst:43
+msgid "If you encounter the following error message, you will need the proper permissions required for the Satellite user with which the controller admin uses to apply a subscription."
+msgstr "以下のエラーメッセージが表示される場合は、コントローラー管理者がサブスクリプションを適用するために使用する Satellite ユーザーに適したパーミッションが必要です。"
+
+#: ../../../common/source/import_license.rst:47
+msgid "The Satellite username/password is used to query the Satellite API for existing subscriptions. From the Satellite API, the automation controller gets back some metadata about those subscriptions, then filter through to find valid subscriptions that you could apply, which are then displayed as valid subscription options in the UI."
+msgstr "Satellite のユーザー名/パスワードを使用して、既存のサブスクリプションの Satellite API に対してクエリーを行います。Satellite API から、自動化コントローラーはこれらのサブスクリプションに関するメタデータを取得し、適用できる有効なサブスクリプションを探します。これは、UI で有効なサブスクリプションオプションとして表示されます。"
+
+#: ../../../common/source/import_license.rst:49
+msgid "The following Satellite roles grant proper access:"
+msgstr "以下の Satellite ロールは、適切なアクセスを付与します。"
+
+#: ../../../common/source/import_license.rst:51
+msgid "Custom with ``view_subscriptions`` and ``view_organizations`` filter"
+msgstr "``view_subscriptions`` フィルターおよび ``view_organizations`` フィルターを使用した Custom"
+
+#: ../../../common/source/import_license.rst:52
+msgid "Viewer"
+msgstr "Viewer"
+
+#: ../../../common/source/import_license.rst:53
+msgid "Administrator"
+msgstr "Administrator"
+
+#: ../../../common/source/import_license.rst:54
+msgid "Organization Admin"
+msgstr "Organization Admin"
+
+#: ../../../common/source/import_license.rst:55
+msgid "Manager"
+msgstr "Manager"
+
+#: ../../../common/source/import_license.rst:57
+msgid "As the *Custom* role is the most restrictive of these, this is the recommend role to use for your controller integration. Refer to the `Satellite documentation <https://access.redhat.com/documentation/en-us/red_hat_satellite/6.8/html/administering_red_hat_satellite/chap-Red_Hat_Satellite-Administering_Red_Hat_Satellite-Users_and_Roles#sect-Red_Hat_Satellite-Administering_Red_Hat_Satellite-Users_and_Roles-Creating_and_Managing_Roles>`_ on managing users and roles for more detail."
+msgstr "*Custom* ロールはこれらよりも制限されているため、コントローラーの統合に使用することが推奨されるロールです。ユーザーおよびロールの管理の詳細は、`Satellite documentation <https://access.redhat.com/documentation/en-us/red_hat_satellite/6.8/html/administering_red_hat_satellite/chap-Red_Hat_Satellite-Administering_Red_Hat_Satellite-Users_and_Roles#sect-Red_Hat_Satellite-Administering_Red_Hat_Satellite-Users_and_Roles-Creating_and_Managing_Roles>`_ を参照してください。"
+
+#: ../../../common/source/import_license.rst:59
+msgid "The System Administrator role is not equivalent to the Administrator user checkbox, and will not provide sufficient permissions to access the subscriptions API page."
+msgstr "System Administrator ロールは Administrator ユーザーのチェックボックスと同等ではないため、サブスクリプション API ページにアクセスするのに十分なパーミッションは提供されません。"
+
+#: ../../../common/source/import_license.rst:61
+msgid "Click **Next** to proceed to **Tracking and Insights**. Tracking and insights collect data to help Red Hat improve the product by delivering you a much better user experience. For more information about data collection, refer to :ref:`usability_data_collection`. This option is checked by default, but you may opt out of any of the following:"
+msgstr "**次へ** をクリックして **トラッキングおよび Insights** に進みます。データのトラッキングおよび insights の収集データが得られ、より優れたユーザーエクスペリエンスを提供することで、Red Hat 製品を改善するのに役立ちます。データ収集に関する詳細は、:ref:`usability_data_collection` を参照してください。このオプションはデフォルトでは選択されますが、以下の方法で選択解除できます。"
+
+#: ../../../common/source/import_license.rst:63
+msgid "**User analytics** collects data from the controller User Interface."
+msgstr "**ユーザーアナリティクス**: コントローラーユーザーインターフェースからデータを収集します。"
+
+#: ../../../common/source/import_license.rst:64
+msgid "**Insights Analytics** provides a high level analysis of your automation with |at|, which is used to help you identify trends and anomalous use of the controller. For opt-in of |AA| to have any effect, your instance of |at| **must** be running on |rhel|. See instructions described in the :ref:`user_data_insights` section. If you select to opt-in for this option, the screen expands and prompts for a username and password to enable Insights, if applicable."
+msgstr "**Insights アナリティクス** では、|at| で自動化の高レベルの分析を行います。これは、コントローラーの傾向および異常な使用を特定するのに役立ちます。|AA| を選択して何らかの効果をもたらすには、|rhel| で |at| のインスタンスを実行する **必要があります**。「:ref:`user_data_insights`」セクションで説明されている手順を参照してください。このオプションを選択すると、画面が拡張し、(該当する場合は) Insights を有効にするユーザー名およびパスワードの入力が要求されます。"
+
+#: ../../../common/source/import_license.rst:68
+msgid "You may change your analytics data collection preferences at any time, as described in the :ref:`usability_data_collection` section."
+msgstr ":ref:`usability_data_collection` セクションで説明するように、分析データ収集設定はいつでも変更することができます。"
+
+#: ../../../common/source/import_license.rst:70
+msgid "After you have specified your tracking and insights preferences, click **Next** to proceed to the End User Agreement."
+msgstr "トラッキングおよび Insights の設定を指定したら、**次へ** をクリックして使用許諾契約に進みます。"
+
+#: ../../../common/source/import_license.rst:72
+msgid "Review and check the **I agree to the End User License Agreement** checkbox and click **Submit**."
+msgstr "使用許諾契約書を確認し、**使用許諾契約書に同意します。** チェックボックスを選択し、**送信** をクリックします。"
+
+#: ../../../common/source/import_license.rst:74
+msgid "Once your subscription has been accepted, the controller briefly displays the subscription details and navigates you to the Dashboard of the |at| interface. For later reference, you can return to this screen by clicking **Settings** from the left navigation bar and select **Subscription settings** from the Subscription option."
+msgstr "サブスクリプションが承認されると、コントローラーによりサブスクリプションの詳細が簡潔に表示され、|at| インターフェースの Dashboard に移動します。後で参照する場合は、左のナビゲーションバーから **設定** をクリックして、サブスクリプションオプションから **サブスクリプションの設定** を選択します。"
+
+#: ../../../common/source/import_license.rst:77
+msgid "|license accepted|"
+msgstr "|license accepted|"
+
+#: ../../../common/source/import_license.rst:81
+msgid "A status of *Compliant* indicates your subscription is in compliance with the number of hosts you have automated within your subscription count. Otherwise, your status will show an *Out of Compliance* status, indicating you have exceeded the number of hosts in your subscription."
+msgstr "*Compliant* のステータスは、サブスクリプションが、サブスクリプションカウント内で自動化したホストの数に準拠していることを示します。それ以外の場合、サブスクリプション内のホスト数を超えていることを示す、*Out of Compliance* がステータスに表示されます。"
+

@@ -1,0 +1,382 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Administration Guide 3.7.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-07 07:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../source/openshift_configuration.rst:4
+msgid "OpenShift Deployment and Configuration"
+msgstr "OpenShift のデプロイメントおよび設定"
+
+#: ../../source/openshift_configuration.rst:10
+msgid "|at| supports container-based clusters running on OpenShift. This section provides a high-level overview of OpenShift and controller Pod configuration, notably the following:"
+msgstr "|at| は、OpenShift 上でのコンテナーベースのクラスター実行をサポートするようになりました。このセクションでは、特に以下の内容を含めて、OpenShift とコントローラー Pod 設定について概説します。"
+
+#: ../../source/openshift_configuration.rst:12
+msgid "The main differences in the standard controller vs OpenShift controller (i.e., auto-removal of instances)"
+msgstr "標準のコントローラー vs OpenShift コントローラー (インスタンスの自動削除) の主な相違点"
+
+#: ../../source/openshift_configuration.rst:13
+msgid "The controller deploys as a single pod first and can scale up after migrations"
+msgstr "コントローラーは先に単一の Pod をデプロイしてから移行後にスケールアップできること"
+
+#: ../../source/openshift_configuration.rst:14
+msgid "Migrations run in the task-runner pod"
+msgstr "移行はタスクランナー Pod で実行されること"
+
+#: ../../source/openshift_configuration.rst:20
+msgid "Controller and OpenShift Basics"
+msgstr "コントローラーおよび OpenShift の基本"
+
+#: ../../source/openshift_configuration.rst:22
+msgid "The controller OpenShift documentation assumes an understanding of how to use OpenShift at an administrative level and should include some experience maintaining container based infrastructure. The differences are:"
+msgstr "コントローラー OpenShift ドキュメントは、管理者レベルでの OpenShift の使用方法を理解し、コンテナーベースのインフラストラクチャーの管理経験があることを前提としています。コントローラーと OpenShift の相違点は以下のとおりです。"
+
+#: ../../source/openshift_configuration.rst:24
+msgid "Standalone controller and OpenShift controller use different installers. Download the OpenShift installer from `access.redhat.com <https://access.redhat.com>`_."
+msgstr "スタンドアロンコントローラーと OpenShift コントローラーは、異なるインストーラーを使用します。`access.redhat.com <https://access.redhat.com>`_ から OpenShift インストーラーをダウンロードします。"
+
+#: ../../source/openshift_configuration.rst:25
+msgid "The controller links to OpenShift itself in order to facilitate scaling up and down without requiring you to manually execute the playbook (to bring up new nodes) or run management commands in the shell (to take nodes offline purposefully). You can configure the controller Deployment once the system is up to add more or remove extra controller Pods."
+msgstr "コントローラーは OpenShift 自体にリンクしており、手動で Playbook を実行したり (新しいノードを起動する)、シェルで管理コマンドを実行したり (ノードを意図的にオフラインにする) せずに、スケールアップとスケールダウンを容易にします。システムが起動すると、コントローラーの Deployment を設定して、追加のコントローラー Pod を追加または削除できます。"
+
+#: ../../source/openshift_configuration.rst:26
+msgid "The controller pods are configured without HTTPs and the installer will configure an OpenShift Route which will handle SSL termination and distribute requests to all controller Pods. This is somewhat of an internal OpenShift load balancer."
+msgstr "コントローラー Pod は、HTTP なしで設定され、インストーラーで、全コントローラー Pod への SSL の中断および分散要求を処理する OpenShift Route を設定します。これは、OpenShift ロードバランサーに似ています。"
+
+#: ../../source/openshift_configuration.rst:27
+msgid "Database migrations run as part of the process of bringing up the task executor container within the pod (see diagram) and thus will likely happen after the playbook has completed."
+msgstr "データベースの移行は、タスクエグゼキューターのコンテナーを Pod 内に起動するプロセスの一部として実行されるので、Playbook が完了してから実行される可能性が高いです。"
+
+#: ../../source/openshift_configuration.rst:28
+msgid "Capacity / Performance Detection (see the section on :ref:`ag_os_request_planning`)."
+msgstr "容量/パフォーマンス検出 (:ref:`ag_os_request_planning` のセクションを参照)。"
+
+#: ../../source/openshift_configuration.rst:29
+msgid "Isolated instances are not supported in conjunction with running |at| in OpenShift."
+msgstr "OpenShift での分離インスタンスと |at| の実行の組み合わせはサポートされません。"
+
+#: ../../source/openshift_configuration.rst:33
+msgid "Configuration Options"
+msgstr "設定オプション"
+
+#: ../../source/openshift_configuration.rst:35
+msgid "**Requirements**"
+msgstr "**要件**"
+
+#: ../../source/openshift_configuration.rst:37
+msgid "Latest supported OpenShift versions 3.x and 4.x (see `Red Hat Container Registry Authentication <https://access.redhat.com/RegistryAuthentication>`_ for detail)"
+msgstr "サポートされている最新の OpenShift バージョン 3.x および 4.x (詳細は `Red Hat Container Registry Authentication <https://access.redhat.com/RegistryAuthentication>`_ を参照)"
+
+#: ../../source/openshift_configuration.rst:39
+msgid "Per pod default resource requirements:"
+msgstr "Pod ごとのデフォルトのリソース要件"
+
+#: ../../source/openshift_configuration.rst:39
+msgid "6GB RAM"
+msgstr "メモリー 6GB"
+
+#: ../../source/openshift_configuration.rst:40
+msgid "3CPU cores"
+msgstr "CPU コア 3 個"
+
+#: ../../source/openshift_configuration.rst:41
+msgid "Openshift command-line tool (oc) on the machine running the installer"
+msgstr "インストーラーを実行するマシンに設定した Openshift コマンドラインツール (oc)"
+
+#: ../../source/openshift_configuration.rst:42
+msgid "A setup and running Openshift cluster"
+msgstr "設定済みおよび実行中の OpenShift クラスター"
+
+#: ../../source/openshift_configuration.rst:43
+msgid "Admin privileges for the account running the openshift installer (``cluster-admin`` role is required)"
+msgstr "OpenShift インストーラーを実行するアカウントの管理者権限 (``cluster-admin`` ロールが必要です)"
+
+#: ../../source/openshift_configuration.rst:47
+msgid "Basic Configuration"
+msgstr "基本設定"
+
+#: ../../source/openshift_configuration.rst:49
+msgid "An OpenShift install requires the following parameters to be set:"
+msgstr "OpenShift インストールでは、以下のパラメーターを設定する必要があります。"
+
+#: ../../source/openshift_configuration.rst:51
+msgid "``openshift_host``"
+msgstr "``openshift_host``"
+
+#: ../../source/openshift_configuration.rst:52
+msgid "``openshift_project``"
+msgstr "``openshift_project``"
+
+#: ../../source/openshift_configuration.rst:53
+msgid "``openshift_user``"
+msgstr "``openshift_user``"
+
+#: ../../source/openshift_configuration.rst:54
+msgid "``openshift_password``"
+msgstr "``openshift_password``"
+
+#: ../../source/openshift_configuration.rst:55
+msgid "``admin_password``"
+msgstr "``admin_password``"
+
+#: ../../source/openshift_configuration.rst:56
+msgid "``secret_key``"
+msgstr "``secret_key``"
+
+#: ../../source/openshift_configuration.rst:57
+msgid "``pg_username``"
+msgstr "``pg_username``"
+
+#: ../../source/openshift_configuration.rst:58
+msgid "``pg_password``"
+msgstr "``pg_password``"
+
+#: ../../source/openshift_configuration.rst:61
+msgid "For OpenShift install method, the settings are the same as the :ref:`traditional controller install method <installandreference:traditional_tower_install>`, except:"
+msgstr "OpenShift インストール方法の場合には、設定は「:ref:`traditional controller install method <installandreference:traditional_tower_install>`」と同じですが、以下の点が異なります。"
+
+#: ../../source/openshift_configuration.rst:63
+msgid "SSL termination for the controller UI and API is handled through the OpenShift service object. The certificates used here will be generated and signed by the OpenShift internal CA."
+msgstr "コントローラー UI および API の SSL ターミネーションは、OpenShift サービスオブジェクトを使用して処理されます。ここで使用される証明書は、OpenShift の内部 CA によって生成および署名されます。"
+
+#: ../../source/openshift_configuration.rst:64
+msgid "The containerized PostgreSQL pod optionally deployed to OpenShift installs cannot be configured for SSL. If you want SSL-enabled PostgreSQL in an OpenShift environment, you must deploy your PostgreSQL server separately, and configure the controller nodes (using ``pg_sslmode``)."
+msgstr "OpenShift インストールに必要に応じてデプロイされる、コンテナー化された PostgreSQL Pod は SSL 用に設定することはできません。OpenShift 環境で SSL 対応の PostgreSQL が必要な場合は、PostgreSQL サーバーを個別にデプロイし、コントローラーノードを設定する必要があります (``pg_sslmode`` を使用)。"
+
+#: ../../source/openshift_configuration.rst:66
+msgid "The Project will be created if it doesn’t exist but the user given there should have either:"
+msgstr "プロジェクトが存在しない場合には作成されますが、プロジェクトのユーザーには以下が必要です。"
+
+#: ../../source/openshift_configuration.rst:68
+msgid "The ability to create the project and populate it with controller-needed pods"
+msgstr "プロジェクトを作成して、コントローラーが必要とする Pod を使用してデータを投入する機能"
+
+#: ../../source/openshift_configuration.rst:70
+msgid "**OR**"
+msgstr "**または**"
+
+#: ../../source/openshift_configuration.rst:72
+msgid "Access to create whatever pods are needed in the project, if it already exists"
+msgstr "プロジェクトが存在する場合には、プロジェクトで必要な Pod を作成する権限"
+
+#: ../../source/openshift_configuration.rst:74
+msgid "The password should be given on the command line as shown when executing the installer."
+msgstr "パスワードは、インストーラーを実行時に示されるようにコマンドで指定する必要があります。"
+
+#: ../../source/openshift_configuration.rst:76
+msgid "The oc command line client should be installed and available and the client version should match the server version."
+msgstr "oc コマンドラインのクライアントをインストールして利用できるようにし、クライアントのバージョンとサーバーのバージョンが一致するようにしてください。"
+
+#: ../../source/openshift_configuration.rst:78
+msgid "The secret-key, admin password, and postgresql username and password should be populated in the inventory file prior to running the installer."
+msgstr "シークレットキー、管理者パスワード、postgresql のユーザー名とパスワードは、インストーラーを実行する前にインベントリーファイルに事前に設定しておく必要があります。"
+
+#: ../../source/openshift_configuration.rst:86
+msgid "The controller uses Bubblewrap (from Project Atomic) as a mechanism to give the (relatively) unprivileged awx user the ability to isolate Ansible processes from each other. There are certain privileges that need to be granted to the container that necessitates running the controller web and task containers in privileged mode."
+msgstr "コントローラーは、(比較的) 権限のない awx ユーザーに、Ansible プロセスをそれぞれ分離する機能を提供するメカニズムとして、(Project Atomic からの) Bubblewrap を使用します。権限ありのモードで、コントローラー Web およびタスクコンテナーを実行する必要のあるコンテナーに付与する必要のある権限がいくつかあります。"
+
+#: ../../source/openshift_configuration.rst:89
+msgid "The default type for the controller web service is ``NodePort``. To customize this, set ``kubernetes_web_svc_type`` to ``ClusterIP`` or ``LoadBalancer`` in your inventory file, or pass it as an extra var."
+msgstr "コントローラー Web サービスのデフォルトタイプは ``NodePort`` です。これをカスタマイズするには、インベントリーファイルの ``kubernetes_web_svc_type`` を ``ClusterIP`` または ``LoadBalancer`` に設定するか、追加の変数として渡します。"
+
+#: ../../source/openshift_configuration.rst:95
+msgid "Resource Requests and Request Planning"
+msgstr "リソース要求および要求プラン"
+
+#: ../../source/openshift_configuration.rst:97
+msgid "Normally the controller examines the system that it runs on in order to determine what its own capacity is for running Jobs and performing background requests. On OpenShift this works differently since pods and containers will tend to coexist on systems. Pods can also migrate between hosts depending on current conditions (for instance, if the OpenShift cluster is being upgraded or is experiencing an outage)."
+msgstr "通常、コントローラーは、ジョブの実行や、バックグラウンドの要求実行に必要なキャパシティーを判断するために、コントローラーが稼働するシステムを検証します。OpenShift では、Pod とコンテナーがシステムで共存する傾向にあるため、仕組みが異なります。Pod は、現在の状況 (たとえば、OpenShift クラスターがアップグレードされる場合や、停止している場合) によってホスト間で移行することも可能です。"
+
+#: ../../source/openshift_configuration.rst:99
+msgid "It’s common for Pods and Containers to Request the resources that they need. OpenShift then uses this information to decide Where things run (or even if they can run)."
+msgstr "Pod とコンテナーが必要なリソースを要求するのは一般的です。OpenShift がこの情報を使用して、どこで何を実行するか (または実行できるか) を決定します。"
+
+#: ../../source/openshift_configuration.rst:101
+msgid "The controller will also use this information to configure its own capacity for how many (and the size of) individual jobs can be run."
+msgstr "コントローラーは、この情報を使用して、個別のジョブを実行可能な数 (およびサイズ) に合わせて、独自の容量を設定します。"
+
+#: ../../source/openshift_configuration.rst:103
+msgid "Each controller pod is made up of 3 containers (see :ref:`diagram <ag_openshift_configuration>`), each container is configured with a conservative default, but taken all together they can be somewhat substantial. These defaults are also configurable but it’s helpful to know what effect that has on the controller cluster."
+msgstr "コントローラー Pod はそれぞれコンテナー 3 個で形成されます (「:ref:`diagram <ag_openshift_configuration>`」参照)。各コンテナーは、標準のデフォルト値で設定されますが、すべてを統合するとかなり大きくなる可能性があります。これらのデフォルト値は設定可能ですが、コントローラークラスターに与える影響を把握しておくと便利です。"
+
+#: ../../source/openshift_configuration.rst:105
+msgid "The two most important values control the CPU and memory allocation for the task execution container. This container is the one that is actually responsible for launching jobs, as such these values directly control how many and what size jobs can run. The settings can be changed in the inventory and here are the default values:"
+msgstr "最も重要な値は、タスク実行コンテナーの CPU とメモリー割り当ての 2 つです。このコンテナーが、実際にジョブの起動を担当するので、これらの値が実行可能なジョブ数やサイズを直接制御します。これらの設定は、インベントリーで変更できます。以下にデフォルト値を紹介します。"
+
+#: ../../source/openshift_configuration.rst:111
+msgid "This is the amount of CPU to dedicate, the value of 1500 refers to how OpenShift itself views CPU requests (see https://docs.OpenShift.com/container-platform/3.9/dev_guide/compute_resources.html#dev-cpu-requests) (for value meanings see: https://docs.OpenShift.com/container-platform/3.9/dev_guide/compute_resources.html#dev-compute-resources)"
+msgstr "これは、専用に割り当てる CPU の数量です。1500 の値は、OpenShift 自体が CPU の要求をどのように評価するか (https://docs.OpenShift.com/container-platform/3.9/dev_guide/compute_resources.html#dev-cpu-requests 参照) を指します。値の意味は「https://docs.OpenShift.com/container-platform/3.9/dev_guide/compute_resources.html#dev-compute-resources 」を参照してください。"
+
+#: ../../source/openshift_configuration.rst:113
+msgid "**1500** is 1500 millicores which translates to roughly 1.5 CPU Cores."
+msgstr "**1500** は 1500 ミリコアで、CPU コア約 1.5 個分になります。"
+
+#: ../../source/openshift_configuration.rst:115
+msgid "This value is used to configure the controller capacity in the following way:"
+msgstr "この値は以下の方法でコントローラーの容量を設定するのに使用します。"
+
+#: ../../source/openshift_configuration.rst:121
+msgid "Which is to say that, by default, the controller in OpenShift (when configured entirely for cpu-based algorithm) can run at most **6** simultaneous forks."
+msgstr "つまり、デフォルトでは OpenShift のコントローラー (CPU ベースのアルゴリズムですべて設定された場合) は、同時に最大 **6** 個のフォークで実行可能です。"
+
+#: ../../source/openshift_configuration.rst:123
+msgid "The other value that can be tuned:"
+msgstr "調節が可能な他の値:"
+
+#: ../../source/openshift_configuration.rst:129
+msgid "This value is used to configure the controller capacity in the following way"
+msgstr "この値は以下の方法でコントローラーの容量を設定するのに使用します。"
+
+#: ../../source/openshift_configuration.rst:135
+msgid "Which is to say that, by default, the controller can run at most **40** simultaneous forks when configured for mem-based algorithm."
+msgstr "つまり、メモリーベースのアルゴリズムで設定されている場合には、デフォルトでコントローラーは同時に最大 **40** 個のフォークで稼働できます。"
+
+#: ../../source/openshift_configuration.rst:137
+msgid "For the default resource requests, see ``roles/kubernetes/defaults/main.yml``."
+msgstr "デフォルトのリソース要求については、「``roles/kubernetes/defaults/main.yml``」を参照してください。"
+
+#: ../../source/openshift_configuration.rst:139
+msgid "All together the default requested resources for a single controller pod total to:"
+msgstr "合計で、単一のコントローラーの Pod 向けの要求リソースはデフォルトで以下のようになります。"
+
+#: ../../source/openshift_configuration.rst:141
+msgid "3 CPU Cores"
+msgstr "CPU コア 3 個"
+
+#: ../../source/openshift_configuration.rst:142
+msgid "6 GB memory"
+msgstr "メモリー 6 GB"
+
+#: ../../source/openshift_configuration.rst:144
+msgid "The OpenShift instances that you want to run the controller on should at least match that. If the defaults are changed then the system will need to be updated to match the new requirements."
+msgstr "コントローラーを実行する OpenShift インスタンスは、最低でも上記に一致する必要があります。デフォルト値を変更した場合は、新しい要件に合わせてシステムを更新する必要があります。"
+
+#: ../../source/openshift_configuration.rst:148
+msgid "If other Pods are running on the OpenShift instance or the systems are too small to meet these requirements then the controller may not be able to run anywhere. Refer to :ref:`Capacity Algorithm <userguide:ug_job_concurrency>` for more detail."
+msgstr "OpenShift インストーラーで他の Pod を実行しているか、システムが小さすぎてこれらの要件を満たせない場合は、どこからもコントローラーを実行できません。詳細は、「:ref:`Capacity Algorithm <userguide:ug_job_concurrency>`」を参照してください。"
+
+#: ../../source/openshift_configuration.rst:154
+msgid "Database Configuration and Usage"
+msgstr "データベースの設定および用途"
+
+#: ../../source/openshift_configuration.rst:156
+msgid "There are two methods for configuring the the controller PostgreSQL database for the controller running in Openshift:"
+msgstr "OpenShift で実行するコントローラーにコントローラー PostgreSQL データベースを設定する方法は 2 種類あります。"
+
+#: ../../source/openshift_configuration.rst:158
+msgid "(Recommended) **Externally Managed Database** (not installed by the controller setup playbook). The PostgreSQL server is installed before the controller either inside or outside of the Openshift cluster and the controller is configured to point at it"
+msgstr "(推奨) **外部管理のデータベース** (コントローラーの設定 Playbook でインストールしていない)。PostgreSQL サーバーは、Openshift クラスター内外を問わず、コントローラーをインストールする前にインストールしてから、このサーバーを参照するようにコントローラーを設定するようにしてください。"
+
+#: ../../source/openshift_configuration.rst:159
+msgid "PostgreSQL is installed in Openshift using the Platform installer by providing a pre-created ``PersistentVolumeClaim`` and providing it the controller install playbook inventory file as ``openshift_pg_pvc_name``."
+msgstr "PostgreSQL は、事前に作成した ``PersistentVolumeClaim`` を指定し、これにコントローラーのインストール Playbook のインベントリーファイルを ``openshift_pg_pvc_name`` として指定して、Platform インストーラーで OpenShift にインストールします。"
+
+#: ../../source/openshift_configuration.rst:161
+msgid "If you are installing the controller for demo/evaluation purposes you may set ``openshift_pg_emptydir=true`` and OpenShift will create a temporary volume for use by the pod."
+msgstr "コントローラーをデモ/評価目的でインストールする場合は、``openshift_pg_emptydir=true`` を設定してください。これにより、OpenShift は Pod が使用できるように一時ボリュームを作成します。"
+
+#: ../../source/openshift_configuration.rst:165
+msgid "This volume is temporary for demo/evaluation purposes only, and will be deleted when the pod is stopped."
+msgstr "このボリュームは、デモ/評価目的のみの一時的なもので、Pod が停止されると削除されます。"
+
+#: ../../source/openshift_configuration.rst:170
+msgid "Backup and Restore"
+msgstr "バックアップとリストア"
+
+#: ../../source/openshift_configuration.rst:172
+msgid "The process for backup and restore resembles that of the traditional controller. From the root of the installer directory of the current controller version, run:"
+msgstr "バックアップとリストアのプロセスは、従来のコントローラーのプロセスに似ています。現在のコントローラーバージョンのインストーラーディレクトリーの root から以下を実行します。"
+
+#: ../../source/openshift_configuration.rst:181
+msgid "``configmap`` will be recreated from values in the inventory file. The inventory file is included in backup tarball."
+msgstr "``configmap`` は、インベントリーファイルの値から再作成されます。インベントリーファイルは、バックアップの tarball に含まれています。"
+
+#: ../../source/openshift_configuration.rst:187
+msgid "Upgrading"
+msgstr "アップグレード"
+
+#: ../../source/openshift_configuration.rst:189
+msgid "To upgrade a controller deployment in OpenShift, you need to download and use the most recent installer from `access.redhat.com <https://access.redhat.com>`_. Expect some downtime, just as |AAP| installations."
+msgstr "OpenShift でのコントローラーデプロイメントをアップグレードするには、最新のインストーラーを `access.redhat.com <https://access.redhat.com>`_ からダウンロードし、使用する必要があります。|AAP| インストールと同様に、ダウンタイムが予想します。"
+
+#: ../../source/openshift_configuration.rst:195
+msgid "Migrating"
+msgstr "移行"
+
+#: ../../source/openshift_configuration.rst:197
+msgid "The controller supports migration from traditional setup to a setup in OpenShift, as outlined below:"
+msgstr "コントローラーは、以下の説明のように従来の設定から OpenShift の設定への移行をサポートします。"
+
+#: ../../source/openshift_configuration.rst:199
+msgid "First, upgrade your controller setup to the latest release of |at| (or to version 4.0 at minimum), using the normal upgrade procedure."
+msgstr "まず、通常のアップグレード手順を使用して、従来のコントローラー設定を |at| の最新バージョン (または、最低でもバージョン 4.0) にアップグレードします。"
+
+#: ../../source/openshift_configuration.rst:200
+msgid "Download the OpenShift installer."
+msgstr "OpenShift インストーラーをダウンロードします。"
+
+#: ../../source/openshift_configuration.rst:201
+msgid "Edit the ``inventory`` file and change ``pg_username``, ``pg_password``, ``pg_database``, and ``pg_port`` to point to the upgraded controller database from your traditional controller setup."
+msgstr "``inventory`` ファイルを編集し、従来のコントローラー設定から、アップグレードしたコントローラーのデータベースを参照するように、``pg_username``、``pg_password``、``pg_database``、および ``pg_port`` を変更します。"
+
+#: ../../source/openshift_configuration.rst:202
+msgid "Run the OpenShift installer as normal."
+msgstr "通常通りに OpenShift インストーラーを実行します。"
+
+#: ../../source/openshift_configuration.rst:206
+msgid "Do not use special characters in ``pg_password`` as it may cause the setup to fail."
+msgstr "``pg_password`` で特殊文字を使用しないでください。セットアップが失敗する場合があります。"
+
+#~ msgid "Standalone Tower and OpenShift Tower use different installers."
+#~ msgstr "スタンドアロンの Tower と OpenShift Tower では、使用するインストーラーが異なります。"
+
+#~ msgid "The image must be tagged with 3.3.0 or pass version variable to installer to override."
+#~ msgstr "イメージには 3.3.0 のタグを付けるか、上書きするバージョン変数をインストーラーに渡します。"
+
+#~ msgid "When hosting all images in a local registry, such as offline installs, you’ll need to include these other images:"
+#~ msgstr "オフラインのインストールなど、ローカルレジストリーで全イメージをホストする場合は、以下のような他のイメージを追加する必要があります。"
+
+#~ msgid "Prior to performing an upgrade, you must backup and restore into the same version before upgrading. To upgrade a Tower deployment in OpenShift, download the most recent installer from http://releases.ansible.com/ansible-tower/setup_openshift. Expect some downtime, just as traditional Tower installations."
+#~ msgstr "アップグレード実行前に、同じバージョンでバックアップして復元する必要があります。OpenShift での Tower デプロイメントをアップグレードするには、http://releases.ansible.com/ansible-tower/setup_openshift から最新のインストーラーをダウンロードします。従来の Tower のインストールと同様に、ダウンタイムが予想されます。"
+
+#~ msgid "Normally Tower examines the system that it runs on in order to determine what its own capacity is for running Jobs and performing background requests. On OpenShift this works differently since pods and containers will tend to coexist on systems. Pods can also migrate between hosts depending on current conditions (for instance, if the OpenShift cluster is being upgraded or is experiencing an outage)."
+#~ msgstr "通常、Tower は、ジョブの実行や、バックグラウンドの要求実行に必要なキャパシティーを判断するために、Tower が稼働するシステムを検証します。OpenShift では、Pod とコンテナーがシステムで共存する傾向にあるため、仕組みが異なります。Pod は、現在の状況 (たとえば、OpenShift クラスターがアップグレードされる場合や、停止している場合) によってホスト間で移行することも可能です。"
+
+#~ msgid "To upgrade a Tower deployment in OpenShift, you need to download and use the most recent installer from http://releases.ansible.com/ansible-tower/setup_openshift. Expect some downtime, just as traditional Tower installations."
+#~ msgstr "OpenShift での Tower デプロイメントをアップグレードするには、http://releases.ansible.com/ansible-tower/setup_openshift から最新のインストーラーをダウンロードします。従来の Tower のインストールと同様に、ダウンタイムが予想されます。"
+
+#~ msgid "Build custom virtual environments"
+#~ msgstr "カスタムの仮想環境の構築"
+
+#~ msgid "It is possible to override the base container image to build custom virtual environments (*virtualenvs*). Overriding the base container is used for customization and custom virtualenv support or for local mirroring. If you want to use custom virtual environments with Tower deployed in OpenShift, you will need to customize the container image used by Tower."
+#~ msgstr "ベースのコンテナーイメージを上書きして、カスタムの仮想環境 (*virtualenvs*) を構築することができます。カスタマイズまたはカスタムの virtualen か、ローカルのミラーリングには、ベースのコンテナーの上書きを使用します。OpenShift にデプロイされた Tower で、カスタムの仮想環境を使用する場合には、Tower で使用するコンテナーイメージをカスタマイズする必要があります。"
+
+#~ msgid "Here is a Dockerfile that can be used as an example. This installs Ansible into a custom virtual environment:"
+#~ msgstr "例として使用可能な Dockerfile を紹介します。これは、Ansible をカスタムの仮想環境にインストールします。"
+
+#~ msgid "If you need to install other python dependencies (such as those for custom modules) you can add additional **RUN** commands to the docker file that activate the virtual environment and call ``pip``."
+#~ msgstr "他の python の依存関係 (カスタムモジュール用など) をインストールする必要がある場合には、仮想環境をアクティベートする Docker ファイルに **RUN** コマンドを追加して、``pip`` を呼び出してください。"
+
+#~ msgid "Once the image is built, make sure that image is in your registry and that the OpenShift cluster and installer have access to it."
+#~ msgstr "イメージが構築されたら、そのイメージがレジストリー内にあり、OpenShift クラスターとインストーラーからアクセスできることを確認します。"
+
+#~ msgid "Override the following variables in ``group_vars/all`` in the OpenShift installer to point to the image you have pushed to your registry:"
+#~ msgstr "OpenShift インストーラーの ``group_vars/all`` の以下の変数を上書きして、レジストリーにプッシュしたイメージを参照するようにします。"
+
+#~ msgid "If mirroring the vanilla Red Hat images:"
+#~ msgstr "vanilla Red Hat イメージをミラーリングする場合:"
+

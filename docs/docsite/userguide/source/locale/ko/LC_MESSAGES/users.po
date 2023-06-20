@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/users.rst:4
+msgid "Users"
+msgstr "사용자"
+
+#: ../../source/users.rst:10
+msgid "A :term:`User` is someone who has access to |at| with associated permissions and credentials. Access the Users page by clicking **Users** from the left navigation bar. The User list may be sorted and searched by **Username**, **First Name**, or **Last Name** and click the headers to toggle your sorting preference."
+msgstr ":term:`User`는 관련 권한 및 인증 정보를 사용하여 |at|에 액세스할 수 있는 사람입니다. 왼쪽 탐색 모음에서 **사용자**를 클릭하여 사용자 페이지에 액세스합니다. 사용자 목록은 **사용자 이름**, **이름** 또는 **성**으로 정렬 및 검색할 수 있으며, 헤더를 클릭하면 정렬 기본 설정이 전환됩니다."
+
+#: ../../source/users.rst:15
+msgid "You can easily view permissions and user type information by looking beside their user name in the User overview screen."
+msgstr "사용자 개요 화면에서 사용자 이름 옆을 확인하면 권한 및 사용자 유형 정보를 쉽게 볼 수 있습니다."
+
+#: ../../source/users.rst:21
+msgid "Create a User"
+msgstr "사용자 만들기"
+
+#: ../../source/users.rst:23
+msgid "To create a new user:"
+msgstr "새 사용자를 생성하려면 다음을 수행합니다."
+
+#: ../../source/users.rst:25
+msgid "Click the **Add** button, which opens the Create User dialog."
+msgstr "**추가** 버튼을 클릭하면 사용자 생성 대화 상자가 열립니다."
+
+#: ../../source/users.rst:27
+msgid "Enter the appropriate details about your new user. Fields marked with an asterisk (*) are required."
+msgstr "새 사용자에 대한 적절한 세부 정보를 입력합니다. 별표(*)로 표시된 필드는 필수 항목입니다."
+
+#: ../../source/users.rst:31
+msgid "When modifying your own password, log out and log back in again in order for it to take effect."
+msgstr "암호를 수정하면 새 암호가 적용되도록 로그아웃했다가 다시 로그인합니다."
+
+#: ../../source/users.rst:33
+msgid "Three types of Users can be assigned:"
+msgstr "세 가지 유형의 사용자를 할당할 수 있습니다."
+
+#: ../../source/users.rst:35
+msgid "**Normal User**: Normal Users have read and write access limited to the resources (such as inventory, projects, and job templates) for which that user has been granted the appropriate roles and privileges."
+msgstr "**일반 사용자**: 일반 사용자는 해당 사용자에게 적절한 역할 및 권한이 부여된 리소스(예: 인벤토리, 프로젝트, 작업 템플릿)에 대해서만 읽기 및 쓰기 액세스 권한이 있습니다."
+
+#: ../../source/users.rst:37
+msgid "**System Auditor**: Auditors implicitly inherit the read-only capability for all objects within the environment."
+msgstr "**시스템 감사자**: 감사자는 환경 내의 모든 오브젝트에 대한 읽기 전용 기능을 암시적으로 상속합니다."
+
+#: ../../source/users.rst:39
+msgid "**System Administrator**: A System Administrator (also known as Superuser) has full system administration privileges -- with full read and write privileges over the entire installation. A System Administrator is typically responsible for managing all aspects of |at| and delegating responsibilities for day-to-day work to various Users. Assign with caution!"
+msgstr "**시스템 관리자**: 시스템 관리자(슈퍼유저라고도 함)에게는 전체 설치에 대한 전체 읽기 및 쓰기 권한과 함께 전체 시스템 관리 권한이 있습니다. 시스템 관리자는 일반적으로 |at|의 모든 측면을 관리하고 다양한 사용자에게 일상 작업 책임을 위임하는 일을 담당합니다. 신중하게 할당하십시오!"
+
+#: ../../source/users.rst:46
+msgid "The initial user (usually \"admin\") created by the installation process is a Superuser. One Superuser must always exist. To delete the \"admin\" user account, you must first create another Superuser account."
+msgstr "설치 프로세스에서 생성하는 초기 사용자(일반적으로 \"admin\")는 슈퍼유저입니다. 항상 하나의 슈퍼유저가 있어야 합니다. \"admin\" 사용자 계정을 삭제하려면 먼저 다른 슈퍼유저 계정을 생성해야 합니다."
+
+#: ../../source/users.rst:48
+msgid "Select **Save** when finished."
+msgstr "완료되면 **저장**을 선택합니다."
+
+#: ../../source/users.rst:50
+msgid "Once the user is successfully created, the **User** dialog opens for that newly created User."
+msgstr "사용자가 성공적으로 생성되면 새로 생성된 사용자에 대한 **사용자** 대화 상자가 열립니다."
+
+#: ../../source/users.rst:57
+msgid "You may delete the user from its Details screen by clicking **Delete**, or once you exit the details screen, you can delete users from a list of current users. See :ref:`ug_users_delete` for more detail."
+msgstr "**Delete** 를 클릭하거나 세부 정보 화면을 종료하면 현재 사용자 목록에서 사용자를 삭제할 수 있습니다. 자세한 내용은 :ref:`ug_users_delete`을 참조하십시오."
+
+#: ../../source/users.rst:59
+msgid "The count for the number of users has also been updated, and a new entry for the new user is added to the list of users below the edit form. The same window opens whether you click on the user's name, or the Edit (|edit-button|) button beside the user. Here, the User's **Organizations**, **Teams**, and **Permissions**, as well as other user membership details, may be reviewed and modified."
+msgstr "사용자 수도 업데이트되었으며 새 사용자에 대한 새 항목이 편집 양식 아래의 사용자 목록에 추가됩니다. 사용자 이름을 클릭하든 사용자 옆에 있는 편집(|edit-button|) 버튼을 클릭하든 동일한 창이 열립니다. 여기에서 사용자의 **조직**, **팀**, **권한** 및 기타 사용자 멤버십 세부 정보를 검토하고 수정할 수 있습니다."
+
+#: ../../source/users.rst:63
+msgid "If the user is not a newly-created user, the user's details screen displays the last login activity of that user."
+msgstr "사용자가 새로 생성된 사용자가 아닌 경우 사용자 세부 정보 화면에 해당 사용자의 마지막 로그인 활동이 표시됩니다."
+
+#: ../../source/users.rst:67
+msgid "When you log in as yourself, and view the details of your own user profile, you can manage tokens from your user profile. See :ref:`ug_users_tokens` for more detail."
+msgstr "직접 로그인하면 사용자 프로필 세부 정보를 보고 사용자 프로필에서 토큰을 관리할 수 있습니다. 자세한 내용은 :ref:`ug_users_tokens`을 참조하십시오."
+
+#: ../../source/users.rst:74
+msgid "Delete a User"
+msgstr "사용자를 삭제합니다."
+
+#: ../../source/users.rst:76
+msgid "Before you can delete a user, you must have user permissions. When you delete a user account, the name and email of the user are permanently removed from |at|."
+msgstr "사용자를 삭제하려면 먼저 사용자 권한이 있어야 합니다. 사용자 계정을 삭제하면 사용자의 이름과 이메일은 |at| 에서 영구적으로 제거됩니다."
+
+#: ../../source/users.rst:78
+msgid "Expand the **Access** menu from the left navigation bar, and click **Users** to display a list of the current users."
+msgstr "왼쪽 탐색 모음에서 **액세스** 메뉴를 확장하고 **사용자**를 클릭하여 현재 사용자 목록을 표시합니다."
+
+#: ../../source/users.rst:80
+msgid "Select the check box(es) for the user(s) that you want to remove and click **Delete**."
+msgstr "삭제하려는 사용자의 확인란을 선택하고 **삭제**를 클릭합니다."
+
+#: ../../source/users.rst:84
+msgid "Click **Delete** in the confirmation warning message to permanently delete the user."
+msgstr "확인 경고 메시지에서 **삭제**를 클릭하여 사용자를 영구적으로 삭제합니다."
+
+#: ../../source/users.rst:88
+msgid "Users - Organizations"
+msgstr "사용자 - 조직"
+
+#: ../../source/users.rst:93
+msgid "This displays the list of organizations of which that user is a member. This list may be searched by Organization Name or Description. Organization membership cannot be modified from this display panel."
+msgstr "여기에는 해당 사용자가 멤버인 조직 목록이 표시됩니다. 이 목록은 조직 이름 또는 설명으로 검색할 수 있습니다. 조직 멤버십은 이 디스플레이 패널에서 수정할 수 없습니다."
+
+#: ../../source/users.rst:96
+msgid "|Users - Organizations list for example user|"
+msgstr "|Users - Organizations list for example user|"
+
+#: ../../source/users.rst:101
+msgid "Users - Teams"
+msgstr "사용자 - 팀"
+
+#: ../../source/users.rst:106
+msgid "This displays the list of teams of which that user is a member. This list may be searched by **Team Name** or **Description**. Team membership cannot be modified from this display panel. For more information, refer to :ref:`ug_teams`."
+msgstr "여기에는 해당 사용자가 멤버인 팀 목록이 표시됩니다. 이 목록은 **팀 이름** 또는 **설명**으로 검색할 수 있습니다. 팀 멤버십은 이 디스플레이 패널에서 수정할 수 없습니다. 자세한 내용은 :ref:`ug_teams`을 참조하십시오."
+
+#: ../../source/users.rst:108
+msgid "Until a Team has been created and the user has been assigned to that team, the assigned Teams Details for the User appears blank."
+msgstr "팀이 생성되고 해당 팀에 사용자가 할당될 때까지는 사용자에 할당된 팀 세부 정보가 비어 있습니다."
+
+#: ../../source/users.rst:110
+msgid "|Users - teams list for example user|"
+msgstr "|Users - teams list for example user|"
+
+#: ../../source/users.rst:119
+msgid "Users - Permissions"
+msgstr "사용자 - 권한"
+
+#: ../../source/users.rst:124
+msgid "The set of Permissions assigned to this user (role-based access controls) that provide the ability to read, modify, and administer projects, inventories, job templates, and other |at| elements are Privileges."
+msgstr "이 사용자(역할 기반 액세스 제어)에게 할당되어 프로젝트, 인벤토리, 작업 템플릿 및 기타 |at| 요소를 읽고, 수정하고, 관리하는 기능을 제공하는 권한 세트를 권한이라고 합니다."
+
+#: ../../source/users.rst:128
+msgid "It is important to note that the job template administrator may not have access to any inventory, project, or credentials associated with the template. Without access to these, certain fields in the job template aren't editable."
+msgstr "작업 템플릿 관리자는 템플릿과 연결된 일부 인벤토리, 프로젝트 또는 인증 정보에 액세스할 수 없을 수 있다는 점에 유의해야 합니다. 이러한 항목에 액세스하지 않으면 작업 템플릿의 특정 필드를 편집할 수 없습니다."
+
+#: ../../source/users.rst:130
+msgid "This screen displays a list of the roles that are currently assigned to the selected User and can be sorted and searched by **Name**, **Type**, or **Role**."
+msgstr "이 화면에는 선택한 사용자에게 현재 할당된 역할 목록이 표시되며 **이름**, **유형** 또는 **역할**로 정렬 및 검색할 수 있습니다."
+
+#: ../../source/users.rst:132
+msgid "|Users - permissions list for example user|"
+msgstr "|Users - permissions list for example user|"
+
+#: ../../source/users.rst:138
+msgid "Add Permissions"
+msgstr "권한 추가"
+
+#: ../../source/users.rst:140
+msgid "To add permissions to a particular user:"
+msgstr "특정 사용자에게 권한을 추가하려면 다음을 수행합니다."
+
+#: ../../source/users.rst:142
+msgid "Click the **Add** button, which opens the Add Permissions Wizard."
+msgstr "**추가** 버튼을 클릭하여 권한 추가 마법사를 엽니다."
+
+#: ../../source/users.rst:147
+msgid "Click to select the object for which the user will have access and click **Next**."
+msgstr "사용자가 액세스할 수 있는 오브젝트를 클릭하여 선택하고 **다음**을 클릭합니다."
+
+#: ../../source/users.rst:149
+msgid "Click to select the resource to assign team roles and click **Next**."
+msgstr "팀 역할을 할당할 리소스를 클릭하여 선택하고 **다음**을 클릭합니다."
+
+#: ../../source/users.rst:153
+msgid "Click the checkbox beside the role to assign that role to your chosen type of resource. Different resources have different options available."
+msgstr "선택한 리소스 유형에 할당할 역할 옆에 있는 체크박스를 클릭합니다. 리소스에 따라 다양한 옵션을 사용할 수 있습니다."
+
+#: ../../source/users.rst:158
+msgid "Click **Save** when done, and the Add Permissions Wizard closes to display the updated profile for the user with the roles assigned for each selected resource."
+msgstr "완료되어 **저장**을 클릭하면 권한 추가 마법사가 닫히면서 각 선택 리소스에 할당된 역할이 있는 업데이트된 사용자 프로필이 표시됩니다."
+
+#: ../../source/users.rst:162
+msgid "To remove Permissions for a particular resource, click the disassociate (x) button next to its resource. This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "특정 리소스에 대한 권한을 제거하려면 리소스 옆에 있는 연결 해제(x) 버튼을 클릭합니다. 그러면 연결을 해제할지 묻는 확인 대화 상자가 열립니다."
+
+#: ../../source/users.rst:167
+msgid "You can also add teams, individual, or multiple users and assign them permissions at the object level (projects, inventories, job templates, and workflow templates) as well. This feature reduces the time for an organization to onboard many users at one time."
+msgstr "팀, 개인 또는 여러 사용자를 추가하고 오브젝트 수준(프로젝트, 인벤토리, 작업 템플릿, 워크플로우 템플릿)에서 권한을 할당할 수도 있습니다. 이 기능을 사용하면 조직에서 한 번에 여러 사용자를 온보딩하는 시간을 줄일 수 있습니다."
+
+#: ../../source/users.rst:173
+msgid "Users - Tokens"
+msgstr "사용자 - 토큰"
+
+#: ../../source/users.rst:175
+msgid "The **Tokens** tab will only be present for your user (yourself). Before you add a token for your user, you may want to :ref:`create an application <ug_applications_auth_create>` if you want to associate your token to it. You may also create a personal access token (PAT) without associating it with any application. To create a token for your user:"
+msgstr "**토큰** 탭은 사용자(본인)에게만 표시됩니다. 자신의 토큰을 사용자 토큰에 연결하려면 사용자 토큰을 추가하기 전에 :ref:`create an application <ug_applications_auth_create>`이 필요할 수 있습니다. 또한 애플리케이션과 연결하지 않고 개인 액세스 토큰(PAT)을 생성할 수도 있습니다. 사용자의 토큰을 생성하려면 다음을 수행합니다."
+
+#: ../../source/users.rst:177
+msgid "If not already selected, click on your user from the Users list view to configure your OAuth 2 tokens."
+msgstr "아직 선택되지 않은 경우 사용자 목록 보기에서 사용자를 클릭하여 OAuth 2 토큰을 구성합니다."
+
+#: ../../../common/source/add-token.rst:3
+msgid "Click the **Tokens** tab from your user's profile."
+msgstr "사용자 프로필에서 **토큰** 탭을 클릭합니다."
+
+#: ../../../common/source/add-token.rst:5
+msgid "When no tokens are present, the Tokens screen prompts you to add them:"
+msgstr "토큰이 없는 경우 토큰 화면에 토큰을 추가하라는 메시지가 표시됩니다."
+
+#: ../../../common/source/add-token.rst:9
+msgid "Click the **Add** button, which opens the Create Token window."
+msgstr "**추가** 버튼을 클릭하면 토큰 생성 창이 열립니다."
+
+#: ../../../common/source/add-token.rst:11
+msgid "Enter the following details in Create Token window:"
+msgstr "토큰 생성 창에 다음 세부 정보를 입력합니다."
+
+#: ../../../common/source/add-token.rst:13
+msgid "**Application**: enter the name of the application with which you want to associate your token. Alternatively, you can search for it by clicking the |search| button. This opens a separate window that allows you to choose from the available options. Use the Search bar to filter by name if the list is extensive. Leave this field blank if you want to create a Personal Access Token (PAT) that is not linked to any application."
+msgstr "**애플리케이션**: 토큰을 연결할 애플리케이션의 이름을 입력합니다. 또는 |search| 버튼을 클릭하여 검색할 수 있습니다. 그러면 별도의 창이 열리고 사용 가능한 옵션 중에서 선택할 수 있습니다. 목록이 긴 경우 검색 모음을 사용하여 이름으로 필터링합니다. 애플리케이션에 연결되지 않은 개인 액세스 토큰(PAT)을 만들려면 이 필드를 비워 둡니다."
+
+#: ../../../common/source/add-token.rst:15
+msgid "**Description**: optionally provide a short description for your token."
+msgstr "**설명**: 필요한 경우 토큰에 대한 간단한 설명을 입력합니다."
+
+#: ../../../common/source/add-token.rst:17
+msgid "**Scope** (required): specify the level of access you want this token to have."
+msgstr "**범위** (필수): 이 토큰에 설정할 액세스 수준을 지정합니다."
+
+#: ../../../common/source/add-token.rst:21
+msgid "When done, click **Save** or **Cancel** to abandon your changes."
+msgstr "완료되면 **저장**을 클릭하여 변경 사항을 저장하거나 **취소**를 클릭하여 변경 사항을 취소합니다."
+
+#: ../../../common/source/add-token.rst:23
+msgid "After the token is saved, the newly created token for the user displays with the token information and when it expires."
+msgstr "토큰을 저장하면 사용자에 대해 새로 생성된 토큰이 토큰 정보 및 만료 시간과 함께 표시됩니다."
+
+#: ../../../common/source/add-token.rst:27
+msgid "This is the only time the token value and associated refresh token value will ever be shown."
+msgstr "토큰 값과 연결된 새로 고침 토큰 값이 표시되는 유일한 때입니다."
+
+#: ../../../common/source/add-token.rst:29
+msgid "In the user's profile, the application for which it is assigned to and its expiration displays in the token list view."
+msgstr "사용자 프로필에서는 할당된 애플리케이션과 만료 시간이 토큰 목록 뷰에 표시됩니다."
+

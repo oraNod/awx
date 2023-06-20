@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/overview.rst:4
+msgid "Overview"
+msgstr "概述"
+
+#: ../../source/overview.rst:9
+msgid "Thank you for your interest in |rhaap|. |aap| makes it possible for users across an organization to share, vet, and manage automation content by means of a simple, powerful, and agentless technical implementation. IT managers can provide guidelines on how automation is applied to individual teams. Meanwhile, automation developers retain the freedom to write tasks that use existing knowledge, without the operational overhead of conforming to complex tools and frameworks. It is a more secure and stable foundation for deploying end-to-end automation solutions, from hybrid cloud to the edge."
+msgstr "感谢您对 |rhaap| 的兴趣。|aap| 使整个机构的用户能够通过简单、强大和无代理的技术实现共享、审查和管理自动化内容。 IT 经理可以提供有关如何将自动化应用到各个团队的指导。 同时，自动化开发人员还可以利用现有的技术自由编写任务，而避免了使用复杂工具和框架的运营开销。 它是部署端到端自动化解决方案（从混合云到边缘）的更安全、稳定的基础。"
+
+#: ../../source/overview.rst:11
+msgid "|aap| includes |at|, which allows users to define, operate, scale, and delegate automation across their enterprise."
+msgstr "|aap| 包括 |at|，允许用户在整个企业中定义、操作、扩展和委派自动化。"
+
+#: ../../source/overview.rst:15
+msgid "Real-time Playbook Output and Exploration"
+msgstr "实时 Playbook 输出和探索"
+
+#: ../../source/overview.rst:20
+msgid "Watch playbooks run in real time, seeing each host as they check in. Easily go back and explore the results for specific tasks and hosts in great detail. Search for specific plays or hosts and see just those results, or quickly zero in on errors that need to be corrected."
+msgstr "实时监控 playbook 运行，在每台主机签入时看到它们。轻松返回并探索特定任务和主机的详细结果。搜索特定 play 或主机，并仅查看这些结果，或在发生需要更正的错误时快速归零。"
+
+#: ../../source/overview.rst:23
+msgid "\"Push Button\" Automation"
+msgstr "“按钮式”自动化"
+
+#: ../../source/overview.rst:28
+msgid "Access your favorite projects and re-trigger execution from the web interface with a minimum of clicking. |at| will ask for input variables, prompt for your credentials, kick off and monitor the job, and display results and host history over time."
+msgstr "通过最少的点击访问常用的项目，并从 Web 界面重新触发执行。|at| 将要求提供输入变量、提示输入您的凭证、启动和监控作业，并显示一段时间内的结果和主机历史记录。"
+
+#: ../../source/overview.rst:32
+msgid "Enhanced and Simplified Role-Based Access Control and Auditing"
+msgstr "增强和简化的基于角色的访问控制和审核"
+
+#: ../../source/overview.rst:37
+msgid "|At| allows for the granting of permissions to perform a specific task (such as to view, create, or modify a file) to different teams or explicit users through role-based access control (RBAC)."
+msgstr "|At| 允许通过基于角色的访问控制（RBAC）向不同的团队或显式用户授予权限来执行特定的任务（如查看、创建或修改文件）。"
+
+#: ../../source/overview.rst:39
+msgid "Keep some projects private, while allowing some users to edit inventory and others to run playbooks against only certain systems--either in check (dry run) or live mode. You can also allow certain users to use credentials without exposing the credentials to them. Regardless of what you do, |at| records the history of operations and who made them--including objects edited and jobs launched."
+msgstr "将一些项目保留为私密，同时允许某些用户编辑清单，并允许其他用户在检查（dry run）或实时模式下只针对某些系统运行 playbook。您也可以在不向某些用户公开凭证的情况下允许他们使用凭证。不管您执行什么操作，|at| 都会记录操作历史记录和执行者，包括编辑的对象和启动的作业。"
+
+#: ../../source/overview.rst:41
+msgid "Based on user feedback, |at| both expands and simplifies its role-based access control. No longer is job template visibility configured via a combination of permissions on inventory, projects, and credentials. If you want to give any user or team permissions to use a job template, just assign permissions directly on the job template. Similarly, credentials are now full objects in |at|'s RBAC system, and can be assigned to multiple users and/or teams for use."
+msgstr "基于用户反馈，|at| 可以扩展并简化基于角色的访问控制。不再需要通过清单、项目和凭证的权限组合来配置作业模板可见性。如果您想要授予用户或团队使用作业模板的权限，请直接在作业模板上分配权限。同样，凭证现在是 |at| 的 RBAC 系统中的完整对象，并可分配给多个用户和/或团队使用。"
+
+#: ../../source/overview.rst:43
+msgid "|At| includes an ‘Auditor’ type, who can see all aspects of the systems automation, but has no permission to run or change automation, for those that need a system-level auditor. (This may also be useful for a service account that scrapes automation information from the REST API.) Refer to :ref:`rbac-ug` for more information."
+msgstr "|At| 包括一个\"Auditor\"类型，它可看到系统自动化的所有方面，但没有权限运行或更改自动化，适用于需要系统级审核员的用户。（这对于从 REST API 中提取自动化信息的服务帐户也很有用。）如需更多信息，请参阅 :ref:`rbac-ug`。"
+
+#: ../../source/overview.rst:45
+msgid "Subsequent releases of |at| provides more granular permissions, making it easier to delegate inside your organizations and remove automation bottlenecks."
+msgstr "|at| 的后续发行版本提供了更细粒度的权限，更加便于在您的机构内部进行委托并消除自动化瓶颈。"
+
+#: ../../source/overview.rst:49
+msgid "Cloud & Autoscaling Flexibility"
+msgstr "云和自动缩放灵活性"
+
+#: ../../source/overview.rst:55
+msgid "|At| features a powerful provisioning callback feature that allows nodes to request configuration on demand. While optional, this is an ideal solution for a cloud auto-scaling scenario, integrating with provisioning servers like Cobbler, or when dealing with managed systems with unpredictable uptimes. Requiring no management software to be installed on remote nodes, the callback solution can be triggered via a simple call to 'curl' or 'wget', and is easily embeddable in init scripts, kickstarts, or preseeds. Access is controlled such that only machines in inventory can request configuration."
+msgstr "|At| 具有强大的配置回调功能，允许节点按需请求配置。尽管是可选的，但对于云自动缩放方案，与 Cobbler 之类的配置服务器集成来说，或在处理正常运行时间不可预测的受管系统时，这是一种理想的解决方案。回调解决方案可以通过简单调用“curl”或“wget”来触发，并且可以轻松地嵌入到 init 脚本、kickstart 或 preseed 中，不需要在远程节点上安装任何管理软件。访问受到控制，以便只有清单中的机器才能请求配置。"
+
+#: ../../source/overview.rst:59
+msgid "The Ideal RESTful API"
+msgstr "理想的 RESTful API"
+
+#: ../../source/overview.rst:64
+msgid "The |at| REST API is the ideal RESTful API for a systems management application, with all resources fully discoverable, paginated, searchable, and well modeled. A styled API browser allows API exploration from the API root at ``http://<server name>/api/``, showing off every resource and relation. Everything that can be done in the user interface can be done in the API - and more."
+msgstr "|at| REST API 是系统管理应用程序的理想 RESTful API，所有资源都完全可发现、已分页、可搜索并已精心建模。样式化的 API 浏览器允许从 API 根 (``http://<server name>/api/``) 进行 API 探索，显示出所有资源和关系。可在用户界面中完成的所有操作都可以在 API 中完成，除此之外还可以完成其他操作。"
+
+#: ../../source/overview.rst:67
+msgid "Backup and Restore"
+msgstr "备份和恢复"
+
+#: ../../source/overview.rst:72
+msgid "The ability to backup and restore your system(s) has been integrated into the |aap| setup playbook, making it easy for you to backup and replicate your instance as needed."
+msgstr "备份和恢复系统的功能已集成到 |aap| 设置 playbook 中，让您可以根据需要轻松备份和复制实例。"
+
+#: ../../source/overview.rst:75
+msgid "Ansible Galaxy Integration"
+msgstr "Ansible Galaxy 集成"
+
+#: ../../source/overview.rst:80
+msgid "When it comes to describing your automation, everyone repeats the DRY mantra--\"Don’t Repeat Yourself.\" Using centralized copies of Ansible roles, such as in Ansible Galaxy, allows you to bring that philosophy to your playbooks. By including an Ansible Galaxy requirements.yml file in your project directory, |at| automatically fetches the roles your playbook needs from Galaxy, GitHub, or your local source control. Refer to :ref:`ug_galaxy` for more information."
+msgstr "提到描述您的自动化，任何人都会强调 DRY 原则，意为“Don’t Repeat Yourself”（不要重复自己）。使用 Ansible 角色的集中副本，比如在 Ansible Galaxy 中，您可将这个原则应用到 playbook 中。通过在项目目录中包含 Ansible Galaxy requirements.yml 文件，|at| 会自动从 Galaxy、GitHub 或您的本地源控制获取 playbook 所需的角色。如需更多信息，请参阅 :ref:`ug_galaxy`。"
+
+#: ../../source/overview.rst:83
+msgid "Inventory Support for OpenStack"
+msgstr "OpenStack 的清单支持"
+
+#: ../../source/overview.rst:89
+msgid "Ansible is committed to making OpenStack simple for everyone to use. As part of that,  dynamic inventory support has been added for OpenStack. This allows you to easily target any of the virtual machines or images that you’re running in your OpenStack cloud."
+msgstr "Ansible 致力于让 OpenStack 对于每个人来说都简单易用。其中一项举措是为 OpenStack 添加了动态清单支持。这可让您轻松地将您在 OpenStack 云中运行的任何虚拟机或映像作为目标。"
+
+#: ../../source/overview.rst:93
+msgid "Remote Command Execution"
+msgstr "远程命令执行"
+
+#: ../../source/overview.rst:98
+msgid "Often times, you just need to do a simple task on a few hosts, whether it’s add a single user, update a single security vulnerability, or restart a misbehaving service. |At| includes remote command execution--any task that you can describe as a single Ansible play can be run on a host or group of hosts in your inventory, allowing you to get managing your systems quickly and easily. Plus, it is all backed by an RBAC engine and detailed audit logging, removing any questions regarding who has done what to what machines."
+msgstr "通常，您只需要在几个主机上执行简单的任务，无论是添加单个用户，更新单个安全漏洞还是重新启动行为异常的服务。|At| 包括远程命令执行，意味着任何可以描述为单个 Ansible play 的任务都可以在清单中的一个主机或一组主机上运行，从而使您可以快速轻松地管理系统。此外，它由 RBAC 引擎和详细审核日志支持，从而消除了有关谁对什么机器执行了什么操作的任何问题。"
+
+#: ../../source/overview.rst:102
+msgid "System Tracking"
+msgstr "系统跟踪"
+
+#: ../../source/overview.rst:109
+msgid "You can collect facts by using the fact caching feature. Refer to :ref:`ug_fact_caching` for more detail."
+msgstr "您可以使用事实（fact）缓存功能收集事实。如需更多详情，请参阅:ref:`ug_fact_caching`。"
+
+#: ../../source/overview.rst:113
+msgid "Integrated Notifications"
+msgstr "集成通知"
+
+#: ../../source/overview.rst:118
+msgid "|at| allows you to easily keep track of the status of your automation. You can configure stackable notifications for job templates, projects, or entire organizations, and configure different notifications for job start, job success, job failure, and job approval (for workflow nodes). The following notification sources are supported:"
+msgstr "您可以在 |at| 中轻松跟踪自动化的状态。您可以为作业模板、项目或整个机构配置可堆栈通知，并为（工作流节点的）作业启动、作业成功、作业失败和作业批准配置不同的通知。支持以下通知源："
+
+#: ../../source/overview.rst:120
+msgid "Email"
+msgstr "电子邮件"
+
+#: ../../source/overview.rst:121
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../source/overview.rst:122
+msgid "IRC"
+msgstr "IRC"
+
+#: ../../source/overview.rst:123
+msgid "Mattermost"
+msgstr "Mattermost"
+
+#: ../../source/overview.rst:124
+msgid "PagerDuty"
+msgstr "PagerDuty"
+
+#: ../../source/overview.rst:125
+msgid "Rocket.Chat"
+msgstr "Rocket.Chat"
+
+#: ../../source/overview.rst:126
+msgid "Slack"
+msgstr "Slack"
+
+#: ../../source/overview.rst:127
+msgid "Twilio"
+msgstr "Twilio"
+
+#: ../../source/overview.rst:128
+msgid "Webhook (post to an arbitrary webhook, for integration into other tools)"
+msgstr "Webhook（发布到任意 Webhook，用于集成到其他工具）"
+
+#: ../../source/overview.rst:130
+msgid "Additionally, you can :ref:`customize notification messages <ug_custom_notifications>` for each of the above notification types."
+msgstr "此外，您可以为以上每个通知类型:ref:`customize notification messages <ug_custom_notifications>`。"
+
+#: ../../source/overview.rst:134
+msgid "Satellite Integration"
+msgstr "Satellite 集成"
+
+#: ../../source/overview.rst:139
+msgid "Dynamic inventory sources for Red Hat Satellite 6 are supported."
+msgstr "支持 Red Hat Satellite 6 的动态清单源。"
+
+#: ../../source/overview.rst:143
+msgid "Run-time Job Customization"
+msgstr "实时作业自定义"
+
+#: ../../source/overview.rst:148
+msgid "Bringing the flexibility of the Ansible command line, you can now prompt for any of the following:"
+msgstr "借助 Ansible 命令行的灵活性，您现在可以提示输入以下任意一项："
+
+#: ../../source/overview.rst:150
+msgid "inventory"
+msgstr "清单（inventory）"
+
+#: ../../source/overview.rst:151
+msgid "credential"
+msgstr "credential"
+
+#: ../../source/overview.rst:152
+msgid "job tags"
+msgstr "job tags"
+
+#: ../../source/overview.rst:153
+msgid "limits"
+msgstr "limits"
+
+#: ../../source/overview.rst:157
+msgid "Red Hat Insights Integration"
+msgstr "Red Hat Insights 集成"
+
+#: ../../source/overview.rst:162
+msgid "|At| supports integration with Red Hat Insights, which allows Insights playbooks to be used as a |aap| Project."
+msgstr "|At| 支持与 Red Hat Insights 集成，允许 Insights playbook 作为一个 |aap| 项目使用。"
+
+#: ../../source/overview.rst:166
+msgid "Enhanced User Interface"
+msgstr "增强的用户界面"
+
+#: ../../source/overview.rst:172
+msgid "The layout of the user interface is organized with intuitive navigational elements. With information displayed at-a-glance, it is intuitive to find and use the automation you need. Compact and expanded viewing modes show and hide information as needed, and various built-in attributes make it easy to sort."
+msgstr "对用户界面的布局进行了重新组织以改进导航元素。由于在概览中显示了更多信息，您可以更直观地查找和使用您需要的自动化功能。紧凑和展开的查看模式可根据需要显示和隐藏信息，各种内置属性可方便排序。"
+
+#: ../../source/overview.rst:176
+msgid "Custom Virtual Environments"
+msgstr "自定义虚拟环境"
+
+#: ../../source/overview.rst:182
+msgid "Custom Ansible environment support allows you to have different Ansible environments and specify custom paths for different teams and jobs."
+msgstr "有了自定义 Ansible 环境支持，您可以具有不同的 Ansible 环境，并为不同的团队和作业指定自定义路径。"
+
+#: ../../source/overview.rst:186
+msgid "Authentication Enhancements"
+msgstr "身份验证增强"
+
+#: ../../source/overview.rst:192
+msgid "|At| supports LDAP, SAML, token-based authentication. Enhanced LDAP and SAML support allows you to integrate your enterprise account information in a more flexible manner. Token-based Authentication allows for easily authentication of third-party tools and services with |at| via integrated OAuth 2 token support."
+msgstr "|At| 支持 LDAP、SAML 以及基于令牌的身份验证。增强的 LDAP 和 SAML 支持可让您以更灵活的方式集成您的企业级帐户信息。基于令牌的身份验证允许您通过集成的 OAuth 2 令牌支持轻松地在 |at| 中验证第三方工具和服务。"
+
+#: ../../source/overview.rst:195
+msgid "Cluster Management"
+msgstr "集群管理"
+
+#: ../../source/overview.rst:201
+msgid "Run-time management of cluster groups allows for easily configurable scaling."
+msgstr "集群组的运行时管理实现了可轻松配置的缩放。"
+
+#: ../../source/overview.rst:205
+msgid "Container Platform Support"
+msgstr "容器平台支持"
+
+#: ../../source/overview.rst:210
+msgid "|aap| is available as a containerized pod service for Red Hat OpenShift Container Platform that can be scaled up and down easily as needed."
+msgstr "|aap| 可作为 Red Hat OpenShift Container Platform 的容器化 pod 服务，可根据需要轻松扩展和缩减。"
+
+#: ../../source/overview.rst:214
+msgid "Workflow Enhancements"
+msgstr "工作流增强"
+
+#: ../../source/overview.rst:224
+msgid "In order to better model your complex provisioning, deployment, and orchestration workflows, |at| expanded workflows in a number of ways:"
+msgstr "为了更好地为复杂配置、部署和编配工作流建模，|at| 以多种方式扩展了工作流："
+
+#: ../../source/overview.rst:227
+msgid "**Inventory overrides for Workflows**. You can now override an inventory across a workflow at workflow definition time, or even at launch time. Define your application deployment workflow, and then easily re-use them in multiple environments."
+msgstr "**Inventory overrides for Workflows**。现在您可以在工作流定义时，甚至在启动时覆盖工作流中的清单。定义应用程序部署工作流，然后轻松地在多个环境中重复使用。"
+
+#: ../../source/overview.rst:229
+msgid "**Convergence nodes for Workflows**. When modeling complex processes, you sometimes need to wait for multiple steps to finish before proceeding. Now |at| workflows can easily replicate this; workflow steps can now wait for any number of prior workflow steps to complete properly before proceeding."
+msgstr "**Convergence nodes for Workflows**。在对复杂流程建模时，有时需要等待多个步骤完成才能继续。现在 |at| 工作流可以轻松复制这一点；现在，工作流步骤可以等待任何数量的先前工作流步骤正确完成，然后再继续。"
+
+#: ../../source/overview.rst:231
+msgid "**Workflow Nesting**. Re-use individual workflows as components of a larger workflow. Examples include combining provisioning and application deployment workflows into a single master workflow."
+msgstr "**Workflow Nesting**。重复使用单独的工作流作为较大工作流的组件。例如，将配置和应用程序部署工作流合并到单个主工作流中。"
+
+#: ../../source/overview.rst:233
+msgid "**Workflow Pause and Approval**. You can build workflows containing approval nodes that require user intervention. This makes it possible to pause workflows in between playbooks so that a user can give approval (or denial) for continuing on to the next step in the workflow."
+msgstr "**Workflow Pause and Approval**。您可以构建包含需要用户干预的批准节点的工作流。这样就可以在 playbook 间暂停工作流，以便用户批准（或拒绝）继续到工作流中的下一步。"
+
+#: ../../source/overview.rst:237
+msgid "Job Distribution"
+msgstr "作业分发"
+
+#: ../../source/overview.rst:243
+msgid "As automation moves enterprise-wide, the need to automate at scale grows. |At| offer the ability to take a fact gathering or configuration job running across thousands of machines and slice it into individual job slices that can be distributed across your |at| cluster for increased reliability, faster job completion, and better cluster utilization. If you need to change a parameter across 15,000 switches at scale, or gather information across your multi-thousand-node RHEL estate, you can now do so easily."
+msgstr "随着自动化在全企业范围内扩展，对大规模自动化需求不断增加。|At| 支持在数千台机器中运行事实收集或配置作业，并将它分片成可在 |at| 集群中分发的单独作业分片，以便提高可靠性、作业完成速度以及集群利用率。如果您需要为 15,000 台交换机大规模更改一个参数，或者在数千个节点的 RHEL 设施内收集信息，现在您可以轻松地完成此操作。"
+
+#: ../../source/overview.rst:249
+msgid "Support for deployment in a FIPS-enabled environment"
+msgstr "支持在启用了 FIPS 的环境中部署"
+
+#: ../../source/overview.rst:255
+msgid "If you require running your environment in restricted modes such as FIPS, |at| deploys and runs in such environments."
+msgstr "如果您需要以受限模式（如 FIPS）运行您的环境，|at| 会在此类环境中部署并运行。"
+
+#: ../../source/overview.rst:259
+msgid "Limit the number of hosts per organization"
+msgstr "限制每个机构中的主机数量"
+
+#: ../../source/overview.rst:264
+msgid "Lots of large organizations have instances shared among many organizations. They do not want any one organization to be able to use all the licensed hosts, this feature allows superusers to set a specified upper limit on how many licensed hosts may be allocated to each organization. The |at| algorithm factors changes in the limit for an organization and the number of total hosts across all organizations. Any inventory updates will fail if an inventory sync brings an organization out of compliance with the policy. Additionally, superusers are able to 'over-allocate' their licenses, with a warning."
+msgstr "许多大型机构都有在许多机构之间共享的实例。他们不希望任何一个机构能够使用所有许可的主机，此功能允许超级用户为每个机构可以分配到多少许可的主机设置指定的上限。|at| 算法会考虑机构的限制以及所有机构中的主机总数的变化。如果库存同步使机构不符合策略，则任何库存更新都将失败。此外，超级用户可以在显示警告的情况下“过度分配”其许可证。"
+
+#: ../../source/overview.rst:268
+msgid "Inventory Plugins"
+msgstr "清单插件"
+
+#: ../../source/overview.rst:273
+msgid "Updated |at| to use the following inventory plugins from upstream collections if inventory updates are run with Ansible 2.9:"
+msgstr "更新了 |at|，如果清单更新使用 Ansible 2.9 运行，则使用来自上游集合的以下清单插件："
+
+#: ../../source/overview.rst:275
+msgid "amazon.aws.aws_ec2"
+msgstr "amazon.aws.aws_ec2"
+
+#: ../../source/overview.rst:276
+msgid "community.vmware.vmware_vm_inventory"
+msgstr "community.vmware.vmware_vm_inventory"
+
+#: ../../source/overview.rst:277
+msgid "azure.azcollection.azure_rm"
+msgstr "azure.azcollection.azure_rm"
+
+#: ../../source/overview.rst:278
+msgid "google.cloud.gcp_compute"
+msgstr "google.cloud.gcp_compute"
+
+#: ../../source/overview.rst:279
+msgid "theforeman.foreman.foreman"
+msgstr "theforeman.foreman.foreman"
+
+#: ../../source/overview.rst:280
+msgid "openstack.cloud.openstack"
+msgstr "openstack.cloud.openstack"
+
+#: ../../source/overview.rst:281
+msgid "ovirt.ovirt.ovirt"
+msgstr "ovirt.ovirt.ovirt"
+
+#: ../../source/overview.rst:282
+msgid "awx.awx.tower"
+msgstr "awx.awx.tower"
+
+#: ../../source/overview.rst:286
+msgid "Secret Management System"
+msgstr "Secret 管理系统"
+
+#: ../../source/overview.rst:293
+msgid "With a secret management system, external credentials are stored and supplied for use in |at| so you don't have to provide them directly."
+msgstr "使用 secret 管理系统，外部凭证会存储下来以供在 |at| 中使用，因此您不必直接向 Tower 提供这些凭证。"
+
+#: ../../source/overview.rst:297
+msgid "|ah| Integration"
+msgstr "|ah| 集成"
+
+#: ../../source/overview.rst:303
+msgid "|ah| will act as a content provider for |at|, which requires both an |at| deployment and an |ah| deployment running alongside each other."
+msgstr "|ah| 将充当 |at| 的内容提供程序，这需要 |at| 部署和 |ah| 部署一起运行。"
+

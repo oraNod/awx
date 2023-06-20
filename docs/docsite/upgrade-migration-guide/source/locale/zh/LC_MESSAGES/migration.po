@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Upgrade and Migration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-18 14:46-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/migration.rst:5
+msgid "System Tracking Migration"
+msgstr "系统跟踪功能的迁移"
+
+#: ../../source/migration.rst:14
+msgid "System tracking feature was deprecated starting with |at| 3.2. However, you can collect facts by using the fact caching feature. Refer to :ref:`ug_fact_caching` for more detail. If you upgrade from a version earlier than |at| 3.0, you will find that your system tracking data (historical facts) has been migrated from MongoDB to PostgreSQL."
+msgstr "从 |at| 3.2。开始，系统跟踪功能被弃用。但是，您可以使用事实 (fact) 缓存功能收集事实 (fact) 信息。如需更多详情，请参考 :ref:`ug_fact_caching`。如果您从早于 |at| 3.0 的版本升级，则您会发现系统跟踪数据（历史事实 (fact)）已从 MongoDB 迁移到 PostgreSQL。"
+
+#: ../../source/migration.rst:16
+msgid "If you want to delete the old data in MongoDB, you can do so manually. First, connect to your mongo database using the mongo command line client, then run the following commands::"
+msgstr "如果您想删除 MongoDB 中的旧数据，您可以手动删除。首先，使用 mongo 命令行客户端连接到 mongo 数据库，然后运行以下命令："
+
+#: ../../source/migration.rst:21
+msgid "At this point, you can also remove the MongoDB packages."
+msgstr "此时，您还可以删除 MongoDB 软件包。"
+
+#~ msgid "Once your system has been upgraded to |at| 3.x, you will find that your system tracking data has been migrated from MongoDB to PostgreSQL. If you want to delete the old data in MongoDB, you can do so manually. First, connect to your mongo database using the mongo command line client, then run the following commands::"
+#~ msgstr ""
+

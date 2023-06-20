@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Upgrade and Migration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/upgrade_to_ees.rst:4
+msgid "Upgrading to Execution Environments"
+msgstr "실행 환경으로 업그레이드"
+
+#: ../../source/upgrade_to_ees.rst:12
+msgid "If upgrading from older versions of |at| to 4.0 or later, the controller has the ability to detect previous versions of virtual environments associated with Organizations, Inventory, and Job Templates; and inform you that you will need to migrate to the new |ee| model. A brand new installation of |at| creates two virtualenvs during installation--one is used to run the controller itself, while the other is used to run Ansible. Like legacy virtual environments, |ees| allow the controller to run in a stable environment, while allowing you to add or update modules to your |ee| as necessary to run your playbooks. For more information, see :ref:`ug_execution_environments` in the |atu|."
+msgstr "이전 버전의 |at|를 4.0 이상으로 업그레이드하면 컨트롤러에서 조직, 인벤토리, 작업 템플릿과 연결된 이전 버전의 가상 환경을 탐지하고 새 |ee| 모델로 마이그레이션해야 함을 알릴 수 있습니다. |at|를 새로 설치하면 설치하는 동안 virtualenvs 두 개가 생성됩니다. 하나는 컨트롤러 자체를 실행하는 데 사용되고, 다른 하나는 Ansible을 실행하는 데 사용됩니다. 레거시 가상 환경과 마찬가지로 |ees|에서는 컨트롤러를 안정적인 환경에서 실행하면서도 플레이북을 실행하는 데 필요한 만큼 |ee|에 모듈을 추가하거나 업데이트할 수 있습니다. 자세한 내용은 |atu|의 :ref:`ug_execution_environments`을 참조하십시오."
+
+#: ../../source/upgrade_to_ees.rst:17
+msgid "When upgrading, it is highly recommended to always rebuild on top of the base |ee| that corresponds to the platform version you are using. See :ref:`ug_build_ees` for more information."
+msgstr "업그레이드 시 사용 중인 플랫폼 버전에 해당하는 기본 |ee| 위에 항상 다시 빌드하는 것이 좋습니다. 자세한 내용은 :ref:`ug_build_ees`를 참조하십시오."
+
+#: ../../source/upgrade_to_ees.rst:26
+msgid "Migrate legacy venvs to execution environments"
+msgstr "레거시 venvs를 실행 환경으로 마이그레이션"
+
+#: ../../source/upgrade_to_ees.rst:28
+msgid "You can have the exact same setup in an |ee| that you had in a prior custom virtual environment by migrating them to the new |ee|. Use the ``awx-manage`` commands in this section to:"
+msgstr "이전의 사용자 정의 가상 환경을 새 |ee|로 마이그레이션하여 |ee|에서 이전과 동일한 설정을 유지할 수 있습니다. 이 섹션의 ``awx-manage`` 명령을 사용하여 다음을 수행합니다."
+
+#: ../../source/upgrade_to_ees.rst:30
+msgid "list of all the current custom virtual environments and their paths (``list_custom_venvs``)"
+msgstr "현재 사용자 정의 가상 환경 및 해당 경로 모두 나열(``list_custom_venvs``)"
+
+#: ../../source/upgrade_to_ees.rst:31
+msgid "view the resources that rely a particular custom virtual environment (``custom_venv_associations``)"
+msgstr "특정 사용자 정의 가상 환경(``custom_venv_associations``)를 사용하는 리소스 보기"
+
+#: ../../source/upgrade_to_ees.rst:32
+msgid "export a particular custom virtual environment to a format that can be used to migrate to an |ee| (``export_custom_venv``)"
+msgstr "특정 사용자 정의 가상 환경을 |ee|(``export_custom_venv``)로 마이그레이션하는 데 사용할 수 있는 형식으로 내보내기"
+
+#: ../../source/upgrade_to_ees.rst:34
+msgid "Before you migrate, it is recommended that you view all the custom virtual environments you currently have running by using the ``awx-manage list`` command:"
+msgstr "마이그레이션하기 전에 ``awx-manage list`` 명령을 사용하여 현재 실행 중인 모든 사용자 정의 가상 환경을 확인하는 것이 좋습니다."
+
+#: ../../source/upgrade_to_ees.rst:40
+#: ../../source/upgrade_to_ees.rst:53
+msgid "Below is an example output when running this command:"
+msgstr "다음은 이 명령을 실행할 때의 출력 예입니다."
+
+#: ../../source/upgrade_to_ees.rst:44
+msgid "The above output shows three custom virtual environments and their paths. If you have a custom virtual environment that is not located within the default ``/var/lib/awx/venv/`` directory path, it will not be included here."
+msgstr "위 출력에는 사용자 정의 가상 환경 세 개와 해당 경로가 표시되어 있습니다. 기본 ``/var/lib/awx/venv/`` 디렉터리 경로 내에 없는 사용자 정의 가상 환경이 있는 경우 여기에 포함되지 않습니다."
+
+#: ../../source/upgrade_to_ees.rst:46
+msgid "Use the ``_associations`` command to view what organizations, jobs, and inventory sources a custom virtual environment is associated with in order to determine which resources rely on them:"
+msgstr "``_associations`` 명령을 사용하여 사용자 정의 가상 환경이 연결된 조직, 작업, 인벤토리 소스를 확인하여 이에 의존하는 리소스를 파악합니다."
+
+#: ../../source/upgrade_to_ees.rst:57
+msgid "Select a path for the virtual environment that you want to migrate and specify it in the ``awx-manage export`` command:"
+msgstr "마이그레이션할 가상 환경의 경로를 선택하고 ``awx-manage export`` 명령에 지정합니다."
+
+#: ../../source/upgrade_to_ees.rst:63
+msgid "The resulting output is essentially the results of executing a ``pip freeze`` command. The example shows the contents of the selected custom virtual environment:"
+msgstr "결과 출력은 기본적으로 ``pip freeze`` 명령을 실행한 결과입니다. 이 예제에서는 선택한 사용자 정의 가상 환경의 콘텐츠를 보여줍니다."
+
+#: ../../source/upgrade_to_ees.rst:69
+msgid "All of these commands can be run with a ``-q`` option, which removes the instructional content provided on each output."
+msgstr "이러한 명령은 모두 ``-q`` 옵션과 함께 실행할 수 있으며, 이 옵션은 각 출력에 제공된 지침 콘텐츠를 제거합니다."
+
+#: ../../source/upgrade_to_ees.rst:72
+msgid "Now that you have the output from this ``pip freeze`` data, you can paste it into a definition file that can be used to spin up your new |ee| using |ab|. Anyone (both normal users and admins) can use |ab| to create an |ee|. See :ref:`ug_build_ees` in the |atu| for further detail."
+msgstr "이 ``pip freeze`` 데이터의 출력이 생성되었으므로 |ab|를 사용하여 새 |ee|를 실행하는 데 사용하는 정의 파일에 이 출력을 붙여넣을 수 있습니다. 일반 사용자 및 관리자 모두 |ab|를 사용하여 |ee|을 생성할 수 있습니다. 자세한 내용은 |atu|의 :ref:`ug_build_ees`를 참조하십시오."
+
+#: ../../source/upgrade_to_ees.rst:79
+msgid "Migrate isolated instances to execution nodes"
+msgstr "격리된 인스턴스를 실행 노드에 마이그레이션"
+
+#: ../../source/upgrade_to_ees.rst:81
+msgid "The move from isolated instance groups to execution nodes enables inbound or outbound connections. Contrast this with versions 3.8 and older where only outbound connections were allowed from controller nodes to isolated nodes."
+msgstr "격리된 인스턴스 그룹에서 실행 노드로 이동하면 인바운드 또는 아웃바운드 연결이 가능합니다. 이는 컨트롤러 노드에서 격리된 노드로의 아웃바운드 연결만 허용된 3.8 이하 버전과 대조됩니다."
+
+#: ../../source/upgrade_to_ees.rst:83
+msgid "Migrating legacy isolated instance groups to execution nodes in order to function properly in the |at| mesh architecture in 4.1, is a preflight function of the installer that essentially creates an inventory file based on your old file. Even though both .ini and .yml files are still accepted formats, the generated file output is only an .ini file at this time."
+msgstr "기존의 격리된 인스턴스 그룹을 4.1의 |at| 메시 아키텍처에서 제대로 작동하도록 실행 노드로 마이그레이션하는 것은 기본적으로 이전 파일을 기반으로 인벤토리 파일을 생성하는 설치 프로그램의 실행 전 기능입니다. .ini 및 .yml 파일 형식 모두 계속 허용되지만 현재 생성된 파일 출력은 .ini 파일뿐입니다."
+
+#: ../../source/upgrade_to_ees.rst:85
+msgid "The preflight check leverages Ansible; and Ansible flattens the concept of children, this means that not every single inventory file can be replicated exactly, but it is very close. It will be functionally the same to Ansible, but may look different to you. The automated preflight processing does its best to create child relationships based on heuristics, but be aware that the tool lacks the nuance and judgment that human users have. Therefore, once the file is created, do **NOT** use it as-is. Check the file over and use it as a template to ensure that they work well for both you and the Ansible engine."
+msgstr "실행 전 검사에서는 Ansible을 활용하고 Ansible은 하위라는 개념을 병합합니다. 즉, 모든 단일 인벤토리 파일을 정확하게 복제할 수는 없지만 거의 비슷합니다. Ansible과 기능적으로 동일하지만 사용자에게 다르게 표시될 수 있습니다. 자동화된 실행 전 처리는 경험적 접근을 기반으로 하위 관계를 최대한 생성하지만, 이 툴에는 인간 사용자가 가지고 있는 뉘앙스와 판단력이 없다는 점에 유의하십시오. 따라서 파일이 생성되면 그대로 사용하지 **마십시오**. 파일을 검사하고 템플릿으로 사용하여 사용자와 Ansible 엔진 모두에 대해 제대로 작동하는지 확인하십시오."
+
+#: ../../source/upgrade_to_ees.rst:87
+msgid "Here is an example of a before and after preflight check, demonstrating how Ansible flattens an inventory file and how the installer reconstructs a new inventory file. To Ansible, both of these files are essentially the same."
+msgstr "다음은 실행 전 확인을 수행하기 전후의 예로, Ansible에서 인벤토리 파일을 병합하는 방법과 설치 프로그램에서 새 인벤토리 파일을 재구성하는 방법을 보여줍니다. Ansible의 경우 이 두 파일은 기본적으로 동일합니다."
+
+#: ../../source/upgrade_to_ees.rst:90
+msgid "Old style (from Ansible docs)"
+msgstr "이전 스타일(Ansible 문서)"
+
+#: ../../source/upgrade_to_ees.rst:90
+msgid "New style (generated by installer)"
+msgstr "새 스타일(설치 프로그램에서 생성)"
+
+#: ../../source/upgrade_to_ees.rst:137
+msgid "View mesh topology"
+msgstr "메시 토폴로지 보기"
+
+#: ../../source/upgrade_to_ees.rst:144
+msgid "If you configured a :term:`mesh` topology, the installer can graphically validate your mesh configuration through a generated graph rendering tool. The graph is generated by reading the contents of the inventory file. See the `Red Hat Ansible Automation Platform automation mesh guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/index>`_ for further detail."
+msgstr ":term:`mesh` 토폴로지를 구성한 경우 설치 프로그램은 생성된 그래프 렌더링 툴을 통해 메시 구성을 그래픽으로 검증할 수 있습니다. 그래프는 인벤토리 파일의 내용을 읽고 생성합니다. 자세한 내용은 `Red Hat Ansible Automation Platform automation mesh guide <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.1/html/red_hat_ansible_automation_platform_automation_mesh_guide/index>`_를 참조하십시오."
+
+#: ../../source/upgrade_to_ees.rst:148
+msgid "Any given inventory file must include some sort of execution capacity that is governed by at least one control :term:`node`. That is, it is unacceptable to produce an inventory file that only contains control-only nodes, execution-only nodes or hop-only nodes. There is a tightly coupled relationship between control and execution nodes that must be respected at all times. The installer will fail if the inventory files aren't properly defined. The only exception to this rule would be a single hybrid node, as it will satisfy the control and execution constraints."
+msgstr "지정된 인벤토리 파일에는 하나 이상의 제어 :term:`node`에서 관리하는 일종의 실행 용량이 포함되어야 합니다. 즉, 제어 전용 노드, 실행 전용 노드 또는 홉 전용 노드만 포함하는 인벤토리 파일을 생성하는 것은 허용되지 않습니다. 제어 노드와 실행 노드 사이에는 밀접하게 연결된 관계가 있으며 항상 준수해야 합니다. 인벤토리 파일이 올바르게 정의되지 않은 경우 설치 프로그램이 실패합니다. 이 규칙의 유일한 예외는 단일 하이브리드 노드이며, 제어 및 실행 제약 조건을 충족하기 때문입니다."
+
+#: ../../source/upgrade_to_ees.rst:150
+msgid "In order to run jobs on an execution node, either the installer needs to pre-register the node, or user needs to make a PATCH request to ``/api/v2/instances/N/`` to change the enabled field to true."
+msgstr "실행 노드에서 작업을 실행하려면 설치 프로그램에서 노드를 사전 등록하거나, 사용자가 ``/api/v2/instances/N/``에 패치를 요청하여 활성화된 필드를 True로 변경해야 합니다."
+
+#: ../../source/upgrade_to_ees.rst:152
+msgid "If you have already deployed a mesh topology and want to view node type, node health, and specific details about each node, see :ref:`ag_topology_viewer` in the |ata|."
+msgstr "메시 토폴로지를 이미 배포하고 각 노드에 대한 노드 유형, 노드 상태 및 특정 세부 정보를 보려면 :ref:에서`ag_topology_viewer` |ata|을/를 참조하십시오."
+

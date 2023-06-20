@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/webhooks.rst:4
+msgid "Working with Webhooks"
+msgstr "Webhook の使用"
+
+#: ../../source/webhooks.rst:12
+msgid "A :term:`Webhook` provides the ability to execute specified commands between apps over the web. |at| currently provides webhook integration with GitHub and GitLab. This section describes the procedure for setting up a webhook through their respective services."
+msgstr ":term:`Webhook` は、Web 経由でアプリ間で指定のコマンドを実行できるようにします。現在、|at| は GitHub および GitLab との間で、Webhook 統合を提供します。本セクションでは、適切なサービスを使用して Webhookを設定する手順を説明します。"
+
+#: ../../source/webhooks.rst:17
+msgid "The webhook post-status-back functionality for GitHub and GitLab is designed for work only under certain CI events. Receiving another kind of event will result in messages like the one below in the service log:"
+msgstr "GitHub および GitLab の Webhook のステータスのポストバック機能は、特定の CI イベントでのみ機能するように設計されています。別の種類のイベントを変更すると、以下のようなメッセージがサービスログに記録されます。"
+
+#: ../../source/webhooks.rst:25
+msgid "GitHub webhook setup"
+msgstr "GitHub Webhook の設定"
+
+#: ../../source/webhooks.rst:27
+msgid "|At| has the ability to run jobs based on a triggered webhook event coming in. Job status information (pending, error, success) can be sent back only for pull request events. If you determine you do not want |at| to post job statuses back to the webhook service, skip steps 1-2, and go directly to :ref:`step 3 <ug_webhooks_setup_github>`."
+msgstr "|At| は、トリガーされた Webhook イベントの着信に基づいてジョブを実行する機能があります。ジョブステータス情報 (pending、error、success) はプル要求イベントに対してのみ返信できます。|at| が Webhook サービスにジョブステータスを送信しないようにする場合は、ステップ 1-2 を行わずに :ref:`step 3 <ug_webhooks_setup_github>` に進んでください。"
+
+#: ../../source/webhooks.rst:29
+msgid "Optionally generate a personal access token (PAT) for use with |at|."
+msgstr "|at| で使用するパーソナルアクセストークン (PAT) をオプションで、生成します。"
+
+#: ../../source/webhooks.rst:31
+msgid "In the profile settings of your GitHub account, click **Settings**."
+msgstr "GitHub アカウントのプロファイル設定で、**設定** をクリックします。"
+
+#: ../../source/webhooks.rst:33
+msgid "At the very bottom of the settings, click **<> Developer Settings**."
+msgstr "設定の一番下で、**<> 開発者設定** をクリックします。"
+
+#: ../../source/webhooks.rst:35
+msgid "In the Developer settings, click **Personal access tokens**."
+msgstr "開発者の設定で **パーソナルアクセストークン** をクリックします。"
+
+#: ../../source/webhooks.rst:36
+msgid "From the Personal access tokens screen, click **Generate new token**."
+msgstr "パーソナルアクセストークンの画面から、**新規トークンを生成** をクリックします。"
+
+#: ../../source/webhooks.rst:37
+msgid "When prompted, enter your GitHub account password to continue."
+msgstr "プロンプトが表示されたら、GitHub アカウントのパスワードを入力して続行します。"
+
+#: ../../source/webhooks.rst:38
+msgid "In the **Note** field, enter a brief description about what this PAT will be used for."
+msgstr "**注** フィールドに、この PAT の用途に関する簡単な説明を入力します。"
+
+#: ../../source/webhooks.rst:39
+msgid "In the Scope fields, the automation webhook only needs repo scope access, with the exception of invites. For information about other scopes, click the link right above the table to access the docs."
+msgstr "スコープフィールドで、自動化 Webhook はリポジトリースコープアクセス (招待以外) だけが必要です。他のスコープに関する情報は、表のすぐ上にあるリンクをクリックしてドキュメントにアクセスしてください。"
+
+#: ../../source/webhooks.rst:43
+msgid "Click the **Generate Token** button."
+msgstr "**トークンの生成** ボタンをクリックします。"
+
+#: ../../source/webhooks.rst:45
+msgid "Once the token is generated, make sure you copy the PAT, as it will be used in a later step. You will not be able to access this token again in GitHub."
+msgstr "トークンが生成されたら、後の手順で使用するため、PAT をコピーしてください。GitHub でこのトークンに再度アクセスすることはできません。"
+
+#: ../../source/webhooks.rst:47
+msgid "Use the PAT to optionally create a GitHub credential:"
+msgstr "必要に応じて、PAT を使用して、GitHub の認証情報を作成します。"
+
+#: ../../source/webhooks.rst:49
+msgid "Go to your instance, and :ref:`create a new credential for the GitHub PAT <ug_credentials_github>` using the above generated token."
+msgstr "インスタンスに移動し、上記で生成したトークを使用して、:ref:`create a new credential for the GitHub PAT <ug_credentials_github>` してください。"
+
+#: ../../source/webhooks.rst:50
+#: ../../source/webhooks.rst:130
+msgid "Make note of the name of this credential, as it will be used in the job template that posts back to GitHub."
+msgstr "GitHub にポストバックするジョブテンプレートで使用するので、この認証情報の名前をメモしてください。"
+
+#: ../../source/webhooks.rst:54
+#: ../../source/webhooks.rst:134
+msgid "Go to the job template with which you want to enable webhooks, and select the webhook service and credential you created in the previous step."
+msgstr "Webhook を有効にするジョブテンプレートに移動し、前の手順で作成した Webhookサービスと資格情報を選択します。"
+
+#: ../../source/webhooks.rst:60
+msgid "Click **Save**. Now your job template is set up to be able to post back to GitHub. An example of one may look like this:"
+msgstr "**保存** をクリックします。これで、ジョブテンプレートが GitHub にポストバックできるように設定されました。以下に一例を挙げます。"
+
+#: ../../source/webhooks.rst:66
+msgid "Go to a specific GitHub repo you want to configure webhooks and click **Settings**."
+msgstr "Webhook を設定する特定の GitHub リポジトリーに移動し、**設定** をクリックします。"
+
+#: ../../source/webhooks.rst:70
+msgid "Under Options, click **Webhooks**."
+msgstr "オプションの中の ** Webhooks ** をクリックします。"
+
+#: ../../source/webhooks.rst:74
+msgid "On the Webhooks page, click **Add webhook**."
+msgstr "Webhook ページで、** Webhook の追加** をクリックします。"
+
+#: ../../source/webhooks.rst:76
+msgid "To complete the Add Webhook page, you need to :ref:`enable webhooks in a job template <ug_jt_enable_webhooks>` (or in a :ref:`workflow job template <ug_wfjt_enable_webhooks>`), which will provide you with the following information:"
+msgstr "Webhook の追加ページを入力するには、「:ref:`ジョブテンプレート <ug_jt_enable_webhooks>` (または :ref:`ワークフロージョブテンプレート <ug_wfjt_enable_webhooks>` で) Webhook を有効にする必要があります。有効にすると、以下の情報が提供されます。"
+
+#: ../../source/webhooks.rst:78
+msgid "Copy the contents of the **Webhook URL** from the job template, and paste it in the **Payload URL** field. GitHub uses this address to send results to."
+msgstr "ジョブテンプレートから **Webhook URL** の内容をコピーし、**Payload URL** フィールドに貼り付けます。GitHub は、結果の送信先としてこのアドレスを使用します。"
+
+#: ../../source/webhooks.rst:79
+msgid "Set the **Content type** to **application/json**."
+msgstr "**コンテンツタイプ** を **application/json** に設定します。"
+
+#: ../../source/webhooks.rst:80
+msgid "Copy the contents of the **Webhook Key** from the job template above and paste it in the **Secret** field."
+msgstr "上記のジョブテンプレートから **Webhook Key** の内容をコピーし、**シークレット** フィールドに貼り付けます。"
+
+#: ../../source/webhooks.rst:81
+#: ../../source/webhooks.rst:156
+msgid "Leave **Enable SSL verification** selected."
+msgstr "**SSL 検証を有効にする** を選択したままにします。"
+
+#: ../../source/webhooks.rst:87
+msgid "Next, you must select the types of events you want to trigger a webhook. Any such event will trigger the Job or Workflow. In order to have job status (pending, error, success) sent back to GitHub, you must select **Pull requests** in the individual events section."
+msgstr "次に、Webhook のトリガーとなるイベントのタイプを選択する必要があります。このようなイベントはジョブまたはワークフローをトリガーします。ジョブのステータス (pending、error、success) を GitHub に戻すには、個別の events セクションで **Pull requests** を選択する必要があります。"
+
+#: ../../source/webhooks.rst:91
+msgid "Leave **Active** checked and click **Add Webhook**."
+msgstr "**アクティブ** をオンのままにして、**Webhook の追加** をクリックします。"
+
+#: ../../source/webhooks.rst:96
+msgid "After your webhook is configured, it displays in the list of webhooks active for your repo, along with the ability to edit or delete it. Click on a webhook, and it brings you to the Manage webhook screen. Scroll to the very bottom of the screen to view all the delivery attempts made to your webhook and whether they succeeded or failed."
+msgstr "Webhook の設定が済むと、お使いのリポジトリーで有効な Webhook の一覧が表示され、この内容を編集または削除できるようになります。Webhook をクリックすると、Webhook の管理画面が表示されます。画面の一番下までスクロールして、Webhook に対する配信試行、配信結果 (成功または失敗) がすべて確認できます。"
+
+#: ../../source/webhooks.rst:100
+msgid "For more information, refer to the `GitHub Webhooks developer documentation <https://developer.github.com/webhooks/>`_."
+msgstr "詳細情報は、`GitLab webhooks 統合ドキュメント <https://docs.gitlab.com/ee/user/project/integrations/webhooks.html>`_ を参照してください。"
+
+#: ../../source/webhooks.rst:105
+msgid "GitLab webhook setup"
+msgstr "GitLab Webhook の設定"
+
+#: ../../source/webhooks.rst:107
+msgid "|At| has the ability to run jobs based on a triggered webhook event coming in. Job status information (pending, error, success) can be sent back only for merge request events. If you determine you do not want |at| to post job statuses back to the webhook service, skip steps 1-2, and go directly to :ref:`step 3 <ug_webhooks_setup_gitlab>`."
+msgstr "|At| は、トリガーされた Webhook イベントの着信に基づいてジョブを実行する機能があります。ジョブステータス情報 (pending、error、success) はマージ要求イベントに対してのみ返信できます。|at| が Webhook サービスにジョブステータスを送信しないようにする場合は、ステップ 1-2 を行わずに :ref:`step 3 <ug_webhooks_setup_gitlab>` に進んでください。"
+
+#: ../../source/webhooks.rst:109
+msgid "Optionally, generate a personal access token (PAT). This token gives |at| the ability to post statuses back when we run jobs based on a webhook coming in."
+msgstr "必要に応じて、パーソナルアクセストークン (PAT) を生成します。このトークンは、|at| で受信する Webhook をもとに、ジョブの実行時にステータスをポストバックできるようにします。"
+
+#: ../../source/webhooks.rst:111
+msgid "In the profile settings of your GitLab account, click **Settings**."
+msgstr "GitLab アカウントのプロファイル設定で、**設定** をクリックします。"
+
+#: ../../source/webhooks.rst:113
+msgid "On the sidebar, under User Settings, click **Access Tokens**."
+msgstr "サイドバーのユーザー設定で、**アクセストークン** をクリックします。"
+
+#: ../../source/webhooks.rst:117
+msgid "In the **Name** field, enter a brief description about what this PAT will be used for."
+msgstr "**名前** フィールドに、この PAT の使用目的に関する簡単な説明を入力します。"
+
+#: ../../source/webhooks.rst:118
+msgid "Skip the **Expires at** field unless you want to set an expiration date for your webhook."
+msgstr "Webhook の有効期限を設定する場合を除き、**有効期限** フィールドへの入力は省略します。"
+
+#: ../../source/webhooks.rst:119
+msgid "In the Scopes fields, select the ones applicable to your integration. For |at|, API is the only selection necessary."
+msgstr "スコープのフィールドで、統合に該当する内容を選択します。|at| の場合には、API のみを選択してください。"
+
+#: ../../source/webhooks.rst:123
+msgid "Click the **Create personal access token** button."
+msgstr "**パーソナルアクセストークンの作成** ボタンをクリックします。"
+
+#: ../../source/webhooks.rst:125
+msgid "Once the token is generated, make sure you copy the PAT, as it will be used in a later step. You will not be able to access this token again in GitLab."
+msgstr "トークンが生成されたら、後の手順で使用するため、PAT をコピーしてください。GitLab でこのトークンに再度アクセスすることはできません。"
+
+#: ../../source/webhooks.rst:127
+msgid "Use the PAT to optionally create a GitLab credential:"
+msgstr "必要に応じて、PAT を使用して、GitLab の認証情報を作成します。"
+
+#: ../../source/webhooks.rst:129
+msgid "Go to your instance, and :ref:`create a new credential for the GitLab PAT <ug_credentials_gitlab>` using the above generated token."
+msgstr "インスタンスに移動し、上記で生成したトークを使用して、:ref:`create a new credential for the GitLab PAT <ug_credentials_gitlab>` してください。"
+
+#: ../../source/webhooks.rst:140
+msgid "Click **Save**. Now your job template is set up to be able to post back to GitLab. An example of one may look like this:"
+msgstr "**保存** をクリックします。これで、ジョブテンプレートが GitLab にポストバックできるように設定されました。以下に一例を挙げます。"
+
+#: ../../source/webhooks.rst:147
+msgid "Go to a specific GitLab repo you want to configure webhooks and click **Settings > Integrations**."
+msgstr "Webhook を設定する特定の GitLab リポジトリーに移動し、**設定 > 統合** をクリックします。"
+
+#: ../../source/webhooks.rst:151
+msgid "To complete the Integrations page, you need to :ref:`enable webhooks in a job template <ug_jt_enable_webhooks>` (or in a :ref:`workflow job template <ug_wfjt_enable_webhooks>`), which will provide you with the following information:"
+msgstr "Webhook の追加ページを入力するには、「:ref:`ジョブテンプレート <ug_jt_enable_webhooks>` (または :ref:`ワークフロージョブテンプレート <ug_wfjt_enable_webhooks>` で) Webhook を有効にする必要があります。有効にすると、以下の情報が提供されます。"
+
+#: ../../source/webhooks.rst:153
+msgid "Copy the contents of the **Webhook URL** from the job template above, and paste it in the **URL** field. GitLab uses this address to send results to."
+msgstr "上記のジョブテンプレートから **Webhook URL** の内容をコピーし、**URL** フィールドに貼り付けます。GitLab は、結果の送信先としてこのアドレスを使用します。"
+
+#: ../../source/webhooks.rst:154
+msgid "Copy the contents of the **Webhook Key** from the job template above and paste it in the **Secret Token** field."
+msgstr "上記のジョブテンプレートから **Webhook Key** の内容をコピーし、**シークレットトークン** フィールドに貼り付けます。"
+
+#: ../../source/webhooks.rst:155
+msgid "Next, you must select the types of events you want to trigger a webhook. Any such event will trigger the Job or Workflow. In order to have job status (pending, error, success) sent back to GitLab, you must select **Merge request events** in the Trigger section."
+msgstr "次に、Webhook のトリガーとなるイベントのタイプを選択する必要があります。このようなイベントはジョブまたはワークフローをトリガーします。ジョブのステータス (pending、error、success) を GitLab に戻すには、Trigger セクションで **Merge request events** を選択する必要があります。"
+
+#: ../../source/webhooks.rst:157
+msgid "Click **Add webhook**."
+msgstr "**Webhook の追加** をクリックします。"
+
+#: ../../source/webhooks.rst:162
+msgid "After your webhook is configured, it displays in the list of Project Webhooks for your repo, along with the ability to test events, edit or delete the webhook. Testing a webhook event displays the results at the top of the page whether it succeeded or failed."
+msgstr "Webhook を設定すると、リポジトリーのプロジェクト Webhook の一覧に表示され、イベントのテストと、Webhook の編集および削除ができるようになります。Webhook イベントをテストすると、成功/失敗に関わらず、ページの上部に結果が表示されます。"
+
+#: ../../source/webhooks.rst:164
+msgid "For more information, refer to the `GitLab webhooks integrations documentation <https://docs.gitlab.com/ee/user/project/integrations/webhooks.html>`_."
+msgstr "詳細情報は、`GitLab webhooks integrations documentation <https://docs.gitlab.com/ee/user/project/integrations/webhooks.html>`_ を参照してください。"
+
+#: ../../source/webhooks.rst:168
+msgid "Payload output"
+msgstr "ペイロードの出力"
+
+#: ../../source/webhooks.rst:170
+msgid "The entire payload is exposed as an extra variable. To view the payload information, go to the Jobs Detail view of the job template that ran with the webhook enabled. In the **Extra Variables** field of the Details pane, view the payload output from the ``awx_webhook_payload`` variable, as shown in the example below."
+msgstr "全ペイロードが、追加変数として公開されます。ペイロード情報を表示するには、webhook を有効にして実行したジョブテンプレートのジョブテンプレートの詳細ビューに移動します。以下の例のように、詳細ペインの **追加変数** フィールドで、``awx_webhook_payload`` 変数からのペイロードの出力が確認できます。"
+

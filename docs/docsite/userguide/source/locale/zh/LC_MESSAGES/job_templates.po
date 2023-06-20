@@ -1,0 +1,1223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/job_templates.rst:4
+msgid "Job Templates"
+msgstr "作业模板"
+
+#: ../../source/job_templates.rst:13
+msgid "A :term:`job template` is a definition and set of parameters for running an Ansible job. Job templates are useful to execute the same job many times. Job templates also encourage the reuse of Ansible playbook content and collaboration between teams."
+msgstr ":term:`job template` 是用于运行 Ansible 作业的定义和参数集。作业模板对于多次执行同一作业很有用。作业模板还可促进 Ansible playbook 内容的重复使用和团队之间的协作。"
+
+#: ../../source/job_templates.rst:15
+msgid "The **Templates** menu opens a list of the job templates that are currently available. The default view is collapsed (Compact), showing the template name, template type, and the timestamp of last job that ran using that template. You can click **Expanded** (arrow next to each entry) to expand to view more information. This list is sorted alphabetically by name, but you can sort by other criteria, or search by various fields and attributes of a template."
+msgstr "**Templates** 菜单会打开当前可用的作业模板列表。默认视图为折叠状态 (Compact)，显示模板名称、模板类型和使用该模板运行的最后一个作业的时间戳，但您可以点击 **Expanded**（每个项旁边的箭头） 查看更多信息。该列表按名称字母顺序排序，但您可以按照其他条件排序，或者根据模板的不同字段和属性进行搜索。"
+
+#: ../../source/job_templates.rst:17
+#: ../../source/job_templates.rst:448
+msgid "|Job templates - home with example job template|"
+msgstr "|Job templates - home with example job template|"
+
+#: ../../source/job_templates.rst:22
+msgid "From this screen, you can launch (|launch|), edit (|edit|), and copy (|copy|) a job template. To delete a job template, you must select one or more templates and click the **Delete** button. Before deleting a job template, be sure it is not used in a workflow job template."
+msgstr "在这个屏幕中，您可以启动(|launch|)、编辑(|edit|)和复制(|copy|)作业模板。要删除作业模板，您必须选择一个或多个模板并点击 **Delete** 按钮。删除作业模板前，请确定在工作流作业模板中使用。"
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "如果删除了由其他工作项目使用的项，则会打开一条信息，列出会受到删除影响的项，并提示您确认删除。一些界面会包括无效的或以前已被删除的项，因此它们将无法运行。以下是这类信息的一个示例："
+
+#: ../../source/job_templates.rst:33
+msgid "Job templates can be used to build a workflow template. For templates that show the Workflow Visualizer (|wf-viz-icon|) icon next to them are workflow templates. Clicking it allows you to graphically build a workflow. Many parameters in a job template allow you to enable **Prompt on Launch** that can be modified at the workflow level, and do not affect the values assigned at the job template level. For instructions, see the :ref:`ug_wf_editor` section."
+msgstr "作业模板可以用来构建工作流模板。旁边显示工作流可视化工具 (|wf-viz-icon|) 图标的模板为工作流模板。点击此图标可通过图形方式构建工作流。作业模板中的许多参数允许您启用 **Prompt on Launch**，这些参数可在工作流级别进行修改，且不会影响在作业模板级别分配的值。如需了解相关说明，请参阅 :ref:`ug_wf_editor` 部分。"
+
+#: ../../source/job_templates.rst:38
+msgid "Create a Job Template"
+msgstr "创建作业模板"
+
+#: ../../source/job_templates.rst:40
+msgid "To create a new job template:"
+msgstr "要创建新作业模板，请执行以下操作："
+
+#: ../../source/job_templates.rst:42
+msgid "Click the **Add** button then select **Job Template** from the menu list."
+msgstr "点 **Add** 按钮，然后从菜单列表中选择 **Job Template**。"
+
+#: ../../source/job_templates.rst:45
+msgid "Enter the appropriate details into the following fields:"
+msgstr "在以下字段中输入相关信息："
+
+#: ../../source/job_templates.rst:47
+msgid "**Name**: Enter a name for the job."
+msgstr "**Name**：输入作业名称。"
+
+#: ../../source/job_templates.rst:48
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)."
+msgstr "**Description**：根据需要输入任意描述（可选）。"
+
+#: ../../source/job_templates.rst:49
+msgid "**Job Type**: Choose a job type:"
+msgstr "**Job Type**：选择作业类型："
+
+#: ../../source/job_templates.rst:51
+msgid "**Run**: Execute the playbook when launched, running Ansible tasks on the selected hosts."
+msgstr "**Run**：启动时执行 playbook，在所选主机上运行 Ansible 任务。"
+
+#: ../../source/job_templates.rst:52
+msgid "**Check**: Perform a \"dry run\" of the playbook and report changes that would be made without actually making them. Tasks that do not support check mode will be skipped and will not report potential changes."
+msgstr "**Check**：执行 playbook 的“dry run”并报告将要进行的更改，而无需实际进行更改。不支持检查模式的任务将被跳过，且不会报告潜在的更改。"
+
+#: ../../source/job_templates.rst:54
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a job type of run or check."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择运行或检查作业类型。"
+
+#: ../../source/job_templates.rst:58
+msgid "More information on job types can be found in the `Playbooks: Special Topics <http://docs.ansible.com/playbooks_special_topics.html>`__ section of the Ansible documentation."
+msgstr "有关作业类型的更多信息，请参阅 Ansible 文档的 `Playbooks: Special Topics <http://docs.ansible.com/playbooks_special_topics.html>`__ 部分。"
+
+#: ../../source/job_templates.rst:60
+msgid "**Inventory**: Choose the inventory to be used with this job template from the inventories available to the currently logged in user."
+msgstr "**Inventory**：从当前登录的用户可用的清单中选择要用于此作业模板的清单。"
+
+#: ../../source/job_templates.rst:62
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose an inventory to run this job template against."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择要针对哪个清单来运行此作业模板。"
+
+#: ../../source/job_templates.rst:64
+msgid "**Project**: Choose the project to be used with this job template from the projects available to the currently logged in user."
+msgstr "**Project**：从当前登录的用户可用的项目中选择要用于此作业模板的项目。"
+
+#: ../../source/job_templates.rst:66
+msgid "**SCM Branch**: This field is only present if you chose a project that allows branch override. Specify the overriding branch to use in your job run. If left blank, the specified SCM branch (or commit hash or tag) from the project is used. For more detail, see :ref:`job branch overriding <ug_job_branching>`."
+msgstr "**SCM Branch**：仅当您选择允许分支覆盖的项目时，才会出现此字段。指定要在作业运行中使用的覆盖分支。如果留空，则使用项目中指定的 SCM 分支（或提交散列或标签）。有关更多详情，请参阅 :ref:`job branch overriding <ug_job_branching>`。"
+
+#: ../../source/job_templates.rst:68
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose an SCM branch."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择一个 SCM 分支。"
+
+#: ../../source/job_templates.rst:70
+msgid "**Playbook**: Choose the playbook to be launched with this job template from the available playbooks. This field automatically populates with the names of the playbooks found in the project base path for the selected project. Alternatively, you can enter the name of the playbook if it is not listed, such as the name of a file (like ``foo.yml``) you want to use to run with that playbook. If you enter a filename that is not valid, the template will display an error, or cause the job to fail."
+msgstr "**Playbook**：从可用的 playbook 中选择要使用这个作业模板启动的 playbook。此字段会自动填充选定项目的项目基本路径中的 playbook 名称。或者，如果未列出 playbook 的名称，您可以输入它，例如要您与该 playbook 一起运行的文件的名称（类似 ``foo.yml``）。如果输入无效的文件名，模板将会显示错误，或者导致作业失败。"
+
+#: ../../source/job_templates.rst:72
+msgid "**Credentials**: Click the |search| button to open a separate window. Choose the credential from the available options to be used with this job template. Use the drop-down menu list to filter by credential type if the list is extensive."
+msgstr "**Credentials**：点击 |search| 按钮以打开单独的窗口。从可用的选项中选择要用于此作业模板的凭证。如果列表较长，请使用下拉菜单按凭证类型进行过滤。"
+
+#: ../../source/job_templates.rst:76
+msgid "Some credential types are not listed because they do not apply to certain job templates."
+msgstr "某些凭证类型不会被列出，因为它们不适用于某些作业模板。"
+
+#: ../../source/job_templates.rst:83
+msgid "**Prompt on Launch**: If selected, upon launching a job template that has a default machine credential, you will not be able to remove the default machine credential in the Prompt dialog without replacing it with another machine credential before it can launch. Alternatively, you can add more credentials as you see fit. Below is an example of such a message:"
+msgstr "**Prompt on Launch**：如果选择此选项，在启动具有默认机器凭证的作业模板时，如果在启动前未将默认机器凭证替换为另一个机器凭证，您将无法在 Prompt 对话框中删除默认机器凭证。或者，您可以添加更多您认为合适的凭证。以下是此类消息的示例："
+
+#: ../../source/job_templates.rst:85
+#: ../../source/job_templates.rst:252
+msgid "|creds-missing-replace|"
+msgstr "|creds-missing-replace|"
+
+#: ../../source/job_templates.rst:90
+msgid "**Forks**: The number of parallel or simultaneous processes to use while executing the playbook. A value of zero uses the Ansible default setting, which is 5 parallel processes unless overridden in ``/etc/ansible/ansible.cfg``."
+msgstr "**Forks**：执行 playbook 时使用的并行或同步进程数量。如果为零则代表使用 Ansible 默认设置，即 5 个并行进程，除非在 ``/etc/ansible/ansible.cfg`` 中被覆盖。"
+
+#: ../../source/job_templates.rst:92
+msgid "**Limit**: A host pattern to further constrain the list of hosts managed or affected by the playbook. Multiple patterns can be separated by colons (\":\"). As with core Ansible, \"a:b\" means \"in group a or b\", \"a:b:&c\" means \"in a or b but must be in c\", and \"a:!b\" means \"in a, and definitely not in b\"."
+msgstr "**Limit**：用于进一步限制受 playbook 管理或影响的主机列表的主机模式。可以用冒号（“:”）来分隔多个模式。与核心 Ansible 一样，“a:b”表示“在组 a 或 b 中”，“a:b:&c”表示“在 a 或 b 中但必须在 c 中”，“a:!b”表示“在 a 中且一定不在 b 中”。"
+
+#: ../../source/job_templates.rst:94
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a limit."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择一个限制。"
+
+#: ../../source/job_templates.rst:98
+msgid "For more information and examples refer to `Patterns <http://docs.ansible.com/intro_patterns.html>`__ in the Ansible documentation."
+msgstr "更多信息和示例请参阅 Ansible 文档中的 `Patterns <http://docs.ansible.com/intro_patterns.html>`__。"
+
+#: ../../source/job_templates.rst:100
+msgid "**Verbosity**: Control the level of output Ansible produces as the playbook executes. Choose the verbosity from Normal to various Verbose or Debug settings. This only appears in the \"details\" report view. Verbose logging includes the output of all commands. Debug logging is exceedingly verbose and includes information on SSH operations that can be useful in certain support instances. Most users do not need to see debug mode output."
+msgstr "**Verbosity**：在 playbook 执行时，控制 Ansible 生成的输出等级。选择从 Normal 到各种 Verbose 或 Debug 设置的详细程度。此项仅出现在“详情”报告视图中。Verbose 日志记录中包括所有命令的输出。Debug 日志记录非常详细，并包含了在特定支持实例中很有用的有关 SSH 操作的信息。大多数用户不需要查看调试模式输出。"
+
+#: ../../source/job_templates.rst:104
+msgid "Verbosity 5 causes |at| to block heavily when jobs are running, which could delay reporting that the job has finished (even though it has) and can cause the browser tab to lock up."
+msgstr "详细程度 5 会导致 |at| 在作业运行时大量阻断，这可能会延迟报告作业已完成（即使它已经完成），并可能导致浏览器标签页锁定。"
+
+#: ../../source/job_templates.rst:106
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a verbosity."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择一个详细程度。"
+
+#: ../../source/job_templates.rst:108
+msgid "**Job Tags**: Provide a comma-separated list of playbook tags to specify what parts of the playbooks should be executed. For more information and examples refer to `Tags <http://docs.ansible.com/playbooks_tags.html>`__ in the Ansible documentation."
+msgstr "**Job Tags**：提供以逗号分隔的 playbook 标签列表，以指定应执行 playbook 的哪些部分。有关更多信息和示例，请参阅 Ansible 文档中的 `Tags <http://docs.ansible.com/playbooks_tags.html>`__。"
+
+#: ../../source/job_templates.rst:110
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a job tag."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择一个作业标签。"
+
+#: ../../source/job_templates.rst:113
+msgid "**Skip Tags**: Provide a comma-separated list of playbook tags to skip certain tasks or parts of the playbooks to be executed. For more information and examples refer to `Tags <http://docs.ansible.com/playbooks_tags.html>`__ in the Ansible documentation."
+msgstr "**Skip Tags**：提供以逗号分隔的 playbook 标签列表，以跳过执行 playbook 的某些任务或部分。有关更多信息和示例，请参阅 Ansible 文档中的 `Tags <http://docs.ansible.com/playbooks_tags.html>`__。"
+
+#: ../../source/job_templates.rst:115
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose tag(s) to skip."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择一个要跳过的标签。"
+
+#: ../../source/job_templates.rst:119
+msgid "**Labels**: Supply optional labels that describe this job template, such as \"dev\" or \"test\". Labels can be used to group and filter job templates and completed jobs in the display."
+msgstr "**Labels**：提供描述此作业模板的可选标签，如“dev”或“test”。标签可用于对显示中的作业模板和完成的作业进行分组和过滤。"
+
+#: ../../source/job_templates.rst:121
+msgid "Labels are created when they are added to the Job Template. Labels are associated to a single Organization using the Project that is provided in the Job Template. Members of the Organization can create labels on a Job Template if they have edit permissions (such as admin role)."
+msgstr "在将标签添加到作业模板时会创建标签。标签使用作业模板中提供的项目关联到单个机构。如果机构成员具有编辑权限（如 admin 角色），则他们可在作业模板中创建标签。"
+
+#: ../../source/job_templates.rst:122
+msgid "Once the Job Template is saved, the labels appear in the Job Templates overview in the *Expanded* view."
+msgstr "保存作业模板后，标签会显示在 *Expanded* 视图的作业模板概述中。"
+
+#: ../../source/job_templates.rst:123
+msgid "Click on the \"x\" beside a label to remove it. When a label is removed, and is no longer associated with a Job or Job Template, the label is permanently deleted from the list of Organization labels."
+msgstr "点击标签旁边的“x”可删除它。标签被删除后，便不再与作业或作业模板关联，该标签会从机构标签列表中永久删除。"
+
+#: ../../source/job_templates.rst:124
+msgid "Jobs inherit labels from the Job Template at the time of launch. If a label is deleted from a Job Template, it is also deleted from the Job."
+msgstr "在启动时，作业会继承作业模板中的标签。如果从作业模板中删除某个标签，它也会从作业中删除。"
+
+#: ../../source/job_templates.rst:126
+msgid "**Instance Groups**: Click the |search| button to open a separate window. Choose the instance groups on which you want to run this job template. If the list is extensive, use the search to narrow the options."
+msgstr "**Instance Groups**：点击 |search| 按钮以打开单独的窗口。选择要在其上面运行此作业模板的实例组。如果列表较长，请使用搜索功能来缩小选项范围。"
+
+#: ../../source/job_templates.rst:128
+msgid "**Job Slicing**: Specify the number of slices you want this job template to run. Each slice will run the same tasks against a portion of the inventory. For more information about job slices, see :ref:`ug_job_slice`."
+msgstr "**Job Slicing**：指定您希望此作业模板运行的分片数。每个分片将针对清单的一部分运行相同的任务。如需了解更多有关作业分片的信息，请参阅 :ref:`ug_job_slice`。"
+
+#: ../../source/job_templates.rst:130
+msgid "**Timeout**:  Allows you to specify the length of time (in seconds) that the job may run before it is canceled. Defaults to 0 for no job timeout."
+msgstr "**Timeout**：允许您指定在任务被取消前可以运行该任务的时间限度（以秒为单位）。默认为 0，即没有作业超时。"
+
+#: ../../source/job_templates.rst:132
+msgid "**Show Changes**: Allows you to see the changes made by Ansible tasks."
+msgstr "**Show Changes**：允许您查看 Ansible 任务所做的更改。"
+
+#: ../../source/job_templates.rst:134
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose whether or not to show changes."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择是否显示更改。"
+
+#: ../../source/job_templates.rst:136
+msgid "**Options**: Specify options for launching this template, if necessary."
+msgstr "**Options**：根据需要指定启动此模板的选项。"
+
+#: ../../source/job_templates.rst:138
+msgid "**Privilege Escalation**: If checked, you enable this playbook to run as an administrator. This is the equivalent of passing the ``--become`` option to the ``ansible-playbook`` command."
+msgstr "**Privilege Escalation**：如果选择此项，代表以管理员身份运行此 playbook。这等同于将 ``--become`` 选项传递给 ``ansible-playbook`` 命令。"
+
+#: ../../source/job_templates.rst:139
+msgid "**Provisioning Callbacks**: If checked, you enable a host to call back to |at| via the REST API and invoke the launch of a job from this job template. Refer to :ref:`ug_provisioning_callbacks` for additional information."
+msgstr "**Provisioning Callbacks**：如果选择此项，代表启用主机通过 REST API 回调至 |at|，并调用从该作业模板启动作业。如需了解更多信息，请参阅 :ref:`ug_provisioning_callbacks`。"
+
+#: ../../source/job_templates.rst:140
+msgid "**Enable Webhook**: Turns on the ability to interface with a predefined SCM system web service that is used to launch a job template. Currently supported SCM systems are GitHub and GitLab."
+msgstr "**Enable Webhook**：打开与用于启动作业模板的预定义 SCM 系统 Web 服务进行接口的功能。当前支持的 SCM 系统为 GitHub 和 GitLab。"
+
+#: ../../source/job_templates.rst:144
+msgid "If you enable webhooks, other fields display, prompting for additional information:"
+msgstr "如果您启用 Webhook，会显示其他字段，提示输入更多信息："
+
+#: ../../source/job_templates.rst:148
+msgid "**Webhook Service**: Select which service to listen for webhooks from"
+msgstr "**Webhook Service**：从中选择侦听 Webhook 的服务"
+
+#: ../../source/job_templates.rst:149
+msgid "**Webhook URL**: Automatically populated with the URL for the webhook service to POST requests to."
+msgstr "**Webhook URL**：自动填充将 POST 请求发送到的 Webhook 服务的 URL。"
+
+#: ../../source/job_templates.rst:150
+msgid "**Webhook Key**: Generated shared secret to be used by the webhook service to sign payloads sent to |at|. This must be configured in the settings on the webhook service in order for |at| to accept webhooks from this service."
+msgstr "**Webhook Key**：生成的共享 secret，供 Webhook 服务用来签署发送到 |at| 的有效负载。必须在 Webhook 服务上的设置中对此进行配置，以使 |at| 接受来自该服务的 Webhook。"
+
+#: ../../source/job_templates.rst:151
+msgid "**Webhook Credential**: Optionally, provide a GitHub or GitLab personal access token (PAT) as a credential to use to send status updates back to the webhook service. Before you can select it, the credential must exist. See :ref:`ug_credentials_cred_types` to create one."
+msgstr "**Webhook Credential**（可选）：提供 GitHub 或 GitLab 个人访问令牌 (PAT) 作为凭证，用来向 Webhook 服务发回状态更新。在可以选择之前，凭证必须存在。请参阅 :ref:`ug_credentials_cred_types` 以创建一个凭证。"
+
+#: ../../source/job_templates.rst:153
+msgid "For additional information on setting up webhooks, see :ref:`ug_webhooks`."
+msgstr "有关设置 Webhook 的更多信息，请参阅 :ref:`ug_webhooks`。"
+
+#: ../../source/job_templates.rst:156
+msgid "**Concurrent Jobs**: If checked, you are allowing jobs in the queue to run simultaneously if not dependent on one another. Check this box if you want to run job slices simultaneously. Refer to :ref:`ug_job_concurrency` for additional information."
+msgstr "**Concurrent Jobs**：如果选择，代表如果队列中的作业不相互依赖，则允许它们同时运行。如果您想同时运行作业分片，请选中此复选框。如需了解更多信息，请参阅 :ref:`ug_job_concurrency`。"
+
+#: ../../source/job_templates.rst:157
+msgid "**Enable Fact Storage**: When checked, |at| will store gathered facts for all hosts in an inventory related to the job running."
+msgstr "**Enable Fact Storage**：当选中时，|at| 将收集到与作业运行相关的清单中所有主机的事实。"
+
+#: ../../source/job_templates.rst:160
+msgid "**Extra Variables**:"
+msgstr "**Extra Variables**："
+
+#: ../../source/job_templates.rst:162
+msgid "Pass extra command line variables to the playbook. This is the \"-e\" or \"--extra-vars\" command line parameter for ansible-playbook that is documented in the Ansible documentation at `Passing Variables on the Command Line <http://docs.ansible.com/playbooks_variables.html#passing-variables-on-the-command-line>`__."
+msgstr "向 playbook 传递额外的命令行变量。这是 ansible-playbook 的“-e”或“--extra-vars”命令行参数，记录在 Ansible 文档中，请参阅 `Passing Variables on the Command Line <http://docs.ansible.com/playbooks_variables.html#passing-variables-on-the-command-line>`__。"
+
+#: ../../source/job_templates.rst:163
+msgid "Provide key/value pairs using either YAML or JSON. These variables have a maximum value of precedence and overrides other variables specified elsewhere. An example value might be:"
+msgstr "使用 YAML 或 JSON 提供键/值对。这些变量具有最大优先级值并且会覆盖在其他位置指定的其他变量。示例值可能为："
+
+#: ../../source/job_templates.rst:170
+msgid "See :ref:`ug_jobtemplates_extravars` for more information."
+msgstr "如需更多信息，请参阅 :ref:`ug_jobtemplates_extravars`。"
+
+#: ../../source/job_templates.rst:172
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose command line variables."
+msgstr "**Prompt on Launch**：如果选择此选项，即使提供了默认值，也会在启动时提示您选择一个命令行变量。"
+
+#: ../../source/job_templates.rst:176
+msgid "If you want to be able to specify ``extra_vars`` on a schedule, you must select **Prompt on Launch** for **EXTRA VARIABLES** on the job template, or a enable a survey on the job template, then those answered survey questions become ``extra_vars``."
+msgstr "如果您希望能够在计划中指定 ``extra_vars``，您必须在作业模板中为 **EXTRA VARIABLES** 选择 **Prompt on Launch**，或者在作业模板中启用问卷调查，然后那些回答的问卷调查问题将成为 ``extra_vars``。"
+
+#: ../../source/job_templates.rst:178
+msgid "|Job templates - create new job template|"
+msgstr "|Job templates - create new job template|"
+
+#: ../../source/job_templates.rst:182
+msgid "When you have completed configuring the details of the job template, click **Save**."
+msgstr "当您完成作业模板详情配置后，请点击 **Save**。"
+
+#: ../../source/job_templates.rst:184
+msgid "Saving the template does not exit the job template page but advances to the Job Template Details tab for viewing. After saving the template, you can click **Launch** to launch the job, or click **Edit** to add or change the attributes of the template, such as permissions, notifications, view completed jobs, and add a survey (if the job type is not a scan). You must first save the template prior to launching, otherwise, the **Launch** button remains grayed-out."
+msgstr "保存该模板不会退出作业模板页面，而是进入到作业模板详情标签页用于查看信息。在保存模板后，您可以点击 **Launch** 来启动作业，或者继续添加更多有关模板的属性，如权限、通知，查看已完成的作业，以及添加一个调查问卷（如果作业类型不是扫描）。在启动之前，您必须先保存模板，否则 **Launch** 按钮将一直灰显。"
+
+#: ../../source/job_templates.rst:188
+msgid "You can verify the template is saved when the newly created template appears on the Templates list view."
+msgstr "当新创建的模板出现在模板列表中时，代表模板已保存。"
+
+#: ../../source/job_templates.rst:193
+msgid "Add Permissions"
+msgstr "添加权限"
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "在 **Access** 选项卡中，点 **Add** 按钮。"
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "选择要添加的用户或团队并点 **Next**"
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "点名称旁边的复选框从列表中选择一个或多个用户或团队，将它们添加为成员并点 **Next**。"
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "在这个示例中，选择了两个用户来添加。"
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "选择您希望所选用户或团队具有的角色。请确保向下滚动以获得完整的角色列表。不同的资源有不同的可用选项。"
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "点 **Save** 按钮将角色应用到所选用户或团队，并将它们添加为成员。"
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "将关闭 Add Users/Teams 窗口，以显示为每个用户和团队分配的更新角色。"
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "若要删除特定用户的角色，可单击其资源旁边的解除关联(x)按钮。"
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "这会出现确认对话框，要求您确认解除关联。"
+
+#: ../../source/job_templates.rst:199
+msgid "Work with Notifications"
+msgstr "使用通知"
+
+#: ../../source/job_templates.rst:201
+msgid "Clicking the **Notifications** tab allows you to review any notification integrations you have setup and their statuses, if they have ran."
+msgstr "点 **Notifications** 标签页可以查看您设置的任何通知集成以及它们的状态（如果已运行）。"
+
+#: ../../source/job_templates.rst:205
+msgid "Use the toggles to enable or disable the notifications to use with your particular template. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "请使用切换按钮启用或禁用要与特定模板搭配使用的通知。更多详情请参阅 :ref:`ug_notifications_on_off`。"
+
+#: ../../source/job_templates.rst:207
+msgid "If no notifications have been set up, click the **Add** button to create a new notification. Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types and extended messaging."
+msgstr "如果没有设置通知，点 **Add** 按钮创建新通知。如需配置各种通知类型和扩展消息传递的详情，请参阅 :ref:`ug_notifications_types`。"
+
+#: ../../source/job_templates.rst:211
+msgid "View Completed Jobs"
+msgstr "查看完成的作业"
+
+#: ../../source/job_templates.rst:213
+msgid "The **Completed Jobs** tab provides the list of job templates that have ran. Click **Expanded** to view details of each job, including its status, ID, and name; type of job, time started and completed, who started the job; and which template, inventory, project, and credential were used. You can filter the list of completed jobs using any of these criteria."
+msgstr "**Completed Jobs** 标签页提供了已运行的作业模板列表。点击 **Expanded** 查看每个作业的详情，包括其状态、ID 和名称、作业类型、启动和完成的时间、谁启动了作业，以及使用了哪个模板、清单、项目和凭证。您可以使用任何这些条件过滤已完成的作业列表。"
+
+#: ../../source/job_templates.rst:218
+msgid "Sliced jobs that display on this list are labeled accordingly, with the number of sliced jobs that have run:"
+msgstr "在此列表中显示的切片作业会进行相应标记，包含已运行的分片作业数量："
+
+#: ../../source/job_templates.rst:224
+msgid "Scheduling"
+msgstr "调度"
+
+#: ../../source/job_templates.rst:230
+msgid "Access the schedules for a particular job template from the **Schedules** tab."
+msgstr "从 **Schedules** 标签页访问特定作业模板的计划。"
+
+#: ../../source/job_templates.rst:232
+msgid "|Job Templates - schedule launch|"
+msgstr "|Job Templates - schedule launch|"
+
+#: ../../source/job_templates.rst:238
+msgid "Schedule a Job Template"
+msgstr "调度作业模板"
+
+#: ../../source/job_templates.rst:244
+msgid "To schedule a job template run, click the **Schedules** tab."
+msgstr "要调度作业模板运行，请点击 **Schedules** 标签页。"
+
+#: ../../source/job_templates.rst:246
+msgid "If schedules are already set up; review, edit, or enable/disable your schedule preferences."
+msgstr "如果已经设置了调度，请检查、编辑或启用/禁用您的调度首选项。"
+
+#: ../../source/job_templates.rst:247
+msgid "If schedules have not been set up, refer to :ref:`ug_scheduling` for more information."
+msgstr "如果还没有设置调度，请参阅 :ref:`ug_scheduling` 了解更多信息。"
+
+#: ../../source/job_templates.rst:250
+msgid "If **Prompt on Launch** was selected for the **Credentials** field, and you create or edit scheduling information for your job template, a **Prompt** button displays at the bottom of the Schedules form. You will not be able to remove the default machine credential in the Prompt dialog without replacing it with another machine credential before you can save it. Below is an example of such a message:"
+msgstr "如果在 **Credentials** 字段中选择了 **Prompt on Launch**，当您为作业模板创建或编辑调度信息时，Schedules 表单的底部将显示 **Prompt** 按钮。如果没有在保存前将默认机器凭证替换为另一个机器凭证，您将无法在 Prompt 对话框中删除默认机器凭证。以下是此类消息的示例："
+
+#: ../../source/job_templates.rst:256
+msgid "To able to set ``extra_vars`` on schedules, you must select **Prompt on Launch** for **EXTRA VARIABLES** on the job template, or a enable a survey on the job template, then those answered survey questions become ``extra_vars``."
+msgstr "为了能够在计划中设置 ``extra_vars``，您必须在作业模板中为 **EXTRA VARIABLES** 选择 **Prompt on Launch**，或者在作业模板中启用问卷调查，然后那些回答的问卷调查问题将成为 ``extra_vars``。"
+
+#: ../../source/job_templates.rst:262
+msgid "Surveys"
+msgstr "调查"
+
+#: ../../source/job_templates.rst:268
+msgid "Job types of Run or Check will provide a way to set up surveys in the Job Template creation or editing screens. Surveys set extra variables for the playbook similar to 'Prompt for Extra Variables' does, but in a user-friendly question and answer way. Surveys also allow for validation of user input. Click the **Survey** tab to create a survey."
+msgstr "在作业模板创建或编辑屏幕中，运行或检查作业类型将提供一种设置问卷调查的方法。问卷调查为 playbook 设置额外变量，类似于“Prompt for Extra Variables”，但是以用户友好的问答方式进行。问卷调查还可允许验证用户输入。点 **Survey** 标签页创建问卷调查。"
+
+#: ../../source/job_templates.rst:270
+msgid "Use cases for surveys are numerous. An example might be if operations wanted to give developers a \"push to stage\" button they could run without advanced Ansible knowledge. When launched, this task could prompt for answers to questions such as, \"What tag should we release?\""
+msgstr "问卷调查的用例有很多。例如，运营人员可能希望向开发人员提供一个无需高级 Ansible 知识即可运行的“推送到阶段”按钮。启动时，该任务可能会提示输入问题的回答，例如：“我们应该发布什么标签？”"
+
+#: ../../source/job_templates.rst:272
+msgid "Many types of questions can be asked, including multiple-choice questions."
+msgstr "可以询问很多类型的问题，包括多项选择题。"
+
+#: ../../source/job_templates.rst:278
+msgid "Create a Survey"
+msgstr "创建问卷调查"
+
+#: ../../source/job_templates.rst:285
+msgid "To create a survey:"
+msgstr "要创建问卷调查，请执行以下操作："
+
+#: ../../source/job_templates.rst:287
+msgid "Click the **Survey** tab and click the **Add** button."
+msgstr "点 **Survey** 标签页并点 **Add** 按钮。"
+
+#: ../../source/job_templates.rst:289
+msgid "A survey can consist of any number of questions. For each question, enter the following information:"
+msgstr "问卷调查可由任何数量的问题组成。对每个问题，请输入以下信息："
+
+#: ../../source/job_templates.rst:291
+msgid "**Name**: The question to ask the user"
+msgstr "**Name**：询问用户的问题"
+
+#: ../../source/job_templates.rst:292
+msgid "**Description**: (optional) A description of what's being asked of the user."
+msgstr "**Description**（可选）：向用户询问的问题描述。"
+
+#: ../../source/job_templates.rst:293
+msgid "**Answer Variable Name**: The Ansible variable name to store the user's response in. This is the variable to be used by the playbook. Variable names cannot contain spaces."
+msgstr "**Answer Variable Name**：将用户回答存储在其中的 Ansible 变量名称。这是供 playbook 使用的变量。变量名称不能包含空格。"
+
+#: ../../source/job_templates.rst:294
+msgid "**Answer Type**: Choose from the following question types."
+msgstr "**Answer Type**：从以下问题类型中选择。"
+
+#: ../../source/job_templates.rst:296
+msgid "*Text*: A single line of text. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*Text*：单行文本。您可以为该回答设置最小和最大长度（字符数）。"
+
+#: ../../source/job_templates.rst:297
+msgid "*Textarea*: A multi-line text field. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*Textarea*：多行文本字段。您可以为该回答设置最小和最大长度（字符数）。"
+
+#: ../../source/job_templates.rst:298
+msgid "*Password*: Responses are treated as sensitive information, much like an actual password is treated. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*Password*：回答被视为敏感信息，和实际密码的处理方式很像。您可以为该回答设置最小和最大长度（字符）。"
+
+#: ../../source/job_templates.rst:299
+msgid "*Multiple Choice (single select)*: A list of options, of which only one can be selected at a time. Enter the options, one per line, in the **Multiple Choice Options** box."
+msgstr "*Multiple Choice (single select)*：选项列表，每次只能选择其中一个选项。请在 **Multiple Choice Options** 框中输入选项，每行一个。"
+
+#: ../../source/job_templates.rst:300
+msgid "*Multiple Choice (multiple select)*: A list of options, any number of which can be selected at a time. Enter the options, one per line, in the **Multiple Choice Options** box."
+msgstr "*Multiple Choice (multiple select)*：列表选项，每次可选择其中任意数量的选项。在 **Multiple Choice Options** 框中输入选项，每行一个。"
+
+#: ../../source/job_templates.rst:303
+msgid "*Integer*: An integer number. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*Integer*：整数。您可以为该回答设置最小和最大长度（字符数）。"
+
+#: ../../source/job_templates.rst:304
+msgid "*Float*: A decimal number. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*Float*：小数。您可以为该答案设置最小和最大长度（字符数）。"
+
+#: ../../source/job_templates.rst:306
+msgid "**Required**: Whether or not an answer to this question is required from the user."
+msgstr "**Required**：用户是否需要回答这个问题。"
+
+#: ../../source/job_templates.rst:307
+msgid "**Minimum length** and **Maximum length**: Specify if a certain length in the answer is required."
+msgstr "**Minimum length** 和 **Maximum length**：指定何时需要回答的一个长度。"
+
+#: ../../source/job_templates.rst:308
+msgid "**Default Answer**: The default answer to the question. This value is pre-filled in the interface and is used if the answer is not provided by the user."
+msgstr "**Default Answer**：问题的默认回答。这个值在界面中预先填充，并在用户未提供回答时使用。"
+
+#: ../../source/job_templates.rst:313
+msgid "Once you have entered the question information, click **Save** to add the question."
+msgstr "输入问题信息后，点 **Save** 添加问题。"
+
+#: ../../source/job_templates.rst:315
+msgid "The survey question displays in the Survey list. For any question, you can click |edit| to edit the question, or check the box next to each question and click **Delete** to delete the question, or use the toggle button at the top of the screen to enable or disable the survey prompt(s)."
+msgstr "调查问题显示在调查列表中。对于任何问题，您可以点 |edit| 编辑问题，或者选中每个问题旁的复选框并点 **Delete** 删除问题，或使用屏幕顶部的切换按钮来启用或禁用问卷调查提示。"
+
+#: ../../source/job_templates.rst:317
+msgid "|job-template-completed-survey|"
+msgstr "|job-template-completed-survey|"
+
+#: ../../source/job_templates.rst:322
+msgid "If you have more than one survey question, use the **Edit Order** button to rearrange the order of the questions by clicking and dragging on the grid icon."
+msgstr "如果您有多个调查问题，请使用 **Edit Order** 按钮通过点击并拖动网格图标来重新安排问题的顺序。"
+
+#: ../../source/job_templates.rst:327
+msgid "To add more questions, click the **Add** button to add additional questions."
+msgstr "要添加更多问题，请点 **Add** 按钮添加其他问题。"
+
+#: ../../source/job_templates.rst:332
+msgid "Optional Survey Questions"
+msgstr "可选的问卷调查问题"
+
+#: ../../source/job_templates.rst:338
+msgid "The **Required** setting on a survey question determines whether the answer is optional or not for the user interacting with it."
+msgstr "问卷调查问题的 **Required** 设置决定了对于与之交互的用户，回答是不是可选的。"
+
+#: ../../source/job_templates.rst:340
+msgid "Behind the scenes, optional survey variables can be passed to the playbook in ``extra_vars``, even when they aren't filled in."
+msgstr "在后台，可选的问卷调查变量可在 ``extra_vars`` 中传递给 playbook，即使没有填写也一样。"
+
+#: ../../source/job_templates.rst:342
+msgid "If a non-text variable (input type) is marked as optional, and is not filled in, no survey ``extra_var`` is passed to the playbook."
+msgstr "如果非文本变量（输入类型）标记为可选，且未填写，则不会将任何问卷调查 ``extra_var`` 传递给 playbook。"
+
+#: ../../source/job_templates.rst:344
+msgid "If a text input or text area input is marked as optional, is not filled in, and has a minimum ``length > 0``, no survey ``extra_var`` is passed to the playbook."
+msgstr "如果文本输入或文本区域输入标记为可选，未填充，且最小 ``length > 0``，则不会将任何问卷调查 ``extra_var`` 传递给 playbook。"
+
+#: ../../source/job_templates.rst:346
+msgid "If a text input or text area input is marked as optional, is not filled in, and has a minimum ``length === 0``, that survey ``extra_var`` is passed to the playbook, with the value set to an empty string ( \"\" )."
+msgstr "如果文本输入或文本区域输入标记为可选，未填写，且最小 ``length === 0``，则会将该问卷调查 ``extra_var`` 传递给 playbook，并将值设为空字符串 ( \"\" )。"
+
+#: ../../source/job_templates.rst:350
+msgid "Launch a Job Template"
+msgstr "启动作业模板"
+
+#: ../../source/job_templates.rst:355
+msgid "A major benefit of |at| is the push-button deployment of Ansible playbooks. You can easily configure a template to store all parameters you would normally pass to the ansible-playbook on the command line--not just the playbooks, but the inventory, credentials, extra variables, and all options and settings you can specify on the command line."
+msgstr "|at| 的主要优点是 Ansible playbook 的按钮式部署。您可以轻松地配置模板，以存储您通常会在命令行上传递给 ansible-playbook 的所有参数，不仅仅包括 playbook，还包括清单、凭证、额外变量以及您可在命令行上指定的所有选项和设置。"
+
+#: ../../source/job_templates.rst:357
+msgid "Easier deployments drive consistency, by running your playbooks the same way each time, and allow you to delegate responsibilities--even users who aren’t Ansible experts can run playbooks written by others."
+msgstr "更简单的部署意味着每次都能以相同的方式运行 playbook，可以提高一致性，并且您可以委托职责。即使用户不是 Ansible 专家，也可以运行由其他人编写的 playbook。"
+
+#: ../../source/job_templates.rst:359
+msgid "Launch a job template by any of the following ways:"
+msgstr "通过以下任一方式启动作业模板："
+
+#: ../../source/job_templates.rst:361
+msgid "Access the job template list from the **Templates** menu on the left navigation bar or while in the Job Template Details view, scroll to the bottom to access the |launch| button from the list of templates."
+msgstr "从左侧导航栏上的 **Templates** 菜单或在 Job Template Details 视图中访问作业模板列表，滚动到底部以从模板列表中访问 |launch| 按钮。"
+
+#: ../../source/job_templates.rst:365
+msgid "While in the Job Template Details view of the job template you want to launch, click **Launch**."
+msgstr "在要启动的作业模板的作业模板视图中，点击 **Launch**。"
+
+#: ../../source/job_templates.rst:369
+msgid "A job may require additional information to run. The following data may be requested at launch:"
+msgstr "作业可能需要额外信息才能运行。启动时可能会要求提供以下数据："
+
+#: ../../source/job_templates.rst:371
+msgid "Credentials that were setup"
+msgstr "设置的凭证"
+
+#: ../../source/job_templates.rst:372
+msgid "The option ``Prompt on Launch`` is selected for any parameter"
+msgstr "为任意参数选择 ``Prompt on Launch`` 选项"
+
+#: ../../source/job_templates.rst:373
+msgid "Passwords or passphrases that have been set to **Ask**"
+msgstr "已设置为 **Ask** 的密码"
+
+#: ../../source/job_templates.rst:374
+msgid "A survey, if one has been configured for the job templates"
+msgstr "问卷调查（如果已经为作业模板配置了问卷调查）"
+
+#: ../../source/job_templates.rst:375
+msgid "Extra variables, if requested by the job template"
+msgstr "额外变量（如果作业模板要求提供）"
+
+#: ../../source/job_templates.rst:379
+msgid "If a job has user-provided values, then those are respected upon relaunch. If the user did not specify a value, then the job uses the default value from the job template. Jobs are not relaunched as-is. They are relaunched with the user prompts re-applied to the job template."
+msgstr "如果一个作业有用户提供的值，则这些值会在重新启动时被考虑。如果用户没有指定值，作业会使用作业模板中的默认值。作业并不会按当前的状态原样重新启动。在重新启动时用户的输入会被应用到作业模板中。"
+
+#: ../../source/job_templates.rst:382
+msgid "Below is an example job launch that prompts for Job Tags, and runs the example survey created in :ref:`ug_surveys`."
+msgstr "以下是一个作业启动示例，它提示输入作业标签，并运行 :ref:`ug_surveys` 中创建的示例问卷调查。"
+
+#: ../../source/job_templates.rst:384
+msgid "|job-launch-with-prompt-job-tags|"
+msgstr "|job-launch-with-prompt-job-tags|"
+
+#: ../../source/job_templates.rst:388
+msgid "|job-launch-with-prompt-survey|"
+msgstr "|job-launch-with-prompt-survey|"
+
+#: ../../source/job_templates.rst:394
+msgid "Providing values on one tab, and going back to a previous tab, and then continuing on to the next tab will result in having to re-provide values on the rest of the tabs. Make sure you fill in the tabs in the order the prompts appear to avoid this."
+msgstr "在一个标签页中输入值，然后返回上一个标签页，然后再继续进入下一个标签页会导致在剩余标签页中需要重新提供值。请安装提示出现的顺序填写标签页来避免出现这种情况。"
+
+#: ../../source/job_templates.rst:397
+msgid "Along with any extra variables set in the job template and survey, |at| automatically adds the following variables to the job environment. Also note, ``awx_``* variables are defined by the system and cannot be overridden. Variables about the job context, like ``awx_job_template_name`` are not affected if they are set in ``extra_vars``."
+msgstr "除了作业模板和问卷调查中设置的额外变量之外，|at| 会自动在作业环境中添加以下变量。另外，``awx_``* 变量由系统定义，且无法覆盖。有关作业上下文的变量，如 ``awx_job_template_name`` 不会受到影响（如果它们设置了 ``extra_vars``）。"
+
+#: ../../source/job_templates.rst:399
+msgid "``awx_job_id``: The Job ID for this job run"
+msgstr "``awx_job_id``：此作业运行的作业 ID"
+
+#: ../../source/job_templates.rst:400
+msgid "``awx_job_launch_type``: The description to indicate how the job was started:"
+msgstr "``awx_job_launch_type``：用于说明作业启动方式的描述："
+
+#: ../../source/job_templates.rst:402
+msgid "**manual**: Job was started manually by a user."
+msgstr "**manual**：作业是由用户手动启动的。"
+
+#: ../../source/job_templates.rst:403
+msgid "**relaunch**: Job was started via relaunch."
+msgstr "**relaunch**：作业是通过重启来启动的。"
+
+#: ../../source/job_templates.rst:404
+msgid "**callback**: Job was started via host callback."
+msgstr "**callback**：作业是通过主机回调启动的。"
+
+#: ../../source/job_templates.rst:405
+msgid "**scheduled**: Job was started from a schedule."
+msgstr "**scheduled**：作业是由一个调度启动的。"
+
+#: ../../source/job_templates.rst:406
+msgid "**dependency**: Job was started as a dependency of another job."
+msgstr "**dependency**：作业是作为另一个作业的依赖项启动的。"
+
+#: ../../source/job_templates.rst:407
+msgid "**workflow**: Job was started from a workflow job."
+msgstr "**workflow**：作业是从工作流作业中启动的。"
+
+#: ../../source/job_templates.rst:408
+msgid "**sync**: Job was started from a project sync."
+msgstr "**sync**：作业是从项目同步启动的。"
+
+#: ../../source/job_templates.rst:409
+msgid "**scm**: Job was created as an Inventory SCM sync."
+msgstr "**scm**：作业是作为清单 SCM 同步创建的。"
+
+#: ../../source/job_templates.rst:411
+msgid "``awx_job_template_id``: The Job Template ID that this job run uses"
+msgstr "``awx_job_template_id``：此作业运行使用的作业模板 ID"
+
+#: ../../source/job_templates.rst:412
+msgid "``awx_job_template_name``: The Job Template name that this job uses"
+msgstr "``awx_job_template_name``：此作业使用的作业模板名称"
+
+#: ../../source/job_templates.rst:413
+msgid "``awx_project_revision``: The revision identifier for the source tree that this particular job uses (it is also the same as the job's field ``scm_revision``)"
+msgstr "``awx_project_revision``：此特定作业使用的源树的修订标识符（它还与作业的字段 ``scm_revision`` 相同）"
+
+#: ../../source/job_templates.rst:414
+msgid "``awx_project_scm_branch``: The configured default project SCM branch for the project the job template uses"
+msgstr "``awx_project_scm_branch``：作业模板使用的项目配置的默认项目 SCM 分支"
+
+#: ../../source/job_templates.rst:415
+msgid "``awx_job_scm_branch`` If the SCM Branch is overwritten by the job, the value is shown here"
+msgstr "``awx_job_scm_branch`` 如果作业覆盖了 SCM 分支，其值将显示在此显示"
+
+#: ../../source/job_templates.rst:416
+msgid "``awx_user_email``: The user email of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_email``：启动了此作业的控制器用户的用户电子邮件。此变量不可用于回调或调度的作业。"
+
+#: ../../source/job_templates.rst:417
+msgid "``awx_user_first_name``: The user's first name of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_first_name``：启动了此作业的控制器用户的名字。此变量不可用于回调或调度的作业。"
+
+#: ../../source/job_templates.rst:418
+msgid "``awx_user_id``: The user ID of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_id``：启动了此作业的控制器用户的用户 ID。此变量不可用于回调或调度的作业。"
+
+#: ../../source/job_templates.rst:419
+msgid "``awx_user_last_name``: The user's last name of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_last_name``：启动了此作业的控制器用户的姓。此变量不可用于回调或调度的作业。"
+
+#: ../../source/job_templates.rst:420
+msgid "``awx_user_name``: The user name of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_name``：启动了此作业的控制器用户的用户名。此变量不可用于回调或调度的作业。"
+
+#: ../../source/job_templates.rst:421
+msgid "``awx_schedule_id``: If applicable, the ID of the schedule that launched this job"
+msgstr "``awx_schedule_id``：启动了此作业的调度的 ID（如果适用）"
+
+#: ../../source/job_templates.rst:422
+msgid "``awx_schedule_name``: If applicable, the name of the schedule that launched this job"
+msgstr "``awx_schedule_name``：启动了此作业的调度的名称（如果适用）"
+
+#: ../../source/job_templates.rst:423
+msgid "``awx_workflow_job_id``: If applicable, the ID of the workflow job that launched this job"
+msgstr "``awx_workflow_job_id``：启动了此作业的工作流作业的 ID（如果适用）"
+
+#: ../../source/job_templates.rst:424
+msgid "``awx_workflow_job_name``: If applicable, the name of the workflow job that launched this job. Note this is also the same as the workflow job template."
+msgstr "``awx_workflow_job_name``：启动了此作业的工作流作业的名称（如果适用）。请注意，这还与工作流作业模板相同。"
+
+#: ../../source/job_templates.rst:425
+msgid "``awx_inventory_id``: If applicable, the ID of the inventory this job uses"
+msgstr "``awx_inventory_id``：此作业使用的清单的 ID（如果适用）"
+
+#: ../../source/job_templates.rst:426
+msgid "``awx_inventory_name``: If applicable, the name of the inventory this job uses"
+msgstr "``awx_inventory_name``：此作业使用的清单的名称（如果适用）"
+
+#: ../../source/job_templates.rst:428
+msgid "For compatibility, all variables are also given an \"awx\" prefix, for example, ``awx_job_id``."
+msgstr "为保证兼容性，还为所有变量添加了 \"awx\" 前缀，例如 ``awx_job_id``。"
+
+#: ../../source/job_templates.rst:430
+msgid "Upon launch, |at| automatically redirects the web browser to the Job Status page for this job under the **Jobs** tab."
+msgstr "启动后，|at| 会在 **Jobs** 标签页下自动将 Web 浏览器重定向到此作业的 Job Status 页面。"
+
+#: ../../source/job_templates.rst:434
+msgid "You can re-launch the most recent job from the list view to re-run on all hosts or just failed hosts in the specified inventory. Refer to :ref:`ug_jobs` in the |atu| for more detail."
+msgstr "您可以从列表视图中重新启动最新的作业，以便针对指定清单中的所有主机或者仅仅是失败的主机重新运行。更多详情请参阅 |atu| 中的 :ref:`ug_jobs`。"
+
+#: ../../source/job_templates.rst:436
+msgid "When slice jobs are running, job lists display the workflow and job slices, as well as a link to view their details individually."
+msgstr "当分片作业正在运行时，作业列表会显示工作流和作业分片，以及用于单独查看其详情的链接。"
+
+#: ../../source/job_templates.rst:442
+msgid "Copy a Job Template"
+msgstr "复制作业模板"
+
+#: ../../source/job_templates.rst:444
+msgid "If you choose to copy Job Template, it **does not** copy any associated schedule, notifications, or permissions. Schedules and notifications must be recreated by the user or admin creating the copy of the Job Template. The user copying the Job Template will be granted the admin permission, but no permissions are assigned (copied) to the Job Template."
+msgstr "如果选择复制作业模板时，**不会**复制任何关联的计划、通知或权限。计划和通知必须由创建作业模板副本的用户或管理员重新创建。将为复制作业模板的用户授予管理员权限，但不会将任何权限分配（复制）到作业模板。"
+
+#: ../../source/job_templates.rst:446
+msgid "Access the job template list from the **Templates** menu on the left navigation bar or while in the Job Template Details view, scroll to the bottom to access it from the list of templates."
+msgstr "从左侧导航栏上的 **Templates** 菜单或在 Job Template Details 视图中访问作业模板列表，滚动到底部以从模板列表中访问它。"
+
+#: ../../source/job_templates.rst:450
+msgid "Click the |copy| button associated with the template you want to copy."
+msgstr "点与您要复制的模板关联的 |copy| 按钮。"
+
+#: ../../source/job_templates.rst:454
+msgid "The new template with the name of the template from which you copied and a timestamp displays in the list of templates."
+msgstr "在模板列表中会显示带有作为复制来源的新模板的名称和一个时间戳。"
+
+#: ../../source/job_templates.rst:456
+msgid "Click to open the new template and click **Edit**."
+msgstr "点击以打开新模板并点 **Edit**。"
+
+#: ../../source/job_templates.rst:458
+msgid "Replace the contents of the **Name** field with a new name, and provide or modify the entries in the other fields to complete this page."
+msgstr "将 **Name** 字段的内容替换为新名称，并提供或者修改其他字段中的条目以完成此页面。"
+
+#: ../../source/job_templates.rst:460
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/job_templates.rst:465
+msgid "Scan Job Templates"
+msgstr "扫描作业模板"
+
+#: ../../source/job_templates.rst:471
+msgid "Scan jobs are no longer supported starting with |at| 3.2. This system tracking feature was used as a way to capture and store facts as historical data. Facts are now stored in the controller via fact caching. For more information, see :ref:`ug_fact_caching`."
+msgstr "从 |at| 3.2 开始，不再支持扫描作业。此系统跟踪功能曾用来捕获和存储事实作为历史数据。现在，事实将通过事实缓存存储在控制器中。如需了解更多信息，请参阅 :ref:`ug_fact_caching`。"
+
+#: ../../source/job_templates.rst:473
+msgid "If you have Job Template Scan Jobs in your system prior to |at| 3.2, they have been converted to type run (like normal job templates) and retained their associated resources (i.e. inventory, credential). Job Template Scan Jobs that do not have a related project are assigned a special playbook by default, or you can specify a project with your own scan playbook. A project was created for each organization that points to  https://github.com/ansible/tower-fact-modules and the Job Template was set to the playbook, https://github.com/ansible/tower-fact-modules/blob/master/scan_facts.yml."
+msgstr "如果您在 |at| 3.2 之前的系统中有作业模板扫描作业，它们已被转换为运行类型（类似于正常作业模板），并且保留了其相关资源（例如清单、凭证）。默认情况下会为没有相关项目的作业模板扫描作业分配一个特殊的 playbook，或者您可以使用自己的扫描 playbook 指定一个项目。之前为每个机构创建了一个指向 https://github.com/ansible/tower-fact-modules 的项目，并将作业模板设为 playbook https://github.com/ansible/tower-fact-modules/blob/master/scan_facts.yml."
+
+#: ../../source/job_templates.rst:477
+msgid "Fact Scan Playbooks"
+msgstr "事实扫描 Playbook"
+
+#: ../../source/job_templates.rst:483
+msgid "The scan job playbook, ``scan_facts.yml``, contains invocations of three ``fact scan modules`` - packages, services, and files, along with Ansible's standard fact gathering. The ``scan_facts.yml`` playbook file looks like the following:"
+msgstr "扫描作业 playbook ``scan_facts.yml`` 包含三个 ``fact scan modules``（软件包、服务和文件）的调用以及 Ansible 的标准事实收集。``scan_facts.yml`` playbook 文件类似如下："
+
+#: ../../source/job_templates.rst:501
+msgid "The ``scan_files`` fact module is the only module that accepts parameters, passed via ``extra_vars`` on the scan job template."
+msgstr "``scan_files`` 事实模块是唯一接受参数的模块，通过扫描作业模板中的 ``extra_vars`` 传递。"
+
+#: ../../source/job_templates.rst:510
+msgid "The ``scan_file_paths`` parameter may have multiple settings (such as ``/tmp/`` or ``/var/log``)."
+msgstr "``scan_file_paths`` 参数可能有多个设置（如 ``/tmp/`` 或 ``/var/log``）。"
+
+#: ../../source/job_templates.rst:511
+msgid "The ``scan_use_checksum`` and ``scan_use_recursive`` parameters may also be set to false or omitted. An omission is the same as a false setting."
+msgstr "``scan_use_checksum`` 和 ``scan_use_recursive`` 参数也可以设为 false 或省略。省略等同于 false 设置。"
+
+#: ../../source/job_templates.rst:513
+msgid "Scan job templates should enable ``become`` and use credentials for which ``become`` is a possibility. You can enable become by checking the **Enable Privilege Escalation** from the Options menu:"
+msgstr "扫描作业模板应启用 ``become`` 并使用使 ``become`` 成为可能的凭证。您可以通过从 Options 菜单中选中 **Enable Privilege Escalation** 来启用 become："
+
+#: ../../source/job_templates.rst:519
+msgid "Supported OSes for ``scan_facts.yml``"
+msgstr "``scan_facts.yml`` 支持的操作系统"
+
+#: ../../source/job_templates.rst:521
+msgid "If you use the ``scan_facts.yml`` playbook with use fact cache, ensure that your OS is supported:"
+msgstr "如果您将 ``scan_facts.yml`` playbook 与“使用事实缓存”搭配使用，请确保您的操作系统受支持："
+
+#: ../../source/job_templates.rst:523
+msgid "|rhel| 5, 6, & 7"
+msgstr "|rhel| 5、6 和 7"
+
+#: ../../source/job_templates.rst:524
+msgid "Ubuntu 16.04 (Support for Unbuntu is deprecated and will be removed in a future release)"
+msgstr "Ubuntu 16.04（Unbuntu 支持已被弃用并将在以后的发行版本中删除）"
+
+#: ../../source/job_templates.rst:525
+msgid "OEL 6 & 7"
+msgstr "OEL 6 和 7"
+
+#: ../../source/job_templates.rst:526
+msgid "SLES 11 & 12"
+msgstr "SLES 11 和 12"
+
+#: ../../source/job_templates.rst:527
+msgid "Debian 6, 7, 8"
+msgstr "Debian 6、7、8"
+
+#: ../../source/job_templates.rst:528
+msgid "Fedora 22, 23, 24"
+msgstr "Fedora 22、23、24"
+
+#: ../../source/job_templates.rst:529
+msgid "Amazon Linux 2016.03"
+msgstr "Amazon Linux 2016.03"
+
+#: ../../source/job_templates.rst:530
+msgid "Windows Server 2008 and later"
+msgstr "Windows Server 2008 及更新版本"
+
+#: ../../source/job_templates.rst:532
+msgid "Note that some of these operating systems may require initial configuration in order to be able to run python and/or have access to the python packages (such as ``python-apt``) that the scan modules depend on."
+msgstr "请注意，其中有些操作系统可能需要进行初始配置，才能运行 python 和/或访问扫描模块依赖的 python 软件包（比如 ``python-apt``）。"
+
+#: ../../source/job_templates.rst:536
+msgid "Pre-scan Setup"
+msgstr "预扫描设置"
+
+#: ../../source/job_templates.rst:538
+msgid "The following are examples of playbooks that configure certain distributions so that scan jobs can be run against them."
+msgstr "以下的 playbook 示例配置了特定发行版运行扫描，以便可以针对它们运行扫描作业。"
+
+#: ../../source/job_templates.rst:540
+msgid "**Bootstrap Ubuntu (16.04)**"
+msgstr "**Bootstrap Ubuntu (16.04)**"
+
+#: ../../source/job_templates.rst:559
+msgid "**Bootstrap Fedora (23, 24)**"
+msgstr "**Bootstrap Fedora (23, 24)**"
+
+#: ../../source/job_templates.rst:580
+msgid "Custom Fact Scans"
+msgstr "自定义事实扫描"
+
+#: ../../source/job_templates.rst:588
+msgid "A playbook for a custom fact scan is similar to the example of the Fact Scan Playbook above. As an example, a playbook that only uses a custom ``scan_foo`` Ansible fact module would look like this:"
+msgstr "自定义事实扫描的 playbook 与上方的事实扫描 Playbook 类似。例如，只使用自定义 ``scan_foo`` Ansible 事实模块的 playbook 类似如下："
+
+#: ../../source/job_templates.rst:590
+msgid "*scan_custom.yml*:"
+msgstr "*scan_custom.yml*:"
+
+#: ../../source/job_templates.rst:600
+msgid "*scan_foo.py*:"
+msgstr "*scan_foo.py*:"
+
+#: ../../source/job_templates.rst:621
+msgid "To use a custom fact module, ensure that it lives in the ``/library/`` subdirectory of the Ansible project used in the scan job template. This fact scan module is very simple, returning a hard-coded set of facts:"
+msgstr "要使用自定义事实模块，请确保它位于扫描作业模板中使用的 Ansible 项目的 ``/library/`` 子目录中。此事实扫描模块非常简单，返回一组硬编码的事实："
+
+#: ../../source/job_templates.rst:634
+msgid "Refer to the `Module Provided 'Facts'`_ section of the Ansible documentation for more information."
+msgstr "如需更多信息，请参阅 Ansible 文档的 `Module Provided 'Facts'`_ 部分。"
+
+#: ../../source/job_templates.rst:641
+msgid "Fact Caching"
+msgstr "事实缓存"
+
+#: ../../source/job_templates.rst:647
+msgid "Automation controller can store and retrieve facts on a per-host basis through an Ansible Fact Cache plugin. This behavior is configurable on a per-job template basis. Fact caching is turned off by default but can be enabled to serve fact requests for all hosts in an inventory related to the job running. This allows you to use job templates with ``--limit`` while still having access to the entire inventory of host facts. A global timeout setting that the plugin enforces per-host, can be specified (in seconds) through the Jobs settings menu:"
+msgstr "自动化控制器可以通过 Ansible 事实缓存插件按主机存储和检索事实。此行为可以按作业模板进行配置。事实缓存默认关闭，但可以启用以满足与作业运行相关的清单中所有主机的事实请求。这可让您将作业模板与 ``--limit`` 搭配使用，同时仍可访问整个主机事实清单。插件按主机强制应用的全局超时设置可在 Jobs 设置菜单中指定（以秒为单位）："
+
+#: ../../source/job_templates.rst:651
+msgid "Upon launching a job that uses fact cache (``use_fact_cache=True``), the controller will store all ``ansible_facts`` associated with each host in the inventory associated with the job.  The Ansible Fact Cache plugin that ships with |at| will only be enabled on jobs with fact cache enabled (``use_fact_cache=True``)."
+msgstr "在启动使用事实缓存（``use_fact_cache=True``）的作业后，控制器会保存与作业关联的清单中的每个主机所关联的所有 ``ansible_facts``。|at| 附带的 Ansible 事实缓存插件只会在启用了事实缓存（``use_fact_cache=True``）的作业上启用。"
+
+#: ../../source/job_templates.rst:653
+msgid "When a job that has fact cache enabled (``use_fact_cache=True``) finishes running, the controller will restore all records for the hosts in the inventory.  Any records with update times *newer* than the currently stored facts per-host will be updated in the database."
+msgstr "当启用事实缓存（``use_fact_cache=True``）的作业完成运行时，控制器将恢复清单中主机的所有记录。任何更新时间比每个主机当前存储的事实“更新”的记录都会在数据库中更新。"
+
+#: ../../source/job_templates.rst:655
+msgid "New and changed facts will be logged via the controller's logging facility. Specifically, to the ``system_tracking`` namespace or logger. The logging payload will include the fields:"
+msgstr "新事实和更改的事实将通过控制器的日志记录功能记录，具体来说是记录到 ``system_tracking`` 命名空间或日志记录器。日志记录有效负载将包括以下字段："
+
+#: ../../source/job_templates.rst:657
+msgid "``host_name``"
+msgstr "``host_name``"
+
+#: ../../source/job_templates.rst:658
+msgid "``inventory_id``"
+msgstr "``inventory_id``"
+
+#: ../../source/job_templates.rst:659
+msgid "``ansible_facts``"
+msgstr "``ansible_facts``"
+
+#: ../../source/job_templates.rst:661
+msgid "where ``ansible_facts`` is a dictionary of all Ansible facts for ``host_name`` in the controller inventory, ``inventory_id``."
+msgstr "其中 ``ansible_facts`` 是控制器清单 ``inventory_id`` 中 ``host_name`` 的所有 Ansible 事实的字典。"
+
+#: ../../source/job_templates.rst:665
+msgid "If a hostname includes a forward slash (``/``), fact cache will not work for that host. If you have an inventory with 100 hosts and one host has a ``/`` in the name, 99 of those hosts will still collect facts."
+msgstr "如果主机名包含正斜杠 (``/``)，事实缓存将不适用于该主机。如果清单中有 100 个主机，其中一个主机的名称中有一个 ``/``，其中的 99 个主机仍会收集事实。"
+
+#: ../../source/job_templates.rst:669
+msgid "Benefits of Fact Caching"
+msgstr "事实缓存的好处"
+
+#: ../../source/job_templates.rst:671
+msgid "Fact caching saves a significant amount of time over running fact gathering. If you have a playbook in a job that runs against a thousand hosts and forks, you could easily spend 10 minutes gathering facts across all of those hosts. But if you run a job on a regular basis, the first run of it caches these facts and the next run will just pull them from the database. This cuts the runtime of jobs against large inventories, including Smart Inventories, by an enormous magnitude."
+msgstr "相较于运行事实收集，事实缓存会节省大量时间。如果您在一个针对一千个主机和 fork 运行的作业中有一个 playbook，您可以轻松地花 10 分钟来收集所有这些主机的事实。但是如果您定期运行一个作业，第一次运行会缓存这些事实，而下一次运行只需从数据库中拉取它们。这会大幅削减针对大型清单（包括智能清单）的作业运行时间。"
+
+#: ../../source/job_templates.rst:674
+msgid "Do not modify the ``ansible.cfg`` file to apply fact caching. Custom fact caching could conflict with the controller's fact caching feature. It is recommended to use the fact caching module that comes with |at|. Fact caching is not supported for isolated nodes."
+msgstr "不要修改 ``ansible.cfg`` 文件来应用事实缓存。自定义事实缓存可能会与 控制器的事实缓存功能冲突。我们推荐使用 |at| 附带的事实缓存模块。隔离的节点不支持事实缓存。"
+
+#: ../../source/job_templates.rst:676
+msgid "You can choose to use cached facts in your job by enabling it in the **Options** field of the Job Templates window."
+msgstr "您可以选择在作业模板窗口的 **Options** 字段中启用缓存的事实以在作业中使用它。"
+
+#: ../../source/job_templates.rst:680
+msgid "To clear facts, you need to run the Ansible ``clear_facts`` `meta task`_. Below is an example playbook that uses the Ansible ``clear_facts`` meta task."
+msgstr "要清除事实，您需要运行 Ansible ``clear_facts`` `meta task`_。以下是使用 Ansible ``clear_facts`` 元任务的示例 playbook。"
+
+#: ../../source/job_templates.rst:692
+msgid "You can find the API endpoint for fact caching at:"
+msgstr "您可以在以下找到事实缓存的 API 端点："
+
+#: ../../source/job_templates.rst:701
+msgid "Utilizing Cloud Credentials"
+msgstr "使用云凭证"
+
+#: ../../source/job_templates.rst:706
+msgid "Cloud Credentials can be used when syncing a respective cloud inventory. Cloud Credentials may also be associated with a Job Template and included in the runtime environment for use by a playbook. Cloud Credentials currently supported:"
+msgstr "云凭证可以在同步相应的云清单时使用。云凭证还可能与作业模板关联，并包含在运行时环境中，供 playbook 使用。当前支持的云凭证："
+
+#: ../../source/job_templates.rst:712
+msgid "OpenStack"
+msgstr "OpenStack"
+
+#: ../../source/job_templates.rst:717
+msgid "The sample playbook below invokes the ``nova_compute`` Ansible OpenStack cloud module and requires credentials to do anything meaningful, and specifically requires the following information: ``auth_url``, ``username``, ``password``, and ``project_name``. These fields are made available to the playbook via the environmental variable ``OS_CLIENT_CONFIG_FILE``, which points to a YAML file written by the controller based on the contents of the cloud credential. This sample playbook loads the YAML file into the Ansible variable space."
+msgstr "以下示例 playbook 调用 ``nova_compute`` Ansible OpenStack 云模块，并要求凭证进行任何有意义的操作，它要求提供以下信息：``auth_url``、``username``、``password`` 和 ``project_name``。这些字段通过环境变量 ``OS_CLIENT_CONFIG_FILE`` 提供给 playbook，此变量指向控制器根据云凭证的内容编写的 YAML 文件。此示例 playbook 会将 YAML 文件加载到 Ansible 变量空间中。"
+
+#: ../../source/job_templates.rst:719
+msgid "``OS_CLIENT_CONFIG_FILE`` example:"
+msgstr "``OS_CLIENT_CONFIG_FILE`` 示例："
+
+#: ../../source/job_templates.rst:731
+msgid "Playbook example:"
+msgstr "Playbook 示例："
+
+#: ../../source/job_templates.rst:766
+msgid "Amazon Web Services"
+msgstr "Amazon Web Services"
+
+#: ../../source/job_templates.rst:771
+msgid "Amazon Web Services cloud credentials are exposed as the following environment variables during playbook execution (in the job template, choose the cloud credential needed for your setup):"
+msgstr "Amazon Web Services 云凭证在 playbook 执行过程中作为以下环境变量公开（在作业模板中，选择您的设置所需的云凭证）："
+
+#: ../../source/job_templates.rst:773
+msgid "``AWS_ACCESS_KEY_ID``"
+msgstr "``AWS_ACCESS_KEY_ID``"
+
+#: ../../source/job_templates.rst:774
+msgid "``AWS_SECRET_ACCESS_KEY``"
+msgstr "``AWS_SECRET_ACCESS_KEY``"
+
+#: ../../source/job_templates.rst:776
+msgid "All of the AWS modules will implicitly use these credentials when run via the controller without having to set the ``aws_access_key_id`` or ``aws_secret_access_key`` module options."
+msgstr "所有 AWS 模块在通过控制器运行时都会隐式使用这些凭证，而无需设置 ``aws_access_key_id`` 或 ``aws_secret_access_key`` 模块选项。"
+
+#: ../../source/job_templates.rst:780
+msgid "Google"
+msgstr "Google"
+
+#: ../../source/job_templates.rst:785
+msgid "Google cloud credentials are exposed as the following environment variables during playbook execution (in the job template, choose the cloud credential needed for your setup):"
+msgstr "Google 云凭证在 playbook 执行过程中作为以下环境变量公开（在作业模板中，选择您的设置所需的云凭证）："
+
+#: ../../source/job_templates.rst:787
+msgid "``GCE_EMAIL``"
+msgstr "``GCE_EMAIL``"
+
+#: ../../source/job_templates.rst:788
+msgid "``GCE_PROJECT``"
+msgstr "``GCE_PROJECT``"
+
+#: ../../source/job_templates.rst:789
+msgid "``GCE_CREDENTIALS_FILE_PATH``"
+msgstr "``GCE_CREDENTIALS_FILE_PATH``"
+
+#: ../../source/job_templates.rst:791
+msgid "All of the Google modules will implicitly use these credentials when run via the controller without having to set the ``service_account_email``, ``project_id``, or ``pem_file`` module options."
+msgstr "所有 Google 模块在通过控制器运行时都会隐式使用这些凭证，而无需设置 ``service_account_email``、``project_id`` 或 ``pem_file`` 模块选项。"
+
+#: ../../source/job_templates.rst:794
+msgid "Azure"
+msgstr "Azure"
+
+#: ../../source/job_templates.rst:799
+msgid "Azure cloud credentials are exposed as the following environment variables during playbook execution (in the job template, choose the cloud credential needed for your setup):"
+msgstr "Azure 云凭证在 playbook 执行过程中作为以下环境变量公开（在作业模板中，选择您的设置所需的云凭证）："
+
+#: ../../source/job_templates.rst:801
+msgid "``AZURE_SUBSCRIPTION_ID``"
+msgstr "``AZURE_SUBSCRIPTION_ID``"
+
+#: ../../source/job_templates.rst:802
+msgid "``AZURE_CERT_PATH``"
+msgstr "``AZURE_CERT_PATH``"
+
+#: ../../source/job_templates.rst:804
+msgid "All of the Azure modules implicitly use these credentials when run via the controller without having to set the ``subscription_id`` or ``management_cert_path`` module options."
+msgstr "所有 Azure 模块在通过控制器运行时都会隐式使用这些凭证，而无需设置 ``subscription_id`` 或 ``management_cert_path`` 模块选项。"
+
+#: ../../source/job_templates.rst:807
+msgid "VMware"
+msgstr "VMware"
+
+#: ../../source/job_templates.rst:812
+msgid "VMware cloud credentials are exposed as the following environment variables during playbook execution (in the job template, choose the cloud credential needed for your setup):"
+msgstr "VMware 云凭证在 playbook 执行过程中作为以下环境变量公开（在作业模板中，选择您的设置所需的云凭证）："
+
+#: ../../source/job_templates.rst:814
+msgid "``VMWARE_USER``"
+msgstr "``VMWARE_USER``"
+
+#: ../../source/job_templates.rst:815
+msgid "``VMWARE_PASSWORD``"
+msgstr "``VMWARE_PASSWORD``"
+
+#: ../../source/job_templates.rst:816
+msgid "``VMWARE_HOST``"
+msgstr "``VMWARE_HOST``"
+
+#: ../../source/job_templates.rst:818
+msgid "The sample playbook below demonstrates usage of these credentials:"
+msgstr "以下示例 playbook 演示了这些凭证的使用情况："
+
+#: ../../source/job_templates.rst:838
+msgid "Provisioning Callbacks"
+msgstr "置备回调"
+
+#: ../../source/job_templates.rst:844
+msgid "Provisioning callbacks are a feature of Automation Controller that allow a host to initiate a playbook run against itself, rather than waiting for a user to launch a job to manage the host from the Automation Controller console. Please note that provisioning callbacks are *only* used to run playbooks on the calling host. Provisioning callbacks are meant for cloud bursting (i.e. new instances with a need for client to server communication for configuration (such as transmitting an authorization key)), not to run a job against another host. This provides for automatically configuring a system after it has been provisioned by another system (such as AWS auto-scaling, or a OS provisioning system like kickstart or preseed) or for launching a job programmatically without invoking the Automation Controller API directly. The Job Template launched only runs against the host requesting the provisioning."
+msgstr "置备回调是自动化控制器的一项功能，允许主机启动针对自身运行的 playbook，而不是等待用户启动作业以从自动化控制器控制台管理主机。请注意，置备回调*仅*用于在调用主机上运行 playbook。置备回调用于云爆发，即：需要客户端到服务器通信以进行配置（例如传输授权密钥）的新实例，而不是针对另一台主机运行作业。这就为以下操作提供了条件：当一个系统通过另一个系统（例如 AWS 自动缩放或操作系统置备系统，如 kickstart 或 preseed）进行配置后，会自动配置该系统；或者通过编程方式启动作业，而无需直接调用自动化控制器 API。启动的作业模板仅针对请求配置的主机运行。"
+
+#: ../../source/job_templates.rst:846
+msgid "Frequently this would be accessed via a firstboot type script, or from cron."
+msgstr "通常这会通过 firstboot 类型脚本或从 cron 访问。"
+
+#: ../../source/job_templates.rst:848
+msgid "To enable callbacks, check the *Provisioning Callbacks* checkbox in the Job Template. This displays the **Provisioning Callback URL** for this job template."
+msgstr "要启用回调，请选中作业模板中的 *Provisioning Callbacks* 复选框。这会显示此作业模板的 **Provisioning Callback URL**。"
+
+#: ../../source/job_templates.rst:852
+msgid "If you intend to use Automation Controller's provisioning callback feature with a dynamic inventory, Update on Launch should be set for the inventory group used in the Job Template."
+msgstr "如果要将自动化控制器的置备回调功能与动态清单结合使用，则应该为作业模板中使用的清单组设置在启动时更新。"
+
+#: ../../source/job_templates.rst:856
+msgid "Callbacks also require a Host Config Key, to ensure that foreign hosts with the URL cannot request configuration. Please provide a custom value for Host Config Key. The host key may be reused across multiple hosts to apply this job template against multiple hosts. Should you wish to control what hosts are able to request configuration, the key may be changed at any time."
+msgstr "回调还需要一个主机配置密钥，以确保具有 URL 的外部主机无法请求配置。请为主机配置密钥提供一个自定义值。主机密钥可在多个主机间重复使用，以针对多个主机应用此作业模板。如果您希望控制哪些主机可以请求配置，则可以随时更改该密钥。"
+
+#: ../../source/job_templates.rst:858
+msgid "To callback manually via REST, look at the callback URL in the UI, which is of the form:"
+msgstr "要通过 REST 手动回调，请查看 UI 中的回调 URL，其格式为："
+
+#: ../../source/job_templates.rst:864
+msgid "The '7' in this sample URL is the job template ID in Automation Controller."
+msgstr "这个示例 URL 中的“7”是自动化控制器中的作业模板 ID。"
+
+#: ../../source/job_templates.rst:866
+msgid "The request from the host must be a POST. Here is an example using curl (all on a single line):"
+msgstr "来自主机的请求必须是 POST。以下是一个使用 curl 的示例（全部在一行）："
+
+#: ../../source/job_templates.rst:873
+msgid "The requesting host must be defined in your inventory for the callback to succeed. If Automation Controller fails to locate the host either by name or IP address in one of your defined inventories, the request is denied. When running a Job Template in this way, the host initiating the playbook run against itself must be in the inventory. If the host is missing from the inventory, the Job Template will fail with a \"No Hosts Matched\" type error message."
+msgstr "发出请求的主机必须在您的清单中定义，才能使回调成功。如果自动化控制器无法按名称或 IP 地址在您定义的某一个清单中找到主机，则请求将被拒绝。在以这种方式运行作业模板时，启动针对其自身运行的 playbook 的主机必须位于清单中。如果该主机不在清单中，则作业模板将失败，并显示“No Hosts Matched”类型错误消息。"
+
+#: ../../source/job_templates.rst:877
+msgid "If your host is not in inventory and ``Update on Launch`` is set for the inventory group, Automation Controller attempts to update cloud based inventory source before running the callback."
+msgstr "如果您的主机不在清单中，并且为清单组设置了 ``Update on Launch``，则自动化控制器会在运行回调前尝试更新基于云的清单源。"
+
+#: ../../source/job_templates.rst:879
+msgid "Successful requests result in an entry on the Jobs tab, where the results and history can be viewed."
+msgstr "成功请求会在 Jobs 标签页中生成一个条目，可以在其中查看结果和历史记录。"
+
+#: ../../source/job_templates.rst:881
+msgid "While the callback can be accessed via REST, the suggested method of using the callback is to use one of the example scripts that ships with Automation Controller - ``/usr/share/awx/request_tower_configuration.sh`` (Linux/UNIX) or ``/usr/share/awx/request_tower_configuration.ps1`` (Windows). Usage is described in the source code of the file by passing the ``-h`` flag, as shown below:"
+msgstr "虽然可以通过 REST 访问回调，但建议的回调使用方法是使用自动化控制器附带的示例脚本之一 - ``/usr/share/awx/request_tower_configuration.sh`` (Linux/UNIX) 或 ``/usr/share/awx/request_tower_configuration.ps1`` (Windows)。用法在文件的源代码中通过传递 ``-h`` 标签进行描述，如下所示："
+
+#: ../../source/job_templates.rst:899
+msgid "This script has some intelligence, it knows how to retry commands and is therefore a more robust way to use callbacks than a simple curl request. As written, the script retries once per minute for up to ten minutes."
+msgstr "这个脚本非常智能，因为它知道如何重试命令，因此比起简单的 curl 请求，它是更强大的回调使用方法。正如所编写的，脚本每分钟重试一次，最多十分钟。"
+
+#: ../../source/job_templates.rst:903
+msgid "Please note that this is an example script. You should edit this script if you need more dynamic behavior when detecting failure scenarios, as any non-200 error code may not be a transient error requiring retry."
+msgstr "请注意，这是一个示例脚本。如果您在检测到失败情况时需要更多的动态行为，应编辑这个脚本，因为任何非 200 的错误代码都可能不是需要重试的暂时性错误。"
+
+#: ../../source/job_templates.rst:905
+msgid "Most likely you will use callbacks with dynamic inventory in Automation Controller, such as pulling cloud inventory from one of the supported cloud providers. In these cases, along with setting *Update On Launch*, be sure to configure an inventory cache timeout for the inventory source, to avoid hammering of your Cloud's API endpoints. Since the ``request_tower_configuration.sh`` script polls once per minute for up to ten minutes, a suggested cache invalidation time for inventory (configured on the inventory source itself) would be one or two minutes."
+msgstr "您最有可能在自动化控制器中将回调与动态清单搭配使用，如从支持的某个云提供商中拉取云清单。在这些情况下，除了设置 *Update On Launch* 以外，请务必为清单源配置清单缓存超时，以避免云的 API 端点受到攻击。由于 ``request_tower_configuration.sh`` 脚本每分钟轮询一次，最多十分钟，因此推荐的清单缓存失效时间（在清单源本身中配置）将为一分钟或两分钟。"
+
+#: ../../source/job_templates.rst:907
+msgid "While we recommend against running the ``request_tower_configuration.sh`` script from a cron job, a suggested cron interval would be perhaps every 30 minutes. Repeated configuration can be easily handled by scheduling in Automation Controller, so the primary use of callbacks by most users is to enable a base image that is bootstrapped into the latest configuration upon coming online. To do so, running at first boot is a better practice. First boot scripts are just simple init scripts that typically self-delete, so you would set up an init script that called a copy of the ``request_tower_configuration.sh`` script and make that into an autoscaling image."
+msgstr "虽然我们不推荐从 cron 作业运行 ``request_tower_configuration.sh`` 脚本，但建议的 cron 间隔可能为每 30 分钟。重复的配置可以通过在自动化控制器中调度来轻松处理，因此大多数用户主要使用回调来启用一个在上线时引导至最新配置的基础镜像。为此，在第一次引导时运行是更好的做法。初始引导脚本只是简单的 init 脚本，通常会自我删除，因此您可以设置一个调用 ``request_tower_configuration.sh`` 脚本副本的 init 脚本，并使之成为一个自动缩放镜像。"
+
+#: ../../source/job_templates.rst:910
+msgid "Passing Extra Variables to Provisioning Callbacks"
+msgstr "将额外变量传递给配置回调"
+
+#: ../../source/job_templates.rst:916
+msgid "Just as you can pass ``extra_vars`` in a regular Job Template, you can also pass them to provisioning callbacks. To pass ``extra_vars``, the data sent must be part of the body of the POST request as application/json (as the content type). Use the following JSON format as an example when adding your own ``extra_vars`` to be passed:"
+msgstr "就像您可以在常规作业模板中传递 ``extra_vars`` 一样，您也可以将它们传递到配置回调。要传递 ``extra_vars``，发送的数据必须作为应用程序/json（作为内容类型）成为 POST 请求主体的一部分。在添加您自己的 ``extra_vars`` 进行传递时，请使用以下 JSON 格式作为示例："
+
+#: ../../source/job_templates.rst:923
+msgid "You can also pass extra variables to the Job Template call using ``curl``, such as is shown in the following example::"
+msgstr "您还可以使用 ``curl`` 将额外变量传递给作业模板调用，如以下示例所示："
+
+#: ../../source/job_templates.rst:929
+msgid "For more information, refer to :ref:`Launching Jobs with Curl<administration:launch_jobs_curl>`."
+msgstr "有关详情请参阅 :ref:`Launching Jobs with Curl<administration:launch_jobs_curl>`。"
+
+#: ../../source/job_templates.rst:935
+msgid "Extra Variables"
+msgstr "额外变量"
+
+#: ../../source/job_templates.rst:943
+msgid "``extra_vars`` passed to the job launch API are only honored if one of the following is true:"
+msgstr "只有在以下条件之一被满足时，传递给作业启动 API 的 ``extra_vars`` 才有效："
+
+#: ../../source/job_templates.rst:945
+msgid "They correspond to variables in an enabled survey"
+msgstr "它们与启用的问卷调查（survey）中的变量对应"
+
+#: ../../source/job_templates.rst:946
+msgid "``ask_variables_on_launch`` is set to True"
+msgstr "``ask_variables_on_launch`` 被设为 True"
+
+#: ../../source/job_templates.rst:948
+msgid "When you pass survey variables, they are passed as extra variables (``extra_vars``) within the controller. This can be tricky, as passing extra variables to a job template (as you would do with a survey) can override other variables being passed from the inventory and project."
+msgstr "当您传递问卷调查变量时，它们作为控制器中的额外变量 (``extra_vars``) 传递。这样做可能需要非常小心，因为将额外变量传递给作业模板（就像对问卷调查的操作一样）可能会覆盖从清单和项目传递的其他变量。"
+
+#: ../../source/job_templates.rst:950
+msgid "For example, say that you have a defined variable for an inventory for ``debug = true``. It is entirely possible that this variable, ``debug = true``, can be overridden in a job template survey."
+msgstr "例如，假设您为清单定义了一个变量 ``debug = true``。在作业模板问卷调查中完全有可能覆盖 ``debug = true`` 这个变量。"
+
+#: ../../source/job_templates.rst:952
+msgid "To ensure that the variables you need to pass are not overridden, ensure they are included by redefining them in the survey. Keep in mind that extra variables can be defined at the inventory, group, and host levels."
+msgstr "为确保不覆盖您需要传递的变量，请通过在问卷调查中重新定义变量来确保将其包括在内。请记住，可以在清单、组和主机级别定义额外的变量。"
+
+#: ../../source/job_templates.rst:954
+msgid "If specifying the ``ALLOW_JINJA_IN_EXTRA_VARS`` parameter, refer to the :ref:`Controller Tips and Tricks <administration:ag_tips_jinja_extravars>` section of the |ata| to configure it in the Jobs Settings screen of the controller UI."
+msgstr "如果指定 ``ALLOW_JINJA_IN_EXTRA_VARS`` 参数，请参阅 |ata| 的 :ref:`Controller Tips and Tricks <administration:ag_tips_jinja_extravars>` 部分，以便在控制器 UI 的 Jobs Settings 屏幕中进行配置。"
+
+#: ../../source/job_templates.rst:965
+msgid "The Job Template extra variables dictionary is merged with the Survey variables."
+msgstr "作业模板额外变量字典与 Survey 变量合并。"
+
+#: ../../source/job_templates.rst:968
+msgid "Here are some simplified examples of extra_vars in YAML and JSON formats:"
+msgstr "以下是 YAML 和 JSON 格式的 extra_vars 的一些简化示例："
+
+#: ../../source/job_templates.rst:970
+msgid "The configuration in YAML format:"
+msgstr "YAML 格式的配置："
+
+#: ../../source/job_templates.rst:981
+msgid "The configuration in JSON format:"
+msgstr "JSON 格式的配置："
+
+#: ../../source/job_templates.rst:990
+msgid "The following table notes the behavior (hierarchy) of variable precedence in |at| as it compares to variable precedence in Ansible."
+msgstr "下表记录了 |at| 中的变量优先级的行为（层次结构）与 Ansible 中的变量优先级比较情况。"
+
+#: ../../source/job_templates.rst:992
+msgid "**Automation Controller Variable Precedence Hierarchy (last listed wins)**"
+msgstr "**自动化控制器变量优先级层次结构（最后列出的优先）**"
+
+#: ../../source/job_templates.rst:998
+msgid "Relaunching Job Templates"
+msgstr "重新启动作业模板"
+
+#: ../../source/job_templates.rst:1003
+msgid "Instead of manually relaunching a job, a relaunch is denoted by setting ``launch_type`` to ``relaunch``. The relaunch behavior deviates from the launch behavior in that it **does not** inherit ``extra_vars``."
+msgstr "重新启动通过将 ``launch_type`` 设置为 ``relaunch`` 来表示，而不是手动重新启动作业。重新启动行为与启动行为的偏差在于它**不**继承 ``extra_vars``。"
+
+#: ../../source/job_templates.rst:1005
+msgid "Job relaunching does not go through the inherit logic. It uses the same ``extra_vars`` that were calculated for the job being relaunched."
+msgstr "作业重新启动不会通过继承逻辑。它会使用为重新启动的作业计算的相同 ``extra_vars``。"
+
+#: ../../source/job_templates.rst:1007
+msgid "For example, say that you launch a Job Template with no ``extra_vars`` which results in the creation of a Job called **j1**. Next, say that you edit the Job Template and add in some ``extra_vars`` (such as adding ``\"{ \"hello\": \"world\" }\"``)."
+msgstr "例如，假设您启动一个没有 ``extra_vars`` 的作业模板，导致创建一个名为 **j1** 的作业。下一步，假设您编辑作业模板，并加入一些 ``extra_vars``（如添加 ``\"{ \"hello\": \"world\" }\"``）。"
+
+#: ../../source/job_templates.rst:1009
+msgid "Relaunching **j1** results in the creation of **j2**, but because there is no inherit logic and **j1** had no ``extra_vars``, **j2** will not have any ``extra_vars``."
+msgstr "重新启动 **j1** 导致创建 **j2**，但是由于没有继承逻辑，而且 **j1** 没有 ``extra_vars``，**j2** 将没有任何 ``extra_vars``。"
+
+#: ../../source/job_templates.rst:1011
+msgid "To continue upon this example, if you launched the Job Template with the ``extra_vars`` you added after the creation of **j1**, the relaunch job created (**j3**) will include the ``extra_vars``. And relaunching **j3** results in the creation of **j4**, which would also include ``extra_vars``."
+msgstr "继续前面的示例，如果您启动了包含您在创建 **j1** 之后添加的 ``extra_vars`` 的作业模板，创建的重新启动作业 (**j3**) 将包括 ``extra_vars``。重新启动 **j3** 会导致创建 **j4**，其中也包括 ``extra_vars``。"
+

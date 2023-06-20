@@ -1,0 +1,393 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/notification_parameters_supported.rst:4
+msgid "Supported Attributes for Custom Notifications"
+msgstr "カスタム通知でサポートされている属性"
+
+#: ../../source/notification_parameters_supported.rst:11
+msgid "This section describes the list of supported job attributes and the proper syntax for constructing the message text for notifications. The supported job attributes are:"
+msgstr "このセクションでは、サポート対象のジョブ属性リストと、通知用のメッセージテキスト作成に適した構文について説明します。サポートされるジョブ属性は以下のとおりです。"
+
+#: ../../source/notification_parameters_supported.rst:13
+msgid "``allow_simultaneous`` - (boolean) indicates if multiple jobs can run simultaneously from the JT associated with this job"
+msgstr "``allow_simultaneous``: (ブール値) 複数のジョブが、このジョブに関連付けられた JT から同時に実行できるかどうかを示す"
+
+#: ../../source/notification_parameters_supported.rst:14
+msgid "``controller_node`` - (string) the instance that managed the isolated execution environment"
+msgstr "``controller_node``: (文字列) 分離された実行環境を管理したインスタンス"
+
+#: ../../source/notification_parameters_supported.rst:15
+msgid "``created`` - (datetime) timestamp when this job was created"
+msgstr "``created``: (日時) ジョブの作成時のタイムスタンプ"
+
+#: ../../source/notification_parameters_supported.rst:16
+msgid "``custom_virtualenv`` - (string) custom virtual environment used to execute job"
+msgstr "``custom_virtualenv``: (文字列) ジョブの実行に使用されるカスタムの仮想環境"
+
+#: ../../source/notification_parameters_supported.rst:17
+msgid "``description`` - (string) optional description of the job"
+msgstr "``description``: (文字列) ジョブの説明 (オプション)"
+
+#: ../../source/notification_parameters_supported.rst:18
+msgid "``diff_mode`` - (boolean) if enabled, textual changes made to any templated files on the host are shown in the standard output"
+msgstr "``diff_mode``: (ブール値) 有効になっている場合、ホストのテンプレート化されたファイルに追加されるテキストの変更を標準出力に表示"
+
+#: ../../source/notification_parameters_supported.rst:19
+msgid "``elapsed`` - (decimal) elapsed time in seconds that the job ran"
+msgstr "``elapsed``: (10 進数) ジョブ実行の経過時間 (秒単位)"
+
+#: ../../source/notification_parameters_supported.rst:20
+msgid "``execution_node`` - (string) node the job executed on"
+msgstr "``execution_node``: (文字列) ジョブが実行されるノード"
+
+#: ../../source/notification_parameters_supported.rst:21
+msgid "``failed`` - (boolean) true if job failed"
+msgstr "``failed``: (ブール値) ジョブが失敗した場合は true"
+
+#: ../../source/notification_parameters_supported.rst:22
+msgid "``finished`` - (datetime) date and time the job finished execution"
+msgstr "``finished``: (日時) ジョブが実行を完了した日時"
+
+#: ../../source/notification_parameters_supported.rst:23
+msgid "``force_handlers`` - (boolean) when handlers are forced, they will run when notified even if a task fails on that host (note that some conditions - e.g. unreachable hosts - can still prevent handlers from running)"
+msgstr "``force_handlers``: (ブール値) ハンドラーが強制されている場合、ホストでタスクが失敗した場合でも、通知された場合はハンドラーが実行される (ホストへの到達が不可能な場合など、状況によってはハンドラーの実行が回避されることに留意)"
+
+#: ../../source/notification_parameters_supported.rst:24
+msgid "``forks`` - (int) number of forks requested for job"
+msgstr "``forks``: (整数) ジョブに要求されたフォークの数"
+
+#: ../../source/notification_parameters_supported.rst:25
+msgid "``id`` - (int) database id for this job"
+msgstr "``id``: (整数) このジョブのデータベース ID"
+
+#: ../../source/notification_parameters_supported.rst:26
+msgid "``job_explanation`` - (string) status field to indicate the state of the job if it wasn't able to run and capture stdout"
+msgstr "``job_explanation``: (文字列) stdout の実行およびキャプチャーができない場合のジョブの状態を示すための状態フィールド"
+
+#: ../../source/notification_parameters_supported.rst:27
+msgid "``job_slice_count`` - (integer) if run as part of a sliced job, the total number of slices (if 1, job is not part of a sliced job)"
+msgstr "``job_slice_count``: (整数) スライスされたジョブの一部として実行された場合には、スライスの合計数 (1 の場合はスライスされたジョブの一部ではない)"
+
+#: ../../source/notification_parameters_supported.rst:28
+msgid "``job_slice_number`` - (integer) if run as part of a sliced job, the ID of the inventory slice operated on (if not part of a sliced job, attribute is not used)"
+msgstr "``job_slice_number``: (整数) スライスされたジョブの一部として実行された場合には、スライス処理が行われたインベントリーの ID (スライスされたジョブの一部でなければ属性は使用されない)"
+
+#: ../../source/notification_parameters_supported.rst:29
+msgid "``job_tags`` - (string) only tasks with specified tags will execute"
+msgstr "``job_tags``: (文字列) 指定されたタグを持つタスクのみが実行される"
+
+#: ../../source/notification_parameters_supported.rst:30
+msgid "``job_type`` - (choice) run, check, or scan"
+msgstr "``job_type``: (選択肢) run、check、または scan"
+
+#: ../../source/notification_parameters_supported.rst:31
+msgid "``launch_type`` - (choice) manual, relaunch, callback, scheduled, dependency, workflow, sync, or scm"
+msgstr "``launch_type``: (選択肢) manual、relaunch、callback、scheduled、dependency、workflow、sync、または scm"
+
+#: ../../source/notification_parameters_supported.rst:32
+msgid "``limit`` - (string) playbook execution limited to this set of hosts, if specified"
+msgstr "``limit``: (文字列) 指定された場合、このホストのセットに制限された Playbook を実行"
+
+#: ../../source/notification_parameters_supported.rst:33
+msgid "``modified`` - (datetime) timestamp when this job was last modified"
+msgstr "``modified``: (日時) ジョブの最終更新時のタイムスタンプ"
+
+#: ../../source/notification_parameters_supported.rst:34
+msgid "``name`` - (string) name of this job"
+msgstr "``name``: (文字列) このジョブの名前"
+
+#: ../../source/notification_parameters_supported.rst:35
+msgid "``playbook`` - (string) playbook executed"
+msgstr "``playbook``: (文字列) 実行された Playbook"
+
+#: ../../source/notification_parameters_supported.rst:36
+msgid "``scm_revision`` - (string) scm revision from the project used for this job, if available"
+msgstr "``scm_revision``: (文字列) このジョブに使用するプロジェクトからの SCM リビジョン (ある場合)"
+
+#: ../../source/notification_parameters_supported.rst:37
+msgid "``skip_tags`` - (string) playbook execution skips over this set of tag(s), if specified"
+msgstr "``skip_tags``: (文字列) 指定した場合には、このタグセットをスキップして Playbook を実行"
+
+#: ../../source/notification_parameters_supported.rst:38
+msgid "``start_at_task`` - (string) playbook execution begins at the task matching this name, if specified"
+msgstr "``start_at_task``: (文字列) 指定した場合には、この名前に一致するタスクで Playbook の実行を開始"
+
+#: ../../source/notification_parameters_supported.rst:39
+msgid "``started`` - (datetime) date and time the job was queued for starting"
+msgstr "``started``: (日時) ジョブが開始のためにキューに入れられた日時"
+
+#: ../../source/notification_parameters_supported.rst:40
+msgid "``status`` - (choice) new, pending, waiting, running, successful, failed, error, canceled"
+msgstr "``status``: (選択肢) new、pending、waiting、running、successful、failed、error、canceled"
+
+#: ../../source/notification_parameters_supported.rst:41
+msgid "``timeout`` - (int) amount of time (in seconds) to run before the task is canceled"
+msgstr "``timeout``: (整数) タスクが取り消されるまでの実行時間 (秒数)"
+
+#: ../../source/notification_parameters_supported.rst:42
+msgid "``type`` - (choice) data type for this job"
+msgstr "``type``: (選択肢) このジョブのデータタイプ"
+
+#: ../../source/notification_parameters_supported.rst:43
+msgid "``url`` - (string) URL for this job"
+msgstr "``url``: (文字列) ジョブの URL"
+
+#: ../../source/notification_parameters_supported.rst:44
+msgid "``use_fact_cache`` - (boolean) if enabled for job, the controller acts as an Ansible Fact Cache Plugin, persisting facts at the end of a playbook run to the database and caching facts for use by Ansible"
+msgstr "``use_fact_cache``: (ブール値) ジョブに対して有効化されている場合には、コントローラーは Ansible ファクトキャッシュプラグインとして機能。データベースに対する Playbook 実行の終了時にファクトを保持し、Ansible で使用できるようにキャッシュ"
+
+#: ../../source/notification_parameters_supported.rst:45
+msgid "``verbosity`` - (choice) 0 through 5 (corresponding to Normal through WinRM Debug)"
+msgstr "``verbosity``: (選択肢) 0 - 5 (正常 - WinRM デバッグに対応)"
+
+#: ../../source/notification_parameters_supported.rst:54
+msgid "``host_status_counts`` (count of hosts uniquely assigned to each status)"
+msgstr "``host_status_counts`` (各ステータスに一意に割り当てられたホスト数)"
+
+#: ../../source/notification_parameters_supported.rst:47
+msgid "``skipped`` (integer)"
+msgstr "``skipped`` (整数)"
+
+#: ../../source/notification_parameters_supported.rst:48
+msgid "``ok`` (integer)"
+msgstr "``ok`` (整数)"
+
+#: ../../source/notification_parameters_supported.rst:49
+msgid "``changed`` (integer)"
+msgstr "``changed`` (整数)"
+
+#: ../../source/notification_parameters_supported.rst:50
+msgid "``failures`` (integer)"
+msgstr "``failures`` (整数)"
+
+#: ../../source/notification_parameters_supported.rst:51
+msgid "``dark`` (integer)"
+msgstr "``dark`` (整数)"
+
+#: ../../source/notification_parameters_supported.rst:52
+msgid "``processed`` (integer)"
+msgstr "``processed`` (整数)"
+
+#: ../../source/notification_parameters_supported.rst:53
+msgid "``rescued`` (integer)"
+msgstr "``rescued`` (整数)"
+
+#: ../../source/notification_parameters_supported.rst:54
+msgid "``ignored`` (integer)"
+msgstr "``ignored`` (整数)"
+
+#: ../../source/notification_parameters_supported.rst:55
+msgid "``failed`` (boolean)"
+msgstr "``failed`` (ブール値)"
+
+#: ../../source/notification_parameters_supported.rst:96
+msgid "``summary_fields``:"
+msgstr "``summary_fields``:"
+
+#: ../../source/notification_parameters_supported.rst:69
+msgid "``inventory``"
+msgstr "``inventory``"
+
+#: ../../source/notification_parameters_supported.rst:58
+msgid "``id`` - (integer) database ID for inventory"
+msgstr "``id``: (整数) インベントリーのデータベース ID"
+
+#: ../../source/notification_parameters_supported.rst:59
+msgid "``name`` - (string) name of the inventory"
+msgstr "``name``: (文字列) インベントリーの名前"
+
+#: ../../source/notification_parameters_supported.rst:60
+msgid "``description`` - (string) optional description of the inventory"
+msgstr "``description``: (文字列) インベントリーの説明 (オプション)"
+
+#: ../../source/notification_parameters_supported.rst:61
+msgid "``has_active_failures`` - (boolean) (deprecated) flag indicating whether any hosts in this inventory have failed"
+msgstr "``has_active_failures``: (ブール値) (非推奨) このインベントリーのホストが失敗したかどうかを示すフラグ"
+
+#: ../../source/notification_parameters_supported.rst:62
+msgid "``total_hosts`` - (deprecated) (int) total number of hosts in this inventory."
+msgstr "``total_hosts``: (非推奨) (整数) このインベントリー内のホストの合計数"
+
+#: ../../source/notification_parameters_supported.rst:63
+msgid "``hosts_with_active_failures`` - (deprecated) (int) number of hosts in this inventory with active failures"
+msgstr "``hosts_with_active_failures``: (非推奨) (整数) このインベントリー内のアクティブなエラーがあるホストの数"
+
+#: ../../source/notification_parameters_supported.rst:64
+msgid "``total_groups`` - (deprecated) (int) total number of groups in this inventory"
+msgstr "``total_groups``: (非推奨) (整数) このインベントリー内のグループの合計数"
+
+#: ../../source/notification_parameters_supported.rst:65
+msgid "``groups_with_active_failures`` - (deprecated) (int) number of hosts in this inventory with active failures"
+msgstr "``groups_with_active_failures``: (非推奨) (整数) このインベントリー内のアクティブなエラーがあるホストの数"
+
+#: ../../source/notification_parameters_supported.rst:66
+msgid "``has_inventory_sources`` - (deprecated) (boolean) flag indicating whether this inventory has external inventory sources"
+msgstr "``has_inventory_sources``: (非推奨) (ブール値) このインベントリーに外部のインベントリーソースがあるかどうかを示すフラグ"
+
+#: ../../source/notification_parameters_supported.rst:67
+msgid "``total_inventory_sources`` - (int) total number of external inventory sources configured within this inventory"
+msgstr "``total_inventory_sources``: (整数) このインベントリー内で設定された外部インベントリーソースの合計数"
+
+#: ../../source/notification_parameters_supported.rst:68
+msgid "``inventory_sources_with_failures`` - (int) number of external inventory sources in this inventory with failures"
+msgstr "``inventory_sources_with_failures``: (整数) このインベントリー内のエラーのある外部インベントリーソースの数"
+
+#: ../../source/notification_parameters_supported.rst:69
+msgid "``organization_id`` - (id) organization containing this inventory"
+msgstr "``organization_id``: (ID) このインベントリーを含む組織"
+
+#: ../../source/notification_parameters_supported.rst:70
+msgid "``kind`` - (choice) (empty string) (indicating hosts have direct link with inventory) or 'smart'"
+msgstr "``kind``: (選択肢) (空の文字列) (ホストにインベントリーとの直接リンクがあることを示す) または「smart」"
+
+#: ../../source/notification_parameters_supported.rst:75
+msgid "``project``"
+msgstr "``project``"
+
+#: ../../source/notification_parameters_supported.rst:72
+msgid "``id`` - (int) database ID for project"
+msgstr "``id``: (整数) プロジェクトのデータベース ID"
+
+#: ../../source/notification_parameters_supported.rst:73
+msgid "``name`` - (string) name of the project"
+msgstr "``name``: (文字列) プロジェクトの名前"
+
+#: ../../source/notification_parameters_supported.rst:74
+msgid "``description`` - (string) optional description of the project"
+msgstr "``description``: (文字列) プロジェクトの説明 (オプション)"
+
+#: ../../source/notification_parameters_supported.rst:75
+msgid "``status`` - (choices) one of new, pending, waiting, running, successful, failed, error, canceled, never updated, ok, or missing"
+msgstr "``status``: (選択肢) new、pending、waiting、running、successful、failed、error、canceled、never updated、ok、missing のいずれか"
+
+#: ../../source/notification_parameters_supported.rst:76
+msgid "``scm_type (choice)`` - one of (empty string), git, hg, svn, insights"
+msgstr "``scm_type (choice)``: (空の文字列)、git、hg、svn、insights のいずれか"
+
+#: ../../source/notification_parameters_supported.rst:79
+msgid "``job_template``"
+msgstr "``job_template``"
+
+#: ../../source/notification_parameters_supported.rst:78
+msgid "``id`` - (int) database ID for job template"
+msgstr "``id``: (整数) ジョブテンプレートのデータベース ID"
+
+#: ../../source/notification_parameters_supported.rst:79
+msgid "``name`` - (string) name of job template"
+msgstr "``name``: (文字列) ジョブテンプレートの名前"
+
+#: ../../source/notification_parameters_supported.rst:80
+msgid "``description`` - (string) optional description for the job template"
+msgstr "``description``: (文字列) ジョブテンプレートの説明 (オプション)"
+
+#: ../../source/notification_parameters_supported.rst:84
+msgid "``unified_job_template``"
+msgstr "``unified_job_template``"
+
+#: ../../source/notification_parameters_supported.rst:82
+msgid "``id`` - (int) database ID for unified job template"
+msgstr "``id``: (整数) 統合ジョブテンプレートのデータベース ID"
+
+#: ../../source/notification_parameters_supported.rst:83
+msgid "``name`` - (string) name of unified job template"
+msgstr "``name``: (文字列) 統合ジョブテンプレートの名前"
+
+#: ../../source/notification_parameters_supported.rst:84
+msgid "``description`` - (string) optional description for the unified job template"
+msgstr "``description``: (文字列) 統合ジョブテンプレートの説明 (オプション)"
+
+#: ../../source/notification_parameters_supported.rst:85
+msgid "``unified_job_type`` - (choice) unified job type (job, workflow_job, project_update, etc.)"
+msgstr "``unified_job_type``: (選択肢) 統合ジョブタイプ (job、workflow_job、project_update など)"
+
+#: ../../source/notification_parameters_supported.rst:87
+msgid "``instance_group``"
+msgstr "``instance_group``"
+
+#: ../../source/notification_parameters_supported.rst:87
+msgid "``id`` - (int) database ID for instance group"
+msgstr "``id``: (整数) インスタンスグループのデータベース ID"
+
+#: ../../source/notification_parameters_supported.rst:88
+msgid "``name`` - (string) name of instance group"
+msgstr "``name``: (文字列) インスタンスグループの名前"
+
+#: ../../source/notification_parameters_supported.rst:92
+msgid "``created_by``"
+msgstr "``created_by``"
+
+#: ../../source/notification_parameters_supported.rst:90
+msgid "``id`` - (int) database ID of user that launched the operation"
+msgstr "``id``: (int) 操作を開始したユーザーのデータベース ID"
+
+#: ../../source/notification_parameters_supported.rst:91
+msgid "``username`` - (string) username that launched the operation"
+msgstr "``username``: (文字列) 操作を開始したユーザー名"
+
+#: ../../source/notification_parameters_supported.rst:92
+msgid "``first_name`` - (string) first name"
+msgstr "``first_name``: (文字列) 名"
+
+#: ../../source/notification_parameters_supported.rst:93
+msgid "``last_name`` - (string) last name"
+msgstr "``last_name``: (文字列) 姓"
+
+#: ../../source/notification_parameters_supported.rst:96
+msgid "``labels``"
+msgstr "``labels``"
+
+#: ../../source/notification_parameters_supported.rst:95
+msgid "``count`` - (int) number of labels"
+msgstr "``count``: (整数) ラベルの数"
+
+#: ../../source/notification_parameters_supported.rst:96
+msgid "``results`` - list of dictionaries representing labels (e.g. {\"id\": 5, \"name\": \"database jobs\"})"
+msgstr "``results``: ラベルを表す辞書のリスト ( {\"id\": 5, \"name\": \"database jobs\"} など)"
+
+#: ../../source/notification_parameters_supported.rst:98
+msgid "Information about a job can be referenced in a custom notification message using grouped curly braces ``{{ }}``. Specific job attributes are accessed using dotted notation, for example ``{{ job.summary_fields.inventory.name }}``. Any characters used in front or around the braces, or plain text, can be added for clarification, such as '#' for job ID and single-quotes to denote some descriptor. Custom messages can include a number of variables throughout the message::"
+msgstr "ジョブに関する情報は、中括弧 (``{{ }}``) を使用してグループ化した、カスタムの通知メッセージを使用して参照できます。特定のジョブ属性には、``{{ job.summary_fields.inventory.name }}`` のようなドット表記法を使用してアクセスします。ジョブ ID には「#」、記述子の表記には1重引用符というように、括弧の前または前後に文字 (プレーンテキスト) を加えて、明確化することができます。カスタムメッセージでは、以下のように、メッセージ全体に複数の変数を含めることができます。"
+
+#: ../../source/notification_parameters_supported.rst:102
+msgid "In addition to the job attributes, there are some other variables that can be added to the template:"
+msgstr "ジョブ属性に加えてテンプレートに追加できる変数は、他にも複数あります。"
+
+#: ../../source/notification_parameters_supported.rst:104
+msgid "``approval_node_name`` - (string) the approval node name"
+msgstr "``approval_node_name``: (文字列) 承認ノード名"
+
+#: ../../source/notification_parameters_supported.rst:105
+msgid "``approval_status`` - (choice) one of approved, denied, and timed_out"
+msgstr "``approval_status``: (選択肢) approved、denied、timed_out のいずれか"
+
+#: ../../source/notification_parameters_supported.rst:106
+msgid "``url`` - (string) URL of the job for which the notification is emitted (this applies to start, success, fail, and approval notifications)"
+msgstr "``url``: (文字列) 通知が送信されるジョブの URL (開始、成功、失敗、承認の通知に適用)"
+
+#: ../../source/notification_parameters_supported.rst:107
+msgid "``workflow_url`` - (string) URL to the relevant approval node. This allows the notification recipient to go to the relevant workflow job page to see what's going on (i.e., ``This node can be viewed at: {{ workflow_url }}``). In cases of approval-related notifications, both ``url`` and ``workflow_url`` are the same."
+msgstr "``workflow_url``: (文字列) 関連する承認ノードへの URL。これにより、通知の受信者は、関連するワークフロージョブページに移動して、状況を把握することができます (``This node can be viewed at: {{ workflow_url }}``)。承認関連の通知の場合には、``url`` と ``workflow_url`` はどちらも同じです。"
+
+#: ../../source/notification_parameters_supported.rst:108
+msgid "``job_friendly_name`` - (string) the friendly name of the job"
+msgstr "``job_friendly_name``: (文字列) ジョブのフレンドリー名"
+
+#: ../../source/notification_parameters_supported.rst:109
+msgid "``job_metadata`` - (string) job metadata as a JSON string, for example::"
+msgstr "``job_metadata``: (文字列) 以下のような、JSON 文字列としてのジョブメタデータ。"
+

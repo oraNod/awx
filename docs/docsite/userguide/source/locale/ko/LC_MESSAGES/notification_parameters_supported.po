@@ -1,0 +1,393 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/notification_parameters_supported.rst:4
+msgid "Supported Attributes for Custom Notifications"
+msgstr "사용자 정의 알림에 지원되는 특성"
+
+#: ../../source/notification_parameters_supported.rst:11
+msgid "This section describes the list of supported job attributes and the proper syntax for constructing the message text for notifications. The supported job attributes are:"
+msgstr "이 섹션에서는 지원되는 작업 특성 목록과 알림에 대한 메시지 텍스트를 구성하는 적절한 구문에 대해 설명합니다. 지원되는 작업 특성은 다음과 같습니다."
+
+#: ../../source/notification_parameters_supported.rst:13
+msgid "``allow_simultaneous`` - (boolean) indicates if multiple jobs can run simultaneously from the JT associated with this job"
+msgstr "``allow_simultaneous`` - (부울) 이 작업과 연결된 JT에서 여러 작업을 동시에 실행할 수 있는지를 나타냄"
+
+#: ../../source/notification_parameters_supported.rst:14
+msgid "``controller_node`` - (string) the instance that managed the isolated execution environment"
+msgstr "``controller_node`` - (문자열) 격리된 실행 환경을 관리하는 인스턴스"
+
+#: ../../source/notification_parameters_supported.rst:15
+msgid "``created`` - (datetime) timestamp when this job was created"
+msgstr "``created`` - (날짜/시간) 이 작업이 생성된 때의 타임스탬프"
+
+#: ../../source/notification_parameters_supported.rst:16
+msgid "``custom_virtualenv`` - (string) custom virtual environment used to execute job"
+msgstr "``custom_virtualenv`` - (문자열) 작업 실행에 사용되는 사용자 정의 가상 환경"
+
+#: ../../source/notification_parameters_supported.rst:17
+msgid "``description`` - (string) optional description of the job"
+msgstr "``description`` - (문자열) 작업에 대한 선택적 설명"
+
+#: ../../source/notification_parameters_supported.rst:18
+msgid "``diff_mode`` - (boolean) if enabled, textual changes made to any templated files on the host are shown in the standard output"
+msgstr "``diff_mode`` - (부울) 활성화하면 호스트의 템플릿 파일에 대한 텍스트 변경 사항이 표준 출력에 표시됨"
+
+#: ../../source/notification_parameters_supported.rst:19
+msgid "``elapsed`` - (decimal) elapsed time in seconds that the job ran"
+msgstr "``elapsed`` - (십진수) 작업이 실행되는 데 경과된 시간(초)"
+
+#: ../../source/notification_parameters_supported.rst:20
+msgid "``execution_node`` - (string) node the job executed on"
+msgstr "``execution_node`` - (문자열) 작업이 실행된 노드"
+
+#: ../../source/notification_parameters_supported.rst:21
+msgid "``failed`` - (boolean) true if job failed"
+msgstr "``failed`` - (부울) 작업이 실패한 경우 True"
+
+#: ../../source/notification_parameters_supported.rst:22
+msgid "``finished`` - (datetime) date and time the job finished execution"
+msgstr "``finished`` - (날짜/시간) 작업 실행이 완료된 날짜 및 시간"
+
+#: ../../source/notification_parameters_supported.rst:23
+msgid "``force_handlers`` - (boolean) when handlers are forced, they will run when notified even if a task fails on that host (note that some conditions - e.g. unreachable hosts - can still prevent handlers from running)"
+msgstr "``force_handlers`` - (부울) 핸들러가 강제 적용되면 알림이 표시될 때 해당 호스트에서 작업이 실패하더라도 실행됨(일부 조건(예: 연결할 수 없는 호스트)에서는 여전히 핸들러를 실행할 수 없음)"
+
+#: ../../source/notification_parameters_supported.rst:24
+msgid "``forks`` - (int) number of forks requested for job"
+msgstr "``forks`` - (정수) 작업에 요청된 포크 수"
+
+#: ../../source/notification_parameters_supported.rst:25
+msgid "``id`` - (int) database id for this job"
+msgstr "``id`` - (정수) 이 작업을 위한 데이터베이스 ID"
+
+#: ../../source/notification_parameters_supported.rst:26
+msgid "``job_explanation`` - (string) status field to indicate the state of the job if it wasn't able to run and capture stdout"
+msgstr "``job_explanation`` - (문자열) stdout을 실행하고 캡처할 수 없는 경우 작업 상태를 나타내는 상태 필드"
+
+#: ../../source/notification_parameters_supported.rst:27
+msgid "``job_slice_count`` - (integer) if run as part of a sliced job, the total number of slices (if 1, job is not part of a sliced job)"
+msgstr "``job_slice_count`` - (정수) 슬라이스된 작업의 일부로 실행된 경우 총 슬라이스 수(1인 경우 작업은 슬라이스된 작업의 일부가 아님)"
+
+#: ../../source/notification_parameters_supported.rst:28
+msgid "``job_slice_number`` - (integer) if run as part of a sliced job, the ID of the inventory slice operated on (if not part of a sliced job, attribute is not used)"
+msgstr "``job_slice_number`` - (정수) 슬라이스된 작업의 일부로 실행된 경우 작동하는 인벤토리 슬라이스의 ID(슬라이스된 작업의 일부가 아닌 경우 특성이 사용되지 않음)"
+
+#: ../../source/notification_parameters_supported.rst:29
+msgid "``job_tags`` - (string) only tasks with specified tags will execute"
+msgstr "``job_tags`` - (문자열) 지정된 태그가 있는 작업만 실행됨"
+
+#: ../../source/notification_parameters_supported.rst:30
+msgid "``job_type`` - (choice) run, check, or scan"
+msgstr "``job_type`` - (선택) 실행, 확인 또는 검사"
+
+#: ../../source/notification_parameters_supported.rst:31
+msgid "``launch_type`` - (choice) manual, relaunch, callback, scheduled, dependency, workflow, sync, or scm"
+msgstr "``launch_type`` - (선택) 수동, 다시 시작, 콜백, 스케줄링, 종속성, 워크플로우, 동기화 또는 scm"
+
+#: ../../source/notification_parameters_supported.rst:32
+msgid "``limit`` - (string) playbook execution limited to this set of hosts, if specified"
+msgstr "``limit`` - (문자열) 지정된 경우 이 호스트 세트로 제한된 플레이북 실행"
+
+#: ../../source/notification_parameters_supported.rst:33
+msgid "``modified`` - (datetime) timestamp when this job was last modified"
+msgstr "``modified`` - (날짜/시간) 이 작업이 마지막으로 수정된 때의 타임스탬프"
+
+#: ../../source/notification_parameters_supported.rst:34
+msgid "``name`` - (string) name of this job"
+msgstr "``name`` - (문자열) 이 작업의 이름"
+
+#: ../../source/notification_parameters_supported.rst:35
+msgid "``playbook`` - (string) playbook executed"
+msgstr "``playbook`` - (문자열) 실행된 플레이북"
+
+#: ../../source/notification_parameters_supported.rst:36
+msgid "``scm_revision`` - (string) scm revision from the project used for this job, if available"
+msgstr "``scm_revision`` - (문자열) 이 작업에 사용되는 프로젝트의 scm 버전(사용 가능한 경우)"
+
+#: ../../source/notification_parameters_supported.rst:37
+msgid "``skip_tags`` - (string) playbook execution skips over this set of tag(s), if specified"
+msgstr "``skip_tags`` - (문자열) 지정된 경우 플레이북 실행에서 이 태그 세트를 건너뜀"
+
+#: ../../source/notification_parameters_supported.rst:38
+msgid "``start_at_task`` - (string) playbook execution begins at the task matching this name, if specified"
+msgstr "``start_at_task`` - (문자열) 지정된 경우 이 이름과 일치하는 작업에서 플레이북 실행이 시작됨"
+
+#: ../../source/notification_parameters_supported.rst:39
+msgid "``started`` - (datetime) date and time the job was queued for starting"
+msgstr "``started`` - (날짜/시간) 작업이 시작 대기열에 추가된 날짜 및 시간"
+
+#: ../../source/notification_parameters_supported.rst:40
+msgid "``status`` - (choice) new, pending, waiting, running, successful, failed, error, canceled"
+msgstr "``status`` - (선택) 신규, 보류 중, 대기 중, 실행 중, 성공, 실패, 오류, 취소됨"
+
+#: ../../source/notification_parameters_supported.rst:41
+msgid "``timeout`` - (int) amount of time (in seconds) to run before the task is canceled"
+msgstr "``timeout`` - (정수) 작업이 취소될 때까지의 실행 시간(초)"
+
+#: ../../source/notification_parameters_supported.rst:42
+msgid "``type`` - (choice) data type for this job"
+msgstr "``type`` - (선택) 이 작업의 데이터 유형"
+
+#: ../../source/notification_parameters_supported.rst:43
+msgid "``url`` - (string) URL for this job"
+msgstr "``url`` - (문자열) 이 작업의 URL"
+
+#: ../../source/notification_parameters_supported.rst:44
+msgid "``use_fact_cache`` - (boolean) if enabled for job, the controller acts as an Ansible Fact Cache Plugin, persisting facts at the end of a playbook run to the database and caching facts for use by Ansible"
+msgstr "``use_fact_cache`` - (부울) 작업에 대해 활성화한 경우 컨트롤러는 Ansible 사실 캐시 플러그인으로 작동하여 데이터베이스에 대한 플레이북 실행이 끝날 때 팩트를 유지하고 Ansible에서 사용할 사실을 캐시함"
+
+#: ../../source/notification_parameters_supported.rst:45
+msgid "``verbosity`` - (choice) 0 through 5 (corresponding to Normal through WinRM Debug)"
+msgstr "``verbosity`` - (선택) 0~5(정상 ~ WinRM 디버그에 해당)"
+
+#: ../../source/notification_parameters_supported.rst:54
+msgid "``host_status_counts`` (count of hosts uniquely assigned to each status)"
+msgstr "``host_status_counts``(각 상태에 고유하게 할당된 호스트 수)"
+
+#: ../../source/notification_parameters_supported.rst:47
+msgid "``skipped`` (integer)"
+msgstr "``skipped``(정수)"
+
+#: ../../source/notification_parameters_supported.rst:48
+msgid "``ok`` (integer)"
+msgstr "``ok``(정수)"
+
+#: ../../source/notification_parameters_supported.rst:49
+msgid "``changed`` (integer)"
+msgstr "``changed``(정수)"
+
+#: ../../source/notification_parameters_supported.rst:50
+msgid "``failures`` (integer)"
+msgstr "``failures``(정수)"
+
+#: ../../source/notification_parameters_supported.rst:51
+msgid "``dark`` (integer)"
+msgstr "``dark``(정수)"
+
+#: ../../source/notification_parameters_supported.rst:52
+msgid "``processed`` (integer)"
+msgstr "``processed``(정수)"
+
+#: ../../source/notification_parameters_supported.rst:53
+msgid "``rescued`` (integer)"
+msgstr "``rescued``(정수)"
+
+#: ../../source/notification_parameters_supported.rst:54
+msgid "``ignored`` (integer)"
+msgstr "``ignored``(정수)"
+
+#: ../../source/notification_parameters_supported.rst:55
+msgid "``failed`` (boolean)"
+msgstr "``failed``(부울)"
+
+#: ../../source/notification_parameters_supported.rst:96
+msgid "``summary_fields``:"
+msgstr "``summary_fields``:"
+
+#: ../../source/notification_parameters_supported.rst:69
+msgid "``inventory``"
+msgstr "``inventory``"
+
+#: ../../source/notification_parameters_supported.rst:58
+msgid "``id`` - (integer) database ID for inventory"
+msgstr "``id`` - (정수) 인벤토리의 데이터베이스 ID"
+
+#: ../../source/notification_parameters_supported.rst:59
+msgid "``name`` - (string) name of the inventory"
+msgstr "``name`` - (문자열) 인벤토리의 이름"
+
+#: ../../source/notification_parameters_supported.rst:60
+msgid "``description`` - (string) optional description of the inventory"
+msgstr "``description`` - (문자열) 인벤토리에 대한 선택적 설명"
+
+#: ../../source/notification_parameters_supported.rst:61
+msgid "``has_active_failures`` - (boolean) (deprecated) flag indicating whether any hosts in this inventory have failed"
+msgstr "``has_active_failures`` - (부울)(더 이상 사용되지 않음) 이 인벤토리의 호스트가 실패했는지의 여부를 나타내는 플래그"
+
+#: ../../source/notification_parameters_supported.rst:62
+msgid "``total_hosts`` - (deprecated) (int) total number of hosts in this inventory."
+msgstr "``total_hosts`` - (더 이상 사용되지 않음)(정수) 이 인벤토리에 있는 총 호스트 수"
+
+#: ../../source/notification_parameters_supported.rst:63
+msgid "``hosts_with_active_failures`` - (deprecated) (int) number of hosts in this inventory with active failures"
+msgstr "``hosts_with_active_failures`` - (더 이상 사용되지 않음)(정수) 이 인벤토리에서 활성 상태의 오류가 있는 호스트 수"
+
+#: ../../source/notification_parameters_supported.rst:64
+msgid "``total_groups`` - (deprecated) (int) total number of groups in this inventory"
+msgstr "``total_groups`` - (더 이상 사용되지 않음)(정수) 이 인벤토리에 있는 총 그룹 수"
+
+#: ../../source/notification_parameters_supported.rst:65
+msgid "``groups_with_active_failures`` - (deprecated) (int) number of hosts in this inventory with active failures"
+msgstr "``groups_with_active_failures`` - (더 이상 사용되지 않음)(정수) 이 인벤토리에서 활성 상태의 오류가 있는 호스트 수"
+
+#: ../../source/notification_parameters_supported.rst:66
+msgid "``has_inventory_sources`` - (deprecated) (boolean) flag indicating whether this inventory has external inventory sources"
+msgstr "``has_inventory_sources`` - (더 이상 사용되지 않음)(부울) 이 인벤토리에 외부 인벤토리 소스가 있는지의 여부를 나타내는 플래그"
+
+#: ../../source/notification_parameters_supported.rst:67
+msgid "``total_inventory_sources`` - (int) total number of external inventory sources configured within this inventory"
+msgstr "``total_inventory_sources`` - (정수) 이 인벤토리 내에 구성된 총 외부 인벤토리 소스 수"
+
+#: ../../source/notification_parameters_supported.rst:68
+msgid "``inventory_sources_with_failures`` - (int) number of external inventory sources in this inventory with failures"
+msgstr "``inventory_sources_with_failures`` - (정수) 이 인벤토리에서 오류가 있는 외부 인벤토리 소스 수"
+
+#: ../../source/notification_parameters_supported.rst:69
+msgid "``organization_id`` - (id) organization containing this inventory"
+msgstr "``organization_id`` - (ID) 이 인벤토리를 포함하는 조직"
+
+#: ../../source/notification_parameters_supported.rst:70
+msgid "``kind`` - (choice) (empty string) (indicating hosts have direct link with inventory) or 'smart'"
+msgstr "``kind`` - (선택)(빈 문자열)(호스트가 인벤토리와 직접 연결되어 있음을 나타냄) 또는 'smart'"
+
+#: ../../source/notification_parameters_supported.rst:75
+msgid "``project``"
+msgstr "``project``"
+
+#: ../../source/notification_parameters_supported.rst:72
+msgid "``id`` - (int) database ID for project"
+msgstr "``id`` - (정수) 프로젝트의 데이터베이스 ID"
+
+#: ../../source/notification_parameters_supported.rst:73
+msgid "``name`` - (string) name of the project"
+msgstr "``name`` - (문자열) 프로젝트의 이름"
+
+#: ../../source/notification_parameters_supported.rst:74
+msgid "``description`` - (string) optional description of the project"
+msgstr "``description`` - (문자열) 프로젝트에 대한 선택적 설명"
+
+#: ../../source/notification_parameters_supported.rst:75
+msgid "``status`` - (choices) one of new, pending, waiting, running, successful, failed, error, canceled, never updated, ok, or missing"
+msgstr "``status`` - (선택) 신규, 보류 중, 대기 중, 실행 중, 성공, 실패, 오류, 취소됨, 업데이트되지 않음, 확인 또는 누락"
+
+#: ../../source/notification_parameters_supported.rst:76
+msgid "``scm_type (choice)`` - one of (empty string), git, hg, svn, insights"
+msgstr "``scm_type (choice)`` - (빈 문자열), git, hg, svn, insights 중 하나"
+
+#: ../../source/notification_parameters_supported.rst:79
+msgid "``job_template``"
+msgstr "``job_template``"
+
+#: ../../source/notification_parameters_supported.rst:78
+msgid "``id`` - (int) database ID for job template"
+msgstr "``id`` - (정수) 작업 템플릿의 데이터베이스 ID"
+
+#: ../../source/notification_parameters_supported.rst:79
+msgid "``name`` - (string) name of job template"
+msgstr "``name`` - (문자열) 작업 템플릿의 이름"
+
+#: ../../source/notification_parameters_supported.rst:80
+msgid "``description`` - (string) optional description for the job template"
+msgstr "``description`` - (문자열) 작업 템플릿에 대한 선택적 설명"
+
+#: ../../source/notification_parameters_supported.rst:84
+msgid "``unified_job_template``"
+msgstr "``unified_job_template``"
+
+#: ../../source/notification_parameters_supported.rst:82
+msgid "``id`` - (int) database ID for unified job template"
+msgstr "``id`` - (정수) 통합 작업 템플릿의 데이터베이스 ID"
+
+#: ../../source/notification_parameters_supported.rst:83
+msgid "``name`` - (string) name of unified job template"
+msgstr "``name`` - (문자열) 통합 작업 템플릿의 이름"
+
+#: ../../source/notification_parameters_supported.rst:84
+msgid "``description`` - (string) optional description for the unified job template"
+msgstr "``description`` - (문자열) 통합 작업 템플릿에 대한 선택적 설명"
+
+#: ../../source/notification_parameters_supported.rst:85
+msgid "``unified_job_type`` - (choice) unified job type (job, workflow_job, project_update, etc.)"
+msgstr "``unified_job_type`` - (선택) 통합 작업 유형(job, workflow_job, project_update 등)"
+
+#: ../../source/notification_parameters_supported.rst:87
+msgid "``instance_group``"
+msgstr "``instance_group``"
+
+#: ../../source/notification_parameters_supported.rst:87
+msgid "``id`` - (int) database ID for instance group"
+msgstr "``id`` - (정수) 인스턴스 그룹의 데이터베이스 ID"
+
+#: ../../source/notification_parameters_supported.rst:88
+msgid "``name`` - (string) name of instance group"
+msgstr "``name`` - (문자열) 인스턴스 그룹의 이름"
+
+#: ../../source/notification_parameters_supported.rst:92
+msgid "``created_by``"
+msgstr "``created_by``"
+
+#: ../../source/notification_parameters_supported.rst:90
+msgid "``id`` - (int) database ID of user that launched the operation"
+msgstr "``id`` - (정수) 작업을 시작한 사용자의 데이터베이스 ID"
+
+#: ../../source/notification_parameters_supported.rst:91
+msgid "``username`` - (string) username that launched the operation"
+msgstr "``username`` - (문자열) 작업을 시작한 사용자 이름"
+
+#: ../../source/notification_parameters_supported.rst:92
+msgid "``first_name`` - (string) first name"
+msgstr "``first_name`` - (문자열) 이름"
+
+#: ../../source/notification_parameters_supported.rst:93
+msgid "``last_name`` - (string) last name"
+msgstr "``last_name`` - (문자열) 성"
+
+#: ../../source/notification_parameters_supported.rst:96
+msgid "``labels``"
+msgstr "``labels``"
+
+#: ../../source/notification_parameters_supported.rst:95
+msgid "``count`` - (int) number of labels"
+msgstr "``count`` - (정수) 레이블 수"
+
+#: ../../source/notification_parameters_supported.rst:96
+msgid "``results`` - list of dictionaries representing labels (e.g. {\"id\": 5, \"name\": \"database jobs\"})"
+msgstr "``results`` - 레이블을 나타내는 사전 목록(예: {\"id\": 5, \"name\": \"database jobs\"})"
+
+#: ../../source/notification_parameters_supported.rst:98
+msgid "Information about a job can be referenced in a custom notification message using grouped curly braces ``{{ }}``. Specific job attributes are accessed using dotted notation, for example ``{{ job.summary_fields.inventory.name }}``. Any characters used in front or around the braces, or plain text, can be added for clarification, such as '#' for job ID and single-quotes to denote some descriptor. Custom messages can include a number of variables throughout the message::"
+msgstr "작업에 대한 정보는 그룹화된 중괄호 ``{{ }}``를 사용하여 사용자 정의 알림 메시지에서 참조할 수 있습니다. 특정 작업 특성은 점 표기법을 사용하여 액세스합니다(예: ``{{ job.summary_fields.inventory.name }}`` ). 중괄호 앞이나 주위에 사용된 모든 문자 또는 일반 텍스트(예: 작업 ID의 경우 '#', 일부 설명자를 나타내는 작은따옴표)는 설명을 위해 추가할 수 있습니다. 사용자 정의 메시지에는 메시지 전체에 걸쳐 다양한 변수가 포함될 수 있습니다."
+
+#: ../../source/notification_parameters_supported.rst:102
+msgid "In addition to the job attributes, there are some other variables that can be added to the template:"
+msgstr "작업 특성 외에도 기타 몇 가지 변수를 템플릿에 추가할 수 있습니다."
+
+#: ../../source/notification_parameters_supported.rst:104
+msgid "``approval_node_name`` - (string) the approval node name"
+msgstr "``approval_node_name`` - (문자열) 승인 노드 이름"
+
+#: ../../source/notification_parameters_supported.rst:105
+msgid "``approval_status`` - (choice) one of approved, denied, and timed_out"
+msgstr "``approval_status`` - (선택) 승인됨, 거부됨, 시간 초과 중 하나"
+
+#: ../../source/notification_parameters_supported.rst:106
+msgid "``url`` - (string) URL of the job for which the notification is emitted (this applies to start, success, fail, and approval notifications)"
+msgstr "``url`` - (문자열) 알림이 발생하는 작업의 URL(시작, 성공, 실패, 승인 알림에 적용됨)"
+
+#: ../../source/notification_parameters_supported.rst:107
+msgid "``workflow_url`` - (string) URL to the relevant approval node. This allows the notification recipient to go to the relevant workflow job page to see what's going on (i.e., ``This node can be viewed at: {{ workflow_url }}``). In cases of approval-related notifications, both ``url`` and ``workflow_url`` are the same."
+msgstr "``workflow_url`` - (문자열) 관련 승인 노드에 대한 URL. 이 URL을 통해 알림 수신자는 관련 워크플로우 작업 페이지로 이동하여 진행 중인 작업을 확인할 수 있습니다(예: ``This node can be viewed at: {{ workflow_url }}``). 승인 관련 알림의 경우 ``url`` 및 ``workflow_url`` 모두 동일합니다."
+
+#: ../../source/notification_parameters_supported.rst:108
+msgid "``job_friendly_name`` - (string) the friendly name of the job"
+msgstr "``job_friendly_name`` - (문자열) 작업의 친숙한 이름"
+
+#: ../../source/notification_parameters_supported.rst:109
+msgid "``job_metadata`` - (string) job metadata as a JSON string, for example::"
+msgstr "``job_metadata`` - (문자열) JSON 문자열로 된 작업 메타데이터로, 예를 들면 다음과 같습니다."
+

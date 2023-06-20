@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/management_jobs.rst:4
+msgid "Management Jobs"
+msgstr "管理ジョブ"
+
+#: ../../source/management_jobs.rst:12
+msgid "**Management Jobs** assist in the cleaning of old data from the controller, including system tracking information, tokens, job histories, and activity streams. You can use this if you have specific retention policies or need to decrease the storage used by your controller database. Click **Management Jobs** from the left navigation bar."
+msgstr "**管理ジョブ** を使用すると、システムトラッキング情報、トークン、ジョブの履歴、アクティビティーストリームなどコントローラーの過去データの消去が容易になります。特定の保持ポリシーがある場合や、コントローラーデータベースが使用するストレージを減らす必要がある場合に、これを使用します。左のナビゲーションバーから **管理ジョブ** をクリックします。"
+
+#: ../../source/management_jobs.rst:14
+msgid "|management jobs|"
+msgstr "|management jobs|"
+
+#: ../../source/management_jobs.rst:18
+msgid "Several job types are available for you to schedule and launch:"
+msgstr "スケジュールおよび起動用のジョブタイプを複数使用できます。"
+
+#: ../../source/management_jobs.rst:20
+msgid "**Cleanup Activity Stream**: Remove activity stream history older than a specified number of days"
+msgstr "**Cleanup Activity Stream**: 特定の日数より前のアクティビティーストリームの履歴を削除します。"
+
+#: ../../source/management_jobs.rst:21
+msgid "**Cleanup Expired OAuth 2 Tokens**:  Remove expired OAuth 2 access tokens and refresh tokens"
+msgstr "**Cleanup Expired OAuth 2 Tokens**: 期限切れの OAuth 2 アクセストークンを削除し、トークンを更新します"
+
+#: ../../source/management_jobs.rst:22
+msgid "**Cleanup Expired Sessions**:   Remove expired browser sessions from the database"
+msgstr "**Cleanup Expired Sessions**: データベースから期限切れのブラウザーセッションを削除します"
+
+#: ../../source/management_jobs.rst:23
+msgid "**Cleanup Job Details**: Remove job history older than a specified number of days"
+msgstr "**Cleanup Job Details**: 特定の日数より前のジョブ履歴を削除します。"
+
+#: ../../source/management_jobs.rst:26
+msgid "Removing Old Activity Stream Data"
+msgstr "以前のアクティビティーストリームデータの削除"
+
+#: ../../source/management_jobs.rst:32
+msgid "To remove older activity stream data, click on the launch (|launch|) button beside **Cleanup Activity Stream**."
+msgstr "以前のアクティビティーストリームデータを削除するには、**Cleanup Activity Stream** の横にある |launch| ボタンをクリックします。"
+
+#: ../../source/management_jobs.rst:34
+msgid "|activity stream launch - remove activity stream launch|"
+msgstr "|activity stream launch - remove activity stream launch|"
+
+#: ../../source/management_jobs.rst:38
+#: ../../source/management_jobs.rst:147
+msgid "Enter the number of days of data you would like to save and click **Launch**."
+msgstr "保存するデータ日数を入力して **Launch** をクリックします。"
+
+#: ../../source/management_jobs.rst:43
+msgid "Scheduling"
+msgstr "スケジューリング"
+
+#: ../../source/management_jobs.rst:45
+msgid "To review or set a schedule for purging data marked for deletion, click on the |schedule| button."
+msgstr "削除用にマークされたデータを削除するスケジュールをレビューまたは設定するには、|schedule| ボタンをクリックします。"
+
+#: ../../source/management_jobs.rst:50
+msgid "|activity stream launch - remove activity stream schedule|"
+msgstr "|activity stream launch - remove activity stream schedule|"
+
+#: ../../source/management_jobs.rst:54
+msgid "Note that you can turn this scheduled management job on and off easily using the **ON/OFF** toggle button to the left of the Job Name."
+msgstr "ジョブ名の左側にある **ON/OFF** 切り替えボタンを使用すると、スケジュールされた管理ジョブのオン、オフを簡単に切り替えることができる点に注意してください。"
+
+#: ../../source/management_jobs.rst:56
+msgid "Click on the Job Name, in this example \"Cleanup Activity Schedule\", to review or edit the schedule settings. You can also use the **Add** button to create a new schedule for this management job."
+msgstr "\"Cleanup Activity Schedule\" の例で、ジョブ名をクリックして、スケジュール設定をレビューまたは編集します。**Add** ボタンを使用してこの管理ジョブの新規スケジュールを作成することも可能です。"
+
+#: ../../source/management_jobs.rst:60
+msgid "Enter the appropriate details into the following fields and click **Save**:"
+msgstr "以下のフィールドに適切な情報を入力して、**保存** をクリックします。"
+
+#: ../../source/management_jobs.rst:62
+msgid "Name (required)"
+msgstr "名前 (必須)"
+
+#: ../../source/management_jobs.rst:63
+msgid "Start Date (required)"
+msgstr "開始日 (必須)"
+
+#: ../../source/management_jobs.rst:64
+msgid "Start Time (required)"
+msgstr "開始時間 (必須)"
+
+#: ../../source/management_jobs.rst:65
+msgid "Local Time Zone (the entered Start Time should be in this timezone)"
+msgstr "ローカルタイムゾーン (入力した開始時間はこのタイムゾーンで指定する必要があります)"
+
+#: ../../source/management_jobs.rst:66
+msgid "Repeat Frequency (the appropriate options display as the update frequency is modified.)"
+msgstr "繰り返しの頻度 (更新頻度の変更に合わせて適切なオプションが表示されます)"
+
+#: ../../source/management_jobs.rst:68
+msgid "The **Details** tab displays a description of the schedule and a list of the scheduled occurrences in the selected Local Time Zone."
+msgstr "**詳細** タブでは、選択したローカルタイムゾーンでのスケジュールの詳細、スケジュール実行の一覧を表示します。"
+
+#: ../../source/management_jobs.rst:72
+msgid "Jobs are scheduled in UTC. Repeating jobs that runs at a specific time of day may move relative to a local timezone when Daylight Saving Time shifts occur."
+msgstr "ジョブは UTC でスケジュールされます。ジョブが 1 日の特定の時間に繰り返し実行される場合には、夏時間 (DST) へ/からの切り替えがあると、ローカルタイムゾーンに合わせてこれらのジョブのスケジュールは移動します。"
+
+#: ../../source/management_jobs.rst:78
+msgid "Notifications"
+msgstr "通知"
+
+#: ../../source/management_jobs.rst:80
+msgid "To set or review notifications associated with this management job, click the Notifications ( |notify| ) icon."
+msgstr "この管理ジョブに関連付けられている通知を設定またはレビューするには、左のナビゲーションバーから通知 (|notify|) アイコンをクリックします。"
+
+#: ../../source/management_jobs.rst:87
+msgid "If none exist, click the **Notifications** link to create a new notification. Notification types include:"
+msgstr "このボタンがない場合は、**通知** リンクをクリックして新規通知を作成します。通知には以下のようなタイプがあります。"
+
+#: ../../source/management_jobs.rst:89
+msgid "Email"
+msgstr "メール"
+
+#: ../../source/management_jobs.rst:90
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../source/management_jobs.rst:91
+msgid "IRC"
+msgstr "IRC"
+
+#: ../../source/management_jobs.rst:92
+msgid "Mattermost"
+msgstr "Mattermost"
+
+#: ../../source/management_jobs.rst:93
+msgid "PagerDuty"
+msgstr "PagerDuty"
+
+#: ../../source/management_jobs.rst:94
+msgid "Rocket.Chat"
+msgstr "Rocket.Chat"
+
+#: ../../source/management_jobs.rst:95
+msgid "Slack"
+msgstr "Slack"
+
+#: ../../source/management_jobs.rst:96
+msgid "Twilio"
+msgstr "Twilio"
+
+#: ../../source/management_jobs.rst:97
+msgid "Webhook"
+msgstr "Webhook"
+
+#: ../../source/management_jobs.rst:101
+msgid "Refer to :ref:`ug_notifications` in the |atu| for more information."
+msgstr "詳細は『|atu|』の「:ref:`ug_notifications`」を参照してください。"
+
+#: ../../source/management_jobs.rst:105
+msgid "Cleanup Expired OAuth2 Tokens"
+msgstr "期限切れの OAuth2 トークンのクリーンアップ"
+
+#: ../../source/management_jobs.rst:111
+msgid "To remove expired OAuth2 tokens, click on the launch (|launch|) button beside **Cleanup Expired OAuth2 Tokens**."
+msgstr "期限切れの OAuth2 トークンを削除するには、**Cleanup Expired OAuth2 Tokens** の横にある起動 (|launch|) ボタンをクリックします。"
+
+#: ../../source/management_jobs.rst:113
+msgid "You can review or set a schedule for cleaning up expired OAuth2 tokens by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "期限切れの OAuth2 トークンの消去スケジュールをレビューまたは設定するには、アクティビティーストリーム管理ジョブ向けに記載されているのと同じ手順を実行してください。詳細は、「:ref:`ag_mgmt_job_schedule`」を実行してください。"
+
+#: ../../source/management_jobs.rst:115
+#: ../../source/management_jobs.rst:129
+#: ../../source/management_jobs.rst:155
+msgid "You can also set or review notifications associated with this management job the same way as described in :ref:`ag_mgmt_job_notify` for activity stream management jobs, and refer to :ref:`ug_notifications` in the |atu| for more detail."
+msgstr "この管理ジョブに関連付けられている通知をレビューまたは設定するには、アクティビティーストリーム管理ジョブ向けに「:ref:`ag_mgmt_job_notify`」に記載されているのと同じ手順を実行してください。詳細は、『|atu|』の「:ref:`ug_notifications`」を実行してください。"
+
+#: ../../source/management_jobs.rst:119
+msgid "Cleanup Expired Sessions"
+msgstr "期限切れセッションのクリーンアップ"
+
+#: ../../source/management_jobs.rst:125
+msgid "To remove expired sessions, click on the launch (|launch|) button beside **Cleanup Expired Sessions**."
+msgstr "期限切れのセッションを削除するには、**Cleanup Expired Sessions** の横にある起動 (|launch|) ボタンをクリックします。"
+
+#: ../../source/management_jobs.rst:127
+msgid "You can review or set a schedule for cleaning up expired sessions by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "期限切れのセッションの消去スケジュールをレビューまたは設定するには、アクティビティーストリーム管理ジョブ向けに記載されているのと同じ手順を実行してください。詳細は、「:ref:`ag_mgmt_job_schedule`」を実行してください。"
+
+#: ../../source/management_jobs.rst:133
+msgid "Removing Old Job History"
+msgstr "以前のジョブ履歴の削除"
+
+#: ../../source/management_jobs.rst:139
+msgid "To remove job history older than a specified number of days, click on the launch (|launch|) button beside **Cleanup Job Details**."
+msgstr "特定の日数以前のジョブ履歴を削除するには、**Cleanup Job Details** の横にある |launch| ボタンをクリックします。"
+
+#: ../../source/management_jobs.rst:143
+msgid "|management jobs - cleanup job launch|"
+msgstr "|management jobs - cleanup job launch|"
+
+#: ../../source/management_jobs.rst:151
+msgid "The initial job run for a controller resource (e.g. Projects, Job Templates) is excluded from **Cleanup Job Details**, regardless of retention value."
+msgstr "コントローラーリソース (プロジェクト、ジョブテンプレートなど) の最初のジョブ実行は、保持値に関係なく、**クリーンアップジョブの詳細** から除外されます。"
+
+#: ../../source/management_jobs.rst:153
+msgid "You can review or set a schedule for cleaning up old job history by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "古いジョブ履歴の消去スケジュールをレビューまたは設定するには、アクティビティーストリーム管理ジョブ向けに記載されているのと同じ手順を実行してください。詳細は、「:ref:`ag_mgmt_job_schedule`」を実行してください。"
+

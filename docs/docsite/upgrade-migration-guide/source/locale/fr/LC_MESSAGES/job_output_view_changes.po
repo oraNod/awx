@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Upgrade and Migration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/job_output_view_changes.rst:2
+msgid "Job Output View Changes"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:7
+msgid ""
+"With the update of the overall Tower user interface, it is worth noting "
+"the changes to how job results are displayed."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:9
+msgid ""
+"Job results for inventory syncs and SCM updates only show the Results and"
+" Standard Out of the job recently Run. Job results for playbook runs "
+"consist of Results, Standard Out, Details, and the Event Summary."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:12
+msgid "|Jobs - show job results for example job, playbook|"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:16
+msgid ""
+"For more details regarding Job Results, refer to :ref:`ug_jobs` in the "
+"|atu|."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:20
+msgid "Results"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:22
+msgid ""
+"The **Results** area shows the basic status of the job (*Running*, "
+"*Pending*, *Successful*, or *Failed*), its start and end times, which "
+"template was used, how long the job run took, who launched it, and more."
+"  The buttons in the top right of the Results view allow you to relaunch "
+"or delete the job."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:24
+msgid ""
+"By clicking on these Results entries, where appropriate, you can view the"
+" corresponding job templates, projects, and other Tower objects."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:29
+msgid "Standard Out"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:31
+msgid ""
+"The **Standard Out** display shows the full results of running the SCM "
+"Update or Inventory Sync playbook. This shows the same information you "
+"would see if you ran the Ansible playbook using Ansible from the command "
+"line, and can be useful for debugging."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:33
+msgid ""
+"Prior to |at| 3.0, the Standard Out was a separate display and was not "
+"included in the overall job results view."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:35
+msgid ""
+"The buttons in the top right corner of the Standard Out display allow you"
+" to toggle the output as a main view or to download the output."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:37
+msgid "|Jobs - show standard out|"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:43
+msgid "Job Details View"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:48
+msgid ""
+"The Job Details view in |at| offers step-by-step views into Plays, Tasks,"
+" and Hosts, walking you through each section of the job results until you"
+" drill down into your host informaiton."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:54
+msgid "Plays"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:59
+msgid ""
+"The **Plays** area shows the plays that were run as part of this "
+"playbook. The displayed plays can be filtered by **Play Name**, and can "
+"be limited to show only failed plays (using the **ALL/FAIL** view "
+"toggle)."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:61
+msgid ""
+"For each play, Tower shows the **Play Name**, start time for the play, "
+"the elapsed time of the play, the play **Name**, and whether the play "
+"succeeded or failed (indicated by the status dot to the left of the "
+"**pPlay Name**). Clicking on a specific play filters the **Tasks** and "
+"**Host Events** area to only display tasks and hosts relative to that "
+"selected play."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:67
+msgid "Tasks"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:72
+msgid ""
+"The **Tasks** area shows the tasks run as part of plays in the playbook. "
+"The displayed tasks can be filtered by **Task Name**, and can be limited "
+"to only failed tasks."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:74
+msgid ""
+"For each task, Tower shows the task **Name**, the start time for the "
+"task, the elapsed time of the task, whether the task succeeded or failed."
+" Clicking on a specific task filters the **Host Events** area to only "
+"display hosts relative to that task."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:81
+msgid "Host Events"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:86
+msgid ""
+"The **Host Events** area shows hosts affected by the selected play and "
+"task. For each host, Tower shows the host's status, its name, and any "
+"**Item** or **Message** set by that task."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:88
+msgid "|Job - Host Event|"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:92
+msgid ""
+"Clicking on the linked hostname brings up the **Host Event** dialog for "
+"that host and task."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:94
+msgid ""
+"The **Host Event** dialog shows the events for this host and the selected"
+" play and task."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:96
+#: ../../source/job_output_view_changes.rst:100
+msgid "There is also a **JSON** tab which displays the result in JSON format."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:106
+msgid "Event Summary"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:113
+msgid ""
+"The **Event Summary** area shows a summary of events for all hosts "
+"affected by this playbook as well as the **Host Status Summary**."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:115
+msgid ""
+"By default, the **Event Summary** is collapsed and must be expanded "
+"before it can be viewed. Versions of Tower prior to 3.0 always displayed "
+"the **Event Summary**."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:118
+msgid ""
+"Hosts can be filtered by their hostname, and can be limited to showing "
+"only changed, failed, OK, and unreachable hosts."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:120
+msgid "|Job - All Host Events|"
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:124
+msgid ""
+"For each host, the **Event Summary** area shows the hostname and the "
+"number of completed tasks for that host, sorted by status."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:128
+msgid ""
+"Clicking on the hostname brings up a **Host Events** dialog, displaying "
+"all tasks that affected that host."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:130
+msgid ""
+"This dialog can be filtered by the status of the tasks, as well as by the"
+" hostname."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:132
+msgid ""
+"For each event, Tower displays the status, the play name, and the task "
+"name."
+msgstr ""
+
+#: ../../source/job_output_view_changes.rst:138
+msgid ""
+"The **Host Summary** area shows a graph summarizing the status of all "
+"hosts affected by this playbook run."
+msgstr ""
+

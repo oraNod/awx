@@ -1,0 +1,804 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/security.rst:4
+msgid "Security"
+msgstr "安全性"
+
+#: ../../source/security.rst:9
+msgid "The following sections will help you gain an understanding of how |at| handles and lets you control file system security."
+msgstr "以下部分将帮助您了解 |at| 如何处理并控制文件系统的安全性。"
+
+#: ../../source/security.rst:11
+msgid "All playbooks are executed via the ``awx`` file system user. For running jobs, |at| offers job isolation via the use of Linux containers. This projection ensures jobs can only access playbooks, roles, and data from the Project directory for that job template."
+msgstr "所有 playbook 都是通过 ``awx`` 文件系统用户执行的。对于运行的作业，|at| 通过使用 Linux 容器提供作业隔离。此预测可确保作业只能访问该作业模板的项目目录中的 playbook、角色和数据。"
+
+#: ../../source/security.rst:13
+msgid "For credential security, users may choose to upload locked SSH keys and set the unlock password to \"ask\". You can also choose to have the system prompt them for SSH credentials or sudo passwords rather than having the system store them in the database."
+msgstr "为了确保凭证安全性，用户可以选择上传锁定的 SSH 密钥，并将解锁密码设置为“询问”。您也可以选择让系统提示他们输入 SSH 凭证或 sudo 密码，而不是让系统将其存储在数据库中。"
+
+#: ../../source/security.rst:17
+msgid "Playbook Access and Information Sharing"
+msgstr "Playbook 访问和信息共享"
+
+#: ../../source/security.rst:25
+msgid "|At|'s use of automation execution environments and Linux containers prevents playbooks from reading files outside of their project directory."
+msgstr "|At|使用自动化执行环境和 Linux 容器可防止 playbook 读取其项目目录之外的文件。"
+
+#: ../../source/security.rst:27
+msgid "By default, the only data exposed to the ansible-playbook process inside the container is the current project being used."
+msgstr "默认情况下，公开给容器内 ansible-playbook 进程的唯一数据是当前使用的项目。"
+
+#: ../../source/security.rst:29
+msgid "You can customize this in the Job Settings and expose additional directories from the host into the container. Refer the next section, :ref:`ug_isolation` for more information."
+msgstr "您可以在 Job Settings 中定制这个，并将来自主机的额外目录暴露到容器。如需更多信息，请参阅下一节 :ref:`ug_isolation`。"
+
+#: ../../source/security.rst:34
+msgid "Isolation functionality and variables"
+msgstr "隔离功能和变量"
+
+#: ../../../common/source/isolation_variables.rst:2
+msgid "|At| uses container technology to isolate jobs from each other. By default, only the current project is exposed to the container running a job template."
+msgstr "|At| 使用容器技术将作业相互隔离。默认情况下，只有当前项目公开给运行作业模板的容器。"
+
+#: ../../../common/source/isolation_variables.rst:4
+msgid "You may find that you need to customize your playbook runs to expose additional directories. To fine tune your usage of job isolation, there are certain variables that can be set."
+msgstr "您可能会发现，您需要自定义 playbook 运行以公开其他目录。要微调作业隔离的使用，可以设置某些变量。"
+
+#: ../../../common/source/isolation_variables.rst:6
+msgid "By default, |at| will use the system's ``tmp`` directory (``/tmp`` by default) as its staging area. This can be changed in the **Job Execution Path** field of the Jobs settings screen, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "默认情况下，|at| 将使用系统的 ``tmp`` 目录（默认为``/tmp`` ）作为其临时区域。这可以在作业设置屏幕的 **Job Execution Path** 字段中进行修改，也可以在位于 ``/api/v2/settings/jobs`` 的 REST API 中更改："
+
+#: ../../../common/source/isolation_variables.rst:8
+msgid "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+msgstr "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+
+#: ../../../common/source/isolation_variables.rst:10
+msgid "If there are any additional directories that should specifically be exposed from the host to the container that playbooks run in, you can specify those in the **Paths to Expose to Isolated Jobs** field of the Jobs setting scren, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "如果应该从主机向运行 playbook 的容器公开任何其他目录，您可以在 Jobs 设置 scren 的 **Paths to Expose to Isolated Jobs** 字段中指定，或者在位于 ``/api/v2/settings/jobs`` 的 REST API 中指定它们："
+
+#: ../../../common/source/isolation_variables.rst:13
+msgid "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/isolation_variables.rst:16
+msgid "The primary file you may want to add to ``AWX_ISOLATION_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "如果 playbook 需要使用在 ``/var/lib/awx/.ssh`` 中定义的密钥或设置，则需要把它做为主文件添加到 ``AWX_ISOLATION_SHOW_PATHS`` 。"
+
+#: ../../../common/source/isolation_variables.rst:18
+msgid "The above fields can be found in the Jobs Settings window:"
+msgstr "以上字段可在 Jobs Settings 窗口中找到："
+
+#: ../../source/security.rst:46
+msgid "Role-Based Access Controls"
+msgstr "基于角色的访问控制"
+
+#: ../../source/security.rst:52
+msgid "Role-Based Access Controls (RBAC) are built into |at| and allow administrators to delegate access to server inventories, organizations, and more. Administrators can also centralize the management of various credentials, allowing end users to leverage a needed secret without ever exposing that secret to the end user. RBAC controls allow the controller to help you increase security and streamline management."
+msgstr "基于角色的访问控制 (RBAC) 内置在 |at| 中，并允许管理员委托对服务器清单、机构等的访问权限。管理员也可以集中管理各种凭证，让最终用户可以利用所需的 secret，同时无需向最终用户公开该 secret。借助 RBAC 控制，Tower 可帮助您提高安全性并简化管理。"
+
+#: ../../source/security.rst:54
+msgid "RBACs are easiest to think of in terms of Roles which define precisely who or what can see, change, or delete an \"object\" for which a specific capability is being set. RBAC is the practice of granting roles to users or teams."
+msgstr "可以将 RBAC 想象为角色，它们精确定义了，对于一个特定的功能，谁或什么可以被看到、更改或删除一个\"对象\"。RBAC 是向用户或团队授予角色的方法。"
+
+#: ../../source/security.rst:56
+msgid "There are a few main concepts that you should become familiar with regarding |at|'s RBAC design--roles, resources, and users. Users can be members of a role, which gives them certain access to any resources associated with that role, or any resources associated with \"descendant\" roles."
+msgstr "您应该熟悉有关 |at| 的 RBAC 设计的一些主要概念，包括角色、资源和用户。用户可以成为角色的成员，获得对与该角色关联的资源或与“子代”角色关联的任何资源的某些访问权限。"
+
+#: ../../source/security.rst:58
+msgid "A role is essentially a collection of capabilities. Users are granted access to these capabilities and the controller's resources through the roles to which they are assigned or through roles inherited through the role hierarchy."
+msgstr "角色基本上是权限的集合。用户可以通过为其分配的角色或通过从角色层次结构继承的角色获得对这些权限和控制器资源的访问。"
+
+#: ../../source/security.rst:60
+msgid "Roles associate a group of capabilities with a group of users. All capabilities are derived from membership within a role. Users receive capabilities only through the roles to which they are assigned or through roles they inherit through the role hierarchy. All members of a role have all capabilities granted to that role. Within an organization, roles are relatively stable, while users and capabilities are both numerous and may change rapidly. Users can have many roles."
+msgstr "角色将一组权限与一组用户相关联。所有权限都来自于角色中的成员资格。用户只通过为其分配的角色或通过从角色层次结构继承的角色来获得权限。角色的所有成员均具有授予该角色的所有权限。在一个机构中，角色相对稳定，而用户和权限不仅数量众多，而且可能快速变化。用户可以具有多个角色。"
+
+#: ../../source/security.rst:64
+msgid "Role Hierarchy and Access Inheritance"
+msgstr "角色层次结构和访问权限继承"
+
+#: ../../source/security.rst:66
+msgid "Imagine that you have an organization named \"SomeCompany\" and want to allow two people, \"Josie\" and \"Carter\", access to manage all the settings associated with that organization. You should make both people members of the organization's ``admin_role``."
+msgstr "假设您有一个名为“SomeCompany”的机构，并想向“Josie”和“Carter”两个人授予访问权限来管理与该机构相关的所有设置。您应该让两个人都成为该机构的 ``admin_role`` 成员。"
+
+#: ../../source/security.rst:68
+msgid "|user-role-relationship|"
+msgstr "|user-role-relationship|"
+
+#: ../../source/security.rst:72
+msgid "Often, you will have many Roles in a system and you will want some roles to include all of the capabilities of other roles. For example, you may want a System Administrator to have access to everything that an Organization Administrator has access to, who has everything that a Project Administrator has access to, and so on."
+msgstr "通常，系统会有很多角色，并且您会希望某些角色包含其他角色的所有权限。例如，您可能希望系统管理员可以访问机构管理员可访问的所有内容，而机构管理员又可以访问项目管理员可访问的所有内容，等等。"
+
+#: ../../source/security.rst:74
+msgid "This concept is referred to as the 'Role Hierarchy':"
+msgstr "这个概念被称为“角色层次关系”："
+
+#: ../../source/security.rst:76
+msgid "Parent roles get all capabilities bestowed on any child roles"
+msgstr "父角色获取赋予任何子角色的所有权限"
+
+#: ../../source/security.rst:77
+msgid "Members of roles automatically get all capabilities for the role they are a member of, as well as any child roles."
+msgstr "角色的成员可以自动获取他们所属角色以及任何子角色的所有权限。"
+
+#: ../../source/security.rst:79
+msgid "The Role Hierarchy is represented by allowing Roles to have \"Parent Roles\". Any capability that a Role has is implicitly granted to any parent roles (or parents of those parents, and so on)."
+msgstr "角色层次结构的代表是允许角色具有“父角色”。角色具有的任何权限都会被隐式授予任何父角色（或那些父角色的父级等等）。"
+
+#: ../../source/security.rst:81
+msgid "|rbac-role-hierarchy|"
+msgstr "|rbac-role-hierarchy|"
+
+#: ../../source/security.rst:85
+msgid "Often, you will have many Roles in a system and you will want some roles to include all of the capabilities of other roles. For example, you may want a System Administrator to have access to everything that an Organization Administrator has access to, who has everything that a Project Administrator has access to, and so on. We refer to this concept as the 'Role Hierarchy' and it is represented by allowing Roles to have \"Parent Roles\". Any capability that a Role has is implicitly granted to any parent roles (or parents of those parents, and so on). Of course Roles can have more than one parent, and capabilities are implicitly granted to all parents."
+msgstr "通常，系统会有很多角色，并且您会希望某些角色包含其他角色的所有权限。例如，您可能希望系统管理员可以访问机构管理员可访问的所有内容，而机构管理员又可以访问项目管理员可访问的所有内容，等等。我们将这个概念称为“角色层次结构”，其代表是允许角色具有“父角色”。角色具有的任何权限都会被隐式授予任何父角色（或那些父角色的父级等等）。当然角色可以具有多个父角色，权限会被隐式授予所有父角色。"
+
+#: ../../source/security.rst:87
+msgid "|rbac-heirarchy-morecomplex|"
+msgstr "|rbac-heirarchy-morecomplex|"
+
+#: ../../source/security.rst:91
+msgid "RBAC controls also give you the capability to explicitly permit User and Teams of Users to run playbooks against certain sets of hosts. Users and teams are restricted to just the sets of playbooks and hosts to which they are granted capabilities. And, with |at|, you can create or import as many Users and Teams as you require--create users and teams manually or import them from LDAP or Active Directory."
+msgstr "RBAC 控制还可让您明确允许用户和用户团队针对特定主机组运行 playbook。用户和团队仅限运行他们被授予了权限的 playbook 和主机组。此外，在 |at| 中，您可以创建或导入所需数量的用户和团队，既可以手动创建用户和团队，也可以从 LDAP 或 Active Directory 导入它们。"
+
+#: ../../source/security.rst:93
+msgid "RBACs are easiest to think of in terms of who or what can see, change, or delete an \"object\" for which a specific capability is being determined."
+msgstr "最简单的方式是将 RBAC 想成是谁或什么可以看到、更改或删除正在为其确定特定权限的“对象”。"
+
+#: ../../source/security.rst:96
+msgid "Applying RBAC"
+msgstr "应用 RBAC"
+
+#: ../../source/security.rst:98
+msgid "The following sections cover how to apply |at|'s RBAC system in your environment."
+msgstr "以下部分论述了如何在您的环境中应用 |at| 的 RBAC 系统。"
+
+#: ../../source/security.rst:102
+msgid "Editing Users"
+msgstr "编辑用户"
+
+#: ../../source/security.rst:104
+msgid "When editing a user, a |at| system administrator may specify the user as being either a *System Administrator* (also referred to as the Superuser) or a *System Auditor*."
+msgstr "编辑用户时，|at| 系统管理员可指定用户为*系统管理员*（也称超级用户）或*系统审核员*。"
+
+#: ../../source/security.rst:106
+msgid "System administrators implicitly inherit all capabilities for all objects (read/write/execute) within the |at| environment."
+msgstr "系统管理员会隐式地继承 |at| 环境中所有对象的所有权限（读/写/执行）。"
+
+#: ../../source/security.rst:107
+msgid "System Auditors implicitly inherit the read-only capability for all objects within the |at| environment."
+msgstr "System Auditor 隐式继承 |at| 环境中所有对象的只读权限。"
+
+#: ../../source/security.rst:110
+msgid "Editing Organizations"
+msgstr "编辑机构"
+
+#: ../../source/security.rst:112
+msgid "When editing an organization, system administrators may specify the following roles:"
+msgstr "编辑机构时，系统管理员可指定以下角色："
+
+#: ../../source/security.rst:114
+msgid "One or more users as organization administrators"
+msgstr "一个或多个用户作为机构管理员"
+
+#: ../../source/security.rst:115
+msgid "One or more users as organization auditors"
+msgstr "一个或多个用户作为机构审核员"
+
+#: ../../source/security.rst:116
+msgid "And one or more users (or teams) as organization members"
+msgstr "以及一个或多个用户（或团队）作为机构成员"
+
+#: ../../source/security.rst:119
+msgid "Users/teams that are members of an organization can view their organization administrator."
+msgstr "属于某个机构的成员的用户/团队可以查看其机构管理员。"
+
+#: ../../source/security.rst:121
+msgid "Users who are organization administrators implicitly inherit all capabilities for all objects within that |at| organization."
+msgstr "作为机构管理员的用户隐式继承了该 |at| 机构中所有对象的所有权限。"
+
+#: ../../source/security.rst:123
+msgid "Users who are organization auditors implicitly inherit the read-only capability for all objects within that |at| organization."
+msgstr "作为机构审核员的用户隐式继承了该 |at| 机构中所有对象的只读权限。"
+
+#: ../../source/security.rst:127
+msgid "Editing Projects in an Organization"
+msgstr "编辑机构中的项目"
+
+#: ../../source/security.rst:129
+msgid "When editing a project in an organization for which they are the administrator, system administrators and organization administrators may specify:"
+msgstr "在编辑机构中的项目时，该机构的系统管理员和机构管理员可指定："
+
+#: ../../source/security.rst:131
+msgid "One or more users/teams that are project administrators"
+msgstr "一个或多个作为项目管理员的用户/团队"
+
+#: ../../source/security.rst:132
+msgid "One or more users/teams that are project members"
+msgstr "一个或多个作为项目成员的用户/团队"
+
+#: ../../source/security.rst:133
+msgid "And one or more users/teams that may update the project from SCM, from among the users/teams that are members of that organization."
+msgstr "以及可以从 SCM 更新项目的一个或多个用户/团队，均来自属于该机构成员的用户/团队。"
+
+#: ../../source/security.rst:135
+msgid "Users who are members of a project can view their project administrators."
+msgstr "作为项目成员的用户可以查看其项目管理员。"
+
+#: ../../source/security.rst:137
+msgid "Project administrators implicitly inherit the capability to update the project from SCM."
+msgstr "项目管理员隐式继承了从 SCM 更新项目的权限。"
+
+#: ../../source/security.rst:139
+msgid "Administrators can also specify one or more users/teams (from those that are members of that project) that can use that project in a job template."
+msgstr "管理员也可以指定一个或多个可在作业模板中使用该项目的用户/团队（来自属于该项目成员的用户/团队）。"
+
+#: ../../source/security.rst:143
+msgid "Creating Inventories and Credentials within an Organization"
+msgstr "在机构中创建清单和凭证"
+
+#: ../../source/security.rst:145
+msgid "All access that is granted to use, read, or write credentials is now handled through roles. You no longer set the “team” or “user” for a credential. Instead, you use |at|'s RBAC system to grant ownership, auditor, or usage roles."
+msgstr "为使用、读取或写入凭证授予的所有访问权限现在都通过角色处理。您不再为凭证设置“团队”或“用户”。取而代之，您将使用 |at| 的 RBAC 系统授予所有权、审核者或使用角色。"
+
+#: ../../source/security.rst:147
+msgid "System administrators and organization administrators may create inventories and credentials within organizations under their administrative capabilities."
+msgstr "系统管理员和机构管理员可根据其管理权限在机构内部创建清单和凭证。"
+
+#: ../../source/security.rst:149
+msgid "Whether editing an inventory or a credential, System administrators and organization administrators may specify one or more users/teams (from those that are members of that organization) to be granted the usage capability for that inventory or credential."
+msgstr "无论是编辑清单还是凭证，系统管理员和机构管理员都可以指定一个或多个用户/团队（来自属于该机构成员的用户/团队）以授予该清单或凭证的使用权限。"
+
+#: ../../source/security.rst:151
+msgid "System administrators and organization administrators may specify one or more users/teams (from those that are members of that organization) that have the capabilities to update (dynamic or manually) an inventory.  Administrators can also execute ad hoc commands for an inventory."
+msgstr "系统管理员和机构管理员可指定一个或多个用户/团队（来自属于该机构成员的用户/团队），使它们具有（动态或手动）更新清单的权限。管理员也可以为清单执行临时命令。"
+
+#: ../../source/security.rst:155
+msgid "Editing Job Templates"
+msgstr "编辑作业模板"
+
+#: ../../source/security.rst:157
+msgid "System administrators, organization administrators, and project administrators, within a project under their administrative capabilities, may create and modify new job templates for that project."
+msgstr "系统管理员、机构管理员和项目管理员可以根据其管理权限在一个项目中为该项目创建并修改新的作业模板。"
+
+#: ../../source/security.rst:159
+msgid "When editing a job template, administrators (|at|, organization, and project) can select among the inventory and credentials in the organization for which they have usage capabilities or they may leave those fields blank so that they will be selected at runtime."
+msgstr "在编辑作业模板时，管理员（|at|、机构及项目）可在他们具有使用权限的机构中的清单和凭证中进行选择，或者他们可以将这些字段留空以便在运行时进行选择。"
+
+#: ../../source/security.rst:161
+msgid "Additionally, they may specify one or more users/teams (from those that are members of that project) that have execution capabilities for that job template. The execution capability is valid regardless of any explicit capabilities the user/team may have been granted against the inventory or credential specified in the job template."
+msgstr "另外，他们还可指定具有该作业模板执行权限的一个或多个用户/团队（来自属于该项目成员的用户/团队）。无论针对作业模板中指定的清单或凭证为用户/团队授予了何种显式权限，其执行权限都有效。"
+
+#: ../../source/security.rst:164
+msgid "User View"
+msgstr "用户视图"
+
+#: ../../source/security.rst:166
+msgid "A user can:"
+msgstr "用户可以："
+
+#: ../../source/security.rst:168
+msgid "See any organization or project for which they are a member"
+msgstr "查看他们所属的任何机构或项目"
+
+#: ../../source/security.rst:169
+msgid "Create their own credential objects which only belong to them"
+msgstr "创建只属于他们自己的凭证对象"
+
+#: ../../source/security.rst:170
+msgid "See and execute any job template for which they have been granted execution capabilities"
+msgstr "查看并执行他们被授予执行权限的任何作业模板"
+
+#: ../../source/security.rst:172
+msgid "If a job template a user has been granted execution capabilities on does not specify an inventory or credential, the user will be prompted at run-time to select among the inventory and credentials in the organization they own or have been granted usage capabilities."
+msgstr "如果某个用户获得执行功能的作业模板没有指定清单或凭证，则会在运行时提示用户在他们拥有的机构中的清单和凭证中选择，或者获得使用功能。"
+
+#: ../../source/security.rst:174
+msgid "Users that are job template administrators can make changes to job templates; however, to change to the inventory, project, playbook, or credentials used in the job template, the user must also have the \"Use\" role for the project and inventory currently being used or being set."
+msgstr "作为作业模板管理员的用户可以对作业模板进行更改；但是，若要更改作业模板中使用的清单、项目、playbook 或凭证，用户还必须具有目前正在使用或正在设置的项目和清单的“使用”角色。"
+
+#: ../../source/security.rst:179
+#: ../../source/security.rst:0
+msgid "Roles"
+msgstr "角色"
+
+#: ../../source/security.rst:181
+msgid "As stated earlier in this documentation, all access that is granted to use, read, or write credentials is now handled through roles, and  roles are defined for a resource."
+msgstr "如本文档前面所述，为使用、读取或写入凭证授予的所有访问权限现在都通过角色处理，角色是为资源定义的。"
+
+#: ../../source/security.rst:185
+msgid "Built-in roles"
+msgstr "内置角色"
+
+#: ../../source/security.rst:187
+msgid "The following table lists the RBAC system roles and a brief description of the how that role is defined with regard to privileges in |at|."
+msgstr "下表列出了 RBAC 系统角色以及如何根据 |at| 中的权限定义角色的要描述。"
+
+#: ../../source/security.rst:190
+#: ../../source/security.rst:0
+msgid "System Role"
+msgstr "系统角色"
+
+#: ../../source/security.rst:190
+msgid "What it can do"
+msgstr "它可以执行什么操作"
+
+#: ../../source/security.rst:192
+msgid "System Administrator - System wide singleton"
+msgstr "系统管理员 (System Administrator) - 系统范围单例"
+
+#: ../../source/security.rst:192
+msgid "Manages all aspects of the system"
+msgstr "管理系统的所有方面"
+
+#: ../../source/security.rst:194
+msgid "System Auditor - System wide singleton"
+msgstr "系统审核员 (System Auditor) - 系统范围单例"
+
+#: ../../source/security.rst:194
+msgid "Views all aspects of the system"
+msgstr "查看系统的所有方面"
+
+#: ../../source/security.rst:196
+msgid "Ad Hoc Role - Inventory"
+msgstr "临时角色 (Ad Hoc Role) - 清单"
+
+#: ../../source/security.rst:196
+msgid "Runs ad hoc commands on an Inventory"
+msgstr "对清单运行临时命令"
+
+#: ../../source/security.rst:198
+msgid "Admin Role - Organizations, Teams, Inventory, Projects, Job Templates"
+msgstr "管理员角色 (Admin Role) - 机构、团队、清单、项目、作业模板"
+
+#: ../../source/security.rst:198
+msgid "Manages all aspects of a defined Organization, Team, Inventory, Project, or Job Template"
+msgstr "管理定义的机构、团队、清单、项目或作业模板的所有方面"
+
+#: ../../source/security.rst:200
+msgid "Auditor Role - All"
+msgstr "审核员角色 (Auditor Role) - 所有"
+
+#: ../../source/security.rst:200
+msgid "Views all aspects of a defined Organization, Project, Inventory, or Job Template"
+msgstr "查看定义的机构、项目、清单或作业模板的所有方面"
+
+#: ../../source/security.rst:202
+msgid "Execute Role - Job Templates"
+msgstr "执行角色 (Execute Role) - 作业模板"
+
+#: ../../source/security.rst:202
+msgid "Runs assigned Job Template"
+msgstr "运行分配的作业模板"
+
+#: ../../source/security.rst:204
+msgid "Member Role - Organization, Team"
+msgstr "成员角色 (Member Role) - 机构、团队"
+
+#: ../../source/security.rst:204
+msgid "Manages all of the settings associated with that Organization or Team"
+msgstr "管理与该机构或团队关联的所有设置"
+
+#: ../../source/security.rst:206
+msgid "Read Role - Organizations, Teams, Inventory, Projects, Job Templates"
+msgstr "读取角色 (Read Role) - 机构、团队、清单、项目、作业模板"
+
+#: ../../source/security.rst:206
+msgid "Views all aspects of a defined Organization, Team, Inventory, Project, or Job Template"
+msgstr "查看定义的机构、团队、清单、项目或作业模板的所有方面"
+
+#: ../../source/security.rst:208
+msgid "Update Role - Project"
+msgstr "更新角色 (Update Role) - 项目"
+
+#: ../../source/security.rst:208
+msgid "Updates the Project from the configured source control management system"
+msgstr "从配置的源控制管理系统更新项目"
+
+#: ../../source/security.rst:210
+msgid "Update Role - Inventory"
+msgstr "更新角色 (Update Role) - 清单"
+
+#: ../../source/security.rst:210
+msgid "Updates the Inventory using the cloud source update system"
+msgstr "使用云源更新系统更新清单"
+
+#: ../../source/security.rst:212
+msgid "Owner Role - Credential"
+msgstr "所有者角色 (Owner Role) - 凭证"
+
+#: ../../source/security.rst:212
+msgid "Owns and manages all aspects of this Credential"
+msgstr "拥有并管理此凭证的所有方面"
+
+#: ../../source/security.rst:214
+msgid "Use Role - Credential, Inventory, Project"
+msgstr "使用角色 (Use Role) - 凭证、清单、项目"
+
+#: ../../source/security.rst:214
+msgid "Uses the Credential, Inventory, or Project in a Job Template"
+msgstr "在作业模板中使用凭证、清单或项目"
+
+#: ../../source/security.rst:218
+msgid "A Singleton Role is a special role that grants system-wide permissions. |at| currently provides two built-in Singleton Roles but the ability to create or customize a Singleton Role is not supported at this time."
+msgstr "单例角色 (Singleton Role) 是一个授予系统范围权限的特殊角色。|at| 当前提供两个内置的单例角色，但目前不支持创建或自定义单例角色。"
+
+#: ../../source/security.rst:221
+msgid "Common Team Roles - \"Personas\""
+msgstr "常见团队角色 -“Personas”"
+
+#: ../../source/security.rst:223
+msgid "|At| support personnel typically works on ensuring that the controller is available and manages it a way to balance supportability and ease-of-use for users. Often, |at| support will assign “Organization Owner/Admin” to users in order to allow them to create a new Organization and add members from their team the respective access needed. This minimizes supporting individuals and focuses more on maintaining uptime of the service and assisting users who are using |at|."
+msgstr "|At| 支持人员通常会努力确保控制器可用，并以一种平衡可支持性和用户易用性的方式进行管理。通常，|at| 支持人员会为用户分配“机构所有者/管理员”，以便他们能够创建一个新的机构，并为其团队中的成员添加所需的相应访问权限。这样可尽量减小支持人员的数量，并使他们更多地专注于维护服务的正常运行时间，以及为使用 |at| 的用户提供协助。"
+
+#: ../../source/security.rst:225
+msgid "Below are some common roles managed by the |at| Organization:"
+msgstr "以下是 |at| 机构管理的一些常见角色："
+
+#: ../../source/security.rst:0
+msgid "(for Organizations)"
+msgstr "（针对机构）"
+
+#: ../../source/security.rst:0
+msgid "Common User"
+msgstr "常见用户"
+
+#: ../../source/security.rst:0
+msgid "Description"
+msgstr "描述"
+
+#: ../../source/security.rst:0
+msgid "Owner"
+msgstr "所有者 (Owner)"
+
+#: ../../source/security.rst:0
+msgid "Team Lead -"
+msgstr "团队领导 -"
+
+#: ../../source/security.rst:0
+msgid "Technical Lead"
+msgstr "技术领导"
+
+#: ../../source/security.rst:0
+msgid "This user has the ability to control access for other users in their organization."
+msgstr "这个用户可以控制其机构中其他用户的访问权限。"
+
+#: ../../source/security.rst:0
+msgid "They can add/remove and grant users specific access to projects, inventories, and job templates."
+msgstr "他们可以添加/删除并授予用户对项目、清单和作业模板的特定访问权限。"
+
+#: ../../source/security.rst:0
+msgid "This user also has the ability to create/remove/modify any aspect of an organization’s projects,"
+msgstr "此用户也可以创建/删除/修改机构项目、"
+
+#: ../../source/security.rst:0
+msgid "templates, inventories, teams, and credentials."
+msgstr "模板、清单、团队和凭证的任何方面。"
+
+#: ../../source/security.rst:0
+msgid "Auditor"
+msgstr "审核员 (Auditor)"
+
+#: ../../source/security.rst:0
+msgid "Security Engineer -"
+msgstr "安全工程师 -"
+
+#: ../../source/security.rst:0
+msgid "Project Manager"
+msgstr "项目经理"
+
+#: ../../source/security.rst:0
+msgid "This account can view all aspects of the organization in read-only mode."
+msgstr "这个帐户可以在只读模式下查看机构的所有方面。"
+
+#: ../../source/security.rst:0
+msgid "This may be good for a user who checks in and maintains compliance."
+msgstr "这可能很适合负责签入和维护合规性的用户。"
+
+#: ../../source/security.rst:0
+msgid "This might also be a good role for a service account who manages or"
+msgstr "这个角色也可能很适合负责管理"
+
+#: ../../source/security.rst:0
+msgid "ships job data from |at| to some other data collector."
+msgstr "|at| 中的作业数据或者将其发送到其他数据收集器的服务帐户。"
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Member -"
+msgstr "成员 -"
+
+#: ../../source/security.rst:0
+msgid "Team"
+msgstr "团队（team）"
+
+#: ../../source/security.rst:0
+msgid "All other users"
+msgstr "所有其他用户"
+
+#: ../../source/security.rst:0
+msgid "These users by default as an organization member do not receive any access to any aspect"
+msgstr "默认情况下，这些用户作为机构成员不会获得对机构任何方面的任何访问权限"
+
+#: ../../source/security.rst:0
+msgid "of the organization. In order to grant them access the respective organization owner needs"
+msgstr "。要向他们授予访问权限，相应的机构所有者需要"
+
+#: ../../source/security.rst:0
+msgid "to add them to their respective team and grant them Admin, Execute, Use, Update, Ad-hoc"
+msgstr "将他们添加其各自团队中，并为他们授予"
+
+#: ../../source/security.rst:0
+msgid "permissions to each component of the organization’s projects, inventories, and job templates."
+msgstr "对机构项目、清单和作业模板的每个组件的管理员、执行、使用、更新、临时权限。"
+
+#: ../../source/security.rst:0
+msgid "Team “Owner”"
+msgstr "团队“所有者”"
+
+#: ../../source/security.rst:0
+msgid "Power users -"
+msgstr "超级用户 -"
+
+#: ../../source/security.rst:0
+msgid "Lead Developer"
+msgstr "主要开发人员"
+
+#: ../../source/security.rst:0
+msgid "Organization Owners can provide “admin” through the team interface, over any component"
+msgstr "机构所有者可以通过团队界面提供对其机构任何组件（包括项目、清单和作业模板）"
+
+#: ../../source/security.rst:0
+msgid "of their organization including projects, inventories, and job templates. These users are able"
+msgstr "的“管理”权限。这些用户可以"
+
+#: ../../source/security.rst:0
+msgid "to modify and utilize the respective component given access."
+msgstr "修改并利用其获得了访问权限的相应组件。"
+
+#: ../../source/security.rst:0
+msgid "Team “Execute”"
+msgstr "团队“执行”"
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Developers -"
+msgstr "开发人员 -"
+
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+#: ../../source/security.rst:0
+msgid "Engineers"
+msgstr "工程师"
+
+#: ../../source/security.rst:0
+msgid "This will be the most common and allows the organization member the ability to execute"
+msgstr "这会是最常用的角色，可为机构成员授予执行"
+
+#: ../../source/security.rst:0
+msgid "job templates and read permission to the specific components. This is permission applies to templates."
+msgstr "作业模板的权限以及对特定组件的读取权限。此权限适用于模板。"
+
+#: ../../source/security.rst:0
+msgid "Team “Use”"
+msgstr "团队“使用”"
+
+#: ../../source/security.rst:0
+msgid "This permission applies to an organization’s credentials, inventories, and projects."
+msgstr "此权限适用于机构的凭证、清单和项目。"
+
+#: ../../source/security.rst:0
+msgid "This permission allows the ability for a user to the respective component within their job template."
+msgstr "此权限为用户授予对其作业模板中相应组件的权限。"
+
+#: ../../source/security.rst:0
+msgid "Team “Update”"
+msgstr "团队“更新”"
+
+#: ../../source/security.rst:0
+msgid "This permission applies to projects. Allows the user to be able to run an SCM update on a project."
+msgstr "此权限适用于项目。允许用户对项目运行 SCM 更新。"
+
+#: ../../source/security.rst:262
+msgid "Function of roles: editing and creating"
+msgstr "角色的功能：编辑和创建"
+
+#: ../../source/security.rst:264
+msgid "A new organization “resource roles” functionality was introduced in |at| 3.3 that are specific to a certain resource type - such as workflows. Being a member of such a role usually provides two types of permissions, in the case of workflows, where a user is given a \"workflow admin role\" for the organization \"Default\":"
+msgstr "|at| 3.3 引入了新的机构“资源角色”功能，它们特定于某种资源类型，例如工作流。成为这种角色的成员通常会提供两种类型的权限，对于工作流的情况，会为用户授予机构“Default”的“workflow admin role”："
+
+#: ../../source/security.rst:266
+msgid "this user can create new workflows in the organization \"Default\""
+msgstr "此用户可以在机构“Default”中创建新的工作流"
+
+#: ../../source/security.rst:267
+msgid "user can edit all workflows in the \"Default\" organization"
+msgstr "用户可以编辑“Default”机构中的所有工作流"
+
+#: ../../source/security.rst:269
+msgid "One exception is job templates, where having the role is irrelevant of creation permission (more details on its own section)."
+msgstr "一个例外是在作业模板中，拥有该角色与创建权限无关（相关部分介绍了更多详情）。"
+
+#: ../../source/security.rst:272
+msgid "Independence of resource roles and organization membership roles"
+msgstr "资源角色和机构成员资格角色的独立性"
+
+#: ../../source/security.rst:274
+msgid "Resource-specific organization roles are independent of the organization roles of admin and member. Having the \"workflow admin role\" for the \"Default\" organization will not allow a user to view all users in the organization, but having a \"member\" role in the \"Default\" organization will. The two types of roles are delegated independently of each other."
+msgstr "资源特定的机构角色与机构的管理员和成员角色无关。拥有“Default”机构的“workflow admin role”不允许用户查看该机构中的所有用户，但在“Default”机构中拥有“member”角色则允许。这两个类型的角色是相互独立委托的。"
+
+#: ../../source/security.rst:278
+msgid "Necessary permissions to edit job templates"
+msgstr "编辑作业模板所需的权限"
+
+#: ../../source/security.rst:280
+msgid "Users can edit fields not impacting job runs (non-sensitive fields) with a Job Template admin role alone. However, to edit fields that impact job runs in a job template, a user needs the following:"
+msgstr "用户只凭作业模板管理员角色便可以编辑不会影响作业运行的字段（非敏感字段）。但是，要编辑影响作业模板中的作业运行的字段，用户需要以下权限："
+
+#: ../../source/security.rst:282
+msgid "**admin** role to the job template"
+msgstr "作业模板的 **admin** 角色"
+
+#: ../../source/security.rst:283
+msgid "**use** role to related project"
+msgstr "相关项目的 **use** 角色"
+
+#: ../../source/security.rst:284
+msgid "**use** role to related inventory"
+msgstr "相关清单的 **use** 角色"
+
+#: ../../source/security.rst:286
+msgid "An \"organization job template admin\" role was introduced, but having this role isn't sufficient by itself to edit a job template within the organization if the user does not have use role to the project / inventory a job template uses."
+msgstr "之前引入了一个“organization job template admin”角色，但如果用户对作业模板使用的项目/清单没有使用角色，则此角色本身不足以编辑该机构内的作业模板。"
+
+#: ../../source/security.rst:288
+msgid "In order to delegate *full* job template control (within an organization) to a user or team, you will need grant the team or user all 3 organization-level roles:"
+msgstr "为了将（某个机构中的）*full* 作业模板控制委托给用户或团队，您需要授予该团队或用户所有 3 个机构级别角色："
+
+#: ../../source/security.rst:290
+msgid "job template admin"
+msgstr "任务模板管理员"
+
+#: ../../source/security.rst:291
+msgid "project admin"
+msgstr "项目管理员"
+
+#: ../../source/security.rst:292
+msgid "inventory admin"
+msgstr "清单管理员"
+
+#: ../../source/security.rst:294
+msgid "This will ensure that the user (or all users who are members of the team with these roles) have full access to modify job templates in the organization. If a job template uses an inventory or project from another organization, the user with these organization roles may still not have permission to modify that job template. For clarity of managing permissions, it is best-practice to not mix projects / inventories from different organizations."
+msgstr "这将确保用户（或属于具有这些角色的团队成员的所有用户）具有修改机构中的作业模板的完全访问权限。如果作业模板使用其他机构中的清单或项目，则具有这些机构角色的用户可能仍无权修改该作业模板。为了清楚地管理权限，最好不要混用来自不同机构的项目/清单。"
+
+#: ../../source/security.rst:297
+msgid "RBAC permissions"
+msgstr "RBAC 权限"
+
+#: ../../source/security.rst:299
+msgid "Each role should have a content object, for instance, the org admin role has a content object of the org. To delegate a role, you need admin permission to the content object, with some exceptions that would result in you being able to reset a user's password."
+msgstr "每个角色都应该有一个内容对象，例如，机构管理员角色的内容对象为机构。若要委托角色，您需要对内容对象具有管理员权限，但有些例外情况导致您需要能够重置用户的密码。"
+
+#: ../../source/security.rst:301
+msgid "**Parent** is the organization."
+msgstr "**Parent** 是机构。"
+
+#: ../../source/security.rst:303
+msgid "**Allow** is what this new permission will explicitly allow."
+msgstr "**Allow** 是这个新权限明确允许执行的操作。"
+
+#: ../../source/security.rst:305
+msgid "**Scope** is the parent resource that this new role will be created on. Example: ``Organization.project_create_role``."
+msgstr "**Scope** 是创建这个新角色时所基于的父资源。例如：``Organization.project_create_role``。"
+
+#: ../../source/security.rst:307
+msgid "An assumption is being made that the creator of the resource should be given the admin role for that resource. If there are any instances where resource creation does not also imply resource administration, they will be explicitly called out."
+msgstr "目前的假定是资源的创建者应被赋予该资源的管理员角色。在有些情况下，如果资源创建并未同时隐含资源管理，则将显式地调出它们。"
+
+#: ../../source/security.rst:309
+msgid "Here are the rules associated with each admin type:"
+msgstr "下面是与每个管理员类型关联的规则："
+
+#: ../../source/security.rst:311
+msgid "**Project Admin**"
+msgstr "**项目管理员**"
+
+#: ../../source/security.rst:313
+msgid "Allow: Create, read, update, delete any project"
+msgstr "Allow：创建、读取、更新、删除任何项目"
+
+#: ../../source/security.rst:314
+#: ../../source/security.rst:321
+#: ../../source/security.rst:332
+#: ../../source/security.rst:339
+#: ../../source/security.rst:345
+#: ../../source/security.rst:351
+msgid "Scope: Organization"
+msgstr "Scope：机构"
+
+#: ../../source/security.rst:315
+msgid "User Interface: *Project Add Screen - Organizations*"
+msgstr "User Interface：*项目添加屏幕 - 机构*"
+
+#: ../../source/security.rst:317
+msgid "**Inventory Admin**"
+msgstr "**清单管理员**"
+
+#: ../../source/security.rst:319
+#: ../../source/security.rst:330
+#: ../../source/security.rst:337
+#: ../../source/security.rst:343
+#: ../../source/security.rst:349
+msgid "Parent: Org admin"
+msgstr "Parent：机构管理员"
+
+#: ../../source/security.rst:320
+msgid "Allow: Create, read, update, delete any inventory"
+msgstr "Allow：创建、读取、更新、删除任何清单"
+
+#: ../../source/security.rst:322
+msgid "User Interface: *Inventory Add Screen - Organizations*"
+msgstr "User Interface：*清单添加屏幕 - 机构*"
+
+#: ../../source/security.rst:326
+msgid "As it is with the **Use** role, if you give a user Project Admin and Inventory Admin, it allows them to create Job Templates (not workflows) for your organization."
+msgstr "和 **Use** 角色一样，如果您授予用户“项目管理员”和“清单管理员”，它允许他们为您的机构创建作业模板（而非工作流）。"
+
+#: ../../source/security.rst:328
+msgid "**Credential Admin**"
+msgstr "**凭证管理员**"
+
+#: ../../source/security.rst:331
+msgid "Allow: Create, read, update, delete shared credentials"
+msgstr "Allow：创建、读取、更新、删除共享凭证"
+
+#: ../../source/security.rst:333
+msgid "User Interface: *Credential Add Screen - Organizations*"
+msgstr "User Interface：*凭证添加屏幕 - 机构*"
+
+#: ../../source/security.rst:335
+msgid "**Notification Admin**"
+msgstr "**通知管理员**"
+
+#: ../../source/security.rst:338
+msgid "Allow: Assignment of notifications"
+msgstr "Allow：通知的分配"
+
+#: ../../source/security.rst:341
+msgid "**Workflow Admin**"
+msgstr "**工作流管理员**"
+
+#: ../../source/security.rst:344
+msgid "Allow: Create a workflow"
+msgstr "Allow：创建工作流"
+
+#: ../../source/security.rst:347
+msgid "**Org Execute**"
+msgstr "**机构执行**"
+
+#: ../../source/security.rst:350
+msgid "Allow: Executing JTs and WFJTs"
+msgstr "Allow：执行 JT 和 WFJT"
+
+#: ../../source/security.rst:354
+msgid "The following is a sample scenario showing an organization with its roles and which resource(s) each have access to:"
+msgstr "以下是一个示例场景，显示了一个机构及其角色，以及每个角色可以访问哪些资源："
+

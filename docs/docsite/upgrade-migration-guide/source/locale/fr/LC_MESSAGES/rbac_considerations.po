@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Upgrade and Migration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/rbac_considerations.rst:7
+msgid "Role-Based Access Controls"
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:15
+msgid ""
+"|at| 3.0 has changed significantly around the way that the Role-Based "
+"Access Control (RBAC) system works. For the latest RBAC documentation, "
+"refer to the :ref:`Role-Based Access Controls<userguide:rbac-ug>` section"
+" in the Tower User Guide."
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:18
+msgid "Enhanced and Simplified RBAC System"
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:20
+msgid ""
+"Bason on user feedback, Ansible Tower both expands and simplifies its "
+"role-based access control. No longer is job template visibility "
+"configured via a combination of permissions on inventory, projects, and "
+"credentials. If you want to give any user or team permissions to use a "
+"job template, just assign permissions directly on the job template. "
+"Similarly, credentials are now full objects in Tower’s RBAC system, and "
+"can be assigned to multiple users and/or teams for use."
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:22
+msgid ""
+"A new ‘Auditor’ type has been introduced in Tower as well, who can see "
+"all aspects of the systems automation, but has no permission to run or "
+"change automation, for those that need a system-level auditor. (This may "
+"also be useful for a service account that scrapes automation information "
+"from Tower’s API.)"
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:26
+msgid "Specific Changes to Note"
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:28
+msgid ""
+"There are a few changes you should keep in mind as you work with the RBAC"
+" system as redesigned for |at|:"
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:30
+msgid ""
+"You no longer set the “team” or “user” for a credential. Instead, you use"
+" Tower’s RBAC system to grant ownership, auditor, or usage roles."
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:32
+msgid ""
+"Deletion of job run data is now restricted to system and organization "
+"administrators."
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:34
+msgid ""
+"Projects no longer have multiple organizations. You *must* provide an "
+"organization when creating a new project through the API::"
+msgstr ""
+
+#: ../../source/rbac_considerations.rst:38
+msgid ""
+"New Auditor type in Tower has been added which can see all aspects of the"
+" systems automation but does not have permission to run or change things."
+msgstr ""
+

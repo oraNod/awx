@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/isolation_variables.rst:5
+msgid "Isolation functionality and variables"
+msgstr "分離機能および変数"
+
+#: ../../../common/source/isolation_variables.rst:2
+msgid "|At| uses container technology to isolate jobs from each other. By default, only the current project is exposed to the container running a job template."
+msgstr "|At| は、コンテナテクノロジーを使用して、ジョブを相互に分離します。デフォルトでは、現在のプロジェクトのみがジョブテンプレートを実行しているコンテナに公開されます。"
+
+#: ../../../common/source/isolation_variables.rst:4
+msgid "You may find that you need to customize your playbook runs to expose additional directories. To fine tune your usage of job isolation, there are certain variables that can be set."
+msgstr "追加のディレクトリーを公開するには、Playbook の実行をカスタマイズする必要がある場合があります。ジョブ分離の使用法を微調整するために、設定できる特定の変数があります。"
+
+#: ../../../common/source/isolation_variables.rst:6
+msgid "By default, |at| will use the system's ``tmp`` directory (``/tmp`` by default) as its staging area. This can be changed in the **Job Execution Path** field of the Jobs settings screen, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "デフォルトでは、|at| はシステムの ``tmp`` ディレクトリー (デフォルトは ``/tmp``) をステージング領域として使用します。これは、ジョブ設定画面の **Job Execution Path (ジョブの実行パス)** フィールドから、または ``/api/v2/settings/jobs`` の REST API で以下を変更できます。"
+
+#: ../../../common/source/isolation_variables.rst:8
+msgid "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+msgstr "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+
+#: ../../../common/source/isolation_variables.rst:10
+msgid "If there are any additional directories that should specifically be exposed from the host to the container that playbooks run in, you can specify those in the **Paths to Expose to Isolated Jobs** field of the Jobs setting scren, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "ホストから Playbook が実行するコンテナーに具体的に公開する必要のある追加のディレクトリーがある場合は、ジョブ設定画面の **Paths to Expose to Isolated Jobs (分離されたジョブに公開するパス)** フィールド、または ``/api/v2/settings/jobs`` のREST API で指定できます。"
+
+#: ../../../common/source/isolation_variables.rst:13
+msgid "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/isolation_variables.rst:16
+msgid "The primary file you may want to add to ``AWX_ISOLATION_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "Playbook が ``/var/lib/awx/.ssh`` で定義した鍵や設定を使用する必要がある場合には、このファイルを主要ファイルとして、``AWX_ISOLATION_SHOW_PATHS`` に追加してください。"
+
+#: ../../../common/source/isolation_variables.rst:18
+msgid "The above fields can be found in the Jobs Settings window:"
+msgstr "上記のフィールドは、ジョブ設定ウィンドウで確認できます。"
+

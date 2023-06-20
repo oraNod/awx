@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/main_menu.rst:2
+msgid "The User Interface"
+msgstr "用户界面"
+
+#: ../../source/main_menu.rst:8
+msgid "The User Interface offers a friendly graphical framework for your IT orchestration needs. The left navigation bar provides quick access to resources, such as **Projects**, **Inventories**, **Job Templates**, and **Jobs**."
+msgstr "用户界面为您提供了一个用来实现 IT 编配需求的友好的图形框架。使用左面的导航栏可以快速地访问资源，如 **项目（Projects）** 、**清单（Inventories）** 、**作业模板（Job Templates）** 和 **作业（Jobs）**。"
+
+#: ../../source/main_menu.rst:10
+msgid "Across the top-right side of the interface, you can access your user profile, the About page, view related documentation, and log out. Right below these options, you can view the activity stream for that user by clicking on the Activity Stream |activitystream| button."
+msgstr "在界面的右上方，您可以访问您的用户配置集、About 页面、查看相关文档并退出。就在这些选项下方，您可以点击活动流 |activitystream| 按钮来查看该用户的活动流。"
+
+#: ../../source/main_menu.rst:20
+msgid "Activity Streams"
+msgstr "活动流"
+
+#: ../../source/main_menu.rst:26
+msgid "Most screens have an Activity Stream (|activitystream|) button. Clicking this brings up the **Activity Stream** for this object."
+msgstr "大多数屏幕都有一个活动流（|activitystream|）按钮。点击此按钮可调出这个对象的 **Activity Stream**。"
+
+#: ../../source/main_menu.rst:30
+msgid "|Users - Activity Stream|"
+msgstr "|Users - Activity Stream|"
+
+#: ../../source/main_menu.rst:34
+msgid "An Activity Stream shows all changes for a particular object. For each change, the Activity Stream shows the time of the event, the user that initiated the event, and the action. The information displayed varies depending on the type of event. Clicking on the Examine (|examine|) button shows the event log for the change."
+msgstr "活动流显示特定对象的所有更改。每次更改时，活动流会显示事件的时间、启动了事件的用户和操作。显示的信息根据事件类型而异。点击检查 (|examine|) 按钮会显示所做更改的事件日志。"
+
+#: ../../source/main_menu.rst:39
+msgid "|event log|"
+msgstr "|event log|"
+
+#: ../../source/main_menu.rst:43
+msgid "The Activity Stream can be filtered by the initiating user (or the system, if it was system initiated), and by any related object, such as a particular credential, job template, or schedule."
+msgstr "活动流可按启动用户（如果为系统启动，则按系统）和任何相关的对象（如特定凭证、作业模板或计划）过滤。"
+
+#: ../../source/main_menu.rst:47
+msgid "The Activity Stream on the main Dashboard shows the Activity Stream for the entire instance. Most pages allow viewing an activity stream filtered for that specific object."
+msgstr "主仪表板上的活动流显示整个实例的活动流。大多数页面都允许查看针对该特定对象过滤的活动流。"
+
+#: ../../source/main_menu.rst:52
+msgid "Views"
+msgstr "视图"
+
+#: ../../source/main_menu.rst:59
+msgid "The User Interface provides several options for viewing information."
+msgstr "用户界面提供了多个查看信息的选项。"
+
+#: ../../source/main_menu.rst:66
+msgid "Dashboard view"
+msgstr "Dashboard 视图"
+
+#: ../../source/main_menu.rst:76
+msgid "The **Dashboard** view begins with a summary of your hosts, inventories, and projects. Each of these is linked to the corresponding objects for easy access."
+msgstr "**Dashboard** 视图从您的主机、清单和项目摘要开始。它们各自都链接到对应的对象，以便轻松访问。"
+
+#: ../../source/main_menu.rst:81
+msgid "On the main Dashboard screen, a summary appears listing your current **Job Status**. The **Job Status** graph displays the number of successful and failed jobs over a specified time period. You can choose to limit the job types that are viewed, and to change the time horizon of the graph."
+msgstr "在主仪表板屏幕上，会出现一个列出您当前 **Job Status** 的摘要。**Job Status** 图形显示在指定时间段内成功和失败的作业数量。您可以选择限制查看的作业类型，并更改图形的时间范围。"
+
+#: ../../source/main_menu.rst:83
+msgid "Also available for view are summaries of **Recent Jobs** and **Recent Templates** on their respective tabs."
+msgstr "还可在对应的标签页中查看 **Recent Jobs** 和 **Recent Templates** 的摘要。"
+
+#: ../../source/main_menu.rst:85
+msgid "The **Recent Jobs** section displays which jobs were most recently run, their status, and time when they were run as well."
+msgstr "**Recent Jobs** 部分显示哪些作业是最近运行的、它们的状态以及运行时间。"
+
+#: ../../source/main_menu.rst:89
+msgid "The **Recent Templates** section of this display shows a summary of the most recently used templates. You can also access this summary by clicking **Templates** from the left navigation bar."
+msgstr "此屏幕的 **Recent Templates** 部分显示最新使用的模板摘要。您也可以点左侧导航栏中的 **Templates** 访问此摘要。"
+
+#: ../../source/main_menu.rst:96
+msgid "Clicking on **Dashboard** from the left navigation bar or the |aap| logo at any time returns you to the Dashboard."
+msgstr "您可以随时点击左侧导航栏中的 **Dashboard** 图标或 |aap| 徽标返回仪表板。"
+
+#: ../../source/main_menu.rst:100
+msgid "Jobs view"
+msgstr "Jobs 视图"
+
+#: ../../source/main_menu.rst:102
+msgid "Access the **Jobs** view by clicking **Jobs** from the left navigation bar. This view shows all the jobs that have ran, including projects, templates, management jobs, SCM updates, playbook runs, etc."
+msgstr "通过点击左侧导航栏中的 **Jobs** 来访问 **Jobs** 视图。此视图显示所有运行过的作业，包括项目、模板、管理作业、SCM 更新、playbook 运行等。"
+
+#: ../../source/main_menu.rst:108
+msgid "Schedules view"
+msgstr "Schedules 视图"
+
+#: ../../source/main_menu.rst:110
+msgid "Access the Schedules view by clicking **Schedules** from the left navigation bar. This view shows all the scheduled jobs that are configured."
+msgstr "点左侧导航栏中的 **Schedules** 来访问 Schedules 视图。此视图显示所有配置的调度作业。"
+
+#: ../../source/main_menu.rst:118
+msgid "Resources and Access"
+msgstr "资源和访问"
+
+#: ../../source/main_menu.rst:120
+msgid "The **Resources** and **Access** menus provide you access to the various components of |at| and allow you to configure who has permissions for which of those resources."
+msgstr "**Resources** 和 **Access** 菜单可让您访问 |at| 的各个组件，并允许您配置谁拥有这些资源的权限。"
+
+#: ../../source/main_menu.rst:127
+msgid "Administration Menu"
+msgstr "管理菜单"
+
+#: ../../source/main_menu.rst:132
+msgid "The **Administration** menu provides access to the various administrative options:"
+msgstr "**Administration** 菜单提供对各种管理选项的访问："
+
+#: ../../source/main_menu.rst:136
+msgid "From here, you can create, view, and edit :ref:`custom credential types <ug_credential_types>`, :ref:`notifications <ug_notifications>`, management jobs, :ref:`tokens and applications <ug_applications_auth>`, and configure :ref:`ug_execution_environments`."
+msgstr "在这里，您可以创建、查看和编辑 :ref:`custom credential types <ug_credential_types>`、:ref:`notifications <ug_notifications>`、管理作业、:ref:`tokens and applications <ug_applications_auth>`，并配置 :ref:`ug_execution_environments`。"
+
+#: ../../source/main_menu.rst:140
+msgid "The Settings Menu"
+msgstr "设置菜单"
+
+#: ../../source/main_menu.rst:142
+msgid "Configuring global and system-level settings is accomplished through the **Settings** menu, which is described in further detail in the proceeding section. The **Settings** menu offers access to administrative configuration options."
+msgstr "配置全局设置和系统级别设置通过 **Settings** 菜单来完成，该菜单在后续部分进行了详细介绍。**Settings** 菜单提供对管理配置选项的访问。"
+
+#: ../../../common/source/settings-menu.rst:8
+msgid "To enter the Settings window for |at|, click **Settings** from the left navigation bar. This page allows you to modify your controller's configuration, such as settings associated with authentication, jobs, system, user interface, and view or retrieve your subscription information."
+msgstr "要进入 |at| 的 Settings 窗口，点左侧导航栏中的 **Settings**。在这个界面中可以修改控制器的配置，如与认证相关的设置、作业、系统、用户界面，以及查看或检索您的订阅信息。"
+
+#: ../../../common/source/settings-menu.rst:12
+msgid "For more information on configuring these settings, refer to :ref:`ag_configure_tower` section of the |ata|."
+msgstr "有关配置这些设置的详情请参考 |ata| 的 :ref:`ag_configure_tower` 部分。"
+

@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/unified_job_template.rst:3
+msgid "Unified Job Template List API Endpoint"
+msgstr "統合ジョブテンプレートリストの API エンドポイント"
+
+#: ../../source/unified_job_template.rst:8
+msgid "Make a GET request to this resource to retrieve the list of unified job templates."
+msgstr "このリソースに GET 要求を実行して、統合ジョブテンプレートリストを取得します。"
+
+#: ../../source/unified_job_template.rst:19
+msgid "The resulting data structure contains:"
+msgstr "返されるデータ構造には以下が含まれます。"
+
+#: ../../source/unified_job_template.rst:32
+msgid "The ``count`` field indicates the total number of unified job templates found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more unified job template records."
+msgstr "``count`` フィールドは指定のクエリーで見つかった統合ジョブテンプレートの合計数を示します。``next`` および ``previous`` フィールドは、結果が単一ページに収まらない場合に、それらの結果へのリンクを提供します。``results`` には統合ジョブテンプレートレコードが一覧表示されますが、ゼロの場合もあります。"
+
+#: ../../source/unified_job_template.rst:35
+msgid "Results"
+msgstr "結果"
+
+#: ../../source/unified_job_template.rst:40
+msgid "Each unified job template data structure includes the following fields:"
+msgstr "各統合ジョブテンプレートのデータ構造には以下のフィールドが含まれます。"
+
+#: ../../source/unified_job_template.rst:42
+msgid "``id``: Database ID for this unified job template. (integer)"
+msgstr "``id``: 統合ジョブテンプレートのデータベース ID (整数)"
+
+#: ../../source/unified_job_template.rst:46
+msgid "``type``: Data type for this unified job template. (multiple choice)"
+msgstr "``type``: 統合ジョブテンプレートのデータタイプ (複数選択)"
+
+#: ../../source/unified_job_template.rst:44
+msgid "``project``: Project"
+msgstr "``project``: プロジェクト"
+
+#: ../../source/unified_job_template.rst:45
+msgid "``inventory_source``: Inventory Source"
+msgstr "``inventory_source``: インベントリーソース"
+
+#: ../../source/unified_job_template.rst:46
+msgid "``job_template``: Job Template"
+msgstr "``job_template``: ジョブテンプレート"
+
+#: ../../source/unified_job_template.rst:47
+msgid "``system_job_template``: System Job Template"
+msgstr "``system_job_template``: システムジョブテンプレート"
+
+#: ../../source/unified_job_template.rst:48
+msgid "``url``: URL for this unified job template. (string)"
+msgstr "``url``: 統合ジョブテンプレートの URL (文字列)"
+
+#: ../../source/unified_job_template.rst:49
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``: 関連リソースの URL のあるデータ構造 (オブジェクト)"
+
+#: ../../source/unified_job_template.rst:50
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``: 関連リソースの名前/説明のあるデータ構造 (オブジェクト)"
+
+#: ../../source/unified_job_template.rst:51
+msgid "``created``: Timestamp when this unified job template was created. (datetime)"
+msgstr "``created`` : 統合ジョブテンプレート作成時のタイムスタンプ (日時)"
+
+#: ../../source/unified_job_template.rst:52
+msgid "``modified``: Timestamp when this unified job template was last modified. (datetime)"
+msgstr "``modified``: 統合ジョブテンプレートの最終更新時のタイムスタンプ (日時)"
+
+#: ../../source/unified_job_template.rst:53
+msgid "``name``: (string)"
+msgstr "``name``: (文字列)"
+
+#: ../../source/unified_job_template.rst:54
+msgid "``description``: (string)"
+msgstr "``description``: (文字列)"
+
+#: ../../source/unified_job_template.rst:55
+msgid "``last_job_run``: (datetime)"
+msgstr "``last_job_run``: (日時)"
+
+#: ../../source/unified_job_template.rst:56
+msgid "``last_job_failed:`` (boolean)"
+msgstr "``last_job_failed:`` (ブール値)"
+
+#: ../../source/unified_job_template.rst:57
+msgid "``has_schedules``: (boolean)"
+msgstr "``has_schedules``: (ブール値)"
+
+#: ../../source/unified_job_template.rst:58
+msgid "``next_job_run``: (datetime)"
+msgstr "``next_job_run``: (日時)"
+
+#: ../../source/unified_job_template.rst:73
+msgid "``status``: (multiple choice)"
+msgstr "``status``: (複数選択)"
+
+#: ../../source/unified_job_template.rst:60
+msgid "``new``: New"
+msgstr "``new``: 新規"
+
+#: ../../source/unified_job_template.rst:61
+msgid "``pending``: Pending"
+msgstr "``pending``: 保留中"
+
+#: ../../source/unified_job_template.rst:62
+msgid "``waiting``: Waiting"
+msgstr "``waiting``: 待機中"
+
+#: ../../source/unified_job_template.rst:63
+msgid "``running``: Running"
+msgstr "``running``: 実行中"
+
+#: ../../source/unified_job_template.rst:64
+msgid "``successful``: Successful"
+msgstr "``successful``: 成功"
+
+#: ../../source/unified_job_template.rst:65
+msgid "``failed``: Failed"
+msgstr "``failed``: 失敗"
+
+#: ../../source/unified_job_template.rst:66
+msgid "``error``: Error"
+msgstr "``error``: エラー"
+
+#: ../../source/unified_job_template.rst:67
+msgid "``canceled``: Canceled"
+msgstr "``canceled``: 取り消し"
+
+#: ../../source/unified_job_template.rst:68
+msgid "``never updated``: Never Updated"
+msgstr "``never updated``: 未更新"
+
+#: ../../source/unified_job_template.rst:69
+msgid "``ok``: OK"
+msgstr "``ok``: OK"
+
+#: ../../source/unified_job_template.rst:70
+msgid "``missing``: Missing"
+msgstr "``missing``: 不明"
+
+#: ../../source/unified_job_template.rst:71
+msgid "``none``: No External Source"
+msgstr "``none``: 外部ソースがありません"
+
+#: ../../source/unified_job_template.rst:72
+msgid "``updating``: Updating"
+msgstr "``updating``: 更新中"
+
+#: ../../source/unified_job_template.rst:76
+msgid "Reviewing the Options Endpoint"
+msgstr "オプションエンドポイントの確認"
+
+#: ../../source/unified_job_template.rst:81
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*オプションエンドポイント* テーブルでは、このエンドポイントのオプションを確認できます。ブラウザー表示が可能な API でエンドポイントを表示している場合は、「オプション」ボタンをクリックすると以下の raw JSON が表示されます。"
+

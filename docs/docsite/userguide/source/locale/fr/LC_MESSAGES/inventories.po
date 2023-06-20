@@ -1,0 +1,1340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower User
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower User Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/inventories.rst:5
+msgid "Inventories"
+msgstr ""
+
+#: ../../source/inventories.rst:10
+msgid ""
+"An :term:`Inventory` is a collection of hosts against which jobs may be "
+"launched, the same as an Ansible inventory file. Inventories are divided "
+"into groups and these groups contain the actual hosts. Groups may be "
+"sourced manually, by entering host names into Tower, or from one of "
+"Ansible Tower's supported cloud providers."
+msgstr ""
+
+#: ../../source/inventories.rst:14
+msgid ""
+"If you have a custom dynamic inventory script, or a cloud provider that "
+"is not yet supported natively in Tower, you can also import that into "
+"Tower. Refer to the :ref:`Tower Administration Guide "
+"<administration:ag_start>`."
+msgstr ""
+
+#: ../../source/inventories.rst:17
+msgid ""
+"This tab displays a list of the inventories that are currently available."
+" The inventory list may be sorted and searched by **Name** or "
+"**Organization**. This list may also be filtered by selecting **Cloud "
+"Sourced**, **Failed Hosts**, or **Sync Failures**."
+msgstr ""
+
+#: ../../source/inventories.rst:19
+msgid "|Inventories - home with examples|"
+msgstr ""
+
+#: ../../source/inventories.rst:23
+msgid "The list of Inventory details includes:"
+msgstr ""
+
+#: ../../source/inventories.rst:25
+msgid ""
+"**Inventory Sync**: If configured, you can \"Sync\" to fetch the project "
+"details from the configured source control."
+msgstr ""
+
+#: ../../source/inventories.rst:26
+msgid "**Status Dot**: This shows the status of recent jobs for this inventory."
+msgstr ""
+
+#: ../../source/inventories.rst:27
+msgid ""
+"**Name**: The inventory name. Clicking the Inventory name navigates to "
+"the properties screen for the selected inventory, which shows the "
+"inventory's groups and hosts. (This view is also accessible from the "
+"**Action** menu.)"
+msgstr ""
+
+#: ../../source/inventories.rst:28
+msgid "**Organization**: The organization to which the inventory belongs."
+msgstr ""
+
+#: ../../source/inventories.rst:29
+msgid ""
+"**Actions**: The following actions are available for the selected "
+"inventory:"
+msgstr ""
+
+#: ../../source/inventories.rst:31
+msgid "**Edit**: Edit the properties for the selected inventory"
+msgstr ""
+
+#: ../../source/inventories.rst:32
+msgid ""
+"**Delete**: Delete the selected inventory. *This operation cannot be "
+"reversed!*"
+msgstr ""
+
+#: ../../source/inventories.rst:36
+msgid "Add a new inventory"
+msgstr ""
+
+#: ../../source/inventories.rst:41
+msgid "To create a new inventory:"
+msgstr ""
+
+#: ../../source/inventories.rst:43
+msgid "Click the |add| button, which opens the **Create Inventory** window."
+msgstr ""
+
+#: ../../source/inventories.rst:47
+msgid "|Inventories_create_new - create new inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:52 ../../source/inventories.rst:604
+msgid "Enter the appropriate details into the following fields:"
+msgstr ""
+
+#: ../../source/inventories.rst:54
+msgid "**Name**: Enter a name appropriate for this inventory."
+msgstr ""
+
+#: ../../source/inventories.rst:55
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)."
+msgstr ""
+
+#: ../../source/inventories.rst:56
+msgid "**Organization**: Choose among the available organizations."
+msgstr ""
+
+#: ../../source/inventories.rst:57
+msgid ""
+"**Variables**: Variable definitions and values to be applied to all hosts"
+" in this inventory. Enter variables using either JSON or YAML syntax. Use"
+" the radio button to toggle between the two."
+msgstr ""
+
+#: ../../source/inventories.rst:59
+msgid "|Inventories_create_new_saved - create new inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:63 ../../source/inventories.rst:611
+msgid "Click **Save** when done."
+msgstr ""
+
+#: ../../source/inventories.rst:65
+msgid "After clicking save, the Groups and Hosts Management screen appears."
+msgstr ""
+
+#: ../../source/inventories.rst:67
+msgid "|Inventories_manage_grouphost - new inventory group host manage|"
+msgstr ""
+
+#: ../../source/inventories.rst:72
+msgid "Groups and Hosts"
+msgstr ""
+
+#: ../../source/inventories.rst:0
+msgid "Topics:"
+msgstr ""
+
+#: ../../source/inventories.rst:81
+msgid ""
+"Inventories are divided into groups, which may contain hosts and other "
+"groups, and hosts. There are several actions available for inventories."
+msgstr ""
+
+#: ../../source/inventories.rst:83
+msgid "Create a new Group"
+msgstr ""
+
+#: ../../source/inventories.rst:84
+msgid "Create a new Host"
+msgstr ""
+
+#: ../../source/inventories.rst:85
+msgid "Run a command on the selected Inventory"
+msgstr ""
+
+#: ../../source/inventories.rst:86
+msgid "Edit Inventory properties"
+msgstr ""
+
+#: ../../source/inventories.rst:87
+msgid "View activity streams for Groups and Hosts"
+msgstr ""
+
+#: ../../source/inventories.rst:88
+msgid "Obtain help building your Inventory"
+msgstr ""
+
+#: ../../source/inventories.rst:91
+msgid "Groups"
+msgstr ""
+
+#: ../../source/inventories.rst:97
+msgid ""
+"Under Groups, you can view which groups belong to this inventory, easily "
+"filtered or searched by group name."
+msgstr ""
+
+#: ../../source/inventories.rst:99
+msgid ""
+"Additional actions may be performed on the group by selecting the buttons"
+" to the right of the group name:"
+msgstr ""
+
+#: ../../source/inventories.rst:101
+msgid ""
+"**Sync status**: Show the status of inventory synchronization for groups "
+"configured with cloud sources. If synchronization is configured, clicking"
+" this button shows the synchronization log for the selected group."
+msgstr ""
+
+#: ../../source/inventories.rst:102
+msgid ""
+"**Host status**: Show the status of successful and failed jobs for the "
+"selected group. Clicking this button shows the list of hosts that are "
+"members of the selected group."
+msgstr ""
+
+#: ../../source/inventories.rst:103
+msgid ""
+"**Start sync process**: Initiate a synchronization of the group with the "
+"configured cloud source. (A synchronization process that is in progress "
+"may be canceled by clicking the cancel button that appears here during "
+"synchronization.)"
+msgstr ""
+
+#: ../../source/inventories.rst:104
+msgid "**Edit Group**: Edit the properties for the selected group"
+msgstr ""
+
+#: ../../source/inventories.rst:105
+msgid ""
+"**Copy Group**: Groups can be nested. This allows you to copy or move the"
+" group to a different group."
+msgstr ""
+
+#: ../../source/inventories.rst:106
+msgid ""
+"**Delete**: Delete the selected group. *This operation cannot be "
+"reversed!*"
+msgstr ""
+
+#: ../../source/inventories.rst:110
+msgid "Add a new group"
+msgstr ""
+
+#: ../../source/inventories.rst:115
+msgid "To create a new group for an inventory:"
+msgstr ""
+
+#: ../../source/inventories.rst:117
+msgid ""
+"Click the |add group button| button, which opens the **Create Group** "
+"window."
+msgstr ""
+
+#: ../../source/inventories.rst:121
+msgid "|Inventories_manage_group_add|"
+msgstr ""
+
+#: ../../source/inventories.rst:125
+msgid "Enter the appropriate details into the required and optional fields:"
+msgstr ""
+
+#: ../../source/inventories.rst:127
+msgid "**Name**: Required"
+msgstr ""
+
+#: ../../source/inventories.rst:128
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)"
+msgstr ""
+
+#: ../../source/inventories.rst:129
+msgid ""
+"**Source**: Choose a source which matches the credential type against "
+"which a host can be entered."
+msgstr ""
+
+#: ../../source/inventories.rst:130 ../../source/inventories.rst:180
+#: ../../source/inventories.rst:235 ../../source/inventories.rst:258
+#: ../../source/inventories.rst:284 ../../source/inventories.rst:310
+#: ../../source/inventories.rst:338 ../../source/inventories.rst:364
+#: ../../source/inventories.rst:387 ../../source/inventories.rst:413
+msgid ""
+"**Variables**: Enter definitions and values to be applied to all hosts in"
+" this group. Enter variables using either JSON or YAML syntax. Use the "
+"radio button to toggle between the two."
+msgstr ""
+
+#: ../../source/inventories.rst:132
+msgid ""
+"In prior versions of |at|, the **Source** default was manual, meaning "
+"that the hosts must be entered into Tower manually. Beginning with |at| "
+"3.0, host can be added via multiple methods/credential sources. (Refer to"
+" :ref:`uf_add_new_host` for more information on managing hosts "
+"individually.)"
+msgstr ""
+
+#: ../../source/inventories.rst:134
+msgid ""
+"To synchronize the inventory group from a cloud source, choose the "
+"appropriate source from the **Source** menu."
+msgstr ""
+
+#: ../../source/inventories.rst:138
+msgid ""
+"Starting with version 2.2, Ansible Tower supports Amazon Web Services "
+"EC2, Rackspace Cloud Servers, Google Compute Engine, VMware vCenter, "
+"Microsoft Azure, OpenStack, and custom scripts added by the "
+"administrator.  With |at| version 3.0, Microsoft Azure Classic "
+"(deprecated) and Microsoft Azure Resource Manager were added to expand "
+"upon the support offered for Microsoft Azure, and support for Red Hat "
+"Satellite 6 and RH Cloudforms credentials were also added."
+msgstr ""
+
+#: ../../source/inventories.rst:140
+msgid "All cloud inventory sources have the following update options:"
+msgstr ""
+
+#: ../../source/inventories.rst:142
+msgid ""
+"**Overwrite**: When checked all child groups and hosts not found on the "
+"remote source are deleted from the local inventory. When not checked any "
+"local child hosts and groups not found on the external source remains "
+"untouched by the inventory update process."
+msgstr ""
+
+#: ../../source/inventories.rst:143
+msgid ""
+"**Overwrite Variables**:  If checked, all variables for child groups and "
+"hosts will be removed and replaced by those found on the external source."
+" When not checked a merge is performed, combining local variables with "
+"those found on the external source."
+msgstr ""
+
+#: ../../source/inventories.rst:144
+msgid ""
+"**Update on Launch**: Each time a job runs using this inventory, refresh "
+"the inventory from the selected source before executing job tasks. To "
+"avoid job overflows if jobs are spawned faster than the inventory can "
+"sync, selecting this allows you to configure a Cache Timeout to cache "
+"prior inventory syncs for a certain number of seconds."
+msgstr ""
+
+#: ../../source/inventories.rst:146
+msgid ""
+"The \"Update on Launch\" setting refers to a dependency system for "
+"projects and inventory, and it will not specifically exclude two jobs "
+"from running at the same time. If a cache timeout is specified, then the "
+"dependencies for the second job is created and it uses the project and "
+"inventory update that the first job spawned. Both jobs then wait for that"
+" project and/or inventory update to finish before proceeding. If they are"
+" different job templates, they can then both start and run at the same "
+"time, if the system has the capacity to do so."
+msgstr ""
+
+#: ../../source/inventories.rst:150
+msgid ""
+"If you intend to use Tower's provisioning callback feature with a dynamic"
+" inventory source, \"Update on Launch\" should be set for the inventory "
+"group."
+msgstr ""
+
+#: ../../source/inventories.rst:152
+msgid "When done, click **Save**."
+msgstr ""
+
+#: ../../source/inventories.rst:154
+msgid "|Inventories_manage_group_add-saved|"
+msgstr ""
+
+#: ../../source/inventories.rst:160
+msgid "Credential Sources"
+msgstr ""
+
+#: ../../source/inventories.rst:164
+msgid ""
+"Choose a source which matches the credential type against which a host "
+"can be entered."
+msgstr ""
+
+#: ../../source/inventories.rst:167
+msgid "Rackspace Cloud Servers"
+msgstr ""
+
+#: ../../source/inventories.rst:174
+msgid ""
+"Rackspace inventory sync has been deprecated in Tower 3.1.0 and support "
+"for Rackspace will be removed in a future release."
+msgstr ""
+
+#: ../../source/inventories.rst:176
+msgid ""
+"To configure a group for Rackspace, select **Rackspace Cloud Servers** "
+"and enter the following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:178 ../../source/inventories.rst:256
+#: ../../source/inventories.rst:282 ../../source/inventories.rst:308
+#: ../../source/inventories.rst:336 ../../source/inventories.rst:362
+#: ../../source/inventories.rst:385 ../../source/inventories.rst:411
+msgid ""
+"**Cloud Credential**: Choose from an existing Credential. For more "
+"information, refer to :ref:`ug_credentials`."
+msgstr ""
+
+#: ../../source/inventories.rst:179 ../../source/inventories.rst:210
+#: ../../source/inventories.rst:257 ../../source/inventories.rst:283
+#: ../../source/inventories.rst:309
+msgid ""
+"**Regions**: Click on the regions field to see a list of regions for your"
+" cloud provider. You can select multiple regions, or choose \"All\" to "
+"include all regions. Tower will only be updated with Hosts associated "
+"with the selected regions."
+msgstr ""
+
+#: ../../source/inventories.rst:182 ../../source/inventories.rst:239
+#: ../../source/inventories.rst:260 ../../source/inventories.rst:287
+#: ../../source/inventories.rst:312 ../../source/inventories.rst:342
+#: ../../source/inventories.rst:366 ../../source/inventories.rst:389
+#: ../../source/inventories.rst:417 ../../source/inventories.rst:446
+msgid "You can also configure **Update Options**."
+msgstr ""
+
+#: ../../source/inventories.rst:184 ../../source/inventories.rst:241
+#: ../../source/inventories.rst:262 ../../source/inventories.rst:289
+#: ../../source/inventories.rst:314 ../../source/inventories.rst:344
+#: ../../source/inventories.rst:368 ../../source/inventories.rst:391
+#: ../../source/inventories.rst:419 ../../source/inventories.rst:448
+msgid ""
+"**Overwrite**: If checked, all child groups and hosts not found on the "
+"external source are deleted from the local inventory. When not checked, "
+"local child hosts and groups not found on the external source remain "
+"untouched by the inventory update process."
+msgstr ""
+
+#: ../../source/inventories.rst:185 ../../source/inventories.rst:242
+#: ../../source/inventories.rst:263 ../../source/inventories.rst:290
+#: ../../source/inventories.rst:315 ../../source/inventories.rst:345
+#: ../../source/inventories.rst:369 ../../source/inventories.rst:392
+#: ../../source/inventories.rst:420 ../../source/inventories.rst:449
+msgid ""
+"**Overwrite Variables**: If checked, all variables for child groups and "
+"hosts are removed and replaced by those found on the external source. "
+"When not checked, a merge is performed, combining local variables with "
+"those found on the external source."
+msgstr ""
+
+#: ../../source/inventories.rst:186 ../../source/inventories.rst:243
+#: ../../source/inventories.rst:264 ../../source/inventories.rst:291
+#: ../../source/inventories.rst:316 ../../source/inventories.rst:346
+#: ../../source/inventories.rst:370 ../../source/inventories.rst:393
+#: ../../source/inventories.rst:421 ../../source/inventories.rst:450
+msgid ""
+"**Update on Launch**: Each time a job runs using this inventory, refresh "
+"the inventory from the selected source before executing job tasks."
+msgstr ""
+
+#: ../../source/inventories.rst:189
+msgid "|Inventories - create Rackspace group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:194
+msgid "Amazon Web Services EC2"
+msgstr ""
+
+#: ../../source/inventories.rst:199
+msgid ""
+"To configure a group for AWS, select **Amazon EC2** and enter the "
+"following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:202
+msgid "|Inventories - create AWS group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:206
+msgid ""
+"**Cloud Credential**: Choose from an existing credential (for more "
+"information, refer to :ref:`ug_credentials`)."
+msgstr ""
+
+#: ../../source/inventories.rst:208
+msgid ""
+"If Tower is running on an EC2 instance with an assigned IAM Role, the "
+"credential may be omitted, and the security credentials from the instance"
+" metadata will be used instead. For more information on using IAM Roles, "
+"refer to the `IAM_Roles_for_Amazon_EC2_documentation_at_Amazon "
+"<http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam- roles-for-"
+"amazon-ec2.html>`_."
+msgstr ""
+
+#: ../../source/inventories.rst:211
+msgid ""
+"**Instance Filters**: Rather than importing your entire Amazon EC2 "
+"inventory, filter the instances returned by the inventory script based on"
+" a variety of metadata. Hosts are imported if they match any of the "
+"filters entered here."
+msgstr ""
+
+#: ../../source/inventories.rst:213
+msgid "Examples:"
+msgstr ""
+
+#: ../../source/inventories.rst:215
+msgid ""
+"To limit to hosts having the tag ``TowerManaged``: Enter ``tag-"
+"key=TowerManaged``"
+msgstr ""
+
+#: ../../source/inventories.rst:216
+msgid ""
+"To limit to hosts using either the key-name ``staging`` or "
+"``production``: Enter ``key-name=staging, key-name=production``"
+msgstr ""
+
+#: ../../source/inventories.rst:217
+msgid ""
+"To limit to hosts where the ``Name`` tag begins with ``test``: Enter "
+"``tag:Name=test*``"
+msgstr ""
+
+#: ../../source/inventories.rst:219
+msgid ""
+"For more information on the filters that can be used here, refer to the "
+"`Describe Instances "
+"<http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstances.html>`_"
+" documentation at Amazon."
+msgstr ""
+
+#: ../../source/inventories.rst:222
+msgid ""
+"**Only Group By**: By default, Tower creates groups based on the "
+"following Amazon EC2 parameters:"
+msgstr ""
+
+#: ../../source/inventories.rst:224
+msgid "Availability Zones"
+msgstr ""
+
+#: ../../source/inventories.rst:225
+msgid "Image ID"
+msgstr ""
+
+#: ../../source/inventories.rst:226
+msgid "Instance Type"
+msgstr ""
+
+#: ../../source/inventories.rst:227
+msgid "Key Name"
+msgstr ""
+
+#: ../../source/inventories.rst:228
+msgid "Region"
+msgstr ""
+
+#: ../../source/inventories.rst:229
+msgid "Security Group"
+msgstr ""
+
+#: ../../source/inventories.rst:230
+msgid "Tags (by name)"
+msgstr ""
+
+#: ../../source/inventories.rst:231
+msgid "VPC ID"
+msgstr ""
+
+#: ../../source/inventories.rst:233
+msgid ""
+"If you do not want all these groups created, select from the dropdown the"
+" list of groups that you would like created by default. You can also "
+"select ``Instance ID`` to create groups based on the Instance ID of your "
+"instances."
+msgstr ""
+
+#: ../../source/inventories.rst:237
+msgid ""
+"**Source Variables**: Override variables found in ``ec2.ini`` and used by"
+" the inventory update script. Enter variables using either JSON or YAML "
+"syntax. Use the radio button to toggle between the two. For a detailed "
+"description of these variables `view ec2.ini in the Ansible GitHub repo "
+"<https://github.com/ansible/ansible/blob/devel/contrib/inventory/ec2.ini>`__."
+msgstr ""
+
+#: ../../source/inventories.rst:247
+msgid "Google Compute Engine"
+msgstr ""
+
+#: ../../source/inventories.rst:253
+msgid ""
+"To configure a group for Google Compute Engine, select **Google Compute "
+"Engine** and enter the following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:267
+msgid "|Inventories - create GCE group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:274
+msgid "Microsoft Azure Classic (deprecated)"
+msgstr ""
+
+#: ../../source/inventories.rst:279
+msgid ""
+"To configure a group for Microsoft Azure Classic, select **Microsoft "
+"Azure Classic (deprecated)** and enter the following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:294
+msgid "|Inventories - create Azure group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:300
+msgid "Microsoft Azure Resource Manager"
+msgstr ""
+
+#: ../../source/inventories.rst:305
+msgid ""
+"To configure a group for Microsoft Azure Resource Manager, select "
+"**Microsoft Azure Resource Managee** and enter the following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:320
+msgid "|Inventories - create Azure Resource Manager group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:327
+msgid "VMware vCenter"
+msgstr ""
+
+#: ../../source/inventories.rst:333
+msgid ""
+"To configure a group for VMware vCenter, select **VMware** and enter the "
+"following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:340
+msgid ""
+"**Source Variables**: Override variables found in ``vmware.ini`` and used"
+" by the inventory update script. For a detailed description of these "
+"variables `view vmware.ini in the Ansible GitHub repo "
+"<https://github.com/ansible/ansible/blob/devel/contrib/inventory/vmware.ini>`__."
+" Enter variables using either JSON or YAML syntax. Use the radio button "
+"to toggle between the two."
+msgstr ""
+
+#: ../../source/inventories.rst:349
+msgid "|Inventories - create VMware group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:355
+msgid "Red Hat Satellite 6"
+msgstr ""
+
+#: ../../source/inventories.rst:360
+msgid ""
+"To configure a group for Red Hat Satellite 6, select **Red Hat Satellite "
+"6** and enter the following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:373
+msgid "|Inventories - create RHSat6 group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:378
+msgid "Red Hat CloudForms"
+msgstr ""
+
+#: ../../source/inventories.rst:383
+msgid ""
+"To configure a group for Red Hat CloudForms, select **Red Hat "
+"CloudForms** and enter the following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:396
+msgid "|Inventories - create RHCloudForm group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:403
+msgid "OpenStack"
+msgstr ""
+
+#: ../../source/inventories.rst:409
+msgid ""
+"To configure a group for OpenStack, select **OpenStack** and enter the "
+"following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:415
+msgid ""
+"**Source Variables**: Override variables found in ``openstack.yml`` and "
+"used by the inventory update script. For a detailed description of these "
+"variables `view openstack.yml in the Ansible GitHub repo "
+"<https://github.com/ansible/ansible/blob/devel/contrib/inventory/openstack.yml>`__."
+" Enter variables using either JSON or YAML syntax. Use the radio button "
+"to toggle between the two."
+msgstr ""
+
+#: ../../source/inventories.rst:424
+msgid "|Inventories - create OpenStack group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:431
+msgid "Custom Script"
+msgstr ""
+
+#: ../../source/inventories.rst:436
+msgid ""
+"Tower allows you to use a custom dynamic inventory script, if your "
+"administrator has added one."
+msgstr ""
+
+#: ../../source/inventories.rst:438
+msgid ""
+"To configure a group to use a Custom Inventory Script, select **Custom "
+"Script** and enter the following details:"
+msgstr ""
+
+#: ../../source/inventories.rst:440
+msgid "**Custom Inventory Script**: Choose from an existing Inventory Script."
+msgstr ""
+
+#: ../../source/inventories.rst:442
+msgid ""
+"**Environment Variables**: Set variables in the environment to be used by"
+" the inventory update script. The variables would be specific to the "
+"script that you have written."
+msgstr ""
+
+#: ../../source/inventories.rst:444
+msgid ""
+"Enter variables using either JSON or YAML syntax. Use the radio button to"
+" toggle between the two."
+msgstr ""
+
+#: ../../source/inventories.rst:453
+msgid "|Inventories - create custom group for example inventory|"
+msgstr ""
+
+#: ../../source/inventories.rst:457
+msgid ""
+"For more information on syncing or using custom inventory scripts, refer "
+"to :ref:`ag_custom_inventory_script` in the |ata|."
+msgstr ""
+
+#: ../../source/inventories.rst:460
+msgid "Scheduling"
+msgstr ""
+
+#: ../../source/inventories.rst:465
+msgid ""
+"For groups sourced from a cloud service, the inventory update process may"
+" be scheduled via the **Schedule** view. To access the **Schedule** view,"
+" click the Schedule (|schedule-button|) button beside the Inventory Group"
+" name to open the **Edit Group** dialog."
+msgstr ""
+
+#: ../../source/inventories.rst:469
+msgid "|inventories-edit-group-edit|"
+msgstr ""
+
+#: ../../source/inventories.rst:473
+msgid ""
+"This screen displays a list of the schedules that are currently available"
+" for the selected **Group**. The schedule list may be sorted and searched"
+" by **Name**."
+msgstr ""
+
+#: ../../source/inventories.rst:476
+msgid "|inventories-edit-group-schedule|"
+msgstr ""
+
+#: ../../source/inventories.rst:481
+msgid "The list of schedules includes:"
+msgstr ""
+
+#: ../../source/inventories.rst:483
+msgid "Name (Clicking the schedule name opens the **Edit Schedule** dialog)"
+msgstr ""
+
+#: ../../source/inventories.rst:484
+msgid "First Run"
+msgstr ""
+
+#: ../../source/inventories.rst:485
+msgid "Next Run"
+msgstr ""
+
+#: ../../source/inventories.rst:487
+msgid ""
+"Buttons located in the upper right corner of the **Schedules** screen "
+"provide the following actions:"
+msgstr ""
+
+#: ../../source/inventories.rst:490
+msgid "Create a new schedule"
+msgstr ""
+
+#: ../../source/inventories.rst:491
+msgid "Refresh this view"
+msgstr ""
+
+#: ../../source/inventories.rst:495
+msgid "Add a new schedule"
+msgstr ""
+
+#: ../../source/inventories.rst:500
+msgid "To create a new schedule:"
+msgstr ""
+
+#: ../../source/inventories.rst:502
+msgid "Click the |add| button."
+msgstr ""
+
+#: ../../source/inventories.rst:504
+msgid "|Group - create new schedule|"
+msgstr ""
+
+#: ../../source/inventories.rst:508
+msgid "Enter the appropriate details into the following fields and select Save:"
+msgstr ""
+
+#: ../../source/inventories.rst:510
+msgid "**Name** (required)"
+msgstr ""
+
+#: ../../source/inventories.rst:511
+msgid "**Start Date** (required)"
+msgstr ""
+
+#: ../../source/inventories.rst:512
+msgid "**Start Time** (required)"
+msgstr ""
+
+#: ../../source/inventories.rst:513
+msgid "**Local Time Zone** (the entered Start Time should be in this timezone)"
+msgstr ""
+
+#: ../../source/inventories.rst:514
+msgid ""
+"**Repeat Frequency** (the appropriate options are displayed as the update"
+" frequency is modified)"
+msgstr ""
+
+#: ../../source/inventories.rst:516
+msgid "None"
+msgstr ""
+
+#: ../../source/inventories.rst:520
+msgid "Minute, Hour, or Day"
+msgstr ""
+
+#: ../../source/inventories.rst:524
+msgid "Week"
+msgstr ""
+
+#: ../../source/inventories.rst:528
+msgid "Month"
+msgstr ""
+
+#: ../../source/inventories.rst:532
+msgid "Year"
+msgstr ""
+
+#: ../../source/inventories.rst:538
+msgid ""
+"The **Schedule Description** panel displays an detailed overview of the "
+"schedule and a list of the scheduled occurrences in the selected Local "
+"Time Zone or in UTC (be sure to select **Local Time** or **UTC** as based"
+" on your needs)."
+msgstr ""
+
+#: ../../source/inventories.rst:542
+msgid ""
+"When using UTC time settings, repeating jobs that runs at a specific time"
+" of day may move relative to a local timezone when Daylight Saving Time "
+"shifts occur."
+msgstr ""
+
+#: ../../source/inventories.rst:545
+msgid ""
+"Once you have saved the schedule, it can be viewed by clicking on the "
+"Schedule (|schedule-button|) tab beside the group name."
+msgstr ""
+
+#: ../../source/inventories.rst:547
+msgid "|Inventories - group with example schedule|"
+msgstr ""
+
+#: ../../source/inventories.rst:551
+msgid "There are server actions available for schedules:"
+msgstr ""
+
+#: ../../source/inventories.rst:553
+msgid ""
+"ON/OFF -- Stop an active schedule or activate a stopped schedule by using"
+" the toggle button."
+msgstr ""
+
+#: ../../source/inventories.rst:554
+msgid "Edit schedule"
+msgstr ""
+
+#: ../../source/inventories.rst:555
+msgid "Delete schedule"
+msgstr ""
+
+#: ../../source/inventories.rst:559
+msgid "Hosts"
+msgstr ""
+
+#: ../../source/inventories.rst:564
+msgid "Hosts are listed on the right side of the Inventory display screen."
+msgstr ""
+
+#: ../../source/inventories.rst:566
+msgid "|Inventories - hosts list for example group|"
+msgstr ""
+
+#: ../../source/inventories.rst:570
+msgid ""
+"The host list may be sorted and searched by **Name** or **Groups**, and "
+"filtered by hosts that are disabled, by hosts with failed jobs, and by "
+"hosts synchronized with an external source."
+msgstr ""
+
+#: ../../source/inventories.rst:572
+msgid ""
+"This list displays information about each host and provides for several "
+"actions:"
+msgstr ""
+
+#: ../../source/inventories.rst:574
+msgid ""
+"**ON/OFF** Indicates whether a host is available and should be included "
+"in running jobs. For hosts that are part of an external inventory, this "
+"flag is set by the inventory sync process and cannot be manually changed."
+msgstr ""
+
+#: ../../source/inventories.rst:575
+msgid "**Name**: Opens the **Host Properties** dialog"
+msgstr ""
+
+#: ../../source/inventories.rst:576
+msgid ""
+"**Available**:  A toggle indicating whether the host is enabled to "
+"receive jobs from Tower. Click to toggle this setting."
+msgstr ""
+
+#: ../../source/inventories.rst:577
+msgid ""
+"**Jobs**: Shows the most recent Jobs run against this Host. Clicking this"
+" button displays a window showing the most recent jobs and their status."
+msgstr ""
+
+#: ../../source/inventories.rst:578
+msgid "**Edit host**: Opens the **Host Properties** dialog"
+msgstr ""
+
+#: ../../source/inventories.rst:579
+msgid "**Copy host**: Copies or moves the host to a different group"
+msgstr ""
+
+#: ../../source/inventories.rst:580
+msgid ""
+"**Delete**: Removes the host from Tower. *This operation is not "
+"reversible!*"
+msgstr ""
+
+#: ../../source/inventories.rst:585
+msgid "Add a new host"
+msgstr ""
+
+#: ../../source/inventories.rst:590
+msgid ""
+"Hosts can be added manually, by IP address, or hostname. Tower can also "
+"sync inventory directly from AWS EC2, Google Compute Engine, MS Azure, "
+"VMware, Rackspace Open Cloud, or OpenStack."
+msgstr ""
+
+#: ../../source/inventories.rst:592
+msgid "To create a new host and add it to an existing group:"
+msgstr ""
+
+#: ../../source/inventories.rst:594
+msgid "Click the |add host button| button."
+msgstr ""
+
+#: ../../source/inventories.rst:598
+msgid "This opens the **Create Host** dialog."
+msgstr ""
+
+#: ../../source/inventories.rst:600
+msgid "|Inventories - create new host for example group|"
+msgstr ""
+
+#: ../../source/inventories.rst:606
+msgid "**Host Name**: The hostname or IP address of the host"
+msgstr ""
+
+#: ../../source/inventories.rst:607
+msgid "**Description**: Enter an arbitrary description as appropriate"
+msgstr ""
+
+#: ../../source/inventories.rst:608
+msgid ""
+"**Enabled?**: Indicates if a host is available and should be included in "
+"running jobs. For hosts that are part of an external inventory, this flag"
+" cannot be changed. It is set by the inventory sync process."
+msgstr ""
+
+#: ../../source/inventories.rst:609
+msgid ""
+"**Variables**: Variable definitions and values to be applied to the "
+"selected host. Enter variables using either JSON or YAML syntax, using "
+"the radio button to toggle between JSON or YAML."
+msgstr ""
+
+#: ../../source/inventories.rst:614
+msgid "Running Ad Hoc Commands"
+msgstr ""
+
+#: ../../source/inventories.rst:621
+msgid "To run an ad hoc command:"
+msgstr ""
+
+#: ../../source/inventories.rst:623
+msgid ""
+"Select an inventory source. The inventory source can be a single group or"
+" host, a selection of multiple hosts, or a selection of multiple groups."
+msgstr ""
+
+#: ../../source/inventories.rst:627
+msgid "|ad hoc-commands-inventory-home|"
+msgstr ""
+
+#: ../../source/inventories.rst:631
+msgid "Then, click the |adhoc| button."
+msgstr ""
+
+#: ../../source/inventories.rst:636
+msgid "Enter the details for the following fields:"
+msgstr ""
+
+#: ../../source/inventories.rst:638
+msgid ""
+"**Module**: Select one of the modules that Tower supports running "
+"commands against."
+msgstr ""
+
+#: ../../source/inventories.rst:641
+msgid "command"
+msgstr ""
+
+#: ../../source/inventories.rst:641
+msgid "apt_repository"
+msgstr ""
+
+#: ../../source/inventories.rst:641
+msgid "mount"
+msgstr ""
+
+#: ../../source/inventories.rst:641
+msgid "win_service"
+msgstr ""
+
+#: ../../source/inventories.rst:643
+msgid "shell"
+msgstr ""
+
+#: ../../source/inventories.rst:643
+msgid "apt_rpm"
+msgstr ""
+
+#: ../../source/inventories.rst:643
+msgid "ping"
+msgstr ""
+
+#: ../../source/inventories.rst:643
+msgid "win_updates"
+msgstr ""
+
+#: ../../source/inventories.rst:645
+msgid "yum"
+msgstr ""
+
+#: ../../source/inventories.rst:645
+msgid "service"
+msgstr ""
+
+#: ../../source/inventories.rst:645
+msgid "selinux"
+msgstr ""
+
+#: ../../source/inventories.rst:645
+msgid "win_group"
+msgstr ""
+
+#: ../../source/inventories.rst:647
+msgid "apt"
+msgstr ""
+
+#: ../../source/inventories.rst:647
+msgid "group"
+msgstr ""
+
+#: ../../source/inventories.rst:647
+msgid "setup"
+msgstr ""
+
+#: ../../source/inventories.rst:647
+msgid "win_user"
+msgstr ""
+
+#: ../../source/inventories.rst:649
+msgid "apt_key"
+msgstr ""
+
+#: ../../source/inventories.rst:649
+msgid "user"
+msgstr ""
+
+#: ../../source/inventories.rst:649
+msgid "win_ping"
+msgstr ""
+
+#: ../../source/inventories.rst:652
+msgid "**Arguments**: Provide arguments to be used with the module you selected."
+msgstr ""
+
+#: ../../source/inventories.rst:653
+msgid ""
+"**Limit**: Enter the limit used to target hosts in the inventory. To "
+"target all hosts in the inventory enter ``all`` or ``*``, or leave the "
+"field blank. This is automatically populated with whatever was selected "
+"in the previous view prior to clicking the launch button."
+msgstr ""
+
+#: ../../source/inventories.rst:654
+msgid ""
+"**Machine Credential**: Select the credential to use when accessing the "
+"remote hosts to run the command. Choose the credential containing the "
+"username and SSH key or password that Ansbile needs to log into the "
+"remote hosts."
+msgstr ""
+
+#: ../../source/inventories.rst:655
+msgid ""
+"**Enable Privilege Escalation**: If enabled, the playbook is run with "
+"administrator privileges. This is the equivalent of passing the "
+"``--become`` option to the ``ansible`` command."
+msgstr ""
+
+#: ../../source/inventories.rst:656
+msgid "**Verbosity**: Select a verbosity level for the standard output."
+msgstr ""
+
+#: ../../source/inventories.rst:657
+msgid ""
+"**Forks**: If needed, select the number of parallel or simultaneous "
+"processes to use while executing the command."
+msgstr ""
+
+#: ../../source/inventories.rst:659
+msgid "Click the |launch| button to run this ad hoc command."
+msgstr ""
+
+#: ../../source/inventories.rst:663
+msgid "|ad hoc-commands-inventory-run-command|"
+msgstr ""
+
+#: ../../source/inventories.rst:670
+msgid "System Tracking"
+msgstr ""
+
+#: ../../source/inventories.rst:678
+msgid ""
+"System Tracking, introduced as a new feature in Ansible Tower 2.2, is "
+"only available to those with Enterprise-level licenses."
+msgstr ""
+
+#: ../../source/inventories.rst:681
+msgid ""
+"System Tracking offers the ability to compare the results of two scan "
+"runs from different dates on one host or the same date on two hosts."
+msgstr ""
+
+#: ../../source/inventories.rst:683
+msgid "Data is grouped by fact modules:"
+msgstr ""
+
+#: ../../source/inventories.rst:685
+msgid "Packages"
+msgstr ""
+
+#: ../../source/inventories.rst:686
+msgid "Services"
+msgstr ""
+
+#: ../../source/inventories.rst:687
+msgid "Files"
+msgstr ""
+
+#: ../../source/inventories.rst:688
+msgid "Ansible"
+msgstr ""
+
+#: ../../source/inventories.rst:689
+msgid "Custom"
+msgstr ""
+
+#: ../../source/inventories.rst:691
+msgid ""
+"Tower is designed to make every attempt to find your data. If you select "
+"a date without any scan runs, Tower gathers the previous year's worth of "
+"scan runs to verify possible data to include. Successful comparisons "
+"display results from the available dates instead of the specified dates. "
+"Unsuccessful comparisons display a message indicating why they did not "
+"work."
+msgstr ""
+
+#: ../../source/inventories.rst:695
+msgid ""
+"Service scan jobs should not run against an inventory with hosts that "
+"point to the same physical machine."
+msgstr ""
+
+#: ../../source/inventories.rst:699
+msgid "Single Host Workflow"
+msgstr ""
+
+#: ../../source/inventories.rst:705
+msgid ""
+"Select a single host in an inventory to compare against two dates and "
+"click the |system-tracking| button."
+msgstr ""
+
+#: ../../source/inventories.rst:709
+msgid "|select one host to compare|"
+msgstr ""
+
+#: ../../source/inventories.rst:716
+msgid ""
+"If you have not already created a job template set to scan, you will not "
+"be able to proceed until the correct job template has been created."
+msgstr ""
+
+#: ../../source/inventories.rst:718
+msgid ""
+"Select two dates on which you have scan data for the host, with the "
+"earliest date to compare on the left and the latest date to compare on "
+"the right."
+msgstr ""
+
+#: ../../source/inventories.rst:720
+msgid "|select one host two dates|"
+msgstr ""
+
+#: ../../source/inventories.rst:725
+msgid ""
+"Select the module (**Packages**, **Services**, or **Ansible**) for which "
+"you want to compare differences. To change modules, click on the module "
+"button with the button navigation to filter by different types of facts."
+"  Note that differences among the \"ansible\" and \"files\" modules "
+"changes are highlighted in red, while only changes for \"packages\" and "
+"\"services\" are shown."
+msgstr ""
+
+#: ../../source/inventories.rst:727
+msgid ""
+"You may also choose the same date in both date selectors if you want to "
+"compare multiple scan runs against a single date. If two or more scan "
+"jobs runs are discovered on a particular day, Tower compares the most "
+"recent and the second-most recent. If there is only one run for the "
+"selected date, Tower may display a message saying it could not find any "
+"scan job runs in one of the columns. (Also noted in :ref:`Known Issues "
+"<release-notes:ir_known_issues>` in the *Ansible Tower Release Notes* "
+"manual.)"
+msgstr ""
+
+#: ../../source/inventories.rst:729
+msgid "|select one host one date module expanded|"
+msgstr ""
+
+#: ../../source/inventories.rst:734
+msgid ""
+"Please note that if the scans found for the selected date are identical, "
+"Tower displays a single result of all facts scanned."
+msgstr ""
+
+#: ../../source/inventories.rst:736
+msgid ""
+"As an example, say that a user selects \"7/7/2015\" for both dates and "
+"selects the \"packages\" module. And say that two runs occurred on this "
+"date, but there were no changes to packages on the selected host. The "
+"user sees a message indicating the scans were identical as well as a "
+"single column containing all package versions, instead of a two-column "
+"listing of differences."
+msgstr ""
+
+#: ../../source/inventories.rst:741
+msgid "Host to Host Workflow"
+msgstr ""
+
+#: ../../source/inventories.rst:748
+msgid ""
+"To compare two hosts, select the hosts and click the |system-tracking| "
+"button."
+msgstr ""
+
+#: ../../source/inventories.rst:750
+msgid "|select two hosts to compare|"
+msgstr ""
+
+#: ../../source/inventories.rst:755
+msgid ""
+"Select a single date on which to compare the two hosts. Next, select the "
+"module for which you want to view differences."
+msgstr ""
+
+#: ../../source/inventories.rst:759
+msgid "|select two hosts scanned|"
+msgstr ""
+
+#: ../../source/inventories.rst:765
+msgid ""
+"Although Tower only supports picking a single date for both hosts, you "
+"may notice different dates in the results. Remember that Tower is "
+"designed to make every attempt to find your data. If a date is selected "
+"without any scan runs, Tower gathers the previous year's worth of scan "
+"runs to verify possible data to include. Note that differences among the "
+"\"ansible\" and \"files\" modules changes are highlighted in red, while "
+"only changes for \"packages\" and \"services\" are shown."
+msgstr ""
+
+#: ../../source/inventories.rst:768
+msgid "|select two hosts scanned expanded|"
+msgstr ""
+

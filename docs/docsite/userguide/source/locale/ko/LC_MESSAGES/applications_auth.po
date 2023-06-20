@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/applications_auth.rst:4
+msgid "Applications"
+msgstr "애플리케이션"
+
+#: ../../source/applications_auth.rst:13
+msgid "Creating and configuring token-based authentication for external applications is available starting in |at| 3.3. This makes it easier for external applications such as ServiceNow and Jenkins to integrate with |at|. OAuth 2 allows you to use tokens to share certain data with an application without disclosing login information, and furthermore, these tokens can be scoped as \"read-only\".  You create an application that is representative of the external application you are integrating with, then use it to create tokens for that application to use on behalf of the users of the external application."
+msgstr "|at| 3.3부터는 외부 애플리케이션에 대한 토큰 기반 인증을 생성 및 구성할 수 있습니다. 그러면 ServiceNow 및 Jenkins와 같은 외부 애플리케이션을 |at|와 쉽게 통합할 수 있습니다. OAuth 2를 사용하면 로그인 정보를 공개하지 않고도 토큰을 사용하여 특정 데이터를 애플리케이션과 공유할 수 있으며 이러한 토큰은 범위를 \"읽기 전용\"으로 지정할 수 있습니다.  통합할 외부 애플리케이션을 나타내는 애플리케이션을 생성한 다음 이를 사용하여 해당 애플리케이션에서 외부 애플리케이션 사용자 대신 사용할 토큰을 생성합니다."
+
+#: ../../source/applications_auth.rst:15
+msgid "Having these tokens associated to an application resource gives you the ability to manage all tokens issued for a particular application more easily. By separating token issuance under Applications, you can revoke all tokens based on the Application without having to revoke all tokens in the system."
+msgstr "애플리케이션 리소스에 이러한 토큰을 연결하면 특정 애플리케이션에 대해 발행된 모든 토큰을 더 쉽게 관리할 수 있습니다. 애플리케이션에서 토큰 발행을 분리하면 시스템의 모든 토큰을 취소하지 않고도 애플리케이션을 기반으로 모든 토큰을 취소할 수 있습니다."
+
+#: ../../source/applications_auth.rst:17
+msgid "When integrating an external web app with |at| that web app may need to create OAuth2 Tokens on behalf of users in that other web app. Creating an application with the Authorization Code grant type is the preferred way to do this because:"
+msgstr "외부 웹 앱을 |at|와 통합할 때 해당 웹 앱에서 다른 웹 앱의 사용자를 대신하여 OAuth2 토큰을 생성해야 할 수 있습니다. 다음과 같은 이유로 인증 코드 권한 부여 유형을 사용하여 애플리케이션을 생성하는 방법이 권장됩니다."
+
+#: ../../source/applications_auth.rst:19
+msgid "external applications can obtain a token for users, using their credentials"
+msgstr "외부 애플리케이션은 인증 정보를 사용하여 사용자의 토큰을 가져올 수 있습니다."
+
+#: ../../source/applications_auth.rst:20
+msgid "compartmentalized tokens issued for a particular application, allows those tokens to be easily managed (revoke all tokens associated with that application, for example)"
+msgstr "특정 애플리케이션에 대해 발행된, 분류된 토큰을 사용하므로 해당 토큰을 쉽게 관리할 수 있습니다(예: 해당 애플리케이션과 연결된 모든 토큰 취소)."
+
+#: ../../source/applications_auth.rst:24
+msgid "Getting Started with Applications"
+msgstr "애플리케이션 시작하기"
+
+#: ../../source/applications_auth.rst:29
+msgid "Access the Applications page by clicking **Applications** from the left navigation bar. The Applications page displays a search-able list of all available Applications currently managed by the controller and can be sorted by **Name**."
+msgstr "왼쪽 탐색 모음에서 **애플리케이션**을 클릭하여 애플리케이션 페이지에 액세스합니다. 애플리케이션 페이지에 현재 컨트롤러에서 관리하는 사용 가능한 모든 애플리케이션의 검색 가능한 목록이 표시되고 **이름**순으로 정렬할 수 있습니다."
+
+#: ../../source/applications_auth.rst:31
+msgid "|Applications - home with example apps|"
+msgstr "|Applications - home with example apps|"
+
+#: ../../source/applications_auth.rst:35
+msgid "If no other applications exist, only a gray box with a message to add applications displays."
+msgstr "다른 애플리케이션이 없는 경우 애플리케이션을 추가하라는 메시지가 포함된 회색 상자만 표시됩니다."
+
+#: ../../source/applications_auth.rst:43
+msgid "Create a new application"
+msgstr "새 애플리케이션 생성"
+
+#: ../../source/applications_auth.rst:49
+msgid "Token-based authentication for users can be configured in the Applications window."
+msgstr "사용자에 대한 토큰 기반 인증은 애플리케이션 창에서 구성할 수 있습니다."
+
+#: ../../source/applications_auth.rst:51
+msgid "In the |at| User Interface, click **Applications** from the left navigation bar."
+msgstr "|at| 사용자 인터페이스의 왼쪽 탐색 모음에서 **애플리케이션**을 클릭합니다."
+
+#: ../../source/applications_auth.rst:53
+msgid "The Applications window opens."
+msgstr "애플리케이션 창이 열립니다."
+
+#: ../../source/applications_auth.rst:55
+msgid "Click the **Add** button located in the upper right corner of the Applications window."
+msgstr "애플리케이션 창 오른쪽 상단에 있는 **추가** 버튼을 클릭합니다."
+
+#: ../../source/applications_auth.rst:57
+msgid "The New Application window opens."
+msgstr "새 애플리케이션 창이 열립니다."
+
+#: ../../source/applications_auth.rst:59
+msgid "|Create application|"
+msgstr "|Create application|"
+
+#: ../../source/applications_auth.rst:63
+msgid "Enter the following details in **Create New Application** window:"
+msgstr "**새 애플리케이션 만들기** 창에서 다음 세부 정보를 입력합니다."
+
+#: ../../source/applications_auth.rst:65
+msgid "**Name** (required): provide a name for the application you want to create"
+msgstr "**이름** (필수): 생성할 애플리케이션의 이름을 입력합니다."
+
+#: ../../source/applications_auth.rst:66
+msgid "**Description**: optionally provide a short description for your application"
+msgstr "**설명**: 필요한 경우 애플리케이션에 대한 간단한 설명을 입력합니다."
+
+#: ../../source/applications_auth.rst:67
+msgid "**Organization** (required): provide an organization for which this application is associated"
+msgstr "**조직** (필수): 이 애플리케이션이 연결된 조직을 입력합니다."
+
+#: ../../source/applications_auth.rst:68
+msgid "**Authorization Grant Type** (required): Select from one of the grant types to use in order for the user to acquire tokens for this application. Refer to :ref:`grant types <administration:ag_oauth2_token_auth_grant_types>` in the Applications section of the |ata|."
+msgstr "**인증 권한 부여 유형** (필수): 사용자가 이 애플리케이션을 위한 토큰을 취득하기 위해 사용할 권한 부여 유형 중 하나를 선택합니다. |ata|의 애플리케이션 섹션에서 :ref:`grant types <administration:ag_oauth2_token_auth_grant_types>`을 참조하십시오."
+
+#: ../../source/applications_auth.rst:69
+msgid "**Redirect URIS**: Provide a list of allowed URIs, separated by spaces. This is required if you specified the grant type to be **Authorization code**."
+msgstr "**URI 리디렉션**: 허용된 URI 목록을 공백으로 구분하여 입력합니다. 권한 부여 유형을 **인증 코드**로 지정한 경우 필수입니다."
+
+#: ../../source/applications_auth.rst:70
+msgid "**Client Type** (required): Select the level of security of the client device"
+msgstr "**클라이언트 유형** (필수): 클라이언트 장치의 보안 수준을 선택합니다."
+
+#: ../../source/applications_auth.rst:72
+msgid "When done, click **Save** or **Cancel** to abandon your changes. Upon saving, the client ID displays in a pop-up window."
+msgstr "완료되면 **저장**을 클릭하여 변경 사항을 저장하거나 **취소**를 클릭하여 변경 사항을 취소합니다. 저장 시 클라이언트 ID가 팝업 창에 표시됩니다."
+
+#: ../../source/applications_auth.rst:78
+msgid "Applications - Tokens"
+msgstr "애플리케이션 - 토큰"
+
+#: ../../source/applications_auth.rst:84
+msgid "Selecting the **Tokens** view displays a list of the users that have tokens to access the application."
+msgstr "**토큰** 뷰를 선택하면 애플리케이션에 액세스하는 데 필요한 토큰이 있는 사용자 목록이 표시됩니다."
+
+#: ../../source/applications_auth.rst:86
+msgid "|Applications - tokens list|"
+msgstr "|Applications - tokens list|"
+
+#: ../../source/applications_auth.rst:90
+msgid "Tokens can only access resources that its associated user can access, and can be limited further by specifying the scope of the token."
+msgstr "토큰은 연결된 사용자가 액세스할 수 있는 리소스에만 액세스할 수 있으며 토큰 범위를 지정하여 추가로 제한할 수 있습니다."
+
+#: ../../source/applications_auth.rst:96
+msgid "Add Tokens"
+msgstr "토큰 추가"
+
+#: ../../source/applications_auth.rst:98
+msgid "Tokens are added through the Users screen and can be associated with an application at that time. Specifying an application can be performed directly in the User's token settings. You can create a token for *your* user in the Tokens configuration tab, meaning only you can create and see your tokens in your own user screen. To add a token:"
+msgstr "토큰은 사용자 화면을 통해 추가하고, 해당 시점에 애플리케이션과 연결할 수 있습니다. 애플리케이션 지정은 사용자의 토큰 설정에서 직접 수행할 수 있습니다. 토큰 구성 탭에서 *보유한* 사용자에 대한 토큰을 생성할 수 있습니다. 즉, 사용자 화면에서 토큰을 생성하고 볼 수 있습니다. 토큰을 추가하려면 다음을 수행합니다."
+
+#: ../../source/applications_auth.rst:100
+msgid "Access the Users list view by clicking **Users** from the left navigation bar then click on your user to configure your OAuth 2 tokens."
+msgstr "왼쪽 탐색 모음에서 **사용자**를 클릭한 다음 사용자를 클릭하여 OAuth 2 토큰을 구성하여 사용자 목록 뷰에 액세스합니다."
+
+#: ../../source/applications_auth.rst:104
+msgid "You can only create OAuth 2 Tokens for your user via the API or UI, which means you can only access your own user profile in order to configure or view your tokens. If you are an admin and need to create or remove tokens for other users, see the revoke and create commands in the :ref:`Token and session management <administration:ag_token_utility>` section of the |ata|."
+msgstr "API 또는 UI를 통해서만 사용자의 OAuth 2 토큰을 생성할 수 있습니다. 즉, 토큰을 구성하거나 볼 때만 자신의 사용자 프로필에 액세스할 수 있습니다. 관리자가 다른 사용자의 토큰을 생성하거나 제거해야 하는 경우 |ata|의 :ref:`Token and session management <administration:ag_token_utility>` 섹션에서 취소 및 생성 명령을 참조하십시오."
+
+#: ../../../common/source/add-token.rst:3
+msgid "Click the **Tokens** tab from your user's profile."
+msgstr "사용자 프로필에서 **토큰** 탭을 클릭합니다."
+
+#: ../../../common/source/add-token.rst:5
+msgid "When no tokens are present, the Tokens screen prompts you to add them:"
+msgstr "토큰이 없는 경우 토큰 화면에 토큰을 추가하라는 메시지가 표시됩니다."
+
+#: ../../../common/source/add-token.rst:9
+msgid "Click the **Add** button, which opens the Create Token window."
+msgstr "**추가** 버튼을 클릭하면 토큰 생성 창이 열립니다."
+
+#: ../../../common/source/add-token.rst:11
+msgid "Enter the following details in Create Token window:"
+msgstr "토큰 생성 창에 다음 세부 정보를 입력합니다."
+
+#: ../../../common/source/add-token.rst:13
+msgid "**Application**: enter the name of the application with which you want to associate your token. Alternatively, you can search for it by clicking the |search| button. This opens a separate window that allows you to choose from the available options. Use the Search bar to filter by name if the list is extensive. Leave this field blank if you want to create a Personal Access Token (PAT) that is not linked to any application."
+msgstr "**애플리케이션**: 토큰을 연결할 애플리케이션의 이름을 입력합니다. 또는 |search| 버튼을 클릭하여 검색할 수 있습니다. 그러면 별도의 창이 열리고 사용 가능한 옵션 중에서 선택할 수 있습니다. 목록이 긴 경우 검색 모음을 사용하여 이름으로 필터링합니다. 애플리케이션에 연결되지 않은 개인 액세스 토큰(PAT)을 만들려면 이 필드를 비워 둡니다."
+
+#: ../../../common/source/add-token.rst:15
+msgid "**Description**: optionally provide a short description for your token."
+msgstr "**설명**: 필요한 경우 토큰에 대한 간단한 설명을 입력합니다."
+
+#: ../../../common/source/add-token.rst:17
+msgid "**Scope** (required): specify the level of access you want this token to have."
+msgstr "**범위** (필수): 이 토큰에 설정할 액세스 수준을 지정합니다."
+
+#: ../../../common/source/add-token.rst:21
+msgid "When done, click **Save** or **Cancel** to abandon your changes."
+msgstr "완료되면 **저장**을 클릭하여 변경 사항을 저장하거나 **취소**를 클릭하여 변경 사항을 취소합니다."
+
+#: ../../../common/source/add-token.rst:23
+msgid "After the token is saved, the newly created token for the user displays with the token information and when it expires."
+msgstr "토큰을 저장하면 사용자에 대해 새로 생성된 토큰이 토큰 정보 및 만료 시간과 함께 표시됩니다."
+
+#: ../../../common/source/add-token.rst:27
+msgid "This is the only time the token value and associated refresh token value will ever be shown."
+msgstr "토큰 값과 연결된 새로 고침 토큰 값이 표시되는 유일한 때입니다."
+
+#: ../../../common/source/add-token.rst:29
+msgid "In the user's profile, the application for which it is assigned to and its expiration displays in the token list view."
+msgstr "사용자 프로필에서는 할당된 애플리케이션과 만료 시간이 토큰 목록 뷰에 표시됩니다."
+
+#: ../../source/applications_auth.rst:108
+msgid "To verify the application in the example above now shows the user with the appropriate token, go to the **Tokens** tab of the Applications window:"
+msgstr "위 예제의 애플리케이션에서 이제 사용자를 적절한 토큰과 함께 표시하는지 확인하려면 애플리케이션 창의 **토큰** 탭으로 이동합니다."
+

@@ -1,0 +1,672 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/jobs.rst:4
+msgid "Jobs"
+msgstr "Jobs"
+
+#: ../../source/jobs.rst:9
+msgid "A :term:`job` is an instance of |at| launching an Ansible playbook against an inventory of hosts."
+msgstr ":term:`job` 是针对主机清单启动 Ansible playbook 的 |at| 实例。"
+
+#: ../../source/jobs.rst:11
+msgid "The **Jobs** link displays a list of jobs and their statuses--shown as completed successfully or failed, or as an active (running) job. The default view is collapsed (**Compact**) with the job name, status, job type, and start/finish times, but you can expand to see more information. You can sort this list by various criteria, and perform a search to filter the jobs of interest."
+msgstr "**Jobs** 链接显示作业列表及其状态--显示为成功完成或失败，或显示为活跃（运行中）作业。默认视图为折叠状态 (**Compact**)，显示作业名称、状态、作业类型和开始/结束的时间，但您可以扩展以查看更多信息。您可以按照各种条件对列表进行排序，然后执行搜索来过滤相关的作业。"
+
+#: ../../source/jobs.rst:14
+msgid "|Jobs - home with example job|"
+msgstr "|Jobs - home with example job|"
+
+#: ../../source/jobs.rst:20
+msgid "Actions you can take from this screen include viewing the details and standard output of a particular job, relaunching (|launch|) jobs, or removing selected jobs. The relaunch operation only applies to relaunches of playbook runs and does not apply to project/inventory updates, system jobs, workflow jobs, etc."
+msgstr "您可从此屏幕执行的操作包括查看特定作业的详情和标准输出、重新启动(|launch|)作业或删除所选作业。重新启动操作只适用于重启 playbook 运行，且不会应用到项目/清单更新、系统作业、工作流作业等。"
+
+#: ../../source/jobs.rst:28
+msgid "When a job relaunches, you are directed the Jobs Output screen as the job runs. Clicking on any type of job also takes you to the Job Output View for that job, where you can filter jobs by various criteria:"
+msgstr "当作业重启时，您将把 Jobs Output 屏幕作为作业运行定向。点击任何类型的作业也会带您进入该作业的作业输出视图，您可以根据各种条件过滤作业："
+
+#: ../../source/jobs.rst:34
+msgid "The **Stdout** option is the default display that shows the job processes and output"
+msgstr "**Stdout** 选项是默认的显示，它显示作业进程和输出"
+
+#: ../../source/jobs.rst:35
+msgid "The **Event** option allows you to filter by the event(s) of interest, such as errors, host failures, host retries, items skipped, etc. You can include as many events in the filter as necessary."
+msgstr "**Event** 选项允许您根据需要（如错误、主机失败、主机重试、项目跳过等）对事件进行过滤。您可以根据需要在过滤器中包含多个事件。"
+
+#: ../../source/jobs.rst:39
+msgid "The **Advanced** option is a refined search that allows you a combination of including or excluding criteria, searching by key, or by lookup type. For details about using Search, refer to the :ref:`ug_search` chapter."
+msgstr "**Advanced** 选项是一个可以优化的搜索，可让您组合包含或排除条件、按键搜索或查找类型。有关使用 Search 的详情，请参阅 :ref:`ug_search` 章节。"
+
+#: ../../source/jobs.rst:43
+msgid "Inventory Sync Jobs"
+msgstr "清单同步作业"
+
+#: ../../source/jobs.rst:50
+msgid "When an inventory sync is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging. The ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` is set to ``False`` by default for all playbook runs. This matches Ansible's default behavior. This does not display task arguments in task headers in the Job Detail interface to avoid leaking certain sensitive module parameters to stdout.  If you wish to restore the prior behavior (despite the security implications), you can set ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` to ``True`` via the ``AWX_TASK_ENV`` configuration setting. For more details, refer to the `ANSIBLE_DISPLAY_ARGS_TO_STDOUT`_."
+msgstr "当执行一个清单同步时，完整的结果会在 Output 标签页中显示。这与您通过命令行运行它时显示的信息相同，可用于进行故障排除。所有 playbook 运行的 ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` 会默认设置为 ``False``。这与 Ansible 的默认行为匹配。这不会在作业详情界面的任务标题中显示任务参数，以避免将某些敏感模块参数泄漏到 stdout。如果您希望恢复之前的行为（虽然有安全影响），您可以通过 ``AWX_TASK_ENV``配置设置将 ``ANSIBLE_DISPLAY_ARGS_TO_STDOUT`` 设置为 ``True``。如需了解更多信息，请参阅 `ANSIBLE_DISPLAY_ARGS_TO_STDOUT`_。"
+
+#: ../../source/jobs.rst:55
+msgid "The icons at the top right corner of the Output tab allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "通过 \"Output\" 选项卡右上角的图标，您可以重新启动(|launch|)、下载(|download|)作业输出或删除(|delete|)作业。"
+
+#: ../../source/jobs.rst:63
+msgid "|job details example of inventory sync|"
+msgstr "|job details example of inventory sync|"
+
+#: ../../source/jobs.rst:68
+msgid "An inventory update can be performed while a related job is running. In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "在一个相关作业运行时也可以进行清单更新。当您有大型项目（大约 10 GB）时，``/tmp`` 可能出现磁盘空间的问题。"
+
+#: ../../source/jobs.rst:72
+msgid "Inventory sync details"
+msgstr "清单同步详情"
+
+#: ../../source/jobs.rst:74
+#: ../../source/jobs.rst:262
+msgid "Access the **Details** tab to provide details about the job execution."
+msgstr "访问 **Details** 选项卡，提供有关作业执行的详情。"
+
+#: ../../source/jobs.rst:78
+#: ../../source/jobs.rst:120
+#: ../../source/jobs.rst:267
+msgid "Notable details of the job executed are:"
+msgstr "执行任务的显著详情包括："
+
+#: ../../source/jobs.rst:80
+#: ../../source/jobs.rst:122
+#: ../../source/jobs.rst:269
+msgid "**Status**: Can be any of the following:"
+msgstr "**Status**：可以是以下任意一种："
+
+#: ../../source/jobs.rst:82
+msgid "**Pending** - The inventory sync has been created, but not queued or started yet. Any job, not just inventory source syncs, will stay in pending until it’s actually ready to be run by the system.  Reasons for inventory source syncs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**Pending** - 已创建清单同步但尚未排队或启动。在实际准备好由系统运行之前，任何作业（不仅仅是清单源同步）都会停留在等待状态。清单源同步未准备就绪的原因包括：依赖项当前正在运行（所有依赖项都必须已完成才能执行下一个步骤），或者其配置的位置没有足够的运行容量。"
+
+#: ../../source/jobs.rst:83
+msgid "**Waiting** - The inventory sync is in the queue waiting to be executed."
+msgstr "**Waiting** - 清单同步处于等待执行的队列中。"
+
+#: ../../source/jobs.rst:84
+msgid "**Running** - The inventory sync is currently in progress."
+msgstr "**Running** - 清单同步当前正在进行中。"
+
+#: ../../source/jobs.rst:85
+msgid "**Successful** - The inventory sync job succeeded."
+msgstr "**Successful** - 清单同步作业成功。"
+
+#: ../../source/jobs.rst:86
+msgid "**Failed** - The inventory sync job failed."
+msgstr "**Failed** - 清单同步作业失败。"
+
+#: ../../source/jobs.rst:88
+msgid "**Inventory**: The name of the associated inventory group."
+msgstr "**Inventory**: 关联的清单组。"
+
+#: ../../source/jobs.rst:90
+msgid "**Source**: The type of cloud inventory."
+msgstr "**Source**：云清单的类型。"
+
+#: ../../source/jobs.rst:92
+msgid "**Inventory Source Project**: The project used as the source of this inventory sync job."
+msgstr "**Inventory Source Project**：用作此清单同步作业源的项目。"
+
+#: ../../source/jobs.rst:94
+msgid "**Execution Environment**: The |ee| used."
+msgstr "**Execution Environment**: 使用了 |ee|。"
+
+#: ../../source/jobs.rst:96
+msgid "**Execution node**: The node used to execute the job."
+msgstr "**Execution node**: 用于执行作业的节点。"
+
+#: ../../source/jobs.rst:98
+msgid "**Instance Group**: The name of the instance group used with this job (controller is the default instance group)."
+msgstr "**Instance Group**: 此作业使用的实例组的名称（控制器是默认实例组）。"
+
+#: ../../source/jobs.rst:100
+#: ../../source/jobs.rst:148
+#: ../../source/jobs.rst:296
+msgid "By clicking on these items, where appropriate, you can view the corresponding job templates, projects, and other objects."
+msgstr "通过点击这些项，您可以根据情况查看对应的作业模板、项目和其他对象。"
+
+#: ../../source/jobs.rst:104
+msgid "SCM Inventory Jobs"
+msgstr "SCM 清单作业"
+
+#: ../../source/jobs.rst:109
+msgid "When an inventory sourced from an SCM is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging. The icons at the top right corner of the Output tab allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "当一个来自 SCM 的清单被执行，完整的结果会在 Output 标签页中显示。这与通过 Ansible 命令行运行它时显示的内容相同，可用于进行故障排除。您可以使用 Output 标签页右上角的图标重新启动 (|launch|), 下载 (|download|) 作业输出，或删除 (|delete|) 作业。"
+
+#: ../../source/jobs.rst:114
+msgid "SCM inventory details"
+msgstr "SCM 清单脚本"
+
+#: ../../source/jobs.rst:116
+msgid "Access the **Details** tab to provide details about the job execution and its associated project."
+msgstr "**Details** 选项卡包括了有关作业执行及其相关项目的详细信息。"
+
+#: ../../source/jobs.rst:124
+msgid "**Pending** - The SCM job has been created, but not queued or started yet. Any job, not just SCM jobs, will stay in pending until it’s actually ready to be run by the system. Reasons for SCM jobs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**Pending** - 已创建 SCM 作业但尚未排队或启动。在实际准备好由系统运行之前，任何作业（不仅仅是 SCM 作业）都会停留在等待状态。SCM 作业未准备就绪的原因包括：依赖项当前正在运行（所有依赖项都必须已完成才能执行下一个步骤），或者其配置的位置没有足够的运行容量。"
+
+#: ../../source/jobs.rst:125
+msgid "**Waiting** - The SCM job is in the queue waiting to be executed."
+msgstr "**Waiting** - SCM 作业处于等待执行的队列中。"
+
+#: ../../source/jobs.rst:126
+msgid "**Running** - The SCM job is currently in progress."
+msgstr "**Running** - SCM 作业当前正在进行中。"
+
+#: ../../source/jobs.rst:127
+msgid "**Successful** - The last SCM job succeeded."
+msgstr "**Successful** - 最后的 SCM 作业成功。"
+
+#: ../../source/jobs.rst:128
+msgid "**Failed** - The last SCM job failed."
+msgstr "**Failed** - 最后的 SCM 作业失败。"
+
+#: ../../source/jobs.rst:131
+msgid "**Job Type**: SCM jobs display Source Control Update."
+msgstr "**Job Type**：SCM 作业显示 Source Control Update。"
+
+#: ../../source/jobs.rst:133
+msgid "**Project**: The name of the project."
+msgstr "**Project**：项目名称。"
+
+#: ../../source/jobs.rst:135
+msgid "**Project Status**: Indicates whether the associated project was successfully updated."
+msgstr "**Project Status**：指示相关的项目是否成功更新。"
+
+#: ../../source/jobs.rst:137
+msgid "**Revision**: Indicates the revision number of the sourced project that was used in this job."
+msgstr "**Revision**：指示此作业中使用的源项目的修订号。"
+
+#: ../../source/jobs.rst:139
+msgid "**Execution Environment**: Specifies the |ee| used to run this job."
+msgstr "**Execution Environment**：指定用于运行此作业的 |ee|。"
+
+#: ../../source/jobs.rst:141
+msgid "**Execution Node**: Indicates the node on which the job ran."
+msgstr "**Execution Node**：指示作业在其中运行的节点。"
+
+#: ../../source/jobs.rst:143
+msgid "**Instance Group**: Indicates the instance group on which the job ran, if specified."
+msgstr "**Instance Group**：指定作业在其中运行的实例组（如果指定）。"
+
+#: ../../source/jobs.rst:145
+msgid "**Job Tags**: Tags show the various job operations executed."
+msgstr "**Job Tags**：标签显示执行的各种作业操作。"
+
+#: ../../source/jobs.rst:152
+msgid "Playbook Run Jobs"
+msgstr "Playbook 运行作业"
+
+#: ../../source/jobs.rst:157
+msgid "When a playbook is executed, the full results automatically display in the Output tab. This shows the same information you would see if you ran it through the Ansible command line, and can be useful for debugging."
+msgstr "执行 playbook 时，整个结果将自动显示在 Output 选项卡中。这会显示与您通过 Ansible 命令行运行它时的信息相同，并可用于调试。"
+
+#: ../../source/jobs.rst:161
+msgid "The events summary captures a tally of events that were run as part of this playbook:"
+msgstr "事件摘要捕获了作为此 playbook 一部分运行的一系列事件："
+
+#: ../../source/jobs.rst:163
+msgid "the number of times this playbook has ran in the **Plays** field"
+msgstr "此 playbook 在 **Plays** 字段中运行的次数"
+
+#: ../../source/jobs.rst:165
+msgid "the number of tasks associated with this playbook in the **Tasks** field"
+msgstr "在 **Tasks** 字段中与此 playbook 关联的任务数量"
+
+#: ../../source/jobs.rst:167
+msgid "the number of hosts associated with this playbook in the **Hosts** field"
+msgstr "在 **Hosts** 字段中与此 playbook 关联的主机数量"
+
+#: ../../source/jobs.rst:169
+msgid "the amount of time it took to complete the playbook run in the **Elapsed** field"
+msgstr "在 **Elapsed** 字段中完成 playbook 运行所需的时间"
+
+#: ../../source/jobs.rst:174
+msgid "The icons next to the events summary allow you to relaunch (|launch|), download (|download|) the job output, or delete (|delete|) the job."
+msgstr "通过事件概述旁的图标，您可以重新启动(|launch|)、下载(|download|)作业输出或删除(|delete|)作业。"
+
+#: ../../source/jobs.rst:176
+msgid "The host status bar runs across the top of the Output view. Hover over a section of the host status bar and the number of hosts associated with that particular status displays."
+msgstr "主机状态栏在 **Output** 视图的顶部运行。悬停在主机状态栏的部分上，就会显示与该特定状态关联的主机数量。"
+
+#: ../../source/jobs.rst:178
+msgid "|Job - All Host Events|"
+msgstr "|Job - All Host Events|"
+
+#: ../../source/jobs.rst:183
+msgid "The output for a Playbook job is also accessible after launching a job from the **Jobs** tab of its Job Templates page."
+msgstr "在启动一个作业后，也可以在 Job Templates 页的 **Jobs** 标签页中查看启动 Playbook 作业的输出。"
+
+#: ../../source/jobs.rst:185
+msgid "Clicking on the various line item tasks in the output, you can view its host details."
+msgstr "在输出中点各个行项目任务，您可以查看其主机详情。"
+
+#: ../../source/jobs.rst:188
+msgid "Search"
+msgstr "搜索"
+
+#: ../../source/jobs.rst:190
+msgid "Use Search to look up specific events, hostnames, and their statuses. To filter only certain hosts with a particular status, specify one of the following valid statuses:"
+msgstr "使用 Search 来查找特定的事件、主机名及其状态。要只过滤具有特定状态的某些主机，请指定以下状态之一："
+
+#: ../../source/jobs.rst:192
+msgid "**OK**: the playbook task returned \"Ok\"."
+msgstr "**OK**：playbook 任务返回“Ok”。"
+
+#: ../../source/jobs.rst:193
+msgid "**Changed**: the playbook task actually executed. Since Ansible tasks should be written to be idempotent, tasks may exit successfully without executing anything on the host. In these cases, the task would return Ok, but not Changed."
+msgstr "**Changed**：playbook 任务已实际执行。由于 Ansible 任务应该编写成幂等的，因此任务可能在没有对主机执行任何操作的情况下成功退出。在这些情况下，任务将返回 Ok，而不是 Changed。"
+
+#: ../../source/jobs.rst:194
+msgid "**Failed**: the task failed. Further playbook execution was stopped for this host."
+msgstr "**Failed**：任务失败。在此主机上停止了进一步的 playbook 执行。"
+
+#: ../../source/jobs.rst:195
+msgid "**Unreachable**: the host was unreachable from the network or had another fatal error associated with it."
+msgstr "**Unreachable**：无法从网络访问主机，或者主机存在另一个与之关联的致命错误。"
+
+#: ../../source/jobs.rst:196
+msgid "**Skipped**: the playbook task was skipped because no change was necessary for the host to reach the target state."
+msgstr "**Skipped**：跳过了 playbook 任务，因为主机不需要更改即可达到目标状态。"
+
+#: ../../source/jobs.rst:197
+msgid "**Rescued**: introduced in Ansible 2.8, this shows the tasks that failed and then executes a rescue section."
+msgstr "**Rescued**：在 Ansible 2.8 中引入，这显示了失败后执行 rescue 部分的任务。"
+
+#: ../../source/jobs.rst:198
+msgid "**Ignored**: introduced in Ansible 2.8, this shows the tasks that failed and have ``ignore_errors: yes`` configured."
+msgstr "**Ignored**：在 Ansible 2.8 中引入，这显示了已失败并配置了 ``ignore_errors: yes`` 的任务。"
+
+#: ../../source/jobs.rst:200
+msgid "These statuses also display at bottom of each Stdout pane, in a group of \"stats\" called the Host Summary fields."
+msgstr "这些状态也显示在每个 Stdout 窗格底部名为 Host Summary 字段的一组“统计数据”中。"
+
+#: ../../source/jobs.rst:205
+msgid "The example below shows a search with only unreachable hosts."
+msgstr "以下示例显示一个只包含无法访问主机的搜索。"
+
+#: ../../source/jobs.rst:209
+msgid "For more details about using the Search, refer to the :ref:`ug_search` chapter."
+msgstr "有关使用搜索的详情，请参阅 :ref:`ug_search` 章节。"
+
+#: ../../source/jobs.rst:211
+msgid "The standard output view displays all the events that occur on a particular job. By default, all rows are expanded so that all the details are displayed. Use the collapse-all button (|collapse-all|) to switch to a view that only contains the headers for plays and tasks. Click the (|expand-all|) button to view all lines of the standard output."
+msgstr "标准输出视图显示特定作业上发生的所有事件。默认情况下，会展开所有行，以便显示所有详情。使用折叠所有按钮 (|collapse-all|) 切换到仅包含 play 和任务的标头的视图。单击 (|expand-all|) 按钮查看标准输出的所有行。"
+
+#: ../../source/jobs.rst:216
+msgid "Alternatively, you can display all the details of a specific play or task by clicking on the arrow icons next to them. Click an arrow from sideways to downward to expand the lines associated with that play or task. Click the arrow back to the sideways position to collapse and hide the lines."
+msgstr "或者，也可以通过点击 play 或任务旁的箭头图标来显示特定 play 或任务的所有详情。单击侧边的箭头到下移，展开与该 play 或任务关联的行。点击箭头回到侧边位置来折叠和隐藏行。"
+
+#: ../../source/jobs.rst:222
+msgid "Things to note when viewing details in the expand/collapse mode:"
+msgstr "在扩展/折叠模式中查看详情时需要注意以下事项："
+
+#: ../../source/jobs.rst:225
+msgid "Each displayed line that is not collapsed has a corresponding line number and start time."
+msgstr "每个没有折叠的显示行都有对应的行号和开始时间。"
+
+#: ../../source/jobs.rst:227
+msgid "An expand/collapse icon is at the start of any play or task after the play or task has completed."
+msgstr "任何 play 或任务完成后，展开/折叠图标都位于此 play 或任务的开始位置。"
+
+#: ../../source/jobs.rst:229
+msgid "If querying for a particular play or task, it will appear collapsed at the end of its completed process."
+msgstr "如果查询某个特定 play 或任务，它将以折叠状态出现在其完成进程的末尾。"
+
+#: ../../source/jobs.rst:231
+msgid "In some cases, an error message will appear, stating that the output may be too large to display. This occurs when there are more than 4000 events. Use the search and filter for specific events to bypass the error."
+msgstr "在有些情况下，会显示因为输出可多而无法显示的错误消息。当事件数量超过 4000 个时，会出现这种情况。使用搜索和过滤特定事件来绕过错误。"
+
+#: ../../source/jobs.rst:233
+msgid "Click on a line of an event from the **Standard Out** pane and a **Host Events** dialog displays in a separate window. This window shows the host that was affected by that particular event."
+msgstr "点击 **Standard Out** 窗格中的事件行，在单独的窗口中会显示 **Host Events** 对话框。此窗口显示受该特定事件影响的主机。"
+
+#: ../../source/jobs.rst:235
+msgid "Upgrading to the latest versions of |aap| involves progressively migrating all historical playbook output and events. This migration process is gradual, and happens automatically in the background after installation is complete. Installations with very large amounts of historical job output (tens, or hundreds of GB of output) may notice missing job output until migration is complete. Most recent data will show up at the top of the output, followed by older events. Migrating jobs with a large amount of events may take longer than jobs with a smaller amount."
+msgstr "升级到 |aap| 的最新版本涉及逐渐迁移所有历史 playbook 输出和事件。这种迁移过程是分散的，并在安装完成后自动在后台进行。在迁移完全完成前，基有大量历史作业输出（几十或及百 GB 的输出）的安装可能会存在缺少作业输出的问题。大多数最新的数据都会在输出的顶部显示，然后是旧的事件。迁移具有大量事件的作业的时间可能比迁移数量小的作业的时间更长。"
+
+#: ../../source/jobs.rst:239
+msgid "Host Details"
+msgstr "类型详情"
+
+#: ../../source/jobs.rst:244
+msgid "The **Host Details** dialog shows information about the host affected by the selected event and its associated play and task:"
+msgstr "**Host Details** 对话框显示受所选事件及其关联的 play 和任务影响的主机的信息："
+
+#: ../../source/jobs.rst:246
+msgid "the **Host**"
+msgstr "**Host**"
+
+#: ../../source/jobs.rst:247
+msgid "the **Status**"
+msgstr "**Status**"
+
+#: ../../source/jobs.rst:248
+msgid "the type of run in the **Play** field"
+msgstr "在 **Play** 字段中运行的类型"
+
+#: ../../source/jobs.rst:249
+msgid "the type of **Task**"
+msgstr "**Task** 的类型"
+
+#: ../../source/jobs.rst:250
+msgid "if applicable, the Ansible **Module** for the task, and any *arguments* for that module"
+msgstr "任务的 Ansible **Module** 以及该模块的任何 *arguments*（如果适用）"
+
+#: ../../source/jobs.rst:255
+msgid "To view the results in JSON format, click on the **JSON** tab. To view the output of the task, click the **Standard Out**. To view errors from the output, click **Standard Error**."
+msgstr "要以 JSON 格式查看结果，请点 **JSON** 标签页。要查看任务的输出，请点 **Standard Out**。要查看输出中的错误，请点 **Standard Error**。"
+
+#: ../../source/jobs.rst:260
+msgid "Playbook run details"
+msgstr "Playbook 运行详情"
+
+#: ../../source/jobs.rst:271
+msgid "**Pending** - The playbook run has been created, but not queued or started yet. Any job, not just playbook runs, will stay in pending until it is actually ready to be run by the system. Reasons for playbook runs not being ready include dependencies that are currently running (all dependencies must be completed before the next step can execute), or there is not enough capacity to run in the locations it is configured to."
+msgstr "**Pending** - 已创建 playbook 运行但尚未排队或启动。在实际准备好由系统运行之前，任何作业（不仅仅是 playbook 运行）都会停留在等待状态。Playbook 运行未准备就绪的原因包括：依赖项当前正在运行（所有依赖项都必须已完成才能执行下一个步骤），或者其配置的位置没有足够的运行容量。"
+
+#: ../../source/jobs.rst:272
+msgid "**Waiting** - The playbook run is in the queue waiting to be executed."
+msgstr "**Waiting** - playbook 运行处于等待执行的队列中。"
+
+#: ../../source/jobs.rst:273
+msgid "**Running** - The playbook run is currently in progress."
+msgstr "**Running** - playbook 运行当前正在进行中。"
+
+#: ../../source/jobs.rst:274
+msgid "**Successful** - The last playbook run succeeded."
+msgstr "**Successful** - 最后的 playbook 运行成功。"
+
+#: ../../source/jobs.rst:275
+msgid "**Failed** - The last playbook run failed."
+msgstr "**Failed** - 最后的 playbook 运行失败。"
+
+#: ../../source/jobs.rst:277
+msgid "**Job Template**: The name of the job template from which this job was launched."
+msgstr "**Job Template**：从中启动此作业的作业模板的名称。"
+
+#: ../../source/jobs.rst:279
+msgid "**Inventory**: The inventory selected to run this job against."
+msgstr "**Inventory**：选作为此作业运行对象的清单。"
+
+#: ../../source/jobs.rst:281
+msgid "**Project**: The name of the project associated with the launched job."
+msgstr "**Project**：与启动的作业关联的项目名称。"
+
+#: ../../source/jobs.rst:283
+msgid "**Project Status**: The status of the project associated with the launched job."
+msgstr "**Project Status**：与启动的作业关联的项目状态。"
+
+#: ../../source/jobs.rst:285
+msgid "**Playbook**: The playbook used to launch this job."
+msgstr "**Playbook**：用于启动此作业的 playbook。"
+
+#: ../../source/jobs.rst:287
+msgid "**Execution Environment**: The name of the |ee| used in this job."
+msgstr "**Execution Environment**：此作业中使用的 |ee| 的名称。"
+
+#: ../../source/jobs.rst:289
+msgid "**Container Group**: The name of the container group used in this job."
+msgstr "**Container Group**：此作业中使用的容器组的名称。"
+
+#: ../../source/jobs.rst:291
+msgid "**Credentials**: The credential(s) used in this job."
+msgstr "**Credentials**：此作业中使用的凭证。"
+
+#: ../../source/jobs.rst:293
+msgid "**Extra Variables**: Any extra variables passed when creating the job template are displayed here."
+msgstr "**Extra Variables**：创建作业模板时传递的任何额外变量都会在此处显示。"
+
+#: ../../source/jobs.rst:303
+msgid "Automation Controller Capacity Determination and Job Impact"
+msgstr "自动化控制器容量确定和作业影响"
+
+#: ../../source/job_capacity.rst:2
+msgid "This section describes how to determine capacity for instance groups and its impact to your jobs. For container groups, see :ref:`ag_container_capacity` in the |ata|."
+msgstr "本节论述了如何确定实例组的容量及其对您的作业的影响。如需了解容器组，请参阅 |ata| 中的 :ref:`ag_container_capacity`。"
+
+#: ../../source/job_capacity.rst:4
+msgid "The |at| capacity system determines how many jobs can run on an instance given the amount of resources available to the instance and the size of the jobs that are running (referred to as *Impact*). The algorithm used to determine this is based entirely on two things:"
+msgstr "|at| 容量系统根据实例可使用的资源量以及正在运行的作业的大小（称为*影响*）来确定可在该实例上运行的作业数量。用于确定这一点的算法完全基于两个因素："
+
+#: ../../source/job_capacity.rst:6
+msgid "How much memory is available to the system (``mem_capacity``)"
+msgstr "系统可使用的内存量 (``mem_capacity``)"
+
+#: ../../source/job_capacity.rst:7
+msgid "How much CPU is available to the system (``cpu_capacity``)"
+msgstr "系统可使用的 CPU 量 (``cpu_capacity``)"
+
+#: ../../source/job_capacity.rst:9
+msgid "Capacity also impacts Instance Groups. Since Groups are made up of instances, likewise, instances can be assigned to multiple groups. This means that impact to one instance can potentially affect the overall capacity of other Groups."
+msgstr "容量还会影响实例组。由于组由不同实例组成，同样实例也可以分配到多个组。这意味着对一个实例的影响可能会影响其他组的总容量。"
+
+#: ../../source/job_capacity.rst:11
+msgid "Instance Groups (not instances themselves) can be assigned to be used by jobs at various levels (see :ref:`ag_clustering`). When the Task Manager is preparing its graph to determine which group a job will run on, it will commit the capacity of an Instance Group to a job that hasn’t or isn’t ready to start yet."
+msgstr "实例组（而非实例本身）可以分配给不同级别的作业使用（请参阅 :ref:`ag_clustering`）。当任务管理器准备其图表来确定作业将在哪个组上运行时，它会将实例组的容量提交到尚未启动或尚未准备好启动的作业。"
+
+#: ../../source/job_capacity.rst:13
+msgid "Finally, in smaller configurations, if only one instance is available for a job to run, the Task Manager will allow that job to run on the instance even if it pushes the instance over capacity. This guarantees that jobs themselves won't get stuck as a result of an under-provisioned system."
+msgstr "最后，在较小的配置中，如果只有一个实例可用于某个作业运行，则任务管理器将允许该作业在此实例上运行，即使它会使此实例超出容量。这样可保证作业本身不会因为系统配置不足而卡住。"
+
+#: ../../source/job_capacity.rst:15
+msgid "Therefore, Capacity and Impact is not a zero-sum system relative to jobs and instances/Instance Groups."
+msgstr "因此，容量和影响不是一个相对于作业和实例/实例组的零和系统。"
+
+#: ../../source/job_capacity.rst:17
+msgid "For information on sliced jobs and their impact to capacity, see :ref:`ug_job_slice_execution`."
+msgstr "有关分片作业及其对容量的影响的信息，请参阅 :ref:`ug_job_slice_execution`。"
+
+#: ../../source/job_capacity.rst:22
+msgid "Resource determination for capacity algorithm"
+msgstr "容量算法的资源确定"
+
+#: ../../source/job_capacity.rst:24
+msgid "The capacity algorithms are defined in order to determine how many forks a system is capable of running simultaneously. This controls how many systems Ansible itself will communicate with simultaneously. Increasing the number of forks a |at| system is running will, in general, allow jobs to run faster by performing more work in parallel. The trade-off is that this will increase the load on the system, which could cause work to slow down overall."
+msgstr "定义容量算法是为了确定系统能够同时运行多少个 fork。这决定了 Ansible 本身将同时与多少系统通信。通常，增加 |at| 系统运行的 fork 数量意味着可以并行执行更多工作，从而加快作业运行速度。这么做的代价是，这将增加系统的负载，进而可能导致工作总体上变慢。"
+
+#: ../../source/job_capacity.rst:26
+msgid "|At| can operate in two modes when determining capacity. ``mem_capacity`` (the default) will allow you to over-commit CPU resources while protecting the system from running out of memory. If most of your work is not CPU-bound, then selecting this mode will maximize the number of forks."
+msgstr "|At| 在确定容量时，可以在两种模式下运行。通过 ``mem_capacity`` （默认），您可以超额提交 CPU 资源，同时防止系统内存不足。如果您的大多数工作不是 CPU 密集型，那么选择此模式可以使 fork 数量最大化。"
+
+#: ../../source/job_capacity.rst:30
+msgid "Memory relative capacity"
+msgstr "内存相对容量"
+
+#: ../../source/job_capacity.rst:32
+msgid "``mem_capacity`` is calculated relative to the amount of memory needed per fork. Taking into account the overhead for internal components, this comes out to be about 100MB per fork. When considering the amount of memory available to Ansible jobs, the capacity algorithm will reserve 2GB of memory to account for the presence of other services. The algorithm formula for this is:"
+msgstr "``mem_capacity`` 是相对于每个 fork 所需的内存量来计算的。考虑到内部组件的开销，每个 fork 大约需要 100MB。如果考虑 Ansible 作业可用的内存量，容量算法会保留 2GB 内存，以防存在其他服务。这种情况的算法公式为："
+
+#: ../../source/job_capacity.rst:38
+msgid "As an example:"
+msgstr "例如："
+
+#: ../../source/job_capacity.rst:44
+msgid "Therefore, a system with 4GB of memory would be capable of running 20 forks. The value ``mem_per_fork`` can be controlled by setting the settings value (or environment variable) ``SYSTEM_TASK_FORKS_MEM``, which defaults to 100."
+msgstr "具有 4GB 内存的系统可以运行 20 个 fork。``mem_per_fork`` 的值可通过设置设置值（或环境变量）``SYSTEM_TASK_FORKS_MEM`` 来控制，该值默认值为 100。"
+
+#: ../../source/job_capacity.rst:49
+msgid "CPU relative capacity"
+msgstr "CPU 相对容量"
+
+#: ../../source/job_capacity.rst:51
+msgid "Often, Ansible workloads can be fairly CPU-bound. In these cases, sometimes reducing the simultaneous workload allows more tasks to run faster and reduces the average time-to-completion of those jobs."
+msgstr "通常，Ansible 工作负载为高度 CPU 密集型。在这些情况下，有时降低并发工作负载可以让更多的任务更快地运行，并减少这些作业的平均完成时间。"
+
+#: ../../source/job_capacity.rst:53
+msgid "Just as the ``mem_capacity`` algorithm uses the amount of memory need per fork, the ``cpu_capacity`` algorithm looks at the amount of CPU resources is needed per fork. The baseline value for this is 4 forks per core. The algorithm formula for this is:"
+msgstr "就像 ``mem_capacity`` 算法使用每个 fork 所需的内存量一样，``cpu_capacity`` 算法会考虑每个 fork 所需的 CPU 资源量。这种算法的基准值是每个内核的 4 fork。这种情况的算法公式为："
+
+#: ../../source/job_capacity.rst:59
+msgid "For example, a 4-core system:"
+msgstr "例如，一个 4 核系统："
+
+#: ../../source/job_capacity.rst:65
+msgid "The value ``fork_per_cpu`` can be controlled by setting the settings value (or environment variable) ``SYSTEM_TASK_FORKS_CPU`` which defaults to 4."
+msgstr "``fork_per_cpu`` 的值可通过设置设置值（或环境变量）``SYSTEM_TASK_FORKS_CPU`` 来控制，它的默认值为 4。"
+
+#: ../../source/job_capacity.rst:69
+msgid "Capacity job impacts"
+msgstr "容量作业影响"
+
+#: ../../source/job_capacity.rst:71
+msgid "When selecting the capacity, it's important to understand how each job type affects capacity."
+msgstr "当选择容量时，了解每个作业类型对容量的影响很重要。"
+
+#: ../../source/job_capacity.rst:73
+msgid "It's helpful to understand what forks mean to Ansible: https://www.ansible.com/blog/ansible-performance-tuning (see the section on \"Know Your Forks\")."
+msgstr "理解 fork 在 Ansible 中的意义会有所帮助：https://www.ansible.com/blog/ansible-performance-tuning（请参阅“了解您的 fork”部分）。"
+
+#: ../../source/job_capacity.rst:75
+msgid "The default forks value for Ansible is 5. However, if |at| knows that you're running against fewer systems than that, then the actual concurrency value will be lower."
+msgstr "Ansible 的默认 fork 值为 5。但是，如果 |at| 知道您正在针对 5 个以下的系统运行，那么实际的并发值会更低。"
+
+#: ../../source/job_capacity.rst:77
+msgid "When a job is run, |at| will add 1 to the number of forks selected to compensate for the Ansible parent process. So if you are running a playbook against 5 systems with a forks value of 5, then the actual forks value from the perspective of Job Impact will be 6."
+msgstr "运行作业时，|at| 会在选择的 fork 数量基础上增加 1 以补偿 Ansible 父进程。也就是说，如果您以 5 的 fork 值针对 5 个系统运行 playbook，则从作业影响角度来看，实际的 fork 值为 6。"
+
+#: ../../source/job_capacity.rst:81
+msgid "Impact of job types in automation controller"
+msgstr "自动化控制器中作业类型的影响"
+
+#: ../../source/job_capacity.rst:83
+msgid "Jobs and Ad-hoc jobs follow the above model, forks + 1. If you set a fork value on your job template, your job capacity value will be the minimum of the forks value supplied, and the number of hosts that you have, plus one. The plus one is to account for the parent Ansible process."
+msgstr "作业和临时作业遵循上述模型，即 fork + 1。如果在作业模板上设置了 fork 值，则您的作业容量值将是提供的 forks 值的最小值，加上您拥有的主机数量，再加上 1。加上 1 是为了考虑父 Ansible 进程。"
+
+#: ../../source/job_capacity.rst:85
+msgid "Instance capacity determines which jobs get assigned to any specific instance. Jobs and ad hoc commands use more capacity if they have a higher forks value."
+msgstr "实例容量决定了将哪些作业被分配给任何特定的实例。如果作业和临时命令具有更高的 fork 值，它们将使用更多容量。"
+
+#: ../../source/job_capacity.rst:87
+msgid "Other job types have a fixed impact:"
+msgstr "其他作业类型具有固定影响："
+
+#: ../../source/job_capacity.rst:89
+msgid "Inventory Updates: 1"
+msgstr "清单更新：1"
+
+#: ../../source/job_capacity.rst:90
+msgid "Project Updates: 1"
+msgstr "项目更新：1"
+
+#: ../../source/job_capacity.rst:91
+msgid "System Jobs: 5"
+msgstr "系统作业：5"
+
+#: ../../source/job_capacity.rst:93
+msgid "If you don’t set a forks value on your job template, your job will use Ansible’s default forks value of five. Even though Ansible defaults to five forks, it will use fewer if your job has fewer than five hosts. In general, setting a forks value higher than what the system is capable of could cause trouble by running out of memory or over-committing CPU. So, the job template fork values that you use should fit on the system. If you have playbooks using 1000 forks but none of your systems individually has that much capacity, then your systems are undersized and at risk of performance or resource issues."
+msgstr "如果您未在作业模板上设置 fork 值，则您的作业将使用 Ansible 的默认 fork 值 5。如果您的作业只有不到五个主机，即使 Ansible 默认为五个 fork，它也将使用更少数量。通常情况下，设置一个比系统容量高的 fork 值可能导致内存不足或超额提交 CPU，进而造成麻烦。因此，您使用的作业模板 fork 值应与系统相适应。如果您拥有使用 1000 个 fork 的 playbook，但您的任何单独系统都没有如此多容量，那么您的系统容量不足，并存在发生性能或资源问题的风险。"
+
+#: ../../source/job_capacity.rst:97
+msgid "Selecting the right capacity"
+msgstr "选择正确的容量"
+
+#: ../../source/job_capacity.rst:99
+msgid "Selecting a capacity out of the CPU-bound or the memory-bound capacity limits is, in essence, selecting between the minimum or maximum number of forks. In the above examples, the CPU capacity would allow a maximum of 16 forks while the memory capacity would allow 20. For some systems, the disparity between these can be large and often times you may want to have a balance between these two."
+msgstr "从 CPU 密集型或内存密集型的容量限制中选择容量实质上就是在最小或最大 fork 数之间进行选择。在上面的示例中，CPU 容量最多允许 16 个 fork，而内存容量最多允许 20 个 fork。对于某些系统，两者之间的差异可能很大，并且通常您可能希望在这两者之间取得平衡。"
+
+#: ../../source/job_capacity.rst:101
+msgid "The instance field ``capacity_adjustment`` allows you to select how much of one or the other you want to consider. It is represented as a value between 0.0 and 1.0. If set to a value of 1.0, then the largest value will be used. The above example involves memory capacity, so a value of 20 forks would be selected. If set to a value of 0.0 then the smallest value will be used. A value of 0.5 would be a 50/50 balance between the two algorithms which would be 18:"
+msgstr "您可以通过实例字段 ``capacity_adjustment`` 选择要考虑的一种算法或另一算法的容量。它表示为 0.0 到 1.0 之间的值。如果设置为 1.0，则将使用最大值。上面的示例涉及内存容量，因此将选择 20 个 fork 的值。如果设置为 0.0，则将使用最小值。0.5 的值将在两种算法之间达到 50/50 平衡，即 18："
+
+#: ../../source/job_capacity.rst:107
+msgid "To view or edit the capacity in the user interface, select the **Instances** tab of the Instance Group."
+msgstr "要在用户界面中查看或编辑容量，请选择实例组的 **Instances** 标签页。"
+
+#: ../../source/jobs.rst:313
+msgid "Job branch overriding"
+msgstr "作业分支覆盖"
+
+#: ../../source/job_branching.rst:3
+msgid "Projects specify the branch, tag, or reference to use from source control in the ``scm_branch`` field. These are represented by the values specified in the Project Details fields as shown."
+msgstr "项目在 ``scm_branch`` 字段中指定要从源控制使用的分支、标签或引用。这些信息由 Project Details 字段中指定的值表示，如下所示。"
+
+#: ../../source/job_branching.rst:7
+msgid "Projects have the option to \"Allow Branch Override\". When checked, project admins can delegate branch selection to the job templates that use that project (requiring only project ``use_role``)."
+msgstr "具有“Allow Branch Override”选项的项目。选中此选项时，项目管理员可以将分支选择委托给使用该项目的作业模板（只需要项目 ``use_role``）。"
+
+#: ../../source/job_branching.rst:14
+msgid "Source tree copy behavior"
+msgstr "源树复制行为"
+
+#: ../../source/job_branching.rst:16
+msgid "Every job run has its own private data directory. This directory contains a copy of the project source tree for the given ``scm_branch`` the job is running. Jobs are free to make changes to the project folder and make use of those changes while it is still running. This folder is temporary and is cleaned up at the end of the job run."
+msgstr "每个作业运行都有自己的专用数据目录。这个目录包含作业运行的给定 ``scm_branch`` 的项目源树副本。作业可以自由地更改项目文件夹，即使仍在运行也能利用这些更改。这个文件夹是临时的，会在作业运行结束时被清理。"
+
+#: ../../source/job_branching.rst:19
+msgid "If **Clean** is checked, |at| discards modified files in its local copy of the repository through use of the ``force`` parameter in its respective Ansible modules pertaining to `git`_ or `Subversion`_."
+msgstr "如果选中 **Clean**，|at| 会通过在与 `git`_ 或`Subversion` 相关的相应 Ansible 模块中使用 ``force`` 参数，将存储库的本地副本中的修改文件丢弃。"
+
+#: ../../source/job_branching.rst:28
+msgid "Project revision behavior"
+msgstr "项目修订行为"
+
+#: ../../source/job_branching.rst:30
+msgid "Typically, during a project update, the revision of the default branch (specified in the **SCM Branch** field of the project) is stored when updated, and jobs using that project will employ this revision. Providing a non-default **SCM Branch** (not a commit hash or tag) in a job, the newest revision is pulled from the source control remote immediately before the job starts. This revision is shown in the **Source Control Revision** field of the job and its respective project update."
+msgstr "通常，在项目更新过程中，默认分支的修订（在项目的 **SCM Branch** 字段中指定）会在更新时进行存储，并且使用该项目的作业会利用这一修订。若在作业中提供非默认 **SCM Branch**（并非提交散列或标签），则会在作业即将开始前从远程源控制拉取最新的修订。这一修订显示在作业及其相应的项目更新的 **Source Control Revision** 字段中。"
+
+#: ../../source/job_branching.rst:36
+msgid "Consequently, offline job runs are impossible for non-default branches. To be sure that a job is running a static version from source control, use tags or commit hashes. Project updates do not save the revision of all branches, only the project default branch."
+msgstr "因此，非默认分支不支持离线作业运行。若要确保某个作业从源控制运行静态版本，请使用标签或提交散列。项目更新不会保存所有分支的修订，仅保存项目默认分支。"
+
+#: ../../source/job_branching.rst:38
+msgid "The **SCM Branch** field is not validated, so the project must update to assure it is valid. If this field is provided or prompted for, the **Playbook** field of job templates will not be validated, and you will have to launch the job template in order to verify presence of the expected playbook."
+msgstr "**SCM Branch** 字段没有经过验证，因此项目必须更新以确保其有效。如果提供或提示了此字段，则不会验证作业模板的 **Playbook** 字段，您必须启动作业模板以验证所需的 playbook 是否存在。"
+
+#: ../../source/job_branching.rst:41
+msgid "Git Refspec"
+msgstr "Git Refspec"
+
+#: ../../source/job_branching.rst:46
+msgid "The **SCM Refspec** field specifies which extra references the update should download from the remote. Examples are:"
+msgstr "**SCM Refspec** 字段指定更新应该从远程下载的额外引用。例如："
+
+#: ../../source/job_branching.rst:48
+msgid "``refs/*:refs/remotes/origin/*``: fetches all references, including remotes of the remote"
+msgstr "``refs/*:refs/remotes/origin/*``：获取所有引用，包括远程的 remotes"
+
+#: ../../source/job_branching.rst:49
+msgid "``refs/pull/*:refs/remotes/origin/pull/*`` (GitHub-specific): fetches all refs for all pull requests"
+msgstr "``refs/pull/*:refs/remotes/origin/pull/*`` (GitHub-specific)：获取所有拉取请求的所有引用"
+
+#: ../../source/job_branching.rst:50
+msgid "``refs/pull/62/head:refs/remotes/origin/pull/62/head``: fetches the ref for that one GitHub pull request"
+msgstr "``refs/pull/62/head:refs/remotes/origin/pull/62/head``：获取那一个 GitHub 拉取请求的引用"
+
+#: ../../source/job_branching.rst:52
+msgid "For large projects, you should consider performance impact when using the 1st or 2nd examples here."
+msgstr "对于大型项目，在使用此处的第 1 个或 2 个示例时，您应该考虑对性能的影响。"
+
+#: ../../source/job_branching.rst:54
+msgid "The **SCM Refspec** parameter affects the availability of the project branch, and can allow access to references not otherwise available. The examples above allow the user to supply a pull request from the **SCM Branch**, which would not be possible without the **SCM Refspec** field."
+msgstr "**SCM Refspec** 参数会影响项目分支的可用性，并且可以允许访问原本不可用的引用。上面的示例允许用户提供来自 **SCM Branch** 的拉取请求，如果没有 **SCM Refspec** 字段，这是不可能实现的。"
+
+#: ../../source/job_branching.rst:57
+msgid "The Ansible git module fetches ``refs/heads/*`` by default. This means that a project's branches and tags (and commit hashes therein) can be used as the SCM Branch if **SCM Refspec** is blank. The value specified in the **SCM Refspec** field affects which **SCM Branch** fields can be used as overrides. Project updates (of any type) will perform an extra ``git fetch`` command to pull that refspec from the remote."
+msgstr "Ansible git 模块默认获取 ``refs/heads/*``。这意味着，如果 **SCM Refspec** 为空白，项目的分支和标签（以及其中的提交散列）可以用作 SCM 分支。**SCM Refspec** 字段中指定的值会影响哪些 **SCM Branch** 字段可用作覆盖。（任何类型的）项目更新会执行额外的 ``git fetch`` 命令从远程拉取该 refspec。"
+
+#: ../../source/job_branching.rst:59
+msgid "For example: You could set up a project that allows branch override with the 1st or 2nd refspec example --> Use this in a job template that prompts for the **SCM Branch** --> A client could launch the job template when a new pull request is created, providing the branch ``pull/N/head`` --> The job template would run against the provided GitGub pull request reference."
+msgstr "例如：您可以通过第 1 个或第 2 个 refspec 示例设置允许分支覆盖的项目 --> 在提示 **SCM Branch** 的作业模板中使用此项目 --> 客户端可在创建新拉取请求时启动作业模板，提供分支 ``pull/N/head`` --> 作业模板将针对提供的 GitGub 拉取请求引用运行。"
+
+#: ../../source/job_branching.rst:61
+msgid "For more information on the Ansible git module, see https://docs.ansible.com/ansible/latest/modules/git_module.html."
+msgstr "如需有关 Ansible git 模块的更多信息，请参阅 https://docs.ansible.com/ansible/latest/modules/git_module.html."
+

@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/unified_job_list.rst:5
+msgid "Unified Job List API Endpoint"
+msgstr "统一的作业列表 API 端点"
+
+#: ../../source/unified_job_list.rst:10
+msgid "Make a GET request to this resource to retrieve the list of unified jobs."
+msgstr "向此资源发出 GET 请求，以检索统一作业列表。"
+
+#: ../../source/unified_job_list.rst:21
+msgid "The resulting data structure contains:"
+msgstr "得到的数据结构包括："
+
+#: ../../source/unified_job_list.rst:34
+msgid "The ``count`` field indicates the total number of unified jobs found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more unified job records."
+msgstr "``count`` 字段显示为给定查询找到的统一作业总数。如果单个页面没有包括所有项，使用 ``next`` 和 ``previous`` 字段可以查看其他结果。``results`` 列表包含零或更多个统一作业记录。"
+
+#: ../../source/unified_job_list.rst:38
+msgid "The rules of encryption and decryption for |at| also apply to one field outside of credentials, the Unified Job ``start_args`` field, which is used through the ``job``, ``ad_hoc_command``, and ``system_job`` data types. Refer to :ref:`Understanding How Credentials Work<userguide:how_credentials_work>` in the |atu| for more information."
+msgstr "|at| 的加密和解密规则也适用于凭证之外的 Unified Job：``start_args``。它使用 ``job``、 ``ad_hoc_command`` 和 ``system_job`` 数据类型。如需更多信息，请参阅 |atu| 中的 :ref:`Understanding How Credentials Work<userguide:how_credentials_work>`。"
+
+#: ../../source/unified_job_list.rst:41
+msgid "Results"
+msgstr "结果"
+
+#: ../../source/unified_job_list.rst:46
+msgid "Each unified job data structure includes the following fields:"
+msgstr "每个统一作业数据结构包括以下字段："
+
+#: ../../source/unified_job_list.rst:48
+msgid "``id``: Database ID for this unified job. (integer)"
+msgstr "``id``：此统一作业的数据库 ID。（整数）"
+
+#: ../../source/unified_job_list.rst:53
+msgid "``type``: Data type for this unified job. (multiple choice)"
+msgstr "``type``：此统一作业的数据类型。（多选项）"
+
+#: ../../source/unified_job_list.rst:50
+msgid "``project_update``: SCM Update"
+msgstr "``project_update``：SCM 更新"
+
+#: ../../source/unified_job_list.rst:51
+msgid "``inventory_update``: Inventory Sync"
+msgstr "``inventory_update``：清单同步"
+
+#: ../../source/unified_job_list.rst:52
+msgid "``job``: Playbook Run"
+msgstr "``job``：Playbook 运行"
+
+#: ../../source/unified_job_list.rst:53
+msgid "``ad_hoc_command``: Command"
+msgstr "``ad_hoc_command``：命令"
+
+#: ../../source/unified_job_list.rst:54
+msgid "``system_job``: Management Job"
+msgstr "``system_job``：管理作业"
+
+#: ../../source/unified_job_list.rst:55
+msgid "``url``: URL for this unified job. (string)"
+msgstr "``url``：此统一作业的 URL。（字符串）"
+
+#: ../../source/unified_job_list.rst:56
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``：包含相关资源的 URL 的数据结构。（对象）"
+
+#: ../../source/unified_job_list.rst:57
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``：包含相关资源的名称/描述的数据结构。（对象）"
+
+#: ../../source/unified_job_list.rst:58
+msgid "``created``: Timestamp when this unified job was created. (datetime)"
+msgstr "``created``：创建此统一作业时的时间戳。（日期时间）"
+
+#: ../../source/unified_job_list.rst:59
+msgid "``modified``: Timestamp when this unified job was last modified. (datetime)"
+msgstr "``modified``：最后一次修改此统一作业时的时间戳。（日期时间）"
+
+#: ../../source/unified_job_list.rst:60
+msgid "``name``: (string)"
+msgstr "``name``：（字符串）"
+
+#: ../../source/unified_job_list.rst:61
+msgid "``description``: (string)"
+msgstr "``description``：（字符串）"
+
+#: ../../source/unified_job_list.rst:62
+msgid "``unified_job_template``: (field)"
+msgstr "``unified_job_template``：（字段）"
+
+#: ../../source/unified_job_list.rst:66
+msgid "``launch_type``: (multiple choice)"
+msgstr "``launch_type``：（多选项）"
+
+#: ../../source/unified_job_list.rst:64
+msgid "``manual``: Manual"
+msgstr "``manual``：手动"
+
+#: ../../source/unified_job_list.rst:65
+msgid "``callback``: Callback"
+msgstr "``callback``：回调"
+
+#: ../../source/unified_job_list.rst:66
+msgid "``scheduled``: Scheduled"
+msgstr "``scheduled``：已调度"
+
+#: ../../source/unified_job_list.rst:67
+msgid "``dependency``: Dependency"
+msgstr "``dependency``：依赖项"
+
+#: ../../source/unified_job_list.rst:75
+msgid "``status``: (multiple choice)"
+msgstr "``status``：（多选项）"
+
+#: ../../source/unified_job_list.rst:69
+msgid "``new``: New"
+msgstr "``new``：新"
+
+#: ../../source/unified_job_list.rst:70
+msgid "``pending``: Pending"
+msgstr "``pending``：待处理"
+
+#: ../../source/unified_job_list.rst:71
+msgid "``waiting``: Waiting"
+msgstr "``waiting``：等待"
+
+#: ../../source/unified_job_list.rst:72
+msgid "``running``: Running"
+msgstr "``running``：运行中"
+
+#: ../../source/unified_job_list.rst:73
+msgid "``successful``: Successful"
+msgstr "``successful``：成功"
+
+#: ../../source/unified_job_list.rst:74
+msgid "``failed``: Failed"
+msgstr "``failed``：失败"
+
+#: ../../source/unified_job_list.rst:75
+msgid "``error``: Error"
+msgstr "``error``：错误"
+
+#: ../../source/unified_job_list.rst:76
+msgid "``canceled``: Canceled"
+msgstr "``canceled``：已取消"
+
+#: ../../source/unified_job_list.rst:77
+msgid "``failed``: (boolean)"
+msgstr "``failed``：（布尔值）"
+
+#: ../../source/unified_job_list.rst:78
+msgid "``started``: (datetime)"
+msgstr "``started``：（日期时间）"
+
+#: ../../source/unified_job_list.rst:79
+msgid "``finished``: (datetime)"
+msgstr "``finished``：（日期时间）"
+
+#: ../../source/unified_job_list.rst:80
+msgid "``elapsed``: (decimal)"
+msgstr "``elapsed``：（十进制）"
+
+#: ../../source/unified_job_list.rst:81
+msgid "``job_explanation``: (string)"
+msgstr "``job_explanation``：（字符串）"
+
+#: ../../source/unified_job_list.rst:85
+msgid "Reviewing the Options Endpoint"
+msgstr "查看选项端点"
+
+#: ../../source/unified_job_list.rst:90
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*Options Endpoint*表提供了该端点选项的视图。当在可浏览 API 中查看端点时，点击“Options”按钮为您提供以下的原始 JSON："
+

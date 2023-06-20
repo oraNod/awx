@@ -1,0 +1,695 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ent_auth.rst:4
+msgid "Setting up Enterprise Authentication"
+msgstr "设置企业级身份验证"
+
+#: ../../source/ent_auth.rst:11
+msgid "This section describes setting up authentication for the following enterprise systems:"
+msgstr "这部分介绍了为以下企业级系统设置身份验证："
+
+#: ../../source/ent_auth.rst:18
+msgid "For LDAP authentication, see :ref:`ag_auth_ldap`."
+msgstr "对于 LDAP 身份验证，请参阅 :ref:`ag_auth_ldap`。"
+
+#: ../../source/ent_auth.rst:20
+msgid "SAML, RADIUS, and TACACS+ users are categorized as 'Enterprise' users. The following rules apply to Enterprise users:"
+msgstr "SAML、RADIUS 和 TACACS+ 用户归类为“企业”用户。以下规则适用于企业用户："
+
+#: ../../source/ent_auth.rst:22
+msgid "Enterprise users can only be created via the first successful login attempt from remote authentication backend."
+msgstr "企业用户只能在通过远程身份验证后端第一次成功登录时创建。"
+
+#: ../../source/ent_auth.rst:23
+msgid "Enterprise users cannot be created/authenticated if non-enterprise users with the same name has already been created in the controller."
+msgstr "如果在控制器中已创建了名称相同的非企业用户，则无法创建/验证同名的企业用户。"
+
+#: ../../source/ent_auth.rst:24
+msgid "The controller passwords of enterprise users should always be empty and cannot be set by any user if there are enterprise backend-enabled."
+msgstr "如果启用了企业后端，企业用户的控制器密码应始终为空，任何用户均不能对其进行设置。"
+
+#: ../../source/ent_auth.rst:25
+msgid "If enterprise backends are disabled, an enterprise user can be converted to a normal controller user by setting the password field. However, this operation is irreversible, as the converted controller user can no longer be treated as enterprise user."
+msgstr "如果禁用了企业后端，则可通过设置密码字段将企业用户转换为普通的控制器用户。但是，此操作不可逆，因为转换后的控制器用户将不再被视为企业用户。"
+
+#: ../../source/ent_auth.rst:31
+msgid "Azure AD settings"
+msgstr "Azure AD 设置"
+
+#: ../../source/ent_auth.rst:36
+msgid "To set up enterprise authentication for Microsoft Azure Active Directory (AD), you will need to obtain an OAuth2 key and secret by registering your organization-owned application from Azure at https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app. Each key and secret must belong to a unique application and cannot be shared or reused between different authentication backends. In order to register the application, you must supply it with your webpage URL, which is the Callback URL shown in the Settings Authentication screen."
+msgstr "要为 Microsoft Azure Active Directory (AD) 设置企业级身份验证，您将需要通过注册您的机构拥有的应用从 Azure 获取 OAuth2 密钥和 secret，网址为 https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app.。每个密钥和 secret 必须属于一个唯一的应用，且不能在不同身份验证后端之间共享或重复使用。为了注册应用程序，您必须为其提供网页 URL，该 URL 是 Settings Authentication 用户界面中显示的回调 URL。"
+
+#: ../../source/ent_auth.rst:38
+#: ../../source/ent_auth.rst:82
+#: ../../source/ent_auth.rst:112
+#: ../../source/ent_auth.rst:529
+msgid "Click **Settings** from the left navigation bar."
+msgstr "点左侧导航栏中的 **Settings**。"
+
+#: ../../source/ent_auth.rst:40
+msgid "On the left side of the Settings window, click **Azure AD settings** from the list of Authentication options."
+msgstr "在 Settings 窗口左侧，点 Authentication 选项列表中的 **Azure AD settings**。"
+
+#: ../../source/ent_auth.rst:42
+msgid "The **Azure AD OAuth2 Callback URL** field is already pre-populated and non-editable. Once the application is registered, Azure displays the Application ID and Object ID."
+msgstr "**Azure AD OAuth2 Callback URL** 字段已预先填充且不可编辑。注册应用程序后，Azure 会显示应用程序 ID 和对象 ID。"
+
+#: ../../source/ent_auth.rst:45
+msgid "Click **Edit** and copy and paste Azure's Application ID to the **Azure AD OAuth2 Key** field."
+msgstr "点 **Edit** 将 Azure 的应用 ID 复制并粘贴到 **Azure AD OAuth2 Key** 字段中。"
+
+#: ../../source/ent_auth.rst:47
+msgid "Following Azure AD's documentation for connecting your app to Microsoft Azure Active Directory, supply the key (shown at one time only) to the client for authentication."
+msgstr "遵循 Azure AD 的文档中将应用连接到 Microsoft Azure Active Directory 的说明，向客户端提供密钥（只显示一次）以进行身份验证。"
+
+#: ../../source/ent_auth.rst:49
+msgid "Copy and paste the actual secret key created for your Azure AD application to the **Azure AD OAuth2 Secret** field of the Settings - Authentication screen."
+msgstr "将为 Azure AD 应用创建的实际 secret 密钥复制到 Settings - Authentication 屏幕的 **Azure AD OAuth2 secret** 字段。"
+
+#: ../../source/ent_auth.rst:51
+msgid "For details on completing the mapping fields, see :ref:`ag_org_team_maps`."
+msgstr "如需完成映射字段的详情，请参阅 :ref:`ag_org_team_maps`。"
+
+#: ../../source/ent_auth.rst:53
+#: ../../source/ent_auth.rst:90
+#: ../../source/ent_auth.rst:477
+#: ../../source/ent_auth.rst:543
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/ent_auth.rst:55
+msgid "To verify that the authentication was configured correctly, logout of |at| and the login screen will now display the Microsoft Azure logo to allow logging in with those credentials."
+msgstr "要验证是否已正确配置了身份验证，请登出 |at|，登录屏幕现在将会显示 Microsoft Azure 徽标，以允许使用这些凭证登录。"
+
+#: ../../source/ent_auth.rst:60
+msgid "For application registering basics in Azure AD, refer to the `Azure AD Identity Platform (v2)`_ overview."
+msgstr "如需 Azure AD 中应用注册的基础知识，请参阅 `Azure AD Identity Platform (v2)`_ 概述。"
+
+#: ../../source/ent_auth.rst:66
+msgid "LDAP Authentication"
+msgstr "LDAP 身份验证"
+
+#: ../../source/ent_auth.rst:68
+msgid "Refer to the :ref:`ag_auth_ldap` section."
+msgstr "请参阅 :ref:`ag_auth_ldap` 部分。"
+
+#: ../../source/ent_auth.rst:74
+msgid "RADIUS settings"
+msgstr "RADIUS 设置"
+
+#: ../../source/ent_auth.rst:80
+msgid "|at| can be configured to centrally use RADIUS as a source for authentication information."
+msgstr "|at| 可以配置为集中使用 RADIUS 作为身份验证信息的来源。"
+
+#: ../../source/ent_auth.rst:84
+msgid "On the left side of the Settings window, click **RADIUS settings** from the list of Authentication options."
+msgstr "在 Settings 窗口左侧，从 Authentication 选项列表中点 **RADIUS settings**。"
+
+#: ../../source/ent_auth.rst:86
+msgid "Click **Edit** and enter the Host or IP of the Radius server in the **Radius Server** field. If this field is left blank, Radius authentication is disabled."
+msgstr "点 **Edit**，在 **Radius Server** 字段中输入 Radius 服务器的主机或 IP。如果此字段留空，则禁用 Radius 身份验证。"
+
+#: ../../source/ent_auth.rst:88
+msgid "Enter the port and secret information in the next two fields."
+msgstr "在接下来的两个字段中输入端口和 secret 信息。"
+
+#: ../../source/ent_auth.rst:96
+msgid "SAML settings"
+msgstr "SAML 设置"
+
+#: ../../source/ent_auth.rst:102
+msgid "SAML allows the exchange of authentication and authorization data between an Identity Provider (IdP - a system of servers that provide the Single Sign On service) and a Service Provider (in this case, |at|). |at| can be configured to talk with SAML in order to authenticate (create/login/logout) controller users. User Team and Organization membership can be embedded in the SAML response to the controller."
+msgstr "SAML 允许身份提供程序（IdP - 提供单点登录服务的服务器系统）和服务提供程序（本例中为 |at|）之间交换身份验证和授权数据。|at| 可以配置为与 SAML 对话，以便验证（创建/登录/注销）控制器用户身份。用户团队和机构成员资格可以嵌入到 SAML 对控制器的响应。"
+
+#: ../../source/ent_auth.rst:106
+msgid "The following instructions describe |at| as the service provider. To authenticate users through RHSSO (keycloak), refer to the `Red Hat Single Sign On Integration with the Automation Controller`_ blog."
+msgstr "以下说明将 |at| 称为服务提供程序。要通过 RHSSO (keycloak) 验证用户身份，请参阅 `Red Hat Single Sign On Integration with the Automation Controller`_ 博客。"
+
+#: ../../source/ent_auth.rst:110
+msgid "To setup SAML authentication:"
+msgstr "设置 SAML 身份验证："
+
+#: ../../source/ent_auth.rst:114
+msgid "On the left side of the Settings window, click **SAML settings** from the list of Authentication options."
+msgstr "在 Settings 窗口左侧，点 Authentication 选项列表中的 **SAML settings**。"
+
+#: ../../source/ent_auth.rst:116
+msgid "The **SAML Assertion Consume Service (ACS) URL** and **SAML Service Provider Metadata URL** fields are pre-populated and are non-editable. Contact the Identity Provider administrator and provide the information contained in these fields."
+msgstr "**SAML Assertion Consume Service (ACS) URL** 和 **SAML Service Provider Metadata URL** 字段预先填充且不可编辑。请联系身份提供程序管理员并提供这些字段中包含的信息。"
+
+#: ../../source/ent_auth.rst:118
+msgid "Click **Edit** and set the **SAML Service Provider Entity ID** to be the same as the **Base URL of the controller host** field that can be found in the Miscellaneous System settings screen by clicking **Settings** from the left navigation bar. Through the API, it can be viewed in the ``/api/v2/settings/system``, under the ``CONTROLLER_BASE_URL`` variable. The Entity ID can be set to any one of the individual controller cluster nodes, but it is good practice to set it to the URL of the Service Provider. Ensure that the Base URL matches the FQDN of the load balancer (if used)."
+msgstr "点 **Edit**，将 **SAML Service Provider Entity ID** 设置为与 **Base URL of the controller host** 项相同。**Base URL of the controller host** 可以在 Miscellaneous System 设置界面中找到（在左面的浏览栏中点 **Settings**）。通过 API，可在 ``CONTROLLER_BASE_URL`` 变量下的 ``/api/v2/settings/system`` 中查看该项。实体 ID 可设置为任何一个单独的控制器集群节点，但最好的方法是将其设置为 Service Provider 的 URL。请确保 Base URL 与负载均衡器（如果使用）的 FQDN 匹配。"
+
+#: ../../source/ent_auth.rst:122
+msgid "The Base URL is different for each node in a cluster. Commonly, a load balancer will sit in front of many controller cluster nodes to provide a single entry point, the controller Cluster FQDN. The SAML Service Provider must be able establish an outbound connection and route to the controller Cluster Node or the controller Cluster FQDN set in the SAML Service Provider Entity ID."
+msgstr "Base URL 对于集群中的每个节点来说都是不同的。通常，负载均衡器会位于很多控制器集群节点的前面以提供一个单一的入口点，控制器 Cluster FQDN。SAML Service Provider 必须能够建立出站连接，并可路由到控制器 Cluster Node，或 SAML Service Provider Entity ID 中设置的控制器 Cluster FQDN。"
+
+#: ../../source/ent_auth.rst:124
+msgid "In this example, the Service Provider is the controller cluster, and therefore, the ID is set to the controller Cluster FQDN."
+msgstr "在本例中，Service Provider 是控制器集群，因此 ID 设置为控制器 Cluster FQDN。"
+
+#: ../../source/ent_auth.rst:128
+msgid "Create a server certificate for the Ansible cluster. Typically when an Ansible cluster is configured, the controller nodes will be configured to handle HTTP traffic only and the load balancer will be an SSL Termination Point. In this case, an SSL certificate is required for the load balancer, and not for the individual controller Cluster Nodes. SSL can either be enabled or disabled per individual controller node, but should be disabled when using an SSL terminated load balancer. It is recommended to use a non-expiring self signed certificate to avoid periodically updating certificates. This way, authentication will not fail in case someone forgets to update the certificate."
+msgstr "为 Ansible 集群创建服务器证书。通常，当配置 Ansible 集群时，控制器节点将配置为仅处理 HTTP 流量，且负载均衡器将作为 SSL 终止点。在这种情况下，负载均衡器需要 SSL 证书，而单独控制器 Cluster Nodes 不需要。SSL 可以根据单独控制器节点启用或禁用，但在使用 SSL 终止的负载均衡器时应当禁用。建议使用非过期自签名证书，以避免定期更新证书。这样，在有用户忘记更新证书时身份验证将不会失败。"
+
+#: ../../source/ent_auth.rst:132
+msgid "The **SAML Service Provider Public Certificate** field should contain the entire certificate, including the \"-----BEGIN CERTIFICATE-----\" and \"-----END CERTIFICATE-----\"."
+msgstr "**SAML Service Provider Public Certificate** 字段应包含整个证书，包括“-----BEGIN CERTIFICATE-----”和“-----END CERTIFICATE-----”。"
+
+#: ../../source/ent_auth.rst:134
+msgid "If you are using a CA bundle with your certificate, include the entire bundle in this field."
+msgstr "如果您的证书使用的是 CA 捆绑包，请在此字段中包含整个捆绑包。"
+
+#: ../../source/ent_auth.rst:138
+msgid "As an example for public certs:"
+msgstr "作为公共证书的示例："
+
+#: ../../source/ent_auth.rst:146
+msgid "Create an optional private key for the controller to use as a service provider (SP) and enter it in the **SAML Service Provider Private Key** field."
+msgstr "为控制器创建可选私钥以用作服务提供程序 (SP)，并将其输入到在 **SAML Service Provider Private Key** 字段中。"
+
+#: ../../source/ent_auth.rst:148
+msgid "As an example for private keys:"
+msgstr "作为私钥的示例："
+
+#: ../../source/ent_auth.rst:157
+msgid "Provide the IdP with some details about the controller cluster during the SSO process in the **SAML Service Provider Organization Info** field."
+msgstr "在 **SAML Service Provider Organization Info** 字段的 SSO 过程中为 IdP 提供控制器集群的信息。"
+
+#: ../../source/ent_auth.rst:169
+#: ../../source/ent_auth.rst:185
+#: ../../source/ent_auth.rst:198
+msgid "For example:"
+msgstr "例如："
+
+#: ../../source/ent_auth.rst:174
+msgid "These fields are required in order to properly configure SAML within the controller."
+msgstr "为了在控制器中正确配置 SAML，需要这些字段。"
+
+#: ../../source/ent_auth.rst:176
+msgid "Provide the IdP with the technical contact information in the **SAML Service Provider Technical Contact** field. Do not remove the contents of this field."
+msgstr "请在 **SAML Service Provider Technical Contact** 字段中为 IdP 提供技术联系信息。请勿删除此字段的内容。"
+
+#: ../../source/ent_auth.rst:189
+msgid "Provide the IdP with the support contact information in the **SAML Service Provider Support Contact** field. Do not remove the contents of this field."
+msgstr "请在 **SAML Service Provider Support Contact** 字段中为 IdP 提供支持联系信息。请勿删除此字段的内容。"
+
+#: ../../source/ent_auth.rst:202
+msgid "In the **SAML Enabled Identity Providers** field, provide information on how to connect to each Identity Provider listed. The controller expects the following SAML attributes in the example below:"
+msgstr "在 **SAML Enabled Identity Providers** 字段中，提供有关如何连接到列出的每个身份提供程序的信息。控制器在以下示例中需要以下 SAML 属性："
+
+#: ../../source/ent_auth.rst:211
+msgid "If these attributes are not known, map existing SAML attributes to lastname, firstname, email and username."
+msgstr "如果这些属性未知，请将现有的 SAML 属性映射到名、姓、电子邮件和用户名。"
+
+#: ../../source/ent_auth.rst:213
+msgid "Configure the required keys for each IDp:"
+msgstr "为每个 IDp 配置所需密钥："
+
+#: ../../source/ent_auth.rst:215
+msgid "``attr_user_permanent_id`` - the unique identifier for the user. It can be configured to match any of the attribute sent from the IdP. Usually, it is set to ``name_id`` if ``SAML:nameid`` attribute is sent to the controller node or it can be the username attribute, or a custom unique identifier."
+msgstr "``attr_user_permanent_id`` - 用户的唯一标识符。它可以配置为与 IdP 发送的任何属性匹配。通常，如果 ``SAML:nameid`` 属性发送到控制器节点，则该项设置为 ``name_id``，也可以是用户名属性或自定义唯一标识符。"
+
+#: ../../source/ent_auth.rst:216
+msgid "``entity_id`` - the Entity ID provided by the Identity Provider administrator. The admin creates a SAML profile for the controller and it generates a unique URL."
+msgstr "``entity_id`` - 身份提供程序管理员提供的实体 ID。管理员为控制器创建一个 SAML 配置集，它会生成唯一的 URL。"
+
+#: ../../source/ent_auth.rst:217
+msgid "``url`` - the Single Sign On (SSO) URL the controller redirects the user to, when SSO is activated."
+msgstr "``url`` - 在激活单点登录 (SSO) 时，SSO URL 控制器会重定向用户。"
+
+#: ../../source/ent_auth.rst:218
+msgid "``x509_cert`` - the certificate provided by the IdP admin generated from the SAML profile created on the Identity Provider. Remove the ``--BEGIN CERTIFICATE--`` and ``--END CERTIFICATE--`` headers, then enter the cert as one non-breaking string."
+msgstr "``x509_cert`` - 由 IdP 管理员提供的证书，由身份提供程序上创建的 SAML 配置集生成。删除 ``--BEGIN CERTIFICATE--`` 和 ``--END CERTIFICATE--`` 标头，然后以不间断字符串形式输入证书。"
+
+#: ../../source/ent_auth.rst:220
+msgid "Multiple SAML IdPs are supported. Some IdPs may provide user data using attribute names that differ from the default OIDs (https://github.com/omab/python-social-auth/blob/master/social/backends/saml.py). The SAML ``NameID`` is a special attribute used by some Identity Providers to tell the Service Provider (the controller cluster) what the unique user identifier is. If it is used, set the ``attr_user_permanent_id`` to ``name_id`` as shown in the example. Other attribute names may be overridden for each IdP as shown below."
+msgstr "支持多个 SAML IdP。一些 IdP 可能会使用与默认的 OID (https://github.com/omab/python-social-auth/blob/master/social/backends/saml.py) 不同的属性来提供用户数据。SAML ``NameID`` 是一个特殊属性，一些身份提供程序使用它来告知服务提供程序（控制器集群）唯一用户标识符是什么。如果使用它，将 ``attr_user_permanent_id`` 设置为 ``name_id``（如示例中所示）。每个 IdP 的其它属性名称可能会被覆盖，如下所示。"
+
+#: ../../source/ent_auth.rst:246
+msgid "Do not create a SAML user that shares the same email with another user (including a non-SAML user). Doing so will result in the accounts being merged. Be aware that this same behavior exists for System Admin users, thus a SAML login with the same email address as the System Admin user will login with System Admin privileges. For future reference, you can remove (or add) Admin Privileges based on SAML mappings, as described in subsequent steps."
+msgstr "请勿创建与另一个用户共享同一电子邮件的 SAML 用户（包括非 SAML 用户）。这样做将会导致帐户合并。请注意，System Admin 用户存在此同样的行为，因此，使用与 System Admin 用户相同的电子邮件地址的 SAML 登录将会获得 System Admin 的权限。为了便于以后参考，您可以基于 SAML 映射删除（或添加）Admin 特权，如后续步骤所述。"
+
+#: ../../source/ent_auth.rst:251
+msgid "The IdP provides the email, last name and firstname using the well known SAML urn. The IdP uses a custom SAML attribute to identify a user, which is an attribute that the controller is unable to read. Instead, the controller can understand the unique identifier name, which is the URN. Use the URN listed in the SAML “Name” attribute for the user attributes as shown in the example below."
+msgstr "IdP 使用已知的 SAML urn 提供电子邮件、姓和名。IdP 使用自定义 SAML 属性标识用户，该属性是控制器无法读取的属性。但是，控制器可以识别唯一标识符名称，即 URN。将 SAML“Name”属性中列出的 URN 用于用户属性，如下例所示。"
+
+#: ../../source/ent_auth.rst:255
+msgid "Optionally provide the **SAML Organization Map**. For further detail, see :ref:`ag_org_team_maps`."
+msgstr "（可选）提供 **SAML Organization Map**。如需更多详情，请参阅 :ref:`ag_org_team_maps`。"
+
+#: ../../source/ent_auth.rst:257
+msgid "The controller can be configured to look for particular attributes that contain Team and Organization membership to associate with users when they log into the controller. The attribute names are defined in the **SAML Organization Attribute Mapping** and the **SAML Team Attribute Mapping** fields."
+msgstr "控制器可以配置为查找包含团队和机构成员资格的特定属性，以在用户登录控制器时与用户关联。属性名称在 **SAML Organization Attribute Mapping** 和 **SAML Team Attribute Mapping** 字段中定义。"
+
+#: ../../source/ent_auth.rst:259
+msgid "**Example SAML Organization Attribute Mapping**"
+msgstr "**SAML 机构属性映射示例**"
+
+#: ../../source/ent_auth.rst:261
+msgid "Below is an example SAML attribute that embeds user organization membership in the attribute *member-of*."
+msgstr "以下是 SAML 属性示例，它将用户机构成员资格嵌入属性 *member-of* 中。"
+
+#: ../../source/ent_auth.rst:280
+msgid "Below is the corresponding controller configuration."
+msgstr "以下是对应的控制器配置。"
+
+#: ../../source/ent_auth.rst:292
+msgid "``saml_attr``: is the SAML attribute name where the organization array can be found and ``remove`` is set to **True** to remove a user from all organizations before adding the user to the list of Organizations. To keep the user in whatever Organization(s) they are in while adding the user to the Organization(s) in the SAML attribute, set ``remove`` to **False**."
+msgstr "``saml_attr``：可找到机构数组的 SAML 属性名称，``remove`` 设置为 **True**，以便在将用户添加到机构列表中之前从所有机构中删除该用户。若要在将用户添加到 SAML 中的机构时让用户保留在其所在机构中，请将 ``remove`` 设置为 **False**。"
+
+#: ../../source/ent_auth.rst:294
+msgid "``saml_admin_attr``: Similar to the ``saml_attr`` attribute, but instead of conveying organization membership, this attribute conveys admin organization permissions."
+msgstr "``saml_admin_attr``：与 ``saml_attr`` 属性类似，但不传递机构成员资格，此属性传递管理员机构权限。"
+
+#: ../../source/ent_auth.rst:296
+msgid "**Example SAML Team Attribute Mapping**"
+msgstr "**SAML 团队属性映射示例**"
+
+#: ../../source/ent_auth.rst:298
+msgid "Below is another example of a SAML attribute that contains a Team membership in a list."
+msgstr "以下是包含列表成员资格的 SAML 属性的另一个示例。"
+
+#: ../../source/ent_auth.rst:334
+msgid "``saml_attr``: The SAML attribute name where the team array can be found."
+msgstr "``saml_attr``：能够找到团队数组的 SAML 属性名称。"
+
+#: ../../source/ent_auth.rst:335
+msgid "``remove``: Set ``remove`` to **True** to remove user from all Teams before adding the user to the list of Teams. To keep the user in whatever Team(s) they are in while adding the user to the Team(s) in the SAML attribute, set ``remove`` to **False**."
+msgstr "``remove``：``remove`` 设置为 **True**，在将用户添加到团队列表前从所有团队中删除该用户。若要在将用户添加到 SAML 属性中的团队时让用户保留在其所在的团队，请 ``remove`` 设置为 **False**。"
+
+#: ../../source/ent_auth.rst:336
+msgid "``team_org_map``: An array of dictionaries of the form ``{ \"team\": \"<AWX Team Name>\", \"organization\": \"<AWX Org Name>\" }`` that defines mapping from controller Team -> controller Organization. This is needed because the same named Team can exist in multiple Organizations in the controller. The organization to which a team listed in a SAML attribute belongs to, would be ambiguous without this mapping."
+msgstr "``team_org_map``：表单 ``{ \"team\": \"<AWX Team Name>\", \"organization\": \"<AWX Org Name>\" }`` 的一组字典，用于定义来自控制器团队 -> 控制器机构的映射。需要此项是因为控制器中的多个机构中存在相同名称的团队。没有此映射，SAML 属性中列出的团队所属的机构将模糊不清。"
+
+#: ../../source/ent_auth.rst:338
+msgid "You could create an alias to override both Teams and Orgs in the **SAML Team Attribute Mapping**. This option becomes very handy in cases when the SAML backend sends out complex group names, like in the example below:"
+msgstr "您可以创建一个别名来覆盖 **SAML 团队属性映射** 中的团队和机构。当 SAML 后端发送复杂的组名称时,这个选项变得非常方便，如下例所示："
+
+#: ../../source/ent_auth.rst:359
+msgid "Once the user authenticates, the controller creates organization and team aliases, as expected."
+msgstr "一旦用户身份经过验证，控制器会如预期创建机构和团队别名。"
+
+#: ../../source/ent_auth.rst:362
+msgid "Optionally provide team membership mapping in the **SAML Team Map** field. For further detail, see :ref:`ag_org_team_maps`."
+msgstr "（可选）在 **SAML Team Map** 字段中提供团队成员资格映射。如需更多详情，请参阅 :ref:`ag_org_team_maps`。"
+
+#: ../../source/ent_auth.rst:364
+msgid "Optionally provide security settings in the **SAML Security Config** field. This field is the equivalent to the ``SOCIAL_AUTH_SAML_SECURITY_CONFIG`` field in the API. Refer to the `OneLogin's SAML Python Toolkit`_ for further detail."
+msgstr "也可在 **SAML Security Config** 字段中提供安全设置。此字段等同于 API 中的 ``SOCIAL_AUTH_SAML_SECURITY_CONFIG`` 字段。如需更多详情，请参阅 `OneLogin's SAML Python Toolkit`_。"
+
+#: ../../source/ent_auth.rst:368
+msgid "The controller uses the ``python-social-auth`` library when users log in through SAML. This library relies on the ``python-saml`` library to make available the settings for the next two optional fields, **SAML Service Provider Extra Configuration Data** and **SAML IDP to EXTRA_DATA Attribute Mapping**."
+msgstr "控制器在用户通过 SAML 登录时使用 ``python-social-auth`` 库。该库依赖于 ``python-saml`` 库来提供下两个可选字段 **SAML Service Provider Extra Configuration Data** 和 **SAML IDP to EXTRA_DATA Attribute Mapping**的设置。"
+
+#: ../../source/ent_auth.rst:370
+msgid "The **SAML Service Provider Extra Configuration Data** field is equivalent to the ``SOCIAL_AUTH_SAML_SP_EXTRA`` in the API. Refer to the `python-saml library documentation`_ to learn about the valid service provider extra (``SP_EXTRA``) parameters."
+msgstr "**SAML Service Provider Extra Configuration Data** 字段等同于 API 中的 ``SOCIAL_AUTH_SAML_SP_EXTRA``。请参阅 `python-saml library documentation`_，了解有效服务提供程序的额外（``SP_EXTRA``）参数。"
+
+#: ../../source/ent_auth.rst:374
+msgid "The **SAML IDP to EXTRA_DATA Attribute Mapping** field is equivalent to the ``SOCIAL_AUTH_SAML_EXTRA_DATA`` in the API.  See Python's `SAML Advanced Settings`_ documentation for more information."
+msgstr "**SAML IDP to EXTRA_DATA Attribute Mapping** 字段等同于 API 中的 ``SOCIAL_AUTH_SAML_EXTRA_DATA``。如需更多信息，请参阅 Python 的 `SAML Advanced Settings`_ 文档。"
+
+#: ../../source/ent_auth.rst:380
+msgid "The **SAML User Flags Attribute Mapping** field allows you to map SAML roles and attributes to special user flags. The following attributes are valid in this field:"
+msgstr "**SAML User Flags Attribute Mapping** 字段允许您将 SAML 角色和属性映射到特殊用户标志。以下属性在此字段中有效："
+
+#: ../../source/ent_auth.rst:382
+msgid "``is_superuser_role``: Specifies one or more SAML roles which will grant a user the superuser flag"
+msgstr "``is_superuser_role``: 指定一个或多个会授予用户 superuser 标记的 SAML 角色"
+
+#: ../../source/ent_auth.rst:383
+msgid "``is_superuser_attr``: Specifies a SAML attribute which will grant a user the superuser flag"
+msgstr "``is_superuser_attr``: 指定将授予用户 superuser 标记的 SAML 属性"
+
+#: ../../source/ent_auth.rst:384
+msgid "``is_superuser_value``: Specifies one or more values required for ``is_superuser_attr`` that is required for the user to be a superuser"
+msgstr "``is_superuser_value``: 为 ``is_superuser_attr`` 指定一个或多个值，它是用户成为超级用户所需的"
+
+#: ../../source/ent_auth.rst:385
+msgid "``remove_superusers``: Boolean indicating if the superuser flag should be removed for users or not. Defaults to ``true``. (See below for more details)"
+msgstr "``remove_superusers``: 这个布尔值表示是否应为用户删除超级用户标志。默认为 ``true``。（更多详情请参阅以下内容）"
+
+#: ../../source/ent_auth.rst:386
+msgid "``is_system_auditor_role``: Specifies one or more SAML roles which will grant a user the system auditor flag"
+msgstr "``is_system_auditor_role``: 指定一个或多个会授予用户系统 auditor 标记的 SAML 角色"
+
+#: ../../source/ent_auth.rst:387
+msgid "``is_system_auditor_attr``: Specifies a SAML attribute which will grant a user the system auditor flag"
+msgstr "``is_system_auditor_attr``: 指定将授予用户 system auditor 标记的 SAML 属性"
+
+#: ../../source/ent_auth.rst:388
+msgid "``is_system_auditor_value``: Specifies one or more values required for ``is_system_auditor_attr`` that is required for the user to be a system auditor"
+msgstr "``is_system_auditor_value``: 为 ``is_system_auditor_attr`` 指定一个或多个值，它是用户成为系统 auditor 所需的"
+
+#: ../../source/ent_auth.rst:389
+msgid "``remove_system_auditors``: Boolean indicating if the system_auditor flag should be removed for users or not. Defaults to ``true``. (See below for more details)"
+msgstr "``remove_system_auditors``: 这个布尔值表示是否应为用户删除 system_auditor 标志。默认为 ``true``。（更多详情请参阅以下内容）"
+
+#: ../../source/ent_auth.rst:392
+msgid "The ``role`` and ``value`` fields are lists and are `or` logic. So if you specify two roles: `[ \"Role 1\", \"Role 2\" ]` and the SAML user has either role the logic will consider them to have the required role for the flag. This is the same with the ``value`` field, if you specify: `[ \"Value 1\", \"Value 2\"]` and the SAML user has either value for their attribute the logic will consider their attribute value to have matched."
+msgstr "``role`` 和 ``value`` 字段都是列表，逻辑是 `or`。因此，如果您指定了两个角色：`[ \"Role 1\", \"Role 2\" ]`，SAML 用户具有其中一个角色，则会被认为具有标记所需的角色。这与 ``value`` 字段相同。如果您指定了 `[ \"Value 1\", \"Value 2\"]`，SAML 用户的属性中具有其中一个值，则逻辑将认为其属性匹配。"
+
+#: ../../source/ent_auth.rst:394
+msgid "If ``role`` and ``attr`` are both specified for either ``superuser`` or ``system_auditor``, the settings for ``attr`` will take precedence over a ``role``.  System Admin and System Auditor roles are evaluated at login for a SAML user. If you grant a SAML user one of these roles through the UI and not through the SAML settings, the roles will be removed on the user's next login unless the ``remove`` flag is set to false. The remove flag, if ``false``, will never allow the SAML adapter to remove the corresponding flag from a user.  The following table describes how the logic works."
+msgstr "如果 ``role`` 和 ``attr`` 都为 ``superuser`` 或 ``system_auditor`` 指定了，则 ``attr`` 的设置优先于 ``role``。System Admin 和 System Auditor 角色在 SAML 用户登录时被评估。如果您通过 UI 而不是 SAML 设置为 SAML 用户授予了这些角色，则会在用户下一次登录时删除角色（除非 ``remove`` 标志被设置为 fales，如果删除标记为 ``false``，这将永远不允许 SAML 适配器为用户删除相应的标记）。下表描述了逻辑的工作方式。"
+
+#: ../../source/ent_auth.rst:397
+msgid "Has one or more roles"
+msgstr "具有一个或多个角色"
+
+#: ../../source/ent_auth.rst:397
+msgid "Has Attr"
+msgstr "具有属性"
+
+#: ../../source/ent_auth.rst:397
+msgid "Has one or more Attr Values"
+msgstr "具有一个或多个 Attr 值"
+
+#: ../../source/ent_auth.rst:397
+msgid "Remove Flag"
+msgstr "删除标记"
+
+#: ../../source/ent_auth.rst:397
+msgid "Previous Flag"
+msgstr "前一个标记"
+
+#: ../../source/ent_auth.rst:397
+msgid "Is Flagged"
+msgstr "被标志"
+
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:453
+msgid "No"
+msgstr "否"
+
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:413
+msgid "N/A"
+msgstr "N/A"
+
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:403
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:461
+msgid "True"
+msgstr "True"
+
+#: ../../source/ent_auth.rst:399
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:401
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:461
+msgid "False"
+msgstr "false"
+
+#: ../../source/ent_auth.rst:405
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:407
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:409
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:411
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:413
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:415
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:417
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:419
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:421
+#: ../../source/ent_auth.rst:423
+#: ../../source/ent_auth.rst:425
+#: ../../source/ent_auth.rst:427
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:429
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:439
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:441
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:443
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:445
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:447
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:449
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:451
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:453
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:461
+#: ../../source/ent_auth.rst:461
+#: ../../source/ent_auth.rst:461
+msgid "Yes"
+msgstr "是"
+
+#: ../../source/ent_auth.rst:431
+#: ../../source/ent_auth.rst:433
+#: ../../source/ent_auth.rst:435
+#: ../../source/ent_auth.rst:437
+#: ../../source/ent_auth.rst:455
+#: ../../source/ent_auth.rst:457
+#: ../../source/ent_auth.rst:459
+#: ../../source/ent_auth.rst:461
+msgid "Unset"
+msgstr "取消设置"
+
+#: ../../source/ent_auth.rst:464
+msgid "Each time a SAML user authenticates to |at|, these checks will be performed and the user flags will be altered as needed. If ``System Administrator`` or ``System Auditor`` is set for a SAML user within the UI, the SAML adapter will override the UI setting based on the rules above. If you would prefer that the user flags for SAML users do not get removed when a SAML user logs in, you can set the ``remove_`` flag to ``false``. With the remove flag set to ``false``, a user flag set to ``true`` through either the UI, API or SAML adapter will not be removed. However, if a user does not have the flag, and the above rules determine the flag should be added, it will be added, even if the flag is ``false``."
+msgstr "每次 SAML 用户通过 |at| 进行身份验证时，将执行这些检查并根据需要修改用户的标记。 如果在 UI 中为 SAML 用户设置了 ``System Administrator`` 或 ``System Auditor``，则 SAML 适配器将根据上述规则覆盖 UI 中的设置。 如果您希望 SAML 用户的用户标记在 SAML 用户登录时不会被删除，您可以将 ``remove_`` 标志设置为 ``false``。 将 remove 标志设置为 ``false`` 时，通过 UI、API 或 SAML 适配器设置为 ``true`` 的用户标志都不会被删除。 但是，如果用户没有这个标志，并且上述规则确定应添加标志，则会添加它，即使标记为 ``false``。"
+
+#: ../../source/ent_auth.rst:466
+msgid "Example::"
+msgstr "示例："
+
+#: ../../source/ent_auth.rst:479
+msgid "To verify that the authentication was configured correctly, load the auto-generated URL found in the **SAML Service Provider Metadata URL** into a browser. It should output XML output, otherwise, it is not configured correctly."
+msgstr "要验证是否正确配置了身份验证，请将 **SAML Service Provider Metadata URL ** 中自动生成的 URL 加载到浏览器中。它应当会输出 XML 输出，否则配置不正确。"
+
+#: ../../source/ent_auth.rst:481
+msgid "Alternatively,  logout of |at| and the login screen will now display the SAML logo to indicate it as a alternate method of logging into |at|."
+msgstr "另外，|at| 的注销和登录屏幕现在会显示 SAML 徽标，以指示它作为登录 |at| 的替代方法。"
+
+#: ../../source/ent_auth.rst:487
+msgid "Transparent SAML Logins"
+msgstr "透明 SAML 登录"
+
+#: ../../source/ent_auth.rst:493
+msgid "For transparent logins to work, you must first get IdP-initiated logins to work. To achieve this:"
+msgstr "要使透明登录功能可以正常工作，您必须首先使 IdP 启动的登录正常工作。要实现此目标，请执行以下操作："
+
+#: ../../source/ent_auth.rst:495
+msgid "Set the ``RelayState`` on the IdP to the key of the IdP definition in the ``SAML Enabled Identity Providers`` field as previously described. In the example given above, ``RelayState`` would need to be either ``myidp`` or ``onelogin``."
+msgstr "如前所述，将 IdP 上的 ``RelayState`` 设置为 ``SAML Enabled Identity Providers`` 字段中 IdP 定义的密钥。在上面给出的示例中，``RelayState`` 将会需要 ``myidp`` 或 ``onelogin``。"
+
+#: ../../source/ent_auth.rst:497
+msgid "Once this is working, specify the redirect URL for non-logged-in users to somewhere other than the default controller login page by using the **Login redirect override URL** field in the Miscellaneous Authentication settings window of the **Settings** menu, accessible from the left navigation bar. This should be set to ``/sso/login/saml/?idp=<name-of-your-idp>`` for transparent SAML login, as shown in the example."
+msgstr "一旦可以正常工作，为非登录的用户指定一个重定向 URL，它不同于默认的控制器登录页。在左面的浏览栏中，使用 **Settings** 菜单的 Miscellaneous Authentication 设置窗口中的 **Login redirect override URL** 项。如示例中所示，它被设置为 ``/sso/login/saml/?idp=<name-of-your-idp>`` 用于透明的 SAML 登录。"
+
+#: ../../source/ent_auth.rst:503
+msgid "The above is a sample of a typical IdP format, but may not be the correct format for your particular case. You may need to reach out to your IdP for the correct transparent redirect URL as that URL is not the same for all IdPs."
+msgstr "以上是一个典型的 IdP 格式的示例，但可能并不适合于您的特定情况。您可能需要联系您的 IdP 以便能正确地以透明方式重定向 URL，因为该 URL 并不适用于所有 IdP。"
+
+#: ../../source/ent_auth.rst:505
+msgid "After transparent SAML login is configured, to log in using local credentials or a different SSO, go directly to ``https://<your-tower-server>/login``.  This provides the standard controller login page, including SSO authentication buttons, and allows you to log in with any configured method."
+msgstr "配置了透明 SAML 登录后，若要使用本地凭证或不同的 SSO 登录，请直接转至 ``https://<your-tower-server>/login``。这提供了标准的控制器登录页面，包括 SSO 身份验证按钮，并允许您使用任何配置的方法登录。"
+
+#: ../../source/ent_auth.rst:509
+msgid "Enabling Logging for SAML"
+msgstr "为 SAML 启用日志记录"
+
+#: ../../source/ent_auth.rst:511
+msgid "You can enable logging messages for the SAML adapter the same way you can enable logging for LDAP. Refer to the :ref:`ldap_logging` section."
+msgstr "您可以象为 LDAP 启用日志记录一样，为 SAML 适配器启用日志信息。请参阅 :ref:`ldap_logging` 部分。"
+
+#: ../../source/ent_auth.rst:517
+msgid "TACACS+ settings"
+msgstr "TACACS+ 设置"
+
+#: ../../source/ent_auth.rst:523
+msgid "Terminal Access Controller Access-Control System Plus (TACACS+) is a protocol that handles remote authentication and related services for networked access control through a centralized server. In particular, TACACS+ provides authentication, authorization and accounting (AAA) services, in which you can configure |at| to use as a source for authentication."
+msgstr "Terminal Access Controller Access-Control System Plus (TACACS+) 是一个协议，它处理通过集中服务器进行联网访问控制的远程身份验证和相关服务。特别是，TACACS+ 提供了身份验证、授权和核算 (AAAA) 服务，您可以在其中配置 |at| 以用作身份验证的来源。"
+
+#: ../../source/ent_auth.rst:527
+msgid "This feature is deprecated and will be removed in a future release."
+msgstr "这个功能已被弃用并将在以后的发行版本中被删除。"
+
+#: ../../source/ent_auth.rst:531
+msgid "On the left side of the Settings window, click **TACACs+ settings** from the list of Authentication options."
+msgstr "在 Settings 窗口左侧，从 Authentication 选项列表中点 **TACACs+ settings**。"
+
+#: ../../source/ent_auth.rst:533
+msgid "Click **Edit** and enter information in the following fields:"
+msgstr "点 **Edit**，在以下字段中输入信息："
+
+#: ../../source/ent_auth.rst:535
+msgid "**TACACS+ Server**: Provide the hostname or IP address of the TACACS+ server with which to authenticate. If this field is left blank, TACACS+ authentication is disabled."
+msgstr "**TACACS+ Server**：提供要进行身份验证的 TACACS+ 服务器的主机名或 IP 地址。如果此字段留空，则禁用 TACACS+ 身份验证。"
+
+#: ../../source/ent_auth.rst:536
+msgid "**TACACS+ Port**: TACACS+ uses port 49 by default, which is already pre-populated."
+msgstr "**TACACS+ Port**：TACACS+ 默认使用端口 49，该端口已预先填充。"
+
+#: ../../source/ent_auth.rst:537
+msgid "**TACACS+ Secret**: Secret key for TACACS+ authentication server."
+msgstr "**TACACS+ Secret**：TACACS+ 身份验证服务器的 secret 键。"
+
+#: ../../source/ent_auth.rst:538
+msgid "**TACACS+ Auth Session Timeout**: Session timeout value in seconds. The default is 5 seconds."
+msgstr "**TACACS+ Auth Session Timeout**：会话超时值，以秒为单位。默认值为 5 秒。"
+
+#: ../../source/ent_auth.rst:539
+msgid "**TACACS+ Authentication Protocol**: The protocol used by TACACS+ client. Options are **ascii** or **pap**."
+msgstr "*TACACS+ Authentication Protocol**： TACACS+ 客户端使用的协议。选项为 **ascii** 或 **pap**。"
+

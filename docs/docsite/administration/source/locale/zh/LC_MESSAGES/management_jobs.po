@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/management_jobs.rst:4
+msgid "Management Jobs"
+msgstr "管理任务"
+
+#: ../../source/management_jobs.rst:12
+msgid "**Management Jobs** assist in the cleaning of old data from the controller, including system tracking information, tokens, job histories, and activity streams. You can use this if you have specific retention policies or need to decrease the storage used by your controller database. Click **Management Jobs** from the left navigation bar."
+msgstr "**Management Jobs** 帮助清理控制器的旧数据，包括系统跟踪信息、作业历史记录和活动流。如果您有特定的保留策略或需要减少控制器数据库使用的存储空间，您可以使用此字段。请点左侧导航栏中的 **Management Jobs**。"
+
+#: ../../source/management_jobs.rst:14
+msgid "|management jobs|"
+msgstr "|management jobs|"
+
+#: ../../source/management_jobs.rst:18
+msgid "Several job types are available for you to schedule and launch:"
+msgstr "有几个作业类型可用于调度和启动："
+
+#: ../../source/management_jobs.rst:20
+msgid "**Cleanup Activity Stream**: Remove activity stream history older than a specified number of days"
+msgstr "**Cleanup Activity Stream**：删除超过指定天数的活动流历史记录"
+
+#: ../../source/management_jobs.rst:21
+msgid "**Cleanup Expired OAuth 2 Tokens**:  Remove expired OAuth 2 access tokens and refresh tokens"
+msgstr "**Cleanup Expired OAuth 2 Tokens**: 删除过期的 OAuth 2 访问令牌并重新刷新令牌"
+
+#: ../../source/management_jobs.rst:22
+msgid "**Cleanup Expired Sessions**:   Remove expired browser sessions from the database"
+msgstr "**Cleanup Expired Sessions**: 从数据库中删除过期的浏览器会话"
+
+#: ../../source/management_jobs.rst:23
+msgid "**Cleanup Job Details**: Remove job history older than a specified number of days"
+msgstr "**Cleanup Job Details**：删除超过指定天数的作业历史记录"
+
+#: ../../source/management_jobs.rst:26
+msgid "Removing Old Activity Stream Data"
+msgstr "删除旧活动流数据"
+
+#: ../../source/management_jobs.rst:32
+msgid "To remove older activity stream data, click on the launch (|launch|) button beside **Cleanup Activity Stream**."
+msgstr "要删除旧的活动流数据，请点击 **Cleanup Activity Stream** 旁边的启动 (|launch|) 按钮。"
+
+#: ../../source/management_jobs.rst:34
+msgid "|activity stream launch - remove activity stream launch|"
+msgstr "|activity stream launch - remove activity stream launch|"
+
+#: ../../source/management_jobs.rst:38
+#: ../../source/management_jobs.rst:147
+msgid "Enter the number of days of data you would like to save and click **Launch**."
+msgstr "输入您要保存数据的天数并点击 **Launch**。"
+
+#: ../../source/management_jobs.rst:43
+msgid "Scheduling"
+msgstr "调度"
+
+#: ../../source/management_jobs.rst:45
+msgid "To review or set a schedule for purging data marked for deletion, click on the |schedule| button."
+msgstr "要查看或设置标记为删除的数据的清除调度，请点击 |schedule| 按钮。"
+
+#: ../../source/management_jobs.rst:50
+msgid "|activity stream launch - remove activity stream schedule|"
+msgstr "|activity stream launch - remove activity stream schedule|"
+
+#: ../../source/management_jobs.rst:54
+msgid "Note that you can turn this scheduled management job on and off easily using the **ON/OFF** toggle button to the left of the Job Name."
+msgstr "请注意，您可以使用作业名称左侧的 **ON/OFF** 切换按钮，轻松将此调度的管理作业打开并关闭。"
+
+#: ../../source/management_jobs.rst:56
+msgid "Click on the Job Name, in this example \"Cleanup Activity Schedule\", to review or edit the schedule settings. You can also use the **Add** button to create a new schedule for this management job."
+msgstr "点击作业名称，在本例中为“Cleanup Activity Schedule”，来查看或编辑调度设置。您还可以使用 **Add** 按钮为此管理作业创建新调度。"
+
+#: ../../source/management_jobs.rst:60
+msgid "Enter the appropriate details into the following fields and click **Save**:"
+msgstr "在以下字段中输入正确的详情并点击 **Save**："
+
+#: ../../source/management_jobs.rst:62
+msgid "Name (required)"
+msgstr "Name（必需）"
+
+#: ../../source/management_jobs.rst:63
+msgid "Start Date (required)"
+msgstr "Start Date（必需）"
+
+#: ../../source/management_jobs.rst:64
+msgid "Start Time (required)"
+msgstr "Start Time（必需）"
+
+#: ../../source/management_jobs.rst:65
+msgid "Local Time Zone (the entered Start Time should be in this timezone)"
+msgstr "Local Time Zone（输入的开始时间应该在这个时区）"
+
+#: ../../source/management_jobs.rst:66
+msgid "Repeat Frequency (the appropriate options display as the update frequency is modified.)"
+msgstr "Repeat Frequency（在修改更新频率时会显示正确的选项。）"
+
+#: ../../source/management_jobs.rst:68
+msgid "The **Details** tab displays a description of the schedule and a list of the scheduled occurrences in the selected Local Time Zone."
+msgstr "**Details** 选项卡显示调度的描述以及所选本地时区中调度的发生次数列表。"
+
+#: ../../source/management_jobs.rst:72
+msgid "Jobs are scheduled in UTC. Repeating jobs that runs at a specific time of day may move relative to a local timezone when Daylight Saving Time shifts occur."
+msgstr "作业使用 UTC 时间调度。当夏时制发生时，在一天的特定时间运行的重复作业可能会针对本地时区有相应变化。"
+
+#: ../../source/management_jobs.rst:78
+msgid "Notifications"
+msgstr "通知"
+
+#: ../../source/management_jobs.rst:80
+msgid "To set or review notifications associated with this management job, click the Notifications ( |notify| ) icon."
+msgstr "要设置或查看与此管理作业关联的通知，请点击左侧导航栏中的通知 (|notify|) 图标。"
+
+#: ../../source/management_jobs.rst:87
+msgid "If none exist, click the **Notifications** link to create a new notification. Notification types include:"
+msgstr "如果不存在，点 **Notifications** 创建一个新通知。通知类型包括："
+
+#: ../../source/management_jobs.rst:89
+msgid "Email"
+msgstr "电子邮件"
+
+#: ../../source/management_jobs.rst:90
+msgid "Grafana"
+msgstr "Grafana"
+
+#: ../../source/management_jobs.rst:91
+msgid "IRC"
+msgstr "IRC"
+
+#: ../../source/management_jobs.rst:92
+msgid "Mattermost"
+msgstr "Mattermost"
+
+#: ../../source/management_jobs.rst:93
+msgid "PagerDuty"
+msgstr "PagerDuty"
+
+#: ../../source/management_jobs.rst:94
+msgid "Rocket.Chat"
+msgstr "Rocket.Chat"
+
+#: ../../source/management_jobs.rst:95
+msgid "Slack"
+msgstr "Slack"
+
+#: ../../source/management_jobs.rst:96
+msgid "Twilio"
+msgstr "Twilio"
+
+#: ../../source/management_jobs.rst:97
+msgid "Webhook"
+msgstr "Webhook"
+
+#: ../../source/management_jobs.rst:101
+msgid "Refer to :ref:`ug_notifications` in the |atu| for more information."
+msgstr "有关详情，请参阅 |atu| 中的 :ref:`ug_notifications`"
+
+#: ../../source/management_jobs.rst:105
+msgid "Cleanup Expired OAuth2 Tokens"
+msgstr "清理已过期的 OAuth2 令牌"
+
+#: ../../source/management_jobs.rst:111
+msgid "To remove expired OAuth2 tokens, click on the launch (|launch|) button beside **Cleanup Expired OAuth2 Tokens**."
+msgstr "要删除已过期的 OAuth2 令牌，请点击 **Cleanup Expired OAuth2 Tokens** 旁边的启动 (|launch|) 按钮。"
+
+#: ../../source/management_jobs.rst:113
+msgid "You can review or set a schedule for cleaning up expired OAuth2 tokens by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "您可以检查并设置一个调度来清理过期的 OAuth2 令牌（执行与活动流管理作业中描述的相同步骤）。如需详情，请参阅 :ref:`ag_mgmt_job_schedule`。"
+
+#: ../../source/management_jobs.rst:115
+#: ../../source/management_jobs.rst:129
+#: ../../source/management_jobs.rst:155
+msgid "You can also set or review notifications associated with this management job the same way as described in :ref:`ag_mgmt_job_notify` for activity stream management jobs, and refer to :ref:`ug_notifications` in the |atu| for more detail."
+msgstr "要设置或查看与此管理作业关联的通知，请执行与活动流管理作业相同的所述步骤（:ref:`ag_mgmt_job_notify`）。详情请参阅 |atu| 中的 :ref:`ug_notifications`。"
+
+#: ../../source/management_jobs.rst:119
+msgid "Cleanup Expired Sessions"
+msgstr "清理已过期的会话"
+
+#: ../../source/management_jobs.rst:125
+msgid "To remove expired sessions, click on the launch (|launch|) button beside **Cleanup Expired Sessions**."
+msgstr "要删除已过期的会话，请点击 **Cleanup Expired Sessions** 旁边的启动(|launch|)按钮。"
+
+#: ../../source/management_jobs.rst:127
+msgid "You can review or set a schedule for cleaning up expired sessions by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "要查看或设置清理过期会话的调度，请执行与活动流管理作业相同的所述步骤。如需详情，请参阅 :ref:`ag_mgmt_job_schedule`。"
+
+#: ../../source/management_jobs.rst:133
+msgid "Removing Old Job History"
+msgstr "删除旧作业历史记录"
+
+#: ../../source/management_jobs.rst:139
+msgid "To remove job history older than a specified number of days, click on the launch (|launch|) button beside **Cleanup Job Details**."
+msgstr "要删除早于指定天数的作业历史记录，请点击 **Cleanup Job Details** 旁边的启动 (|launch|) 按钮。"
+
+#: ../../source/management_jobs.rst:143
+msgid "|management jobs - cleanup job launch|"
+msgstr "|management jobs - cleanup job launch|"
+
+#: ../../source/management_jobs.rst:151
+msgid "The initial job run for a controller resource (e.g. Projects, Job Templates) is excluded from **Cleanup Job Details**, regardless of retention value."
+msgstr "排除在 **Cleanup Job Details** 之外的控制器资源（如项目、作业模板）的初始作业运行，无论保留值是什么。"
+
+#: ../../source/management_jobs.rst:153
+msgid "You can review or set a schedule for cleaning up old job history by performing the same procedure described for activity stream management jobs. See :ref:`ag_mgmt_job_schedule` for detail."
+msgstr "要查看或设置清理旧的作业历史记录的调度，请执行与活动流管理作业相同的所述步骤。如需详情，请参阅 :ref:`ag_mgmt_job_schedule`。"
+

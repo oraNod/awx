@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/teams.rst:4
+msgid "Teams"
+msgstr "团队"
+
+#: ../../source/teams.rst:9
+msgid "A :term:`Team` is a subdivision of an organization with associated users, projects, credentials, and permissions. Teams provide a means to implement role-based access control schemes and delegate responsibilities across organizations. For instance, permissions may be granted to a whole Team rather than each user on the Team."
+msgstr ":term:`Team`是具关联用户、项目、凭证和权限的机构子部门。团队提供了一种方法来实现基于角色的访问控制方案，并跨机构委托职责。例如，可以将权限授予整个团队，而不是团队中的每个用户。"
+
+#: ../../source/teams.rst:11
+msgid "You can create as many Teams of users as make sense for your Organization. Each Team can be assigned permissions, just as with Users. Teams can also scalably assign ownership for Credentials, preventing multiple interface click-throughs to assign the same Credentials to the same user."
+msgstr "您可以根据您的机构情况创建所需数量的用户团队。可以为每个团队分配权限，就如同为用户分配权限一样。团队也可以大规模地分配凭证的所有权，避免多次点击界面来为同一用户分配相同的凭证。"
+
+#: ../../source/teams.rst:13
+msgid "Access the Teams page by clicking **Teams** from the left navigation bar. The team list may be sorted and searched by **Name** or **Organization**."
+msgstr "点击左侧导航栏中的 **Teams** 访问 Teams 页面。团队列表可以按 **Name** 或 **Organization** 进行排序和搜索。"
+
+#: ../../source/teams.rst:18
+msgid "Clicking the Edit (|edit-button|) button next to the list of **Teams** allows you to edit details about the team. You can also review **Users** and  **Permissions** associated with this Team."
+msgstr "点 **Teams** 列表旁边的 Edit (|edit-button|) 按钮可以编辑与团队相关的信息。您也可以查看与此团队关联的 **Users** 和 **Permissions**。"
+
+#: ../../source/teams.rst:26
+msgid "Create a Team"
+msgstr "创建团队"
+
+#: ../../source/teams.rst:28
+msgid "To create a new Team:"
+msgstr "要创建新团队，请执行以下操作："
+
+#: ../../source/teams.rst:30
+msgid "Click the **Add** button."
+msgstr "点 **Add** 按钮。"
+
+#: ../../source/teams.rst:33
+msgid "|Teams - create new team|"
+msgstr "|Teams - create new team|"
+
+#: ../../source/teams.rst:37
+msgid "Enter the appropriate details into the following fields:"
+msgstr "在以下字段中输入相关信息："
+
+#: ../../source/teams.rst:39
+msgid "Name"
+msgstr "名称"
+
+#: ../../source/teams.rst:40
+msgid "Description (optional)"
+msgstr "Description（可选）"
+
+#: ../../source/teams.rst:41
+msgid "Organization (Choose from an existing organization)"
+msgstr "Organization（从现有机构中选择）"
+
+#: ../../source/teams.rst:43
+msgid "Click **Save**."
+msgstr "点 **Save**。"
+
+#: ../../source/teams.rst:45
+msgid "Once the Team is successfully created, |at| opens the **Details** dialog, which also allows you to review and edit your Team information."
+msgstr "成功创建团队后，|at| 将打开 **Details** 对话框，该对话框还允许您查看和编辑您的团队信息。"
+
+#: ../../source/teams.rst:47
+msgid "|Teams - example team successfully created|"
+msgstr "|Teams - example team successfully created|"
+
+#: ../../source/teams.rst:53
+msgid "Team Access"
+msgstr "团队访问"
+
+#: ../../source/teams.rst:58
+msgid "This tab displays the list of Users that are members of this Team. This list may be searched by **Username**, **First Name**, or **Last Name**. For more information, refer to :ref:`ug_users`."
+msgstr "此标签页显示了属于这个团队的成员的用户列表。此列表可以按 **Username**、**First Name** 或 **Last Name** 进行搜索。如需了解更多信息，请参阅 :ref:`ug_users`。"
+
+#: ../../source/teams.rst:60
+msgid "|Teams - users list|"
+msgstr "|Teams - users list|"
+
+#: ../../source/teams.rst:68
+msgid "Add a User"
+msgstr "添加用户"
+
+#: ../../source/teams.rst:70
+msgid "In order to add a user to a team, the user must already be created. Refer to :ref:`ug_users_create` to create a user. Adding a user to a team adds them as a member only, specifying a role for the user on different resources can be done in the **Access** tab . To add existing users to the Team:"
+msgstr "要为团队添加用户，必须已创建相关用户。请参阅 :ref:`ug_users_create` 来创建用户。在某个团队中添加用户仅会将他们添加为成员，可以在 **Access** 标签页中为用户指定角色。要将现有用户添加到团队中，请执行以下操作："
+
+#: ../../source/teams.rst:72
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "在 **Access** 选项卡中，点 **Add** 按钮。"
+
+#: ../../source/teams.rst:74
+msgid "Follow the prompts to add user(s) and assign them to roles."
+msgstr "按照提示添加用户并将其分配到角色。"
+
+#: ../../source/teams.rst:76
+msgid "Click **Save** when done."
+msgstr "完成后请点击 **Save**。"
+
+#: ../../source/teams.rst:78
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "若要删除特定用户的角色，可单击其资源旁边的解除关联(x)按钮。"
+
+#: ../../source/teams.rst:82
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "这会出现确认对话框，要求您确认解除关联。"
+
+#: ../../source/teams.rst:88
+msgid "Team Roles"
+msgstr "团队角色"
+
+#: ../../source/teams.rst:95
+msgid "Selecting the **Roles** view displays a list of the permissions that are currently available for this Team. The permissions list may be sorted and searched by **Resource Name**, **Type**, or **Role**."
+msgstr "选择 **Roles** 视图会显示目前可用于此团队的权限列表。权限列表可以根据 **Resource Name**、**Type** 或 **Role** 进行排序和搜索。"
+
+#: ../../source/teams.rst:97
+msgid "|Teams - permissions list|"
+msgstr "|Teams - permissions list|"
+
+#: ../../source/teams.rst:101
+msgid "The set of privileges assigned to Teams that provide the ability to read, modify, and administer projects, inventories, and other |at| elements are permissions. By default, the Team is given the \"read\" permission (also called a role)."
+msgstr "权限是指分配给团队的权限集，可提供读取、修改和管理项目、清单及其他 |at| 元素的能力。默认情况下，团队被授予“读取”权限（也称角色）。"
+
+#: ../../source/teams.rst:103
+msgid "Permissions must be set explicitly via an Inventory, Project, Job Template, or within the Organization view."
+msgstr "权限必须通过 Inventory、Project、Job Template 或 Organization 视图进行显式设置。"
+
+#: ../../source/teams.rst:107
+msgid "Add Team Permissions"
+msgstr "添加团队权限"
+
+#: ../../source/teams.rst:109
+msgid "To add permissions to a Team:"
+msgstr "要为团队添加权限，请执行以下操作："
+
+#: ../../source/teams.rst:111
+msgid "Click the **Add** button, which opens the Add Permissions Wizard."
+msgstr "点 **Add** 按钮，打开 Add Permissions 向导。"
+
+#: ../../source/teams.rst:116
+msgid "Click to select the object for which the team will have access and click **Next**."
+msgstr "点以选择团队有权访问的对象，并点 **Next**。"
+
+#: ../../source/teams.rst:118
+msgid "Click to select the resource to assign team roles and click **Next**."
+msgstr "点以选择分配资源以分配团队角色并点 **Next**。"
+
+#: ../../source/teams.rst:122
+msgid "Click the checkbox beside the role to assign that role to your chosen type of resource. Different resources have different options available."
+msgstr "单击角色旁边的复选框，将该角色分配到您选择的资源类型。不同的资源具有不同的可用选项。"
+
+#: ../../source/teams.rst:127
+msgid "Click **Save** when done, and the Add Permissions Wizard closes to display the updated profile for the user with the roles assigned for each selected resource."
+msgstr "完成后，点击 **Save**，此时 Add Permissions 向导将关闭，并显示更新的用户配置集，其中已包含为每个所选资源分配的角色。"
+
+#: ../../source/teams.rst:131
+msgid "To remove Permissions for a particular resource, click the disassociate (x) button next to its resource. This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "要删除特定资源的权限，请单击其资源旁边的解除关联(x)按钮。这将启动一个确认对话框，要求您确认解除关联。"
+
+#: ../../source/teams.rst:136
+msgid "You can also add teams, individual, or multiple users and assign them permissions at the object level (projects, inventories, job templates, and workflow templates) as well. This feature reduces the time for an organization to onboard many users at one time."
+msgstr "您还可以添加团队、个人或多个用户，并在对象一级（项目、清单、作业模板和工作流模板）为其分配权限。此功能减少了机构一次性设置多个用户的时间。"
+

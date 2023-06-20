@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/workflows.rst:5
+msgid "Workflows"
+msgstr "ワークフロー"
+
+#: ../../source/workflows.rst:10
+msgid "Workflows allow you to configure a sequence of disparate job templates (or workflow templates) that may or may not share inventory, playbooks, or permissions. However, workflows have ‘admin’ and ‘execute’ permissions, similar to job templates. A workflow accomplishes the task of tracking the full set of jobs that were part of the release process as a single unit."
+msgstr "ワークフローを使うと、インベントリー、Playbook、またはパーミッションを共有または共有しない可能性のある一連の個別ジョブテンプレート (またはワークフローテンプレート) を設定することができます。ただし、ワークフローには、ジョブテンプレートと同様に、「管理者」および「実行」パーミッションがあります。ワークフローでは、単一ユニットとしてリリースプロセスに含まれていたジョブすべてを追跡するタスクを実行します。"
+
+#: ../../source/workflows.rst:13
+msgid "Job or workflow templates are linked together using a graph-like structure called nodes. These nodes can be jobs, project syncs, or inventory syncs. A template can be part of different workflows or used multiple times in the same workflow. A copy of the graph structure is saved to a workflow job when you launch the workflow."
+msgstr "ジョブまたはワークフローテンプレートは、ノードと呼ばれるグラフのような構造を使って相互に連携します。これらのノードには、ジョブ、プロジェクト同期、またはインベントリー同期などが含まれます。ジョブテンプレートは異なるワークフローの一部となることも、同じワークフローで複数回使用することもできます。グラフ構造のコピーは、ワークフローの起動時にワークフロージョブに保存されます。"
+
+#: ../../source/workflows.rst:15
+msgid "The example below shows a workflow that contains all three, as well as a workflow job template:"
+msgstr "以下の例では、ジョブ、プロジェクト同期、インベントリー同期のワークフローのほかに、ワークフロージョブについて紹介します。"
+
+#: ../../source/workflows.rst:20
+msgid "As the workflow runs, jobs are spawned from the node's linked template. Nodes linking to a job template which has prompt-driven fields (``job_type``, ``job_tags``, ``skip_tags``, ``limit``) can contain those fields, and will not be prompted on launch. Job templates with promptable credential and/or inventory, WITHOUT defaults, will not be available for inclusion in a workflow."
+msgstr "ワークフローが実行されると、リンクされたノードのテンプレートからジョブが起動します。プロンプト方式 (prompt-driven) のフィールド (``job_type``、``job_tags``、``skip_tags``、``limit``) が含まれるジョブテンプレートにリンクされているノードには、このようなフィールドが含まれる可能性があり、起動時にプロンプトが表示されません。デフォルト設定がない場合には、プロンプト表示が可能な認証情報/インベントリーを含むジョブテンプレートを、ワークフローに含めることができません。"
+
+#: ../../source/workflows.rst:24
+msgid "Workflow scenarios and considerations"
+msgstr "ワークフローのシナリオおよび留意事項"
+
+#: ../../source/workflows.rst:26
+msgid "Consider the following scenarios for building workflows:"
+msgstr "ワークフローの構築時に以下のシナリオを考慮してください。"
+
+#: ../../source/workflows.rst:28
+msgid "A root node is set to ALWAYS by default and it not editable."
+msgstr "root ノードはデフォルトでは ALWAYS (常時) に設定されており、編集できません。"
+
+#: ../../source/workflows.rst:32
+msgid "A node can have multiple parents and children may be linked to any of the states of success, failure, or always. If always, then the state is neither success or failure. States apply at the node level, not at the workflow job template level. A workflow job will be marked as successful unless it is canceled or encounters an error."
+msgstr "ノードには複数の親を含めることが可能で、子には「Success (成功)」、「Failure (失敗)」または「Always (常時)」の状態にリンクすることが可能です。「Always (常時)」の場合、状態は「Success (成功)」でも「Failure (失敗)」でもありません。状態はワークフロージョブテンプレートのレベルではなく、ノードのレベルで適用されます。ワークフロージョブは、取り消されないか、エラーが生じない場合にのみ「Success (成功)」とマークされます。"
+
+#: ../../source/workflows.rst:36
+msgid "If you remove a job or workflow template within the workflow, the node(s) previously connected to those deleted, automatically get connected upstream and retains its edge type as in the example below:"
+msgstr "以下の例のように、ワークフロー内のジョブまたはワークフローテンプレートを削除した場合に、以前に削除済みのジョブやワークフローに連携されていたノードが自動的にアップストリームに接続され、エッジタイプが保持されます。"
+
+#: ../../source/workflows.rst:40
+msgid "You could have a convergent workflow, where multiple jobs converge into one. In this scenario, any of the jobs or all of them must complete before the next one runs, as shown in the example below:"
+msgstr "複数のジョブを 1 つに収束する収束ワークフローを使用できます。このシナリオでは、次の例に示すように、次のジョブが実行する前に、いずれかのジョブまたはすべてのジョブを完了しておく必要があります。"
+
+#: ../../source/workflows.rst:44
+msgid "In the example provided, |at| runs the first two job templates in parallel. When they both finish and succeed as specified, the 3rd downstream (:ref:`convergence node <convergence_node>`), will trigger."
+msgstr "以下の例では、|at| は最初の 2 つのジョブテンプレートを並行して実行します。指定通りに終了して成功すると、3 番目のダウンストリーム (:ref:`convergence node <convergence_node>`) が発生します。"
+
+#: ../../source/workflows.rst:46
+msgid "Prompts for inventory and surveys will apply to workflow nodes in workflow job templates."
+msgstr "インベントリーと Survey のプロンプトは、ワークフロージョブテンプレートに含まれるワークフローノードに適用されます。"
+
+#: ../../source/workflows.rst:48
+msgid "If you launch from the API, running a ``get`` command displays a list of warnings and highlights missing components. The basic workflow for a workflow job template is illustrated below."
+msgstr "API から起動する場合に、``get`` コマンドを実行すると、警告の一覧が表示され、欠落しているコンポーネントが強調表示されます。ワークフロージョブテンプレートの基本的なワークフローは以下に示す通りです。"
+
+#: ../../source/workflows.rst:52
+msgid "It is possible to launch several workflows simultaneously, and set a schedule for when to launch them. You can set notifications on workflows, such as when a job completes, similar to that of job templates."
+msgstr "いくつかのワークフローを同時に起動し、ワークフローの起動時のスケジュールを設定することができます。ジョブテンプレートと同様に、ジョブの完了時など、ワークフローに通知を設定することができます。"
+
+#: ../../../common/source/job-slicing-rule.rst:3
+msgid "Job slicing is intended to scale job executions horizontally. Enabling job slicing on a job template divides an inventory to be acted upon in the number of slices configured at launch time and then starts a job for each slice."
+msgstr "ジョブスライスは、ジョブの実行を水平方向にスケーリングすることを目的としています。ジョブテンプレートでジョブスライスを有効にすると、処理対象のインベントリーが起動時に設定されたスライスの数に分割され、スライスごとにジョブが開始されます。"
+
+#: ../../../common/source/job-slicing-rule.rst:5
+msgid "It is expected that the number of slices will be equal to or less than the number of controller nodes. Setting an extremely high number of job slices (e.g., thousands), while allowed, can cause performance degradation as the job scheduler is not designed to schedule simultaneously thousands of workflow nodes, which are what the sliced jobs become."
+msgstr "スライスの数は、コントローラーノードの数と同じかそれ以下になることが予想されます。ジョブスライスの数を極端に多く (たとえば、数千) 設定することはできますが、パフォーマンスが低下する可能性があります。これは、ジョブスケジューラーが、スライスされたジョブとなる数千のワークフローノードを同時にスケジュールするように設計されていないためです。"
+
+#: ../../source/workflows.rst:59
+msgid "You can build a recursive workflow, but if |at| detects an error, it will stop at the time the nested workflow attempts to run."
+msgstr "再帰的なワークフローを構築することができますが、|at| がエラーを検出した場合には、ネスト化されたワークフローが実行しようとしたタイミングでワークフローは停止します。"
+
+#: ../../source/workflows.rst:61
+msgid "Artifacts gathered in jobs in the sub-workflow will be passed to downstream nodes."
+msgstr "サブワークフロー内のジョブで集められた成果物は、下流ノードに渡されます。"
+
+#: ../../source/workflows.rst:63
+msgid "An inventory can be set at the workflow level, or prompt for inventory on launch."
+msgstr "インベントリーは、ワークレベルとして設定することもインベントリーの起動プロンプトとして設定することも可能です。"
+
+#: ../../source/workflows.rst:65
+msgid "When launched, all job templates in the workflow that have ``ask_inventory_on_launch=true`` will use the workflow level inventory."
+msgstr "起動時に、``ask_inventory_on_launch=true`` が指定されているワークフロー内のジョブテンプレートはすべて、ワークフローレベルのインベントリーを使用します。"
+
+#: ../../source/workflows.rst:67
+msgid "Job templates that do not prompt for inventory will ignore the workflow inventory and run against their own inventory."
+msgstr "インベントリーを求めないジョブテンプレートでは、ワークフローインベントリーを無視し、独自のインベントリーに対して実行されます。"
+
+#: ../../source/workflows.rst:69
+msgid "If a workflow prompts for inventory, schedules and other workflow nodes may provide the inventory."
+msgstr "ワークフローがインベントリーを求める場合には、スケジュールおよび他のワークフローノードでそのインベントリーを提供することができます。"
+
+#: ../../source/workflows.rst:71
+msgid "In a workflow convergence scenario, ``set_stats`` data will be merged in an undefined way, so it is recommended that you set unique keys."
+msgstr "ワークフローの収束シナリオでは、``set_stats`` データが定義なしの状態でマージされるので、一意のキーを設定することを推奨します。"
+
+#: ../../source/workflows.rst:75
+msgid "Extra Variables"
+msgstr "追加変数"
+
+#: ../../source/workflows.rst:81
+msgid "Also similar to job templates, workflows use surveys to specify variables to be used in the playbooks in the workflow, called extra_vars. Survey variables are combined with extra_vars defined on the workflow job template, and saved to the workflow job extra_vars. extra_vars in the workflow job are combined with job template variables when spawning jobs within the workflow."
+msgstr "ジョブテンプレートと同様に、ワークフローは Survey を使用して、extra_vars というワークフローの Playbook で使用される変数を指定します。Survey 変数はワークフロージョブテンプレートで定義される extra_vars defined と組み合わされ、ワークフロージョブ extra_vars に保存されます。ワークフロージョブの extra_vars は、ワークフロー内のジョブの生成時にジョブテンプレート変数に組み合わされます。"
+
+#: ../../source/workflows.rst:83
+msgid "Workflows utilize the same behavior (hierarchy) of variable precedence as Job Templates with the exception of three additional variables. Refer to the Variable Precedence Hierarchy in the :ref:`ug_jobtemplates_extravars` section of the Job Templates chapter of this guide. The three additional variables include:"
+msgstr "ワークフローは、3 つの追加変数を除き、ジョブテンプレートと同じ変数の順序の動作 (階層) を使用します。本書のジョブテンプレートの章の :ref:`ug_jobtemplates_extravars` セクションの変数の順序の階層について参照してください。3 つの追加の変数には以下が含まれます。"
+
+#: ../../source/workflows.rst:87
+msgid "Workflows included in a workflow will follow the same variable precedence - they will only inherit variables if they are specifically prompted for, or defined as part of a survey."
+msgstr "ワークフローに含まれるワークフローでは、同様の変数の優先順位を使用します。survey の一部として定義されるか、具体的に求められた場合にのみ、変数を敬称します。"
+
+#: ../../source/workflows.rst:89
+msgid "In addition to the workflow ``extra_vars``, jobs and workflows ran as part of a workflow can inherit variables in the artifacts dictionary of a parent job in the workflow (also combining with ancestors further upstream in its branch). These can be defined by the ``set_stats`` `Ansible module`_."
+msgstr "ワークフローの ``extra_vars`` のほかにも、ワークフローの一部として実行されるジョブおよびワークフローは、ワークフローの親ジョブに含まれるアーティファクト辞書の変数を継承できます (また、ブランチの祖先のアップストリームと組み合わされます)。これらは、``set_stats`` `Ansible module`_ 以降で定義できます。"
+
+#: ../../source/workflows.rst:93
+msgid "If you use the ``set_stats`` module in your playbook, you can produce results that can be consumed downstream by another job, for example, notify users as to the success or failure of an integration run. In this example, there are two playbooks that can be combined in a workflow to exercise artifact passing:"
+msgstr "Playbook で ``set_stats`` モジュールを使用すると、別のジョブでダウンストリームで使用できる結果を出す生成できます。たとえば、ユーザーに対し、統合の実行の成功または失敗について通知することができます。この例では、アーティファクトを渡すためにワークフローに組み合わせることのできる 2 つの Playbook を示します。"
+
+#: ../../source/workflows.rst:95
+msgid "**invoke_set_stats.yml**: first playbook in the workflow:"
+msgstr "**invoke_set_stats.yml**: ワークフローの最初の Playbook"
+
+#: ../../source/workflows.rst:112
+msgid "**use_set_stats.yml**: second playbook in the workflow"
+msgstr "**use_set_stats.yml**: ワークフローの 2 番目の Playbook"
+
+#: ../../source/workflows.rst:130
+msgid "The ``set_stats`` module processes this workflow as follows:"
+msgstr "``set_stats`` モジュールはこのワークフローを以下のように処理します。"
+
+#: ../../source/workflows.rst:132
+msgid "The contents of an integration results (example: integration_results.txt below) is first uploaded to the web."
+msgstr "統合の結果の内容 (例: 以下の integration_results.txt) がまず web にアップロードされます。"
+
+#: ../../source/workflows.rst:138
+msgid "Through the **invoke_set_stats** playbook, ``set_stats`` is then invoked to artifact the URL of the uploaded integration_results.txt into the Ansible variable \"integration_results_url\"."
+msgstr "次に **invoke_set_stats** Playbook により、``set_stats`` が起動すると、アップロードされた integration_results.txt の URL が作成され、Ansible 変数「integration_results_url」に渡されます。"
+
+#: ../../source/workflows.rst:139
+msgid "The second playbook in the workflow consumes the Ansible extra variable \"integration_results_url\". It calls out to the web using the ``uri`` module to get the contents of the file uploaded by the previous Job Template Job. Then, it simply prints out the contents of the gotten file."
+msgstr "ワークフローの 2 つ目の Playbook は、Ansible 追加変数「integration_results_url」を使用します。これは、``uri`` モジュールを使用して web に対して呼び出しを実行し、直前のジョブテンプレートジョブでアップロードされたファイルの内容を取得します。次に、取得したファイルの内容を単純に出力します。"
+
+#: ../../source/workflows.rst:143
+msgid "For artifacts to work, keep the default setting, ``per_host = False`` in the ``set_stats`` module."
+msgstr "アーティファクトを機能させるには、``set_stats`` モジュールの ``per_host = False`` というデフォルト設定をそのまま使用してください。"
+
+#: ../../source/workflows.rst:147
+msgid "Workflow States"
+msgstr "ワークフローの状態"
+
+#: ../../source/workflows.rst:149
+msgid "The workflow job can have the following states (no Failed state):"
+msgstr "ワークフロージョブには以下の状態が設定されます (「失敗」状態は含まれなし)。"
+
+#: ../../source/workflows.rst:151
+msgid "Waiting"
+msgstr "待機中"
+
+#: ../../source/workflows.rst:153
+msgid "Running"
+msgstr "実行中"
+
+#: ../../source/workflows.rst:155
+msgid "Success (finished)"
+msgstr "成功 (終了)"
+
+#: ../../source/workflows.rst:157
+msgid "Cancel"
+msgstr "取り消し"
+
+#: ../../source/workflows.rst:159
+msgid "Error"
+msgstr "エラー"
+
+#: ../../source/workflows.rst:161
+msgid "Failed"
+msgstr "失敗"
+
+#: ../../source/workflows.rst:163
+msgid "In the workflow scheme, canceling a job cancels the branch, while canceling the workflow job cancels the entire workflow."
+msgstr "ワークフローのスキームでは、ジョブを取り消すとブランチが取り消され、ワークフロージョブを取り消すとワークフロー全体が取り消されます。"
+
+#: ../../source/workflows.rst:167
+msgid "Role-Based Access Controls"
+msgstr "ロールベースのアクセス制御"
+
+#: ../../source/workflows.rst:171
+msgid "To edit and delete a workflow job template, you must have the admin role. To create a workflow job template, you must be an organization admin or a system admin. However, you can run a workflow job template that contains job templates you don't have permissions for. Similar to projects, organization admins can create a blank workflow and then grant an 'admin_role' to a low-level user, after which they can go about delegating more access and building the graph. You must have execute access to a job template to add it to a workflow job template."
+msgstr "ワークフロージョブテンプレートの編集や削除には、管理者ロールが必要です。ワークフロージョブテンプレートを作成するには、組織管理者またはシステム管理者でなければなりません。ただし、パーミッションのないジョブテンプレートが含まれるワークフロージョブテンプレートを実行することは可能です。プロジェクトと同様に、組織管理者は空のワークフローを作成してから、「admin_role」を管理者権限を持たないユーザーに割り当てると、それらのユーザーは追加のアクセスを委任したり、グラフを作成したりできます。ジョブテンプレートをワークフロージョブテンプレートに追加するには、ジョブテンプレートへの実行アクセスがなればなりません。"
+
+#: ../../source/workflows.rst:173
+msgid "Other tasks such as the ability to make a duplicate copy and re-launch a workflow can also be performed, depending on what kinds of permissions are granted to a particular user. Generally, you should have permissions to all the resources used in a workflow (like job templates) before relaunching or making a copy."
+msgstr "特定のユーザーに付与されるパーミッションの種類に応じて、複製コピーを作成したり、ワークフローを再起動する機能などの他のタスクを実行することもできます。通常は、再起動やコピーの作成を実行する前に (ジョブテンプレートなどの) ワークフローで使用されるすべてのリソースに対するパーミッションが必要になります。"
+
+#: ../../source/workflows.rst:177
+msgid "For more information on performing the tasks described in this section, refer to the :ref:`Administration Guide <administration:ag_start>`."
+msgstr "このセクションに記載のタスクの実行に関する情報は、「:ref:`Administration Guide <administration:ag_start>`」を参照してください。"
+

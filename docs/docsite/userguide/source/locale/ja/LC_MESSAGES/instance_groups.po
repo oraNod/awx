@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/instance_groups.rst:4
+msgid "Instance Groups"
+msgstr "インスタンスグループ"
+
+#: ../../source/instance_groups.rst:9
+msgid "An :term:`Instance Group` provides the ability to group instances in a clustered environment. Additionally, policies dictate how instance groups behave and how jobs are executed. The following view displays the capacity levels based on policy algorithms:"
+msgstr "「:term:`Instance Group`」を使用することで、クラスター環境でインスタンスをグループ化できます。また、ポリシーで、インスタンスグループの動作や、ジョブの実行方法を指定します。以下のビューでは、ポリシーのアルゴリズムをもとに、容量レベルを表示します。"
+
+#: ../../source/instance_groups.rst:11
+msgid "|Instance Group policy example|"
+msgstr "|Instance Group policy example|"
+
+#: ../../source/instance_groups.rst:15
+msgid "For more information about the policy or rules associated with instance groups, see the :ref:`ag_instance_groups` section of the |ata|."
+msgstr "インスタンスグループに関連するポリシーやルールの詳細情報は、|ata| の :ref:`ag_instance_groups` のセクションを参照してください。"
+
+#: ../../source/instance_groups.rst:17
+msgid "If you want to connect your instance group to a container, refer to :ref:`ag_container_groups` for further detail."
+msgstr "コンテナーにインスタンスグループを接続する場合には、:ref:`ag_container_groups` を参照してください。"
+
+#: ../../source/instance_groups.rst:19
+msgid "For an in-depth discussion on these concepts, refer to the *Feature Spotlight: Instance Groups and Isolated Nodes* `blog <https://www.ansible.com/blog/ansible-tower-feature-spotlight-instance-groups-and-isolated-nodes>`_."
+msgstr "このような概念に関する詳細説明は、「Feature Spotlight: Instance Groups and Isolated Nodes の `blog <https://www.ansible.com/blog/ansible-tower-feature-spotlight-instance-groups-and-isolated-nodes>`_」を参照してください。"
+
+#: ../../source/instance_groups.rst:24
+msgid "Create an instance group"
+msgstr "インスタンスグループの作成"
+
+#: ../../source/instance_groups.rst:26
+msgid "To create a new instance group:"
+msgstr "新規のインスタンスグループを作成するには、以下を実行します。"
+
+#: ../../source/instance_groups.rst:28
+msgid "Click **Instance Groups** from the left navigation menu to open the Instance Groups configuration window."
+msgstr "左のナビゲーションバーで **インスタンスグループ** をクリックして、インスタンスグループの設定画面を開きます。"
+
+#: ../../source/instance_groups.rst:30
+msgid "Click the **Add** button and select **Create Instance Group**."
+msgstr "**追加** ボタンをクリックして、**インスタンスグループの作成** を選択します。"
+
+#: ../../source/instance_groups.rst:32
+msgid "|IG - create new IG|"
+msgstr "|IG - create new IG|"
+
+#: ../../source/instance_groups.rst:36
+msgid "Enter the appropriate details into the following fields:"
+msgstr "以下のフィールドに該当する詳細を入力します。"
+
+#: ../../source/instance_groups.rst:38
+msgid "**Name**. Names must be unique and must not be named *controller*."
+msgstr "**名前**: 名前は一意でなければならず、*controller* という名前に指定しないようにしてください。"
+
+#: ../../source/instance_groups.rst:39
+msgid "**Policy Instance Minimum**. Enter the minimum number of instances to automatically assign to this group when new instances come online."
+msgstr "**ポリシーインスタンス (最小)**: 新規インスタンスがオンラインになると、このグループに自動的に最小限割り当てられるインスタンス数を入力します。"
+
+#: ../../source/instance_groups.rst:40
+msgid "**Policy Instance Percentage**. Use the slider to select a minimum percentage of instances to automatically assign to this group when new instances come online."
+msgstr "**ポリシーインスタンス (割合)**: スライダーを使用して、新規インスタンスがオンラインになると、このグループに自動的に最小限割り当てられるインスタンスの割合を選択します。"
+
+#: ../../source/instance_groups.rst:44
+msgid "Policy Instance fields are not required to create a new instance group. If you do not specify values, then the Policy Instance Minimum and Policy Instance Percentage default to 0."
+msgstr "ポリシーインスタンスフィールドは、新規インスタンスグループの作成には必須ではありません。値を指定しない場合は、ポリシーインスタンス (最小) およびポリシーインスタンス (割合) は 0 にデフォルト設定されます。"
+
+#: ../../source/instance_groups.rst:46
+msgid "Click **Save**."
+msgstr "**保存** をクリックします。"
+
+#: ../../source/instance_groups.rst:48
+msgid "Once the instance group is successfully created, the **Details** tab of the newly created instance group remains, which allows you to review and edit your instance group information. This is the same menu that is opened if the Edit (|edit-button|) button is clicked from the **Instance Group** link. You can also edit **Instances** and review **Jobs** associated with this instance group."
+msgstr "インスタンスグループが正常に作成されると、新規作成されたインスタンスグループの **詳細** タブがそのまま表示され、インスタンスグループの情報をレビューして編集することができます。これは、**インスタンスグループ** リンクから編集 (|edit-button|) ボタンをクリックして開くメニューと同じです。また、**インスタンス** を編集して、このインスタンスグループのに関連付けられた **ジョブ** をレビューすることも可能です。"
+
+#: ../../source/instance_groups.rst:52
+msgid "|IG - example IG successfully created|"
+msgstr "|IG - example IG successfully created|"
+
+#: ../../source/instance_groups.rst:58
+msgid "Associate instances to an instance group"
+msgstr "インスタンスグループのへのインスタンスの関連付け"
+
+#: ../../source/instance_groups.rst:60
+msgid "To associate instances to an instance group:"
+msgstr "インスタンスグループにインスタンスを関連付けます。"
+
+#: ../../source/instance_groups.rst:62
+msgid "Click the **Instances** tab of the Instance Group window and click the **Add** button."
+msgstr "インスタンスグループ画面の **インスタンス** タブをクリックして、**追加** ボタンをクリックします。"
+
+#: ../../source/instance_groups.rst:64
+msgid "Click the checkbox next to one or more available instances from the list to select the instance(s) you want to add to the instance group."
+msgstr "リストから、1 つまたは複数の利用可能なインスタンスの横にあるチェックボックスをクリックして、インスタンスグループに追加するインスタンスを選択します。"
+
+#: ../../source/instance_groups.rst:66
+msgid "|IG - select instances|"
+msgstr "|IG - select instances|"
+
+#: ../../source/instance_groups.rst:70
+msgid "In the following example, the instances added to the instance group displays along with information about their capacity."
+msgstr "以下の例では、インスタンスグループに追加するインスタンスが、その容量に関する情報と合わせて表示されます。"
+
+#: ../../source/instance_groups.rst:72
+msgid "|IG - instances in IG|"
+msgstr "|IG - instances in IG|"
+
+#: ../../source/instance_groups.rst:76
+msgid "This view also allows you to edit some key attributes associated with the instances in your instance group:"
+msgstr "このビューでは、インスタンスグループに含まれるインスタンスに関連付けられた主要な属性を編集できます。"
+
+#: ../../source/instance_groups.rst:78
+msgid "|IG - instances in IG callouts|"
+msgstr "|IG - instances in IG callouts|"
+
+#: ../../source/instance_groups.rst:84
+msgid "View jobs associated with an instance group"
+msgstr "インスタンスグループに関連付けられたジョブの表示"
+
+#: ../../source/instance_groups.rst:86
+msgid "To view the jobs associated with the instance group, click the **Jobs** tab of the Instance Group window and then click **Expanded** to expand the view to show details about each job."
+msgstr "インスタンスグループに関連付けられているジョブを表示するには、インスタンスグループウィンドウの **ジョブ** タブをクリックしてから、**展開** をクリックし、各ジョブの詳細が表示されるようにビューを展開します。"
+
+#: ../../source/instance_groups.rst:88
+msgid "|IG - instances jobs|"
+msgstr "|IG - instances jobs|"
+
+#: ../../source/instance_groups.rst:92
+msgid "Each job displays the job status, ID, and name; type of job, time started and completed, who started the job; and which template, inventory, project, and credential were used."
+msgstr "ジョブごとに、ジョブの状態、ID、名前、ジョブの種類、開始時間、完了時間、使用するテンプレート、インベントリー、プロジェクト、認証情報などが表示されます。"
+
+#: ../../source/instance_groups.rst:94
+msgid "The instances are run in accordance with instance group policies. Refer to :ref:`Instance Group Policies <administration:ag_instance_group_policies>` in the |ata|."
+msgstr "インスタンスは、インスタンスグループのポリシーに沿って実行されます。『|ata|』の「:ref:`Instance Group Policies <administration:ag_instance_group_policies>`」を参照してください。"
+

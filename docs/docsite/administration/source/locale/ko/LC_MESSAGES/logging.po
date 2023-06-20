@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/logging.rst:5
+msgid "Logging and Aggregation"
+msgstr "로깅 및 집계"
+
+#: ../../source/logging.rst:18
+msgid "Logging is a feature that provides the capability to send detailed logs to several kinds of 3rd party external log aggregation services. Services connected to this data feed serve as a useful means in gaining insight into the controller usage or technical trends. The data can be used to analyze events in the infrastructure, monitor for anomalies, and correlate events from one service with events in another. The types of data that are most useful to the controller are job fact data, job events/job runs, activity stream data, and log messages. The data is sent in JSON format over a HTTP connection using minimal service-specific tweaks engineered in a custom handler or via an imported library."
+msgstr "로깅은 여러 종류의 타사 외부 로그 집계 서비스에 자세한 로그를 보낼 수 있는 기능입니다. 이 데이터 피드에 연결된 서비스는 컨트롤러 사용 또는 기술 추세에 대한 인사이트를 얻는 데 유용한 수단 역할을 합니다. 데이터를 사용하여 인프라의 이벤트를 분석하고, 변칙을 모니터링하고, 한 서비스의 이벤트와 다른 서비스의 이벤트 간 상관 관계를 도출할 수 있습니다. 컨트롤러에 가장 유용한 데이터 유형은 작업 팩트 데이터, 작업 이벤트/작업 실행, 활동 스트림 데이터, 로그 메시지입니다. 데이터는 가져온 라이브러리를 통해 또는 사용자 지정 처리기에서 엔지니어링된 최소 서비스별 조정을 사용하여 HTTP 연결을 통해 JSON 형식으로 전송됩니다."
+
+#: ../../source/logging.rst:20
+msgid "Installing |at| will install a newer version of rsyslog, which will replace the version that comes with the RHEL base. The version of rsyslog that is installed by |at| does not include the following rsyslog modules:"
+msgstr "|at|를 설치하면 최신 버전의 rsyslog가 설치되어, RHEL 기반 버전을 교체합니다. |at|에서 설치하는 rsyslog 버전에는 다음 rsyslog 모듈이 포함되어 있지 않습니다."
+
+#: ../../source/logging.rst:22
+msgid "rsyslog-udpspoof.x86_64"
+msgstr "rsyslog-udpspoof.x86_64"
+
+#: ../../source/logging.rst:23
+msgid "rsyslog-libdbi.x86_64"
+msgstr "rsyslog-libdbi.x86_64"
+
+#: ../../source/logging.rst:25
+msgid "After installing |at|, use only the controller provided rsyslog package for any logging outside of the controller that may have previously been done with the RHEL provided rsyslog package. If you already use rsyslog for logging system logs on the controller instances, you can continue to use rsyslog to handle logs from outside of the controller by running a separate rsyslog process (using the same version of rsyslog that the controller is), and pointing it to a separate /etc/rsyslog.conf."
+msgstr "|at|를 설치한 후에는 이전에 RHEL에서 제공한 rsyslog 패키지를 사용하여 수행되었을 수 있는, 컨트롤러 외부의 모든 로깅에 컨트롤러에서 제공한 rsyslog 패키지만 사용합니다. 컨트롤러 인스턴스에서 시스템 로그 로깅에 rsyslog를 이미 사용하고 있는 경우, 별도의 rsyslog 프로세스를 실행하고(컨트롤러와 동일한 버전의 rsyslog 사용) 별도의 /etc/octets.conf를 가리키면 계속 rsyslog를 사용하여 컨트롤러 외부의 로그를 처리할 수 있습니다."
+
+#: ../../source/logging.rst:29
+msgid "For systems that use rsyslog outside of the controller (on the controller VM/machine), consider any conflict that may arise with also using new version of rsyslog that comes with the controller."
+msgstr "컨트롤러 외부(컨트롤러 VM/머신)에서 rsyslog를 사용하는 시스템의 경우 컨트롤러와 함께 제공되는 새 rsyslog 버전도 사용할 때 발생할 수 있는 모든 충돌을 고려하십시오."
+
+#: ../../source/logging.rst:31
+msgid "You can configure from the ``/api/v2/settings/logging/`` endpoint how the controller rsyslog process handles messages that have not yet been sent in the event that your external logger goes offline:"
+msgstr "``/api/v2/settings/logging/`` 끝점에서 외부 로거가 오프라인 상태로 전환될 경우 컨트롤러 rsyslog 프로세스에서 아직 전송되지 않은 메시지를 처리하는 방법을 구성할 수 있습니다."
+
+#: ../../source/logging.rst:33
+msgid "``LOG_AGGREGATOR_MAX_DISK_USAGE_GB``: specifies the amount of data to store (in gigabytes) during an outage of the external log aggregator (defaults to 1). Equivalent to the ``rsyslogd queue.maxdiskspace`` setting."
+msgstr "``LOG_AGGREGATOR_MAX_DISK_USAGE_GB``: 외부 로그 수집기가 중단된 동안 저장할 데이터 양(GB)을 지정합니다(기본값: 1). ``rsyslogd queue.maxdiskspace`` 설정에 해당합니다."
+
+#: ../../source/logging.rst:35
+msgid "``LOG_AGGREGATOR_MAX_DISK_USAGE_PATH``: specifies the location to persist logs that should be retried after an outage of the external log aggregator (defaults to ``/var/lib/awx``). Equivalent to the ``rsyslogd queue.spoolDirectory`` setting."
+msgstr "``LOG_AGGREGATOR_MAX_DISK_USAGE_PATH``: 외부 로그 수집기가 중단된 후 다시 시도해야 하는 로그를 유지할 위치를 지정합니다(기본값: ``/var/lib/awx``). ``rsyslogd queue.spoolDirectory`` 설정에 해당합니다."
+
+#: ../../source/logging.rst:37
+msgid "For example, if Splunk goes offline, rsyslogd stores a queue on the disk until Splunk comes back online. By default, it will store up to 1GB of events (while Splunk is offline) but you can make that more than 1GB if necessary, or change the path where you save the queue."
+msgstr "예를 들어 Splunk가 오프라인 상태가 되면 rsyslogd는 Splunk가 다시 온라인 상태가 될 때까지 디스크에 큐를 저장합니다. 기본적으로 최대 1GB의 이벤트를 저장하지만(Splunk가 오프라인 상태인 동안), 필요한 경우 1GB보다 큰 값을 설정하거나 큐를 저장하는 경로를 변경할 수 있습니다."
+
+#: ../../source/logging.rst:41
+msgid "Loggers"
+msgstr "로거"
+
+#: ../../source/logging.rst:43
+msgid "Below are special loggers (except for ``awx``, which constitutes generic server logs) that provide large amount of information in a predictable structured or semi-structured format, following the same structure as one would expect if obtaining the data from the API:"
+msgstr "다음은 API에서 데이터를 가져올 때 예상하는 것과 동일한 구조에 따라 예측 가능한 정형 또는 반정형 형식으로 많은 양의 정보를 제공하는 특수 로거입니다(일반 서버 로그를 구성하는 ``awx`` 제외)."
+
+#: ../../source/logging.rst:45
+msgid "``job_events``: Provides data returned from the Ansible callback module"
+msgstr "``job_events``: Ansible 콜백 모듈에서 반환된 데이터를 제공합니다."
+
+#: ../../source/logging.rst:46
+msgid "``activity_stream``: Displays the record of changes to the objects within the |at| application"
+msgstr "``activity_stream``: |at| 애플리케이션 내의 오브젝트에 대한 변경 사항 레코드를 표시합니다."
+
+#: ../../source/logging.rst:47
+msgid "``system_tracking``: Provides fact data gathered by Ansible ``setup`` module (i.e. ``gather_facts: True``) when job templates are ran with **Enable Fact Cache** selected"
+msgstr "``system_tracking``: 작업 템플릿이 **팩트 캐시 활성화**를 선택하여 실행된 경우 Ansible ``setup`` 모듈이 수집하는 팩트 데이터(즉, ``gather_facts: True``)를 제공합니다."
+
+#: ../../source/logging.rst:48
+msgid "``awx``: Provides generic server logs, which include logs that would normally be written to a file. It contains the standard metadata that all logs have, except it only has the message from the log statement."
+msgstr "``awx``: 일반적으로 파일에 기록되는 로그를 포함하는 일반 서버 로그를 제공합니다. 로그 문의 메시지만 포함된다는 점을 제외하면 모든 로그에 있는 표준 메타데이터가 포함됩니다."
+
+#: ../../source/logging.rst:50
+msgid "These loggers only use log-level of INFO, except for the ``awx`` logger, which may be any given level."
+msgstr "지정된 모든 수준일 수 있는 ``awx`` 로거를 제외하고, 이러한 로거는 INFO 로그 수준만 사용합니다."
+
+#: ../../source/logging.rst:52
+msgid "Additionally, the standard controller logs are be deliverable through this same mechanism. It is apparent how to enable or disable each of these five sources of data without manipulating a complex dictionary in your local settings file, as well as adjust the log-level consumed from the standard controller logs."
+msgstr "또한 이 동일한 메커니즘을 통해 표준 컨트롤러 로그를 전달할 수 있습니다. 로컬 설정 파일에서 복잡한 사전을 조작하지 않고 이러한 5개 데이터 소스를 각각 활성화 또는 비활성화하는 방법과 표준 컨트롤러 로그에서 사용되는 로그 수준을 조정하는 방법이 명백합니다."
+
+#: ../../source/logging.rst:54
+msgid "To configure various logging components in |at|, click **Settings** from the left navigation bar then select **Logging settings** from the list of System options."
+msgstr "|at|에서 다양한 로깅 구성 요소를 구성하려면 왼쪽 탐색 모음에서 **설정**을 클릭하고 시스템 옵션 목록에서 **로깅 설정**을 선택합니다."
+
+#: ../../source/logging.rst:57
+msgid "Log message schema"
+msgstr "로그 메시지 스키마"
+
+#: ../../source/logging.rst:59
+msgid "Common schema for all loggers:"
+msgstr "모든 로거의 공통 스키마:"
+
+#: ../../source/logging.rst:61
+msgid "``cluster_host_id``: Unique identifier of the host within the controller cluster"
+msgstr "``cluster_host_id``: 컨트롤러 클러스터 내에서 호스트의 고유 식별자입니다."
+
+#: ../../source/logging.rst:62
+msgid "``level``: Standard python log level, roughly reflecting the significance of the event All of the data loggers as a part of this feature use INFO level, but the other controller logs will use different levels as appropriate"
+msgstr "``level``: 표준 Python 로그 수준으로, 이 기능의 일부인 모든 데이터 로거는 INFO 수준을 사용하지만 다른 컨트롤러 로그는 필요에 따라 다른 수준을 사용하는 경우의 중요성을 대략적으로 반영합니다."
+
+#: ../../source/logging.rst:63
+msgid "``logger_name``: Name of the logger we use in the settings, for example, \"activity_stream\""
+msgstr "``logger_name``: 설정에서 사용하는 로거의 이름입니다(예: \"activity_stream\")."
+
+#: ../../source/logging.rst:64
+msgid "``@timestamp``: Time of log"
+msgstr "``@timestamp``: 로그의 시간입니다."
+
+#: ../../source/logging.rst:65
+msgid "``path``: File path in code where the log was generated"
+msgstr "``path``: 로그가 생성된 코드의 파일 경로입니다."
+
+#: ../../source/logging.rst:69
+msgid "Activity stream schema"
+msgstr "활동 스트림 스키마"
+
+#: ../../source/logging.rst:71
+#: ../../source/logging.rst:91
+msgid "(common): This uses all the fields common to all loggers listed above"
+msgstr "(공통): 위에 나열된 모든 로거에 공통된 모든 필드를 사용합니다."
+
+#: ../../source/logging.rst:72
+msgid "``actor``: Username of the user who took the action documented in the log"
+msgstr "``actor``: 로그에 문서화된 작업을 수행한 사용자의 사용자 이름입니다."
+
+#: ../../source/logging.rst:73
+msgid "``changes``: JSON summary of what fields changed, and their old/new values."
+msgstr "``changes``: 변경된 필드와 이전/새 값에 대한 JSON 요약입니다."
+
+#: ../../source/logging.rst:74
+msgid "``operation``: The basic category of the changed logged in the activity stream, for instance, \"associate\"."
+msgstr "``operation``: 활동 스트림에 로깅된 변경 사항의 기본 카테고리입니다(예: \"associate\")."
+
+#: ../../source/logging.rst:75
+msgid "``object1``: Information about the primary object being operated on, consistent with what we show in the activity stream"
+msgstr "``object1``: 작업 중인 기본 오브젝트에 대한 정보로, 활동 스트림에 표시되는 내용과 일치합니다."
+
+#: ../../source/logging.rst:76
+msgid "``object2``: If applicable, the second object involved in the action"
+msgstr "``object2``: 적용 가능한 경우 작업과 관련된 두 번째 오브젝트입니다."
+
+#: ../../source/logging.rst:80
+msgid "Job event schema"
+msgstr "작업 이벤트 스키마"
+
+#: ../../source/logging.rst:82
+msgid "This logger reflects the data being saved into job events, except when they would otherwise conflict with expected standard fields from the logger, in which case the fields are nested. Notably, the field host on the ``job_event`` model is given as ``event_host``. There is also a sub-dictionary field, ``event_data`` within the payload, which contains different fields depending on the specifics of the Ansible event."
+msgstr "이 로거는 로거에서 예상되는 표준 필드와 충돌하여 필드가 중첩되는 경우를 제외하고 작업 이벤트에 저장되는 데이터를 반영합니다. 특히, ``job_event`` 모델의 호스트 필드는 ``event_host``로 제공됩니다. 페이로드에는 Ansible 이벤트의 세부 사항에 따라 다양한 필드를 포함하는 하위 사전 필드인 ``event_data``도 있습니다."
+
+#: ../../source/logging.rst:84
+msgid "This logger also includes the common fields."
+msgstr "이 로거에는 공통 필드도 포함됩니다."
+
+#: ../../source/logging.rst:87
+msgid "Scan / fact / system tracking data schema"
+msgstr "검사/사실/시스템 추적 데이터 스키마"
+
+#: ../../source/logging.rst:89
+msgid "These contain a detailed dictionary-type fields that are either services, packages, or files."
+msgstr "여기에는 서비스, 패키지 또는 파일 중 하나인 자세한 사전 유형 필드가 포함됩니다."
+
+#: ../../source/logging.rst:92
+msgid "``services``: For services scans, this field is included and has keys based on the name of the service. **NOTE**: Periods are disallowed by elastic search in names, and are replaced with \"_\" by our log formatter"
+msgstr "``services``: 서비스 검사의 경우 이 필드가 포함되어 있으며 서비스 이름을 기반으로 하는 키가 있습니다. **참고**: 이름에 대한 탄력적인 검색에서는 마침표를 사용할 수 없으며, 로그 포맷터에 의해 \"_\"로 대체됩니다."
+
+#: ../../source/logging.rst:93
+msgid "``package``: Included for log messages from package scans"
+msgstr "``package``: 패키지 검사의 로그 메시지를 위해 포함됩니다."
+
+#: ../../source/logging.rst:94
+msgid "``files``: Included for log messages from file scans"
+msgstr "``files``: 파일 검사의 로그 메시지를 위해 포함됩니다."
+
+#: ../../source/logging.rst:95
+msgid "``host``: Name of host scan applies to"
+msgstr "``host``: 검사가 적용되는 호스트의 이름입니다."
+
+#: ../../source/logging.rst:96
+msgid "``inventory_id``: Inventory id host is inside of"
+msgstr "``inventory_id``: 호스트가 속하는 인벤토리 ID입니다."
+
+#: ../../source/logging.rst:100
+msgid "Job status changes"
+msgstr "작업 상태 변경"
+
+#: ../../source/logging.rst:102
+msgid "This is a intended to be a lower-volume source of information about changes in job states compared to job events, and also intended to capture changes to types of unified jobs other than job template based jobs."
+msgstr "작업 이벤트에 비해 더 적은 볼륨의 작업 상태 변경 정보 소스로 사용되며, 작업 템플릿 기반 작업 이외의 통합 작업 유형에 대한 변경 사항을 캡처하는 데에도 사용됩니다."
+
+#: ../../source/logging.rst:104
+msgid "In addition to common fields, these logs include fields present on the job model."
+msgstr "이러한 로그에는 공통 필드 외에도 작업 모델에 있는 필드가 포함됩니다."
+
+#: ../../source/logging.rst:108
+msgid "Controller logs"
+msgstr "컨트롤러 로그"
+
+#: ../../source/logging.rst:110
+msgid "In addition to the common fields, this contains a ``msg`` field with the log message. Errors contain a separate ``traceback`` field. These logs can be enabled or disabled with the ``ENABLE EXTERNAL LOGGING`` option from the Logging settings page."
+msgstr "일반 필드 외에도 로그 메시지가 있는 ``msg`` 필드가 포함됩니다. 오류에는 별도의 ``traceback`` 필드가 포함됩니다. 로깅 설정 페이지의 ``ENABLE EXTERNAL LOGGING`` 옵션을 사용하여 로그를 활성화하거나 비활성화할 수 있습니다."
+
+#: ../../source/logging.rst:113
+msgid "Logging Aggregator Services"
+msgstr "로깅 수집기 서비스"
+
+#: ../../source/logging.rst:115
+msgid "The logging aggregator service works with the following monitoring and data analysis systems:"
+msgstr "로깅 수집기 서비스는 다음과 같은 모니터링 및 데이터 분석 시스템에서 작동합니다."
+
+#: ../../source/logging.rst:121
+msgid "Splunk"
+msgstr "Splunk"
+
+#: ../../source/logging.rst:123
+msgid "|At|'s Splunk logging integration uses the Splunk HTTP Collector. When configuring a SPLUNK logging aggregator, add the full URL to the HTTP Event Collector host, like in the following example:"
+msgstr "|At|의 Splunk 로깅 통합은 Splunk HTTP 수집기를 사용합니다. SPLUNK 로깅 수집기를 구성할 때 다음 예제와 같이 HTTP 이벤트 수집기 호스트의 전체 URL을 추가합니다."
+
+#: ../../source/logging.rst:146
+msgid "Splunk HTTP Event Collector listens on 8088 by default so it is necessary to provide the full HEC event URL (with port) in order for incoming requests to be processed successfully. These values are entered in the example below:"
+msgstr "Splunk HTTP 이벤트 수집기는 기본적으로 8088에서 수신 대기하므로 들어오는 요청이 성공적으로 처리되려면 전체 HEC 이벤트 URL(포트 포함)을 제공해야 합니다. 아래 예제에서는 다음 값을 입력합니다."
+
+#: ../../source/logging.rst:151
+msgid "For further instructions on configuring the HTTP Event Collector, refer to the `Splunk documentation`_."
+msgstr "HTTP 이벤트 수집기 구성에 대한 자세한 내용은 `Splunk documentation`_를 참조하십시오."
+
+#: ../../source/logging.rst:157
+msgid "Loggly"
+msgstr "Loggly"
+
+#: ../../source/logging.rst:159
+msgid "To set up the sending of logs through Loggly's HTTP endpoint, refer to https://www.loggly.com/docs/http-endpoint/. Loggly uses the URL convention described at http://logs-01.loggly.com/inputs/TOKEN/tag/http/, which is shown inputted in the **Logging Aggregator** field in the example below:"
+msgstr "Loggly의 HTTP 끝점을 통해 로그 전송을 설정하려면 https://www.loggly.com/docs/http-endpoint/를 참조하십시오. Loggly는 http://logs-01.loggly.com/inputs/TOKEN/tag/http/에 설명된 URL 규칙을 사용합니다. 이 URL 규칙은 아래 예제의 **로깅 수집기** 필드에 입력되어 있습니다."
+
+#: ../../source/logging.rst:165
+msgid "Sumologic"
+msgstr "Sumologic"
+
+#: ../../source/logging.rst:167
+msgid "In Sumologic, create a search criteria containing the json files that provide the parameters used to collect the data you need."
+msgstr "Sumologic에서 필요한 데이터를 수집하는 데 사용되는 매개변수를 제공하는 json 파일이 포함된 검색 기준을 생성합니다."
+
+#: ../../source/logging.rst:173
+msgid "Elastic stack (formerly ELK stack)"
+msgstr "탄력적 스택(이전 ELK 스택)"
+
+#: ../../source/logging.rst:175
+msgid "If starting from scratch, standing up your own version the elastic stack, the only change you required is to add the following lines to the logstash ``logstash.conf`` file:"
+msgstr "처음부터 시작하여 고유한 버전의 탄력적 스택을 구축하는 경우 필요한 변경 사항은 logstash ``logstash.conf`` 파일에 다음 행을 추가하는 것뿐입니다."
+
+#: ../../source/logging.rst:187
+msgid "Backward-incompatible changes were introduced with Elastic 5.0.0, and different configurations may be required depending on what versions you are using."
+msgstr "Elastic 5.0.0에서 이전 버전과 호환되지 않는 변경 사항이 도입되었으며, 사용 중인 버전에 따라 다른 구성이 필요할 수도 있습니다."
+
+#: ../../source/logging.rst:192
+msgid "Set Up Logging"
+msgstr "로깅 설정"
+
+#: ../../source/logging.rst:195
+msgid "Log Aggregation"
+msgstr "로그 집계"
+
+#: ../../source/logging.rst:197
+msgid "To set up logging to any of the aggregator types:"
+msgstr "수집기 유형 중 하나에 로깅하도록 설정하려면 다음을 수행합니다."
+
+#: ../../source/logging.rst:199
+#: ../../source/logging.rst:257
+msgid "Click **Settings** from the left navigation bar."
+msgstr "왼쪽 탐색 모음에서 **설정**을 클릭합니다."
+
+#: ../../source/logging.rst:201
+#: ../../source/logging.rst:259
+msgid "Under the list of System options, click to select **Logging settings**."
+msgstr "시스템 옵션 목록에서 **로깅 설정**을 클릭하여 선택합니다."
+
+#: ../../source/logging.rst:203
+#: ../../source/logging.rst:261
+msgid "At the bottom of the Logging settings screen, click **Edit**."
+msgstr "로깅 설정 화면 하단에서 **편집**을 클릭합니다."
+
+#: ../../source/logging.rst:205
+msgid "Set the configurable options from the fields provided:"
+msgstr "제공된 필드에서 구성 가능한 옵션을 설정합니다."
+
+#: ../../source/logging.rst:207
+msgid "**Enable External Logging**: Click the toggle button to **ON** if you want to send logs to an external log aggregator."
+msgstr "**외부 로깅 활성화**: 외부 로그 수집기에 로그를 전송하려면 토글 버튼을 클릭하여 **ON**으로 설정합니다."
+
+#: ../../source/logging.rst:208
+msgid "**Logging Aggregator**: Enter the hostname or IP address you want to send logs."
+msgstr "**로깅 수집기**: 로그를 전송할 호스트 이름 또는 IP 주소를 입력합니다."
+
+#: ../../source/logging.rst:209
+msgid "**Logging Aggregator Port**: Specify the port for the aggregator if it requires one."
+msgstr "**로깅 수집기 포트**: 필요한 경우 수집기 포트를 지정합니다."
+
+#: ../../source/logging.rst:213
+msgid "When the connection type is HTTPS, you can enter the hostname as a URL with a port number and therefore, you are not required to enter the port again. But TCP and UDP connections are determined by the hostname and port number combination, rather than URL. So in the case of TCP/UDP connection, supply the port in the specified field. If instead a URL is entered in host field (**Logging Aggregator** field), its hostname portion will be extracted as the actual hostname."
+msgstr "연결 유형이 HTTPS인 경우 포트 번호를 포함하는 URL로 호스트 이름을 입력할 수 있으므로 포트를 다시 입력할 필요가 없습니다. 그러나 TCP 및 UDP 연결은 URL이 아닌 호스트 이름과 포트 번호의 조합으로 결정됩니다. 따라서 TCP/UDP 연결의 경우 지정된 필드에 포트를 제공합니다. 호스트 필드(**로깅 수집기** 필드)에 URL을 대신 입력하면 호스트 이름 부분이 실제 호스트 이름으로 추출됩니다."
+
+#: ../../source/logging.rst:215
+msgid "**Logging Aggregator Type**: Click to select the aggregator service from the drop-down menu:"
+msgstr "**로깅 수집기 유형**: 드롭다운 메뉴에서 수집기 서비스를 클릭하여 선택합니다."
+
+#: ../../source/logging.rst:219
+msgid "**Logging Aggregator Username**: Enter the username of the logging aggregator if it requires it."
+msgstr "**로깅 수집기 사용자 이름**: 필요한 경우 로깅 수집기의 사용자 이름을 입력합니다."
+
+#: ../../source/logging.rst:220
+msgid "**Logging Aggregator Password/Token**: Enter the password of the logging aggregator if it requires it."
+msgstr "**로깅 수집기 암호/토큰**: 필요한 경우 로깅 수집기의 암호를 입력합니다."
+
+#: ../../source/logging.rst:221
+msgid "**Log System Tracking Facts Individually**: Click the tooltip |help| icon for additional information whether or not you want to turn it on, or leave it off by default."
+msgstr "**시스템 추적 사실을 개별적으로 로깅**: 설정할지 또는 기본값인 해제 상태로 둘지 여부에 대한 추가 정보를 보려면 툴팁 |help| 아이콘을 클릭합니다."
+
+#: ../../source/logging.rst:222
+msgid "**Logging Aggregator Protocol**: Click to select a connection type (protocol) to communicate with the log aggregator. Subsequent options vary depending on the selected protocol."
+msgstr "**로깅 수집기 프로토콜**: 로깅 수집기와 통신할 연결 유형(프로토콜)을 클릭하여 선택합니다. 후속 옵션은 선택한 프로토콜에 따라 달라집니다."
+
+#: ../../source/logging.rst:223
+msgid "**Logging Aggregator Level Threshold**: Select the level of severity you want the log handler to report."
+msgstr "**로깅 수집기 수준 임계값**: 로그 처리기에서 보고할 심각도 수준을 선택합니다."
+
+#: ../../source/logging.rst:224
+msgid "**TCP Connection Timeout**: Specify the connection timeout in seconds. This option is only applicable to HTTPS and TCP log aggregator protocols."
+msgstr "**TCP 연결 시간 초과**: 연결 시간 초과를 초 단위로 지정합니다. 이 옵션은 HTTPS 및 TCP 로그 수집기 프로토콜에만 적용할 수 있습니다."
+
+#: ../../source/logging.rst:225
+msgid "**Enable/disable HTTPS certificate verification**: Certificate verification is enabled by default for HTTPS log protocol. Click the toggle button to **OFF** if you do not want the log handler to verify the HTTPS certificate sent by the external log aggregator before establishing a connection."
+msgstr "**HTTPS 인증서 확인 활성화/비활성화**: HTTPS 로그 프로토콜의 경우 기본적으로 인증서 확인이 활성화되어 있습니다. 로그 처리기에서 연결을 설정하기 전에 외부 로그 수집기가 전송한 HTTPS 인증서를 확인하지 않으려면 토글 버튼을 클릭하여 **OFF**로 설정합니다."
+
+#: ../../source/logging.rst:226
+msgid "**Loggers to Send Data to the Log Aggregator Form**: All four types of data are pre-populated by default. Click the tooltip |help| icon next to the field for additional information on each data type. Delete the data types you do not want."
+msgstr "**로그 수집기 양식에 데이터를 전송하는 로거**: 기본적으로 네 가지 데이터 유형이 모두 미리 채워집니다. 각 데이터 유형에 대한 추가 정보를 보려면 필드 옆에 있는 툴팁 |help| 아이콘을 클릭합니다. 원하지 않는 데이터 유형을 삭제합니다."
+
+#: ../../source/logging.rst:227
+msgid "**Log Format For API 4XX Errors**: Configure a specific error message. See :ref:`logging-api-400-error-config` for further detail."
+msgstr "**API 4XX 오류의 로그 형식**: 특정 오류 메시지 구성. 자세한 내용은 :ref:`logging-api-400-error-config`를 참조하십시오."
+
+#: ../../source/logging.rst:231
+msgid "Review your entries for your chosen logging aggregation. Below is an example of one set up for Splunk:"
+msgstr "선택한 로깅 집계에 대한 입력을 검토합니다. 다음은 Splunk에 대해 설정된 로깅 집계 예제입니다."
+
+#: ../../source/logging.rst:235
+msgid "When done, click **Save** to apply the settings or **Cancel** to abandon the changes."
+msgstr "완료되면 **저장**을 클릭하여 설정을 적용하거나 **취소**를 클릭하여 변경 사항을 취소합니다."
+
+#: ../../source/logging.rst:237
+msgid "To verify if your configuration is set up correctly, click **Save** first then click **Test**. This sends a test log message to the log aggregator using the current logging configuration in |at|. You should check to make sure this test message was received by your external log aggregator."
+msgstr "구성이 올바르게 설정되었는지 확인하려면 먼저 **저장**을 클릭하고 **테스트**를 클릭합니다. 이렇게 하면 |at|의 현재 로깅 구성을 사용하여 테스트 로그 메시지가 로그 수집기로 전송됩니다. 외부 로그 수집기가 테스트 메시지를 수신했는지 확인해야 합니다."
+
+#: ../../source/logging.rst:241
+msgid "If the **Test** button is disabled, it is an indication that the fields are different than their initial values so save your changes first, and make sure the **Enable External Logging** toggle is set to ON."
+msgstr "**테스트** 버튼이 비활성화된 경우 필드가 초기 값과 다른 것이므로 먼저 변경 사항을 저장하고 **외부 로깅 활성화** 토글이 ON으로 설정되어 있는지 확인합니다."
+
+#: ../../source/logging.rst:247
+msgid "API 4XX Error Configuration"
+msgstr "API 4XX 오류 구성"
+
+#: ../../source/logging.rst:249
+msgid "When the API encounters an issue with a request, it will typically return an HTTP error code in the 400 range along with an error. When this happens, an error message will be generated in the log which follows the pattern:"
+msgstr "API가 요청에 문제가 발생하면 일반적으로 400 범위의 HTTP 오류 코드를 오류와 함께 반환합니다. 이 경우 패턴을 따르는 로그에 오류 메시지가 생성됩니다."
+
+#: ../../source/logging.rst:251
+msgid "``` status {status_code} received by user {user_name} attempting to access {url_path} from {remote_addr} ```"
+msgstr "``` status {status_code} received by user {user_name} attempting to access {url_path} from {remote_addr} ```"
+
+#: ../../source/logging.rst:255
+msgid "These messages can be configured as required. To modify the default API 4XX errors log message format, do the following:"
+msgstr "이러한 메시지는 필요에 따라 구성할 수 있습니다. 기본 API 4XX 오류 로그 메시지 형식을 수정하려면 다음을 수행하십시오."
+
+#: ../../source/logging.rst:263
+msgid "Modify the field **Log Format For API 4XX Errors**."
+msgstr "**API 4XX 오류의 로그 형식** 필드를 수정합니다."
+
+#: ../../source/logging.rst:265
+msgid "Items surrounded by ``{}`` will be substituted when the log error is generated. The following variables can be used:"
+msgstr "``{}`` 로 묶은 항목은 로그 오류가 생성될 때 대체됩니다. 다음 변수를 사용할 수 있습니다."
+
+#: ../../source/logging.rst:267
+msgid "**status_code**: The HTTP status code the API is returning"
+msgstr "**status_code**: API가 반환하는 HTTP 상태 코드"
+
+#: ../../source/logging.rst:268
+msgid "**user_name**: The name of the user that was authenticated when making the API request"
+msgstr "**user_name**: API 요청을 수행할 때 인증된 사용자의 이름"
+
+#: ../../source/logging.rst:269
+msgid "**url_path**: The path portion of the URL being called (aka the API endpoint)"
+msgstr "**url_path**: 호출 중인 URL의 경로 부분 (API 끝점 참조)"
+
+#: ../../source/logging.rst:270
+msgid "**remote_addr**: The remote address received by Controller"
+msgstr "**remote_addr**: 컨트롤러에서 수신한 원격 주소"
+
+#: ../../source/logging.rst:271
+msgid "**error**: The error message returned by the API or, if no error is specified, the HTTP status as text"
+msgstr "**error**: API에서 반환하거나 오류가 지정되지 않은 경우 HTTP 상태를 텍스트로 표시"
+
+#: ../../source/logging.rst:275
+msgid "Troubleshoot Logging"
+msgstr "로깅 문제 해결"
+
+#: ../../source/logging.rst:278
+msgid "Logging Aggregation"
+msgstr "로깅 집계"
+
+#: ../../source/logging.rst:279
+msgid "If you have sent a message with the test button to your configured logging service via http/https, but did not receive the message, check the ``/var/log/tower/rsyslog.err`` log file. This is where errors are stored if they occurred when authenticating rsyslog with an http/https external logging service. Note that if there are no errors, this file will not exist."
+msgstr "http/https를 통해 구성된 로깅 서비스에 테스트 버튼이 있는 메시지를 전송했지만 메시지가 수신되지 않은 경우 ``/var/log/tower/rsyslog.err`` 로그 파일을 확인합니다. http/https 외부 로깅 서비스에서 rsyslog를 인증할 때 발생한 오류는 이 파일에 저장됩니다. 오류가 없는 경우에는 이 파일이 존재하지 않습니다."
+
+#: ../../source/logging.rst:282
+msgid "API 4XX Errors"
+msgstr "API 4XX 오류"
+
+#: ../../source/logging.rst:283
+msgid "You can include the API error message for 4XX errors by modifying the log format for those messages. Refer to the :ref:`logging-api-400-error-config` section for more detail."
+msgstr "해당 메시지의 로그 형식을 수정하여 4XX 오류에 대한 API 오류 메시지를 포함할 수 있습니다. 자세한 내용은 :ref:`logging-api-400-error-config` 섹션을 참조하십시오."
+
+#: ../../source/logging.rst:286
+msgid "LDAP"
+msgstr "LDAP"
+
+#: ../../source/logging.rst:287
+msgid "You can enable logging messages for the LDAP adapter. Refer to the :ref:`ldap_logging` section for more detail."
+msgstr "LDAP 어댑터에 대한 로깅 메시지를 활성화할 수 있습니다. 자세한 내용은 :ref:`ldap_logging` 섹션을 참조하십시오."
+
+#: ../../source/logging.rst:290
+msgid "SAML"
+msgstr "SAML"
+
+#: ../../source/logging.rst:291
+msgid "You can enable logging messages for the SAML adapter the same way you can enable logging for LDAP. Refer to the :ref:`ldap_logging` section for more detail."
+msgstr "LDAP에 대한 로깅을 활성화할 수 있는 방식과 동일하게 SAML 어댑터의 로깅 메시지를 활성화할 수 있습니다. 자세한 내용은 :ref:`ldap_logging` 섹션을 참조하십시오."
+

@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/scm-inv-source.rst:4
+msgid "Inventory File Importing"
+msgstr "清单文件导入"
+
+#: ../../source/scm-inv-source.rst:10
+msgid "The controller allows you to choose an inventory file from source control, rather than creating one from scratch. This function is the same as custom inventory scripts, except that the contents are obtained from source control instead of editing their contents browser. This means, the files are non-editable and as inventories are updated at the source, the inventories within the projects are also updated accordingly, including the ``group_vars`` and ``host_vars`` files or directory associated with them. SCM types can consume both inventory files and scripts, the overlap between inventory files and custom types in that both do scripts."
+msgstr "控制器允许用户从来源控制中选择清单文件的功能，而不是从头开始创建清单文件。这个功能与自定义清单脚本相同，唯一的不同是从源控制系统获取内容而不是编辑其内容浏览器。这意味着，这些文件不可编辑，并且因为清单在来源中更新，项目内的清单也会相应更新，包括与它们关联的 ``group_vars`` 和 ``host_vars`` 文件或目录。SCM 类型可能会消耗清单文件和脚本、清单文件和自定义类型之间的重叠，两者均编写脚本。"
+
+#: ../../source/scm-inv-source.rst:12
+msgid "Any imported hosts will have a description of \"imported\" by default. This can be overridden by setting the ``_awx_description`` variable on a given host. For example, if importing from a sourced .ini file, you could add the following host variables:"
+msgstr "默认情况下，任何导入的主机都会有一个 \"imported\" 的描述。这可以通过在给定主机上设置 ``_awx_description`` 变量来覆盖。例如，如果从源的 .ini 文件中导入，您可以添加以下主机变量："
+
+#: ../../source/scm-inv-source.rst:20
+msgid "Similarly, group descriptions also default to \"imported\", but can be overridden by the ``_awx_description`` as well."
+msgstr "同样，组描述也默认为 \"imported\"，但也可以被 ``_awx_description`` 覆盖。"
+
+#: ../../source/scm-inv-source.rst:22
+msgid "In order to use old inventory scripts in source control, see :ref:`ug_customscripts` in the |atu| for detail."
+msgstr "要在源控制中使用旧的清单脚本，请参阅 |atu| 中的 :ref:`ug_customscripts`。"
+
+#: ../../source/scm-inv-source.rst:26
+msgid "Custom Dynamic Inventory Scripts"
+msgstr "自定义动态清单脚本"
+
+#: ../../source/scm-inv-source.rst:28
+msgid "A custom dynamic inventory script stored in version control can be imported and run. This makes it much easier to make changes to an inventory script — rather than having to copy and paste one into the controller, it is pulled directly from source control and then executed. The script must be written to handle any credentials needed for doing its work and you are responsible for installing any Python libraries needed by the script (which is the same requirement for custom dynamic inventory scripts). And this applies to both user-defined inventory source scripts and SCM sources as they are both exposed to Ansible *virtualenv* requirements related to playbooks."
+msgstr "存储在版本控制系统中的自定义动态清单脚本可以导入并运行。这有助于对清单脚本进行修改，而不必将脚本复制并粘贴到控制器中，而是直接从来源控制拉取出来，然后执行。该脚本必须编写来处理所有执行其操作所需的凭证，并且您负责安装该脚本所需的任何 Python 库（这与自定义动态清单脚本的要求相同）。这会应用到用户定义的清单源脚本和 SCM 来源，因为它们都对与 playbook 相关的 Ansible *virtualenv* 要求公开。"
+
+#: ../../source/scm-inv-source.rst:30
+msgid "You can specify environment variables when you edit the SCM inventory source itself. For some scripts, this will be sufficient, however, this is not a secure way to store secret information that gives access to cloud providers or inventory."
+msgstr "在编辑 SCM 清单源自身时，您可以指定环境变量。对于某些脚本来说，这已足够了，但这并不是一种安全的方法来存储可访问云提供程序或清单的 secret 信息。"
+
+#: ../../source/scm-inv-source.rst:32
+msgid "The better way is to create a new credential type for the inventory script you are going to use. The credential type will need to specify all the necessary types of inputs. Then, when you create a credential of this type, the secrets will be stored in an encrypted form. If you apply that credential to the inventory source, the script will have access to those inputs like environment variables or files."
+msgstr "更好的方法是为要使用的清单脚本创建新凭证类型。凭证类型需要指定所有必要的输入类型。然后，当您创建该类型的凭证时，secret 将以加密的形式保存。如果您将该凭证应用到清单源中，该脚本将能够访问这些输入，如环境变量或文件。"
+
+#: ../../source/scm-inv-source.rst:34
+msgid "For more detail, refer to :ref:`Credential types <userguide:ug_credential_types>`."
+msgstr "如需更多详情，请参阅 :ref:`Credential types <userguide:ug_credential_types>`。"
+
+#: ../../source/scm-inv-source.rst:38
+msgid "SCM Inventory Source Fields"
+msgstr "SCM 清单源字段"
+
+#: ../../source/scm-inv-source.rst:40
+msgid "The source fields used are:"
+msgstr "使用的源字段有："
+
+#: ../../source/scm-inv-source.rst:42
+msgid "``source_project``: project to use"
+msgstr "``source_project``：要使用的项目"
+
+#: ../../source/scm-inv-source.rst:44
+msgid "``source_path``: relative path inside the project indicating a directory or a file. If left blank, \"\" is still a relative path indicating the root directory of the project"
+msgstr "``source_path``：项目内的相对路径指定目录或文件。如果留空，\"\" 仍是一个相对路径，指定项目的根目录"
+
+#: ../../source/scm-inv-source.rst:46
+msgid "``source_vars``: if set on a \"file\" type inventory source then they will be passed to the environment vars when running"
+msgstr "``source_vars``：如果在“文件”类型清单源上设置，则会在运行时将其传递给环境变量"
+
+#: ../../source/scm-inv-source.rst:48
+msgid "An update of the project automatically triggers an inventory update where it is used. An update of the project is scheduled immediately after creation of the inventory source. Neither inventory nor project updates are blocked while a related job is running. In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue."
+msgstr "项目更新会在使用清单更新的地方自动触发清单更新。创建清单源后立即调度项目更新。在相关作业运行时，清单或项目更新都不会阻断。当您有大型项目（大约 10 GB）时，``/tmp`` 可能会出现磁盘空间的问题。"
+
+#: ../../source/scm-inv-source.rst:50
+msgid "You can specify a location manually in the controller User Interface from the Create Inventory Source page. Refer to the :ref:`ug_inventories` section of the |atu| for instructions on creating an inventory source."
+msgstr "您可以通过 Create Inventory Source 页面手动在控制器用户界面中指定位置。有关创建清单源的信息，请参阅 |atu| 的 :ref:`ug_inventories` 部分。"
+
+#: ../../source/scm-inv-source.rst:52
+msgid "This listing should be refreshed to latest SCM info on a project update. If no inventory sources use a project as an SCM inventory source, then the inventory listing may not be refreshed on update."
+msgstr "此列表应当在项目更新时刷新为最新的 SCM 信息。如果没有将项目作为 SCM 清单源，则在更新时不会刷新清单列表。"
+
+#: ../../source/scm-inv-source.rst:54
+msgid "For inventories with SCM sources, the Job Details page for inventory updates show a status indicator for the project update as well as the name of the project. The status indicator links to the project update job. The project name links to the project."
+msgstr "对于 SCM 来源的清单，清单更新的作业详情页面显示项目更新的状态指示符以及项目的名称。状态指示符链接到项目更新作业。项目名称链接到项目。"
+
+#: ../../source/scm-inv-source.rst:58
+msgid "An inventory update can be performed while a related job is running."
+msgstr "在相关作业运行时可以进行清单更新。"
+
+#: ../../source/scm-inv-source.rst:62
+msgid "Supported File Syntax"
+msgstr "支持的文件语法"
+
+#: ../../source/scm-inv-source.rst:64
+msgid "|at| uses the ``ansible-inventory`` module from Ansible to process inventory files, and supports all valid inventory syntax that the controller requires."
+msgstr "|at| 使用 Ansible 中的 ``ansible-inventory`` 模块来处理清单文件，并支持控制器所需的所有有效的清单语法。"
+

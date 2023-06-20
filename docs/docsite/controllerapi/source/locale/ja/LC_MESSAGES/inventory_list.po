@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower API
+# Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower API Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:31-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/inventory_list.rst:2
+msgid "Inventory List API Endpoint"
+msgstr "インベントリーリストの API エンドポイント"
+
+#: ../../source/inventory_list.rst:7
+msgid "Make a GET request to this resource to retrieve the list of inventories."
+msgstr "このリソースに GET 要求を実行して、インベントリーのリストを取得します。"
+
+#: ../../source/inventory_list.rst:19
+msgid "The resulting data structure contains: ::"
+msgstr "返されるデータ構造には以下が含まれます。"
+
+#: ../../source/inventory_list.rst:29
+msgid "The ``count`` field indicates the total number of inventory lists found for the given query. The ``next`` and ``previous`` fields provides links to additional results if there are more than will fit on a single page. The ``results`` list contains zero or more inventory records."
+msgstr "``count`` フィールドは指定のクエリーで見つかったインベントリー一覧の合計数を示します。``next`` および ``previous`` フィールドは、結果が単一ページに収まらない場合に、それらの結果へのリンクを提供します。``results`` にはインベントリーのレコードが一覧表示されますが、ゼロの場合もあります。"
+
+#: ../../source/inventory_list.rst:32
+msgid "Results"
+msgstr "結果"
+
+#: ../../source/inventory_list.rst:37
+msgid "Each inventory data structure includes the following fields:"
+msgstr "各インベントリーのデータ構造には以下のフィールドが含まれます。"
+
+#: ../../source/inventory_list.rst:39
+msgid "``id``: Database ID for this inventory. (integer)"
+msgstr "``id``: インベントリーのデータベース ID (整数)"
+
+#: ../../source/inventory_list.rst:40
+msgid "``type``: Data type for this inventory. (multiple choice)"
+msgstr "``type``: インベントリーのデータタイプ (複数選択)"
+
+#: ../../source/inventory_list.rst:41
+msgid "``inventory``: Inventory"
+msgstr "``inventory``: インベントリー"
+
+#: ../../source/inventory_list.rst:42
+msgid "``url``: URL for this inventory. (string)"
+msgstr "``url``: インベントリーの URL (文字列)"
+
+#: ../../source/inventory_list.rst:43
+msgid "``related``: Data structure with URLs of related resources. (object)"
+msgstr "``related``: 関連リソースの URL のあるデータ構造 (オブジェクト)"
+
+#: ../../source/inventory_list.rst:44
+msgid "``summary_fields``: Data structure with name/description for related resources. (object)"
+msgstr "``summary_fields``: 関連リソースの名前/説明のあるデータ構造 (オブジェクト)"
+
+#: ../../source/inventory_list.rst:45
+msgid "``created``: Timestamp when this inventory was created. (datetime)"
+msgstr "``created``: インベントリー作成時のタイムスタンプ (日時)"
+
+#: ../../source/inventory_list.rst:46
+msgid "``modified``: Timestamp when this inventory was last modified. (datetime)"
+msgstr "``modified``: インベントリーの最終更新時のタイムスタンプ (日時)"
+
+#: ../../source/inventory_list.rst:47
+msgid "``name``: (string)"
+msgstr "``name``: (文字列)"
+
+#: ../../source/inventory_list.rst:48
+msgid "``description``: (string)"
+msgstr "``description``: (文字列)"
+
+#: ../../source/inventory_list.rst:49
+msgid "``organization``: (field)"
+msgstr "``organization``: (フィールド)"
+
+#: ../../source/inventory_list.rst:50
+msgid "``variables``: Inventory variables in JSON or YAML format. (string)"
+msgstr "``variables``: JSON または YAML 形式のインベントリー変数 (文字列)"
+
+#: ../../source/inventory_list.rst:51
+msgid "``has_active_failures``: Flag indicating whether any hosts in this inventory have failed. (boolean)"
+msgstr "``has_active_failures``: このインベントリーのホストが失敗したかどうかを示すフラグ (ブール値)"
+
+#: ../../source/inventory_list.rst:52
+msgid "``total_hosts``: Total number of hosts in this inventory. (integer)"
+msgstr "``total_hosts``: このインべントリー内のホストの合計数 (整数)"
+
+#: ../../source/inventory_list.rst:53
+msgid "``hosts_with_active_failures``: Number of hosts in this inventory with active failures. (integer)"
+msgstr "``hosts_with_active_failures``: アクティブなエラーのあるこのインベントリー内のホストの数 (整数)"
+
+#: ../../source/inventory_list.rst:54
+msgid "``total_groups``: Total number of groups in this inventory. (integer)"
+msgstr "``total_groups``: このインべントリー内のグループの合計数 (整数)"
+
+#: ../../source/inventory_list.rst:55
+msgid "``groups_with_active_failures``: Number of groups in this inventory with active failures. (integer)"
+msgstr "``groups_with_active_failures``: アクティブなエラーのあるこのインベントリー内のグループの数 (整数)"
+
+#: ../../source/inventory_list.rst:56
+msgid "``has_inventory_sources``: Flag indicating whether this inventory has any external inventory sources. (boolean)"
+msgstr "``has_inventory_sources``: このインベントリーに外部のインベントリーソースがあるかどうかを示すフラグ (ブール値)"
+
+#: ../../source/inventory_list.rst:57
+msgid "``total_inventory_sources``: Total number of external inventory sources configured within this inventory. (integer)"
+msgstr "``total_inventory_sources``: このインベントリー内で設定される外部インベントリーソースの合計数 (整数)"
+
+#: ../../source/inventory_list.rst:58
+msgid "``inventory_sources_with_failures``: Number of external inventory sources in this inventory with failures. (integer)"
+msgstr "``inventory_sources_with_failures``: エラーのあるこのインベントリー内の外部インベントリーソースの数 (整数)"
+
+#: ../../source/inventory_list.rst:62
+msgid "Create Inventories"
+msgstr "インベントリーの作成"
+
+#: ../../source/inventory_list.rst:67
+msgid "Make a POST request to this resource with the following inventory fields to create a new inventory:"
+msgstr "新規インベントリーを作成するには、以下のインベントリーフィールドを使ってリソースに POST 要求を実行します。"
+
+#: ../../source/inventory_list.rst:69
+msgid "``name``: (string, required)"
+msgstr "``name``: (文字列。必須)"
+
+#: ../../source/inventory_list.rst:70
+msgid "``description``: (string, default=\"\")"
+msgstr "``description``: (文字列。デフォルトは \"\")"
+
+#: ../../source/inventory_list.rst:71
+msgid "``organization``: (field, required)"
+msgstr "``organization``: (フィールド。必須)"
+
+#: ../../source/inventory_list.rst:72
+msgid "``variables``: Inventory variables in JSON or YAML format. (string, default=\"\")"
+msgstr "``variables``: JSON または YAML 形式のインベントリー変数 (文字列。デフォルトは \"\")"
+
+#: ../../source/inventory_list.rst:77
+msgid "Reviewing the Options Endpoint"
+msgstr "オプションエンドポイントの確認"
+
+#: ../../source/inventory_list.rst:82
+msgid "The *Options Endpoint* table offers a view of the Options for this endpoint. When viewing the endpoint in the browsable API, clicking the \"Options\" button gives you the raw JSON for the following:"
+msgstr "*オプションエンドポイント* テーブルでは、このエンドポイントのオプションを確認できます。ブラウザー表示が可能な API でエンドポイントを表示している場合は、「オプション」ボタンをクリックすると以下の raw JSON が表示されます。"
+

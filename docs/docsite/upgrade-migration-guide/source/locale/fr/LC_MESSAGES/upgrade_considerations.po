@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Tower
+# Upgrade and Migration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Tower Upgrade and Migration Guide 3.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-08 12:30-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: ../../source/upgrade_considerations.rst:5
+msgid "Upgrading |at|"
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:0
+msgid "Topics:"
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:16
+msgid ""
+"You must upgrade your |at| 2.4.4 (or later) system to |at| 3.0 before you"
+" can upgrade to |at| 3.1.0."
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:20
+msgid "Upgrade Planning"
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:22
+msgid ""
+"This section covers changes that you should keep in mind as you attempt "
+"to upgrade your |at| Instance"
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:24
+msgid ""
+"If you are not yet using a 2.4.x version of |at|, **do not** attempt to "
+"upgrade directly to |at| 3.0.x or 3.1.0. You must start with a system "
+"which has a verison of Tower 2.4.x installed or the upgrade will fail."
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:25
+msgid ""
+"If you are not using using a 3.0.x version of |at|; you must upgrade to "
+"3.0.x before you can upgrade to 3.1.0."
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:26
+msgid ""
+"Ansible Tower 3.0 simplified installation and removed the need to run "
+"``./configure/`` as part of the initial setup."
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:27
+msgid ""
+"The file ``tower_setup_conf.yml`` is no long used. Instead, you should "
+"now edit the **inventory**  file in the ``/ansible-tower-"
+"setup-<tower_version>/`` directory."
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:28
+msgid ""
+"Earlier version of Tower used MongoDB when setting up an initial "
+"database; please note that |at| 3.0 has replaced the use of MongoDB with "
+"PostgreSQL."
+msgstr ""
+
+#: ../../source/upgrade_considerations.rst:31
+msgid "Obtaining |at|"
+msgstr ""
+
+#: ../../../common/source/get-tower-installer.rst:2
+msgid ""
+"Download and then extract the Ansible Tower installation/upgrade tool: "
+"http://releases.ansible.com/ansible-tower/setup/"
+msgstr ""
+
+#: ../../../common/source/get-tower-installer.rst:10
+msgid ""
+"To install or upgrade, start by editing the inventory file in the "
+"``ansible-tower-setup-<tower_version>`` directory, replacing "
+"``<tower_version>`` with the version number, such as ``2.4.5`` or "
+"``3.0.0``.  directory."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:2
+msgid "Setting up the Inventory File"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:9
+msgid ""
+"As you edit your inventory file, there are a few things you must keep in "
+"mind:"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:11
+msgid ""
+"The contents of the inventory file should be defined in ``./inventory``, "
+"next to the ``./setup.sh`` installer playbook."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:13
+msgid ""
+"For **installations and upgrades**: If you need to make use of external "
+"databases, you must ensure the database sections of your inventory file "
+"are properly setup. Edit this file and add your external database "
+"information before running the setup script."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:15
+msgid ""
+"For **redundant installations**: If you are creating a redundant setup, "
+"you must replace ``localhost`` with the hostname or IP address of all "
+"instances. All nodes/instances must be able to reach any others using "
+"this hostname or address."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:17
+msgid ""
+"For **installations**: When performing an installation, you must supply "
+"any necessary passwords in the inventory file."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:21
+msgid ""
+"Changes made to the installation process now require that you fill out "
+"the all of the password fields in the inventory file. If you need to know"
+" where to find the values for these they should be:"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:23
+msgid "``admin_password=''`` <--- Tower local admin password"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:25
+msgid "``pg_password=''``  <---- Found in /etc/tower/conf.d/postgres.py"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:27
+msgid "``rabbitmq_password=''``  <---- create a new password here"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:29
+msgid ""
+"If you have already run setup but did not previously provide passwords, "
+"you must run the following command as root or sudo, ``#rabbitmqctl "
+"change_password tower \"rabbitPass\" (whatever you populated in "
+"rabbitmq_password)``."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:31
+msgid "Then rerun the following command: ``sudo ./setup.sh``"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:34
+msgid "**Example Inventory file**"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:36
+msgid ""
+"For **provisioning new nodes**: When provisioning new nodes add the nodes"
+" to the inventory file with all current nodes, make sure all passwords "
+"are included in the inventory file."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:38
+msgid ""
+"For **upgrades**: When upgrading, be sure to compare your inventory file "
+"to the current release version. It is recommended that you keep the "
+"passwords in here even when performing an updgrade."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:41
+msgid "**Example Single Node Inventory File**"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:69
+msgid "**Example Multi Node Cluster Inventory File**"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:103
+msgid "**Example Inventory file for an external existing database**"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:126
+msgid "**Example Inventory file for external database which needs installation**"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:152
+msgid ""
+"Once any necessary changes have been made, you are ready to run "
+"``./setup.sh``."
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:156
+msgid ""
+"Root access to the remote machines is required. With Ansible, this can be"
+" achieved in different ways:"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:158
+msgid ""
+"ansible_ssh_user=root ansible_ssh_password=\"your_password_here\" "
+"inventory host or group variables"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:159
+msgid ""
+"ansible_ssh_user=root "
+"ansible_ssh_private_key_file=\"path_to_your_keyfile.pem\" inventory host "
+"or group variables"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:160
+msgid "ANSIBLE_BECOME_METHOD='sudo' ANSIBLE_BECOME=True ./setup.sh"
+msgstr ""
+
+#: ../../../common/source/setup-passwords.rst:161
+msgid "ANSIBLE_SUDO=True ./setup.sh"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:2
+msgid "The Setup Playbook"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:12
+msgid ""
+"|at| 3.0 simplifies installation and removes the need to run "
+"``./configure/`` as part of the installation setup. Users of older "
+"versions should follow the instructions available in the v.2.4.5 (or "
+"earlier) releases of the Tower Documentation available at: "
+"http://docs.ansible.com/"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:15
+msgid ""
+"The Tower setup playbook script uses the ``inventory`` file and is "
+"invoked as ``./setup.sh`` from the path where you unpacked the Tower "
+"installer tarball."
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:22
+msgid "The setup script takes the following arguments:"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:24
+msgid "``-h`` -- Show this help message and exit"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:25
+msgid ""
+"``-i INVENTORY_FILE`` -- Path to Ansible inventory file (default: "
+"``inventory``)"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:26
+msgid ""
+"``-e EXTRA_VARS`` -- Set additional Ansible variables as key=value or "
+"YAML/JSON (i.e. ``-e bundle_install=false`` forces an online "
+"installation)"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:27
+msgid "``-b`` -- Perform a database backup in lieu of installing"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:28
+msgid ""
+"``-r`` -- Perform a database restore in lieu of installing (a default "
+"restore path is used unless EXTRA_VARS are provided with a non-default "
+"path, as shown in the code example below)"
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:37
+msgid ""
+"Please note that a issue was discovered in Tower 3.0.0 and 3.0.1 that "
+"prevented proper system backups and retorations."
+msgstr ""
+
+#: ../../../common/source/setup-playbook.rst:39
+msgid ""
+"If you need to back up or restore your Tower v3.0.0 or v3.0.1 "
+"installation, use the v3.0.2 installer to do so."
+msgstr ""
+

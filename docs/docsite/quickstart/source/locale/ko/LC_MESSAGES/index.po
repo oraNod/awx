@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Ansible Automation Platform Quick Setup package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Ansible Automation Platform Quick Setup 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/index.rst:10
+msgid "Automation Controller Quick Setup Guide |versionshortest|"
+msgstr "자동화 컨트롤러 빠른 설정 가이드 |versionshortest|"
+
+#: ../../source/index.rst:12
+msgid "Thank you for your interest in |RHAT|. |At| is a commercial offering that helps teams manage complex multi-tier deployments by adding control, knowledge, and delegation to Ansible-powered environments."
+msgstr "|RHAT|에 관심을 가져 주셔서 감사합니다. |At|는 Ansible 기반 환경에 제어, 지식, 위임을 추가하여 팀이 복잡한 다중 계층 배포를 관리하는 데 도움이 되는 상용 서비스입니다."
+
+#: ../../source/index.rst:14
+msgid "The |atqs| covers basic steps for using |at| and running your first playbook. This document has been updated to include information for the latest release of |atversionshort|."
+msgstr "|atqs|에서는 |at| 사용 및 첫 번째 플레이북 실행에 필요한 기본 단계를 설명합니다. 이 문서는 |atversionshort|의 최신 릴리스 정보를 포함하도록 업데이트되었습니다."
+
+#: ../../source/index.rst:16
+msgid "**We Need Feedback!**"
+msgstr "**피드백이 필요합니다!**"
+
+#: ../../source/index.rst:18
+msgid "If you spot a typo in this documentation, or if you have thought of a way to make this manual better, we would love to hear from you! Please send an email to: docs@ansible.com"
+msgstr "이 문서에서 오타를 발견하거나 이 설명서를 개선하는 방법에 대한 의견이 있다면 알려주십시오. docs@ansible.com으로 이메일을 보내주십시오."
+
+#: ../../source/index.rst:20
+msgid "If you have a suggestion, try to be as specific as possible when describing it. If you have found an error, please include the manual's title, chapter number/section number, and some of the surrounding text so we can find it easily. We may not be able to respond to every message sent to us, but you can be sure that we will be reading them all!"
+msgstr "제안 사항이 있는 경우 가능한 한 구체적으로 설명해 주십시오. 오류를 발견한 경우 쉽게 찾을 수 있도록 설명서 제목, 장 번호/섹션 번호, 주변 텍스트 일부를 포함해 주십시오. 모든 메시지에 응답하지 못할 수도 있지만 모든 메시지를 확인하겠습니다!"
+
+#: ../../source/index.rst:26
+msgid "|atversion|; |pubdate|; https://access.redhat.com/"
+msgstr "|atversion|; |pubdate|; https://access.redhat.com/"
+
+#: ../../source/index.rst:54
+msgid "Index"
+msgstr "인덱스"
+
+#: ../../source/index.rst:56
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../../common/source/copyright.rst:2
+msgid "Copyright © Red Hat, Inc."
+msgstr "Copyright © Red Hat, Inc."
+
+#: ../../../common/source/copyright.rst:4
+msgid "Ansible, |aap|, Red Hat, and |rhel| are trademarks of Red Hat, Inc., registered in the United States and other countries."
+msgstr "Ansible, |aap|, Red Hat, |rhel|는 미국 및 기타 국가에서 등록된 Red Hat, Inc.의 상표입니다."
+
+#: ../../../common/source/copyright.rst:6
+msgid "If you distribute this document, or a modified version of it, you must provide attribution to Red Hat, Inc. and provide a link to the original version."
+msgstr "이 문서 또는 수정된 버전을 배포하는 경우 Red Hat, Inc.에 권한을 제공하고 원본 버전에 대한 링크를 제공해야 합니다."
+
+#: ../../../common/source/copyright.rst:8
+msgid "**Third Party Rights**"
+msgstr "**타사 권한**"
+
+#: ../../../common/source/copyright.rst:10
+msgid "Ubuntu and Canonical are registered trademarks of Canonical Ltd."
+msgstr "Ubuntu 및 Canonical은 Canonical Ltd.의 등록 상표입니다."
+
+#: ../../../common/source/copyright.rst:12
+msgid "The CentOS Project is copyright protected. The CentOS Marks are trademarks of Red Hat, Inc. (“Red Hat”)."
+msgstr "CentOS 프로젝트는 저작권으로 보호됩니다. CentOS 마크는 Red Hat, Inc.(‘Red Hat’)의 상표입니다."
+
+#: ../../../common/source/copyright.rst:14
+msgid "Microsoft, Windows, Windows Azure, and Internet Explore are trademarks of Microsoft, Inc."
+msgstr "Microsoft, Windows, Microsoft Azure, Internet Explorer는 Microsoft, Inc.의 상표입니다."
+
+#: ../../../common/source/copyright.rst:16
+msgid "VMware is a registered trademark or trademark of VMware, Inc."
+msgstr "VMware는 VMware, Inc.의 등록 상표 또는 상표입니다."
+
+#: ../../../common/source/copyright.rst:18
+msgid "Amazon Web Services\", \"AWS\", \"Amazon EC2\", and \"EC2”, are trademarks of Amazon Web Services, Inc. or its affiliates."
+msgstr "\"Amazon Web Services\", \"AWS\", \"Amazon EC2\", \"EC2\"는 Amazon Web Services, Inc. 또는 그 계열사의 상표입니다."
+
+#: ../../../common/source/copyright.rst:20
+msgid "OpenStack™ and OpenStack logo are trademarks of OpenStack, LLC."
+msgstr "OpenStack™ 및 OpenStack 로고는 OpenStack, LLC의 상표입니다."
+
+#: ../../../common/source/copyright.rst:22
+msgid "Chrome™ and Google Compute Engine™ service registered trademarks of Google Inc."
+msgstr "Chrome™ 및 Google Compute Engine™ 서비스는 Google Inc.의 등록 상표입니다."
+
+#: ../../../common/source/copyright.rst:24
+msgid "Safari® is a registered trademark of Apple, Inc."
+msgstr "Safari®는 Apple, Inc.의 등록 상표입니다."
+
+#: ../../../common/source/copyright.rst:26
+msgid "Firefox® is a registered trademark of the Mozilla Foundation."
+msgstr "Firefox®는 Mozilla Foundation의 등록 상표입니다."
+
+#: ../../../common/source/copyright.rst:28
+msgid "All other trademarks are the property of their respective owners."
+msgstr "기타 모든 상표는 각각 해당 소유자의 자산입니다."
+

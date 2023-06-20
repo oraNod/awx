@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/filtering.rst:3
+msgid "Filtering"
+msgstr "필터링"
+
+#: ../../source/filtering.rst:9
+msgid "Any collection is what the system calls a \"queryset\" and can be filtered via various operators."
+msgstr "모든 컬렉션은 \"쿼리 세트\"에 해당하며 다양한 연산자를 통해 필터링할 수 있습니다."
+
+#: ../../source/filtering.rst:11
+msgid "For example, to find the groups that contain the name \"foo\":"
+msgstr "예를 들어, \"foo\"라는 이름이 포함된 그룹을 찾는 방법은 다음과 같습니다."
+
+#: ../../source/filtering.rst:17
+msgid "To find an exact match:"
+msgstr "정확히 일치하는 항목을 찾으려면 다음을 수행합니다."
+
+#: ../../source/filtering.rst:23
+msgid "If a resource is of an integer type, you must add ``\\_\\_int`` to the end to cast your string input value to an integer, like so:"
+msgstr "리소스가 정수 유형인 경우 문자열 입력 값을 정수로 캐스팅하려면 끝에 ``\\_\\_int``를 추가해야 합니다."
+
+#: ../../source/filtering.rst:29
+msgid "Related resources can also be queried, like so:"
+msgstr "다음과 같이 관련 리소스를 쿼리할 수도 있습니다."
+
+#: ../../source/filtering.rst:35
+msgid "This will return all users with names that include the string \"Kim\" in them."
+msgstr "이 스크립트는 이름에 \"Kim\"이라는 문자열이 포함된 사용자를 모두 반환합니다."
+
+#: ../../source/filtering.rst:37
+msgid "You can also filter against multiple fields at once:"
+msgstr "한 번에 여러 필드를 대상으로 필터링할 수도 있습니다."
+
+#: ../../source/filtering.rst:43
+msgid "This finds all groups containing the name \"test\" that has no active failures."
+msgstr "이 스크립트는 이름에 활성 오류가 없는 \"test\"가 포함된 모든 그룹을 찾습니다."
+
+#: ../../source/filtering.rst:45
+msgid "For more about what types of operators are available, refer to: https://docs.djangoproject.com/en/dev/ref/models/querysets/"
+msgstr "사용할 수 있는 연산자 유형에 대한 자세한 내용은 https://docs.djangoproject.com/en/dev/ref/models/querysets/를 참조하십시오."
+
+#: ../../source/filtering.rst:50
+msgid "You can also watch the API as the UI is being used to see how it is filtering on various criteria."
+msgstr "또한 UI가 사용되는 동안 API에서 다양한 기준으로 필터링하는 방법을 확인할 수 있습니다."
+
+#: ../../source/filtering.rst:55
+msgid "Any additional query string parameters may be used to filter the list of results returned to those matching a given value. Only fields and relations that exist in the database may be used for filtering. Any special characters in the specified value should be url-encoded. For example:"
+msgstr "추가 쿼리 문자열 매개변수를 사용하여 지정된 값과 일치하는 항목으로 반환된 결과 목록을 필터링할 수도 있습니다. 데이터베이스에 존재하는 필드 및 관계만 필터링에 사용할 수 있습니다. 지정된 값의 특수 문자는 모두 URL로 인코딩되어야 합니다. 예를 들어 다음과 같습니다."
+
+#: ../../source/filtering.rst:61
+msgid "Fields may also span relations, only for fields and relationships defined in the database:"
+msgstr "또한 필드는 데이터베이스에 정의된 필드 및 관계에 한해서만 관계를 확장할 수 있습니다."
+
+#: ../../source/filtering.rst:67
+msgid "To exclude results matching certain criteria, prefix the field parameter with ``not__``:"
+msgstr "특정 기준과 일치하는 결과를 제외하려면 field 매개변수 앞에 ``not__``을 붙입니다."
+
+#: ../../source/filtering.rst:73
+msgid "By default, all query string filters are AND'ed together, so only the results matching all filters will be returned. To combine results matching any one of multiple criteria, prefix each query string parameter with ``or__``:"
+msgstr "기본적으로 모든 쿼리 문자열 필터는 AND 연산자로 연결되므로 모든 필터와 일치하는 결과만 반환됩니다. 여러 조건 중 하나와 일치하는 결과를 결합하려면 각 쿼리 문자열 매개변수 앞에 ``or__``를 붙입니다."
+
+#: ../../source/filtering.rst:80
+msgid "The default AND filtering applies all filters simultaneously to each related object being filtered across database relationships. The chain filter instead applies filters separately for each related object. To use, prefix the query string parameter with ``chain__``:"
+msgstr "기본 AND 필터링에서는 여러 데이터베이스 관계에 걸쳐 필터링되는 각 관련 오브젝트에 모든 필터를 동시에 적용합니다. 반면 체인 필터는 각 관련 오브젝트에 필터를 개별적으로 적용합니다. 체인 필터를 사용하려면 쿼리 문자열 매개변수 앞에 ``chain__``을 붙입니다."
+
+#: ../../source/filtering.rst:87
+msgid "If the first query above were written as ``?related__field=value&related__field2=othervalue``, it would return only the primary objects where the same related object satisfied both conditions. As written using the chain filter, it would return the intersection of primary objects matching each condition."
+msgstr "위의 첫 번째 쿼리를 ``?related__field=value&related__field2=othervalue``로 작성하면 동일한 관련 오브젝트가 두 조건을 모두 충족하는 기본 오브젝트만 반환됩니다. 체인 필터를 사용하여 작성했으므로 각 조건과 일치하는 기본 오브젝트의 교집합이 반환됩니다."
+
+#: ../../source/filtering.rst:89
+msgid "Field lookups may also be used for more advanced queries, by appending the lookup to the field name:"
+msgstr "필드 조회는 필드 이름에 조회를 추가하여 고급 쿼리에 사용할 수도 있습니다."
+
+#: ../../source/filtering.rst:95
+msgid "The following field lookups are supported:"
+msgstr "다음과 같은 필드 조회가 지원됩니다."
+
+#: ../../source/filtering.rst:97
+msgid "``exact``: Exact match (default lookup if not specified)."
+msgstr "``exact``: 정확하게 일치하는 항목입니다(지정되지 않은 경우 기본 조회)."
+
+#: ../../source/filtering.rst:98
+msgid "``iexact``: Case-insensitive version of exact."
+msgstr "``iexact``: exact의 대소문자를 구분하지 않는 버전입니다."
+
+#: ../../source/filtering.rst:99
+msgid "``contains``: Field contains value."
+msgstr "``contains``: 필드에 값이 있습니다."
+
+#: ../../source/filtering.rst:100
+msgid "``icontains``: Case-insensitive version of contains."
+msgstr "``icontains``: contains의 대소문자를 구분하지 않는 버전입니다."
+
+#: ../../source/filtering.rst:101
+msgid "``startswith``: Field starts with value."
+msgstr "``startswith``: 값으로 시작하는 필드입니다."
+
+#: ../../source/filtering.rst:102
+msgid "``istartswith``: Case-insensitive version of startswith."
+msgstr "``istartswith``: startswith의 대소문자를 구분하지 않는 버전입니다."
+
+#: ../../source/filtering.rst:103
+msgid "``endswith``: Field ends with value."
+msgstr "``endswith``: 값으로 끝나는 필드입니다."
+
+#: ../../source/filtering.rst:104
+msgid "``iendswith``: Case-insensitive version of endswith."
+msgstr "``iendswith``: endswith의 대소문자를 구분하지 않는 버전입니다."
+
+#: ../../source/filtering.rst:105
+msgid "``regex``: Field matches the given regular expression."
+msgstr "``regex``: 지정된 정규식과 일치하는 필드입니다."
+
+#: ../../source/filtering.rst:106
+msgid "``iregex``: Case-insensitive version of regex."
+msgstr "``iregex``: regex의 대소문자를 구분하지 않는 버전입니다."
+
+#: ../../source/filtering.rst:107
+msgid "``gt``: Greater than comparison."
+msgstr "``gt``: 비교 값보다 큽니다."
+
+#: ../../source/filtering.rst:108
+msgid "``gte``: Greater than or equal to comparison."
+msgstr "``gte``: 비교 값보다 크거나 같습니다."
+
+#: ../../source/filtering.rst:109
+msgid "``lt``: Less than comparison."
+msgstr "``lt``: 비교 값보다 적습니다."
+
+#: ../../source/filtering.rst:110
+msgid "``lte``: Less than or equal to comparison."
+msgstr "``lte``: 비교 값보다 적거나 같습니다."
+
+#: ../../source/filtering.rst:111
+msgid "``isnull``: Check whether the given field or related object is null; expects a boolean value."
+msgstr "``isnull``: 지정된 필드 또는 관련 오브젝트가 null인지 확인합니다. 부울 값이 필요합니다."
+
+#: ../../source/filtering.rst:112
+msgid "``in``: Check whether the given field's value is present in the list provided; expects a list of items."
+msgstr "``in``: 지정된 필드의 값이 제공된 목록에 있는지 확인합니다. 항목 목록이 있어야 합니다."
+
+#: ../../source/filtering.rst:113
+msgid "Boolean values may be specified as ``True`` or ``1`` for true, ``False`` or ``0`` for false (both case-insensitive)."
+msgstr "부울 값은 True의 경우 ``True`` 또는 ``1``, False의 경우 ``False`` 또는 ``0``으로 지정할 수 있습니다(둘 다 대소문자를 구분하지 않음)."
+
+#: ../../source/filtering.rst:115
+msgid "For example, ``?created__gte=2020-01-01`` will provide a list of items created after 1/1/2020."
+msgstr "예를 들어, ``?created__gte=2020-01-01``은 2020년 1월 1일 이후에 생성된 항목 목록을 제공합니다."
+
+#: ../../source/filtering.rst:117
+msgid "Null values may be specified as ``None`` or ``Null`` (both case-insensitive), though it is preferred to use the ``isnull`` lookup to explicitly check for null values."
+msgstr "null 값은 ``None`` 또는 ``Null``로 지정할 수 있지만(둘 다 대소문자를 구분하지 않음), ``isnull`` 조회를 사용하여 null 값을 명시적으로 확인하는 것이 좋습니다."
+
+#: ../../source/filtering.rst:119
+msgid "Lists (for the ``in`` lookup) may be specified as a comma-separated list of values."
+msgstr "목록(``in`` 조회의 경우)은 쉼표로 구분된 값 목록으로 지정할 수 있습니다."
+
+#: ../../source/filtering.rst:121
+msgid "Filtering based on the requesting user's level of access by query string parameter (added in |at| 3.1):"
+msgstr "쿼리 문자열 매개변수를 통해 요청하는 사용자의 액세스 수준을 기준으로 필터링하는 방법은 다음과 같습니다(|at| 3.1에서 추가됨)."
+
+#: ../../source/filtering.rst:123
+msgid "``role_level``: Level of role to filter on, such as ``admin_role``"
+msgstr "``role_level``: 필터링할 역할의 수준(예: ``admin_role``)"
+

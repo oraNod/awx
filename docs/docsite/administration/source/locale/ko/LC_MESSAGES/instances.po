@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/instances.rst:5
+msgid "Managing Capacity With Instances"
+msgstr "인스턴스로 용량 관리"
+
+#: ../../source/instances.rst:13
+msgid "Scaling your mesh is only available on Openshift deployments of |aap| and is possible through adding or removing nodes from your cluster dynamically, through the **Instances** resource of the |at| User Interface, without running the installation script."
+msgstr "메시 확장은 |aap| 의 Openshift 배포에서만 사용할 수 있으며 설치 스크립트를 실행하지 않고도 |at| 사용자 인터페이스의 **인스턴스** 리소스를 통해 동적으로 클러스터에서 노드를 추가하거나 제거할 수 있습니다."
+
+#: ../../source/instances.rst:16
+msgid "Prerequisites"
+msgstr "사전 요구 사항"
+
+#: ../../source/instances.rst:18
+msgid "Be sure you have the minimum requirements for the RHEL virtual machine before proceeding. Refer to `Red Hat Ansible Automation Platform system requirements <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.2/html/red_hat_ansible_automation_platform_installation_guide/planning-installation#red_hat_ansible_automation_platform_system_requirements>`_ for details."
+msgstr "진행하기 전에 RHEL 가상 머신에 대한 최소 요구 사항이 있는지 확인하십시오. 자세한 내용은 `Red Hat Ansible Automation Platform system requirements <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.2/html/red_hat_ansible_automation_platform_installation_guide/planning-installation#red_hat_ansible_automation_platform_system_requirements>`_에서 참조하십시오."
+
+#: ../../source/instances.rst:20
+msgid "RHEL nodes must properly be subscribed to:"
+msgstr "RHEL 노드를 다음과 같이 올바르게 서브스크립션해야 합니다."
+
+#: ../../source/instances.rst:22
+msgid "RHEL subscription and with **baseos** and **appstream** repositories enabled"
+msgstr "RHEL 서브스크립션 및 **baseos** 및 **appstream** 리포지토리가 활성화된 경우"
+
+#: ../../source/instances.rst:23
+msgid "|AAP| subscription and the proper |AAP| channel enabled:"
+msgstr "|AAP| 서브스크립션 및 적절한 |AAP| 채널이 활성화되었습니다."
+
+#: ../../source/instances.rst:31
+msgid "If you are using the default |ee| (provided with the controller) to run on remote execution nodes, you must add a pull secret in the controller that contains the credential for pulling the |ee| image. To do this, create a pull secret on the |aa| Controller namespace and configure the ``ee_pull_credentials_secret`` parameter in the Operator:"
+msgstr "기본 |ee|설정(컨트롤러와 함께 제공됨)을 사용하여 원격 실행 노드에서 실행하는 경우|ee| 이미지를 가져오기 위한 인증 정보가 들어 있는 풀링 암호를 컨트롤러에 추가해야 합니다. 이렇게 하려면 |aa| 컨트롤러 네임스페이스에 풀 시크릿을 생성하고 Operator에서 ``ee_pull_credentials_secret`` 매개변수를 구성합니다."
+
+#: ../../source/instances.rst:33
+msgid "1. Create a secret: ::"
+msgstr "1. 시크릿 생성: ::"
+
+#: ../../source/instances.rst:45
+msgid "2. Add ``ee_pull_credentials_secret ee-pull-secret`` to the spec: ::"
+msgstr "2. 사양에 ``ee_pull_credentials_secret ee-pull-secret``을 추가합니다."
+
+#: ../../source/instances.rst:52
+msgid "Manage instances"
+msgstr "인스턴스 관리"
+
+#: ../../source/instances.rst:54
+msgid "Click **Instances** from the left side navigation menu to access the Instances list."
+msgstr "왼쪽 탐색 메뉴에서 **인스턴스**를 클릭하여 인스턴스 목록에 액세스합니다."
+
+#: ../../source/instances.rst:58
+msgid "The Instances list displays all the current nodes in your topology, along with relevant details:"
+msgstr "인스턴스 목록에는 관련 세부 정보와 함께 토폴로지의 모든 현재 노드가 표시됩니다."
+
+#: ../../source/instances.rst:60
+msgid "**Host Name**"
+msgstr "**호스트 이름**"
+
+#: ../../source/instances.rst:64
+msgid "**Status** indicates the state of the node:"
+msgstr "**상태**는 노드 상태를 나타냅니다."
+
+#: ../../source/instances.rst:66
+msgid "**Installed**: a node that has successfully installed and configured, but has not yet passed the periodic health check"
+msgstr "**설치됨**: 성공적으로 설치 및 구성되었지만 아직 정기 상태 점검을 통과하지 않은 노드"
+
+#: ../../source/instances.rst:67
+msgid "**Ready**: a node that is available to run jobs or route traffic between nodes on the mesh. This replaces the previously “Healthy” node state used in the mesh topology"
+msgstr "**준비됨**: 작업을 실행하거나 메시의 노드 간에 트래픽을 라우팅하는 데 사용할 수 있는 노드입니다. 이렇게 하면 메시 토폴로지에 사용된 이전 \"정상\" 노드 상태를 대체합니다."
+
+#: ../../source/instances.rst:68
+msgid "**Provisioning**: a node that is in the process of being added to a current mesh, but is awaiting the job to install all of the packages (currently not yet supported and is subject to change in a future release)"
+msgstr "**프로비저닝**: 현재 메시에 추가되는 과정에 있지만 모든 패키지 설치 작업을 기다리고 있는 노드(현재는 아직 지원되지 않으며 향후 릴리스에서 변경될 수 있음)"
+
+#: ../../source/instances.rst:69
+msgid "**Deprovisioning**: a node that is in the process of being removed from a current mesh and is finishing up jobs currently running on it"
+msgstr "**프로비저닝 해제**: 현재 메시에서 제거되고 현재 실행 중인 작업을 완료 중인 노드"
+
+#: ../../source/instances.rst:70
+msgid "**Unavailable**: a node that did not pass the most recent health check, indicating connectivity or receptor problems"
+msgstr "**사용할 수 없음**: 연결 또는 수신기 문제를 나타내는 최신 상태 검사를 통과하지 못한 노드"
+
+#: ../../source/instances.rst:71
+msgid "**Provisioning Failure**: a node that failed during provisioning (currently not yet supported and is subject to change in a future release)"
+msgstr "**프로비저닝 실패**: 프로비저닝 중에 실패한 노드(현재는 지원되지 않으며 향후 릴리스에서 변경될 수 있음)"
+
+#: ../../source/instances.rst:72
+msgid "**De-provisioning Failure**: a node that failed during deprovisioning (currently not yet supported and is subject to change in a future release)"
+msgstr "**프로비저닝 해제 실패**: 프로비저닝 해제 중에 실패한 노드입니다(현재 지원되지 않으며 이후 릴리스에서 변경될 수 있음)."
+
+#: ../../source/instances.rst:74
+msgid "**Node Type** specifies whether the node is a control, hybrid, hop, or execution node. See :term:`node` for further detail."
+msgstr "**노드 유형**은 노드가 제어 노드, 하이브리드 노드, 홉 노드또는 실행 노드인지 여부를 지정합니다. 자세한 내용은 :term:`node`를 참조하십시오."
+
+#: ../../source/instances.rst:75
+msgid "**Capacity Adjustment** allows you to adjust the number of forks in your nodes"
+msgstr "**용량 조정**을 통해 노드의 포크 수를 조정할 수 있습니다."
+
+#: ../../source/instances.rst:76
+msgid "**Used Capacity** indicates how much capacity has been used"
+msgstr "**사용된 용량**은 사용된 용량을 나타냅니다."
+
+#: ../../source/instances.rst:77
+msgid "**Actions** allow you to enable or disable the instance to control whether jobs can be assigned to it"
+msgstr "**작업**을 사용하면 인스턴스를 활성화하거나 비활성화하여 작업을 할당할 수 있는지 여부를 제어할 수 있습니다."
+
+#: ../../source/instances.rst:79
+msgid "From this page, you can add, remove or run health checks on your nodes. Use the check boxes next to an instance to select it to remove or run a health check against. When a button is grayed-out, you do not have permission for that particular action. Contact your Administrator to grant you the required level of access. If you are able to remove an instance, you will receive a prompt for confirmation, like the one below:"
+msgstr "이 페이지에서 노드에서 상태 점검을 추가, 제거 또는 실행할 수 있습니다. 인스턴스 옆에 있는 확인란을 사용하여 해당 확인란을 선택하여 에 대해 상태 점검을 제거하거나 실행합니다. 버튼이 회색으로 표시되는 경우 해당 작업에 대한 권한이 없습니다. 관리자에게 문의하여 필요한 액세스 수준을 부여합니다. 인스턴스를 제거할 수 있는 경우 다음과 같이 확인 프롬프트가 표시됩니다."
+
+#: ../../source/instances.rst:85
+msgid "You can still remove an instance even if it is active and jobs are running on it. The controller will attempt to wait for any jobs running on this node to complete before actually removing it."
+msgstr "활성 상태이고 작업이 실행 중인 경우에도 인스턴스를 제거할 수 있습니다. 컨트롤러는 실제로 제거하기 전에 이 노드에서 실행되는 모든 작업이 완료될 때까지 기다립니다."
+
+#: ../../source/instances.rst:87
+msgid "Click **Remove** to confirm."
+msgstr "**제거**를 클릭하여 확인합니다."
+
+#: ../../source/instances.rst:91
+msgid "If running a health check on an instance, at the top of the Details page, a message displays that the health check is in progress."
+msgstr "인스턴스에서 상태 점검을 실행하는 경우 세부 정보 페이지 상단에 상태 점검이 진행 중이라는 메시지가 표시됩니다."
+
+#: ../../source/instances.rst:95
+msgid "Click **Reload** to refresh the instance status."
+msgstr "**새로 고침**을 클릭하여 인스턴스 상태를 새로 고칩니다."
+
+#: ../../source/instances.rst:99
+msgid "Health checks are ran asynchronously, and may take up to a minute for the instance status to update, even with a refresh. The status may or may not change after the health check. At the bottom of the Details page, a timer/clock icon displays next to the last known health check date and time stamp if the health check task is currently running."
+msgstr "상태 점검은 비동기적으로 실행되며, 새로 고침을 통해 인스턴스 상태를 업데이트하는 데 최대 1분 정도 걸릴 수 있습니다. 상태 확인 후 상태가 변경될 수도 있고 변경되지 않을 수도 있습니다. 세부 정보 페이지 하단에서 상태 점검 작업이 현재 실행 중인 경우 마지막 알려진 상태 점검 날짜 및 타임스탬프 옆에 타이머/시계 아이콘이 표시됩니다."
+
+#: ../../source/instances.rst:103
+msgid "The example health check shows the status updates with an error on node 'one':"
+msgstr "예제 상태 점검에서는 노드 'one'에서 오류와 함께 상태 업데이트를 표시합니다."
+
+#: ../../source/instances.rst:109
+msgid "Add an instance"
+msgstr "인스턴스 추가"
+
+#: ../../source/instances.rst:111
+msgid "One of the ways to expand capacity is to create an instance, which serves as a node in your topology."
+msgstr "용량을 확장하는 방법 중 하나는 토폴로지에서 노드로 사용되는 인스턴스를 만드는 것입니다."
+
+#: ../../source/instances.rst:113
+msgid "Click **Instances** from the left side navigation menu."
+msgstr "왼쪽 탐색 메뉴에서 **인스턴스**를 클릭합니다."
+
+#: ../../source/instances.rst:115
+msgid "In the Instances list view, click the **Add** button and the Create new Instance window opens."
+msgstr "인스턴스 목록 보기에서 **추가** 버튼을 클릭하면 새 인스턴스 생성 창이 열립니다."
+
+#: ../../source/instances.rst:119
+msgid "An instance has several attributes that may be configured:"
+msgstr "인스턴스에는 구성할 수 있는 여러 속성이 있습니다."
+
+#: ../../source/instances.rst:121
+msgid "Enter a fully qualified domain name or IP address for your instance in the **Host Name** field (required). This field is equivalent to ``hostname`` in the API."
+msgstr "**호스트 이름** 필드에 인스턴스의 정규화된 도메인 이름 또는 IP 주소를 입력합니다. 이 필드는 API의 ``hostname`` 와 동일합니다."
+
+#: ../../source/instances.rst:122
+msgid "Optionally enter a **Description** for the instance"
+msgstr "선택 사항: **설명** 인스턴스에 입력합니다."
+
+#: ../../source/instances.rst:123
+msgid "The **Instance State** field is auto-populated, indicating that it is being installed, and cannot be modified"
+msgstr "**인스턴스 상태** 필드는 자동으로 입력되어 설치 중임을 나타내며 수정할 수 없습니다."
+
+#: ../../source/instances.rst:124
+msgid "The **Listener Port** is pre-populated with the most optimal port, however you can change the port to one that is more appropriate for your configuration. This field is equivalent to ``listener_port`` in the API."
+msgstr "**리스너 포트**는 가장 최적의 포트로 미리 채워져 있지만 구성에 더 적합한 포트로 변경할 수 있습니다. 이 필드는 API의 ``listener_port`` 와 동일합니다."
+
+#: ../../source/instances.rst:125
+msgid "The **Instance Type** field is auto-populated and cannot be modified. Only execution nodes can be created at this time."
+msgstr "**인스턴스 유형** 필드는 자동으로 채워지며 수정할 수 없습니다. 현재는 실행 노드만 생성할 수 있습니다."
+
+#: ../../source/instances.rst:126
+msgid "Check the **Enable Instance** box to make it available for jobs to run on it"
+msgstr "**인스턴스 활성화** 확인란을 선택하여 작업을 실행할 수 있도록 합니다."
+
+#: ../../source/instances.rst:128
+msgid "Once the attributes are configured, click **Save** to proceed."
+msgstr "속성이 구성되면 **저장**을 클릭하여 진행합니다."
+
+#: ../../source/instances.rst:130
+msgid "Upon successful creation, the Details of the created instance opens."
+msgstr "성공적으로 생성되면 생성된 인스턴스의 세부 정보가 열립니다."
+
+#: ../../source/instances.rst:136
+msgid "The proceeding steps 4-8 are intended to be ran from any computer that has SSH access to the newly created instance. It should not be ran from a machine that is part of the AAP deployment."
+msgstr "절차 4-8 단계는 새로 생성된 인스턴스에 대한 SSH 액세스 권한이 있는 모든 컴퓨터에서 실행하기 위한 것입니다. AAP 배포의 일부인 시스템에서 실행해서는 안 됩니다."
+
+#: ../../source/instances.rst:138
+msgid "Click the download button next to the **Install Bundle** field to download the tarball that includes this new instance and the files relevant to install the node into the mesh."
+msgstr "**번들 설치** 필드 옆에 있는 다운로드 버튼을 클릭하여 이 새 인스턴스가 포함된 tarball과 노드를 메시에 설치하는 것과 관련된 파일을 다운로드합니다."
+
+#: ../../source/instances.rst:142
+msgid "Extract the downloaded ``tar.gz`` file from the location you downloaded it. The install bundle contains yaml files, certificates, and keys that will be used in the installation process."
+msgstr "다운로드한 ``tar.gz`` 파일을 다운로드한 위치에서 추출합니다. 설치 번들에는 설치 프로세스에서 사용할 yaml 파일, 인증서 및 키가 포함되어 있습니다."
+
+#: ../../source/instances.rst:144
+msgid "Before running the ``ansible-playbook`` command, edit the following fields in the ``inventory.yml`` file:"
+msgstr "``ansible-playbook`` 명령을 실행하기 전에 ``inventory.yml`` 파일에서 다음 필드를 편집합니다."
+
+#: ../../source/instances.rst:146
+msgid "``ansible_user`` with the username running the installation"
+msgstr "``ansible_user`` 설치를 실행하는 사용자 이름"
+
+#: ../../source/instances.rst:147
+msgid "``ansible_ssh_private_key_file`` to contain the filename of the private key used to connect to the instance"
+msgstr "``ansible_ssh_private_key_file`` 인스턴스에 연결하는 데 사용되는 개인 키의 파일 이름을 포함"
+
+#: ../../source/instances.rst:151
+msgid "The content of the ``inventory.yml`` file serves as a template and contains variables for roles that are applied during the installation and configuration of a receptor node in a mesh topology. You may modify some of the other fields, or replace the file in its entirety for advanced scenarios. Refer to `Role Variables <https://github.com/ansible/receptor-collection/blob/main/README.md>`_ for more information on each variable."
+msgstr "``inventory.yml`` 파일의 내용은 템플릿 역할을 하며 메시 토폴로지에서 수신자 노드의 설치 및 구성 중에 적용되는 역할에 대한 변수를 포함합니다. 기타 일부 필드를 수정하거나 고급 시나리오에 대해 전체적으로 파일을 교체할 수 있습니다. 각 변수에 대한 자세한 내용은 ``inventory.yml``_을 참조하십시오."
+
+#: ../../source/instances.rst:153
+msgid "Save the file to continue."
+msgstr "계속하려면 파일을 저장합니다."
+
+#: ../../source/instances.rst:155
+msgid "Run the following command on the machine you want to update your mesh:"
+msgstr "메시를 업데이트할 머신에서 다음 명령을 실행합니다."
+
+#: ../../source/instances.rst:162
+msgid "To view other instances within the same topology, click the **Peers** tab associated with the control node."
+msgstr "동일한 토폴로지 내의 다른 인스턴스를 보려면 제어 노드와 연결된 **피어** 탭을 클릭합니다."
+
+#: ../../source/instances.rst:166
+msgid "You will only be able to view peers of the control plane nodes at this time, which are the execution nodes. Since you are limited to creating execution nodes in this release, you will be unable to create or view peers of execution nodes."
+msgstr "현재 실행 노드인 컨트롤 플레인 노드의 피어만 볼 수 있습니다. 이번 릴리스에서는 실행 노드 생성이 제한되므로 실행 노드의 피어를 만들거나 볼 수 없습니다."
+
+#: ../../source/instances.rst:171
+msgid "You may run a health check by selecting the node and clicking the **Run health check** button from its Details page."
+msgstr "노드를 선택하고 상세 정보 페이지에서 **상태 점검 실행** 버튼을 클릭하여 상태 점검을 실행할 수 있습니다."
+
+#: ../../source/instances.rst:173
+msgid "To view a graphical representation of your updated topology, refer to the :ref:`ag_topology_viewer` section of this guide."
+msgstr "업데이트된 토폴로지의 그래픽 표시를 보려면 이 가이드의 :ref:`ag_topology_viewer` 섹션을 참조하십시오."
+

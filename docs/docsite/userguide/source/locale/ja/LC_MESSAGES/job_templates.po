@@ -1,0 +1,1223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/job_templates.rst:4
+msgid "Job Templates"
+msgstr "ジョブテンプレート"
+
+#: ../../source/job_templates.rst:13
+msgid "A :term:`job template` is a definition and set of parameters for running an Ansible job. Job templates are useful to execute the same job many times. Job templates also encourage the reuse of Ansible playbook content and collaboration between teams."
+msgstr ":term:`job template` (ジョブテンプレート) は、Ansible ジョブを実行するためのパラメーターの定義およびパラメーターセットです。ジョブテンプレートは同じジョブを何度も実行する場合に便利です。また、ジョブテンプレートは Ansible Playbook コンテンツの再利用およびチーム間のコラボレーションを促進します。"
+
+#: ../../source/job_templates.rst:15
+msgid "The **Templates** menu opens a list of the job templates that are currently available. The default view is collapsed (Compact), showing the template name, template type, and the timestamp of last job that ran using that template. You can click **Expanded** (arrow next to each entry) to expand to view more information. This list is sorted alphabetically by name, but you can sort by other criteria, or search by various fields and attributes of a template."
+msgstr "**テンプレート** メニューでは、現在利用可能なジョブテンプレートのリストを表示します。デフォルトのビューは折りたたまれており(コンパクト)、テンプレート名、テンプレートタイプ、テンプレートを使用して実行した最後のジョブのタイムスタンプが表示されています。**展開** (各エントリーの横にある矢印) をクリックして更に情報を表示できます。このリストは、名前別にアルファベット順にソートされていますが、他の基準でソートしたり、さまざまなフィールドやテンプレートの属性別に検索できます。"
+
+#: ../../source/job_templates.rst:17
+#: ../../source/job_templates.rst:448
+msgid "|Job templates - home with example job template|"
+msgstr "|Job templates - home with example job template|"
+
+#: ../../source/job_templates.rst:22
+msgid "From this screen, you can launch (|launch|), edit (|edit|), and copy (|copy|) a job template. To delete a job template, you must select one or more templates and click the **Delete** button. Before deleting a job template, be sure it is not used in a workflow job template."
+msgstr "この画面からジョブ連プレートを起動 (|launch|)、編集 (|edit|)、コピー (|copy|) できます。ジョブテンプレートを削除するには、1 つ以上のテンプレートを選択し、**削除** ボタンをクリックします。ジョブテンプレートを削除する前に、ワークフロージョブテンプレートで使用されていないことを確認してください。"
+
+#: ../../../common/source/work_items_deletion_warning.rst:5
+msgid "If deleting items that are used by other work items, a message opens listing the items are affected by the deletion and prompts you to confirm the deletion. Some screens will contain items that are invalid or previously deleted, so they will fail to run. Below is an example of such a message:"
+msgstr "他の作業アイテムが使用するアイテムを削除する場合は、メッセージが開き、削除されるアイテムと、削除の確認を促すプロンプトが表示されます。画面によっては、無効なアイテムや、過去に削除されたアイテムが含まれる場合があるので、それらのアイテムは実行に失敗します。以下は、これらのメッセージ例です。"
+
+#: ../../source/job_templates.rst:33
+msgid "Job templates can be used to build a workflow template. For templates that show the Workflow Visualizer (|wf-viz-icon|) icon next to them are workflow templates. Clicking it allows you to graphically build a workflow. Many parameters in a job template allow you to enable **Prompt on Launch** that can be modified at the workflow level, and do not affect the values assigned at the job template level. For instructions, see the :ref:`ug_wf_editor` section."
+msgstr "ジョブテンプレートは、ワークフローテンプレートの構築に使用できます。隣にワークフロービジュアライザー (|wf-viz-icon|) アイコンが表示されているテンプレートは、ワークフローテンプレートです。クリックすると、図形式でワークフローをビルドできるようになります。ジョブテンプレートに含まれるパラメーターの多くで、**Prompt on Launch (起動プロンプト)** を有効にして、ワークフローレベルで変更でき、ジョブテンプレートレベルで割り当てられた値に影響を与えることはありません。詳しくは、「:ref:`ug_wf_editor`」のセクションを参照してください。"
+
+#: ../../source/job_templates.rst:38
+msgid "Create a Job Template"
+msgstr "ジョブテンプレートの作成"
+
+#: ../../source/job_templates.rst:40
+msgid "To create a new job template:"
+msgstr "新規ジョブテンプレートを作成するには、以下を実行します。"
+
+#: ../../source/job_templates.rst:42
+msgid "Click the **Add** button then select **Job Template** from the menu list."
+msgstr "**追加** ボタンをクリックしてから、メニュー一覧で **ジョブテンプレート** を選択します。"
+
+#: ../../source/job_templates.rst:45
+msgid "Enter the appropriate details into the following fields:"
+msgstr "以下のフィールドに該当する詳細を入力します。"
+
+#: ../../source/job_templates.rst:47
+msgid "**Name**: Enter a name for the job."
+msgstr "**名前**: ジョブの名前を入力します。"
+
+#: ../../source/job_templates.rst:48
+msgid "**Description**: Enter an arbitrary description as appropriate (optional)."
+msgstr "**説明**: 任意の説明を入力します (オプション)。"
+
+#: ../../source/job_templates.rst:49
+msgid "**Job Type**: Choose a job type:"
+msgstr "**ジョブタイプ**: ジョブタイプを選択します。"
+
+#: ../../source/job_templates.rst:51
+msgid "**Run**: Execute the playbook when launched, running Ansible tasks on the selected hosts."
+msgstr "**実行**: 起動時に Playbook を実行し、選択されたホストで Ansible タスクを実行します。"
+
+#: ../../source/job_templates.rst:52
+msgid "**Check**: Perform a \"dry run\" of the playbook and report changes that would be made without actually making them. Tasks that do not support check mode will be skipped and will not report potential changes."
+msgstr "**チェック**: Playbook の「ドライラン」を実行し、実際に変更せずに変更について報告します。チェックモードをサポートしないタスクはスキップされ、予想される変更については報告されません。"
+
+#: ../../source/job_templates.rst:54
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a job type of run or check."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時に実行またはチェックするジョブタイプを選択するようプロンプトが出されます。"
+
+#: ../../source/job_templates.rst:58
+msgid "More information on job types can be found in the `Playbooks: Special Topics <http://docs.ansible.com/playbooks_special_topics.html>`__ section of the Ansible documentation."
+msgstr "ジョブタイプの詳細情報は、Ansible ドキュメントの `Playbooks: Special Topics <http://docs.ansible.com/playbooks_special_topics.html>`__ セクションを参照してください。"
+
+#: ../../source/job_templates.rst:60
+msgid "**Inventory**: Choose the inventory to be used with this job template from the inventories available to the currently logged in user."
+msgstr "**インベントリー**: このジョブテンプレートで使用するインベントリーを、現在ログインしているユーザーが利用できるインベントリーから選択します。"
+
+#: ../../source/job_templates.rst:62
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose an inventory to run this job template against."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時にこのジョブテンプレート実行に使用するインベントリーの選択を求めるプロンプトが出されます。"
+
+#: ../../source/job_templates.rst:64
+msgid "**Project**: Choose the project to be used with this job template from the projects available to the currently logged in user."
+msgstr "**プロジェクト**: このジョブテンプレートで使用するプロジェクトを、現在ログインしているユーザーが利用できるプロジェクトから選択します。"
+
+#: ../../source/job_templates.rst:66
+msgid "**SCM Branch**: This field is only present if you chose a project that allows branch override. Specify the overriding branch to use in your job run. If left blank, the specified SCM branch (or commit hash or tag) from the project is used. For more detail, see :ref:`job branch overriding <ug_job_branching>`."
+msgstr "** SCM ブランチ**: このフィールドは、ブランチのオーバーライドを許可するプロジェクトを選択した場合にのみ表示されます。ジョブ実行で使用するオーバーライドブランチを指定します。空白のままにすると、プロジェクトからの指定の SCM ブランチ (またはコミットハッシュまたはタグ) が使用されます。詳細については、「:ref:`job branch overriding <ug_job_branching>`」を参照してください。"
+
+#: ../../source/job_templates.rst:68
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose an SCM branch."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時に SCM ブランチを選択するようプロンプトが出されます。"
+
+#: ../../source/job_templates.rst:70
+msgid "**Playbook**: Choose the playbook to be launched with this job template from the available playbooks. This field automatically populates with the names of the playbooks found in the project base path for the selected project. Alternatively, you can enter the name of the playbook if it is not listed, such as the name of a file (like ``foo.yml``) you want to use to run with that playbook. If you enter a filename that is not valid, the template will display an error, or cause the job to fail."
+msgstr "**Playbook**: 利用可能な Playbook から、このジョブテンプレートで起動する Playbook を選択します。このフィールドには、選択したプロジェクトのプロジェクトベースパスにある Playbook の名前が自動的に入力されます。または、Playbook が表示されていない場合は、Playbook で実行するために使用するファイルの名前 (たとえば ``foo.yml``) のように、Playbook の名前を入力できます。無効なファイル名を入力すると、テンプレートにエラーが表示されるか、ジョブが失敗します。"
+
+#: ../../source/job_templates.rst:72
+msgid "**Credentials**: Click the |search| button to open a separate window. Choose the credential from the available options to be used with this job template. Use the drop-down menu list to filter by credential type if the list is extensive."
+msgstr "**認証情報**: |search| ボタンをクリックして別個のウィンドウを開きます。このジョブテンプレートで使用する選択可能なオプションから認証情報を選択します。一覧に多くのオプションが含まれる場合、ドロップダウンメニューの一覧を使用し、認証情報タイプでフィルターします。"
+
+#: ../../source/job_templates.rst:76
+msgid "Some credential types are not listed because they do not apply to certain job templates."
+msgstr "一部の認証情報タイプは、特定のジョブテンプレートに適用されないため、リストされていません。"
+
+#: ../../source/job_templates.rst:83
+msgid "**Prompt on Launch**: If selected, upon launching a job template that has a default machine credential, you will not be able to remove the default machine credential in the Prompt dialog without replacing it with another machine credential before it can launch. Alternatively, you can add more credentials as you see fit. Below is an example of such a message:"
+msgstr "**起動プロンプト**: この項目が選択されている場合には、デフォルトのマシンの認証情報が含まれるジョブテンプレートを起動すると、別のマシンの認証情報に置き換えてからでないと、プロンプトダイアログのデフォルトマシンの認証情報を削除できず、起動できません。または、適切な認証情報をさらに追加することもできます。以下は、このようなメッセージの例です。"
+
+#: ../../source/job_templates.rst:85
+#: ../../source/job_templates.rst:252
+msgid "|creds-missing-replace|"
+msgstr "|creds-missing-replace|"
+
+#: ../../source/job_templates.rst:90
+msgid "**Forks**: The number of parallel or simultaneous processes to use while executing the playbook. A value of zero uses the Ansible default setting, which is 5 parallel processes unless overridden in ``/etc/ansible/ansible.cfg``."
+msgstr "**フォーク**: Playbook の実行中に使用する並行または同時プロセスの数です。値がゼロの場合には、``/etc/ansible/ansible.cfg`` で上書きが実行されない限り Ansible のデフォルト設定 (5 つの並行プロセス) が使用されます。"
+
+#: ../../source/job_templates.rst:92
+msgid "**Limit**: A host pattern to further constrain the list of hosts managed or affected by the playbook. Multiple patterns can be separated by colons (\":\"). As with core Ansible, \"a:b\" means \"in group a or b\", \"a:b:&c\" means \"in a or b but must be in c\", and \"a:!b\" means \"in a, and definitely not in b\"."
+msgstr "**Limit (制限) **: Playbook が管理または影響を与えるホストの一覧をさらに制限するためのホストのパターンです。複数のパターンは、コロン (「:」) で区切ることができます。Core Ansible の場合のように「a:b」は「in group a or b」を、「a:b:&c」は「in a or b but must be in c」を、「a:!b」は「in a, and definitely not in b」を意味します。"
+
+#: ../../source/job_templates.rst:94
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a limit."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時に制限を選択するようプロンプトが出されます。"
+
+#: ../../source/job_templates.rst:98
+msgid "For more information and examples refer to `Patterns <http://docs.ansible.com/intro_patterns.html>`__ in the Ansible documentation."
+msgstr "詳細情報と例については、Ansible ドキュメントの `Patterns <http://docs.ansible.com/intro_patterns.html>`__ を参照してください。"
+
+#: ../../source/job_templates.rst:100
+msgid "**Verbosity**: Control the level of output Ansible produces as the playbook executes. Choose the verbosity from Normal to various Verbose or Debug settings. This only appears in the \"details\" report view. Verbose logging includes the output of all commands. Debug logging is exceedingly verbose and includes information on SSH operations that can be useful in certain support instances. Most users do not need to see debug mode output."
+msgstr "**詳細**: Playbook の実行時に Ansible が生成する出力レベルを制御します。通常からさまざまな詳細レベルを選択するか、デバッグ設定を選択します。これは、「詳細」レポートビューにのみ表示されます。詳細ロギングには、すべてのコマンドの出力が含まれます。デバッグのロギングはきわめて詳細になり、特定のサポートインスタンスで役に立つ SSH 操作についての情報が含まれます。大半のユーザーは「デバッグ」モードの出力を確認する必要はありません。"
+
+#: ../../source/job_templates.rst:104
+msgid "Verbosity 5 causes |at| to block heavily when jobs are running, which could delay reporting that the job has finished (even though it has) and can cause the browser tab to lock up."
+msgstr "「詳細」の値が 5 の場合、|at| はジョブの実行時にブロックを実行し、これによりジョブが終了したことを示すレポートが遅延するため (レポートが作成されている場合でも)、ブラウザータブがロックアップする可能性があります。"
+
+#: ../../source/job_templates.rst:106
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a verbosity."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時に詳細レベルを選択するようプロンプトが出されます。"
+
+#: ../../source/job_templates.rst:108
+msgid "**Job Tags**: Provide a comma-separated list of playbook tags to specify what parts of the playbooks should be executed. For more information and examples refer to `Tags <http://docs.ansible.com/playbooks_tags.html>`__ in the Ansible documentation."
+msgstr "**ジョブタグ**: Playbook タグのコンマ区切りの一覧を提供し、実行する Playbook の部分を指定します。詳細情報および例は、Ansible ドキュメントの「`Tags <http://docs.ansible.com/playbooks_tags.html>`__ 」を参照してください。"
+
+#: ../../source/job_templates.rst:110
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose a job tag."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時にジョブタグを選択するようプロンプトが出されます。"
+
+#: ../../source/job_templates.rst:113
+msgid "**Skip Tags**: Provide a comma-separated list of playbook tags to skip certain tasks or parts of the playbooks to be executed. For more information and examples refer to `Tags <http://docs.ansible.com/playbooks_tags.html>`__ in the Ansible documentation."
+msgstr "**タグの省略**: 実行する Playbook の特定のタスクまたは一部を省略するように、Playbook タグのコンマ区切りの一覧を指定します。詳細情報および例は、Ansible ドキュメントの「 `Tags <http://docs.ansible.com/playbooks_tags.html>`__ 」を参照してください。"
+
+#: ../../source/job_templates.rst:115
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose tag(s) to skip."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時に省略するタグを選択するようプロンプトが出されます。"
+
+#: ../../source/job_templates.rst:119
+msgid "**Labels**: Supply optional labels that describe this job template, such as \"dev\" or \"test\". Labels can be used to group and filter job templates and completed jobs in the display."
+msgstr "**ラベル**: 「dev」、「test」などのこのジョブテンプレートを説明する任意のラベルを指定します。ラベルを使用してディスプレイでのジョブテンプレートおよび完了したジョブの分類およびフィルター設定を実行します。"
+
+#: ../../source/job_templates.rst:121
+msgid "Labels are created when they are added to the Job Template. Labels are associated to a single Organization using the Project that is provided in the Job Template. Members of the Organization can create labels on a Job Template if they have edit permissions (such as admin role)."
+msgstr "ラベルは、ジョブテンプレートに追加される際に作成されます。ラベルはジョブテンプレートで提供されるプロジェクトを使用する単一の組織に割り当てられます。組織のメンバーは、(管理者ロールなどの) 編集パーミッションがある場合にジョブテンプレートでラベルを作成できます。"
+
+#: ../../source/job_templates.rst:122
+msgid "Once the Job Template is saved, the labels appear in the Job Templates overview in the *Expanded* view."
+msgstr "ジョブテンプレートが保存されると、ラベルは *展開* ビューのジョブテンプレートの概要に表示されます。"
+
+#: ../../source/job_templates.rst:123
+msgid "Click on the \"x\" beside a label to remove it. When a label is removed, and is no longer associated with a Job or Job Template, the label is permanently deleted from the list of Organization labels."
+msgstr "ラベルの横にある「x」をクリックしてこれを削除します。ラベルが削除され、ジョブまたはジョブテンプレートの関連付けが解除されると、ラベルは組織ラベルの一覧から完全に削除されます。"
+
+#: ../../source/job_templates.rst:124
+msgid "Jobs inherit labels from the Job Template at the time of launch. If a label is deleted from a Job Template, it is also deleted from the Job."
+msgstr "ジョブは起動時にジョブテンプレートからラベルを継承します。ラベルがジョブテンプレートから削除される場合、ジョブからも削除されます。"
+
+#: ../../source/job_templates.rst:126
+msgid "**Instance Groups**: Click the |search| button to open a separate window. Choose the instance groups on which you want to run this job template. If the list is extensive, use the search to narrow the options."
+msgstr "**インスタンスグループ**: |search| ボタンをクリックして別個のウィンドウを開きます。このジョブ テンプレートの実行に使用するインスタンスグループを選択します。一覧に多くのオプションが含まれる場合、検索を使用してオプションの範囲を絞ります。"
+
+#: ../../source/job_templates.rst:128
+msgid "**Job Slicing**: Specify the number of slices you want this job template to run. Each slice will run the same tasks against a portion of the inventory. For more information about job slices, see :ref:`ug_job_slice`."
+msgstr "**ジョブのスライス**: このジョブテンプレートに実行させるスライス数を指定します。各スライスは、部分的なインベントリーに対して同じタスクを実行します。ジョブのスライスに関する詳細は、「:ref:`ug_job_slice`」を参照してください。"
+
+#: ../../source/job_templates.rst:130
+msgid "**Timeout**:  Allows you to specify the length of time (in seconds) that the job may run before it is canceled. Defaults to 0 for no job timeout."
+msgstr "**タイムアウト**: キャンセルされるまでジョブを実行できる時間 (秒単位) を指定できます。デフォルトは 0 で、ジョブはタイムアウトしません。"
+
+#: ../../source/job_templates.rst:132
+msgid "**Show Changes**: Allows you to see the changes made by Ansible tasks."
+msgstr "**変更の表示**: Ansible タスクで加えられた変更を表示できます。"
+
+#: ../../source/job_templates.rst:134
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose whether or not to show changes."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時に変更を表示するかどうかを選択するように、プロンプトが出されます。"
+
+#: ../../source/job_templates.rst:136
+msgid "**Options**: Specify options for launching this template, if necessary."
+msgstr "**オプション**: 必要に応じて、このテンプレートを起動するためのオプションを指定します。"
+
+#: ../../source/job_templates.rst:138
+msgid "**Privilege Escalation**: If checked, you enable this playbook to run as an administrator. This is the equivalent of passing the ``--become`` option to the ``ansible-playbook`` command."
+msgstr "**権限昇格**: オンにすると、この Playbook を管理者として実行できます。これは、``--become`` オプションを ``ansible-playbook`` コマンドに渡すことに相当します。"
+
+#: ../../source/job_templates.rst:139
+msgid "**Provisioning Callbacks**: If checked, you enable a host to call back to |at| via the REST API and invoke the launch of a job from this job template. Refer to :ref:`ug_provisioning_callbacks` for additional information."
+msgstr "**プロビジョニングコールバック**: オンにすると、ホストが REST API 経由で |at| に対してコールバックできるようになり、このジョブテンプレートからジョブを起動できるようになります。詳細は、:ref:`ug_provisioning_callbacks` を参照してください。"
+
+#: ../../source/job_templates.rst:140
+msgid "**Enable Webhook**: Turns on the ability to interface with a predefined SCM system web service that is used to launch a job template. Currently supported SCM systems are GitHub and GitLab."
+msgstr "**Webhook の有効化**: ジョブテンプレートを起動するために使用される定義済みの SCM システム Web サービスとのインターフェース機能を有効にします。現在サポートされている SCM システムは GitHub と GitLab です。"
+
+#: ../../source/job_templates.rst:144
+msgid "If you enable webhooks, other fields display, prompting for additional information:"
+msgstr "Webhook を有効にすると、他のフィールドが表示され、以下の追加情報の入力を求められます。"
+
+#: ../../source/job_templates.rst:148
+msgid "**Webhook Service**: Select which service to listen for webhooks from"
+msgstr "**Webhook サービス**: Webhook からリッスンするサービスを選択します"
+
+#: ../../source/job_templates.rst:149
+msgid "**Webhook URL**: Automatically populated with the URL for the webhook service to POST requests to."
+msgstr "**Webhook URL**: POST 要求を送信する Webhook サービスの URL が自動的に入力されます。"
+
+#: ../../source/job_templates.rst:150
+msgid "**Webhook Key**: Generated shared secret to be used by the webhook service to sign payloads sent to |at|. This must be configured in the settings on the webhook service in order for |at| to accept webhooks from this service."
+msgstr "**Webhook Key**: |at| に送信されたペイロードへの署名に Webhook サービスが使用するために生成された共有シークレット。|at| がこのサービスから Webhook を受け入れるには、Webhook サービスでこの設定が行われている必要があります。"
+
+#: ../../source/job_templates.rst:151
+msgid "**Webhook Credential**: Optionally, provide a GitHub or GitLab personal access token (PAT) as a credential to use to send status updates back to the webhook service. Before you can select it, the credential must exist. See :ref:`ug_credentials_cred_types` to create one."
+msgstr "**Webhook の認証情報**: オプションで、ステータス更新を Webhook サービスに送り返すために使用する認証情報として GitHub または GitLab のパーソナルアクセストークン (PAT) を指定します。選択するには認証情報が存在する必要があります。作成するには、「:ref:`ug_credentials_cred_types`」を参照してください。"
+
+#: ../../source/job_templates.rst:153
+msgid "For additional information on setting up webhooks, see :ref:`ug_webhooks`."
+msgstr "Webhook の設定に関する追加情報は、「:ref:`ug_webhooks`」を参照してください。"
+
+#: ../../source/job_templates.rst:156
+msgid "**Concurrent Jobs**: If checked, you are allowing jobs in the queue to run simultaneously if not dependent on one another. Check this box if you want to run job slices simultaneously. Refer to :ref:`ug_job_concurrency` for additional information."
+msgstr "**同時実行ジョブ**: オンにすると、キューにあるジョブが、相互に依存していない場合に同時に実行できるようになります。ジョブスライスを同時に実行する場合には、このボックスにチェックを入れてください。詳細は、:ref:`ug_job_concurrency` を参照してください。"
+
+#: ../../source/job_templates.rst:157
+msgid "**Enable Fact Storage**: When checked, |at| will store gathered facts for all hosts in an inventory related to the job running."
+msgstr "**ファクトストレージの有効化**: オンにすると、|at| は、ジョブの実行に関連するインベントリーですべてのホストについての収集されたファクトを保存します。"
+
+#: ../../source/job_templates.rst:160
+msgid "**Extra Variables**:"
+msgstr "**追加変数**:"
+
+#: ../../source/job_templates.rst:162
+msgid "Pass extra command line variables to the playbook. This is the \"-e\" or \"--extra-vars\" command line parameter for ansible-playbook that is documented in the Ansible documentation at `Passing Variables on the Command Line <http://docs.ansible.com/playbooks_variables.html#passing-variables-on-the-command-line>`__."
+msgstr "追加のコマンドライン変数を Playbook に渡します。これは、ansible-playbook の -e または --extra-vars コマンドラインパラメーターで、これについては、Ansible Tower ドキュメント (`Passing Variables on the Command Line <http://docs.ansible.com/playbooks_variables.html#passing-variables-on-the-command-line>`__ ) に説明されています。"
+
+#: ../../source/job_templates.rst:163
+msgid "Provide key/value pairs using either YAML or JSON. These variables have a maximum value of precedence and overrides other variables specified elsewhere. An example value might be:"
+msgstr "YAML または JSON のいずれかを使用してキー/値のペアを指定します。このような変数には、優先順位を示す最大値があり、他の場所で指定された他の変数よりも優先されます。値の例には、以下が含まれます。"
+
+#: ../../source/job_templates.rst:170
+msgid "See :ref:`ug_jobtemplates_extravars` for more information."
+msgstr "詳細は、「:ref:`ug_jobtemplates_extravars`」を参照してください。"
+
+#: ../../source/job_templates.rst:172
+msgid "**Prompt on Launch**: If selected, even if a default value is supplied, you will be prompted upon launch to choose command line variables."
+msgstr "**起動プロンプト**: これが選択されている場合、デフォルト値が指定されている場合でも、起動時にコマンドライン変数を選択するようプロンプトが出されます。"
+
+#: ../../source/job_templates.rst:176
+msgid "If you want to be able to specify ``extra_vars`` on a schedule, you must select **Prompt on Launch** for **EXTRA VARIABLES** on the job template, or a enable a survey on the job template, then those answered survey questions become ``extra_vars``."
+msgstr "スケジュールに ``extra_vars`` を指定可能にするには、ジョブテンプレートの **EXTRA VARIABLES** で **起動プロンプト** を選択するか、ジョブテンプレートの Survey を有効にする必要があります。これにより、回答済みの Survey の質問が ``extra_vars`` に指定されます。"
+
+#: ../../source/job_templates.rst:178
+msgid "|Job templates - create new job template|"
+msgstr "|Job templates - create new job template|"
+
+#: ../../source/job_templates.rst:182
+msgid "When you have completed configuring the details of the job template, click **Save**."
+msgstr "ジョブテンプレートの詳細の設定が完了したら、**保存** をクリックします。"
+
+#: ../../source/job_templates.rst:184
+msgid "Saving the template does not exit the job template page but advances to the Job Template Details tab for viewing. After saving the template, you can click **Launch** to launch the job, or click **Edit** to add or change the attributes of the template, such as permissions, notifications, view completed jobs, and add a survey (if the job type is not a scan). You must first save the template prior to launching, otherwise, the **Launch** button remains grayed-out."
+msgstr "テンプレートを保存しても、ジョブテンプレートページは終了しませんが、ジョブテンプレートの詳細タブが表示されます。テンプレートを保存したら、**起動** をクリックしてジョブを起動するか、**編集** をクリックして、パーミッション、通知、完了済みジョブの表示、survey の追加など、テンプレートの属性を追加または変更できます (ジョブタイプがスキャンでない場合)。起動する前に、まずテンプレートを保存する必要があります。そうしないと、**起動** ボタンはグレイアウトしたままになります。"
+
+#: ../../source/job_templates.rst:188
+msgid "You can verify the template is saved when the newly created template appears on the Templates list view."
+msgstr "新規に作成されたテンプレートがテンプレートリストビューに表示されると、テンプレートが保存されていることを確認できます。"
+
+#: ../../source/job_templates.rst:193
+msgid "Add Permissions"
+msgstr "パーミッションの追加"
+
+#: ../../../common/source/permissions.rst:4
+msgid "In the **Access** tab, click the **Add** button."
+msgstr "**アクセス** タブで **追加** ボタンをクリックします。"
+
+#: ../../../common/source/permissions.rst:6
+msgid "Select a user or team to add and click **Next**"
+msgstr "追加するユーザーまたはチームを選択し、**次へ**をクリックします。"
+
+#: ../../../common/source/permissions.rst:8
+msgid "Select one or more users or teams from the list by clicking the check box(es) next to the name(s) to add them as members and click **Next**."
+msgstr "リストから 1 つまたは複数のユーザーを選択します。これには、メンバーとして追加するユーザーの隣にあるチェックボックスをクリックして、**次へ** をクリックします。"
+
+#: ../../../common/source/permissions.rst:12
+msgid "In this example, two users have been selected to be added."
+msgstr "この例では、追加するユーザーが 2 つ選択されています。"
+
+#: ../../../common/source/permissions.rst:14
+msgid "Select the role(s) you want the selected user(s) or team(s) to have. Be sure to scroll down for a complete list of roles. Different resources have different options available."
+msgstr "選択したユーザーやチームに割り当てるロールを選択します。役割の一覧は、下にスクロールして確認してください。リソースによって利用できるオプションが異なります。"
+
+#: ../../../common/source/permissions.rst:18
+msgid "Click the **Save** button to apply the roles to the selected user(s) or team(s) and to add them as members."
+msgstr "**保存** ボタンをクリックすると、選択したユーザーまたはチームにロールが適用され、メンバーとして追加されます。"
+
+#: ../../../common/source/permissions.rst:20
+msgid "The Add Users/Teams window closes to display the updated roles assigned for each user and team."
+msgstr "ユーザー/チームの追加ウィンドウが閉じ、各ユーザーやチームに割り当てられた更新済みのロールが表示されます。"
+
+#: ../../../common/source/permissions.rst:25
+msgid "To remove roles for a particular user, click the disassociate (x) button next to its resource."
+msgstr "特定ユーザーのロールを削除するには、そのリソースの横にある「関連付けの解除」(x) ボタンをクリックします。"
+
+#: ../../../common/source/permissions.rst:29
+msgid "This launches a confirmation dialog, asking you to confirm the disassociation."
+msgstr "これにより確認ダイアログが起動し、関連付けの解除を確定するように求められます。"
+
+#: ../../source/job_templates.rst:199
+msgid "Work with Notifications"
+msgstr "通知の使用"
+
+#: ../../source/job_templates.rst:201
+msgid "Clicking the **Notifications** tab allows you to review any notification integrations you have setup and their statuses, if they have ran."
+msgstr "**通知** タブをクリックすると、設定した通知の統合と、実行されている場合はそのステータスを確認できます。"
+
+#: ../../source/job_templates.rst:205
+msgid "Use the toggles to enable or disable the notifications to use with your particular template. For more detail, see :ref:`ug_notifications_on_off`."
+msgstr "トグルを使用して、特定のテンプレートで使用する通知を有効または無効にします。詳細については、「:ref:`ug_notifications_on_off`」を参照してください。"
+
+#: ../../source/job_templates.rst:207
+msgid "If no notifications have been set up, click the **Add** button to create a new notification. Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types and extended messaging."
+msgstr "通知が設定されていない場合は、**追加** ボタンをクリックして新規通知を作成します。さまざまな通知タイプや拡張メッセージングの設定に関する補足情報は、:ref:`ug_notifications_types` を参照してください。"
+
+#: ../../source/job_templates.rst:211
+msgid "View Completed Jobs"
+msgstr "完了したジョブの表示"
+
+#: ../../source/job_templates.rst:213
+msgid "The **Completed Jobs** tab provides the list of job templates that have ran. Click **Expanded** to view details of each job, including its status, ID, and name; type of job, time started and completed, who started the job; and which template, inventory, project, and credential were used. You can filter the list of completed jobs using any of these criteria."
+msgstr "**完了したジョブ** タブでは、実行済みのジョブテンプレートの一覧が表示されます。**展開** をクリックして、ステータス ID、名前、ジョブタイプ、開始時間と完了時間、ジョブを開始したユーザー、使用したテンプレート、インベントリー、プロジェクトおよび認証情報など、各ジョブの詳細を表示します。これらの条件を使用して完了したジョブの一覧をフィルタリングできます。"
+
+#: ../../source/job_templates.rst:218
+msgid "Sliced jobs that display on this list are labeled accordingly, with the number of sliced jobs that have run:"
+msgstr "このリストに表示スライスされたジョブは適宜、実行したスライスジョブ数でラベルが付けられます。"
+
+#: ../../source/job_templates.rst:224
+msgid "Scheduling"
+msgstr "スケジューリング"
+
+#: ../../source/job_templates.rst:230
+msgid "Access the schedules for a particular job template from the **Schedules** tab."
+msgstr "**スケジュール** タブから特定のジョブテンプレートのスケジュールにアクセスします。"
+
+#: ../../source/job_templates.rst:232
+msgid "|Job Templates - schedule launch|"
+msgstr "|Job Templates - schedule launch|"
+
+#: ../../source/job_templates.rst:238
+msgid "Schedule a Job Template"
+msgstr "ジョブテンプレートのスケジュール"
+
+#: ../../source/job_templates.rst:244
+msgid "To schedule a job template run, click the **Schedules** tab."
+msgstr "ジョブテンプレートの実行をスケジュールするには、**スケジュール** タブをクリックします。"
+
+#: ../../source/job_templates.rst:246
+msgid "If schedules are already set up; review, edit, or enable/disable your schedule preferences."
+msgstr "スケジュールがすでに設定されている場合には、スケジュールの設定をレビュー、編集、または有効化/無効化します。"
+
+#: ../../source/job_templates.rst:247
+msgid "If schedules have not been set up, refer to :ref:`ug_scheduling` for more information."
+msgstr "スケジュールが設定されていない場合には、詳細情報を「:ref:`ug_scheduling`」で参照してください。"
+
+#: ../../source/job_templates.rst:250
+msgid "If **Prompt on Launch** was selected for the **Credentials** field, and you create or edit scheduling information for your job template, a **Prompt** button displays at the bottom of the Schedules form. You will not be able to remove the default machine credential in the Prompt dialog without replacing it with another machine credential before you can save it. Below is an example of such a message:"
+msgstr "**認証情報** フィールドで、**起動プロンプト** が選択されており、ジョブテンプレートのスケジュール情報を作成または編集する場合に、**プロンプト** ボタンがスケジュールフォームの一番下に表示されます。別のマシンの認証情報に置き換えてからでないと、プロンプトダイアログのデフォルトマシンの認証情報を削除できず、保存できません。以下はこのようなメッセージの例です。"
+
+#: ../../source/job_templates.rst:256
+msgid "To able to set ``extra_vars`` on schedules, you must select **Prompt on Launch** for **EXTRA VARIABLES** on the job template, or a enable a survey on the job template, then those answered survey questions become ``extra_vars``."
+msgstr "スケジュールに ``extra_vars`` を設定可能にするには、ジョブテンプレートの **EXTRA VARIABLES** で **起動プロンプト** を選択するか、ジョブテンプレートの Survey を有効にする必要があります。これにより、回答済みの Survey の質問が ``extra_vars`` に指定されます。"
+
+#: ../../source/job_templates.rst:262
+msgid "Surveys"
+msgstr "Survey"
+
+#: ../../source/job_templates.rst:268
+msgid "Job types of Run or Check will provide a way to set up surveys in the Job Template creation or editing screens. Surveys set extra variables for the playbook similar to 'Prompt for Extra Variables' does, but in a user-friendly question and answer way. Surveys also allow for validation of user input. Click the **Survey** tab to create a survey."
+msgstr "「実行」または「チェック」のジョブタイプを選択すると、ジョブテンプレートの作成または編集画面で Survey を設定できます。Survey は、「Prompt for Extra Variables (追加変数のプロンプト)」と同様に Playbook の追加変数を設定しますが、ユーザーが使いやすい質問と回答を使ってこれを実行します。また、Survey ではユーザー入力を検証することもできます。**Survey** ボタンをクリックして Survey を作成します。"
+
+#: ../../source/job_templates.rst:270
+msgid "Use cases for surveys are numerous. An example might be if operations wanted to give developers a \"push to stage\" button they could run without advanced Ansible knowledge. When launched, this task could prompt for answers to questions such as, \"What tag should we release?\""
+msgstr "Survey のユースケースは多岐に及びます。一例として、開発者に「push to stage」ボタンを付与する操作が必要な場合、これは Ansible の高度な知識がなくても実行できます。起動時に、このタスクは「What tag should we release?」などといった質問への回答を求めるプロンプトを出す可能性があります。"
+
+#: ../../source/job_templates.rst:272
+msgid "Many types of questions can be asked, including multiple-choice questions."
+msgstr "多項選択式の質問など、多種の質問を尋ねることができます。"
+
+#: ../../source/job_templates.rst:278
+msgid "Create a Survey"
+msgstr "Survey の作成"
+
+#: ../../source/job_templates.rst:285
+msgid "To create a survey:"
+msgstr "Survey を作成するには、以下を実行します。"
+
+#: ../../source/job_templates.rst:287
+msgid "Click the **Survey** tab and click the **Add** button."
+msgstr "テンプレートで **Survey** タブをクリックして、**追加** ボタンをクリックします。"
+
+#: ../../source/job_templates.rst:289
+msgid "A survey can consist of any number of questions. For each question, enter the following information:"
+msgstr "Survey には複数の質問を含めることができます。それぞれの質問について、以下の情報を入力します。"
+
+#: ../../source/job_templates.rst:291
+msgid "**Name**: The question to ask the user"
+msgstr "**名前**: ユーザーに尋ねる質問"
+
+#: ../../source/job_templates.rst:292
+msgid "**Description**: (optional) A description of what's being asked of the user."
+msgstr "**説明**: (オプション) ユーザーに尋ねられる内容の説明。"
+
+#: ../../source/job_templates.rst:293
+msgid "**Answer Variable Name**: The Ansible variable name to store the user's response in. This is the variable to be used by the playbook. Variable names cannot contain spaces."
+msgstr "**Answer Variable Name (回答の変数名)**: ユーザーの応答の保存に使用する Ansible 変数名。これは Playbook で使用される変数です。変数名にはスペースを含めることができません。"
+
+#: ../../source/job_templates.rst:294
+msgid "**Answer Type**: Choose from the following question types."
+msgstr "**回答タイプ**: 以下の質問のタイプから選択します。"
+
+#: ../../source/job_templates.rst:296
+msgid "*Text*: A single line of text. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*テキスト*: 単一行のテキスト。この回答の最小および最大の長さ (文字数) を設定できます。"
+
+#: ../../source/job_templates.rst:297
+msgid "*Textarea*: A multi-line text field. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*Textarea (テキスト領域)*: 複数行のテキストフィールド。この回答の最小および最大の長さ (文字数) を設定できます。"
+
+#: ../../source/job_templates.rst:298
+msgid "*Password*: Responses are treated as sensitive information, much like an actual password is treated. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*パスワード*: 応答は、実際のパスワードが処理される場合と同様に機密情報として処理されます。この回答の最小および最大の長さ (文字数) を設定できます。"
+
+#: ../../source/job_templates.rst:299
+msgid "*Multiple Choice (single select)*: A list of options, of which only one can be selected at a time. Enter the options, one per line, in the **Multiple Choice Options** box."
+msgstr "*Multiple Choice (single select) (複数の選択 (単一選択))*: 1 度に 1 つのみを選択できるオプションの一覧。**複数の選択オプション** ボックスに 1 行に 1 つのオプションを入力します。"
+
+#: ../../source/job_templates.rst:300
+msgid "*Multiple Choice (multiple select)*: A list of options, any number of which can be selected at a time. Enter the options, one per line, in the **Multiple Choice Options** box."
+msgstr "*Multiple Choice (multiple select)(複数の選択 (複数選択))*: 1 度に任意の数のオプションを選択できるオプションの一覧。**複数の選択オプション** ボックスに 1 行に 1 つのオプションを入力します。"
+
+#: ../../source/job_templates.rst:303
+msgid "*Integer*: An integer number. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*Integer (整数)*: 整数。この回答の最小および最大の長さ (文字数) を設定できます。"
+
+#: ../../source/job_templates.rst:304
+msgid "*Float*: A decimal number. You can set the minimum and maximum length (in characters) for this answer."
+msgstr "*Float (浮動)*: 10 進数。この回答の最小および最大の長さ (文字数) を設定できます。"
+
+#: ../../source/job_templates.rst:306
+msgid "**Required**: Whether or not an answer to this question is required from the user."
+msgstr "**必須**: この質問に対する回答がユーザーから求められているかどうかを示します。"
+
+#: ../../source/job_templates.rst:307
+msgid "**Minimum length** and **Maximum length**: Specify if a certain length in the answer is required."
+msgstr "**最小長** と **最大長**: 回答が特定の長さである必要があるかどうかを指定します。"
+
+#: ../../source/job_templates.rst:308
+msgid "**Default Answer**: The default answer to the question. This value is pre-filled in the interface and is used if the answer is not provided by the user."
+msgstr "**Default Answer (デフォルトの回答)**: 質問に対するデフォルトの回答。この値は、回答がユーザーによって提供されていない場合にインターフェースに事前に入力され、使用されます。"
+
+#: ../../source/job_templates.rst:313
+msgid "Once you have entered the question information, click **Save** to add the question."
+msgstr "質問情報を入力したら、**保存** をクリックして質問を追加します。"
+
+#: ../../source/job_templates.rst:315
+msgid "The survey question displays in the Survey list. For any question, you can click |edit| to edit the question, or check the box next to each question and click **Delete** to delete the question, or use the toggle button at the top of the screen to enable or disable the survey prompt(s)."
+msgstr "Survey 一覧に Survey の質問が表示されます。いずれの質問も、|edit| をクリックして編集したり、各質問の横にあるチェックボックスをオンにしてから **削除** をクリックして削除したり、画面上部の切り替えボタンを使用して Survey プロンプトを有効または無効にしたりできます。"
+
+#: ../../source/job_templates.rst:317
+msgid "|job-template-completed-survey|"
+msgstr "|job-template-completed-survey|"
+
+#: ../../source/job_templates.rst:322
+msgid "If you have more than one survey question, use the **Edit Order** button to rearrange the order of the questions by clicking and dragging on the grid icon."
+msgstr "Survey の質問が複数ある場合は、**順序の編集** ボタンを使用し、グリッドアイコンをクリックアンドドラッグして質問の順序を並べ替えることができます。"
+
+#: ../../source/job_templates.rst:327
+msgid "To add more questions, click the **Add** button to add additional questions."
+msgstr "さらに質問を追加するには、**追加** ボタンをクリックして質問を追加します。"
+
+#: ../../source/job_templates.rst:332
+msgid "Optional Survey Questions"
+msgstr "オプションの Survey の質問"
+
+#: ../../source/job_templates.rst:338
+msgid "The **Required** setting on a survey question determines whether the answer is optional or not for the user interacting with it."
+msgstr "Survey の質問に対する **必須** の設定は、対話するユーザーにとって回答がオプションかどうかを決定します。"
+
+#: ../../source/job_templates.rst:340
+msgid "Behind the scenes, optional survey variables can be passed to the playbook in ``extra_vars``, even when they aren't filled in."
+msgstr "背後では、オプションの Survey 変数が入力されていない場合でも ``extra_vars`` の Playbook に渡すことができます。"
+
+#: ../../source/job_templates.rst:342
+msgid "If a non-text variable (input type) is marked as optional, and is not filled in, no survey ``extra_var`` is passed to the playbook."
+msgstr "テキスト以外の変数 (入力タイプ) がオプションとマークされ、入力されていない場合には、Survey の ``extra_var`` は Playbook に渡されません。"
+
+#: ../../source/job_templates.rst:344
+msgid "If a text input or text area input is marked as optional, is not filled in, and has a minimum ``length > 0``, no survey ``extra_var`` is passed to the playbook."
+msgstr "テキスト入力またはテキスト領域の入力がオプションとしてマークされていて、この内容が入力されておらず、最小の ``length > 0`` が設定されている場合に、Survey の ``extra_var`` は Playbook に渡されません。"
+
+#: ../../source/job_templates.rst:346
+msgid "If a text input or text area input is marked as optional, is not filled in, and has a minimum ``length === 0``, that survey ``extra_var`` is passed to the playbook, with the value set to an empty string ( \"\" )."
+msgstr "テキスト入力またはテキスト領域の入力がオプションとしてマークされていて、この内容が入力されておらず、最小の ``length === 0`` が設定されている場合に、Survey の ``extra_var`` は、値が空のストリング ( “” ) に設定された状態で Playbook に渡されます。"
+
+#: ../../source/job_templates.rst:350
+msgid "Launch a Job Template"
+msgstr "ジョブテンプレートの起動"
+
+#: ../../source/job_templates.rst:355
+msgid "A major benefit of |at| is the push-button deployment of Ansible playbooks. You can easily configure a template to store all parameters you would normally pass to the ansible-playbook on the command line--not just the playbooks, but the inventory, credentials, extra variables, and all options and settings you can specify on the command line."
+msgstr "|at| の大きな利点として、Ansible Playbook のプッシュボタンによるデプロイメントが挙げられます。テンプレートを簡単に定義し、通常はコマンドラインで ansible-playbook に渡すすべてのパラメーター (Playbook だけでなく、インベントリー、認証情報、追加変数、およびコマンドラインで指定できるすべてのオプションおよび設定など) を保存できます。"
+
+#: ../../source/job_templates.rst:357
+msgid "Easier deployments drive consistency, by running your playbooks the same way each time, and allow you to delegate responsibilities--even users who aren’t Ansible experts can run playbooks written by others."
+msgstr "デプロイメントが簡単になり、Playbook が毎回同じ方法で実行されるため一貫性が確保され、責任を委譲することも可能になります。Ansible に精通していないユーザーであっても、他のユーザーが作成した Playbook を実行できます。"
+
+#: ../../source/job_templates.rst:359
+msgid "Launch a job template by any of the following ways:"
+msgstr "以下のいずれかの方法でジョブテンプレートを起動します。"
+
+#: ../../source/job_templates.rst:361
+msgid "Access the job template list from the **Templates** menu on the left navigation bar or while in the Job Template Details view, scroll to the bottom to access the |launch| button from the list of templates."
+msgstr "左のナビゲーションバーの **テンプレート** メニューからジョブテンプレートリストにアクセスするか、ジョブテンプレートの詳細ビューで一番下までスクロールして、|launch| テンプレートの一覧からボタンにアクセスします。"
+
+#: ../../source/job_templates.rst:365
+msgid "While in the Job Template Details view of the job template you want to launch, click **Launch**."
+msgstr "起動するジョブテンプレートのジョブテンプレートの詳細ビューで、**起動** をクリックします。"
+
+#: ../../source/job_templates.rst:369
+msgid "A job may require additional information to run. The following data may be requested at launch:"
+msgstr "ジョブを実行するには、追加の情報が必要になる場合があります。以下のデータは起動時に必要になることがあります。"
+
+#: ../../source/job_templates.rst:371
+msgid "Credentials that were setup"
+msgstr "設定された認証情報"
+
+#: ../../source/job_templates.rst:372
+msgid "The option ``Prompt on Launch`` is selected for any parameter"
+msgstr "``Prompt on Launch`` オプションが任意のパラメーターに対して選択されている"
+
+#: ../../source/job_templates.rst:373
+msgid "Passwords or passphrases that have been set to **Ask**"
+msgstr "**Ask** に設定されたパスワードまたはパスフレーズ"
+
+#: ../../source/job_templates.rst:374
+msgid "A survey, if one has been configured for the job templates"
+msgstr "Survey (ジョブテンプレート用に設定されている場合)"
+
+#: ../../source/job_templates.rst:375
+msgid "Extra variables, if requested by the job template"
+msgstr "追加変数 (ジョブテンプレートで必要な場合)"
+
+#: ../../source/job_templates.rst:379
+msgid "If a job has user-provided values, then those are respected upon relaunch. If the user did not specify a value, then the job uses the default value from the job template. Jobs are not relaunched as-is. They are relaunched with the user prompts re-applied to the job template."
+msgstr "ジョブにユーザー指定の値があると、再起動時に使用されます。ユーザーが値を指定しないと、ジョブはジョブテンプレートのデフォルト値を使用します。ジョブがそのまま再起動するのではなく、それらは、ジョブテンプレートに再適用されたユーザープロンプトで再起動されます。"
+
+#: ../../source/job_templates.rst:382
+msgid "Below is an example job launch that prompts for Job Tags, and runs the example survey created in :ref:`ug_surveys`."
+msgstr "以下は、ジョブタグのプロンプトを出し、「:ref:`ug_surveys`」で作成された Survey サンプルを実行するジョブの起動例です。"
+
+#: ../../source/job_templates.rst:384
+msgid "|job-launch-with-prompt-job-tags|"
+msgstr "|job-launch-with-prompt-job-tags|"
+
+#: ../../source/job_templates.rst:388
+msgid "|job-launch-with-prompt-survey|"
+msgstr "|job-launch-with-prompt-survey|"
+
+#: ../../source/job_templates.rst:394
+msgid "Providing values on one tab, and going back to a previous tab, and then continuing on to the next tab will result in having to re-provide values on the rest of the tabs. Make sure you fill in the tabs in the order the prompts appear to avoid this."
+msgstr "1 つのタブで値を指定し、前のタブに戻って次のタブに進むと、残りのタブで値を再指定する必要があります。これを回避するために、プロンプトが表示される順序でタブに入力してください。"
+
+#: ../../source/job_templates.rst:397
+msgid "Along with any extra variables set in the job template and survey, |at| automatically adds the following variables to the job environment. Also note, ``awx_``* variables are defined by the system and cannot be overridden. Variables about the job context, like ``awx_job_template_name`` are not affected if they are set in ``extra_vars``."
+msgstr "ジョブテンプレートと survey で設定された追加の変数とともに、|at| 次の変数をジョブ環境に自動的に追加します。また、``awx_`` * 変数はシステムによって定義され、オーバーライドできません。``awx_job_template_name`` のようなジョブコンテキストに関する変数は、``extra_vars`` に設定されている場合は影響を受けません。"
+
+#: ../../source/job_templates.rst:399
+msgid "``awx_job_id``: The Job ID for this job run"
+msgstr "``awx_job_id``: このジョブ実行のジョブ ID"
+
+#: ../../source/job_templates.rst:400
+msgid "``awx_job_launch_type``: The description to indicate how the job was started:"
+msgstr "``awx_job_launch_type``: ジョブの起動方法を示す説明:"
+
+#: ../../source/job_templates.rst:402
+msgid "**manual**: Job was started manually by a user."
+msgstr "**手動**: ジョブがユーザーにより手動で開始されました。"
+
+#: ../../source/job_templates.rst:403
+msgid "**relaunch**: Job was started via relaunch."
+msgstr "**再起動**: ジョブは再起動機能を使用して開始されました。"
+
+#: ../../source/job_templates.rst:404
+msgid "**callback**: Job was started via host callback."
+msgstr "**コールバック**: ジョブはホストのコールバックを使用して開始されました。"
+
+#: ../../source/job_templates.rst:405
+msgid "**scheduled**: Job was started from a schedule."
+msgstr "**スケジュール済み**: ジョブはスケジュールから開始されました。"
+
+#: ../../source/job_templates.rst:406
+msgid "**dependency**: Job was started as a dependency of another job."
+msgstr "**依存関係**: ジョブは別のジョブの依存関係として開始されました。"
+
+#: ../../source/job_templates.rst:407
+msgid "**workflow**: Job was started from a workflow job."
+msgstr "**ワークフロー**: ジョブはワークフローのジョブから開始されました。"
+
+#: ../../source/job_templates.rst:408
+msgid "**sync**: Job was started from a project sync."
+msgstr "**同期**: ジョブはプロジェクトの同期により開始されました。"
+
+#: ../../source/job_templates.rst:409
+msgid "**scm**: Job was created as an Inventory SCM sync."
+msgstr "**scm**: ジョブはインベントリーの SCM 同期として作成されました。"
+
+#: ../../source/job_templates.rst:411
+msgid "``awx_job_template_id``: The Job Template ID that this job run uses"
+msgstr "``awx_job_template_id``: このジョブ実行が使用するジョブテンプレート ID"
+
+#: ../../source/job_templates.rst:412
+msgid "``awx_job_template_name``: The Job Template name that this job uses"
+msgstr "``awx_job_template_name``: このジョブが使用するジョブテンプレート名"
+
+#: ../../source/job_templates.rst:413
+msgid "``awx_project_revision``: The revision identifier for the source tree that this particular job uses (it is also the same as the job's field ``scm_revision``)"
+msgstr "``awx_project_revision``: この特定のジョブが使用するソースツリーのリビジョン ID (ジョブのフィールド ``scm_revision`` とも同じです)"
+
+#: ../../source/job_templates.rst:414
+msgid "``awx_project_scm_branch``: The configured default project SCM branch for the project the job template uses"
+msgstr "``awx_project_scm_branch``: ジョブテンプレートが使用するプロジェクトに設定されたデフォルトのプロジェクト SCM ブランチ"
+
+#: ../../source/job_templates.rst:415
+msgid "``awx_job_scm_branch`` If the SCM Branch is overwritten by the job, the value is shown here"
+msgstr "``awx_job_scm_branch`` SCM ブランチがジョブによって上書きされると、その値はここに表示されます。"
+
+#: ../../source/job_templates.rst:416
+msgid "``awx_user_email``: The user email of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_email``: このジョブを開始したコントローラーユーザーのメール。これはコールバックまたはスケジュール済みジョブでは利用できません。"
+
+#: ../../source/job_templates.rst:417
+msgid "``awx_user_first_name``: The user's first name of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_first_name``: このジョブを開始したコントローラーユーザーの名。これはコールバックまたはスケジュール済みジョブでは利用できません。"
+
+#: ../../source/job_templates.rst:418
+msgid "``awx_user_id``: The user ID of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_id``: このジョブを開始したコントローラーユーザーの ID。これはコールバックまたはスケジュール済みジョブでは利用できません。"
+
+#: ../../source/job_templates.rst:419
+msgid "``awx_user_last_name``: The user's last name of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_last_name``: このジョブを開始したコントローラーユーザーの姓。これはコールバックまたはスケジュール済みジョブでは利用できません。"
+
+#: ../../source/job_templates.rst:420
+msgid "``awx_user_name``: The user name of the controller user that started this job. This is not available for callback or scheduled jobs."
+msgstr "``awx_user_name``: このジョブを開始したコントローラーユーザーのユーザー名。これはコールバックまたはスケジュール済みジョブでは利用できません。"
+
+#: ../../source/job_templates.rst:421
+msgid "``awx_schedule_id``: If applicable, the ID of the schedule that launched this job"
+msgstr "``awx_schedule_id``: このジョブを起動したスケジュールの ID (該当する場合)。"
+
+#: ../../source/job_templates.rst:422
+msgid "``awx_schedule_name``: If applicable, the name of the schedule that launched this job"
+msgstr "``awx_schedule_name``: このジョブを起動したスケジュール名 (該当する場合)。"
+
+#: ../../source/job_templates.rst:423
+msgid "``awx_workflow_job_id``: If applicable, the ID of the workflow job that launched this job"
+msgstr "``awx_workflow_job_id``: このジョブを起動したワークフロージョブの ID (該当する場合)。"
+
+#: ../../source/job_templates.rst:424
+msgid "``awx_workflow_job_name``: If applicable, the name of the workflow job that launched this job. Note this is also the same as the workflow job template."
+msgstr "``awx_workflow_job_name``: このジョブを起動したワークフロージョブ名 (該当する場合)。これは、ワークフロージョブテンプレートとも同じである点に注意してください。"
+
+#: ../../source/job_templates.rst:425
+msgid "``awx_inventory_id``: If applicable, the ID of the inventory this job uses"
+msgstr "``awx_inventory_id``: 該当する場合、このジョブが使用するインベントリーの ID。"
+
+#: ../../source/job_templates.rst:426
+msgid "``awx_inventory_name``: If applicable, the name of the inventory this job uses"
+msgstr "``awx_inventory_name``: 該当する場合、このジョブが使用するインベントリーの名前。"
+
+#: ../../source/job_templates.rst:428
+msgid "For compatibility, all variables are also given an \"awx\" prefix, for example, ``awx_job_id``."
+msgstr "変数はすべて ``awx_job_id`` など、プリフィックスが「awx」であることが前提です。"
+
+#: ../../source/job_templates.rst:430
+msgid "Upon launch, |at| automatically redirects the web browser to the Job Status page for this job under the **Jobs** tab."
+msgstr "起動時に、|at| は Web ブラウザーを **ジョブ** タブにあるこのジョブの「ジョブステータス」ページに自動的にリダイレクトします。"
+
+#: ../../source/job_templates.rst:434
+msgid "You can re-launch the most recent job from the list view to re-run on all hosts or just failed hosts in the specified inventory. Refer to :ref:`ug_jobs` in the |atu| for more detail."
+msgstr "一覧ビューから最近のジョブを再起動し、全ホストで再実行するか、特定のインベントリーで失敗したホストだけを再実行します。詳細は、|atu| の :ref:`ug_jobs` を参照してください。"
+
+#: ../../source/job_templates.rst:436
+msgid "When slice jobs are running, job lists display the workflow and job slices, as well as a link to view their details individually."
+msgstr "スライスジョブが実行中の場合は、ジョブリストはワークフローとジョブスライス以外に、個別の詳細が確認できるリンクを表示します。"
+
+#: ../../source/job_templates.rst:442
+msgid "Copy a Job Template"
+msgstr "ジョブテンプレートのコピー"
+
+#: ../../source/job_templates.rst:444
+msgid "If you choose to copy Job Template, it **does not** copy any associated schedule, notifications, or permissions. Schedules and notifications must be recreated by the user or admin creating the copy of the Job Template. The user copying the Job Template will be granted the admin permission, but no permissions are assigned (copied) to the Job Template."
+msgstr "ジョブテンプレートのコピーを選択した場合、関連付けられたスケジュール、通知、またはパーミッションのコピーは **実行されません**。スケジュールおよび通知は、ジョブテンプレートのコピーを作成するユーザーまたは管理者によって再作成される必要があります。ジョブテンプレートをコピーするユーザーには管理者権限が付与されますが、パーミッションはジョブテンプレートには割り当てられたり (コピーされたり) しません。"
+
+#: ../../source/job_templates.rst:446
+msgid "Access the job template list from the **Templates** menu on the left navigation bar or while in the Job Template Details view, scroll to the bottom to access it from the list of templates."
+msgstr "左のナビゲーションバーの **テンプレート** メニューからジョブテンプレートの一覧にアクセスするか、ジョブテンプレートの詳細ビューで一番下までスクロールして、テンプレートのリストからアクセスします。"
+
+#: ../../source/job_templates.rst:450
+msgid "Click the |copy| button associated with the template you want to copy."
+msgstr "コピーするテンプレートに関連付けられた |copy| ボタンをクリックします。"
+
+#: ../../source/job_templates.rst:454
+msgid "The new template with the name of the template from which you copied and a timestamp displays in the list of templates."
+msgstr "コピー元のテンプレート名とタイムスタンプが付いた新しいテンプレートがテンプレートのリストに表示されます。"
+
+#: ../../source/job_templates.rst:456
+msgid "Click to open the new template and click **Edit**."
+msgstr "クリックして新しいテンプレートを開き、**編集** をクリックします。"
+
+#: ../../source/job_templates.rst:458
+msgid "Replace the contents of the **Name** field with a new name, and provide or modify the entries in the other fields to complete this page."
+msgstr "**名前** フィールドの内容を新規の名前に置き換え、他のフィールドのエントリーを指定または変更してこのページを完了します。"
+
+#: ../../source/job_templates.rst:460
+msgid "Click **Save** when done."
+msgstr "完了したら **保存** をクリックします。"
+
+#: ../../source/job_templates.rst:465
+msgid "Scan Job Templates"
+msgstr "スキャンジョブテンプレート"
+
+#: ../../source/job_templates.rst:471
+msgid "Scan jobs are no longer supported starting with |at| 3.2. This system tracking feature was used as a way to capture and store facts as historical data. Facts are now stored in the controller via fact caching. For more information, see :ref:`ug_fact_caching`."
+msgstr "スキャンジョブは |at| 3.2 以降ではサポートされなくなりました。このシステムトラッキング機能は、履歴データとしてファクトをキャプチャーし、保存する方法として使用されてきました。ファクトはファクトのキャッシュによりコントローラーに保存されるようになりました。詳細は、:ref:`ug_fact_caching` を参照してください。"
+
+#: ../../source/job_templates.rst:473
+msgid "If you have Job Template Scan Jobs in your system prior to |at| 3.2, they have been converted to type run (like normal job templates) and retained their associated resources (i.e. inventory, credential). Job Template Scan Jobs that do not have a related project are assigned a special playbook by default, or you can specify a project with your own scan playbook. A project was created for each organization that points to  https://github.com/ansible/tower-fact-modules and the Job Template was set to the playbook, https://github.com/ansible/tower-fact-modules/blob/master/scan_facts.yml."
+msgstr "|at| 3.2 よりも前のバージョンのシステムにジョブテンプレートのスキャンジョブがある場合、それらはタイプの実行 (通常のジョブテンプレートと同様) に変換されており、それらの関連リソース (インベントリー、認証情報など) を保持しています。関連プロジェクトのないジョブテンプレートのスキャンジョブにはデフォルトで特殊な Playbook が割り当てられるか、またはユーザーは独自のスキャン Playbook でプロジェクトを指定することができます。https://github.com/ansible/tower-fact-modules をポイントするプロジェクトが各組織に作成され、ジョブテンプレートは Playbook に設定されていました (https://github.com/ansible/tower-fact-modules/blob/master/scan_facts.yml.)。"
+
+#: ../../source/job_templates.rst:477
+msgid "Fact Scan Playbooks"
+msgstr "ファクトスキャン Playbook"
+
+#: ../../source/job_templates.rst:483
+msgid "The scan job playbook, ``scan_facts.yml``, contains invocations of three ``fact scan modules`` - packages, services, and files, along with Ansible's standard fact gathering. The ``scan_facts.yml`` playbook file looks like the following:"
+msgstr "スキャンジョブ Playbook ``scan_facts.yml`` には、3 つの ``fact scan modules`` パッケージ、サービスおよびファイルの呼び出し機能が Ansible の標準的なファクト収集機能と共に含まれます。``scan_facts.yml`` Playbook ファイルは以下のようになります。"
+
+#: ../../source/job_templates.rst:501
+msgid "The ``scan_files`` fact module is the only module that accepts parameters, passed via ``extra_vars`` on the scan job template."
+msgstr "``scan_files`` ファクトモジュールは、スキャンジョブテンプレートの ``extra_vars`` で渡されるパラメーターを受け入れる唯一のモジュールです。"
+
+#: ../../source/job_templates.rst:510
+msgid "The ``scan_file_paths`` parameter may have multiple settings (such as ``/tmp/`` or ``/var/log``)."
+msgstr "``scan_file_paths`` パラメーターには複数の設定を含まれる場合があります (``/tmp/`` または ``/var/log`` など)。"
+
+#: ../../source/job_templates.rst:511
+msgid "The ``scan_use_checksum`` and ``scan_use_recursive`` parameters may also be set to false or omitted. An omission is the same as a false setting."
+msgstr "``scan_use_checksum`` および ``scan_use_recursive`` パラメーターは false に設定したり、省略したりすることもできます。設定の省略と、False の設定は同じです。"
+
+#: ../../source/job_templates.rst:513
+msgid "Scan job templates should enable ``become`` and use credentials for which ``become`` is a possibility. You can enable become by checking the **Enable Privilege Escalation** from the Options menu:"
+msgstr "スキャンジョブテンプレートは ``become`` を有効にし、``become`` が使用される可能性のある認証情報を使用するはずです。オプションメニューの **権限昇格の有効化** にチェックを付けて become を有効にすることができます。"
+
+#: ../../source/job_templates.rst:519
+msgid "Supported OSes for ``scan_facts.yml``"
+msgstr "``scan_facts.yml`` の対応 OS"
+
+#: ../../source/job_templates.rst:521
+msgid "If you use the ``scan_facts.yml`` playbook with use fact cache, ensure that your OS is supported:"
+msgstr "ファクトキャッシュと共に ``scan_facts.yml`` Playbook を使用する場合には、OS がサポートされていることを確認してください。"
+
+#: ../../source/job_templates.rst:523
+msgid "|rhel| 5, 6, & 7"
+msgstr "|rhel| 5, 6, & 7"
+
+#: ../../source/job_templates.rst:524
+msgid "Ubuntu 16.04 (Support for Unbuntu is deprecated and will be removed in a future release)"
+msgstr "Ubunto 16.04 (Ubunto は非推奨となり、今後のリリースで削除されます)"
+
+#: ../../source/job_templates.rst:525
+msgid "OEL 6 & 7"
+msgstr "OEL 6 & 7"
+
+#: ../../source/job_templates.rst:526
+msgid "SLES 11 & 12"
+msgstr "SLES 11 & 12"
+
+#: ../../source/job_templates.rst:527
+msgid "Debian 6, 7, 8"
+msgstr "Debian 6, 7, 8"
+
+#: ../../source/job_templates.rst:528
+msgid "Fedora 22, 23, 24"
+msgstr "Fedora 22, 23, 24"
+
+#: ../../source/job_templates.rst:529
+msgid "Amazon Linux 2016.03"
+msgstr "Amazon Linux 2016.03"
+
+#: ../../source/job_templates.rst:530
+msgid "Windows Server 2008 and later"
+msgstr "Windows Server 2008 以降"
+
+#: ../../source/job_templates.rst:532
+msgid "Note that some of these operating systems may require initial configuration in order to be able to run python and/or have access to the python packages (such as ``python-apt``) that the scan modules depend on."
+msgstr "一部のオペレーティングシステムには、python を実行したり、スキャンモジュールが依存する python パッケージ (``python-apt`` など) にアクセスしたりするために初期設定が必要になる場合があります。"
+
+#: ../../source/job_templates.rst:536
+msgid "Pre-scan Setup"
+msgstr "スキャン前の設定"
+
+#: ../../source/job_templates.rst:538
+msgid "The following are examples of playbooks that configure certain distributions so that scan jobs can be run against them."
+msgstr "以下は、スキャンジョブを実行できるように特定のディストリビューションを設定する Playbook の例です。"
+
+#: ../../source/job_templates.rst:540
+msgid "**Bootstrap Ubuntu (16.04)**"
+msgstr "**Bootstrap Ubuntu (16.04)**"
+
+#: ../../source/job_templates.rst:559
+msgid "**Bootstrap Fedora (23, 24)**"
+msgstr "**Bootstrap Fedora (23, 24)**"
+
+#: ../../source/job_templates.rst:580
+msgid "Custom Fact Scans"
+msgstr "カスタムファクトスキャン"
+
+#: ../../source/job_templates.rst:588
+msgid "A playbook for a custom fact scan is similar to the example of the Fact Scan Playbook above. As an example, a playbook that only uses a custom ``scan_foo`` Ansible fact module would look like this:"
+msgstr "カスタムファクトスキャンの Playbook は上記のファクトスキャン Playbook の例と似ています。例として、カスタム ``scan_foo`` Ansible ファクトモジュールのみを使用する Playbook は以下のようになります。"
+
+#: ../../source/job_templates.rst:590
+msgid "*scan_custom.yml*:"
+msgstr "*scan_custom.yml*:"
+
+#: ../../source/job_templates.rst:600
+msgid "*scan_foo.py*:"
+msgstr "*scan_foo.py*:"
+
+#: ../../source/job_templates.rst:621
+msgid "To use a custom fact module, ensure that it lives in the ``/library/`` subdirectory of the Ansible project used in the scan job template. This fact scan module is very simple, returning a hard-coded set of facts:"
+msgstr "カスタムファクトモジュールを使用するには、それがスキャンジョブテンプレートで使用される Ansible プロジェクトの ``/library/`` サブディレクトリーにあることを確認します。このファクトスキャンモジュールは非常に単純で、ハードコーディングされたファクトのセットを返します。"
+
+#: ../../source/job_templates.rst:634
+msgid "Refer to the `Module Provided 'Facts'`_ section of the Ansible documentation for more information."
+msgstr "詳細は、Ansible ドキュメントの `Module Provided 'Facts'`_ セクションを参照してください。"
+
+#: ../../source/job_templates.rst:641
+msgid "Fact Caching"
+msgstr "ファクトのキャッシング"
+
+#: ../../source/job_templates.rst:647
+msgid "Automation controller can store and retrieve facts on a per-host basis through an Ansible Fact Cache plugin. This behavior is configurable on a per-job template basis. Fact caching is turned off by default but can be enabled to serve fact requests for all hosts in an inventory related to the job running. This allows you to use job templates with ``--limit`` while still having access to the entire inventory of host facts. A global timeout setting that the plugin enforces per-host, can be specified (in seconds) through the Jobs settings menu:"
+msgstr "自動コントローラーは Ansible ファクトキャッシュプラグイン経由でホストごとにファクトを保存し、取得します。この動作はジョブテンプレート別に設定されます。ファクトのキャッシングはデフォルトでオフにされていますが、これを有効にしてジョブの実行に関連するインベントリーに含まれる全ホストに対するファクト要求に対応させることができます。これにより、ホストのファクトのインベントリー全体にアクセスを有する状態で、``--limit`` でジョブテンプレートを使用できます。プラグインがホストごとに施行するグローバルタイムアウト設定は、Jobs 設定メニューから (秒単位で) 指定できます。"
+
+#: ../../source/job_templates.rst:651
+msgid "Upon launching a job that uses fact cache (``use_fact_cache=True``), the controller will store all ``ansible_facts`` associated with each host in the inventory associated with the job.  The Ansible Fact Cache plugin that ships with |at| will only be enabled on jobs with fact cache enabled (``use_fact_cache=True``)."
+msgstr "ファクトキャッシュを使用する (``use_fact_cache=True``) ジョブの起動時に、コントローラーはそのジョブに関連付けられたインベントリー内の各ホストに関連付けられている ``ansible_facts`` をすべて保存します。|at| に同梱される Ansible Fact Cache プラグインは、ファクトキャッシュが有効になっているジョブでのみ有効になります (``use_fact_cache=True``)。"
+
+#: ../../source/job_templates.rst:653
+msgid "When a job that has fact cache enabled (``use_fact_cache=True``) finishes running, the controller will restore all records for the hosts in the inventory.  Any records with update times *newer* than the currently stored facts per-host will be updated in the database."
+msgstr "ファクトキャッシュが有効な (``use_fact_cache=True``) ジョブの実行が終了すると、コントローラーはインベントリーのホストのレコードをすべて収集します。現在のホスト別に保存されているファクトよりも更新時間が *新しい* レコードがデータベースで更新されます。"
+
+#: ../../source/job_templates.rst:655
+msgid "New and changed facts will be logged via the controller's logging facility. Specifically, to the ``system_tracking`` namespace or logger. The logging payload will include the fields:"
+msgstr "新規の、および変更されたファクトはコントローラーのロギング機能によってログに記録されます。とりわけ ``system_tracking`` 名前空間またはロガーに対して実行されます。ログのペイロードには以下のフィールドが含まれます。"
+
+#: ../../source/job_templates.rst:657
+msgid "``host_name``"
+msgstr "``host_name``"
+
+#: ../../source/job_templates.rst:658
+msgid "``inventory_id``"
+msgstr "``inventory_id``"
+
+#: ../../source/job_templates.rst:659
+msgid "``ansible_facts``"
+msgstr "``ansible_facts``"
+
+#: ../../source/job_templates.rst:661
+msgid "where ``ansible_facts`` is a dictionary of all Ansible facts for ``host_name`` in the controller inventory, ``inventory_id``."
+msgstr "``ansible_facts`` はコントローラーインベントリー ``inventory_id`` に含まれる ``host_name`` の Ansible ファクトすべてのディレクトリーです。"
+
+#: ../../source/job_templates.rst:665
+msgid "If a hostname includes a forward slash (``/``), fact cache will not work for that host. If you have an inventory with 100 hosts and one host has a ``/`` in the name, 99 of those hosts will still collect facts."
+msgstr "ホスト名にスラッシュ (``/``) が含まれている場合には、ファクトキャッシュはそのホストでは機能しません。インベントリーにホストが 100 台あり、1 台の名前に ``/`` が含まれている場合には、これらのホストの 99 台はファクトを収集します。"
+
+#: ../../source/job_templates.rst:669
+msgid "Benefits of Fact Caching"
+msgstr "ファクトキャッシングの利点"
+
+#: ../../source/job_templates.rst:671
+msgid "Fact caching saves a significant amount of time over running fact gathering. If you have a playbook in a job that runs against a thousand hosts and forks, you could easily spend 10 minutes gathering facts across all of those hosts. But if you run a job on a regular basis, the first run of it caches these facts and the next run will just pull them from the database. This cuts the runtime of jobs against large inventories, including Smart Inventories, by an enormous magnitude."
+msgstr "ファクトのキャッシングにより、ファクトの収集を実行する場合よりも大幅の時間を節約できます。数千のホストおよびフォークに対して実行されるジョブに Playbook がある場合に、それらのホスト全体でファクトを収集するだけで 10 分程度の時間がかかってしまう可能性があります。一方、ジョブを定期的に実行する場合に最初の実行時にそれらのファクトがキャッシュされると、次回実行時にはそれらがデータベースからプルされるようになります。これにより、スマートインベントリーなどの大規模なインベントリーに対するジョブの実行時間が大幅に削減されます。"
+
+#: ../../source/job_templates.rst:674
+msgid "Do not modify the ``ansible.cfg`` file to apply fact caching. Custom fact caching could conflict with the controller's fact caching feature. It is recommended to use the fact caching module that comes with |at|. Fact caching is not supported for isolated nodes."
+msgstr "ファクトのキャッシング適用時に ``ansible.cfg`` ファイルを変更しないでください。カスタムファクトキャッシングはコントローラーのファクトキャッシング機能と競合する可能性があります。|at| に同梱されるファクトキャッシングモジュールを使用することをお勧めします。ファクトキャッシングは分離されたノードではサポートされません。"
+
+#: ../../source/job_templates.rst:676
+msgid "You can choose to use cached facts in your job by enabling it in the **Options** field of the Job Templates window."
+msgstr "キャッシュされたファクトのジョブでの使用は、「ジョブテンプレート」ウィンドウの **オプション** フィールドでこれを有効にして選択できます。"
+
+#: ../../source/job_templates.rst:680
+msgid "To clear facts, you need to run the Ansible ``clear_facts`` `meta task`_. Below is an example playbook that uses the Ansible ``clear_facts`` meta task."
+msgstr "ファクトを削除するには、Ansible ``clear_facts`` `meta task`_ を実行する必要があります。以下は、Ansible ``clear_facts`` meta task を使用する Playbook の例となります。"
+
+#: ../../source/job_templates.rst:692
+msgid "You can find the API endpoint for fact caching at:"
+msgstr "ファクトキャッシングの API エンドポイントについては、以下を参照してください。"
+
+#: ../../source/job_templates.rst:701
+msgid "Utilizing Cloud Credentials"
+msgstr "クラウド認証情報の利用"
+
+#: ../../source/job_templates.rst:706
+msgid "Cloud Credentials can be used when syncing a respective cloud inventory. Cloud Credentials may also be associated with a Job Template and included in the runtime environment for use by a playbook. Cloud Credentials currently supported:"
+msgstr "クラウド認証情報は、それぞれのクラウドインベントリーの同期時に使用されます。クラウド認証情報をジョブテンプレートに関連付け、Playbook で使用できるようにランタイム環境に組み込むこともできます。現在サポートされているクラウド認証情報は次のとおりです。"
+
+#: ../../source/job_templates.rst:712
+msgid "OpenStack"
+msgstr "OpenStack"
+
+#: ../../source/job_templates.rst:717
+msgid "The sample playbook below invokes the ``nova_compute`` Ansible OpenStack cloud module and requires credentials to do anything meaningful, and specifically requires the following information: ``auth_url``, ``username``, ``password``, and ``project_name``. These fields are made available to the playbook via the environmental variable ``OS_CLIENT_CONFIG_FILE``, which points to a YAML file written by the controller based on the contents of the cloud credential. This sample playbook loads the YAML file into the Ansible variable space."
+msgstr "以下のサンプル Playbook は ``nova_compute`` Ansible OpenStack クラウドモジュールを起動し、タスクの実行にあたっては認証情報を要求し、特に ``auth_url``、``username``、``password``、および ``project_name`` などの情報を要求します。これらのフィールドは、環境変数 ``OS_CLIENT_CONFIG_FILE`` を使用して Playbook で利用できるようにします。この環境変数は、クラウド認証情報の内容に基づいてコントローラーで作成された YAML ファイルを参照します。このサンプル Playbook は YAML ファイルを Ansible 変数スペースに読み込みます。"
+
+#: ../../source/job_templates.rst:719
+msgid "``OS_CLIENT_CONFIG_FILE`` example:"
+msgstr "``OS_CLIENT_CONFIG_FILE`` の例:"
+
+#: ../../source/job_templates.rst:731
+msgid "Playbook example:"
+msgstr "Playbook の例:"
+
+#: ../../source/job_templates.rst:766
+msgid "Amazon Web Services"
+msgstr "Amazon Web Services"
+
+#: ../../source/job_templates.rst:771
+msgid "Amazon Web Services cloud credentials are exposed as the following environment variables during playbook execution (in the job template, choose the cloud credential needed for your setup):"
+msgstr "Amazon Web Services クラウド認証情報は Playbook の実行時に以下の環境変数として公開されます (ジョブテンプレートで、設定に必要なクラウド認証情報を選択します):"
+
+#: ../../source/job_templates.rst:773
+msgid "``AWS_ACCESS_KEY_ID``"
+msgstr "``AWS_ACCESS_KEY_ID``"
+
+#: ../../source/job_templates.rst:774
+msgid "``AWS_SECRET_ACCESS_KEY``"
+msgstr "``AWS_SECRET_ACCESS_KEY``"
+
+#: ../../source/job_templates.rst:776
+msgid "All of the AWS modules will implicitly use these credentials when run via the controller without having to set the ``aws_access_key_id`` or ``aws_secret_access_key`` module options."
+msgstr "すべての AWS モジュールは、``aws_access_key_id`` または ``aws_secret_access_key`` モジュールオプションを設定せずにコントローラーで実行される場合にこれらの認証情報を暗黙的に使用します。"
+
+#: ../../source/job_templates.rst:780
+msgid "Google"
+msgstr "Google"
+
+#: ../../source/job_templates.rst:785
+msgid "Google cloud credentials are exposed as the following environment variables during playbook execution (in the job template, choose the cloud credential needed for your setup):"
+msgstr "Google クラウド認証情報は、Playbook の実行時に以下の環境変数として公開されます (ジョブテンプレートで、設定に必要なクラウド認証情報を選択します)。"
+
+#: ../../source/job_templates.rst:787
+msgid "``GCE_EMAIL``"
+msgstr "``GCE_EMAIL``"
+
+#: ../../source/job_templates.rst:788
+msgid "``GCE_PROJECT``"
+msgstr "``GCE_PROJECT``"
+
+#: ../../source/job_templates.rst:789
+msgid "``GCE_CREDENTIALS_FILE_PATH``"
+msgstr "``GCE_CREDENTIALS_FILE_PATH``"
+
+#: ../../source/job_templates.rst:791
+msgid "All of the Google modules will implicitly use these credentials when run via the controller without having to set the ``service_account_email``, ``project_id``, or ``pem_file`` module options."
+msgstr "すべての Google モジュールは、``service_account_email``、``project_id`` または ``pem_file`` モジュールオプションを設定せずにコントローラーで実行される場合に、上記の認証情報を暗黙的に使用します。"
+
+#: ../../source/job_templates.rst:794
+msgid "Azure"
+msgstr "Azure"
+
+#: ../../source/job_templates.rst:799
+msgid "Azure cloud credentials are exposed as the following environment variables during playbook execution (in the job template, choose the cloud credential needed for your setup):"
+msgstr "Azure クラウド認証情報は、Playbook の実行時に以下の環境変数として公開されます (ジョブテンプレートで、設定に必要なクラウド認証情報を選択します)。"
+
+#: ../../source/job_templates.rst:801
+msgid "``AZURE_SUBSCRIPTION_ID``"
+msgstr "``AZURE_SUBSCRIPTION_ID``"
+
+#: ../../source/job_templates.rst:802
+msgid "``AZURE_CERT_PATH``"
+msgstr "``AZURE_CERT_PATH``"
+
+#: ../../source/job_templates.rst:804
+msgid "All of the Azure modules implicitly use these credentials when run via the controller without having to set the ``subscription_id`` or ``management_cert_path`` module options."
+msgstr "すべての Azure モジュールは、``subscription_id`` または ``management_cert_path`` モジュールオプションを設定せずにコントローラーで実行される場合に、上記の認証情報を暗黙的に使用します。"
+
+#: ../../source/job_templates.rst:807
+msgid "VMware"
+msgstr "VMware"
+
+#: ../../source/job_templates.rst:812
+msgid "VMware cloud credentials are exposed as the following environment variables during playbook execution (in the job template, choose the cloud credential needed for your setup):"
+msgstr "VMware クラウド認証情報は、Playbook の実行時に以下の環境変数として公開されます (ジョブテンプレートで、設定に必要なクラウド認証情報を選択します)。"
+
+#: ../../source/job_templates.rst:814
+msgid "``VMWARE_USER``"
+msgstr "``VMWARE_USER``"
+
+#: ../../source/job_templates.rst:815
+msgid "``VMWARE_PASSWORD``"
+msgstr "``VMWARE_PASSWORD``"
+
+#: ../../source/job_templates.rst:816
+msgid "``VMWARE_HOST``"
+msgstr "``VMWARE_HOST``"
+
+#: ../../source/job_templates.rst:818
+msgid "The sample playbook below demonstrates usage of these credentials:"
+msgstr "以下のサンプル Playbook は、これらの認証情報の使用方法を示しています。"
+
+#: ../../source/job_templates.rst:838
+msgid "Provisioning Callbacks"
+msgstr "プロビジョニングコールバック"
+
+#: ../../source/job_templates.rst:844
+msgid "Provisioning callbacks are a feature of Automation Controller that allow a host to initiate a playbook run against itself, rather than waiting for a user to launch a job to manage the host from the Automation Controller console. Please note that provisioning callbacks are *only* used to run playbooks on the calling host. Provisioning callbacks are meant for cloud bursting (i.e. new instances with a need for client to server communication for configuration (such as transmitting an authorization key)), not to run a job against another host. This provides for automatically configuring a system after it has been provisioned by another system (such as AWS auto-scaling, or a OS provisioning system like kickstart or preseed) or for launching a job programmatically without invoking the Automation Controller API directly. The Job Template launched only runs against the host requesting the provisioning."
+msgstr "プロビジョニングコールバックは、ユーザーがジョブを起動して自動コントローラーコンソールからホストを管理するのを待機するのではなく、ホストが独自に Playbook 実行を開始できるようにする自動コントローラーの機能です。プロビジョニングコールバックは、呼び出し側のホストで Playbook を実行する場合に *のみ* 使用されることに注意してください。プロビジョニングコールバックは、クラウド拡張 (cloud bursting) に対応するもので ((承認キーの送信など) 設定のためにクライアントとサーバー間の通信が必要な新規インスタンスを想定)、別のホストに対してジョブを実行するためのものではありません。これは、別のシステムでプロビジョニングされた後のシステムの自動設定 (AWS 自動スケーリング、またはキックスタートまたは peseed などの OS プロビジョニングシステムなど)、または自動コントローラー API を直接起動しないジョブのプログラムによる起動を可能にします。起動するジョブテンプレートはプロビジョニングを要求するホストに対してのみ実行されます。"
+
+#: ../../source/job_templates.rst:846
+msgid "Frequently this would be accessed via a firstboot type script, or from cron."
+msgstr "これは firstboot タイプのスクリプトまたは cron からアクセスされることが多くあります。"
+
+#: ../../source/job_templates.rst:848
+msgid "To enable callbacks, check the *Provisioning Callbacks* checkbox in the Job Template. This displays the **Provisioning Callback URL** for this job template."
+msgstr "コールバックを有効にするには、ジョブテンプレートで *Provisioning Callbacks* チェックボックスにチェックを付けます。これにより、このジョブテンプレートの **プロビジョニングコールバック URL** が表示されます。"
+
+#: ../../source/job_templates.rst:852
+msgid "If you intend to use Automation Controller's provisioning callback feature with a dynamic inventory, Update on Launch should be set for the inventory group used in the Job Template."
+msgstr "自動コントローラーのプロビジョニングコールバック機能を動的インベントリーと共に使用しようとする場合、「起動時の更新」がジョブテンプレートでインベントリーグループに対して設定されている必要があります。"
+
+#: ../../source/job_templates.rst:856
+msgid "Callbacks also require a Host Config Key, to ensure that foreign hosts with the URL cannot request configuration. Please provide a custom value for Host Config Key. The host key may be reused across multiple hosts to apply this job template against multiple hosts. Should you wish to control what hosts are able to request configuration, the key may be changed at any time."
+msgstr "コールバックには、URL のある外部ホストが設定を要求できないようにするためにホスト設定キーも必要です。ホスト設定キーにカスタムの値を指定してください。ホストキーは複数のホストで再利用でき、このジョブテンプレートは多数のホストに対して適用できます。設定を要求できるホストを制御する必要がある場合、キーはいつでも変更できます。"
+
+#: ../../source/job_templates.rst:858
+msgid "To callback manually via REST, look at the callback URL in the UI, which is of the form:"
+msgstr "REST 経由で手動のコールバックを実行するには、以下の形式のコールバック URL を UI で確認します。"
+
+#: ../../source/job_templates.rst:864
+msgid "The '7' in this sample URL is the job template ID in Automation Controller."
+msgstr "このサンプル URL の '7' は、自動コントローラーのジョブテンプレート ID です。"
+
+#: ../../source/job_templates.rst:866
+msgid "The request from the host must be a POST. Here is an example using curl (all on a single line):"
+msgstr "ホストからの要求は POST である必要があります。以下は、curl を使用した例になります (すべて単一行にあります)。"
+
+#: ../../source/job_templates.rst:873
+msgid "The requesting host must be defined in your inventory for the callback to succeed. If Automation Controller fails to locate the host either by name or IP address in one of your defined inventories, the request is denied. When running a Job Template in this way, the host initiating the playbook run against itself must be in the inventory. If the host is missing from the inventory, the Job Template will fail with a \"No Hosts Matched\" type error message."
+msgstr "コールバックが正常に実行されるには、要求側のホストをインベントリーに定義する必要があります。自動コントローラーが定義済みのインベントリーで名前または IP アドレスによるホストの検索ができない場合、要求は拒否されます。このようにジョブテンプレートを実行する場合、独自に実行される Playbook を実行するホストはインベントリーになければなりません。ホストがインベントリーにない場合、ジョブテンプレートは「一致するホストがありません」というタイプのエラーメッセージを出して失敗します。"
+
+#: ../../source/job_templates.rst:877
+msgid "If your host is not in inventory and ``Update on Launch`` is set for the inventory group, Automation Controller attempts to update cloud based inventory source before running the callback."
+msgstr "ホストがインベントリーになく、``Update on Launch`` がインベントリーグループに設定されている場合、自動コントローラーはコールバックの実行前にクラウドベースのインベントリーソースの更新を試行します。"
+
+#: ../../source/job_templates.rst:879
+msgid "Successful requests result in an entry on the Jobs tab, where the results and history can be viewed."
+msgstr "要求が成功した場合は、「ジョブ」タブにエントリーが作成されます。ここで結果および履歴を確認できます。"
+
+#: ../../source/job_templates.rst:881
+msgid "While the callback can be accessed via REST, the suggested method of using the callback is to use one of the example scripts that ships with Automation Controller - ``/usr/share/awx/request_tower_configuration.sh`` (Linux/UNIX) or ``/usr/share/awx/request_tower_configuration.ps1`` (Windows). Usage is described in the source code of the file by passing the ``-h`` flag, as shown below:"
+msgstr "コールバックは REST でアクセスできますが、コールバックの推奨される使用方法として、``/usr/share/awx/request_tower_configuration.sh`` (Linux/UNIX) または ``/usr/share/awx/request_tower_configuration.ps1`` (Windows) など、自動コントローラーに同梱されるサンプルのスクリプトのいずれかを使用できます。使用方法については、以下のように ``-h`` フラグを渡すと、ファイルのソースコードに表示されます。"
+
+#: ../../source/job_templates.rst:899
+msgid "This script has some intelligence, it knows how to retry commands and is therefore a more robust way to use callbacks than a simple curl request. As written, the script retries once per minute for up to ten minutes."
+msgstr "このスクリプトにはインテリジェンスがあり、コマンドを再試行する方法を認識します。したがって、このスクリプトは単純な curl 要求に比べて、より強力にコールバックを使用できます。記載されているように、スクリプトの再試行は 1 分に 1 回の頻度で最長 10 分間行われます。"
+
+#: ../../source/job_templates.rst:903
+msgid "Please note that this is an example script. You should edit this script if you need more dynamic behavior when detecting failure scenarios, as any non-200 error code may not be a transient error requiring retry."
+msgstr "これはスクリプトのサンプルであることに注意してください。200 エラーコード以外のエラーコードは再試行を要求する一時的なエラーでない場合があるため、失敗シナリオを検出する際により動的な動作が必要な場合にはこのスクリプトを編集する必要があります。"
+
+#: ../../source/job_templates.rst:905
+msgid "Most likely you will use callbacks with dynamic inventory in Automation Controller, such as pulling cloud inventory from one of the supported cloud providers. In these cases, along with setting *Update On Launch*, be sure to configure an inventory cache timeout for the inventory source, to avoid hammering of your Cloud's API endpoints. Since the ``request_tower_configuration.sh`` script polls once per minute for up to ten minutes, a suggested cache invalidation time for inventory (configured on the inventory source itself) would be one or two minutes."
+msgstr "クラウドインベントリーをサポートされているクラウドプロバイダーのいずれかからプルする場合のように、コールバックを自動コントローラーの動的インベントリーと共に使用する可能性が高くなります。これらの場合には、*起動時の更新* の設定と共に、クラウドの API エンドポイントのハンマリングを防ぐために、インベントリーソースのインベントリーのキャッシュタイムアウトを設定します。``request_tower_configuration.sh`` スクリプトは 1 分に 1 回の頻度で最小 10 分間ポーリングを行うため、インベントリーの推奨されるキャッシュ無効化の時間 (インベントリーソース自体に設定される) は 1 分または 2 分間になります。"
+
+#: ../../source/job_templates.rst:907
+msgid "While we recommend against running the ``request_tower_configuration.sh`` script from a cron job, a suggested cron interval would be perhaps every 30 minutes. Repeated configuration can be easily handled by scheduling in Automation Controller, so the primary use of callbacks by most users is to enable a base image that is bootstrapped into the latest configuration upon coming online. To do so, running at first boot is a better practice. First boot scripts are just simple init scripts that typically self-delete, so you would set up an init script that called a copy of the ``request_tower_configuration.sh`` script and make that into an autoscaling image."
+msgstr "cron ジョブから ``request_tower_configuration.sh`` スクリプトを実行することを推奨していますが、推奨の cron の間隔は約 30 分ごとです。設定が繰り返される場合には自動コントローラーのスケジュールで簡単に処理できるため、オンライン時の最新設定にブートストラップされるベースイメージを有効化するときに、多くのユーザーは主にコールバック機能を使用します。これを実行するには、初回の起動時に実行するのがより適切です。初回起動時のスクリプトは、通常は自己削除を実行する単純な init スクリプトであるため、``request_tower_configuration.sh`` スクリプトのコピーを呼び出す init スクリプトを設定し、それを自動スケーリングイメージに入れます。"
+
+#: ../../source/job_templates.rst:910
+msgid "Passing Extra Variables to Provisioning Callbacks"
+msgstr "追加変数をプロビジョニングコールバックに渡す方法"
+
+#: ../../source/job_templates.rst:916
+msgid "Just as you can pass ``extra_vars`` in a regular Job Template, you can also pass them to provisioning callbacks. To pass ``extra_vars``, the data sent must be part of the body of the POST request as application/json (as the content type). Use the following JSON format as an example when adding your own ``extra_vars`` to be passed:"
+msgstr "通常のジョブテンプレートで ``extra_vars`` を渡せるように、追加変数をプロビジョニングコールバックに渡すこともできます。``extra_vars`` を渡すには、送信されたデータはアプリケーション/json として (コンテンツタイプとして) POST 要求の本体に含める必要があります。独自の ``extra_vars`` を渡せるように追加するには、以下の JSON 形式を例として使用してください。"
+
+#: ../../source/job_templates.rst:923
+msgid "You can also pass extra variables to the Job Template call using ``curl``, such as is shown in the following example::"
+msgstr "また、以下の例に示されているように、``curl`` を使用してジョブテンプレートの呼び出しに追加の変数を渡すこともできます。"
+
+#: ../../source/job_templates.rst:929
+msgid "For more information, refer to :ref:`Launching Jobs with Curl<administration:launch_jobs_curl>`."
+msgstr "詳細については、:ref:`Launching Jobs with Curl<administration:launch_jobs_curl>` を参照してください。"
+
+#: ../../source/job_templates.rst:935
+msgid "Extra Variables"
+msgstr "追加変数"
+
+#: ../../source/job_templates.rst:943
+msgid "``extra_vars`` passed to the job launch API are only honored if one of the following is true:"
+msgstr "ジョブ起動 API に渡される ``extra_vars`` は、以下のいずれかが該当する場合のみ有効です。"
+
+#: ../../source/job_templates.rst:945
+msgid "They correspond to variables in an enabled survey"
+msgstr "それらは有効な survey の変数に対応する。"
+
+#: ../../source/job_templates.rst:946
+msgid "``ask_variables_on_launch`` is set to True"
+msgstr "``ask_variables_on_launch`` が True に設定されている。"
+
+#: ../../source/job_templates.rst:948
+msgid "When you pass survey variables, they are passed as extra variables (``extra_vars``) within the controller. This can be tricky, as passing extra variables to a job template (as you would do with a survey) can override other variables being passed from the inventory and project."
+msgstr "Survey 変数を渡す際に、それらはコントローラー内の追加変数 (``extra_vars``) として渡されます。これは、(Survey で実行するように) 追加変数をジョブテンプレートに渡すと、インベントリーおよびプロジェクトから渡される他の変数が上書きされる可能性があるために注意が必要です。"
+
+#: ../../source/job_templates.rst:950
+msgid "For example, say that you have a defined variable for an inventory for ``debug = true``. It is entirely possible that this variable, ``debug = true``, can be overridden in a job template survey."
+msgstr "たとえば、インベントリーの定義された変数が ``debug = true`` であるとします。この変数 ``debug = true`` がジョブテンプレート Survey で上書きされる可能性はあります。"
+
+#: ../../source/job_templates.rst:952
+msgid "To ensure that the variables you need to pass are not overridden, ensure they are included by redefining them in the survey. Keep in mind that extra variables can be defined at the inventory, group, and host levels."
+msgstr "渡す必要のある変数が上書きされないようにするには、この変数を Survey で再定義して組み込むことができます。追加変数はインベントリー、グループおよびホストのレベルで定義できることに注意してください。"
+
+#: ../../source/job_templates.rst:954
+msgid "If specifying the ``ALLOW_JINJA_IN_EXTRA_VARS`` parameter, refer to the :ref:`Controller Tips and Tricks <administration:ag_tips_jinja_extravars>` section of the |ata| to configure it in the Jobs Settings screen of the controller UI."
+msgstr "``ALLOW_JINJA_IN_EXTRA_VARS`` パラメーターを指定する場合は、|ata| の :ref:`Controller Tips and Tricks <administration:ag_tips_jinja_extravars>` セクションで、コントローラー UI のジョブ設定画面でこれを設定します。"
+
+#: ../../source/job_templates.rst:965
+msgid "The Job Template extra variables dictionary is merged with the Survey variables."
+msgstr "ジョブテンプレートの追加変数ディクショナリーは Survey 変数にマージされます。"
+
+#: ../../source/job_templates.rst:968
+msgid "Here are some simplified examples of extra_vars in YAML and JSON formats:"
+msgstr "以下は、YAML および JSON 形式の extra_vars を簡素化した例です。"
+
+#: ../../source/job_templates.rst:970
+msgid "The configuration in YAML format:"
+msgstr "YAML 形式の設定:"
+
+#: ../../source/job_templates.rst:981
+msgid "The configuration in JSON format:"
+msgstr "JSON 形式の設定:"
+
+#: ../../source/job_templates.rst:990
+msgid "The following table notes the behavior (hierarchy) of variable precedence in |at| as it compares to variable precedence in Ansible."
+msgstr "以下の表では、Ansible の変数の順序との比較で、|at| の変数の順序の動作 (階層) を示しています。"
+
+#: ../../source/job_templates.rst:992
+msgid "**Automation Controller Variable Precedence Hierarchy (last listed wins)**"
+msgstr "**自動コントローラー変数の順序の階層 (最後に一覧表示された win)**"
+
+#: ../../source/job_templates.rst:998
+msgid "Relaunching Job Templates"
+msgstr "ジョブテンプレートの再起動"
+
+#: ../../source/job_templates.rst:1003
+msgid "Instead of manually relaunching a job, a relaunch is denoted by setting ``launch_type`` to ``relaunch``. The relaunch behavior deviates from the launch behavior in that it **does not** inherit ``extra_vars``."
+msgstr "ジョブを手動で再起動せずに、再起動は ``launch_type`` を ``relaunch`` に設定して表示されます。再起動の動作は、``extra_vars`` を **継承しない** 点で、起動の動作とは異なります。"
+
+#: ../../source/job_templates.rst:1005
+msgid "Job relaunching does not go through the inherit logic. It uses the same ``extra_vars`` that were calculated for the job being relaunched."
+msgstr "ジョブを再起動しても継承ロジックが実行される訳でありません。再起動されるジョブについて計算されたものと同じ ``extra_vars`` を使用します。"
+
+#: ../../source/job_templates.rst:1007
+msgid "For example, say that you launch a Job Template with no ``extra_vars`` which results in the creation of a Job called **j1**. Next, say that you edit the Job Template and add in some ``extra_vars`` (such as adding ``\"{ \"hello\": \"world\" }\"``)."
+msgstr "たとえば、``extra_vars`` を指定せずにジョブテンプレートを起動するとします。これにより、**j1** というジョブが作成されます。次に、そのジョブテンプレートを編集し、一部の ``extra_vars`` の追加 (``\"{ \"hello\": \"world\" }\"`` の追加など) を実行するとします。"
+
+#: ../../source/job_templates.rst:1009
+msgid "Relaunching **j1** results in the creation of **j2**, but because there is no inherit logic and **j1** had no ``extra_vars``, **j2** will not have any ``extra_vars``."
+msgstr "**j1** を再起動すると **j2** が作成されますが、継承するロジックがなく、**j1** には ``extra_vars`` がないため、**j2** には ``extra_vars`` が指定されません。"
+
+#: ../../source/job_templates.rst:1011
+msgid "To continue upon this example, if you launched the Job Template with the ``extra_vars`` you added after the creation of **j1**, the relaunch job created (**j3**) will include the ``extra_vars``. And relaunching **j3** results in the creation of **j4**, which would also include ``extra_vars``."
+msgstr "この例では、**j1** の作成後に追加した ``extra_vars`` でジョブテンプレートを起動した場合、作成される再起動ジョブ (**j3**) には ``extra_vars`` が含まれます。**j3** を再起動すると **j4** が作成され、これにも ``extra_vars`` が含まれます。"
+

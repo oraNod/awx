@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tower-manage.rst:4
+msgid "The *awx-manage* Utility"
+msgstr "*awx-manage* ユーティリティー"
+
+#: ../../source/tower-manage.rst:9
+msgid "The ``awx-manage`` utility is used to access detailed internal information of the controller. Commands for ``awx-manage`` should run as the ``awx`` or ``root`` user."
+msgstr "``awx-manage`` ユーティリティーは、詳細にわたるコントローラー内の情報にアクセスする時に使用します。``awx-manage`` のコマンドは、``awx`` ユーザーまたは ``root`` ユーザーとして実行してください。"
+
+#: ../../source/tower-manage.rst:12
+msgid "Running awx-manage commands via playbook is not recommended or supported."
+msgstr "Playbook を介して awx-manage コマンドを実行することは、推奨またはサポートされていません。"
+
+#: ../../source/tower-manage.rst:15
+msgid "Inventory Import"
+msgstr "インベントリーのインポート"
+
+#: ../../source/tower-manage.rst:20
+msgid "``awx-manage`` is a mechanism by which a controller administrator can import inventory directly into the controller, for those who cannot use Custom Inventory Scripts."
+msgstr "``awx-manage`` は、カスタムインベントリースクリプトを使用できないユーザー向けに、コントローラーの管理者がコントローラーにインベントリーを直接インポートするメカニズムのことです。"
+
+#: ../../source/tower-manage.rst:22
+msgid "To use ``awx-manage`` properly, you must first create an inventory in the controller to use as the destination for the import."
+msgstr "``awx-manage`` を正しく使用するには、まずインポート先として使用できるようにコントローラーにインベントリーを作成する必要があります。"
+
+#: ../../source/tower-manage.rst:24
+msgid "For help with ``awx-manage``, run the following command: ``awx-manage inventory_import [--help]``"
+msgstr "``awx-manage`` のヘルプは、``awx-manage inventory_import [--help]`` のコマンドを実行します。"
+
+#: ../../source/tower-manage.rst:26
+msgid "The ``inventory_import`` command synchronizes a controller inventory object with a text-based inventory file, dynamic inventory script, or a directory of one or more of the above as supported by core Ansible."
+msgstr "``inventory_import`` コマンドは、テキストベースのインベントリーファイル、動的なインベントリースクリプト、またはコアの Ansible でサポートされている上記のファイルやスクリプトのディレクトリーと、コントローラーのインベントリーオブジェクトを同期します。"
+
+#: ../../source/tower-manage.rst:28
+msgid "When running this command, specify either an ``--inventory-id`` or ``--inventory-name``, and the path to the Ansible inventory source (``--source``)."
+msgstr "コマンドの実行時に、``--inventory-id`` または ``--inventory-name``、Ansible インベントリーのソースへのパス (``--source``) のいずれかを指定します。"
+
+#: ../../source/tower-manage.rst:34
+msgid "By default, inventory data already stored in the controller blends with data from the external source. To use only the external data, specify ``--overwrite``. To specify that any existing hosts get variable data exclusively from the ``--source``, specify ``--overwrite_vars``. The default behavior adds any new variables from the external source, overwriting keys that already exist, but preserves any variables that were not sourced from the external data source."
+msgstr "デフォルトでは、コントローラーにすでに保存されているインベントリーデータと、外部ソースからのデータが混在します。外部データのみを使用するには、``--overwrite`` を指定します。既存のホストが ``--source`` のみから変数データを取得するように設定するには、``--overwrite_vars`` を指定します。デフォルトの動作は、外部ソースから新しい変数を追加して、既存のキーについては上書きしますが、外部のデータソースから取得していない変数は保持されます。"
+
+#: ../../../common/source/overwrite_var_note_2-4-0.rst:3
+msgid "Edits and additions to Inventory host variables persist beyond an inventory sync as long as ``--overwrite_vars`` is **not** set."
+msgstr "インベントリーホスト変数の編集と追加は、``--overwrite_vars`` が **設定されていない** 限りインベントリー同期後も維持されます。"
+
+#: ../../source/tower-manage.rst:45
+msgid "Cleanup of old data"
+msgstr "以前のデータの消去"
+
+#: ../../source/tower-manage.rst:50
+msgid "``awx-manage`` has a variety of commands used to clean old data from the controller. The controller administrators can use the controller Management Jobs interface for access or use the command line."
+msgstr "``awx-manage`` には、コントローラーから以前のデータを消去時に使用するコマンドが複数あります。コントローラー管理者は、コントローラー管理ジョブインターフェースからコマンドラインにアクセスするか、コマンドラインを使用することができます。"
+
+#: ../../source/tower-manage.rst:52
+msgid "``awx-manage cleanup_jobs [--help]``"
+msgstr "``awx-manage cleanup_jobs [--help]``"
+
+#: ../../source/tower-manage.rst:54
+msgid "This permanently deletes the job details and job output for jobs older than a specified number of days."
+msgstr "このコマンドでは、ジョブの詳細や、指定の日数以前のジョブの出力が完全に削除されます。"
+
+#: ../../source/tower-manage.rst:56
+msgid "``awx-manage cleanup_activitystream [--help]``"
+msgstr "``awx-manage cleanup_activitystream [--help]``"
+
+#: ../../source/tower-manage.rst:58
+msgid "This permanently deletes any :ref:`ug_activitystreams` data older than a specific number of days."
+msgstr "このコマンドでは、指定の日数以前の :ref:`ug_activitystreams` のデータを削除します。"
+
+#: ../../source/tower-manage.rst:61
+msgid "Cluster management"
+msgstr "クラスターの管理"
+
+#: ../../source/tower-manage.rst:66
+msgid "Refer to the :ref:`ag_clustering` section for details on the ``awx-manage provision_instance`` and ``awx-manage deprovision_instance`` commands."
+msgstr "``awx-manage provision_instance`` および ``awx-manage deprovision_instance`` コマンドの詳細は、「:ref:`ag_clustering`」のセクションを参照してください。"
+
+#: ../../source/tower-manage.rst:72
+msgid "Do not run other ``awx-manage`` commands unless instructed by Ansible Support."
+msgstr "Ansible サポートからの指示がない限り、他の ``awx-manage`` コマンドは実行しないようにしてください。"
+
+#: ../../source/tower-manage.rst:78
+msgid "Token and session management"
+msgstr "トークンおよびセッション管理"
+
+#: ../../source/tower-manage.rst:84
+msgid "|at| supports the following commands for OAuth2 token management:"
+msgstr "|at| は、OAuth2 トークン管理向けに以下のコマンドをサポートします。"
+
+#: ../../source/tower-manage.rst:91
+msgid "``create_oauth2_token``"
+msgstr "``create_oauth2_token``"
+
+#: ../../source/tower-manage.rst:93
+msgid "Use this command to create OAuth2 tokens (specify actual username for ``example_user`` below):"
+msgstr "このコマンドを使用して OAuth2 トークンを作成します (以下のように ``example_user`` の実際のユーザー名を指定します)。"
+
+#: ../../source/tower-manage.rst:101
+msgid "Make sure you provide a valid user when creating tokens. Otherwise, you will get an error message that you tried to issue the command without specifying a user, or supplying a username that does not exist."
+msgstr "トークンの作成時に有効なユーザーを指定するようにしてください。指定しないと、ユーザーを指定していない状態、または存在しないユーザー名を指定して、コマンドを実行しようとしましたとのエラーメッセージが表示されます。"
+
+#: ../../source/tower-manage.rst:108
+msgid "``revoke_oauth2_tokens``"
+msgstr "``revoke_oauth2_tokens``"
+
+#: ../../source/tower-manage.rst:110
+msgid "Use this command to revoke OAuth2 tokens (both application tokens and personal access tokens (PAT)). By default, it revokes all application tokens (but not their associated refresh tokens), and revokes all personal access tokens. However, you can also specify a user for whom to revoke all tokens."
+msgstr "このコマンドを使用して OAuth2 トークンを取り消します (アプリケーショントークンもパーソナルアクセストークン (PAT) も両方)。デフォルトでは、全アプリケーショントークンを取り消し (ますが、関連付けられた更新トークンは取り消されません)、さらにパーソナルアクセストークンすべてを取り消します。ただし、全トークンを取り消すユーザーを指定することも可能です。"
+
+#: ../../source/tower-manage.rst:112
+msgid "To revoke all existing OAuth2 tokens:"
+msgstr "既存の OAuth2 トークンすべてを取り消す方法:"
+
+#: ../../source/tower-manage.rst:118
+msgid "To revoke all OAuth2 tokens & their refresh tokens:"
+msgstr "全 OAuth2 トークンおよび更新トークンを取り消す方法:"
+
+#: ../../source/tower-manage.rst:124
+msgid "To revoke all OAuth2 tokens for the user with ``id=example_user`` (specify actual username for ``example_user`` below):"
+msgstr "``id=example_user`` が指定されたユーザーの OAuth2 トークンすべてを取り消す方法 (以下のように ``example_user`` の実際のユーザー名を指定します):"
+
+#: ../../source/tower-manage.rst:130
+msgid "To revoke all OAuth2 tokens and refresh token for the user with ``id=example_user``:"
+msgstr "``id=example_user`` が指定されたユーザーの全 OAuth2 トークンと更新トークンを取り消す方法:"
+
+#: ../../source/tower-manage.rst:139
+msgid "``cleartokens``"
+msgstr "``cleartokens``"
+
+#: ../../source/tower-manage.rst:141
+msgid "Use this command to clear tokens which have already been revoked. Refer to `Django's Oauth Toolkit documentation on cleartokens`_ for more detail."
+msgstr "このコマンドを使用して、すでに呼び出されているトークンを消去します。詳細は、「`Django's Oauth Toolkit documentation on cleartokens`_ 」を参照してください。"
+
+#: ../../source/tower-manage.rst:147
+msgid "``expire_sessions``"
+msgstr "``expire_sessions``"
+
+#: ../../source/tower-manage.rst:149
+msgid "Use this command to terminate all sessions or all sessions for a specific user. Consider using this command when a user changes role in an organization, is removed from assorted groups in LDAP/AD, or the administrator wants to ensure the user can no longer execute jobs due to membership in these groups."
+msgstr "このコマンドを使用して、全セッションまたは、特定のユーザーのセッションすべてを中断します。組織内でユーザーのロールが変更になった場合や、LDAP/AD の分類グループから削除された場合、これらのグループのメンバーシップが原因で管理者が対象ユーザーにジョブを実行させない場合などに、このコマンドの使用を検討してください。"
+
+#: ../../source/tower-manage.rst:156
+msgid "This command terminates all sessions by default. The users associated with those sessions will be consequently logged out. To only expire the sessions of a specific user, you can pass their username using the ``--user`` flag (specify actual username for ``example_user`` below):"
+msgstr "このコマンドは、デフォルトで全セッションを中断します。そのため、これらのセッションに関連付けられているユーザーはログアウトされます。特定のユーザーのセッションだけを失効させるには、``--user`` フラグを使用してユーザー名を指定します (以下では、``example_user`` の実際のユーザー名を指定します)。"
+
+#: ../../source/tower-manage.rst:165
+msgid "``clearsessions``"
+msgstr "``clearsessions``"
+
+#: ../../source/tower-manage.rst:167
+msgid "Use this command to delete all sessions that have expired. Refer to `Django's documentation on clearsessions`_ for more detail."
+msgstr "このコマンドを使用して有効期限の切れたセッションをすべて削除します。詳細は、「`Django's documentation on clearsessions`_ 」を参照してください。"
+
+#: ../../source/tower-manage.rst:173
+msgid "For more information on OAuth2 token management in the controller user interface, see the :ref:`ug_applications_auth` section of the |atu|."
+msgstr "コントローラーユーザーインターフェースの OAuth2 トークン管理に関する詳細は、『|atu|』の「:ref:`ug_applications_auth`」セクションを参照してください。"
+
+#: ../../source/tower-manage.rst:177
+msgid "Analytics gathering"
+msgstr "アナリティクスの収集"
+
+#: ../../source/tower-manage.rst:184
+msgid "Use this command to gather analytics on-demand outside of the predefined window (default is 4 hours):"
+msgstr "以下のコマンドを使用して、事前定義ウィンドウ外 (デフォルトは 4 時間) 外からオンデマンドの解析を収集します。"
+
+#: ../../source/tower-manage.rst:191
+msgid "For customers with disconnected environments who want to collect usage information about unique hosts automated across a time period, use this command:"
+msgstr "切断された環境を使用し、一定期間にわたって、自動化された一意のホストに関する使用情報を収集する場合は、次のコマンドを使用します。"
+
+#: ../../source/tower-manage.rst:198
+msgid "The parameters ``--since`` and ``--until`` specify date ranges and are optional, but one of them has to be present. The ``--json`` flag specifies the output format and is optional."
+msgstr "``--since`` パラメーターおよび ``--until`` パラメーターは、日付範囲を指定しますが、それらのいずれかが存在していなければなりません。``--json`` フラグは出力形式を指定し、任意にします。"
+

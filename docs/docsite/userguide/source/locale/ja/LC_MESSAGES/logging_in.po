@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/logging_in.rst:3
+msgid "Logging In"
+msgstr "ログイン"
+
+#: ../../source/logging_in.rst:8
+msgid "To log in, browse to the user interface at: ``http://<server name>/``"
+msgstr "ログインするには、(``http://<server name>/``) のユーザーインターフェースを使用してください。"
+
+#: ../../source/logging_in.rst:10
+msgid "|Login form|"
+msgstr "|Login form|"
+
+#: ../../source/logging_in.rst:14
+msgid "Log in using a valid username and password."
+msgstr "有効なユーザー名およびパスワードを使用してログインします。"
+
+#: ../../source/logging_in.rst:17
+msgid "The default username is ''admin'', and the default password is set during installation. To configure users and passwords, you can do so by accessing **Users** from the left navigation bar."
+msgstr "デフォルトのユーザー名は「admin」で、デフォルトのパスワードはインストール時に設定されます。ユーザーとパスワードを設定するには、左のナビゲーションバーから**ユーザー**にアクセスします。"
+

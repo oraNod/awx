@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/init_script.rst:4
+msgid "Starting, Stopping, and Restarting the Controller"
+msgstr "コントローラーの開始、停止、および再起動"
+
+#: ../../source/init_script.rst:17
+msgid "|At| ships with an *admin utility script*, ``automation-controller-service``, that can start, stop, and restart all the controller services running on the current single controller node (including the message queue components, and the database if it is an integrated installation). External databases must be explicitly managed by the administrator. The services script resides in ``/usr/bin/automation-controller-service`` and can be invoked as follows:"
+msgstr "|At| には、現在のコントローラーシングルノードで実行中の全コントローラーサービス (統合インストールの場合にはメッセージキューコンポーネントやデータベースを含む) の起動、停止、再起動が可能な *管理ユーティリティースクリプト* (``automation-controller-service``) が同梱されています。管理者は、明示的に外部データベースを管理する必要があります。サービススクリプトは ``/usr/bin/automation-controller-service`` に置かれており、以下のように呼び出すことができます。"
+
+#: ../../source/init_script.rst:26
+msgid "In clustered installs, ``automation-controller-service restart`` does not include PostgreSQL as part of the services that are restarted because it exists external to the controller, and because PostgreSQL does not always require a restart. Use ``systemctl restart automation-controller`` to restart services on clustered environments instead. Also you must restart each cluster node for certain changes to persist as opposed to a single node for a localhost install. For more information on clustered environments, see the :ref:`ag_clustering` section."
+msgstr "クラスター化されたインストールでは、コントローラーの外部に存在し、PostgreSQL が常に再起動を必要としないため、``automation-controller-service restart`` では、再起動するサービスに PostgreSQL が含まれません。代わりに ``systemctl restart automation-controller`` を使用して、クラスター環境でサービスを再起動します。また、ローカルホストインストールの単一ノードではなく、特定の変更を保持するには、各クラスターノードを再起動する必要があります。クラスター化された環境の詳細は、「:ref:`ag_clustering`」セクションを参照してください。"
+
+#: ../../source/init_script.rst:29
+msgid "You can also invoke the services script via distribution-specific service management commands. Distribution packages often provide a similar script, sometimes as an init script, to manage services. Refer to your distribution-specific service management system for more information."
+msgstr "また、ディストリビューション固有のサービス管理コマンドでもそのサービスを呼び出すことができます。ディストリビューションパッケージでは、サービスの管理用に通常は同様のスクリプト、場合によっては init スクリプトを提供します。詳しい情報は、ディストリビューション固有のサービス管理システムを参照してください。"
+
+#: ../../source/init_script.rst:33
+msgid "When running the controller in a container, do not use the ``automation-controller-service`` script. Restart the pod using the container environment instead."
+msgstr "コンテナーでコントローラーを実行する場合は、``automation-controller-service`` スクリプトを使用しないでください。代わりに、コンテナー環境を使用して Pod を再起動してください。"
+

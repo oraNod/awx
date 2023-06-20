@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/webhooks.rst:4
+msgid "Working with Webhooks"
+msgstr "使用 Webhook"
+
+#: ../../source/webhooks.rst:12
+msgid "A :term:`Webhook` provides the ability to execute specified commands between apps over the web. |at| currently provides webhook integration with GitHub and GitLab. This section describes the procedure for setting up a webhook through their respective services."
+msgstr ":term:`Webhook` 提供了通过 Web 在应用程序间执行指定命令的功能。|at| 目前提供与 GitHub 和 GitLab 的 webhook 集成。这个部分介绍了通过各自服务设置 webhook 的步骤。"
+
+#: ../../source/webhooks.rst:17
+msgid "The webhook post-status-back functionality for GitHub and GitLab is designed for work only under certain CI events. Receiving another kind of event will result in messages like the one below in the service log:"
+msgstr "webhook 的 GitHub 和 GitLab 的 post-status-back 功能仅用于在特定 CI 事件下工作。接收另一类事件会导致在服务日志中出现类似以下的消息："
+
+#: ../../source/webhooks.rst:25
+msgid "GitHub webhook setup"
+msgstr "GitHub webhook 设置"
+
+#: ../../source/webhooks.rst:27
+msgid "|At| has the ability to run jobs based on a triggered webhook event coming in. Job status information (pending, error, success) can be sent back only for pull request events. If you determine you do not want |at| to post job statuses back to the webhook service, skip steps 1-2, and go directly to :ref:`step 3 <ug_webhooks_setup_github>`."
+msgstr "|At| 可根据触发的 webhook 事件运行作业。作业状态信息（待定、错误、成功）只能针对拉取请求事件发回。如果您确定不希望 |at| 将作业状态回发到 webhook 服务，请跳过第 1-2 步并直接进入 :ref:`step 3 <ug_webhooks_setup_github>`。"
+
+#: ../../source/webhooks.rst:29
+msgid "Optionally generate a personal access token (PAT) for use with |at|."
+msgstr "（可选）生成用于 |at| 的个人访问令牌 (PAT)。"
+
+#: ../../source/webhooks.rst:31
+msgid "In the profile settings of your GitHub account, click **Settings**."
+msgstr "在 GitHub 帐户的配置集设置中，点击 **Settings**。"
+
+#: ../../source/webhooks.rst:33
+msgid "At the very bottom of the settings, click **<> Developer Settings**."
+msgstr "在设置的底部，点 **<> Developer Settings**。"
+
+#: ../../source/webhooks.rst:35
+msgid "In the Developer settings, click **Personal access tokens**."
+msgstr "在 Developer settings 中，点击 **Personal access tokens**。"
+
+#: ../../source/webhooks.rst:36
+msgid "From the Personal access tokens screen, click **Generate new token**."
+msgstr "在 Personal access tokens 屏幕中点击 **Generate new token**。"
+
+#: ../../source/webhooks.rst:37
+msgid "When prompted, enter your GitHub account password to continue."
+msgstr "提示时，请输入您的 GitHub 帐户密码以继续。"
+
+#: ../../source/webhooks.rst:38
+msgid "In the **Note** field, enter a brief description about what this PAT will be used for."
+msgstr "在 **Note** 字段中，输入有关此 PAT 用途的简要描述。"
+
+#: ../../source/webhooks.rst:39
+msgid "In the Scope fields, the automation webhook only needs repo scope access, with the exception of invites. For information about other scopes, click the link right above the table to access the docs."
+msgstr "在 Scope 字段中，自动化 webhook 只需要范围访问权限，但邀请例外。有关其他范围的信息，请点击表上方的链接来访问文档。"
+
+#: ../../source/webhooks.rst:43
+msgid "Click the **Generate Token** button."
+msgstr "点击 **Generate Token** 按钮。"
+
+#: ../../source/webhooks.rst:45
+msgid "Once the token is generated, make sure you copy the PAT, as it will be used in a later step. You will not be able to access this token again in GitHub."
+msgstr "生成令牌后，请确保复制 PAT，因为它将在稍后的步骤中被使用。您将无法在 GitHub 中再次访问这个令牌。"
+
+#: ../../source/webhooks.rst:47
+msgid "Use the PAT to optionally create a GitHub credential:"
+msgstr "使用 PAT 创建 GitHub 凭证（可选）："
+
+#: ../../source/webhooks.rst:49
+msgid "Go to your instance, and :ref:`create a new credential for the GitHub PAT <ug_credentials_github>` using the above generated token."
+msgstr "进入您的实例，并使用上面生成的令牌 :ref:`create a new credential for the GitHub PAT <ug_credentials_github>`。"
+
+#: ../../source/webhooks.rst:50
+#: ../../source/webhooks.rst:130
+msgid "Make note of the name of this credential, as it will be used in the job template that posts back to GitHub."
+msgstr "记下此凭证的名称，因为它将用于回发到 GitHub 的作业模板。"
+
+#: ../../source/webhooks.rst:54
+#: ../../source/webhooks.rst:134
+msgid "Go to the job template with which you want to enable webhooks, and select the webhook service and credential you created in the previous step."
+msgstr "进入您要启用 webhook 的作业模板，然后选择 webhook 服务和您在上一步中创建的凭证。"
+
+#: ../../source/webhooks.rst:60
+msgid "Click **Save**. Now your job template is set up to be able to post back to GitHub. An example of one may look like this:"
+msgstr "点击 **Save**。现在，您的作业模板已设置为可以回发到 GitHub。某个示例可能类似如下："
+
+#: ../../source/webhooks.rst:66
+msgid "Go to a specific GitHub repo you want to configure webhooks and click **Settings**."
+msgstr "进入您要配置 webhook 的特定 GitHub 存储库，并点击 **Settings**。"
+
+#: ../../source/webhooks.rst:70
+msgid "Under Options, click **Webhooks**."
+msgstr "在 Options 下，点击 **Webhooks**。"
+
+#: ../../source/webhooks.rst:74
+msgid "On the Webhooks page, click **Add webhook**."
+msgstr "在 Webhooks 页面中，点击 **Add webhook**。"
+
+#: ../../source/webhooks.rst:76
+msgid "To complete the Add Webhook page, you need to :ref:`enable webhooks in a job template <ug_jt_enable_webhooks>` (or in a :ref:`workflow job template <ug_wfjt_enable_webhooks>`), which will provide you with the following information:"
+msgstr "要完成 Add Webhook 页面，您需要:ref:`enable webhooks in a job template <ug_jt_enable_webhooks>`（或者在:ref:`workflow job template <ug_wfjt_enable_webhooks>`中），这会为您提供以下信息："
+
+#: ../../source/webhooks.rst:78
+msgid "Copy the contents of the **Webhook URL** from the job template, and paste it in the **Payload URL** field. GitHub uses this address to send results to."
+msgstr "从作业模板中复制 **Webhook URL** 的内容，并将它粘贴到 **Payload URL** 字段中。GitHub 使用这个地址来发送结果。"
+
+#: ../../source/webhooks.rst:79
+msgid "Set the **Content type** to **application/json**."
+msgstr "将 **Content type** 设置为 **application/json**。"
+
+#: ../../source/webhooks.rst:80
+msgid "Copy the contents of the **Webhook Key** from the job template above and paste it in the **Secret** field."
+msgstr "从上面的作业模板中复制 **Webhook Key** 的内容，并将它粘贴到 **Secret** 字段中。"
+
+#: ../../source/webhooks.rst:81
+#: ../../source/webhooks.rst:156
+msgid "Leave **Enable SSL verification** selected."
+msgstr "将 **Enable SSL verification** 保留为选中状态。"
+
+#: ../../source/webhooks.rst:87
+msgid "Next, you must select the types of events you want to trigger a webhook. Any such event will trigger the Job or Workflow. In order to have job status (pending, error, success) sent back to GitHub, you must select **Pull requests** in the individual events section."
+msgstr "接下来，您必须选择要触发 webhook 的事件类型。任何这样的事件都会触发作业或工作流。为了使作业状态（待定、错误、成功）可以返回 GitHub，您必须在单独的 events 部分中选择 **Pull requests**。"
+
+#: ../../source/webhooks.rst:91
+msgid "Leave **Active** checked and click **Add Webhook**."
+msgstr "将 **Active** 保留为选中状态，并点击 **Add Webhook**。"
+
+#: ../../source/webhooks.rst:96
+msgid "After your webhook is configured, it displays in the list of webhooks active for your repo, along with the ability to edit or delete it. Click on a webhook, and it brings you to the Manage webhook screen. Scroll to the very bottom of the screen to view all the delivery attempts made to your webhook and whether they succeeded or failed."
+msgstr "配置了 webhook 后，它会显示在您的存储库的活跃 webhook 列表中，并允许编辑或删除。点击 Webhook 会转到 Manage webhook 屏幕。滚动到屏幕的最底部，查看所有对 webhook 所做的传送尝试，以及它们是成功还是失败。"
+
+#: ../../source/webhooks.rst:100
+msgid "For more information, refer to the `GitHub Webhooks developer documentation <https://developer.github.com/webhooks/>`_."
+msgstr "有关详情请参阅 `GitHub Webhooks developer documentation <https://developer.github.com/webhooks/>`_。"
+
+#: ../../source/webhooks.rst:105
+msgid "GitLab webhook setup"
+msgstr "GitLab webhook 设置"
+
+#: ../../source/webhooks.rst:107
+msgid "|At| has the ability to run jobs based on a triggered webhook event coming in. Job status information (pending, error, success) can be sent back only for merge request events. If you determine you do not want |at| to post job statuses back to the webhook service, skip steps 1-2, and go directly to :ref:`step 3 <ug_webhooks_setup_gitlab>`."
+msgstr "|At| 可根据触发的 webhook 事件运行作业。作业状态信息（待定、错误、成功）只能针对合并（merge）请求事件发回。如果您确定不希望 |at| 将作业状态回发到 webhook 服务，请跳过第 1-2 步并直接进入 :ref:`step 3 <ug_webhooks_setup_gitlab>`。"
+
+#: ../../source/webhooks.rst:109
+msgid "Optionally, generate a personal access token (PAT). This token gives |at| the ability to post statuses back when we run jobs based on a webhook coming in."
+msgstr "（可选）生成个人访问令牌（PAT）。此令牌可让 |at| 能够在我们基于传入的 webhook 运行作业时回发状态。"
+
+#: ../../source/webhooks.rst:111
+msgid "In the profile settings of your GitLab account, click **Settings**."
+msgstr "在 GitLab 帐户的配置集设置中，点击 **Settings**。"
+
+#: ../../source/webhooks.rst:113
+msgid "On the sidebar, under User Settings, click **Access Tokens**."
+msgstr "在侧边栏中，点击 User Settings 下的 **Access Tokens**。"
+
+#: ../../source/webhooks.rst:117
+msgid "In the **Name** field, enter a brief description about what this PAT will be used for."
+msgstr "在 **Name** 字段中，输入有关此 PAT 用途的简要描述。"
+
+#: ../../source/webhooks.rst:118
+msgid "Skip the **Expires at** field unless you want to set an expiration date for your webhook."
+msgstr "跳过 **Expires at** 字段，除非您要为您的 webhook 设置过期日期。"
+
+#: ../../source/webhooks.rst:119
+msgid "In the Scopes fields, select the ones applicable to your integration. For |at|, API is the only selection necessary."
+msgstr "在 Scopes 字段中，选择适用于您的集成的范围。对于 |at|，API 是必不可少的唯一选择。"
+
+#: ../../source/webhooks.rst:123
+msgid "Click the **Create personal access token** button."
+msgstr "点击 **Create personal access token** 按钮。"
+
+#: ../../source/webhooks.rst:125
+msgid "Once the token is generated, make sure you copy the PAT, as it will be used in a later step. You will not be able to access this token again in GitLab."
+msgstr "生成令牌后，请确保复制 PAT，因为它将在稍后的步骤中被使用。您将无法在 GitLab 中再次访问这个令牌。"
+
+#: ../../source/webhooks.rst:127
+msgid "Use the PAT to optionally create a GitLab credential:"
+msgstr "使用 PAT 创建 GitLab 凭证（可选）："
+
+#: ../../source/webhooks.rst:129
+msgid "Go to your instance, and :ref:`create a new credential for the GitLab PAT <ug_credentials_gitlab>` using the above generated token."
+msgstr "进入您的实例，并使用上面生成的令牌 :ref:`create a new credential for the GitLab PAT <ug_credentials_gitlab>`。"
+
+#: ../../source/webhooks.rst:140
+msgid "Click **Save**. Now your job template is set up to be able to post back to GitLab. An example of one may look like this:"
+msgstr "点击 **Save**。现在，您的作业模板已设置为可以回发到 GitLab。某个示例可能类似如下："
+
+#: ../../source/webhooks.rst:147
+msgid "Go to a specific GitLab repo you want to configure webhooks and click **Settings > Integrations**."
+msgstr "进入您要配置 Webhook 的特定 GitLab 存储库，并点击 **Settings > Integrations**。"
+
+#: ../../source/webhooks.rst:151
+msgid "To complete the Integrations page, you need to :ref:`enable webhooks in a job template <ug_jt_enable_webhooks>` (or in a :ref:`workflow job template <ug_wfjt_enable_webhooks>`), which will provide you with the following information:"
+msgstr "要完成 Integrations 页面，您需要:ref:`enable webhooks in a job template <ug_jt_enable_webhooks>`（或者在:ref:`workflow job template <ug_wfjt_enable_webhooks>`中），这会为您提供以下信息："
+
+#: ../../source/webhooks.rst:153
+msgid "Copy the contents of the **Webhook URL** from the job template above, and paste it in the **URL** field. GitLab uses this address to send results to."
+msgstr "从上面的作业模板中复制 **Webhook URL** 的内容，并将它粘贴到 **URL** 字段中。GitLab 使用这个地址来发送结果。"
+
+#: ../../source/webhooks.rst:154
+msgid "Copy the contents of the **Webhook Key** from the job template above and paste it in the **Secret Token** field."
+msgstr "从上面的作业模板中复制 **Webhook Key** 的内容，并将它粘贴到 **Secret Token** 字段中。"
+
+#: ../../source/webhooks.rst:155
+msgid "Next, you must select the types of events you want to trigger a webhook. Any such event will trigger the Job or Workflow. In order to have job status (pending, error, success) sent back to GitLab, you must select **Merge request events** in the Trigger section."
+msgstr "接下来，您必须选择要触发 webhook 的事件类型。任何这样的事件都会触发作业或工作流。为了使作业状态（待定、错误、成功）可以返回到 GitLab，您必须在 Trigger 部分中选择 **Merge request events**。"
+
+#: ../../source/webhooks.rst:157
+msgid "Click **Add webhook**."
+msgstr "点击 **Add webhook**。"
+
+#: ../../source/webhooks.rst:162
+msgid "After your webhook is configured, it displays in the list of Project Webhooks for your repo, along with the ability to test events, edit or delete the webhook. Testing a webhook event displays the results at the top of the page whether it succeeded or failed."
+msgstr "配置了 webhook 后，它会显示在您的存储库的项目 Webhook 列表中，并可以测试事件、编辑或删除 webhook。测试 webhook 事件后，会在页面顶部显示结果，无论是成功还是失败。"
+
+#: ../../source/webhooks.rst:164
+msgid "For more information, refer to the `GitLab webhooks integrations documentation <https://docs.gitlab.com/ee/user/project/integrations/webhooks.html>`_."
+msgstr "有关详情请参阅 `GitLab webhooks integrations documentation <https://docs.gitlab.com/ee/user/project/integrations/webhooks.html>`_。"
+
+#: ../../source/webhooks.rst:168
+msgid "Payload output"
+msgstr "有效负载 (playload) 输出"
+
+#: ../../source/webhooks.rst:170
+msgid "The entire payload is exposed as an extra variable. To view the payload information, go to the Jobs Detail view of the job template that ran with the webhook enabled. In the **Extra Variables** field of the Details pane, view the payload output from the ``awx_webhook_payload`` variable, as shown in the example below."
+msgstr "整个有效负载会作为额外变量公开。要查看有效负载信息，请找到在启用了 Webhook 的情况下运行的作业模板，进入其作业详情视图。在 Details 窗格的 **Extra Variables** 字段中查看 ``awx_webhook_payload`` 变量的有效负载输出，如下例所示。"
+

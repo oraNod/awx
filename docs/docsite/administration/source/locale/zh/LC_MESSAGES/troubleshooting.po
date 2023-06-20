@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/troubleshooting.rst:5
+msgid "Troubleshooting the controller"
+msgstr "对控制器进行故障排除"
+
+#: ../../source/troubleshooting.rst:13
+msgid "Error logs"
+msgstr "错误日志"
+
+#: ../../source/troubleshooting.rst:18
+msgid "The controller server errors are logged in ``/var/log/tower``. Supervisors logs can be found in ``/var/log/supervisor/``. Nginx web server errors are logged in the httpd error log. Configure other controller logging needs in ``/etc/tower/conf.d/``."
+msgstr "控制器服务器的错误被记录在 ``/var/log/tower`` 中。监控器日志可在 ``/var/log/supervisor/`` 中找到。Nginx 网页服务器错误记录在 httpd 错误日志中。在 ``/etc/tower/conf.d/`` 中配置其他控制器日志记录需要。"
+
+#: ../../source/troubleshooting.rst:20
+msgid "Explore client-side issues using the JavaScript console built into most browsers and report any errors to Ansible via the Red Hat Customer portal at https://access.redhat.com/."
+msgstr "使用内置于大多数浏览器中的 JavaScript 控制台来查看客户端的问题，并通过红帽客户门户网站（https://access.redhat.com/.）向 Ansible 报告任何错误。"
+
+#: ../../source/troubleshooting.rst:26
+msgid "sosreport"
+msgstr "sosreport"
+
+#: ../../source/troubleshooting.rst:30
+msgid "The ``sosreport`` is a utility that collects diagnostic information for Support to be able to use to analyze and investigate the issues you report. To properly provide Technical Support this information, refer to the `Knowledgebase article for sosreport <https://access.redhat.com/solutions/3592>`_ from the Red Hat Customer portal to perform the following procedures:"
+msgstr "``sosreport`` 是一个工具程序，可以用来收集对问题进行诊断分析所需要的数据。根据红帽客户门户网站中的 `Knowledgebase article for sosreport <https://access.redhat.com/solutions/3592>`_ 的内容来执行以下步骤："
+
+#: ../../source/troubleshooting.rst:32
+msgid "`Install the sosreport <https://access.redhat.com/solutions/3592#install>`_ utility."
+msgstr "`Install the sosreport <https://access.redhat.com/solutions/3592#install>`_ 工具程序。"
+
+#: ../../source/troubleshooting.rst:33
+msgid "`Generate an sosreport <https://access.redhat.com/solutions/3592#command>`_."
+msgstr "`Generate an sosreport <https://access.redhat.com/solutions/3592#command>`_."
+
+#: ../../source/troubleshooting.rst:34
+msgid "Provide the sosreport to Red Hat Support."
+msgstr "向红帽支持提供 sosreport。"
+
+#: ../../source/troubleshooting.rst:38
+msgid "Problems connecting to your host"
+msgstr "主机连接问题"
+
+#: ../../source/troubleshooting.rst:43
+msgid "If you are unable to run the ``helloworld.yml`` example playbook from the Quick Start Guide or other playbooks due to host connection errors, try the following:"
+msgstr "当运行快速启动指南中的 ``helloworld.yml`` 示例 playbook 或其他 playbook 时出现主机连接错误，请尝试以下操作："
+
+#: ../../source/troubleshooting.rst:45
+msgid "Can you ``ssh`` to your host? Ansible depends on SSH access to the servers you are managing."
+msgstr "您能 ``ssh`` 到您的主机吗？Ansible 需要通过 SSH 连接到被管理的服务器。"
+
+#: ../../source/troubleshooting.rst:46
+msgid "Are your hostnames and IPs correctly added in your inventory file? (Check for typos.)"
+msgstr "您的主机名和 IP 是否正确添加到您的清单文件中？（检查拼写错误。）"
+
+#: ../../source/troubleshooting.rst:49
+msgid "Unable to login to the controller via HTTP"
+msgstr "无法通过 HTTP 登录到控制器"
+
+#: ../../source/troubleshooting.rst:51
+msgid "Access to the controller is intentionally restricted through a secure protocol (HTTPS). In cases where your configuration is set up to run a controller node behind a load balancer or proxy as \"HTTP only\", and you only want to access it without SSL (for troubleshooting, for example), you must add the following settings in the ``custom.py`` file located at ``/etc/tower/conf.d`` of your controller instance:"
+msgstr "对控制器的访问被有意限制为需要通过安全协议 (HTTPS) 进行。当您的配置被设置为在负载均衡器或“仅限 HTTP”代理后面运行控制器节点，且您希望在不使用 SSL 的情况下访问它时（例如，进行故障排除），您必须将以下设置添加到控制器实例的 ``/etc/tower/conf.d`` 目录的 ``custom.py`` 文件中。"
+
+#: ../../source/troubleshooting.rst:58
+msgid "Changing these settings to ``False`` will allow the controller to manage cookies and login sessions when using the HTTP protocol. This must be done on every node of a cluster installation to properly take effect."
+msgstr "将这些设置修改为 ``False`` 将允许控制器在使用 HTTP 协议时管理 cookie 和登录会话。必须在集群安装的每个节点中执行此操作才能正确生效。"
+
+#: ../../source/troubleshooting.rst:60
+msgid "To apply the changes, run:"
+msgstr "要应用这些更改，请运行："
+
+#: ../../source/troubleshooting.rst:68
+msgid "WebSockets port for live events not working"
+msgstr "实时事件的 WebSocket 端口不能正常工作"
+
+#: ../../source/troubleshooting.rst:76
+msgid "|at| uses port 80/443 on the controller server to stream live updates of playbook activity and other events to the client browser. These ports are configured for 80/443 by default, but if they are blocked by firewalls, close any firewall rules that opened up or added for the previous websocket ports, this will ensure your firewall allows traffic through this port."
+msgstr "|at| 使用控制器服务器上的端口 80/443 将 playbook 活动和其他事件的实时更新流传输到客户端浏览器。这些端口默认配置为 80/443，但是如果防火墙阻止了这些端口，请关闭所有为之前的 websocket 端口打开或添加的防火墙规则，这将确保防火墙允许通过此端口传输流量。"
+
+#: ../../source/troubleshooting.rst:80
+msgid "Problems running a playbook"
+msgstr "运行 playbook 的问题"
+
+#: ../../source/troubleshooting.rst:85
+msgid "If you are unable to run the ``helloworld.yml`` example playbook from the Quick Start Guide or other playbooks due to playbook errors, try the following:"
+msgstr "当运行快速启动指南中的 ``helloworld.yml`` 示例 playbook 或其他 playbook 时出现 playbook 错误，请尝试以下操作："
+
+#: ../../source/troubleshooting.rst:87
+msgid "Are you authenticating with the user currently running the commands? If not, check how the username has been setup or pass the ``--user=username`` or ``-u username`` commands to specify a user."
+msgstr "您是否与当前运行该命令的用户进行身份验证？如果没有，请检查用户名是如何设置的，并传递 ``--user=username`` 或 ``-u username`` 命令来指定用户。"
+
+#: ../../source/troubleshooting.rst:88
+msgid "Is your YAML file correctly indented? You may need to line up your whitespace correctly. Indentation level is significant in YAML. You can use ``yamlint`` to check your playbook. For more information, refer to the YAML primer at: http://docs.ansible.com/YAMLSyntax.html"
+msgstr "您的 YAML 文件的缩进是否正确？您可能需要正确对齐空格。缩进级别在 YAML 中非常重要。您可以使用 ``yamlint`` 检查 playbook。如需更多信息，请参阅 YAML primer：http://docs.ansible.com/YAMLSyntax.html"
+
+#: ../../source/troubleshooting.rst:89
+msgid "Items beginning with a ``-`` are considered list items or plays. Items with the format of ``key: value`` operate as hashes or dictionaries. Ensure you don't have extra or missing ``-`` plays."
+msgstr "以 ``-`` 开头的项目被视为列表项目或 play。采用 ``key: value`` 格式的项目用作哈希或字典。请确保您没有多余或缺失的 ``-`` play。"
+
+#: ../../source/troubleshooting.rst:93
+msgid "Problems when running a job"
+msgstr "运行作业时出现问题"
+
+#: ../../source/troubleshooting.rst:98
+msgid "If you are having trouble running a job from a playbook, you should review the playbook YAML file. When importing a playbook, either manually or via a source control mechanism, keep in mind that the host definition is controlled by the controller and should be set to ``hosts: all``."
+msgstr "如果您在 playbook 中运行作业时遇到问题，您应该查看 playbook YAML 文件。在手动或通过源控制机制导入 playbook 时，请记住主机定义是由控制器控制，应该设置为 ``hosts: all``。"
+
+#: ../../source/troubleshooting.rst:102
+msgid "Playbooks aren't showing up in the \"Job Template\" drop-down"
+msgstr "在“Job Template”下拉菜单中未显示 playbook"
+
+#: ../../source/troubleshooting.rst:108
+msgid "If your playbooks are not showing up in the Job Template drop-down list, here are a few things you can check:"
+msgstr "如果您的 playbook 没有显示在作业模板下拉列表中，您可以检查以下几个事项："
+
+#: ../../source/troubleshooting.rst:110
+msgid "Make sure that the playbook is valid YML and can be parsed by Ansible."
+msgstr "确保 playbook 是有效 YML，可以被 Ansible 解析。"
+
+#: ../../source/troubleshooting.rst:111
+msgid "Make sure the permissions and ownership of the project path (/var/lib/awx/projects) is set up so that the \"awx\" system user can view the files. You can run this command to change the ownership:"
+msgstr "确保设置了项目路径的权限和所有权 (/var/lib/awx/projects)，以便“awx”系统用户可以查看这些文件。您可以运行这个命令来更改所有权："
+
+#: ../../source/troubleshooting.rst:119
+msgid "Playbook stays in pending"
+msgstr "Playbook 处于待定状态"
+
+#: ../../source/troubleshooting.rst:123
+msgid "If you are attempting to run a playbook Job and it stays in the \"Pending\" state indefinitely, try the following:"
+msgstr "当运行 playbook 作业时一直显示作业处于“Pending”状态，请尝试以下操作："
+
+#: ../../source/troubleshooting.rst:125
+msgid "Ensure all supervisor services are running via ``supervisorctl status``."
+msgstr "确定所有控制程序服务都通过 ``supervisorctl status`` 运行。"
+
+#: ../../source/troubleshooting.rst:126
+msgid "Check to ensure that the ``/var/`` partition has more than 1 GB of space available. Jobs will not complete with insufficient space on the ``/var/`` partition."
+msgstr "检查确保 ``/var/`` 分区有超过 1 GB 的可用空间。如果 ``/var/`` 分区空间不足，作业将无法完成。"
+
+#: ../../source/troubleshooting.rst:127
+msgid "Run ``automation-controller-service restart`` on the controller server."
+msgstr "在控制器服务器中运行 ``automation-controller-service restart``。"
+
+#: ../../source/troubleshooting.rst:130
+msgid "If you continue to have problems, run ``sosreport`` as root on the controller server, then file a `support request`_ with the result."
+msgstr "如果问题仍然存在，请以 root 用户身份在控制器服务器上运行 ``sosreport``，然后提交 `support request`_ 并包括运行命令的结果。"
+
+#: ../../source/troubleshooting.rst:136
+msgid "Cancel a controller job"
+msgstr "取消控制器任务"
+
+#: ../../source/troubleshooting.rst:140
+msgid "When issuing a ``cancel`` request on a currently running controller job, the controller issues a ``SIGINT`` to the ``ansible-playbook`` process. While this causes Ansible to stop dispatching new tasks and exit, in many cases, module tasks that were already dispatched to remote hosts will run to completion. This behavior is similar to pressing ``Ctrl-C`` during a command-line Ansible run."
+msgstr "在当前运行的控制器作业上发出 ``cancel`` 请求时，控制器会发出 ``SIGINT`` 给 ``ansible-playbook`` 进程。这会导致 Ansible 停止分配新的任务并退出，在很多情况下，已经分配给远程主机的模块任务将会完成运行。此行为与命令行 Ansible 运行期间按 ``Ctrl-C`` 类似。"
+
+#: ../../source/troubleshooting.rst:142
+msgid "With respect to software dependencies, if a running job is canceled, the job is essentially removed but the dependencies will remain."
+msgstr "对于软件依赖项，如果取消正在运行的作业，则该作业将基本删除，但依赖项仍会保留。"
+
+#: ../../source/troubleshooting.rst:147
+msgid "Reusing an external database causes installations to fail"
+msgstr "重新使用外部数据库会导致安装失败"
+
+#: ../../source/troubleshooting.rst:151
+msgid "Instances have been reported where reusing the external DB during subsequent installation of nodes causes installation failures."
+msgstr "在后续安装节点时重新使用外部 DB 会导致安装失败。"
+
+#: ../../source/troubleshooting.rst:153
+msgid "For example, say that you performed a clustered installation. Next, say that you needed to do this again and performed a second clustered installation reusing the same external database, only this subsequent installation failed."
+msgstr "例如，您执行了集群的安装。然后，您需要再次进行安装，并使用相同的外部数据库执行第二次集群的安装。则第二次安装会失败。"
+
+#: ../../source/troubleshooting.rst:155
+msgid "When setting up an external database which has been used in a prior installation, the database used for the clustered node must be manually cleared before any additional installations can succeed."
+msgstr "在设置之前安装中使用的外部数据库时，必须在后续的安装进行前，手动清除在前一次安装时集群节点使用的数据库。"
+
+#: ../../../common/source/isolation_variables.rst:2
+msgid "|At| uses container technology to isolate jobs from each other. By default, only the current project is exposed to the container running a job template."
+msgstr "|At| 使用容器技术将作业相互隔离。默认情况下，只有当前项目公开给运行作业模板的容器。"
+
+#: ../../../common/source/isolation_variables.rst:4
+msgid "You may find that you need to customize your playbook runs to expose additional directories. To fine tune your usage of job isolation, there are certain variables that can be set."
+msgstr "您可能会发现，您需要自定义 playbook 运行以公开其他目录。要微调作业隔离的使用，可以设置某些变量。"
+
+#: ../../../common/source/isolation_variables.rst:6
+msgid "By default, |at| will use the system's ``tmp`` directory (``/tmp`` by default) as its staging area. This can be changed in the **Job Execution Path** field of the Jobs settings screen, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "默认情况下，|at| 将使用系统的 ``tmp`` 目录（默认为``/tmp`` ）作为其临时区域。这可以在作业设置屏幕的 **Job Execution Path** 字段中进行修改，也可以在位于 ``/api/v2/settings/jobs`` 的 REST API 中更改："
+
+#: ../../../common/source/isolation_variables.rst:8
+msgid "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+msgstr "``AWX_ISOLATION_BASE_PATH = \"/opt/tmp\"``"
+
+#: ../../../common/source/isolation_variables.rst:10
+msgid "If there are any additional directories that should specifically be exposed from the host to the container that playbooks run in, you can specify those in the **Paths to Expose to Isolated Jobs** field of the Jobs setting scren, or in the REST API at ``/api/v2/settings/jobs``:"
+msgstr "如果应该从主机向运行 playbook 的容器公开任何其他目录，您可以在 Jobs 设置 scren 的 **Paths to Expose to Isolated Jobs** 字段中指定，或者在位于 ``/api/v2/settings/jobs`` 的 REST API 中指定它们："
+
+#: ../../../common/source/isolation_variables.rst:13
+msgid "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+msgstr "``AWX_ISOLATION_SHOW_PATHS = ['/list/of/', '/paths']``"
+
+#: ../../../common/source/isolation_variables.rst:16
+msgid "The primary file you may want to add to ``AWX_ISOLATION_SHOW_PATHS`` is ``/var/lib/awx/.ssh``, if your playbooks need to use keys or settings defined there."
+msgstr "如果 playbook 需要使用在 ``/var/lib/awx/.ssh`` 中定义的密钥或设置，则需要把它做为主文件添加到 ``AWX_ISOLATION_SHOW_PATHS`` 。"
+
+#: ../../../common/source/isolation_variables.rst:18
+msgid "The above fields can be found in the Jobs Settings window:"
+msgstr "以上字段可在 Jobs Settings 窗口中找到："
+
+#: ../../source/troubleshooting.rst:161
+msgid "Private EC2 VPC Instances in the controller Inventory"
+msgstr "控制器清单中的私有 EC2 VPC 实例"
+
+#: ../../source/troubleshooting.rst:168
+msgid "By default, the controller only shows instances in a VPC that have an Elastic IP (EIP) associated with them. To see all of your VPC instances, perform the following steps:"
+msgstr "默认情况下，控制器只显示 VPC 中具有与它们关联的弹性 IP (EIP) 的实例。要查看您的 VPC 实例，请执行以下步骤："
+
+#: ../../source/troubleshooting.rst:170
+msgid "In the controller interface, select your inventory."
+msgstr "在控制器界面中，选择您的清单。"
+
+#: ../../source/troubleshooting.rst:171
+msgid "Click on the group that has the Source set to AWS, and click on the Source tab."
+msgstr "点击来源设置为 AWS 的组，并点击 Source 选项卡。"
+
+#: ../../source/troubleshooting.rst:172
+msgid "In the ``Source Variables`` box, enter:"
+msgstr "``Source Variables`` 在方框中输入："
+
+#: ../../source/troubleshooting.rst:178
+msgid "Next, save and then trigger an update of the group. Once this is done, you should be able to see all of your VPC instances."
+msgstr "接下来，保存并触发组更新。完成后，您应该可以看到所有 VPC 实例。"
+
+#: ../../source/troubleshooting.rst:182
+msgid "The controller must be running inside the VPC with access to those instances if you want to configure them."
+msgstr "如果要配置这些实例，必须在 VPC 中运行控制器，并可访问这些实例。"
+
+#: ../../source/troubleshooting.rst:187
+msgid "Troubleshooting \"Error: provided hosts list is empty\""
+msgstr "“Error: provided hosts list is empty” 的故障排除"
+
+#: ../../source/troubleshooting.rst:193
+msgid "If you receive the message \"Skipping: No Hosts Matched\" when you are trying to run a playbook through the controller, here are a few things to check:"
+msgstr "如果您在试图通过控制器运行 playbook 时收到\"Skipping: No Hosts Matched\"消息，请检查以下几个问题："
+
+#: ../../source/troubleshooting.rst:195
+msgid "Make sure that your hosts declaration line in your playbook matches the name of your group/host in inventory exactly (these are case sensitive)."
+msgstr "确保 playbook 中的主机声明行与清单中您的组/主机的名称完全匹配（这些内容区分大小写）。"
+
+#: ../../source/troubleshooting.rst:196
+msgid "If it does match and you are using Ansible Core 2.0 or later, check your group names for spaces and modify them to use underscores or no spaces to ensure that the groups can be recognized."
+msgstr "如果匹配，且您正在使用 Ansible Core 2.0 或更高版本，请检查您的组名称中包括的空格，把它们改为下划线或不包括空格以确保这些组可以被识别。"
+
+#: ../../source/troubleshooting.rst:197
+msgid "Make sure that if you have specified a Limit in the Job Template that it is a valid limit value and still matches something in your inventory. The Limit field takes a pattern argument, described here: http://docs.ansible.com/intro_patterns.html"
+msgstr "如果在作业模板中指定了 Limit，请确保它是一个有效的限制值，并且仍然匹配清单中的内容。Limit 字段采用模式参数，如下所述：http://docs.ansible.com/intro_patterns.html"
+
+#: ../../source/troubleshooting.rst:199
+msgid "Please file a support ticket if you still run into issues after checking these options."
+msgstr "如果您在检查这些选项后仍然遇到问题，请创建支持问题单。"
+

@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller API Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller API Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tools.rst:3
+msgid "Tools"
+msgstr "툴"
+
+#: ../../source/tools.rst:8
+msgid "This document offers a basic understanding of the REST API used by |at|."
+msgstr "이 문서에서는 |at|에서 사용하는 REST API에 대한 기본적인 사항을 설명합니다."
+
+#: ../../source/tools.rst:10
+msgid "REST stands for Representational State Transfer and is sometimes spelled as \"ReST\". It relies on a stateless, client-server, and cacheable communications protocol, usually the HTTP protocol."
+msgstr "REST는 Representational State Transfer를 나타내며 \"ReST\"로도 표시됩니다. 상태 비저장, 클라이언트-서버, 캐시 가능한 통신 프로토콜(일반적으로 HTTP 프로토콜)을 사용합니다."
+
+#: ../../source/tools.rst:12
+msgid "You may find it helpful to see which API calls the user interface makes in sequence. To do this, you can use the UI from Firebug or Chrome with developer plugins."
+msgstr "사용자 인터페이스에서 순서대로 생성하는 API 호출을 확인하는 것이 도움이 될 수 있습니다. 이를 위해 개발자 플러그인과 함께 Firebug 또는 Chrome의 UI를 사용할 수 있습니다."
+
+#: ../../source/tools.rst:14
+msgid "Another alternative is Charles Proxy (http://www.charlesproxy.com/), which offers a visualizer that you may find helpful. While it is commercial software, it can insert itself as an OS X proxy, for example, and intercept both requests from web browsers as well as curl and other API consumers."
+msgstr "또 다른 대안은 도움이 될 수 있는 시각화 도구를 제공하는 Charles Proxy(http://www.charlesproxy.com/) 입니다. 상용 소프트웨어이지만, 예를 들면 자체적으로 OS X 프록시로 삽입한 후 웹 브라우저와 curl 및 기타 API 소비자의 요청을 모두 가로챌 수 있습니다."
+
+#: ../../source/tools.rst:16
+msgid "Other alternatives include:"
+msgstr "기타 대안은 다음과 같습니다."
+
+#: ../../source/tools.rst:18
+msgid "Fiddler (http://www.telerik.com/fiddler)"
+msgstr "Fiddler (http://www.telerik.com/fiddler)"
+
+#: ../../source/tools.rst:19
+msgid "mitmproxy (https://mitmproxy.org/)"
+msgstr "mitmproxy (https://mitmproxy.org/)"
+
+#: ../../source/tools.rst:20
+msgid "Live HTTP headers FireFox extension (https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/)"
+msgstr "실시간 HTTP 헤더 FireFox 확장 (https://addons.mozilla.org/en-US/firefox/addon/live-http-headers/)"
+
+#: ../../source/tools.rst:21
+msgid "Paros (http://sourceforge.net/projects/paros/)"
+msgstr "Paros (http://sourceforge.net/projects/paros/)"
+

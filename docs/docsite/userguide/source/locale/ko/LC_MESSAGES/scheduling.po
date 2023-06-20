@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller User Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/scheduling.rst:4
+msgid "Schedules"
+msgstr "스케줄"
+
+#: ../../source/scheduling.rst:13
+msgid "You can access all your configured schedules by clicking **Schedules** from the left navigation bar. The schedules list may be sorted by any of the attributes from each column using the directional arrows. You can also search by name, date, or the name of the month in which a schedule runs."
+msgstr "왼쪽 탐색 모음에서 **스케줄**을 클릭하여 구성된 모든 스케줄에 액세스할 수 있습니다. 스케줄 목록은 방향 화살표를 사용하여 각 열의 특성에 따라 정렬할 수 있습니다. 이름, 날짜 또는 스케줄이 실행되는 월로 검색할 수도 있습니다."
+
+#: ../../source/scheduling.rst:15
+msgid "Each schedule has a corresponding **Actions** column that has options to enable/disable that schedule using the **ON/OFF** toggle next to the schedule name and to allow editing (|edit|) of that schedule."
+msgstr "각 스케줄에는 스케줄 이름 옆에 있는 **켜짐/꺼짐** 토글을 사용하여 해당 스케줄을 활성화/비활성화하고 해당 스케줄을 편집(|edit|)할 수 있는 옵션이 포함된 **작업** 열이 있습니다."
+
+#: ../../source/scheduling.rst:21
+msgid "If you are setting up a template, a project, or an inventory source, clicking on the **Schedules** tab allows you to configure schedules for these resources. Once schedules are created, they are listed by:"
+msgstr "템플릿, 프로젝트 또는 인벤토리 소스를 설정하는 경우 **스케줄** 탭을 클릭하면 이러한 리소스에 대한 스케줄을 구성할 수 있습니다. 스케줄이 생성되면 다음에 따라 나열됩니다."
+
+#: ../../source/scheduling.rst:23
+msgid "**Name**: Clicking the schedule name opens its details"
+msgstr "**이름**: 스케줄 이름을 클릭하면 스케줄의 세부 정보가 열립니다."
+
+#: ../../source/scheduling.rst:24
+msgid "**Type**: Identifies whether the schedule is associated with a source control update or a system-managed job schedule"
+msgstr "**유형**: 스케줄이 소스 제어 업데이트 또는 시스템 관리형 작업 스케줄과 연결되어 있는지의 여부를 나타냅니다."
+
+#: ../../source/scheduling.rst:25
+msgid "**Next Run**: The next scheduled run of this task"
+msgstr "**다음 실행**: 스케줄링된 이 작업의 다음 실행"
+
+#: ../../source/scheduling.rst:31
+msgid "Add a new schedule"
+msgstr "새 스케줄 추가"
+
+#: ../../source/scheduling.rst:33
+msgid "Schedules can only be created from a template, project, or inventory source, and not directly on the main **Schedules** screen itself. To create a new schedule:"
+msgstr "스케줄은 템플릿, 프로젝트 또는 인벤토리 소스에서만 생성할 수 있으며 기본 **스케줄** 화면 자체에서 직접 생성할 수 있습니다. 새 스케줄을 생성하려면 다음을 수행합니다."
+
+#: ../../source/scheduling.rst:35
+msgid "Click the **Schedules** tab of the resource you are configuring (template, project, or inventory source)."
+msgstr "구성 중인 리소스의 **스케줄** 탭을 클릭합니다(템플릿, 프로젝트 또는 인벤토리 소스)."
+
+#: ../../source/scheduling.rst:37
+msgid "Click the **Add** button, which opens the **Create Schedule** window."
+msgstr "**추가** 버튼을 클릭하면 **스케줄 생성** 창이 열립니다."
+
+#: ../../source/scheduling.rst:41
+msgid "Enter the appropriate details into the following fields:"
+msgstr "다음 필드에 적절한 세부 정보를 입력합니다."
+
+#: ../../source/scheduling.rst:43
+msgid "**Name** (required)"
+msgstr "**이름**: (필수)"
+
+#: ../../source/scheduling.rst:44
+msgid "**Start Date** (required)"
+msgstr "**시작일** (필수)"
+
+#: ../../source/scheduling.rst:45
+msgid "**Start Time** (required)"
+msgstr "**시작 시간** (필수)"
+
+#: ../../source/scheduling.rst:46
+msgid "**Local Time Zone** - The entered Start Time should be in this timezone"
+msgstr "**현지 시간대** - 입력된 시작 시간은 이 시간대여야 함"
+
+#: ../../source/scheduling.rst:47
+msgid "**Repeat Frequency** - Appropriate scheduling options display depending on the frequency you select"
+msgstr "**반복 빈도** - 선택한 빈도에 따라 적절한 스케줄 옵션이 표시됨"
+
+#: ../../source/scheduling.rst:49
+msgid "The **Schedule Details** displays when you established a schedule, allowing you to review the schedule settings and a list of the scheduled occurrences in the selected Local Time Zone."
+msgstr "**스케줄 세부 정보**는 스케줄을 설정할 때 표시되며 스케줄 설정을 검토하고 스케줄링된 수행 목록을 선택한 현지 시간대로 볼 수 있습니다."
+
+#: ../../source/scheduling.rst:55
+msgid "Jobs are scheduled in UTC. Repeating jobs that run at a specific time of day may move relative to a local timezone when Daylight Savings Time shifts occur. The system resolves the local time zone based time to UTC when the schedule is saved.  To ensure your schedules are correctly set, you should set your schedules in UTC time."
+msgstr "작업은 UTC로 스케줄링됩니다. 특정 시간에 실행되는 반복 작업은 일광 절약 시간제로 변경 시 현지 시간대를 기준으로 이동할 수 있습니다. 스케줄을 저장하면 현지 시간대 기반 시간이 UTC로 해석됩니다.  스케줄이 올바르게 설정되도록 하려면 UTC 시간으로 스케줄을 설정해야 합니다."
+
+#: ../../source/scheduling.rst:58
+msgid "Once done, click **Save**."
+msgstr "완료되면 **저장**을 클릭합니다."
+
+#: ../../source/scheduling.rst:61
+msgid "You can use the **ON/OFF** toggle button to stop an active schedule or activate a stopped schedule."
+msgstr "**켜기/끄기** 토글 버튼을 사용하여 활성 스케줄을 중지하거나 중지된 스케줄을 활성화할 수 있습니다."
+

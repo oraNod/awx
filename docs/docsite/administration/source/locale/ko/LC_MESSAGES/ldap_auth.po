@@ -1,0 +1,366 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Red Hat Inc.
+# This file is distributed under the same license as the Automation Controller Administration Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Automation Controller Administration Guide 4.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-04 09:32+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/ldap_auth.rst:4
+msgid "Setting up LDAP Authentication"
+msgstr "LDAP 인증 설정"
+
+#: ../../source/ldap_auth.rst:13
+msgid "If the LDAP server you want to connect to has a certificate that is self-signed or signed by a corporate internal certificate authority (CA), the CA certificate must be added to the system's trusted CAs. Otherwise, connection to the LDAP server will result in an error that the certificate issuer is not recognized."
+msgstr "연결하려는 LDAP 서버에 자체 서명된 인증서가 있거나 회사 내부 CA(인증 기관)에서 서명한 인증서가 있는 경우 CA 인증서를 시스템의 신뢰할 수 있는 CA에 추가해야 합니다. 그러지 않고 LDAP 서버에 연결하면 인증서 발행자를 인식할 수 없다는 오류가 발생합니다."
+
+#: ../../source/ldap_auth.rst:15
+msgid "Administrators use LDAP as a source for account authentication information for the controller users. User authentication is provided, but not the synchronization of user permissions and credentials. Organization membership (as well as the organization admin) and team memberships can be synchronized."
+msgstr "관리자는 컨트롤러 사용자의 계정 인증 정보 소스로 LDAP를 사용합니다. 사용자 인증이 제공되지만 사용자 권한과 인증 정보가 동기화되지는 않습니다. 조직 멤버십(및 조직 관리자)과 팀 멤버십은 동기화할 수 있습니다."
+
+#: ../../source/ldap_auth.rst:17
+msgid "When so configured, a user who logs in with an LDAP username and password automatically gets a controller account created for them and they can be automatically placed into organizations as either regular users or organization administrators."
+msgstr "이렇게 구성하면 LDAP 사용자 이름과 암호로 로그인한 사용자는 생성된 컨트롤러 계정을 자동으로 받고 일반 사용자 또는 조직 관리자로 조직에 자동 배치될 수 있습니다."
+
+#: ../../source/ldap_auth.rst:19
+msgid "Users created via an LDAP login cannot change their username, first name, last name, or set a local password for themselves. This is also tunable to restrict editing of other field names."
+msgstr "LDAP 로그인을 통해 생성된 사용자는 사용자 이름, 성, 이름을 변경하거나 로컬 암호를 직접 설정할 수 없습니다. 다른 필드 이름을 편집하는 것을 제한하기 위해 이 구성을 조정할 수도 있습니다."
+
+#: ../../source/ldap_auth.rst:21
+msgid "To configure LDAP integration for the controller:"
+msgstr "컨트롤러의 LDAP 통합을 구성하려면 다음을 수행합니다."
+
+#: ../../source/ldap_auth.rst:23
+msgid "First, create a user in LDAP that has access to read the entire LDAP structure."
+msgstr "먼저 전체 LDAP 구조를 읽을 수 있는 권한이 부여된 사용자를 LDAP에 생성합니다."
+
+#: ../../source/ldap_auth.rst:25
+msgid "Test if you can make successful queries to the LDAP server, use the ``ldapsearch`` command, which is a command line tool that can be installed on the controller system's command line as well as on other Linux and OSX systems. Use the following command to query the ldap server, where *josie* and *Josie4Cloud* are replaced by attributes that work for your setup:"
+msgstr "LDAP 서버에 성공적으로 쿼리할 수 있는지 테스트합니다. ``ldapsearch`` 명령을 사용하십시오. 이 명령은 컨트롤러 시스템의 명령행과 다른 Linux 및 OSX 시스템에 설치할 수 있는 명령행 툴입니다. 다음 명령을 사용하여 ldap 서버를 쿼리합니다. 여기서 *josie*와 *Josie4Cloud*는 설정에 적합한 속성으로 교체됩니다."
+
+#: ../../source/ldap_auth.rst:31
+msgid "Here ``CN=josie,CN=users,DC=website,DC=com`` is the Distinguished Name of the connecting user."
+msgstr "여기서 ``CN=josie,CN=users,DC=website,DC=com``은 연결하는 사용자의 고유 이름입니다."
+
+#: ../../source/ldap_auth.rst:35
+msgid "The ``ldapsearch`` utility is not automatically pre-installed with |at|, however, you can install it from the ``openldap-clients`` package."
+msgstr "``ldapsearch`` 유틸리티는 |at|와 함께 자동으로 사전 설치되지 않지만 ``openldap-clients`` 패키지에서 설치할 수 있습니다."
+
+#: ../../source/ldap_auth.rst:37
+msgid "In the |at| User Interface, click **Settings** from the left navigation and click to select **LDAP settings** from the list of Authentication options."
+msgstr "|at| 사용자 인터페이스에서 왼쪽 탐색의 **설정**을 클릭하고 인증 옵션 목록의 **LDAP 설정**을 클릭하여 선택합니다."
+
+#: ../../source/ldap_auth.rst:41
+msgid "You can configure multiple LDAP servers by specifying the server to configure (otherwise, leave the server at **Default**):"
+msgstr "구성할 서버를 지정하여 여러 LDAP 서버를 구성할 수 있습니다. 구성하지 않는 경우 서버를 **기본값**으로 유지합니다."
+
+#: ../../source/ldap_auth.rst:47
+msgid "The equivalent API endpoints will show ``AUTH_LDAP_*`` repeated: ``AUTH_LDAP_1_*``, ``AUTH_LDAP_2_*``, ..., ``AUTH_LDAP_5_*`` to denote server designations."
+msgstr "동등한 API 끝점은 ``AUTH_LDAP_*``를 ``AUTH_LDAP_1_*``, ``AUTH_LDAP_2_*``, ..., ``AUTH_LDAP_5_*``와 같이 반복적으로 표시하여 서버 지정을 나타냅니다."
+
+#: ../../source/ldap_auth.rst:50
+msgid "Click **Edit** and enter the LDAP server address to connect to in the **LDAP Server URI** field using the same format as the one shown in the text field. Below is an example:"
+msgstr "**편집**을 클릭하고 연결할 LDAP 서버 주소를 텍스트 필드에 표시된 것과 동일한 포맷으로 **LDAP 서버 URI** 필드에 입력합니다. 다음은 예제입니다."
+
+#: ../../source/ldap_auth.rst:54
+msgid "Enter the Distinguished Name in the **LDAP Bind DN** text field to specify the user that the controller uses to connect (Bind) to the LDAP server. Below uses the example, ``CN=josie,CN=users,DC=website,DC=com``:"
+msgstr "**LDAP 바인딩 DN** 텍스트 필드에 고유 이름을 입력하여 컨트롤러가 LDAP 서버에 연결(바인딩)하는 데 사용하는 사용자를 지정합니다. 다음은 예제 ``CN=josie,CN=users,DC=website,DC=com``을 사용합니다."
+
+#: ../../source/ldap_auth.rst:58
+msgid "Enter the password to use for the Binding user in the **LDAP Bind Password** text field. In this example, the password is 'passme':"
+msgstr "**LDAP 바인딩 암호** 텍스트 필드에 바인딩 사용자에게 사용할 암호를 입력합니다. 이 예제에서 암호는 'passme'입니다."
+
+#: ../../source/ldap_auth.rst:62
+msgid "If that name is stored in key ``sAMAccountName``, the **LDAP User DN Template** populates with ``(sAMAccountName=%(user)s)``. Active Directory stores the username to ``sAMAccountName``. Similarly, for OpenLDAP, the key is ``uid``--hence the line becomes ``(uid=%(user)s)``."
+msgstr "해당 이름이 ``sAMAccountName`` 키에 저장된 경우 **LDAP 사용자 DN 템플릿**은 ``(sAMAccountName=%(user)s)``로 채워집니다. Active Directory는 사용자 이름을 ``sAMAccountName``에 저장합니다. 마찬가지로, OpenLDAP의 경우 키가 ``uid``이므로 줄이 ``(uid=%(user)s)``가 됩니다."
+
+#: ../../source/ldap_auth.rst:64
+msgid "Click to select a group type from the **LDAP Group Type** drop-down menu list."
+msgstr "**LDAP 그룹 유형** 드롭다운 메뉴 목록에서 그룹 유형을 클릭하여 선택합니다."
+
+#: ../../source/ldap_auth.rst:66
+msgid "LDAP Group Types include:"
+msgstr "LDAP 그룹 유형은 다음과 같습니다."
+
+#: ../../source/ldap_auth.rst:68
+msgid "``PosixGroupType``"
+msgstr "``PosixGroupType``"
+
+#: ../../source/ldap_auth.rst:69
+msgid "``GroupOfNamesType``"
+msgstr "``GroupOfNamesType``"
+
+#: ../../source/ldap_auth.rst:70
+msgid "``GroupOfUniqueNamesType``"
+msgstr "``GroupOfUniqueNamesType``"
+
+#: ../../source/ldap_auth.rst:71
+msgid "``ActiveDirectoryGroupType``"
+msgstr "``ActiveDirectoryGroupType``"
+
+#: ../../source/ldap_auth.rst:72
+msgid "``OrganizationalRoleGroupType``"
+msgstr "``OrganizationalRoleGroupType``"
+
+#: ../../source/ldap_auth.rst:73
+msgid "``MemberDNGroupType``"
+msgstr "``MemberDNGroupType``"
+
+#: ../../source/ldap_auth.rst:74
+msgid "``NISGroupType``"
+msgstr "``NISGroupType``"
+
+#: ../../source/ldap_auth.rst:75
+msgid "``NestedGroupOfNamesType``"
+msgstr "``NestedGroupOfNamesType``"
+
+#: ../../source/ldap_auth.rst:76
+msgid "``NestedGroupOfUniqueNamesType``"
+msgstr "``NestedGroupOfUniqueNamesType``"
+
+#: ../../source/ldap_auth.rst:77
+msgid "``NestedActiveDirectoryGroupType``"
+msgstr "``NestedActiveDirectoryGroupType``"
+
+#: ../../source/ldap_auth.rst:78
+msgid "``NestedOrganizationalRoleGroupType``"
+msgstr "``NestedOrganizationalRoleGroupType``"
+
+#: ../../source/ldap_auth.rst:79
+msgid "``NestedMemberDNGroupType``"
+msgstr "``NestedMemberDNGroupType``"
+
+#: ../../source/ldap_auth.rst:80
+msgid "``PosixUIDGroupType``"
+msgstr "``PosixUIDGroupType``"
+
+#: ../../source/ldap_auth.rst:82
+msgid "The LDAP Group Types that are supported by the controller leverage the underlying `django-auth-ldap library`_."
+msgstr "컨트롤러에서 지원하는 LDAP 그룹 유형은 기본 `django-auth-ldap library`_를 활용합니다."
+
+#: ../../source/ldap_auth.rst:87
+msgid "Each **LDAP Group Type** can potentially take different parameters. The controller exposes ``LDAP_GROUP_TYPE_PARAMS`` to account for this. ``LDAP_GROUP_TYPE_PARAMS`` is a dictionary, which will be converted by the controller to kwargs and passed to the LDAP Group Type class selected. There are two common parameters used by any of the LDAP Group Type; ``name_attr`` and ``member_attr``. Where ``name_attr`` defaults to ``cn`` and ``member_attr`` defaults to ``member``:"
+msgstr "**LDAP 그룹 유형**마다 사용하는 매개변수가 다를 수도 있습니다. 이에 따라 컨트롤러는 ``LDAP_GROUP_TYPE_PARAMS``를 노출하여 관련 정보를 표시합니다. ``LDAP_GROUP_TYPE_PARAMS``는 컨트롤러를 통해 kwargs로 변환된 후 선택한 LDAP 그룹 유형 클래스에 전달되는 사전입니다. LDAP 그룹 유형에서 사용하는 두 가지 일반 매개변수는 ``name_attr``과 ``member_attr``입니다. 여기서 ``name_attr``의 기본값은 ``cn``, ``member_attr``의 기본값은 ``member``입니다."
+
+#: ../../source/ldap_auth.rst:93
+msgid "To determine what parameters a specific LDAP Group Type expects. refer to the `django_auth_ldap`_ documentation around the classes ``init`` parameters."
+msgstr "특정 LDAP 그룹 유형에 필요한 매개변수를 확인하려면 클래스 ``init`` 매개변수에 관한 `django_auth_ldap`_ 문서를 참조하십시오."
+
+#: ../../source/ldap_auth.rst:98
+msgid "Enter the group distinguish name to allow users within that group to access the controller in the **LDAP Require Group** field, using the same format as the one shown in the text field. In this example, use: ``CN=controller Users,OU=Users,DC=website,DC=com``"
+msgstr "그룹 내의 사용자가 컨트롤러에 액세스할 수 있도록 하는 그룹 고유 이름을 텍스트 필드에 표시된 것과 동일한 포맷으로 **LDAP 필요 그룹** 필드에 입력합니다. 이 예제에서는 ``CN=controller Users,OU=Users,DC=website,DC=com``을 사용합니다."
+
+#: ../../source/ldap_auth.rst:102
+msgid "Enter the group distinguish name to prevent users within that group to access the controller in the **LDAP Deny Group** field, using the same format as the one shown in the text field. In this example, leave the field blank."
+msgstr "그룹 내의 사용자가 컨트롤러에 액세스할 수 없도록 하는 그룹 고유 이름을 텍스트 필드에 표시된 것과 동일한 포맷으로 **LDAP 거부 그룹** 필드에 입력합니다. 이 예제에서는 필드를 비워 둡니다."
+
+#: ../../source/ldap_auth.rst:104
+msgid "The **LDAP Start TLS** is disabled by default. To enable TLS when the LDAP connection is not using SSL, click the toggle to **ON**."
+msgstr "**LDAP 시작 TLS**는 기본적으로 비활성화되어 있습니다. LDAP 연결이 SSL을 사용하지 않을 때 TLS를 활성화하려면 토글을 클릭하여 **ON**으로 전환합니다."
+
+#: ../../source/ldap_auth.rst:108
+msgid "Enter where to search for users while authenticating in the **LDAP USER SEARCH** field using the same format as the one shown in the text field. In this example, use:"
+msgstr "인증하는 동안 사용자를 검색할 위치를 텍스트 필드에 표시된 것과 동일한 포맷으로 **LDAP 사용자 검색** 필드에 입력합니다. 이 예제에서는 다음을 사용합니다."
+
+#: ../../source/ldap_auth.rst:118
+msgid "The first line specifies where to search for users in the LDAP tree. In the above example, the users are searched recursively starting from ``DC=website,DC=com``."
+msgstr "첫 번째 줄은 LDAP 트리에서 사용자를 검색할 위치를 지정합니다. 위의 예제에서는 ``DC=website,DC=com``부터 재귀적으로 사용자를 검색합니다."
+
+#: ../../source/ldap_auth.rst:120
+msgid "The second line specifies the scope where the users should be searched:"
+msgstr "두 번째 줄은 사용자를 검색할 범위를 지정합니다."
+
+#: ../../source/ldap_auth.rst:122
+msgid "SCOPE_BASE:  This value is used to indicate searching only the entry at the base DN, resulting in only that entry being returned"
+msgstr "SCOPE_BASE: 이 값은 기본 DN의 항목만 검색하는 데 사용되며 해당 항목만 반환됩니다."
+
+#: ../../source/ldap_auth.rst:123
+msgid "SCOPE_ONELEVEL:  This value is used to indicate searching all entries one level under the base DN - but not including the base DN and not including any entries under that one level under the base DN."
+msgstr "SCOPE_ONELEVEL: 이 값은 기본 DN보다 한 수준 아래의 모든 항목을 검색하는 데 사용되지만, 기본 DN은 포함하지 않으며 기본 DN보다 두 수준 이상 아래의 항목도 모두 포함하지 않습니다."
+
+#: ../../source/ldap_auth.rst:124
+msgid "SCOPE_SUBTREE: This value is used to indicate searching of all entries at all levels under and including the specified base DN."
+msgstr "SCOPE_SUBTREE: 이 값은 전체 하위 수준에서 모든 항목을 검색하는 데 사용되며 지정된 기본 DN을 포함합니다."
+
+#: ../../source/ldap_auth.rst:126
+msgid "The third line specifies the key name where the user name is stored."
+msgstr "세 번째 줄은 사용자 이름이 저장된 키 이름을 지정합니다."
+
+#: ../../source/ldap_auth.rst:132
+msgid "For multiple search queries, the proper syntax is: ::"
+msgstr "검색 쿼리가 여러 개인 경우 올바른 구문은 다음과 같습니다."
+
+#: ../../source/ldap_auth.rst:154
+msgid "In the **LDAP Group Search** text field, specify which groups should be searched and how to search them. In this example, use:"
+msgstr "**LDAP 그룹 검색** 텍스트 필드에서 검색할 그룹과 검색 방법을 지정합니다. 이 예제에서는 다음을 사용합니다."
+
+#: ../../source/ldap_auth.rst:164
+msgid "The first line specifies the BASE DN where the groups should be searched."
+msgstr "첫 번째 줄은 그룹을 검색할 기본 DN을 지정합니다."
+
+#: ../../source/ldap_auth.rst:165
+msgid "The second lines specifies the scope and is the same as that for the user directive."
+msgstr "두 번째 줄은 범위를 지정하며 사용자 지시문 범위와 같습니다."
+
+#: ../../source/ldap_auth.rst:166
+msgid "The third line specifies what the ``objectclass`` of a group object is in the LDAP you are using."
+msgstr "세 번째 줄은 사용 중인 LDAP에 있는 그룹 오브젝트의 ``objectclass``를 지정합니다."
+
+#: ../../source/ldap_auth.rst:171
+msgid "Enter the user attributes in the **LDAP User Attribute Map** the text field. In this example, use:"
+msgstr "**LDAP 사용자 속성 맵** 텍스트 필드에 사용자 속성을 입력합니다. 이 예제에서는 다음을 사용합니다."
+
+#: ../../source/ldap_auth.rst:182
+msgid "The above example retrieves users by last name from the key ``sn``. You can use the same LDAP query for the user to figure out what keys they are stored under."
+msgstr "위의 예제에서는 ``sn`` 키에서 사용자를 성으로 검색합니다. 사용자에게 동일한 LDAP 쿼리를 사용하여 사용자가 저장된 키를 확인할 수 있습니다."
+
+#: ../../source/ldap_auth.rst:186
+msgid "Enter the user profile flags in the **LDAP User Flags by Group** the text field. In this example, use the following syntax to set LDAP users as \"Superusers\" and \"Auditors\":"
+msgstr "**그룹별 LDAP 사용자 플래그** 텍스트 필드에 사용자 프로필 플래그를 입력합니다. 이 예제에서는 다음 구문을 사용하여 LDAP 사용자를 \"Superusers\" 및 \"Auditors\"로 설정합니다."
+
+#: ../../source/ldap_auth.rst:195
+msgid "The above example retrieves users who are flagged as superusers or as auditor in their profile."
+msgstr "위의 예제에서는 프로필에 슈퍼유저 또는 감사자로 플래그가 지정된 사용자를 검색합니다."
+
+#: ../../source/ldap_auth.rst:199
+#: ../../source/ldap_auth.rst:233
+msgid "For details on completing the mapping fields, see :ref:`ag_ldap_org_team_maps`."
+msgstr "매핑 필드를 작성하는 방법에 대한 자세한 내용은 :ref:`ag_ldap_org_team_maps`을 참조하십시오."
+
+#: ../../source/ldap_auth.rst:201
+msgid "Click **Save** when done."
+msgstr "완료되면 **저장**을 클릭합니다."
+
+#: ../../source/ldap_auth.rst:203
+msgid "With these values entered on this form, you can now make a successful authentication with LDAP."
+msgstr "이 양식에 이러한 값을 입력하면 이제 LDAP를 사용하여 성공적으로 인증할 수 있습니다."
+
+#: ../../source/ldap_auth.rst:207
+msgid "The controller does not actively sync users, but they are created during their initial login. To improve performance associated with LDAP authentication, see :ref:`ug_ldap_auth_perf_tips` in the |atu|."
+msgstr "컨트롤러가 적극적으로 사용자를 동기화하지는 않지만 초기 로그인 과정에서 사용자가 생성됩니다. LDAP 인증과 관련된 성능을 개선하려면 |atu|에서 :ref:`ug_ldap_auth_perf_tips`을 참조하십시오."
+
+#: ../../source/ldap_auth.rst:213
+msgid "Referrals"
+msgstr "추천"
+
+#: ../../source/ldap_auth.rst:219
+msgid "Active Directory uses \"referrals\" in case the queried object is not available in its database. It has been noted that this does not work properly with the django LDAP client and, most of the time, it helps to disable referrals. Disable LDAP referrals by adding the following lines to your ``/etc/tower/conf.d/custom.py`` file:"
+msgstr "Active Directory는 쿼리된 오브젝트를 해당 데이터베이스에서 사용할 수 없는 경우 \"추천\"을 사용합니다. 이 기능은 Django LDAP 클라이언트에서는 제대로 작동하지 않으며, 대부분의 경우 추천을 비활성화하는 것이 좋습니다. ``/etc/tower/conf.d/custom.py`` 파일에 다음 줄을 추가하여 LDAP 추천을 비활성화합니다."
+
+#: ../../source/ldap_auth.rst:231
+msgid "\"Referrals\" are disabled by default in |at| version 2.4.3 and above.  If you are running an earlier version of the controller, you should consider adding this parameter to your configuration file."
+msgstr "|at| 버전 2.4.3 이상에서는 \"추천\"이 기본적으로 비활성화되어 있습니다.  이전 버전의 컨트롤러를 실행하는 경우 이 매개변수를 구성 파일에 추가하는 것이 좋습니다."
+
+#: ../../source/ldap_auth.rst:239
+msgid "Enabling Logging for LDAP"
+msgstr "LDAP에 로깅 활성화"
+
+#: ../../source/ldap_auth.rst:245
+msgid "To enable logging for LDAP, you must set the level to ``DEBUG`` in the Settings configuration window:"
+msgstr "LDAP에 로깅을 활성화하려면 설정 구성 창에서 수준을 ``DEBUG``로 설정해야 합니다."
+
+#: ../../source/ldap_auth.rst:247
+msgid "Click **Settings** from the left navigation pane and click to select **Logging settings** from the System list of options."
+msgstr "왼쪽 탐색 창에서 **설정**을 클릭하고 시스템 옵션 목록에서 **로깅 설정**을 클릭하여 선택합니다."
+
+#: ../../source/ldap_auth.rst:248
+msgid "Click **Edit**."
+msgstr "**편집**을 클릭합니다."
+
+#: ../../source/ldap_auth.rst:249
+msgid "Set the **Logging Aggregator Level Threshold** field to **Debug**."
+msgstr "**로깅 수집기 수준 임계값** 필드를 **디버그**로 설정합니다."
+
+#: ../../source/ldap_auth.rst:253
+msgid "Click **Save** to save your changes."
+msgstr "**저장**을 클릭하여 변경 사항을 저장합니다."
+
+#: ../../source/ldap_auth.rst:259
+msgid "LDAP Organization and Team Mapping"
+msgstr "LDAP 조직 및 팀 매핑"
+
+#: ../../source/ldap_auth.rst:270
+msgid "Next, you will need to control which users are placed into which controller organizations based on LDAP attributes (mapping out between your organization admins/users and LDAP groups)."
+msgstr "그다음에는 LDAP 속성을 기준으로 컨트롤러 조직에 배치되는 사용자를 제어해야 합니다. 즉, 조직 관리자/사용자와 LDAP 그룹 간 매핑합니다."
+
+#: ../../source/ldap_auth.rst:272
+msgid "Keys are organization names. Organizations will be created if not present. Values are dictionaries defining the options for each organization's membership. For each organization, it is possible to specify what groups are automatically users of the organization and also what groups can administer the organization."
+msgstr "키는 조직 이름이며 조직은 없을 시 생성됩니다. 값은 각 조직의 멤버십 옵션을 정의하는 사전입니다. 각 조직에서는 자동으로 조직의 사용자가 되는 그룹과 조직을 관리할 수 있는 그룹을 지정할 수 있습니다."
+
+#: ../../source/ldap_auth.rst:278
+msgid "**admins**: None, True/False, string or list/tuple of strings."
+msgstr "**admins**: 없음, True/False, 문자열 또는 문자열 목록/튜플."
+
+#: ../../source/ldap_auth.rst:275
+msgid "If **None**, organization admins will not be updated based on LDAP values."
+msgstr "**없음**인 경우 조직 관리자가 LDAP 값을 기준으로 업데이트되지 않습니다."
+
+#: ../../source/ldap_auth.rst:276
+msgid "If **True**, all users in LDAP will automatically be added as admins of the organization."
+msgstr "**True**인 경우 LDAP의 모든 사용자가 조직 관리자로 자동 추가됩니다."
+
+#: ../../source/ldap_auth.rst:277
+msgid "If **False**, no LDAP users will be automatically added as admins of the organiation."
+msgstr "**False**인 경우 LDAP 사용자가 조직 관리자로 자동 추가되지 않습니다."
+
+#: ../../source/ldap_auth.rst:278
+msgid "If a string or list of strings, specifies the group DN(s) that will be added of the organization if they match any of the specified groups."
+msgstr "문자열 또는 문자열 목록인 경우 지정된 그룹과 일치하면 조직에 추가되는 그룹 DN을 지정합니다."
+
+#: ../../source/ldap_auth.rst:281
+msgid "**remove_admins**: True/False. Defaults to **False**."
+msgstr "**remove_admins**: True/False. 기본값은 **False**입니다."
+
+#: ../../source/ldap_auth.rst:281
+msgid "When **True**, a user who is not an member of the given groups will be removed from the organization's administrative list."
+msgstr "**True**인 경우 지정된 그룹의 멤버가 아닌 사용자는 조직의 관리 목록에서 제거됩니다."
+
+#: ../../source/ldap_auth.rst:283
+msgid "**users**: None, True/False, string or list/tuple of strings. Same rules apply as for **admins**."
+msgstr "**users**: 없음, True/False, 문자열 또는 문자열 목록/튜플. **admins**와 동일한 규칙이 적용됩니다."
+
+#: ../../source/ldap_auth.rst:285
+msgid "**remove_users**: True/False. Defaults to **False**. Same rules apply as **remove_admins**."
+msgstr "**remove_users**: True/False. 기본값은 **False**입니다. **remove_admins**와 동일한 규칙이 적용됩니다."
+
+#: ../../source/ldap_auth.rst:310
+msgid "Mapping between team members (users) and LDAP groups. Keys are team names (will be created if not present). Values are dictionaries of options for each team's membership, where each can contain the following parameters:"
+msgstr "팀 멤버(사용자)와 LDAP 그룹 간 매핑. 키는 팀 이름이며 없을 시 생성됩니다. 값은 각 팀의 멤버십 옵션을 정의하는 사전이며, 옵션별로 다음 매개변수를 포함할 수 있습니다."
+
+#: ../../source/ldap_auth.rst:315
+msgid "**organization**: string. The name of the organization to which the team"
+msgstr "**organization**: 문자열. 팀이 속하는 조직의"
+
+#: ../../source/ldap_auth.rst:313
+msgid "belongs.  The team will be created if the combination of organization and team name does not exist.  The organization will first be created if it does not exist."
+msgstr "이름입니다.  조직과 팀 이름이 조합되지 않으면 팀이 생성됩니다.  조직이 없는 경우 먼저 생성됩니다."
+
+#: ../../source/ldap_auth.rst:317
+msgid "**users**: None, True/False, string or list/tuple of strings."
+msgstr "**users**: 없음, True/False, 문자열 또는 문자열 목록/튜플."
+
+#: ../../source/ldap_auth.rst:319
+msgid "If **None**, team members will not be updated."
+msgstr "**없음**인 경우 팀 멤버가 업데이트되지 않습니다."
+
+#: ../../source/ldap_auth.rst:320
+msgid "If **True/False**, all LDAP users will be added/removed as team members."
+msgstr "**True/False**인 경우 모든 LDAP 사용자가 팀 멤버로 추가되거나 제거됩니다."
+
+#: ../../source/ldap_auth.rst:321
+msgid "If a string or list of strings, specifies the group DN(s). User will be added as a team member if the user is a member of ANY of these groups."
+msgstr "문자열 또는 문자열 목록인 경우 그룹 DN을 지정합니다. 사용자가 이러한 그룹 중 하나의 멤버이면 팀 멤버로 추가됩니다."
+
+#: ../../source/ldap_auth.rst:323
+msgid "**remove**: True/False. Defaults to **False**. When **True**, a user who is not a member of the given groups will be removed from the team."
+msgstr "**remove**: True/False. 기본값은 **False**입니다. **True**인 경우 지정된 그룹의 멤버가 아닌 사용자는 팀에서 제거됩니다."
+
