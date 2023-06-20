@@ -1,5 +1,5 @@
 SHELL=/bin/bash
-DOCS = administration quickstart controllerapi userguide upgrade-migration-guide
+DOCS = administration quickstart controllerapi userguide release-notes upgrade-migration-guide
 HTMLDIRS = $(DOCS:%=html-%)
 SINGLEHTMLDIRS = $(DOCS:%=singlehtml-%)
 POTDIRS = $(DOCS:%=pot-%)
