@@ -8,14 +8,13 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
-  # Build with make
   commands:
     - apt install rsync -y
     - python -m pip install --upgrade --no-cache-dir pip
     - python -m pip install --exists-action=w --no-cache-dir -r ./docs/docsite/requirements.txt
-    - make html -C docs/docsite
+    - sphinx-build -aE -b html -c ./docs/docsite ./docs/docsite/rst build/html
     - mkdir -p _readthedocs/html/
-    - cp -r docs/docsite/docsite/latest/html/* _readthedocs/html/
+    - cp -r build/html/* _readthedocs/html/
 
 # Use RTD sphinx build
 #python:
