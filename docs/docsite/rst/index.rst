@@ -29,6 +29,6 @@ Ansible AWX helps teams manage complex multi-tier deployments by adding control,
 
 .. toctree::
    :maxdepth: 2
-   :caption: Upgrading and Migrating AWX Deployments
+   :caption: Upgrades and Migrations
 
    upgrade_migration/index

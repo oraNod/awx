@@ -28,15 +28,15 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx.ext.ifconfig'
+    'sphinx.ext.ifconfig',
+    'sphinx_ansible_theme',
 ]
 
-templates_path = ['_templates']
-html_static_path = ['_static']
+html_theme = 'sphinx_ansible_theme'
+html_theme_path = ["_static"]
 
-html_theme = 'srtd'
-html_theme_path = ["_themes"]
-pygments_style = 'sphinx'
+pygments_style = "ansible"
+highlight_language = "YAML+Jinja"
 
 source_suffix = '.rst'
 master_doc = 'index'
