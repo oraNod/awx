@@ -9,7 +9,6 @@ build:
   tools:
     python: "3.11"
   commands:
-    - apt install rsync -y
     - python -m pip install --upgrade --no-cache-dir pip
     - python -m pip install --exists-action=w --no-cache-dir -r ./docs/docsite/requirements.txt
     - sphinx-build -aE -b html -c ./docs/docsite ./docs/docsite/rst build/html
