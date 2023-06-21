@@ -155,7 +155,7 @@ For example, say that you performed a clustered installation. Next, say that you
 When setting up an external database which has been used in a prior installation, the database used for the clustered node must be manually cleared before any additional installations can succeed.
 
 
-.. include:: ../../common/source/isolation_variables.rst
+.. include:: ../common/isolation_variables.rst
 
 Private EC2 VPC Instances in the controller Inventory
 =======================================================

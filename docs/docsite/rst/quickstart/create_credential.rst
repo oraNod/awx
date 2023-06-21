@@ -10,7 +10,7 @@ Access the list of credentials by clicking **Credentials** from the left navigat
 
 |Credentials - list view|
 
-.. |Credentials - list view| image:: ../../common/source/images/qs-credentials-list-view.png
+.. |Credentials - list view| image:: ../common/images/qs-credentials-list-view.png
 
 For the purpose of this Quick Start, a demo credential and a Galaxy credential have been provided for your use. The provided Galaxy credential serves as a template and can only be copied and not edited. You may add more credentials as necessary.  Refer to :ref:`ug_credentials_add` in the |atu| for detail.
 
@@ -24,8 +24,8 @@ Click **Demo Credential** to view its details.
 
 |Credentials - review demo credential|
 
-.. |Credentials - review demo credential| image:: ../../common/source/images/qs-credentials-demo-details.png
+.. |Credentials - review demo credential| image:: ../common/images/qs-credentials-demo-details.png
 
 For the purpose of this Quick Start Guide, leave the default demo credential as is. But to edit the default credential later - from the Details tab, click **Edit**, or from the Credentials list view, click the Edit (|edit|) button next to the credential name to edit the appropriate details, then save your changes. 
 
-.. |edit| image:: ../../common/source/images/edit-button.png
+.. |edit| image:: ../common/images/edit-button.png

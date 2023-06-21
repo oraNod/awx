@@ -18,19 +18,19 @@ The Projects page displays the list of the projects that are currently available
 
 |Projects - home with example project|
 
-.. |Projects - home with example project| image:: ../../common/source/images/projects-list-all.png
+.. |Projects - home with example project| image:: ../common/images/projects-list-all.png
 
-.. image:: ../../common/source/images/projects-list-all-expanded.png
+.. image:: ../common/images/projects-list-all-expanded.png
 
 For each project listed, you can get the latest SCM revision (|refresh|), edit the project (|edit|), or copy the project attributes (|copy|), using the respective icons next to each project. Projects are allowed to be updated while a related job is running.  In cases where you have a big project (around 10 GB), disk space on ``/tmp`` may be an issue.
 
-.. |edit-icon| image:: ../../common/source/images/edit-button.png
+.. |edit-icon| image:: ../common/images/edit-button.png
 
-.. |copy| image:: ../../common/source/images/copy-button.png
+.. |copy| image:: ../common/images/copy-button.png
 
-.. |refresh| image:: ../../common/source/images/refresh-gray.png
+.. |refresh| image:: ../common/images/refresh-gray.png
 
-.. |edit| image:: ../../common/source/images/edit-button.png
+.. |edit| image:: ../common/images/edit-button.png
 
 
 **Status** indicates the state of the project and may be one of the following (note that you can also filter your view by specific status types):
@@ -54,7 +54,7 @@ For each project listed, you can get the latest SCM revision (|refresh|), edit t
   Projects of credential type Manual cannot update or schedule source control-based actions without being reconfigured as an SCM type credential.
 
 
-.. include:: ../../common/source/work_items_deletion_warning.rst
+.. include:: ../common/work_items_deletion_warning.rst
 
 .. _ug_projects_add:
 
@@ -70,7 +70,7 @@ To create a new project:
 
 |Projects - create new project|
 
-.. |Projects - create new project| image:: ../../common/source/images/projects-create-new-project.png
+.. |Projects - create new project| image:: ../common/images/projects-create-new-project.png
 
 2. Enter the appropriate details into the following required fields:
 
@@ -113,7 +113,7 @@ If you have trouble adding a project path, check the permissions and SELinux con
 
   Correct this issue by creating the appropriate playbook directories and checking out playbooks from your SCM or otherwise copying playbooks into the appropriate playbook directories.
 
-  .. |Projects - create new warning| image:: ../../common/source/images/projects-create-manual-warning.png
+  .. |Projects - create new warning| image:: ../common/images/projects-create-manual-warning.png
 
 
 .. _ug_projects_scm_types:
@@ -141,13 +141,13 @@ To configure playbooks to use source control, in the Project **Details** tab:
 
   |Projects - create SCM project|
 
-  .. |Projects - create SCM project| image:: ../../common/source/images/projects-create-scm-project.png
+  .. |Projects - create SCM project| image:: ../common/images/projects-create-scm-project.png
 
 2. Enter the appropriate details into the following fields:
 
   -  **SCM URL** - See an example in the tooltip |tooltip|.
 
-  .. |tooltip| image:: ../../common/source/images/tooltips-icon.png
+  .. |tooltip| image:: ../common/images/tooltips-icon.png
 
   -  **SCM Branch/Tag/Commit** - Optionally enter the SCM branch, tags, commit hashes, arbitrary refs, or revision number (if applicable) from the source control (Git or Subversion) to checkout. Some commit hashes and refs may not be available unless you also provide a custom refspec in the next field. If left blank, the default is HEAD which is the last checked out Branch/Tag/Commit for this project.
   -  **SCM Refspec** - This field is an option specific to git source control and only advanced users familiar and comfortable with git should specify which references to download from the remote repository. For more detail, see :ref:`job branch overriding <ug_job_branching>`.
@@ -162,7 +162,7 @@ To configure playbooks to use source control, in the Project **Details** tab:
   -  **Update Revision on Launch** - Updates the revision of the project to the current revision in the remote source control, as well as cache the roles directory from :ref:`Galaxy <ug_galaxy>` or :ref:`Collections <ug_collections>`. |At| ensures that the local revision matches and that the roles and collections are up-to-date with the last update. Also, to avoid job overflows if jobs are spawned faster than the project can sync, selecting this allows you to configure a Cache Timeout to cache prior project syncs for a certain number of seconds.
   -  **Allow Branch Override** - Allows a job template that uses this project to launch with a specified SCM branch or revision other than that of the project's. For more detail, see :ref:`job branch overriding <ug_job_branching>`.
 
-    .. image:: ../../common/source/images/projects-create-scm-project-branch-override-checked.png
+    .. image:: ../common/images/projects-create-scm-project-branch-override-checked.png
 
 4. Click **Save** to save your project.
 
@@ -192,7 +192,7 @@ To configure playbooks to use Red Hat Insights, in the Project **Details** tab:
   -  **Delete** - Deletes the local repository in its entirety prior to performing an update. Depending on the size of the repository this may significantly increase the amount of time required to complete an update.
   -  **Update Revision on Launch** - Updates the revision of the project to the current revision in the remote source control, as well as cache the roles directory from :ref:`Galaxy <ug_galaxy>` or :ref:`Collections <ug_collections>`. |At| ensures that the local revision matches and that the roles and collections are up-to-date with the last update. Also, to avoid job overflows if jobs are spawned faster than the project can sync, selecting this allows you to configure a Cache Timeout to cache prior project syncs for a certain number of seconds.
 
-  .. image:: ../../common/source/images/projects-create-scm-insights.png
+  .. image:: ../common/images/projects-create-scm-insights.png
 
 
 3. Click **Save** to save your project.
@@ -224,7 +224,7 @@ To configure playbooks to use a remote archive, in the Project **Details** tab:
   -  **Update Revision on Launch** - Not recommended, as this option updates the revision of the project to the current revision in the remote source control, as well as cache the roles directory from :ref:`Galaxy <ug_galaxy>` or :ref:`Collections <ug_collections>`.
   -  **Allow Branch Override** - Not recommended, as this option allows a job template that uses this project to launch with a specified SCM branch or revision other than that of the project's.
 
-  .. image:: ../../common/source/images/projects-create-scm-rm-archive.png
+  .. image:: ../common/images/projects-create-scm-rm-archive.png
 
 .. note::
   Since this SCM type is intended to support the concept of unchanging artifacts, it is advisable to disable Galaxy integration (for roles, at minimum).
@@ -247,16 +247,16 @@ Updating projects from source control
 
 |projects - list all|
 
-.. |projects - list all| image:: ../../common/source/images/projects-list-all.png
+.. |projects - list all| image:: ../common/images/projects-list-all.png
 
 2. Click on project's status under the **Status** column to get further details about the update process.
 
-.. image:: ../../common/source/images/projects-list-status-more.png
+.. image:: ../common/images/projects-list-status-more.png
 
 
 |Project - update status|
 
-.. |Project - update status| image:: ../../common/source/images/projects-update-status.png
+.. |Project - update status| image:: ../common/images/projects-update-status.png
 
 
 Work with Permissions
@@ -270,13 +270,13 @@ You can access the project permissions via the **Access** tab next to the **Deta
 
 |Projects - permissions list for example project|
 
-.. |Projects - permissions list for example project| image:: ../../common/source/images/projects-permissions-example.png
+.. |Projects - permissions list for example project| image:: ../common/images/projects-permissions-example.png
 
 
 Add Permissions
 ~~~~~~~~~~~~~~~~~~~
 
-.. include:: ../../common/source/permissions.rst
+.. include:: ../common/permissions.rst
 
 
 Work with Notifications
@@ -284,13 +284,13 @@ Work with Notifications
 
 Clicking the **Notifications** tab allows you to review any notification integrations you have setup.
 
-.. image:: ../../common/source/images/projects-notifications-example-list.png
+.. image:: ../common/images/projects-notifications-example-list.png
 
 Use the toggles to enable or disable the notifications to use with your particular project. For more detail, see :ref:`ug_notifications_on_off`.
 
 If no notifications have been set up, you can configure them from the  **Notifications** link from the left navigation bar to create a new notification.
 
-.. image:: ../../common/source/images/project-notifications-empty.png
+.. image:: ../common/images/project-notifications-empty.png
 
 Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types.
 
@@ -300,15 +300,15 @@ Work with Job Templates
 
 Clicking on **Job Templates** allows you to add and review any job templates or workflow templates associated with this project.
 
-.. image:: ../../common/source/images/projects-templates-example-list.png
+.. image:: ../common/images/projects-templates-example-list.png
 
 Click on the recent jobs that ran using that template to see its details and other useful information. You can sort this list by various criteria, and perform a search to filter the templates of interest.
 
-.. image:: ../../common/source/images/projects-templates-search-dropdown.png
+.. image:: ../common/images/projects-templates-search-dropdown.png
 
 From this view, you can also launch (|launch|),  edit (|edit|), or copy (|copy|) the template configuration.
 
-.. |launch| image:: ../../common/source/images/launch-button.png
+.. |launch| image:: ../common/images/launch-button.png
 
 
 Work with Schedules
@@ -320,7 +320,7 @@ Work with Schedules
 
 Clicking on **Schedules** allows you to review any schedules set up for this project.
 
-.. image:: ../../common/source/images/generic-schedules-list-configured.png
+.. image:: ../common/images/generic-schedules-list-configured.png
 
 
 Schedule a Project
@@ -352,13 +352,13 @@ At the end of a Project update, |at| searches for a file called ``requirements.y
 
 This file allows you to reference Galaxy roles or roles within other repositories which can be checked out in conjunction with your own project. The addition of this Ansible Galaxy support eliminates the need to create git submodules for achieving this result. Given that SCM projects (along with roles/collections) are pulled into and executed from a private job environment, a <private job directory> specific to the project within ``/tmp`` is created by default. However, you can specify another **Job Execution Path** based on your environment in the Jobs Settings tab of the Settings window:
 
-.. image:: ../../common/source/images/configure-tower-jobs-execution-path.png
+.. image:: ../common/images/configure-tower-jobs-execution-path.png
 
 The cache directory is a subdirectory inside the global projects folder. The content may be copied from the cache location to ``<job private directory>/requirements_roles`` location.
 
 By default, |at| has a system-wide setting that allows roles to be dynamically downloaded from the ``roles/requirements.yml`` file for SCM projects. You may turn off this setting in the **Jobs settings** screen of the Settings menu by switching the **Enable Role Download** toggle button to **OFF**.
 
-.. image:: ../../common/source/images/configure-tower-jobs-download-roles.png
+.. image:: ../common/images/configure-tower-jobs-download-roles.png
 
 
 Whenever a project sync runs, |at| determines if the project source and any roles from Galaxy and/or Collections are out of date with the project. Project updates will download the roles inside the update.
@@ -371,7 +371,7 @@ In short, jobs would download the most recent roles before every job run. Roles 
 
 |update-on-launch|
 
-.. |update-on-launch| image:: ../../common/source/images/projects-scm-update-options-update-on-launch-checked.png
+.. |update-on-launch| image:: ../common/images/projects-scm-update-options-update-on-launch-checked.png
 
 .. end reused section
 
@@ -399,7 +399,7 @@ If you made changes in the settings file, be sure to restart services with the `
 In the User Interface, you can configure these settings in the Jobs settings window.
 
 
-.. image:: ../../common/source/images/configure-tower-jobs-path-to-expose.png
+.. image:: ../common/images/configure-tower-jobs-path-to-expose.png
 
 
 .. note::
@@ -420,7 +420,7 @@ Collections Support
 
 By default, |at| has a system-wide setting that allows collections to be dynamically downloaded from the ``collections/requirements.yml`` file for SCM projects. You may turn off this setting in the **Jobs settings** tab of the Settings menu by switching the **Enable Collections Download** toggle button to **OFF**.
 
-  .. image:: ../../common/source/images/configure-tower-jobs-download-collections.png
+  .. image:: ../common/images/configure-tower-jobs-download-collections.png
 
 Roles and collections are locally cached for performance reasons, and you will need to select **Update Revision on Launch** in the project SCM Update Options to ensure this:
 
@@ -438,7 +438,7 @@ Before |at| can use |ah| as the default source for collections content, you need
 
 2. Click the copy icon to copy the API token to the clipboard.
 
-.. image:: ../../common/source/images/projects-ah-loaded-token-shown.png
+.. image:: ../common/images/projects-ah-loaded-token-shown.png
 
 3. To use the public |ah|, create an |ah| credential using the copied token and pointing to the URLs shown in the **Server URL** and **SSO URL** fields of the token page:
 
@@ -448,18 +448,18 @@ Before |at| can use |ah| as the default source for collections content, you need
 
 4. To use a private |ah|, create an |ah| credential using a token retrieved from the Repo Management dashboard of your local |ah| and pointing to the published repo URL as shown:
 
-.. image:: ../../common/source/images/projects-ah-repo-mgmt-get-token.png
-.. image:: ../../common/source/images/projects-ah-repo-mgmt-repos-published.png
+.. image:: ../common/images/projects-ah-repo-mgmt-get-token.png
+.. image:: ../common/images/projects-ah-repo-mgmt-repos-published.png
 
 You can create different repos with different namespaces/collections in them. But for each repo in |ah| you need to create a different |ah| credential. Copy the **Ansible CLI URL** from the |ah| UI in the format of ``https://$<hub_url>/api/galaxy/content/<repo you want to pull from>`` into the **Galaxy Server URL** field of the *Create Credential* form:
 
-.. image:: ../../common/source/images/projects-create-ah-credential.png
+.. image:: ../common/images/projects-create-ah-credential.png
 
 Refer to `Managing Red Hat Certified and Ansible Galaxy Collections in Ansible Hub <https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/1.2/html/managing_red_hat_certified_and_ansible_galaxy_collections_in_automation_hub/index>`_ for |ah| UI-specific instructions.
 
 5. Navigate to the organization for which you want to be able to sync content from |ah| and add the new |ah| credential to the organization. This step allows you to associate each organization with the |ah| credential (i.e. repo) that you want to be able to use content from.
 
-.. image:: ../../common/source/images/projects-organizations-add-ah-credential.png
+.. image:: ../common/images/projects-organizations-add-ah-credential.png
 
 .. note::
 
@@ -475,15 +475,15 @@ Refer to `Managing Red Hat Certified and Ansible Galaxy Collections in Ansible H
 
 6. If the |ah| has self-signed certificates, click the toggle to enable the setting **Ignore Ansible Galaxy SSL Certificate Verification**. For **public Automation Hub**, which uses a signed certificate, click the toggle to disable it instead. Note this is a global setting:
 
-.. image:: ../../common/source/images/settings-jobs-ignore-galaxy-certs.png
+.. image:: ../common/images/settings-jobs-ignore-galaxy-certs.png
 
 7. Create a project, where the source repository specifies the necessary collections in a requirements file located in the ``collections/requirements.yml`` file. Refer to the syntax described in the Ansible documentation: https://docs.ansible.com/ansible/latest/user_guide/collections_using.html#install-multiple-collections-with-a-requirements-file.
 
-.. image:: ../../common/source/images/projects-add-ah-source-repo.png
+.. image:: ../common/images/projects-add-ah-source-repo.png
 
 8. In the Projects list view, click |update| to run an update against this project. |At| fetches the Galaxy collections from the ``collections/requirements.yml`` file and report it as changed; and the collections will now be installed for any job template using this project.
 
-.. |update| image:: ../../common/source/images/refresh-gray.png
+.. |update| image:: ../common/images/refresh-gray.png
 
 .. note::
 

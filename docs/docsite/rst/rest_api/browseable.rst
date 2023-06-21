@@ -12,13 +12,13 @@ REST APIs provide access to resources (data entities) via URI paths.  You can vi
 
 |REST API|
 
-.. |REST API| image:: ../../common/source/images/rest-api.png
+.. |REST API| image:: ../common/images/rest-api.png
 
 |at| 3.2 introduced version 2 of the API, which can be accessed by clicking the v2 link next to "available versions":
 
 |REST API V2|
 
-.. |REST API V2| image:: ../../common/source/images/rest-api-available-versions.png
+.. |REST API V2| image:: ../common/images/rest-api-available-versions.png
 
 Alternatively, you can still access version 1 of the API this way, but it **will be removed** in a future release of |at|.
 
@@ -26,14 +26,14 @@ If you perform a **GET** just the ``/api/`` endpoint, it gives the ``current_ver
 
 Clicking on various links in the API allows you to explore related resources.
 
-.. image:: ../../common/source/images/rest-api-discover-resources.png
+.. image:: ../common/images/rest-api-discover-resources.png
    :alt: REST API - discover resources
 
 Clicking on the |question| next to the page name (toward the top of the screen) for an API endpoint gives you documentation on the access methods for that particular API endpoint and what data is returned when using those methods.
 
-.. |question| image:: ../../common/source/images/api-questionmark.png
+.. |question| image:: ../common/images/api-questionmark.png
 
-.. image:: ../../common/source/images/rest-api-docs.png
+.. image:: ../common/images/rest-api-docs.png
    :alt: REST API - docs
 
 .. index::
@@ -46,11 +46,11 @@ You can also use PUT and POST verbs on the specific API pages by formatting JSON
 
 |REST API - POST to API via form|
 
-.. |REST API - POST to API via form| image:: ../../common/source/images/rest-api-post-to-api-via-form.png
+.. |REST API - POST to API via form| image:: ../common/images/rest-api-post-to-api-via-form.png
 
 You can also view changed settings from factory defaults at ``/api/v2/settings/changed/`` endpoint. It reflects changes you made in the API browser, not changed settings that come from static settings files.
 
 |REST API - Changes to Settings|
 
-.. |REST API - Changes to Settings| image:: ../../common/source/images/rest-api-changed-settings.png
+.. |REST API - Changes to Settings| image:: ../common/images/rest-api-changed-settings.png
 

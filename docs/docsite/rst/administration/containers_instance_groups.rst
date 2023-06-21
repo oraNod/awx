@@ -139,7 +139,7 @@ The Instance Groups list view from the |at| User Interface provides a summary of
 
 |Instance Group policy example|
 
-.. |Instance Group policy example| image:: ../../common/source/images/instance-groups_list_view.png
+.. |Instance Group policy example| image:: ../common/images/instance-groups_list_view.png
 
 
 Notable policy considerations
@@ -228,7 +228,7 @@ Likewise, an administrator could assign multiple groups to each organization as 
 
 	|Instance Group example|
 
-.. |Instance Group example| image:: ../../common/source/images/instance-groups-scenarios.png
+.. |Instance Group example| image:: ../common/images/instance-groups-scenarios.png
 
 Arranging resources in this way offers a lot of flexibility. Also, you can create instance groups with only one instance, thus allowing you to direct work towards a very specific Host in the controller cluster.
 
@@ -285,7 +285,7 @@ Container groups are different from |ees| in that |ees| are container images and
 Create a container group
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. include:: ../../common/source/get-creds-from-service-account.rst
+.. include:: ../common/get-creds-from-service-account.rst
 
 
 To create a container group:
@@ -298,7 +298,7 @@ To create a container group:
 
 |IG - create new CG|
 
-.. |IG - create new CG| image:: ../../common/source/images/instance-group-create-new-cg.png
+.. |IG - create new CG| image:: ../common/images/instance-group-create-new-cg.png
 
 4. Enter a name for your new container group and select the credential previously created to associate it to the container group.
 
@@ -313,11 +313,11 @@ To customize the Pod spec, specify the namespace in the **Pod Spec Override** fi
 
 |IG - CG customize pod|
 
-.. |IG - CG customize pod| image:: ../../common/source/images/instance-group-customize-cg-pod.png
+.. |IG - CG customize pod| image:: ../common/images/instance-group-customize-cg-pod.png
 
 You may provide additional customizations, if needed. Click **Expand** to view the entire customization window.
 
-.. image:: ../../common/source/images/instance-group-customize-cg-pod-expanded.png
+.. image:: ../common/images/instance-group-customize-cg-pod-expanded.png
 
 .. note::
 
@@ -327,11 +327,11 @@ You may provide additional customizations, if needed. Click **Expand** to view t
 
 Once the container group is successfully created, the **Details** tab of the newly created container group remains, which allows you to review and edit your container group information. This is the same menu that is opened if the Edit (|edit-button|) button is clicked from the **Instance Group** link. You can also edit **Instances** and review **Jobs** associated with this instance group.
 
-.. |edit-button| image:: ../../common/source/images/edit-button.png
+.. |edit-button| image:: ../common/images/edit-button.png
 
 |IG - example CG successfully created|
 
-.. |IG - example CG successfully created| image:: ../../common/source/images/instance-group-example-cg-successfully-created.png
+.. |IG - example CG successfully created| image:: ../common/images/instance-group-example-cg-successfully-created.png
 
 Container groups and instance groups are labeled accordingly.
 
@@ -348,7 +348,7 @@ To verify the deployment and termination of your container:
 
 |Dummy inventory|
 
-.. |Dummy inventory| image:: ../../common/source/images/inventories-create-new-cg-test-inventory.png
+.. |Dummy inventory| image:: ../common/images/inventories-create-new-cg-test-inventory.png
 
 2. Create "localhost" host in inventory with variables:
 
@@ -358,21 +358,21 @@ To verify the deployment and termination of your container:
 
 |Inventory with localhost|
 
-.. |Inventory with localhost| image:: ../../common/source/images/inventories-create-new-cg-test-localhost.png
+.. |Inventory with localhost| image:: ../common/images/inventories-create-new-cg-test-localhost.png
 
 3. Launch an ad hoc job against the localhost using the *ping* or *setup* module. Even though the **Machine Credential** field is required, it does not matter which one is selected for this simple test.
 
 |Launch inventory with localhost|
 
-.. |Launch inventory with localhost| image:: ../../common/source/images/inventories-launch-adhoc-cg-test-localhost.png
+.. |Launch inventory with localhost| image:: ../common/images/inventories-launch-adhoc-cg-test-localhost.png
 
-.. image:: ../../common/source/images/inventories-launch-adhoc-cg-test-localhost2.png
+.. image:: ../common/images/inventories-launch-adhoc-cg-test-localhost2.png
 
 You can see in the jobs detail view the container was reached successfully using one of ad hoc jobs.
 
 |Inventory with localhost ping success|
 
-.. |Inventory with localhost ping success| image:: ../../common/source/images/inventories-launch-adhoc-cg-test-localhost-success.png
+.. |Inventory with localhost ping success| image:: ../common/images/inventories-launch-adhoc-cg-test-localhost-success.png
 
 
 If you have an OpenShift UI, you can see Pods appear and disappear as they deploy and terminate. Alternatively, you can use the CLI to perform a ``get pod`` operation on your namespace to watch these same events occurring in real-time.
@@ -385,7 +385,7 @@ When you run a job associated with a container group, you can see the details of
 
 |IG - instances jobs|
 
-.. |IG - instances jobs| image:: ../../common/source/images/instance-group-job-details-with-cgs.png
+.. |IG - instances jobs| image:: ../common/images/instance-group-job-details-with-cgs.png
 
 
 Kubernetes API failure conditions
@@ -393,7 +393,7 @@ Kubernetes API failure conditions
 
 When running a container group and the Kubernetes API responds that the resource quota has been exceeded, the controller keeps the job in pending state. Other failures result in the traceback of the **Error Details** field showing the failure reason, similar to the example here: 
 
-.. image:: ../../common/source/images/instance-group-cg-job-details-error.png
+.. image:: ../common/images/instance-group-cg-job-details-error.png
 
 .. _ag_container_capacity:
 

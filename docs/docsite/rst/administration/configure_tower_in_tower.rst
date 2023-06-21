@@ -6,4 +6,4 @@ Controller Configuration
 .. index::
    single: configure controller
 
-.. include:: ../../common/source/configure_tower.rst
+.. include:: ../common/configure_tower.rst

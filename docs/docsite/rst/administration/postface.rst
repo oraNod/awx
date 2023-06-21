@@ -15,7 +15,7 @@ Ansible, |At|, controller CLI, and Ansible Galaxy are all, as Doge would say, "m
 
 Josie Tested - Doge Approved.
 
-.. |Josie Tested - Doge Approved| image:: ../../common/source/images/josiedog.png
+.. |Josie Tested - Doge Approved| image:: ../common/images/josiedog.png
 
 
 

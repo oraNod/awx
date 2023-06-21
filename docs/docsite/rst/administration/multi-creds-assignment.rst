@@ -82,15 +82,15 @@ Vault credentials now have an optional field, ``vault_id``, which is analogous t
 
 Alternatively, you can perform the same assignment in the controller User Interface in the *Create Credential* page:
 
-.. image:: ../../common/source/images/credentials-create-multivault-credential.png
+.. image:: ../common/images/credentials-create-multivault-credential.png
 
 In the above example, the credential created specifies the secret to be used by its Vault Identifier ("first") and password pair. When this credential is used in a Job Template, as in the example below, it will only decrypt the secret associated with the "first" Vault ID:
 
-.. image:: ../../common/source/images/job-template-include-multi-vault-credential.png
+.. image:: ../common/images/job-template-include-multi-vault-credential.png
 
 If you have a playbook that is setup the traditional way with all the secrets in one big file without distinction, then leave the **Vault Identifier** field blank when setting up the Vault credential:
 
-.. image:: ../../common/source/images/credentials-create-novaultid-credential.png
+.. image:: ../common/images/credentials-create-novaultid-credential.png
 
 
 Prompted Vault Credentials

@@ -192,7 +192,7 @@ For the example workload on 300 managed hosts, executing 1000 tasks/hour per hos
 - Keep default fork setting of 5 on job templates
 - Use the capacity adjustment feature on the control node to reduce the capacity down to 16 (lowest value) to reserve more of the Control node’s capacity for processing events
 
-.. image:: ../../common/source/images/perf-capacity-adj-instances.png
+.. image:: ../common/images/perf-capacity-adj-instances.png
 
 Factors influencing node size choice
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -313,7 +313,7 @@ There are a few settings that allow you to influence behavior of how job events 
 
 For large clusters with large job event loads, an easy way to avoid the additional overhead is to disable live streaming events (the events are only loaded on hard refresh to a job’s output detail page). This is possible by setting ``UI_LIVE_UPDATES_ENABLED`` to False or set the **Enable Activity Stream** toggle to **Off** from the controller UI Miscellaneous System Settings window.
 
-.. image:: ../../common/source/images/perf-enable-activity-stream.png
+.. image:: ../common/images/perf-enable-activity-stream.png
 
 If disabling live streaming of events is not possible, for very verbose jobs with many events, administrators can consider reducing the number of events shown per second or before truncating or hiding events in the UI. The following settings all address issues of rate or size of events.
 

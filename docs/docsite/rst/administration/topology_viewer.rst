@@ -20,16 +20,16 @@ To access the topology viewer from the controller user interface:
 
 The Topology View opens and displays a graphic representation of how each receptor node links together. 
 
-.. image:: ../../common/source/images/topology-viewer-initial-view.png
+.. image:: ../common/images/topology-viewer-initial-view.png
 
 
 2. To adjust the zoom levels, or manipulate the graphic views, use the control buttons on the upper right-hand corner of the window.
 
-.. image:: ../../common/source/images/topology-viewer-view-controls.png
+.. image:: ../common/images/topology-viewer-view-controls.png
 
 You can also click and drag to pan around; and use the scroll wheel on your mouse or trackpad to zoom. The fit-to-screen feature automatically scales the graphic to fit on the screen and repositions it in the center. It is particularly useful when you want to see a large mesh in its entirety.
 
-.. image:: ../../common/source/images/topology-viewer-zoomed-view.png
+.. image:: ../common/images/topology-viewer-zoomed-view.png
 
 To reset the view to its default view, click **Reset zoom**. 
 
@@ -49,14 +49,14 @@ The Legend shows the :ref:`node status <node_statuses>` by color, which is indic
 
 4. Hover over a node and the connectors highlight to show its immediate connected nodes (peers) or click on a node to retrieve details about it, such as its hostname, node type, and status.
 
-.. image:: ../../common/source/images/topology-viewer-node-hover-click.png
+.. image:: ../common/images/topology-viewer-node-hover-click.png
 
 5. Click on the link for instance hostname from the details displayed, and you will be redirected to its Details page that provides more information about that node, most notably for information about an ``Error`` status, as in the example below.
 
-.. image:: ../../common/source/images/topology-viewer-node-view.png
+.. image:: ../common/images/topology-viewer-node-view.png
 
 
-.. image:: ../../common/source/images/topology-viewer-instance-details.png
+.. image:: ../common/images/topology-viewer-instance-details.png
 
 
 At the bottom of the Details view, you can remove the instance, run a health check on the instance on an as-needed basis, or unassign jobs from the instance. By default, jobs can be assigned to each node. However, you can disable it to exclude the node from having any jobs running on it.

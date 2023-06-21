@@ -28,11 +28,11 @@ To create a new credential for use with Insights:
 
 5. In the **Organization** field, optionally enter the name of the organization with which the credential is associated, or click the |search| button and select it from the pop-up window.
 
-.. |search| image:: ../../common/source/images/search-button.png
+.. |search| image:: ../common/images/search-button.png
 
 6. In the **Credential Type** field, enter **Insights** or select it from the drop-down list.
 
-.. image:: ../../common/source/images/credential-types-popup-window-insights.png
+.. image:: ../common/images/credential-types-popup-window-insights.png
 
 7. Enter a valid Insights credential in the **Username** and **Password** fields. The Insights credential is the user's `Red Hat Customer Portal`_ account username and password.
 
@@ -40,7 +40,7 @@ To create a new credential for use with Insights:
 
 |Credentials - create with demo insights credentials|
 
-.. |Credentials - create with demo insights credentials| image:: ../../common/source/images/insights-create-with-demo-credentials.png
+.. |Credentials - create with demo insights credentials| image:: ../common/images/insights-create-with-demo-credentials.png
 
 8. Click **Save** when done.
 
@@ -68,23 +68,23 @@ To create a new Insights project:
 
 5. Click to select the update option(s) for this project from the **Options** field, and provide any additional values, if applicable. For information about each option, click the tooltip |tooltip| next to the options.
 
-.. |tooltip| image:: ../../common/source/images/tooltips-icon.png
+.. |tooltip| image:: ../common/images/tooltips-icon.png
 
 |Insights - create demo insights project form|
 
-.. |Insights - create demo insights project form| image:: ../../common/source/images/insights-create-project-insights-form.png
+.. |Insights - create demo insights project form| image:: ../common/images/insights-create-project-insights-form.png
 
 6. Click **Save** when done. 
 
 All SCM/Project syncs occur automatically the first time you save a new project. However, if you want them to be updated to what is current in Insights, manually update the SCM-based project by clicking the |update| button under the project's available Actions.
 
-.. |update| image:: ../../common/source/images/update-button.png
+.. |update| image:: ../common/images/update-button.png
 
 This process syncs your Insights project with your Insights account solution. Notice that the status dot beside the name of the project updates once the sync has run.
 
 |Insights - demo insights project success|
 
-.. |Insights - demo insights project success| image:: ../../common/source/images/insights-create-project-insights-succeed.png
+.. |Insights - demo insights project success| image:: ../common/images/insights-create-project-insights-succeed.png
 
 
 Create Insights Inventory
@@ -119,12 +119,12 @@ Remediation of an Insights inventory allows Tower to run Insights playbooks with
 
 |Insights - maintenance plan template filled|
 
-.. |Insights - maintenance plan template filled| image:: ../../common/source/images/insights-create-new-job-template-maintenance-plan-filled.png
+.. |Insights - maintenance plan template filled| image:: ../common/images/insights-create-new-job-template-maintenance-plan-filled.png
 
 3. Click **Save** when done. 
 
 4. Click the |launch| icon to launch the job template.
 
-.. |launch| image:: ../../common/source/images/launch-button.png
+.. |launch| image:: ../common/images/launch-button.png
 
 Once complete, the job results display in the Job Details page.

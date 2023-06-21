@@ -44,19 +44,19 @@ Use the |at| User Interface to configure and use each of the supported 3-party s
 
 3. For any of the fields below the **Type Details** area that you want to link to the external credential, click the |key| button of the input field. You are prompted to set the input source to use to retrieve your secret information.
 
-.. |key| image:: ../../common/source/images/key-mgmt-button.png
+.. |key| image:: ../common/images/key-mgmt-button.png
 
-.. image:: ../../common/source/images/credentials-link-credential-prompt.png 
+.. image:: ../common/images/credentials-link-credential-prompt.png 
 
 4. Select the credential you want to link to, and click **Next**. This takes you to the **Metadata** tab of the input source. This example shows the Metadata prompt for HashiVault Secret Lookup.
    Metadata is specific to the input source you select.
    See the *Metadata for credential input sources* table for details.
 
-.. image:: ../../common/source/images/credentials-link-metadata-prompt.png
+.. image:: ../common/images/credentials-link-metadata-prompt.png
 
 5. Click **Test** to verify connection to the secret management system. If the lookup is unsuccessful, an error message like this one displays:
 
-.. image:: ../../common/source/images/credentials-link-metadata-test-error.png
+.. image:: ../common/images/credentials-link-metadata-test-error.png
 
 6. When done, click **OK**. This closes the prompt window and returns you to the Details screen of your target credential. **Repeat these steps**, starting with :ref:`step 3 above <ag_credential_plugins_link_step>` to complete the remaining input fields for the target credential. By linking the information in this manner, |at| retrieves sensitive information, such as username, password, keys, certificates, and tokens from the 3rd-party management systems and populates that data into the remaining fields of the target credential form.
 
@@ -197,7 +197,7 @@ You need the Centrify Vault web service running to store secrets in order for th
 
 Below shows an example of a configured CyberArk AIM credential.
 
-.. image:: ../../common/source/images/credentials-create-centrify-vault-credential.png 
+.. image:: ../common/images/credentials-create-centrify-vault-credential.png 
 
 
 .. _ug_credentials_cyberarkaim:
@@ -218,7 +218,7 @@ You need the CyberArk Central Credential Provider web service running to store s
 
 Below shows an example of a configured CyberArk AIM credential.
 
-.. image:: ../../common/source/images/credentials-create-cyberark-aim-credential.png 
+.. image:: ../common/images/credentials-create-cyberark-aim-credential.png 
 
 
 .. _ug_credentials_cyberarkconjur:
@@ -239,7 +239,7 @@ When **CyberArk Conjur Secret Lookup** is selected for **Credential Type**, prov
 
 Below shows an example of a configured CyberArk Conjur credential.
 
-.. image:: ../../common/source/images/credentials-create-cyberark-conjur-credential.png
+.. image:: ../common/images/credentials-create-cyberark-conjur-credential.png
 
 
 .. _ug_credentials_hashivault:
@@ -262,7 +262,7 @@ When **HashiCorp Vault Secret Lookup** is selected for **Credential Type**, prov
 
 For more detail about Approle and its fields, refer to the `Vault documentation for Approle Auth Method <https://www.vaultproject.io/docs/auth/approle>`_.  Below shows an example of a configured HashiCorp Vault Secret Lookup credential.
 
-.. image:: ../../common/source/images/credentials-create-hashicorp-kv-credential.png 
+.. image:: ../common/images/credentials-create-hashicorp-kv-credential.png 
 
 
 .. _ug_credentials_hashivaultssh:
@@ -286,7 +286,7 @@ For more detail about Approle and its fields, refer to the `Vault documentation 
 
 Below shows an example of a configured HashiCorp SSH Secrets Engine credential.
 
-.. image:: ../../common/source/images/credentials-create-hashicorp-ssh-credential.png 
+.. image:: ../common/images/credentials-create-hashicorp-ssh-credential.png 
 
 
 .. _ug_credentials_azurekeyvault:
@@ -308,7 +308,7 @@ When **Microsoft Azure Key Vault** is selected for **Credential Type**, provide 
 
 Below shows an example of a configured Microsoft Azure KMS credential.
 
-.. image:: ../../common/source/images/credentials-create-azure-kms-credential.png
+.. image:: ../common/images/credentials-create-azure-kms-credential.png
 
 
 .. _ug_credentials_thycoticvault:
@@ -328,7 +328,7 @@ When **Thycotic DevOps Secrets Vault** is selected for **Credential Type**, prov
 
 Below shows an example of a configured Thycotic DevOps Secrets Vault credential.
 
-.. image:: ../../common/source/images/credentials-create-thycotic-devops-credential.png
+.. image:: ../common/images/credentials-create-thycotic-devops-credential.png
 
 
 
@@ -348,6 +348,6 @@ When **Thycotic Secrets Server** is selected for **Credential Type**, provide th
 
 Below shows an example of a configured Thycotic Secret Server credential.
 
-.. image:: ../../common/source/images/credentials-create-thycotic-server-credential.png
+.. image:: ../common/images/credentials-create-thycotic-server-credential.png
 
 

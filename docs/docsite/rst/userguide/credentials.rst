@@ -40,12 +40,12 @@ Click **Credentials** from the left navigation bar to access the Credentials pag
 
 |Credentials - home with example credentials|
 
-.. |Credentials - home with example credentials| image:: ../../common/source/images/credentials-demo-edit-details.png
+.. |Credentials - home with example credentials| image:: ../common/images/credentials-demo-edit-details.png
 
 
 Credentials added to a Team are made available to all members of the Team, whereas credentials added to a User are only available to that specific User by default.
 
-.. include:: ../../common/source/work_items_deletion_warning.rst
+.. include:: ../common/work_items_deletion_warning.rst
 
 To help you get started, a Demo Credential has been created for your use.
 
@@ -53,7 +53,7 @@ Clicking on the link for the **Demo Credential** takes you to the **Details** vi
 
 |Credentials - home with demo credential details|
 
-.. |Credentials - home with demo credential details| image:: ../../common/source/images/credentials-home-with-demo-credential-details.png
+.. |Credentials - home with demo credential details| image:: ../common/images/credentials-home-with-demo-credential-details.png
 
 
 Clicking the **Access** tab shows you users and teams associated with this Credential and their granted roles (owner, admin, auditor, etc.)
@@ -61,7 +61,7 @@ Clicking the **Access** tab shows you users and teams associated with this Crede
 
 |Credentials - home with permissions credential details|
 
-.. |Credentials - home with permissions credential details| image:: ../../common/source/images/credentials-home-with-permissions-detail.png
+.. |Credentials - home with permissions credential details| image:: ../common/images/credentials-home-with-permissions-detail.png
 
 .. note::
 
@@ -73,7 +73,7 @@ You can click the **Add** button to assign this **Demo Credential** to additiona
 Clicking the **Job Templates** tab shows you the job templates associated with this Credential and which jobs recently ran using this particular credential.
 
 
-.. image:: ../../common/source/images/credentials-home-with-jt-detail.png
+.. image:: ../common/images/credentials-home-with-jt-detail.png
 
 You can click the **Add** button to assign this **Demo Credential** to additional job templates. Refer to the :ref:`ug_JobTemplates` section for further detail on creating a new job template.
 
@@ -91,7 +91,7 @@ To create a new credential:
 
 |Create credential|
 
-.. |Create credential| image:: ../../common/source/images/credentials-create-credential.png
+.. |Create credential| image:: ../common/images/credentials-create-credential.png
 
 2. Enter the name for your new credential in the **Name** field.
 
@@ -104,7 +104,7 @@ To create a new credential:
 
 4. Enter or select the credential type you want to create. 
 
-.. image:: ../../common/source/images/credential-types-drop-down-menu.png
+.. image:: ../common/images/credential-types-drop-down-menu.png
 
 5. Enter the appropriate details depending on the type of credential selected, as described in the next section, :ref:`ug_credentials_cred_types`.
 
@@ -148,7 +148,7 @@ The |at| uses the following environment variables for AWS credentials and are fi
 
 |Credentials - create AWS credential|
 
-.. |Credentials - create AWS credential| image:: ../../common/source/images/credentials-create-aws-credential.png
+.. |Credentials - create AWS credential| image:: ../common/images/credentials-create-aws-credential.png
 
 Traditional Amazon Web Services credentials consist of the AWS **Access Key** and **Secret Key**. 
 
@@ -173,7 +173,7 @@ Selecting this credential allows the |at| to access Galaxy or use a collection p
 
 |Credentials - create galaxy credential|
 
-.. |Credentials - create galaxy credential| image:: ../../common/source/images/credentials-create-galaxy-credential.png
+.. |Credentials - create galaxy credential| image:: ../common/images/credentials-create-galaxy-credential.png
 
 
 Centrify Vault Credential Provider Lookup
@@ -192,7 +192,7 @@ Aside from specifying a name, the **Authentication URL** is the only required fi
 
 |Credentials - create container credential|
 
-.. |Credentials - create container credential| image:: ../../common/source/images/credentials-create-container-credential.png
+.. |Credentials - create container credential| image:: ../common/images/credentials-create-container-credential.png
 
 
 CyberArk AIM Credential Provider Lookup
@@ -216,7 +216,7 @@ Selecting this credential allows you to access GitHub using a Personal Access To
 
 |Credentials - create GitHub credential|
 
-.. |Credentials - create GitHub credential| image:: ../../common/source/images/credentials-create-webhook-github-credential.png
+.. |Credentials - create GitHub credential| image:: ../common/images/credentials-create-webhook-github-credential.png
 
 GitHub PAT credentials require a value in the **Token** field, which is provided in your GitHub profile settings. 
 
@@ -234,7 +234,7 @@ Selecting this credential allows you to access GitLab using a Personal Access To
 
 |Credentials - create GitLab credential|
 
-.. |Credentials - create GitLab credential| image:: ../../common/source/images/credentials-create-webhook-gitlab-credential.png
+.. |Credentials - create GitLab credential| image:: ../common/images/credentials-create-webhook-gitlab-credential.png
 
 GitLab PAT credentials require a value in the **Token** field, which is provided in your GitLab profile settings. 
 
@@ -259,7 +259,7 @@ The |at| uses the following environment variables for GCE credentials and are fi
 
 |Credentials - create GCE credential|
 
-.. |Credentials - create GCE credential| image:: ../../common/source/images/credentials-create-gce-credential.png
+.. |Credentials - create GCE credential| image:: ../common/images/credentials-create-gce-credential.png
 
 GCE credentials have the following inputs that are required:
 
@@ -268,7 +268,7 @@ GCE credentials have the following inputs that are required:
 -  **Service Account JSON File**: Optionally upload a GCE service account file. Use the folder (|file-browser|) icon to browse for the file that contains the special account information that can be used by services and applications running on your GCE instance to interact with other Google Cloud Platform APIs. This grants permissions to the service account and virtual machine instances.
 -  **RSA Private Key**: The PEM file associated with the service account email.
 
-.. |file-browser| image:: ../../common/source/images/file-browser-button.png
+.. |file-browser| image:: ../common/images/file-browser-button.png
 
 
 GPG Public Key
@@ -281,7 +281,7 @@ Selecting this credential type allows you to create a credential that gives the 
 
 |Credentials - create GPG credential|
 
-.. |Credentials - create GPG credential| image:: ../../common/source/images/credentials-create-gpg-credential.png
+.. |Credentials - create GPG credential| image:: ../common/images/credentials-create-gpg-credential.png
 
 See :ref:`ug_content_signing` for detailed information on how to generate a valid keypair, use the CLI tool to sign content, and how to add the public key to the controller.
 
@@ -306,7 +306,7 @@ Selecting this credential type enables synchronization of cloud inventory with R
 
 |Credentials - create Insights credential|
 
-.. |Credentials - create Insights credential| image:: ../../common/source/images/credentials-create-insights-credential.png
+.. |Credentials - create Insights credential| image:: ../common/images/credentials-create-insights-credential.png
 
 Insights credentials consist of the Insights **Username** and **Password**, which is the user’s Red Hat Customer Portal Account username and password.
 
@@ -324,7 +324,7 @@ Machine/SSH credentials do not use environment variables. Instead, they pass the
 
 |Credentials - create machine credential|
 
-.. |Credentials - create machine credential| image:: ../../common/source/images/credentials-create-machine-credential.png
+.. |Credentials - create machine credential| image:: ../common/images/credentials-create-machine-credential.png
 
 Machine credentials have several attributes that may be configured:
 
@@ -334,7 +334,7 @@ Machine credentials have several attributes that may be configured:
 - **Private Key Passphrase**: If the SSH Private Key used is protected by a password, you can configure a Key Password for the private key. This password will be stored encrypted in the database, if entered. Alternatively, you can configure the |at| to ask the user for the password at launch time by selecting **Prompt on launch**. In these cases, a dialog opens when the job is launched, prompting the user to enter the password and password confirmation.
 - **Privilege Escalation Method**: Specifies the type of escalation privilege to assign to specific users. This is equivalent to specifying the ``--become-method=BECOME_METHOD`` parameter, where ``BECOME_METHOD`` could be any of the typical methods described below, or a custom method you've written. Begin entering the name of the method, and the appropriate name auto-populates.
 
-.. image:: ../../common/source/images/credentials-create-machine-credential-priv-escalation.png
+.. image:: ../common/images/credentials-create-machine-credential-priv-escalation.png
 
 
 - empty selection: If a task/play has ``become`` set to ``yes`` and is used with an empty selection, then it will default to ``sudo``
@@ -379,7 +379,7 @@ Selecting this credential type enables synchronization of cloud inventory with M
 
 |Credentials - create Azure credential|
 
-.. |Credentials - create Azure credential| image:: ../../common/source/images/credentials-create-azure-credential.png
+.. |Credentials - create Azure credential| image:: ../common/images/credentials-create-azure-credential.png
 
 Microsoft Azure Resource Manager credentials have several attributes that may be configured:
 
@@ -447,7 +447,7 @@ The |at| uses the following environment variables for Network credentials and ar
 
 |Credentials - create network credential|
 
-.. |Credentials - create network credential| image:: ../../common/source/images/credentials-create-network-credential.png
+.. |Credentials - create network credential| image:: ../common/images/credentials-create-network-credential.png
 
 
 Network credentials have several attributes that may be configured:
@@ -478,7 +478,7 @@ Selecting this credential type allows you to create instance groups that point t
 
 |Credentials - create Containers credential|
 
-.. |Credentials - create Containers credential| image:: ../../common/source/images/credentials-create-containers-credential.png
+.. |Credentials - create Containers credential| image:: ../common/images/credentials-create-containers-credential.png
 
 Container credentials have the following inputs:
 
@@ -488,7 +488,7 @@ Container credentials have the following inputs:
 - **Certificate Authority Data**: include the ``BEGIN CERTIFICATE`` and ``END CERTIFICATE`` lines when pasting the certificate, if provided
 
 
-.. include:: ../../common/source/get-creds-from-service-account.rst
+.. include:: ../common/get-creds-from-service-account.rst
 
 
 OpenStack
@@ -501,7 +501,7 @@ Selecting this credential type enables synchronization of cloud inventory with O
 
 |Credentials - create OpenStack credential|
 
-.. |Credentials - create OpenStack credential| image:: ../../common/source/images/credentials-create-openstack-credential.png
+.. |Credentials - create OpenStack credential| image:: ../common/images/credentials-create-openstack-credential.png
 
 OpenStack credentials have the following inputs that are required:   
 
@@ -525,7 +525,7 @@ Selecting this credential allows you to access another |at| instance.
 
 |Credentials - create tower credential|
 
-.. |Credentials - create tower credential| image:: ../../common/source/images/credentials-create-at-credential.png
+.. |Credentials - create tower credential| image:: ../common/images/credentials-create-at-credential.png
 
 |At| credentials have the following inputs that are required:
 
@@ -551,7 +551,7 @@ The |at| writes a Satellite configuration file based on fields prompted in the u
 
 |Credentials - create Red Hat Satellite 6 credential|
 
-.. |Credentials - create Red Hat Satellite 6 credential| image:: ../../common/source/images/credentials-create-rh-sat-credential.png
+.. |Credentials - create Red Hat Satellite 6 credential| image:: ../common/images/credentials-create-rh-sat-credential.png
 
 
 Satellite credentials have the following inputs that are required:   
@@ -581,7 +581,7 @@ The |at| uses the following environment variables for Red Hat Virtualization cre
 
 |Credentials - create rhv credential|
 
-.. |Credentials - create rhv credential| image:: ../../common/source/images/credentials-create-rhv-credential.png
+.. |Credentials - create rhv credential| image:: ../common/images/credentials-create-rhv-credential.png
 
 RHV credentials have the following inputs that are required:
 
@@ -601,7 +601,7 @@ SCM (source control) credentials are used with Projects to clone and update loca
 
 |Credentials - create SCM credential|
 
-.. |Credentials - create SCM credential| image:: ../../common/source/images/credentials-create-scm-credential.png
+.. |Credentials - create SCM credential| image:: ../common/images/credentials-create-scm-credential.png
 
 
 Source Control credentials have several attributes that may be configured:
@@ -637,7 +637,7 @@ Selecting this credential type enables synchronization of inventory with Ansible
 
 |Credentials - create Vault credential|
 
-.. |Credentials - create Vault credential| image:: ../../common/source/images/credentials-create-vault-credential.png
+.. |Credentials - create Vault credential| image:: ../common/images/credentials-create-vault-credential.png
 
 
 Vault credentials require the **Vault Password** and an optional **Vault Identifier** if applying multi-Vault credentialing. For more information on the |at| Multi-Vault support, refer to the :ref:`ag_multi_vault` section of the |ata|.
@@ -671,7 +671,7 @@ The |at| uses the following environment variables for VMware vCenter credentials
 
 |Credentials - create VMware credential|
 
-.. |Credentials - create VMware credential| image:: ../../common/source/images/credentials-create-vmware-credential.png
+.. |Credentials - create VMware credential| image:: ../common/images/credentials-create-vmware-credential.png
 
 VMware credentials have the following inputs that are required:
 

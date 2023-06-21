@@ -2,7 +2,7 @@
 |at| supports the use of a custom logo. You can add a custom logo by uploading an image; and supply a custom login message from the **User Interface settings** of the Settings menu. 
 
 
-.. image:: ../../common/source/images/configure-tower-ui.png 
+.. image:: ../common/images/configure-tower-ui.png 
 
 
 
@@ -14,15 +14,15 @@ adding it to the **Custom Login Info** text field.
 
 For example, if you uploaded a specific logo, and added the following text:
 
-.. image:: ../../common/source/images/configure-tower-ui-logo-filled.png
+.. image:: ../common/images/configure-tower-ui-logo-filled.png
 
 
 The Tower login dialog would look like this:
 
-.. image:: ../../common/source/images/configure-tower-ui-angry-spud-login.png
+.. image:: ../common/images/configure-tower-ui-angry-spud-login.png
 
 
 
 Selecting ``Revert`` will result in the appearance of the standard |at| logo.
 
-.. image:: ../../common/source/images/login-form-empty.png
+.. image:: ../common/images/login-form-empty.png

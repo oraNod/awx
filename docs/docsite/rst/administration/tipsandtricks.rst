@@ -154,7 +154,7 @@ Setting ``ALLOW_JINJA_IN_EXTRA_VARS = template`` only works for saved job templa
 
 This parameter is configurable in the Jobs Settings screen of the controller UI:
 
-.. image:: ../../common/source/images/settings-jobs-jinja.png
+.. image:: ../common/images/settings-jobs-jinja.png
 
 
 Using execution environments
@@ -177,7 +177,7 @@ Configuring the ``controllerhost`` hostname for notifications
 
 In the :ref:`System Settings <configure_tower_system>`, you can replace ``https://controller.example.com`` in the **Base URL of The Controller Host** field with your preferred hostname to change the notification hostname.     
 
-.. image:: ../../common/source/images/configure-tower-system-misc-baseurl.png
+.. image:: ../common/images/configure-tower-system-misc-baseurl.png
 
 Refreshing your controller license also changes the notification hostname. New installations of |at| should not have to set the hostname for notifications.
 
@@ -294,7 +294,7 @@ https://github.com/ansible/ansible/tree/devel/lib/ansible/plugins/callback
 
 To use these plugins, put the callback plugin ``.py`` file into a directory called ``/callback_plugins`` alongside your playbook in your controller Project. Then, specify their paths (one path per line) in the **Ansible Callback Plugins** field of the Job settings, located towards the bottom of the screen:
 
-.. image:: ../../common/source/images/configure-tower-jobs-callback.png
+.. image:: ../common/images/configure-tower-jobs-callback.png
 
 .. note::
 
@@ -316,7 +316,7 @@ Edit the properties for the selected group by clicking on the |edit| button to t
 
 Once done, save your edits. If Ansible was previously attempting an SSH connection and failed, you should re-run the job template.
 
-.. |edit| image:: ../../common/source/images/edit-button.png
+.. |edit| image:: ../common/images/edit-button.png
 
 
 Importing existing inventory files and host/group vars into the controller

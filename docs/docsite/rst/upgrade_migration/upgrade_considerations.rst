@@ -50,5 +50,5 @@ You can also automatically generate an inventory file based on your selections u
 Running the Setup Playbook
 ----------------------------
 
-.. include:: ../../common/source/setup-playbook.rst    
+.. include:: ../common/setup-playbook.rst    
 

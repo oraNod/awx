@@ -23,7 +23,7 @@ Assuming that the repository has already been configured for signing and verific
 3. User commits the change and the updated checksum manifest and the signature to the repository.
 4. When the user syncs the project, the controller (already configured, in this scenario) pulls in the new changes, checks that the public key associated with the project in the controller matches the private key that the checksum manifest was signed with (this prevents tampering with the checksum manifest itself), then re-calculates checksums of each file in the manifest to ensure that the checksum matches (and thus that no file has changed). It also looks to ensure that all files are accounted for: They must have been either included in, or excluded from, the ``MANIFEST.in`` file discussed below; if files have been added or removed unexpectedly, verification will fail.
 
-.. image:: ../../common/source/images/content-sign-diagram.png
+.. image:: ../common/images/content-sign-diagram.png
 
 
 Prerequisites
@@ -78,17 +78,17 @@ In order to use the GPG key for content singing and validation in the controller
 
 5. Click **Save** when done.
 
-.. image:: ../../common/source/images/credentials-gpg-details.png
+.. image:: ../common/images/credentials-gpg-details.png
 
 This credential can now be selected in :ref:`projects <ug_projects_add>`, and content verification will automatically take place on future project syncs.
 
-.. image:: ../../common/source/images/project-create-with-gpg-creds.png
+.. image:: ../common/images/project-create-with-gpg-creds.png
 
 .. note::
 
   Use the project cache SCM timeout to control how often you want the controller to re-validate the signed content. When a project is configured to update on launch (of any job template configured to use that project), you can enable the cache timeout setting, which tells it to update after N seconds have passed since the last update. If validation is running too frequently, you can slow down how often project updates occur by specifying the time in the **Cache Timeout** field of the Option Details pane of the project.
 
-  .. image:: ../../common/source/images/project-update-launch-cache-timeout.png
+  .. image:: ../common/images/project-update-launch-cache-timeout.png
 
 
 

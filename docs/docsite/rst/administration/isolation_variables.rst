@@ -9,4 +9,4 @@ Isolation functionality and variables
     pair: isolation; functionality
     pair: isolation; variables
 
-.. include:: ../../common/source/isolation_variables.rst
+.. include:: ../common/isolation_variables.rst

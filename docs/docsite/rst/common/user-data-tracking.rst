@@ -19,7 +19,7 @@ Only users installing a trial of |rhaap| or a fresh installation of |at| are opt
 
 2. Click **Edit**.
 
-.. image:: ../../common/source/images/configure-tower-ui-tracking_state.png
+.. image:: ../common/images/configure-tower-ui-tracking_state.png
 
 3. Select the desired level of data collection from the **User Analytics Tracking State** drop-down list:
 

@@ -4,4 +4,4 @@
     single: features
     single: license features
 
-.. include:: ../../common/source/lic-feat-support.rst
+.. include:: ../common/lic-feat-support.rst

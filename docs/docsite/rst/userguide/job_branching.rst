@@ -2,11 +2,11 @@
 
 Projects specify the branch, tag, or reference to use from source control in the ``scm_branch`` field. These are represented by the values specified in the Project Details fields as shown.
 
-.. image:: ../../common/source/images/projects-create-scm-project-branching-emphasized.png
+.. image:: ../common/images/projects-create-scm-project-branching-emphasized.png
 
 Projects have the option to "Allow Branch Override". When checked, project admins can delegate branch selection to the job templates that use that project (requiring only project ``use_role``). 
 
-.. image:: ../../common/source/images/projects-create-scm-project-branch-override-checked.png
+.. image:: ../common/images/projects-create-scm-project-branch-override-checked.png
 
 
 
@@ -21,7 +21,7 @@ If **Clean** is checked, |at| discards modified files in its local copy of the r
 .. _`git`: https://docs.ansible.com/ansible/latest/modules/git_module.html#parameters
 .. _`Subversion`: https://docs.ansible.com/ansible/latest/modules/subversion_module.html#parameters
 
-.. image:: ../../common/source/images/projects-create-scm-project-clean-checked.png
+.. image:: ../common/images/projects-create-scm-project-clean-checked.png
 
 
 Project revision behavior
@@ -31,7 +31,7 @@ Typically, during a project update, the revision of the default branch (specifie
 is stored when updated, and jobs using that project will employ this revision. Providing a non-default **SCM Branch** (not a commit hash or tag) in a job, the newest revision is pulled from the source control remote immediately before the job starts.
 This revision is shown in the **Source Control Revision** field of the job and its respective project update.
 
-.. image:: ../../common/source/images/jobs-output-branch-override-example.png
+.. image:: ../common/images/jobs-output-branch-override-example.png
 
 Consequently, offline job runs are impossible for non-default branches. To be sure that a job is running a static version from source control, use tags or commit hashes. Project updates do not save the revision of all branches, only the project default branch.
 

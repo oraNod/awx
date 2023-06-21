@@ -1,6 +1,6 @@
 .. _usability_data_collection:
 
-.. include:: ../../common/source/user-data-tracking.rst
+.. include:: ../common/user-data-tracking.rst
 
 
 .. _user_data_insights:
@@ -19,11 +19,11 @@ Much like Red Hat Insights, |AA| is built to only collect the minimum amount of 
 
 In order to enable this feature, turn on data collection for |AA| and enter your Red Hat customer credentials in the **Miscellaneous System settings** of the System configuration list of options located in the **Settings** menu.
 
-.. image:: ../../common/source/images/configure-tower-system-misc-analytics.png
+.. image:: ../common/images/configure-tower-system-misc-analytics.png
 
 You can view the location to which the collection of insights data will be uploaded in the **Automation Analytics upload URL** field in the Details view. 
 
-.. image:: ../../common/source/images/misc-system-details-analytics-url.png
+.. image:: ../common/images/misc-system-details-analytics-url.png
 
 By default, the |AA| data is collected every 4 hours and upon enabling the feature, data will be collected up to a month back (or until the previous collection). You may turn off this data collection at any time in the **Miscellaneous System settings** of the System configuration window.
 
@@ -36,14 +36,14 @@ The |AA| generated from this data collection will be found on the `Red Hat Cloud
 
 	.. _`Red Hat Cloud Services`: https://cloud.redhat.com
 
-.. image:: ../../common/source/images/aa-dashboard.png
+.. image:: ../common/images/aa-dashboard.png
 
 
 The **Clusters** data is the default view. This graph represents the number of job runs across all controller clusters over a period of time. The example above shows a span of a week in a stacked bar-style chart that is organized by the number of jobs that ran successfully (in green) and jobs that failed (in red).
 
 Alternatively, you can select a single cluster to view its job status information. 
 
-.. image:: ../../common/source/images/aa-job-run-status-over-time-period.png
+.. image:: ../common/images/aa-job-run-status-over-time-period.png
 
 This multi-line chart represents the number of job runs for a single controller cluster for a specified period of time. The example here shows a span of a week, organized by the number of successfully running jobs (in green) and jobs that failed (in red). You can specify the number of successful and failed job runs for a selected cluster over a span of one week, two weeks, and monthly increments.
 
@@ -57,7 +57,7 @@ Usage by organization
 
 This pie chart represents the number of tasks ran inside all jobs by a particular organization.
 
-.. image:: ../../common/source/images/aa-usage-by-org-tasks.png
+.. image:: ../common/images/aa-usage-by-org-tasks.png
 
 
 Job runs by organization
@@ -65,7 +65,7 @@ Job runs by organization
 
 This pie chart represents the controller usage across *all* controller clusters by organization, which is calculated by the number of jobs run by that organization.
 
-.. image:: ../../common/source/images/aa-usage-by-org.png
+.. image:: ../common/images/aa-usage-by-org.png
 
 
 Organization status
@@ -73,7 +73,7 @@ Organization status
 
 This bar chart represents the controller usage by organization and date, which is calculated by the number of jobs run by that organization on a particular date. Alternatively, you can specify to show the number of job runs per organization in one week, two weeks, and monthly increments.
 
-.. image:: ../../common/source/images/aa-usage-by-org-by-date.png
+.. image:: ../common/images/aa-usage-by-org-by-date.png
 
 .. _usability_data_collection_details:
 

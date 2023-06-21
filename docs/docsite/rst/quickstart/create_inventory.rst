@@ -9,7 +9,7 @@ An inventory is a collection of hosts managed by the controller. Organizations a
 
 To view existing inventories, click **Inventories** from the left navigation bar.
 
-.. image:: ../../common/source/images/qs-inventories-default-list-view.png
+.. image:: ../common/images/qs-inventories-default-list-view.png
 
 |at| provides a demo inventory for you to use as you learn how the controller works. It can be used as is or edited later as needed. You may create another inventory if necessary. Refer to :ref:`ug_inventories_add` in the |atu| for detail.
 
@@ -19,11 +19,11 @@ Click **Demo Inventory** to view its details.
 
 |Inventories - Demo inventory details|
 
-.. |Inventories - Demo inventory details| image:: ../../common/source/images/qs-inventories-demo-details.png
+.. |Inventories - Demo inventory details| image:: ../common/images/qs-inventories-demo-details.png
 
 As with organizations, inventories also have associated users and teams that you can view through the **Access** tab.
 
-.. image:: ../../common/source/images/qs-inventories-default-access-list-view.png
+.. image:: ../common/images/qs-inventories-default-access-list-view.png
 
 A default admin user with the role of System Administrator has been automatically populated for this demo inventory. 
 
@@ -39,7 +39,7 @@ Similarly, in the **Hosts** tab, click the **Add** button to add hosts to groups
 
 For the purposes of this Quick Start and to test that the controller is setup properly, a local host has been added for your use.
 
-.. image:: ../../common/source/images/qs-inventories-default-host.png
+.. image:: ../common/images/qs-inventories-default-host.png
 
 Suppose that the organization you created earlier has a group of web server hosts supporting a particular application. To add these hosts to the inventory, create a group and add the web server hosts. 
 

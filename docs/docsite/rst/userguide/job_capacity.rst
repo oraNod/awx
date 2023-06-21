@@ -106,4 +106,4 @@ The instance field ``capacity_adjustment`` allows you to select how much of one 
 
 To view or edit the capacity in the user interface, select the **Instances** tab of the Instance Group.
 
-.. image:: ../../common/source/images/instance-group-instances-capacity-callouts.png
+.. image:: ../common/images/instance-group-instances-capacity-callouts.png

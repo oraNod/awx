@@ -19,7 +19,7 @@ When the controller launches for the first time, the Subscription screen automat
 
 |no license|
 
-.. |no license| image:: ../../common/source/images/no-license.png
+.. |no license| image:: ../common/images/no-license.png
 
 .. _upload_manifest:
 
@@ -38,11 +38,11 @@ Alternatively, you can choose the option to enter your Red Hat customer credenti
 
 .. note:: When your subscription expires (you can check this in the Subscription details of the Subscription settings window), you will need to renew it in the controller by one of these two methods. 
 
-.. image:: ../../common/source/images/license-password-entered.png
+.. image:: ../common/images/license-password-entered.png
 
 If you encounter the following error message, you will need the proper permissions required for the Satellite user with which the controller admin uses to apply a subscription.
 
-.. image:: ../../common/source/images/tower-license-error-satellite-user.png
+.. image:: ../common/images/tower-license-error-satellite-user.png
 
 The Satellite username/password is used to query the Satellite API for existing subscriptions. From the Satellite API, the automation controller gets back some metadata about those subscriptions, then filter through to find valid subscriptions that you could apply, which are then displayed as valid subscription options in the UI.
 
@@ -76,11 +76,11 @@ Once your subscription has been accepted, the controller briefly displays the su
 
 |license accepted|
 
-.. |license accepted| image:: ../../common/source/images/qs-licenseaccepted.png
+.. |license accepted| image:: ../common/images/qs-licenseaccepted.png
 
 A status of *Compliant* indicates your subscription is in compliance with the number of hosts you have automated within your subscription count. Otherwise, your status will show an *Out of Compliance* status, indicating you have exceeded the number of hosts in your subscription. 
 
-.. image:: ../../common/source/images/qs-license-non-compliant.png
+.. image:: ../common/images/qs-license-non-compliant.png
 
 Other important information displayed are:
 

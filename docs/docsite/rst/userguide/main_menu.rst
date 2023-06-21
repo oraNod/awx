@@ -9,9 +9,9 @@ The User Interface offers a friendly graphical framework for your IT orchestrati
 
 Across the top-right side of the interface, you can access your user profile, the About page, view related documentation, and log out. Right below these options, you can view the activity stream for that user by clicking on the Activity Stream |activitystream| button. 
 
-.. |activitystream| image:: ../../common/source/images/activitystream.png
+.. |activitystream| image:: ../common/images/activitystream.png
 
-.. image:: ../../common/source/images/ug-dashboard-top-nav.png
+.. image:: ../common/images/ug-dashboard-top-nav.png
 
 
 .. _ug_activitystreams:
@@ -29,16 +29,16 @@ Most screens have an Activity Stream (|activitystream|) button. Clicking this br
 
 |Users - Activity Stream|
 
-.. |Users - Activity Stream| image:: ../../common/source/images/users-activity-stream.png
+.. |Users - Activity Stream| image:: ../common/images/users-activity-stream.png
 
 An Activity Stream shows all changes for a particular object. For each change, the Activity Stream shows the time of the event, the user that
 initiated the event, and the action. The information displayed varies depending on the type of event. Clicking on the Examine (|examine|) button shows the event log for the change.
 
-.. |examine| image:: ../../common/source/images/examine-button.png
+.. |examine| image:: ../common/images/examine-button.png
 
 |event log|
 
-.. |event log| image:: ../../common/source/images/activity-stream-event-log.png
+.. |event log| image:: ../common/images/activity-stream-event-log.png
 
 The Activity Stream can be filtered by the initiating user (or the
 system, if it was system initiated), and by any related object,
@@ -75,7 +75,7 @@ Dashboard view
 
 The **Dashboard** view begins with a summary of your hosts, inventories, and projects. Each of these is linked to the corresponding objects for easy access.
 
-.. image:: ../../common/source/images/ug-dashboard-topsummary.png
+.. image:: ../common/images/ug-dashboard-topsummary.png
 
 
 On the main Dashboard screen, a summary appears listing your current **Job Status**. The **Job Status** graph displays the number of successful and failed jobs over a specified time period. You can choose to limit the job types that are viewed, and to change the time horizon of the graph.
@@ -84,11 +84,11 @@ Also available for view are summaries of **Recent Jobs** and **Recent Templates*
 
 The **Recent Jobs** section displays which jobs were most recently run, their status, and time when they were run as well.
 
-.. image:: ../../common/source/images/ug-dashboard-recent-jobs.png
+.. image:: ../common/images/ug-dashboard-recent-jobs.png
 
 The **Recent Templates** section of this display shows a summary of the most recently used templates. You can also access this summary by clicking **Templates** from the left navigation bar.
 
-.. image:: ../../common/source/images/ug-dashboard-recent-templates.png
+.. image:: ../common/images/ug-dashboard-recent-templates.png
 
 
 .. note::
@@ -101,7 +101,7 @@ Jobs view
 
 Access the **Jobs** view by clicking **Jobs** from the left navigation bar. This view shows all the jobs that have ran, including projects, templates, management jobs, SCM updates, playbook runs, etc.
 
-.. image:: ../../common/source/images/ug-dashboard-jobs-view.png
+.. image:: ../common/images/ug-dashboard-jobs-view.png
 
 
 Schedules view
@@ -110,7 +110,7 @@ Schedules view
 Access the Schedules view by clicking **Schedules** from the left navigation bar. This view shows all the scheduled jobs that are configured.
 
 
-.. image:: ../../common/source/images/ug-dashboard-schedule-view.png
+.. image:: ../common/images/ug-dashboard-schedule-view.png
 
 
 
@@ -119,7 +119,7 @@ Resources and Access
 
 The **Resources** and **Access** menus provide you access to the various components of |at| and allow you to configure who has permissions for which of those resources.
 
-.. image:: ../../common/source/images/left-nav-resources-access.png
+.. image:: ../common/images/left-nav-resources-access.png
 
 
 
@@ -131,7 +131,7 @@ Administration Menu
 
 The **Administration** menu provides access to the various administrative options: 
 
-.. image:: ../../common/source/images/left-nav-administration.png
+.. image:: ../common/images/left-nav-administration.png
 
 From here, you can create, view, and edit :ref:`custom credential types <ug_credential_types>`, :ref:`notifications <ug_notifications>`, management jobs, :ref:`tokens and applications <ug_applications_auth>`, and configure :ref:`ug_execution_environments`. 
 
@@ -141,4 +141,4 @@ The Settings Menu
 
 Configuring global and system-level settings is accomplished through the **Settings** menu, which is described in further detail in the proceeding section. The **Settings** menu offers access to administrative configuration options.
 
-.. include:: ../../common/source/settings-menu.rst
+.. include:: ../common/settings-menu.rst

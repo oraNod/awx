@@ -14,15 +14,15 @@ Changing the Default Timeout for Authentication
 
 The default length of time, in seconds, that your supplied token is valid can be changed in the System Settings screen of the controller user interface:
 
-1. From the Settings (|settings|) Menu screen, click **System**. 
+1. From the Settings (|settings|) Menu screen, click **System**.
 
-.. |settings| image:: ../../common/source/images/settings.png
+.. |settings| image:: ../common/images/settings.png
 
 2. Select the **Misc. System** tab, if not already the default view.
 
 3. Enter the timeout period in seconds in the **Idle Time Force Log Out** text field.
 
-.. image:: ../../common/source/images/configure-tower-system-timeout.png
+.. image:: ../common/images/configure-tower-system-timeout.png
 
 4. Click **Save** to apply your changes.
 

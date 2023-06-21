@@ -3,4 +3,4 @@
 Search
 ========
 
-.. include:: ../../common/source/search.rst
+.. include:: ../common/search.rst

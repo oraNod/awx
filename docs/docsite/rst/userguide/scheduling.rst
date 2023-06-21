@@ -14,9 +14,9 @@ You can access all your configured schedules by clicking **Schedules** from the 
 
 Each schedule has a corresponding **Actions** column that has options to enable/disable that schedule using the **ON/OFF** toggle next to the schedule name and to allow editing (|edit|) of that schedule.
 
-.. |edit| image:: ../../common/source/images/edit-button.png
+.. |edit| image:: ../common/images/edit-button.png
 
-.. image:: ../../common/source/images/schedules-sample-list.png
+.. image:: ../common/images/schedules-sample-list.png
 
 If you are setting up a template, a project, or an inventory source, clicking on the **Schedules** tab allows you to configure schedules for these resources. Once schedules are created, they are listed by:
 
@@ -24,7 +24,7 @@ If you are setting up a template, a project, or an inventory source, clicking on
 - **Type**: Identifies whether the schedule is associated with a source control update or a system-managed job schedule
 - **Next Run**: The next scheduled run of this task
 
-.. image:: ../../common/source/images/generic-schedules-example-list.png
+.. image:: ../common/images/generic-schedules-example-list.png
 
 
 Add a new schedule
@@ -36,7 +36,7 @@ Schedules can only be created from a template, project, or inventory source, and
 
 2. Click the **Add** button, which opens the **Create Schedule** window.
 
-.. image:: ../../common/source/images/generic-create-schedule.png
+.. image:: ../common/images/generic-create-schedule.png
 
 3. Enter the appropriate details into the following fields:
 
@@ -48,7 +48,7 @@ Schedules can only be created from a template, project, or inventory source, and
 
 The **Schedule Details** displays when you established a schedule, allowing you to review the schedule settings and a list of the scheduled occurrences in the selected Local Time Zone.
 
-.. image:: ../../common/source/images/generic-create-schedule-details.png
+.. image:: ../common/images/generic-create-schedule-details.png
 
 .. caution::
 
@@ -61,6 +61,6 @@ The **Schedule Details** displays when you established a schedule, allowing you 
 You can use the **ON/OFF** toggle button to stop an active schedule or activate a stopped schedule.
 
 
-.. image:: ../../common/source/images/generic-schedules-list-configured.png
+.. image:: ../common/images/generic-schedules-list-configured.png
 
 

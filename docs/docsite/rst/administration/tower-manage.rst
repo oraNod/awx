@@ -38,7 +38,7 @@ By default, inventory data already stored in the controller blends with data fro
     awx-manage inventory_import --source=/ansible/inventory/ --inventory-id=1 --overwrite
 
 
-.. include:: ../../common/source/overwrite_var_note_2-4-0.rst
+.. include:: ../common/overwrite_var_note_2-4-0.rst
 
 
 Cleanup of old data

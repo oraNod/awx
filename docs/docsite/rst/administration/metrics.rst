@@ -49,6 +49,6 @@ To set up and use Prometheus, you will need to install Prometheus on a virtual m
 
 2. Use a browser to navigate to your graph in the Prometheus UI at ``http://your_prometheus:9090/graph`` and test out some queries. For example, you can query the current number of active controller user sessions by executing: ``awx_sessions_total{type="user"}``.
 
-.. image:: ../../common/source/images/metrics-prometheus-ui-query-example.png
+.. image:: ../common/images/metrics-prometheus-ui-query-example.png
 
 Refer to the metrics endpoint in the controller API for your instance (``api/v2/metrics``) for more ways to query.

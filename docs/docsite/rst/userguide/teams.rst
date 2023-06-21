@@ -13,11 +13,11 @@ You can create as many Teams of users as make sense for your Organization. Each 
 Access the Teams page by clicking **Teams** from the left navigation bar. The team list may be sorted and searched by **Name** or **Organization**.
 
 
-.. image:: ../../common/source/images/organizations-teams-list.png
+.. image:: ../common/images/organizations-teams-list.png
 
 Clicking the Edit (|edit-button|) button next to the list of **Teams** allows you to edit details about the team. You can also review **Users** and  **Permissions** associated with this Team.
 
-.. |edit-button| image:: ../../common/source/images/edit-button.png
+.. |edit-button| image:: ../common/images/edit-button.png
 
 
 .. _ug_team_create:
@@ -32,7 +32,7 @@ To create a new Team:
 
 |Teams - create new team|
 
-.. |Teams - create new team| image:: ../../common/source/images/teams-create-new-team.png
+.. |Teams - create new team| image:: ../common/images/teams-create-new-team.png
 
 2. Enter the appropriate details into the following fields:
 
@@ -46,7 +46,7 @@ Once the Team is successfully created, |at| opens the **Details** dialog, which 
 
 |Teams - example team successfully created|
 
-.. |Teams - example team successfully created| image:: ../../common/source/images/teams-example-team-successfully-created.png
+.. |Teams - example team successfully created| image:: ../common/images/teams-example-team-successfully-created.png
 
 
 Team Access
@@ -59,7 +59,7 @@ This tab displays the list of Users that are members of this Team. This list may
 
 |Teams - users list|
 
-.. |Teams - users list| image:: ../../common/source/images/teams-users-list.png
+.. |Teams - users list| image:: ../common/images/teams-users-list.png
 
 
 .. _ug_teams_permissions:
@@ -77,11 +77,11 @@ In order to add a user to a team, the user must already be created. Refer to :re
 
 To remove roles for a particular user, click the disassociate (x) button next to its resource.
 
-.. image:: ../../common/source/images/permissions-disassociate.png
+.. image:: ../common/images/permissions-disassociate.png
 
 This launches a confirmation dialog, asking you to confirm the disassociation.
  
-.. image:: ../../common/source/images/permissions-disassociate-confirm.png
+.. image:: ../common/images/permissions-disassociate-confirm.png
 
 
 Team Roles
@@ -96,7 +96,7 @@ Selecting the **Roles** view displays a list of the permissions that are current
 
 |Teams - permissions list|
 
-.. |Teams - permissions list| image:: ../../common/source/images/teams-permissions-sample-roles.png
+.. |Teams - permissions list| image:: ../common/images/teams-permissions-sample-roles.png
 
 The set of privileges assigned to Teams that provide the ability to read, modify, and administer projects, inventories, and other |at| elements are permissions. By default, the Team is given the "read" permission (also called a role).
 
@@ -110,23 +110,23 @@ To add permissions to a Team:
 
 1. Click the **Add** button, which opens the Add Permissions Wizard.
 
-.. image:: ../../common/source/images/teams-users-add-permissions-form.png 
+.. image:: ../common/images/teams-users-add-permissions-form.png 
    :alt: Add Permissions Form
 
 2. Click to select the object for which the team will have access and click **Next**.
 
 3. Click to select the resource to assign team roles and click **Next**.
 
-.. image:: ../../common/source/images/teams-permissions-templates-select.png
+.. image:: ../common/images/teams-permissions-templates-select.png
 
 4. Click the checkbox beside the role to assign that role to your chosen type of resource. Different resources have different options available.
 
-.. image:: ../../common/source/images/teams-permissions-template-roles.png
+.. image:: ../common/images/teams-permissions-template-roles.png
 
 
 5. Click **Save** when done, and the Add Permissions Wizard closes to display the updated profile for the user with the roles assigned for each selected resource.
 
-.. image:: ../../common/source/images/teams-permissions-sample-roles.png
+.. image:: ../common/images/teams-permissions-sample-roles.png
   
 To remove Permissions for a particular resource, click the disassociate (x) button next to its resource. This launches a confirmation dialog, asking you to confirm the disassociation.
 

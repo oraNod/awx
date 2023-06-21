@@ -38,7 +38,7 @@ Isolation functionality and variables
     pair: isolation; functionality
     pair: isolation; variables
 
-.. include:: ../../common/source/isolation_variables.rst
+.. include:: ../common/isolation_variables.rst
 
 .. _rbac-ug:
 
@@ -67,7 +67,7 @@ Imagine that you have an organization named "SomeCompany" and want to allow two 
 
 |user-role-relationship|
 
-.. |user-role-relationship| image:: ../../common/source/images/user-role-relationship.png
+.. |user-role-relationship| image:: ../common/images/user-role-relationship.png
 
 Often, you will have many Roles in a system and you will want some roles to include all of the capabilities of other roles. For example, you may want a System Administrator to have access to everything that an Organization Administrator has access to, who has everything that a Project Administrator has access to, and so on. 
 
@@ -80,13 +80,13 @@ The Role Hierarchy is represented by allowing Roles to have "Parent Roles". Any 
 
 |rbac-role-hierarchy|
 
-.. |rbac-role-hierarchy| image:: ../../common/source/images/rbac-role-hierarchy.png
+.. |rbac-role-hierarchy| image:: ../common/images/rbac-role-hierarchy.png
 
 Often, you will have many Roles in a system and you will want some roles to include all of the capabilities of other roles. For example, you may want a System Administrator to have access to everything that an Organization Administrator has access to, who has everything that a Project Administrator has access to, and so on. We refer to this concept as the 'Role Hierarchy' and it is represented by allowing Roles to have "Parent Roles". Any capability that a Role has is implicitly granted to any parent roles (or parents of those parents, and so on). Of course Roles can have more than one parent, and capabilities are implicitly granted to all parents.
 
 |rbac-heirarchy-morecomplex|
 
-.. |rbac-heirarchy-morecomplex| image:: ../../common/source/images/rbac-heirarchy-morecomplex.png
+.. |rbac-heirarchy-morecomplex| image:: ../common/images/rbac-heirarchy-morecomplex.png
 
 RBAC controls also give you the capability to explicitly permit User and Teams of Users to run playbooks against certain sets of hosts. Users and teams are restricted to just the sets of playbooks and hosts to which they are granted capabilities. And, with |at|, you can create or import as many Users and Teams as you require--create users and teams manually or import them from LDAP or Active Directory.
 
@@ -353,4 +353,4 @@ Here are the rules associated with each admin type:
 
 The following is a sample scenario showing an organization with its roles and which resource(s) each have access to:
 
-.. image:: ../../common/source/images/rbac-multiple-resources-scenario.png
+.. image:: ../common/images/rbac-multiple-resources-scenario.png

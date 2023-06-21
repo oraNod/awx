@@ -70,7 +70,7 @@ Manage instances
 
 Click **Instances** from the left side navigation menu to access the Instances list.
 
-.. image:: ../../common/source/images/instances_list_view.png
+.. image:: ../common/images/instances_list_view.png
 
 The Instances list displays all the current nodes in your topology, along with relevant details:
 
@@ -95,7 +95,7 @@ The Instances list displays all the current nodes in your topology, along with r
 
 From this page, you can add, remove or run health checks on your nodes. Use the check boxes next to an instance to select it to remove or run a health check against. When a button is grayed-out, you do not have permission for that particular action. Contact your Administrator to grant you the required level of access. If you are able to remove an instance, you will receive a prompt for confirmation, like the one below:
 
-.. image:: ../../common/source/images/instances_delete_prompt.png
+.. image:: ../common/images/instances_delete_prompt.png
 
 .. note::
 
@@ -107,7 +107,7 @@ Click **Remove** to confirm.
 
 If running a health check on an instance, at the top of the Details page, a message displays that the health check is in progress. 
 
-.. image:: ../../common/source/images/instances_health_check.png
+.. image:: ../common/images/instances_health_check.png
 
 Click **Reload** to refresh the instance status. 
 
@@ -115,11 +115,11 @@ Click **Reload** to refresh the instance status.
 
 	Health checks are ran asynchronously, and may take up to a minute for the instance status to update, even with a refresh. The status may or may not change after the health check. At the bottom of the Details page, a timer/clock icon displays next to the last known health check date and time stamp if the health check task is currently running.
 
-	.. image:: ../../common/source/images/instances_health_check_pending.png
+	.. image:: ../common/images/instances_health_check_pending.png
 
 The example health check shows the status updates with an error on node 'one':
 
-.. image:: ../../common/source/images/topology-viewer-instance-with-errors.png
+.. image:: ../common/images/topology-viewer-instance-with-errors.png
 
 
 Add an instance
@@ -131,7 +131,7 @@ One of the ways to expand capacity is to create an instance, which serves as a n
 
 2. In the Instances list view, click the **Add** button and the Create new Instance window opens.
 
-.. image:: ../../common/source/images/instances_create_new.png
+.. image:: ../common/images/instances_create_new.png
 
 An instance has several attributes that may be configured:
 
@@ -146,7 +146,7 @@ An instance has several attributes that may be configured:
 
 Upon successful creation, the Details of the created instance opens.
 
-.. image:: ../../common/source/images/instances_create_details.png
+.. image:: ../common/images/instances_create_details.png
 
 .. note::
 
@@ -154,7 +154,7 @@ Upon successful creation, the Details of the created instance opens.
 
 4. Click the download button next to the **Install Bundle** field to download the tarball that includes this new instance and the files relevant to install the node into the mesh.
 
-.. image:: ../../common/source/images/instances_install_bundle.png
+.. image:: ../common/images/instances_install_bundle.png
 
 5. Extract the downloaded ``tar.gz`` file from the location you downloaded it. The install bundle contains yaml files, certificates, and keys that will be used in the installation process.
 
@@ -191,7 +191,7 @@ The content of the ``inventory.yml`` file serves as a template and contains vari
 	You will only be able to view peers of the control plane nodes at this time, which are the execution nodes. Since you are limited to creating execution nodes in this release, you will be unable to create or view peers of execution nodes.  
 
 
-.. image:: ../../common/source/images/instances_peers_tab.png
+.. image:: ../common/images/instances_peers_tab.png
 
 You may run a health check by selecting the node and clicking the **Run health check** button from its Details page.
 

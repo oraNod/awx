@@ -173,7 +173,7 @@ In |at|, the OAuth 2 system is built on top of the `Django Oauth Toolkit`_, whic
 
 Alternatively, you can :ref:`add tokens <userguide:ug_tokens_auth_create>` for users through the controller user interface, as well as configure the expiration of an access token and its associated refresh token (if applicable).  
 
-.. image:: ../../common/source/images/configure-tower-system-misc-sys-token-expire.png
+.. image:: ../common/images/configure-tower-system-misc-sys-token-expire.png
 
 
 Token scope mask over RBAC system
@@ -294,7 +294,7 @@ Refer to `Django's Test Your Authorization Server`_ toolkit to test this flow.
 
 You may specify the number of seconds an authorization code remains valid in the **System settings** screen: 
 
-.. image:: ../../common/source/images/configure-tower-system-misc-sys-authcode-expire.png
+.. image:: ../common/images/configure-tower-system-misc-sys-authcode-expire.png
 
 
 Requesting an access token after this duration will fail. The duration defaults to 600 seconds (10 minutes), based on the `RFC6749 <https://tools.ietf.org/html/rfc6749>`_ recommendation. 
@@ -460,7 +460,7 @@ Alternatively, you can use the ``manage`` utility, :ref:`ag_manage_utility_revok
 
 This setting can be configured at the system-level in the |at| User Interface: 
 
-.. image:: ../../common/source/images/configure-tower-system-oauth2-tokens-toggle.png
+.. image:: ../common/images/configure-tower-system-oauth2-tokens-toggle.png
 
 
 Upon success, a response of ``200 OK`` displays. Verify the deletion by checking whether the token is present in the ``/api/v2/tokens/`` endpoint.

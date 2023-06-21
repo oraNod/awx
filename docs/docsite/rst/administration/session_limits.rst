@@ -23,7 +23,7 @@ To make changes to your session limits, navigate to the **Miscellaneous System s
 .. note::
   To make the best use of session limits, disable ``AUTH_BASIC_ENABLED`` by changing the value to ``False``, as it falls outside of the scope of session limit enforcement. Alternatively, in the System Settings of the controller UI, toggle the **Enable HTTP Basic Auth** to off.
 
-.. image:: ../../common/source/images/configure-tower-session-limits.png
+.. image:: ../common/images/configure-tower-session-limits.png
 
 .. caution::
 

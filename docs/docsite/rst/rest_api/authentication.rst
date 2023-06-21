@@ -22,7 +22,7 @@ Session Authentication
 
 Session authentication is used when logging in directly to |at|’s API or UI to manually create resources (inventory, project, job template) and launch jobs in the browser. With this method, you can remain logged in for a prolonged period of time, not just for that HTTP request, but for instance, when browsing the UI or API in a browser like Chrome or Firefox. When a user logs in, a session cookie is created, which enables the user to remain logged in when navigating to different pages within the |at|. Below represents the communication that occurs between the client and server in a session.
 
-.. image:: ../../common/source/images/session-auth-architecture.png
+.. image:: ../common/images/session-auth-architecture.png
 
 Using the curl tool, you can see the activity that occurs when you log into the controller.
 
@@ -102,7 +102,7 @@ For more information about the Basic HTTP Authentication scheme, see `RFC 7617 <
 
 	You can disable the Basic Auth for security purposes from the Miscellaneous Authentication settings of the controller UI Settings menu:
 
-	.. image:: ../../common/source/images/configure-tower-auth-basic-off.png
+	.. image:: ../common/images/configure-tower-auth-basic-off.png
 
 .. _api_oauth2_auth:
 
@@ -115,7 +115,7 @@ OAuth (Open Authorization) is an open standard for token-based authentication an
 
 	By default, external users such as those created by SSO are not allowed to generate OAuth tokens for security purposes. This can be changed from the Miscellaneous Authentication settings of the controller UI Settings menu:
 
-	.. image:: ../../common/source/images/configure-tower-external-tokens-off.png 
+	.. image:: ../common/images/configure-tower-external-tokens-off.png 
 
 The different methods for obtaining OAuth 2 Access Tokens in |at| are:
 
@@ -144,7 +144,7 @@ Token authentication is best used for any programmatic use of the |at| API, such
 
 This call will return JSON data like:
 
-.. image:: ../../common/source/images/api_oauth2_json_returned_token_value.png
+.. image:: ../common/images/api_oauth2_json_returned_token_value.png
 
 The value of the ``token`` property is what you can now use to perform a GET request for an |at| resource, e.g., Hosts.
 

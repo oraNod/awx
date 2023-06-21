@@ -9,7 +9,7 @@ Execution Environments
    pair: jobs; add execution environment
 
 
-.. include:: ../../common/source/execution_environs.rst
+.. include:: ../common/execution_environs.rst
 
 .. _ug_build_ees:
 
@@ -140,17 +140,17 @@ In order to use an |ee| in a job, a few components are required:
 -  **Organization**: optionally assign the organization to specifically use this |ee|. To make the |ee| available for use across multiple organizations, leave this field blank.
 -  **Registry credential**: If the image has a protected container registry, provide the credential to access it.
 
-.. image:: ../../common/source/images/ee-new-ee-form-filled.png
+.. image:: ../common/images/ee-new-ee-form-filled.png
 
 4. Click **Save**. 
 
 Now your newly added |ee| is ready to be used in a job template. To add an |ee| to a job template, specify it in the **Execution Environment** field of the job template, as shown in the example below. For more information on setting up a job template, see :ref:`ug_JobTemplates` in the |atu|.
 
-.. image:: ../../common/source/images/job-template-with-example-ee-selected.png
+.. image:: ../common/images/job-template-with-example-ee-selected.png
 
 Once you added an |ee| to a job template, you can see those templates listed in the **Templates** tab of the |ee|:
 
-.. image:: ../../common/source/images/ee-details-templates-list.png
+.. image:: ../common/images/ee-details-templates-list.png
 
 
 Execution environment mount options
@@ -176,7 +176,7 @@ If you encounter this error, or have upgraded from an older version of the contr
 
 2. In the **Paths to expose to isolated jobs** field of the Job Settings page, using the current example, expose the path as such:
 
-.. image:: ../../common/source/images/settings-paths2expose-iso-jobs.png
+.. image:: ../common/images/settings-paths2expose-iso-jobs.png
 
 .. note::
 
@@ -193,11 +193,11 @@ This informs podman to run a command similar to the example below, where the con
 
 To expose isolated paths in OpenShift or Kubernetes containers as HostPath, assume the following configuration:
 
-.. image:: ../../common/source/images/settings-paths2expose-iso-jobs-mount-containers.png
+.. image:: ../common/images/settings-paths2expose-iso-jobs-mount-containers.png
 
 Use the **Expose host paths for Container Groups** toggle to enable it. 
 
 Once the playbook runs, the resulting Pod spec will display similar to the example below. Note the details of the ``volumeMounts`` and ``volumes`` sections.
 
-.. image:: ../../common/source/images/mount-containers-playbook-run-podspec.png
+.. image:: ../common/images/mount-containers-playbook-run-podspec.png
 

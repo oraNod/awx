@@ -9,7 +9,7 @@ To log in, browse to the user interface at: ``http://<server name>/``
 
 |Login form|
 
-.. |Login form| image:: ../../common/source/images/login-form.png
+.. |Login form| image:: ../common/images/login-form.png
 
 Log in using a valid username and password.
 

@@ -12,5 +12,5 @@ These defaults can be changed later by clicking **Users** from the left navigati
 
 |Login form|
 
-.. |Login form| image:: ../../common/source/images/qs-login-form.png
+.. |Login form| image:: ../common/images/qs-login-form.png
 

@@ -6,7 +6,7 @@ Import a Subscription
 .. index::
    single: subscriptions, import
 
-.. include:: ../../common/source/import_license.rst
+.. include:: ../common/import_license.rst
 
 .. _obtain_sub_manifest:
 
@@ -23,7 +23,7 @@ In order to upload a subscriptions manifest, first set up your subscription allo
 
 The Subscriptions Allocations page contains no subscriptions until you create one. 
 
-.. image:: ../../common/source/images/subscription-allocations-empty.png
+.. image:: ../common/images/subscription-allocations-empty.png
 
 2. Click the **Create New subscription allocation** button to create a new subscription allocation. 
 
@@ -33,29 +33,29 @@ The Subscriptions Allocations page contains no subscriptions until you create on
 
 3. Enter a name for your subscription and select **Satellite 6.8** from the Type drop-down menu.
 
-.. image:: ../../common/source/images/subscription-allocations-create.png
+.. image:: ../common/images/subscription-allocations-create.png
 
 4. Click **Create**.
 
 5. Once your subscriptions manifest is successfully created, it displays various information including subscription information at the bottom of the **Details** tab. The number indicated next to Entitlements indicates the number of entitlements associated with your subscription. 
 
-.. image:: ../../common/source/images/subscription-allocations-details-bottom.png
+.. image:: ../common/images/subscription-allocations-details-bottom.png
 
 In order to obtain a subscriptions manifest, you must add an entitlement to your subscriptions though the Subscriptions tab.
 
 6. Click the **Subscriptions** tab. 
 
-.. image:: ../../common/source/images/subscription-allocations-details.png
+.. image:: ../common/images/subscription-allocations-details.png
 
 7. In the Subscriptions tab, there are no subscriptions to display, click the **Add Subscriptions** button.
 
-.. image:: ../../common/source/images/subscription-allocations-subscriptions.png
+.. image:: ../common/images/subscription-allocations-subscriptions.png
 
 The next screen allows you to select and add entitlements to put in the manifest file. You may select multiple |aap| subscriptions (with the same SKU) in your subscription allocation. Valid |aap| subscriptions commonly go by the name "|rhaa|...".
 
 8. Specify the number of entitlements/managed nodes to put in the manifest file. This allows you to split up a subscription (for example: 400 nodes on a development cluster and 600 nodes for the production cluster, out of a 1000 node subscription).
 
-  .. image:: ../../common/source/images/aap-subscriptions.png
+  .. image:: ../common/images/aap-subscriptions.png
 
 .. Note:: 
 
@@ -70,7 +70,7 @@ The allocations you specified, once successfully added, are displayed in the **S
 
 11. At the bottom of the details window under *Entitlements*, click the **Export Manifest** button to export the manifest file for this subscription.
 
-.. image:: ../../common/source/images/subscription-allocations-details-export.png
+.. image:: ../common/images/subscription-allocations-details-export.png
 
 A folder pre-pended with ``manifest_`` in the name is downloaded to your local drive. Multiple subscriptions with the same SKU will be aggregated.
 

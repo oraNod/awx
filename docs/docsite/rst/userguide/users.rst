@@ -9,7 +9,7 @@ Users
 
 A :term:`User` is someone who has access to |at| with associated permissions and credentials. Access the Users page by clicking **Users** from the left navigation bar. The User list may be sorted and searched by **Username**, **First Name**, or **Last Name** and click the headers to toggle your sorting preference. 
 
-.. image:: ../../common/source/images/users-home-with-example-users.png
+.. image:: ../common/images/users-home-with-example-users.png
    :alt: Users - home with example users
 
 You can easily view permissions and user type information by looking beside their user name in the User overview screen.
@@ -38,7 +38,7 @@ Three types of Users can be assigned:
 
 - **System Administrator**: A System Administrator (also known as Superuser) has full system administration privileges -- with full read and write privileges over the entire installation. A System Administrator is typically responsible for managing all aspects of |at| and delegating responsibilities for day-to-day work to various Users. Assign with caution!
 
-.. image:: ../../common/source/images/users-create-user-form-types.png
+.. image:: ../common/images/users-create-user-form-types.png
    :alt: User Types   
 
 .. note::
@@ -49,9 +49,9 @@ Three types of Users can be assigned:
 
 Once the user is successfully created, the **User** dialog opens for that newly created User. 
 
-.. |edit-button| image:: ../../common/source/images/edit-button.png
+.. |edit-button| image:: ../common/images/edit-button.png
 
-.. image:: ../../common/source/images/users-edit-user-form.png
+.. image:: ../common/images/users-edit-user-form.png
    :alt: Edit User Form
 
 You may delete the user from its Details screen by clicking **Delete**, or once you exit the details screen, you can delete users from a list of current users. See :ref:`ug_users_delete` for more detail.
@@ -62,11 +62,11 @@ The count for the number of users has also been updated, and a new entry for the
 
    If the user is not a newly-created user, the user's details screen displays the last login activity of that user. 
 
-   .. image:: ../../common/source/images/users-last-login-info.png
+   .. image:: ../common/images/users-last-login-info.png
 
 When you log in as yourself, and view the details of your own user profile, you can manage tokens from your user profile. See :ref:`ug_users_tokens` for more detail.
 
-.. image:: ../../common/source/images/user-with-token-button.png
+.. image:: ../common/images/user-with-token-button.png
 
 .. _ug_users_delete:
     
@@ -79,7 +79,7 @@ Before you can delete a user, you must have user permissions. When you delete a 
 
 2. Select the check box(es) for the user(s) that you want to remove and click **Delete**.
 
-.. image:: ../../common/source/images/users-home-users-checked-delete.png
+.. image:: ../common/images/users-home-users-checked-delete.png
 
 3. Click **Delete** in the confirmation warning message to permanently delete the user.
 
@@ -95,7 +95,7 @@ Organization membership cannot be modified from this display panel.
 
 |Users - Organizations list for example user|
 
-.. |Users - Organizations list for example user| image:: ../../common/source/images/users-organizations-list-for-example-user.png
+.. |Users - Organizations list for example user| image:: ../common/images/users-organizations-list-for-example-user.png
 
 Users - Teams
 ~~~~~~~~~~~~~
@@ -109,7 +109,7 @@ Until a Team has been created and the user has been assigned to that team, the a
 
 |Users - teams list for example user|
 
-.. |Users - teams list for example user| image:: ../../common/source/images/users-teams-list-for-example-user.png
+.. |Users - teams list for example user| image:: ../common/images/users-teams-list-for-example-user.png
 
 
 
@@ -131,7 +131,7 @@ This screen displays a list of the roles that are currently assigned to the sele
 
 |Users - permissions list for example user|
 
-.. |Users - permissions list for example user| image:: ../../common/source/images/users-permissions-list-for-example-user.png
+.. |Users - permissions list for example user| image:: ../common/images/users-permissions-list-for-example-user.png
 
 
 Add Permissions
@@ -141,23 +141,23 @@ To add permissions to a particular user:
 
 1. Click the **Add** button, which opens the Add Permissions Wizard.
 
-.. image:: ../../common/source/images/users-add-permissions-form.png
+.. image:: ../common/images/users-add-permissions-form.png
    :alt: Add Permissions Form
 
 2. Click to select the object for which the user will have access and click **Next**.
 
 3. Click to select the resource to assign team roles and click **Next**.
 
-.. image:: ../../common/source/images/users-permissions-inventory-select.png
+.. image:: ../common/images/users-permissions-inventory-select.png
 
 4. Click the checkbox beside the role to assign that role to your chosen type of resource. Different resources have different options available.
 
-.. image:: ../../common/source/images/users-permissions-inventory-roles.png
+.. image:: ../common/images/users-permissions-inventory-roles.png
 
 
 5. Click **Save** when done, and the Add Permissions Wizard closes to display the updated profile for the user with the roles assigned for each selected resource.
 
-.. image:: ../../common/source/images/users-permissions-sample-roles.png
+.. image:: ../common/images/users-permissions-sample-roles.png
   
 To remove Permissions for a particular resource, click the disassociate (x) button next to its resource. This launches a confirmation dialog, asking you to confirm the disassociation.
 
@@ -176,5 +176,5 @@ The **Tokens** tab will only be present for your user (yourself). Before you add
 
 1. If not already selected, click on your user from the Users list view to configure your OAuth 2 tokens.
 
-.. include:: ../../common/source/add-token.rst
+.. include:: ../common/add-token.rst
 

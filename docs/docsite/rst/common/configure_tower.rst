@@ -1,4 +1,4 @@
-.. include:: ../../common/source/configure_tower_overview.rst
+.. include:: ../common/configure_tower_overview.rst
 
 Each tab contains fields with a **Reset** button, allowing you to revert any value entered back to the default value. **Reset All** allows you to revert all the values to their factory default values.
 
@@ -13,7 +13,7 @@ Authentication
     single: enterprise authentication
     pair: configuration; authentication
 
-.. include:: ../../common/source/configure_tower_authentication.rst
+.. include:: ../common/configure_tower_authentication.rst
 
 
 .. _configure_tower_jobs:
@@ -34,7 +34,7 @@ The Jobs tab allows you to configure the types of modules that are allowed to be
 
     The values for all the timeouts are in seconds.
 
-.. image:: ../../common/source/images/configure-tower-jobs.png
+.. image:: ../common/images/configure-tower-jobs.png
 
 3. Click **Save** to apply the settings or **Cancel** to abandon the changes.
 
@@ -56,16 +56,16 @@ The System tab allows you to define the base URL for the controller host, config
   - **Miscellaneous Authentication settings**: configure options associated with authentication methods (built-in or SSO), sessions (timeout, number of sessions logged in, tokens), and social authentication mapping.
   - **Logging settings**: configure logging options based on the type you choose:
     
-    .. image:: ../../common/source/images/configure-tower-system-logging-types.png
+    .. image:: ../common/images/configure-tower-system-logging-types.png
     
     For more information about each of the logging aggregation types, refer to the :ref:`Controller Logging and Aggregation <administration:ag_logging>` section of the |ata|.
 
 
 3. Set the configurable options from the fields provided. Click the tooltip |help| icon next to the field that you need additional information or details about. Below is an example of the System settings window.
 
-.. |help| image:: ../../common/source/images/tooltips-icon.png
+.. |help| image:: ../common/images/tooltips-icon.png
 
-.. image:: ../../common/source/images/configure-tower-system.png
+.. image:: ../common/images/configure-tower-system.png
 
 .. note::
 
@@ -91,17 +91,17 @@ The User Interface tab allows you to set controller analytics settings, as well 
 Access the User Interface settings by clicking **Settings** from the left navigation bar and select **User Interface settings** from the Settings screen. 
 
 
-.. image:: ../../common/source/images/configure-tower-ui.png
+.. image:: ../common/images/configure-tower-ui.png
 
 
-.. include:: ../../common/source/user-data-tracking.rst
+.. include:: ../common/user-data-tracking.rst
 
 
 Custom Logos and Images
 ------------------------
 
 
-.. include:: ../../common/source/logos_branding.rst
+.. include:: ../common/logos_branding.rst
 
 
 License
@@ -111,4 +111,4 @@ License
    pair: import; license
 
 
-.. include:: ../../common/source/import_license.rst
+.. include:: ../common/import_license.rst

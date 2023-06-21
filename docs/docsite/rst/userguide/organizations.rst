@@ -10,7 +10,7 @@ An :term:`Organization` is a logical collection of **Users**, **Teams**, **Proje
 
 |tower hierarchy|
 
-.. |tower hierarchy| image:: ../../common/source/images/TowerHierarchy.png
+.. |tower hierarchy| image:: ../common/images/TowerHierarchy.png
 
 Access the Organizations page by clicking **Organizations** from the left navigation bar. The Organizations page displays all of the existing organizations for your installation. Organizations can be searched by **Name** or **Description**. Modify and remove organizations using the **Edit** and **Delete** buttons.
 
@@ -19,11 +19,11 @@ Access the Organizations page by clicking **Organizations** from the left naviga
 
 |Organizations - home showing example organization|
 
-.. |Organizations - home showing example organization| image:: ../../common/source/images/organizations-home-showing-example-organization.png
+.. |Organizations - home showing example organization| image:: ../common/images/organizations-home-showing-example-organization.png
 
 From this list view, you can edit the details of an organization (|edit button|) from the **Actions** menu.
 
-.. |edit button| image:: ../../common/source/images/edit-button.png
+.. |edit button| image:: ../common/images/edit-button.png
 
 .. _ug_organizations_create:
 
@@ -34,7 +34,7 @@ Creating a New Organization
 
 |Organizations - new organization form|
 
-.. |Organizations - new organization form| image:: ../../common/source/images/organizations-new-organization-form.png
+.. |Organizations - new organization form| image:: ../common/images/organizations-new-organization-form.png
 
 2. An organization has several attributes that may be configured:
 
@@ -42,11 +42,11 @@ Creating a New Organization
 - Enter a **Description** for the organization.
 - The **Max Hosts** is only editable by a superuser to set an upper limit on the number of license hosts that an organization can have. Setting this value to **0** signifies no limit. If you try to add a host to an organization that has reached or exceeded its cap on hosts, an error message displays:
 
-  .. image:: ../../common/source/images/organizations-max-hosts-error.png
+  .. image:: ../common/images/organizations-max-hosts-error.png
 
 The inventory sync output view also shows the host limit error. Click **Details** for additional detail about the error.
 
-  .. image:: ../../common/source/images/organizations-max-hosts-error-output-view.png
+  .. image:: ../common/images/organizations-max-hosts-error-output-view.png
 
 - Enter **Instance Groups** on which to run this organization. 
 - Enter the name of the execution environment or search for an existing **Default Execution Environment** on which to run this organization. See :ref:`upgrade_venv` in the |atumg| for more information.
@@ -59,12 +59,12 @@ Once created, |at| displays the Organization details, and allows for the managin
 
 |Organizations - show record for example organization|
 
-.. |Organizations - show record for example organization| image:: ../../common/source/images/organizations-show-record-for-example-organization.png
+.. |Organizations - show record for example organization| image:: ../common/images/organizations-show-record-for-example-organization.png
 
 
 From the **Details** tab, you can edit or delete the organization. 
 
-.. include:: ../../common/source/work_items_deletion_warning.rst
+.. include:: ../common/work_items_deletion_warning.rst
 
 
 
@@ -81,7 +81,7 @@ Clicking on **Access** (beside **Details** when viewing your organization), disp
 
 |Organizations - show users for example organization|
 
-.. |Organizations - show users for example organization| image:: ../../common/source/images/organizations-show-users-permissions-organization.png
+.. |Organizations - show users for example organization| image:: ../common/images/organizations-show-users-permissions-organization.png
 
 As you can manage the user membership for this Organization here, you can manage user membership on a per-user basis from the Users page by clicking **Users** from the left navigation bar. Organizations have a unique set of roles not described here. You can assign specific users certain levels of permissions within your organization, or allow them to act as an admin for a particular resource. Refer to :ref:`rbac-ug` for more information. 
 
@@ -92,7 +92,7 @@ Add a User or Team
 
 In order to add a user or team to an organization, the user or team must already be created. See :ref:`ug_users_create` and :ref:`ug_team_create` for additional detail. To add existing users or team to the Organization:
 
-.. include:: ../../common/source/permissions.rst
+.. include:: ../common/permissions.rst
 
 
 
@@ -110,13 +110,13 @@ Work with Notifications
 
 Clicking the **Notifications** tab allows you to review any notification integrations you have setup. 
 
-.. image:: ../../common/source/images/organizations-notifications-samples-list.png
+.. image:: ../common/images/organizations-notifications-samples-list.png
 
 Use the toggles to enable or disable the notifications to use with your particular organization. For more detail, see :ref:`ug_notifications_on_off`. 
 
 If no notifications have been set up, you must create them from the **Notifications** option on the left navigation bar.
 
-.. image:: ../../common/source/images/organization-notifications-empty.png
+.. image:: ../common/images/organization-notifications-empty.png
 
 Refer to :ref:`ug_notifications_types` for additional details on configuring various notification types.
 

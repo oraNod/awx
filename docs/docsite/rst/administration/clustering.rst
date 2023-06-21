@@ -170,7 +170,7 @@ The way jobs are run and reported to a 'normal' user of controller does not chan
 
 |Controller Cluster example|
 
-.. |Controller Cluster example| image:: ../../common/source/images/tower-clustering-visual.png
+.. |Controller Cluster example| image:: ../common/images/tower-clustering-visual.png
 
 - Project updates run successfully on any instance that could potentially run a job. Projects will sync themselves to the correct version on the instance immediately prior to running the job. If the needed revision is already locally checked out and Galaxy or Collections updates are not needed, then a sync may not be performed. 
 

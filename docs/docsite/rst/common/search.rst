@@ -6,7 +6,7 @@ The |at| has a powerful search tool that provides both search and filter capabil
 
 |key sheet|
 
-.. |key sheet| image:: ../../common/source/images/search-bar-key.png
+.. |key sheet| image:: ../common/images/search-bar-key.png
 
 
 Searching Tips
@@ -89,7 +89,7 @@ Where applicable, use the arrows in each column to sort by ascending or descendi
 
 |sort arrow|
 
-.. |sort arrow| image:: ../../common/source/images/sort-order-example.png
+.. |sort arrow| image:: ../common/images/sort-order-example.png
 
 
 The direction of the arrow indicates the sort order of the column.

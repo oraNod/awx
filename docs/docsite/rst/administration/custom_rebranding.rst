@@ -10,4 +10,4 @@ Using Custom Logos in automation controller
    pair: logo; custom
 
 
-.. include:: ../../common/source/logos_branding.rst
+.. include:: ../common/logos_branding.rst

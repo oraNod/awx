@@ -14,7 +14,7 @@ Job or workflow templates are linked together using a graph-like structure calle
 
 The example below shows a workflow that contains all three, as well as a workflow job template:
 
-.. image:: ../../common/source/images/wf-node-all-scenarios-wf-in-wf.png
+.. image:: ../common/images/wf-node-all-scenarios-wf-in-wf.png
 
 
 As the workflow runs, jobs are spawned from the node's linked template. Nodes linking to a job template which has prompt-driven fields (``job_type``, ``job_tags``, ``skip_tags``, ``limit``) can contain those fields, and will not be prompted on launch. Job templates with promptable credential and/or inventory, WITHOUT defaults, will not be available for inclusion in a workflow.
@@ -27,19 +27,19 @@ Consider the following scenarios for building workflows:
 
 - A root node is set to ALWAYS by default and it not editable.
 
-.. image:: ../../common/source/images/wf-root-node-always.png
+.. image:: ../common/images/wf-root-node-always.png
 
 - A node can have multiple parents and children may be linked to any of the states of success, failure, or always. If always, then the state is neither success or failure. States apply at the node level, not at the workflow job template level. A workflow job will be marked as successful unless it is canceled or encounters an error. 
 
-.. image:: ../../common/source/images/wf-sibling-nodes-all-edge-types.png
+.. image:: ../common/images/wf-sibling-nodes-all-edge-types.png
 
 - If you remove a job or workflow template within the workflow, the node(s) previously connected to those deleted, automatically get connected upstream and retains its edge type as in the example below:
 
-.. image:: ../../common/source/images/wf-node-delete-scenario.png
+.. image:: ../common/images/wf-node-delete-scenario.png
 
 - You could have a convergent workflow, where multiple jobs converge into one. In this scenario, any of the jobs or all of them must complete before the next one runs, as shown in the example below: 
 
-  .. image:: ../../common/source/images/wf-node-convergence.png
+  .. image:: ../common/images/wf-node-convergence.png
 
 In the example provided, |at| runs the first two job templates in parallel. When they both finish and succeed as specified, the 3rd downstream (:ref:`convergence node <convergence_node>`), will trigger.
 
@@ -47,13 +47,13 @@ In the example provided, |at| runs the first two job templates in parallel. When
 
 - If you launch from the API, running a ``get`` command displays a list of warnings and highlights missing components. The basic workflow for a workflow job template is illustrated below. 
 
-.. image:: ../../common/source/images/workflow-diagram.png
+.. image:: ../common/images/workflow-diagram.png
 
 - It is possible to launch several workflows simultaneously, and set a schedule for when to launch them. You can set notifications on workflows, such as when a job completes, similar to that of job templates. 
 
 .. note::
 
-  .. include:: ../../common/source/job-slicing-rule.rst
+  .. include:: ../common/job-slicing-rule.rst
 
 
 - You can build a recursive workflow, but if |at| detects an error, it will stop at the time the nested workflow attempts to run.
@@ -82,7 +82,7 @@ Also similar to job templates, workflows use surveys to specify variables to be 
 
 Workflows utilize the same behavior (hierarchy) of variable precedence as Job Templates with the exception of three additional variables. Refer to the Variable Precedence Hierarchy in the :ref:`ug_jobtemplates_extravars` section of the Job Templates chapter of this guide. The three additional variables include:
 
-.. image:: ../../common/source/images/Architecture-Tower_Variable_Precedence_Hierarchy-Workflows.png
+.. image:: ../common/images/Architecture-Tower_Variable_Precedence_Hierarchy-Workflows.png
 
 Workflows included in a workflow will follow the same variable precedence - they will only inherit variables if they are specifically prompted for, or defined as part of a survey.
 

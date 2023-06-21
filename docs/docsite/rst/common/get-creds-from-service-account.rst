@@ -11,7 +11,7 @@ This section describes creating a Service Account in an Openshift cluster (or K8
 
 To configure the controller:
 
-1. To create a service account, you may download and use this sample service account, :download:`containergroup sa <../../common/source/containergroup-sa.yml>` and modify it as needed to obtain the above credentials.
+1. To create a service account, you may download and use this sample service account, :download:`containergroup sa <../common/containergroup-sa.yml>` and modify it as needed to obtain the above credentials.
 
 2. Apply the configuration from ``containergroup-sa.yml``::
 

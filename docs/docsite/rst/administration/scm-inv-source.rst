@@ -53,7 +53,7 @@ This listing should be refreshed to latest SCM info on a project update. If no i
 
 For inventories with SCM sources, the Job Details page for inventory updates show a status indicator for the project update as well as the name of the project. The status indicator links to the project update job. The project name links to the project.
 
-.. image:: ../../common/source/images/jobs-details-scm-sourced-inventories.png
+.. image:: ../common/images/jobs-details-scm-sourced-inventories.png
 
 An inventory update can be performed while a related job is running.
 

@@ -13,7 +13,7 @@ Management Jobs
 
 |management jobs|
 
-.. |management jobs|  image:: ../../common/source/images/ug-management-jobs.png
+.. |management jobs|  image:: ../common/images/ug-management-jobs.png
 
 Several job types are available for you to schedule and launch: 
 
@@ -33,7 +33,7 @@ To remove older activity stream data, click on the launch (|launch|) button besi
 
 |activity stream launch - remove activity stream launch|
 
-.. |activity stream launch - remove activity stream launch| image:: ../../common/source/images/ug-management-jobs-remove-activity-stream-launch.png
+.. |activity stream launch - remove activity stream launch| image:: ../common/images/ug-management-jobs-remove-activity-stream-launch.png
 
 Enter the number of days of data you would like to save and click **Launch**.
 
@@ -44,18 +44,18 @@ Scheduling
 
 To review or set a schedule for purging data marked for deletion, click on the |schedule| button. 
 
-.. |schedule| image:: ../../common/source/images/schedule-button.png
+.. |schedule| image:: ../common/images/schedule-button.png
 
 
 |activity stream launch - remove activity stream schedule|
 
-.. |activity stream launch - remove activity stream schedule| image:: ../../common/source/images/ug-management-jobs-remove-activity-stream-schedule.png
+.. |activity stream launch - remove activity stream schedule| image:: ../common/images/ug-management-jobs-remove-activity-stream-schedule.png
 
 Note that you can turn this scheduled management job on and off easily using the **ON/OFF** toggle button to the left of the Job Name.
 
 Click on the Job Name, in this example "Cleanup Activity Schedule", to review or edit the schedule settings. You can also use the **Add** button to create a new schedule for this management job.
 
-.. image:: ../../common/source/images/ug-management-jobs-remove-activity-stream-schedule-details.png
+.. image:: ../common/images/ug-management-jobs-remove-activity-stream-schedule-details.png
 
 Enter the appropriate details into the following fields and click **Save**:
 
@@ -79,10 +79,10 @@ Notifications
 
 To set or review notifications associated with this management job, click the Notifications ( |notify| ) icon.
 
-.. |notify| image:: ../../common/source/images/notify-button.png
+.. |notify| image:: ../common/images/notify-button.png
 
 
-.. image:: ../../common/source/images/management-job-add-notification.png
+.. image:: ../common/images/management-job-add-notification.png
 
 If none exist, click the **Notifications** link to create a new notification. Notification types include:
 
@@ -96,7 +96,7 @@ If none exist, click the **Notifications** link to create a new notification. No
 - Twilio
 - Webhook
 
-.. image:: ../../common/source/images/management-job-add-notification-details.png
+.. image:: ../common/images/management-job-add-notification-details.png
 
 Refer to :ref:`ug_notifications` in the |atu| for more information.
 
@@ -138,11 +138,11 @@ Removing Old Job History
 
 To remove job history older than a specified number of days, click on the launch (|launch|) button beside **Cleanup Job Details**.
 
-.. |launch| image:: ../../common/source/images/launch-button.png
+.. |launch| image:: ../common/images/launch-button.png
 
 |management jobs - cleanup job launch|
 
-.. |management jobs - cleanup job launch| image:: ../../common/source/images/ug-management-jobs-cleanup-job-launch.png
+.. |management jobs - cleanup job launch| image:: ../common/images/ug-management-jobs-cleanup-job-launch.png
 
 Enter the number of days of data you would like to save and click **Launch**.
 

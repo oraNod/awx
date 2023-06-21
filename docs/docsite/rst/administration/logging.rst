@@ -145,7 +145,7 @@ Splunk
 
 Splunk HTTP Event Collector listens on 8088 by default so it is necessary to provide the full HEC event URL (with port) in order for incoming requests to be processed successfully. These values are entered in the example below:
 
-.. image:: ../../common/source/images/logging-splunk-tower-example.png
+.. image:: ../common/images/logging-splunk-tower-example.png
 
 
 For further instructions on configuring the HTTP Event Collector, refer to the `Splunk documentation`_.
@@ -158,7 +158,7 @@ Loggly
 
 To set up the sending of logs through Loggly's HTTP endpoint, refer to https://www.loggly.com/docs/http-endpoint/. Loggly uses the URL convention described at http://logs-01.loggly.com/inputs/TOKEN/tag/http/, which is shown inputted in the **Logging Aggregator** field in the example below:
 
-.. image:: ../../common/source/images/logging-loggly-tower-example.png
+.. image:: ../common/images/logging-loggly-tower-example.png
 
 
 Sumologic
@@ -166,7 +166,7 @@ Sumologic
 
 In Sumologic, create a search criteria containing the json files that provide the parameters used to collect the data you need.
 
-.. image:: ../../common/source/images/logging_sumologic_main.png
+.. image:: ../common/images/logging_sumologic_main.png
 
 
 Elastic stack (formerly ELK stack)
@@ -214,7 +214,7 @@ To set up logging to any of the aggregator types:
 
 - **Logging Aggregator Type**: Click to select the aggregator service from the drop-down menu:
 
-.. image:: ../../common/source/images/configure-tower-system-logging-types.png
+.. image:: ../common/images/configure-tower-system-logging-types.png
 
 - **Logging Aggregator Username**: Enter the username of the logging aggregator if it requires it.
 - **Logging Aggregator Password/Token**: Enter the password of the logging aggregator if it requires it.
@@ -226,11 +226,11 @@ To set up logging to any of the aggregator types:
 - **Loggers to Send Data to the Log Aggregator Form**: All four types of data are pre-populated by default. Click the tooltip |help| icon next to the field for additional information on each data type. Delete the data types you do not want.
 - **Log Format For API 4XX Errors**: Configure a specific error message. See :ref:`logging-api-400-error-config` for further detail.
 
-.. |help| image:: ../../common/source/images/tooltips-icon.png
+.. |help| image:: ../common/images/tooltips-icon.png
 
 5. Review your entries for your chosen logging aggregation. Below is an example of one set up for Splunk:
 
-.. image:: ../../common/source/images/configure-tower-system-logging-splunk-example.png
+.. image:: ../common/images/configure-tower-system-logging-splunk-example.png
 
 7. When done, click **Save** to apply the settings or **Cancel** to abandon the changes.
 

@@ -30,11 +30,11 @@ Access the Applications page by clicking **Applications** from the left navigati
 
 |Applications - home with example apps|
 
-.. |Applications - home with example apps| image:: ../../common/source/images/apps-list-view-examples.png
+.. |Applications - home with example apps| image:: ../common/images/apps-list-view-examples.png
 
 If no other applications exist, only a gray box with a message to add applications displays.
 
-.. image:: ../../common/source/images/apps-list-view-empty.png
+.. image:: ../common/images/apps-list-view-empty.png
 
 
 .. _ug_applications_auth_create:
@@ -58,7 +58,7 @@ The New Application window opens.
 
 |Create application|
 
-.. |Create application| image:: ../../common/source/images/apps-create-new.png
+.. |Create application| image:: ../common/images/apps-create-new.png
 
 3. Enter the following details in **Create New Application** window:
 
@@ -71,7 +71,7 @@ The New Application window opens.
 
 4. When done, click **Save** or **Cancel** to abandon your changes. Upon saving, the client ID displays in a pop-up window.
 
-.. image:: ../../common/source/images/apps-client-id-popup.png
+.. image:: ../common/images/apps-client-id-popup.png
 
 
 Applications - Tokens
@@ -85,7 +85,7 @@ Selecting the **Tokens** view displays a list of the users that have tokens to a
 
 |Applications - tokens list|
 
-.. |Applications - tokens list| image:: ../../common/source/images/apps-tokens-list-view-examples.png
+.. |Applications - tokens list| image:: ../common/images/apps-tokens-list-view-examples.png
 
 Tokens can only access resources that its associated user can access, and can be limited further by specifying the scope of the token.
 
@@ -103,8 +103,8 @@ Tokens are added through the Users screen and can be associated with an applicat
 
 		You can only create OAuth 2 Tokens for your user via the API or UI, which means you can only access your own user profile in order to configure or view your tokens. If you are an admin and need to create or remove tokens for other users, see the revoke and create commands in the :ref:`Token and session management <administration:ag_token_utility>` section of the |ata|. 
 
-.. include:: ../../common/source/add-token.rst
+.. include:: ../common/add-token.rst
 
 To verify the application in the example above now shows the user with the appropriate token, go to the **Tokens** tab of the Applications window:
 
-.. image:: ../../common/source/images/apps-tokens-list-view-example2.png
+.. image:: ../common/images/apps-tokens-list-view-example2.png

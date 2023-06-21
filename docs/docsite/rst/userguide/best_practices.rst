@@ -38,7 +38,7 @@ Use Dynamic Inventory Sources
 
 If you have an external source of truth for your infrastructure, whether it is a cloud provider or a local CMDB, it is best to define an inventory sync process and use the support for dynamic inventory (including cloud inventory sources). This ensures your inventory is always up to date.
 
-.. include:: ../../common/source/overwrite_var_note_2-4-0.rst
+.. include:: ../common/overwrite_var_note_2-4-0.rst
 
 Variable Management for Inventory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -4,7 +4,7 @@
 
 When no tokens are present, the Tokens screen prompts you to add them:
 
-.. image:: ../../common/source/images/users-tokens-empty.png
+.. image:: ../common/images/users-tokens-empty.png
 
 3. Click the **Add** button, which opens the Create Token window.
 
@@ -16,17 +16,17 @@ When no tokens are present, the Tokens screen prompts you to add them:
  
  - **Scope** (required): specify the level of access you want this token to have.
 
-.. |search| image:: ../../common/source/images/search-button.png
+.. |search| image:: ../common/images/search-button.png
 
 5. When done, click **Save** or **Cancel** to abandon your changes.
 
 After the token is saved, the newly created token for the user displays with the token information and when it expires. 
 
-.. image:: ../../common/source/images/users-token-information-example.png
+.. image:: ../common/images/users-token-information-example.png
 
 .. note:: This is the only time the token value and associated refresh token value will ever be shown.
 
 In the user's profile, the application for which it is assigned to and its expiration displays in the token list view. 
 
-.. image:: ../../common/source/images/users-token-assignment-example.png
+.. image:: ../common/images/users-token-assignment-example.png
 

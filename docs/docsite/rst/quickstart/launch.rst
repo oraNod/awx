@@ -8,18 +8,18 @@ Launch it!
 
 From the Templates list view, click the Launch (|launch|) button to run the Demo Job Template.
 
-.. |launch| image:: ../../common/source/images/launch-button.png
+.. |launch| image:: ../common/images/launch-button.png
 
 |Job templates - home launch|
 
-.. |Job templates - home launch| image:: ../../common/source/images/qs-job-templates-list-view-click-launch.png
+.. |Job templates - home launch| image:: ../common/images/qs-job-templates-list-view-click-launch.png
 
 
 The initial job launch returns a status page which updates automatically using the controller's Live Event feature until the job is complete. Once complete, the job results look like the following:
 
 |Job templates - demo run complete|
 
-.. |Job templates - demo run complete| image:: ../../common/source/images/qs-job-templates-demo-complete.png
+.. |Job templates - demo run complete| image:: ../common/images/qs-job-templates-demo-complete.png
 
 For more details on the job results, refer to :ref:`ug_jobs`.
 
