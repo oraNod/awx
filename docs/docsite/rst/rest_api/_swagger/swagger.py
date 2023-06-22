@@ -16,7 +16,7 @@ with io.open(os.path.join(here, 'tags.yml'), 'r', encoding='utf-8') as f:
 
 
 def add_spec(app, pagename, templatename, context, doctree):
-    if pagename == 'api_ref':
+    if pagename == 'rest_api/api_ref':
         # Write tags in the order we want them sorted
         for category in tags.get('categories', []):
             tag = {'name': category['name']}

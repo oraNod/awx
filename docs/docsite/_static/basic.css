@@ -524,8 +524,17 @@ span.eqno {
 /* -- printout stylesheet --------------------------------------------------- */
 
 @media print {
-    .DocSiteBanner,
-    #google_image_div {
-        display: none !important;
+    div.document,
+    div.documentwrapper,
+    div.bodywrapper {
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    div.sphinxsidebar,
+    div.related,
+    div.footer,
+    #top-link {
+        display: none;
     }
 }

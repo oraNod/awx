@@ -39,12 +39,12 @@ The automation controller API Reference Manual provides in-depth documentation f
       </defs>
     </svg>
     <div id="swagger-ui"></div>
-    <script src="./_static/swagger-ui-bundle.js"></script>
-    <script src="./_static/swagger-ui-standalone-preset.js"></script>
+    <script src="../_static/swagger-ui-bundle.js"></script>
+    <script src="../_static/swagger-ui-standalone-preset.js"></script>
     <script>
     window.onload = function() {
-      $('head').append('<link rel="stylesheet" href="_static/swagger-ui.css" type="text/css"></link>');
-      $('head').append('<link rel="stylesheet" href="_static/tower.css" type="text/css"></link>');
+      $('head').append('<link rel="stylesheet" href="../_static/swagger-ui.css" type="text/css"></link>');
+      $('head').append('<link rel="stylesheet" href="../_static/tower.css" type="text/css"></link>');
       $('#swagger-ui').on('click', function(e) {
         // By default, swagger-ui has a show/hide toggle for headers, and
         // there's no way to turn it off; this code intercepts the click event
