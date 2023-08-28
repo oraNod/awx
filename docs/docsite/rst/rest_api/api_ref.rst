@@ -1,4 +1,4 @@
-Controller API Reference Guide
+AWX API Reference Guide
 ================================
 
 The API Reference Manual provides in-depth documentation for the AWX REST API, including integration examples.
