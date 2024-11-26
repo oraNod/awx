@@ -35,6 +35,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
     'sphinx_ansible_theme',
+    'notfound.extension',
     'swagger',
 ]
 
