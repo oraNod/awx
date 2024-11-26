@@ -39,6 +39,8 @@ extensions = [
     'swagger',
 ]
 
+notfound_template = "404.rst"
+
 html_theme = 'sphinx_ansible_theme'
 html_theme_path = ["_static"]
 
