@@ -39,6 +39,7 @@ extensions = [
     'swagger',
 ]
 
+notfound_urls_prefix = "/en/latest/"
 notfound_template = "404.rst"
 
 html_theme = 'sphinx_ansible_theme'
